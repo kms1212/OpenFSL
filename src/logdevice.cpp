@@ -1,4 +1,4 @@
-#include <logdevice.h>
+#include "logdevice.hpp"
 
 class LogDevice : public Device {
 	

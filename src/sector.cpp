@@ -1,4 +1,4 @@
-#include "sector.h"
+#include "sector.hpp"
 
 class Sector {
 public:

@@ -1,4 +1,4 @@
-#include "diskdevice.h"
+#include "diskdevice.hpp"
 
 class DiskDevice : public Device {
 public:

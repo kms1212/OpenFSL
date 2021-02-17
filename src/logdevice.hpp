@@ -1,5 +1,5 @@
-#ifndef __SECTOR_H__
-#define __SECTOR_H__
+#ifndef __SECTOR_HPP__
+#define __SECTOR_HPP__
 
 #include <stdint.h>
 
