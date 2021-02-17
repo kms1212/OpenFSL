@@ -36,7 +36,7 @@ Driver
 
 - User-Initializable I/O methods
 
-## Final expected code for main
+## Final expected pseudo code for main
 
 ```c++
 extern Data disk_in(uint64_t offset, size_t sector);
