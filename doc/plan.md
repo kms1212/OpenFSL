@@ -49,7 +49,7 @@ extern int mem_copy(char* dest, char* src, size_t size);
 void fsctrl_main() {
     DiskDriver dd = DiskDriver(disk_in, disk_out); // Disk I/O driver initialization
     LoggerDriver ld = LoggerDriver(null, log_out); // Logger I/O driver initialization
-	FS_FAT32 fat32 = FS_FAT32(dd, ld, FAT32_LFN | FAT32_NONSECURE); // File system initialization
+    FS_FAT32 fat32 = FS_FAT32(dd, ld, FAT32_LFN | FAT32_NONSECURE); // File system initialization
     
     fat32.start(); // Starting file system
     

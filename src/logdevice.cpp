@@ -1,5 +1,2 @@
-#include "logdevice.hpp"
+#include "logdevice.h"
 
-class LogDevice : public Device {
-	
-}

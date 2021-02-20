@@ -1,11 +1,5 @@
-#include "device.hpp"
+#include "device.h"
 
-class Device {
-private:
-
+Device::Device() {
 	
-public:
-	Device() {
-		
-	}
 }
