@@ -1,0 +1,5 @@
+string.o: src/string.c src/string.h src/type.h
+memory.o: src/memory.c src/memory.h src/type.h
+main.o: src/main.c src/type.h src/memory.h src/string.h src/page.h \
+ src/swamd64.h
+page.o: src/page.c src/page.h src/type.h

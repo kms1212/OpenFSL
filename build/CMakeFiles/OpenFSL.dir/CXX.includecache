@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/f/내문서/GitHub/OpenFSL/src/sector.cpp
+sector.h
+/mnt/f/내문서/GitHub/OpenFSL/src/sector.h
+
+/mnt/f/내문서/GitHub/OpenFSL/src/sector.h
+stddef.h
+-
+serviceswrapper.h
+/mnt/f/내문서/GitHub/OpenFSL/src/serviceswrapper.h
+
+/mnt/f/내문서/GitHub/OpenFSL/src/serviceswrapper.h
+

@@ -1,0 +1,11 @@
+port.o: src/64bit/port.c src/64bit/port.h src/64bit/type.h \
+ src/64bit/string.h src/64bit/memory.h
+io.o: src/64bit/io.c src/64bit/io.h src/64bit/type.h src/64bit/string.h \
+ src/64bit/memory.h src/64bit/port.h
+memory.o: src/64bit/memory.c src/64bit/memory.h src/64bit/type.h
+main.o: src/64bit/main.c src/64bit/type.h src/64bit/string.h \
+ src/64bit/memory.h src/64bit/driver_ata_pio.h src/64bit/port.h \
+ src/64bit/io.h src/64bit/fat.h src/64bit/elf.h
+driver_ata_pio.o: src/64bit/driver_ata_pio.c src/64bit/driver_ata_pio.h \
+ src/64bit/type.h src/64bit/port.h src/64bit/string.h src/64bit/memory.h
+string.o: src/64bit/string.c src/64bit/string.h src/64bit/type.h

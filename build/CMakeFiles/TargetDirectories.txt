@@ -1,0 +1,3 @@
+/mnt/f/내문서/GitHub/OpenFSL/build/CMakeFiles/rebuild_cache.dir
+/mnt/f/내문서/GitHub/OpenFSL/build/CMakeFiles/edit_cache.dir
+/mnt/f/내문서/GitHub/OpenFSL/build/CMakeFiles/openfsl.dir
