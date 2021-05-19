@@ -1,2 +1,0 @@
-/usr/bin/ar qc libopenfsl.a  CMakeFiles/openfsl.dir/src/device.cpp.o CMakeFiles/openfsl.dir/src/diskdevice.cpp.o CMakeFiles/openfsl.dir/src/logdevice.cpp.o CMakeFiles/openfsl.dir/src/sector.cpp.o CMakeFiles/openfsl.dir/src/serviceswrapper.cpp.o
-/usr/bin/ranlib libopenfsl.a

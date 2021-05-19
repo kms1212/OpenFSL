@@ -1,9 +1,0 @@
-port.o: src/port.c src/port.h src/type.h src/string.h src/memory.h
-string.o: src/string.c src/string.h src/type.h
-memory.o: src/memory.c src/memory.h src/type.h
-main.o: src/main.c src/type.h src/string.h src/memory.h src/drivers.h \
- src/port.h src/fat.h
-ioatapio.o: src/ioatapio.c src/drivers.h src/type.h src/string.h \
- src/memory.h src/port.h
-iotty.o: src/iotty.c src/drivers.h src/type.h src/string.h src/memory.h \
- src/port.h

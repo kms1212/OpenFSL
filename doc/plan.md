@@ -60,7 +60,7 @@ void fsctrl_main() {
     
     char[64] filebuf = { 0, };
     
-    mem_copy(filebuf, file.getData(64), 64; // Getting data from file
+    mem_copy(filebuf, file.getData(64), 64); // Getting data from file
     
     file.close(); // Closing file
 }
