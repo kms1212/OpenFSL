@@ -65,3 +65,6 @@ CMakeUserPresets.json
 ### Etc ###
 # Images
 *.img
+
+# Includes
+/include
