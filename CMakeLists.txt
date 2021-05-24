@@ -1,11 +1,17 @@
-cmake_minimum_required(VERSION 3.0)
+cmake_minimum_required(VERSION 3.1)
 project("OpenFSL")
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+file(GLOB libSources "src/fs_*/*.cpp" "src/library/*.cpp" "src/table/*.cpp")
+add_library(openfsl STATIC ${libSources})
 
 file(GLOB INCLUDE_FILES "src/header/*.h")
 file(COPY ${INCLUDE_FILES} DESTINATION "include/openfsl/")
 
-file(GLOB libSources "src/fs/*.cpp" "src/library/*.cpp" "src/table/*.cpp")
-add_library(openfsl STATIC ${libSources})
+SET (LIB_PKG
+    spdlog
+)
 
-set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -nostdlib")
-list(REMOVE_ITEM CMAKE_CXX_IMPLICIT_LINK_LIBRARIES stdc++)
+find_package(${LIB_PKG} REQUIRED)
+target_link_libraries(openfsl ${LIB_PKG})

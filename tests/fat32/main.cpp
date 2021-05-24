@@ -1,69 +1,94 @@
 #include <iostream>
 #include <fstream>
 #include <iomanip>
+#include <vector>
+#include <string>
+#include <sstream>
+#include <iterator>
+#include <codecvt> 
+#include <bitset> 
 #include <stdlib.h>
 #include <string.h>
 
-#include "fslservices.h"
-#include "diskdevice.h"
-#include "logdevice.h"
-#include "sector.h"
-#include "size_t.h"
+#include "openfsl/fslservices.h"
+#include "openfsl/diskdevice.h"
+#include "openfsl/sector.h"
+#include "openfsl/vint.h"
+#include "openfsl/fs_fat32.h"
 
 using namespace std;
 using namespace openFSL;
 
-#if defined(_M_X64) || defined(__amd64__)
-void readDisk(Sector* dest, uint64_t lba, uint64_t size);
-#else
-void readDisk(Sector* dest, uint32_t lba, uint32_t size);
-#endif
-void* memcpyWrapper(void* dest, const void* src, size_t num);
 void hexdump(uint8_t* p, int offset, int len);
-void openDisk();
-void closeDisk();
+int readDisk(Sector* dest, vint_arch lba, vint_arch size);
+int openDisk();
+int closeDisk();
+int print(const char* str);
 
 fstream disk;
 char* filename;
+FS_FAT32* fat32;
 
 int main(int argc, char** argv) {
 	if (argc < 2)
 	{
-		cerr << argv[0] << ": Usage: " << argv[0] << " [File Name]\n";
+		cerr << argv[0] << ": Usage: " << argv[0] << " <File Name> [-t]\n";
+		return 1;
 	}
 	filename = argv[1];
 	
-	openFSL::fsl_malloc = malloc;
-	openFSL::fsl_free = free;
-	openFSL::fsl_memcpy = memcpyWrapper;
+	spdlog::set_level(spdlog::level::warn);
 	
-	DiskDevice* dd = new DiskDevice();
-	LogDevice* ld = new LogDevice();
-	Sector* sector = new Sector(1);
-	
-	dd->readDisk = readDisk;
-	dd->openDisk = openDisk;
-	dd->closeDisk = closeDisk;
-	dd->initialize();
-	if (dd->getState() != 0) {
-		cerr << argv[0] << ": Error: DiskDevice";
-		return 1;
-	}
-	
-	for (int i = 0; i < 5; i++)
+	if (argc == 3 && argv[2] == "-t")
 	{
-		cout << "=================== " << i << " ===================\n";
 		
-		dd->readDisk(sector, i, 1);
-		hexdump(sector->getData(), 0, 512);
 	}
+	else if (argc == 2)
+	{
+		
+		fat32 = new FS_FAT32(new DiskDevice(), FAT32_OPTION_NONE, "\\/");
 	
-	dd->close();
-	delete dd;
-	delete ld;
-	delete sector;
-	
-	return 0;
+		fat32->getDiskDevice()->readDisk = readDisk;
+		fat32->getDiskDevice()->openDisk = openDisk;
+		fat32->getDiskDevice()->closeDisk = closeDisk;
+		
+		fat32->initialize();
+		
+		FAT32_fileInfo* buf = new FAT32_fileInfo[fat32->getChildCount("::")];
+		fat32->getDirList("::", buf);
+		std::string dir;
+		
+		cout << "type \"exit\" to exit\n";
+		while(true)
+		{
+			cout << fat32->getPath() << "> ";
+			cin >> dir;
+			
+			if (dir == "exit") {
+				break;
+			}
+			else if (dir == "dir") {
+				if (buf != NULL)
+					delete[] buf;
+				buf = new FAT32_fileInfo[fat32->getChildCount("")];
+				fat32->getDirList("", buf);
+				for (int i = 0; i < fat32->getChildCount(""); i++)
+				{
+					cout << i << " " << buf[i].fileName << " " << (int)buf[i].fileCreateTime.time_month << "-" << (int)buf[i].fileCreateTime.time_day << "-" << (int)buf[i].fileCreateTime.time_year << " " << (int)buf[i].fileCreateTime.time_hour << ":" << (int)buf[i].fileCreateTime.time_min << ":" << (int)buf[i].fileCreateTime.time_sec << "\n";
+				}
+			}
+			else {
+				if (fat32->chdir(dir))
+					cout << "Error\n";
+			}
+			cin.clear();
+			cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+		}
+
+		delete fat32->getDiskDevice();
+		
+		return 0;
+	}
 }
 
 void hexdump(uint8_t* p, int offset, int len)
@@ -97,8 +122,9 @@ void hexdump(uint8_t* p, int offset, int len)
         std::cout << "  ";
         for (int i = 0; i < nread; i++)
         {
-            if (p[16 * row + i + offset] < 32) std::cout << '.';
-            else std::cout << p[16 * row + i + offset];
+			char ch = p[16 * row + i + offset];
+            if (ch < 32 || ch > 125) std::cout << '.';
+            else std::cout << ch;
         }
  
         std::cout << "\n";
@@ -108,27 +134,27 @@ void hexdump(uint8_t* p, int offset, int len)
 	cout.copyfmt(init);
 }
 
-void openDisk()
+int openDisk()
 {
 	disk.open(filename, ios::in | ios::binary);
+	return disk.fail();
 }
 
-void closeDisk()
+int closeDisk()
 {
 	disk.close();
+	return 0;
 }
 
-#if defined(_M_X64) || defined(__amd64__)
-void readDisk(Sector* dest, uint64_t lba, uint64_t size)
-#else
-void readDisk(Sector* dest, uint32_t lba, uint32_t size)
-#endif
+int readDisk(Sector* dest, vint_arch lba, vint_arch size)
 {
-	disk.seekg(lba * bytespersector, ios::beg);
-	disk.read((char*)dest->getData(), size * bytespersector);
+	disk.seekg(lba * fat32->getDiskDevice()->getBytespersector(), ios::beg);
+	disk.read((char*)dest->getData(), size * fat32->getDiskDevice()->getBytespersector());
+	return 0;
 }
 
-void* memcpyWrapper(void* dest, const void* src, size_t num)
+int print(const char* str)
 {
-	return memcpy(dest, src, (long unsigned int)num);
+	cout << str;
+	return 0;
 }

@@ -2,8 +2,8 @@
 
 using namespace openFSL;
 
-DiskDevice::DiskDevice() {
-	
+DiskDevice::DiskDevice(uint32_t bytespersector_) {
+	bytespersector = bytespersector_;
 }
 
 void DiskDevice::initialize() {
@@ -32,9 +32,16 @@ DiskDevice::~DiskDevice() {
 
 void DiskDevice::close() {
 	errorState = DISKDEV_ERROR_NOT_INITIALIZED;
-	closeDisk();
+	if (closeDisk())
+	{
+		errorState = DISKDEV_ERROR_DISK_ERROR;
+	}
 }
 
 uint32_t DiskDevice::getState() {
 	return errorState;
+}
+
+uint32_t DiskDevice::getBytespersector() {
+	return bytespersector;
 }

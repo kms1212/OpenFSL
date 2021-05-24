@@ -2,13 +2,13 @@
 
 using namespace openFSL;
 
-Sector::Sector(size_t sector_count_) {
+Sector::Sector(size_t sector_count_, uint32_t bytespersector) {
 	/* Calculate total size of sector data buffer */
-	size_t bufsize = sector_count_ * openFSL::bytespersector;
+	size_t bufsize = sector_count_ * bytespersector;
 	sector_count = sector_count_;
 	
 	/* Allocate memory and copy if the given address and allocated address are the same */
-	data = (uint8_t*)fsl_malloc(bufsize);
+	data = new uint8_t[bufsize];
 }
 
 uint64_t Sector::getSectorCount() {
@@ -21,5 +21,5 @@ uint8_t* Sector::getData() {
 
 Sector::~Sector() {
 	/* Free memory */
-	fsl_free(Sector::data);
+	delete data;
 }

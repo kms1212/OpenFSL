@@ -1,7 +1,8 @@
-#ifndef __SECTOR_H__
-#define __SECTOR_H__
+#ifndef __SECTOR_H
+#define __SECTOR_H
 
-#include "fixedint.h"
+#include <stdint.h>
+
 #include "fslservices.h"
 
 namespace openFSL {
@@ -11,9 +12,8 @@ namespace openFSL {
 		uint8_t* data;
 		
 	public:
-		
 		/* Generator & Destructor */
-		Sector(size_t sector_count);
+		Sector(size_t sector_count, uint32_t bytespersector);
 		~Sector();
 		
 		uint64_t getSectorCount();
