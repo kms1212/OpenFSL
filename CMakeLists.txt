@@ -7,7 +7,9 @@ file(GLOB libSources "src/fs_*/*.cpp" "src/library/*.cpp" "src/table/*.cpp")
 add_library(openfsl STATIC ${libSources})
 
 file(GLOB INCLUDE_FILES "src/header/*.h")
+file(GLOB INCLUDE_FILES_FS "src/header/fs_*/*.h")
 file(COPY ${INCLUDE_FILES} DESTINATION "include/openfsl/")
+file(COPY ${INCLUDE_FILES_FS} DESTINATION "include/openfsl/fs/")
 
 SET (LIB_PKG
     spdlog

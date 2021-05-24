@@ -1,0 +1,98 @@
+.TH "openFSL::fileEntryStruct" 3 "Tue May 25 2021" "OpenFSL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+openFSL::fileEntryStruct \- FAT32 directory entry struct\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <fs_fat32\&.h>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "uint8_t \fBfileName\fP [8]"
+.br
+.ti -1c
+.RI "uint8_t \fBfileExt\fP [3]"
+.br
+.ti -1c
+.RI "uint8_t \fBfileAttr\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBfileReserved1\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBfileCreateTenth\fP"
+.br
+.ti -1c
+.RI "uint16_t \fBfileCreateTime\fP"
+.br
+.ti -1c
+.RI "uint16_t \fBfileCreateDate\fP"
+.br
+.ti -1c
+.RI "uint16_t \fBfileAccessDate\fP"
+.br
+.ti -1c
+.RI "uint16_t \fBfileLocationHigh\fP"
+.br
+.ti -1c
+.RI "uint16_t \fBfileModTime\fP"
+.br
+.ti -1c
+.RI "uint16_t \fBfileModDate\fP"
+.br
+.ti -1c
+.RI "uint16_t \fBfileLocationLow\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBfileSize\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+FAT32 directory entry struct\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+kms1212
+.RE
+.PP
+Type Name Offset  uint8_t fileName[8] 0x00  uint8_t fileExt[3] 0x08  uint8_t fileAttr 0x0B  uint8_t fileReserved1 0x0C  uint8_t fileCreateTenth 0x0D  uint16_t fileCreateTime 0x0E  uint16_t fileCreateDate 0x10  uint16_t fileAccessDate 0x12  uint16_t fileLocationHigh 0x14  uint16_t fileModTime 0x16  uint16_t fileModDate 0x18  uint16_t fileLocationLow 0x1A  uint32_t fileSize 0x1C  
+.SH "Member Data Documentation"
+.PP 
+.SS "uint16_t openFSL::fileEntryStruct::fileAccessDate"
+
+.SS "uint8_t openFSL::fileEntryStruct::fileAttr"
+
+.SS "uint16_t openFSL::fileEntryStruct::fileCreateDate"
+
+.SS "uint8_t openFSL::fileEntryStruct::fileCreateTenth"
+
+.SS "uint16_t openFSL::fileEntryStruct::fileCreateTime"
+
+.SS "uint8_t openFSL::fileEntryStruct::fileExt[3]"
+
+.SS "uint16_t openFSL::fileEntryStruct::fileLocationHigh"
+
+.SS "uint16_t openFSL::fileEntryStruct::fileLocationLow"
+
+.SS "uint16_t openFSL::fileEntryStruct::fileModDate"
+
+.SS "uint16_t openFSL::fileEntryStruct::fileModTime"
+
+.SS "uint8_t openFSL::fileEntryStruct::fileName[8]"
+
+.SS "uint8_t openFSL::fileEntryStruct::fileReserved1"
+
+.SS "uint32_t openFSL::fileEntryStruct::fileSize"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for OpenFSL from the source code\&.

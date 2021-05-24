@@ -6,7 +6,7 @@ namespace openFSL {
 	
 }
 
-uint32_t openFSL::initializeLibrary() {
+int openFSL::initializeLibrary() {
 	
 	return 0;
 }

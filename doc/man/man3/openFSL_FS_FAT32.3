@@ -1,0 +1,231 @@
+.TH "openFSL::FS_FAT32" 3 "Tue May 25 2021" "OpenFSL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+openFSL::FS_FAT32 \- FAT32 imeplementation\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <fs_fat32\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBFS_FAT32\fP (\fBDiskDevice\fP *dd_, \fBFAT32_Option\fP option, std::string pathSeparator_='\\\\')"
+.br
+.RI "\fBFS_FAT32\fP constructor\&. "
+.ti -1c
+.RI "\fB~FS_FAT32\fP ()"
+.br
+.RI "\fBFS_FAT32\fP destructor\&. "
+.ti -1c
+.RI "void \fBinitialize\fP ()"
+.br
+.RI "\fBFS_FAT32\fP intializer\&. "
+.ti -1c
+.RI "void \fBsetDiskDevice\fP (\fBDiskDevice\fP *dd_)"
+.br
+.RI "Disk device setter\&. "
+.ti -1c
+.RI "\fBDiskDevice\fP * \fBgetDiskDevice\fP ()"
+.br
+.RI "Disk device getter\&. "
+.ti -1c
+.RI "uint32_t \fBgetState\fP ()"
+.br
+.RI "Error state getter\&. "
+.ti -1c
+.RI "std::string \fBgetPath\fP ()"
+.br
+.RI "Path getter\&. "
+.ti -1c
+.RI "uint32_t \fBgetChildCount\fP (std::string path)"
+.br
+.RI "Subitem counter\&. "
+.ti -1c
+.RI "\fBFAT32_fileInfo\fP * \fBgetDirList\fP (std::string path, \fBFAT32_fileInfo\fP *buf)"
+.br
+.RI "Directory lister\&. "
+.ti -1c
+.RI "int \fBchdir\fP (std::string path, std::vector< std::string > *subdir=NULL)"
+.br
+.RI "Change directory\&. "
+.ti -1c
+.RI "uint32_t \fBgetNextCluster\fP (uint32_t cluster)"
+.br
+.RI "Next cluster picker\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+FAT32 imeplementation\&. 
+
+Implements FAT32 with configurable options 
+.PP
+\fBAuthor\fP
+.RS 4
+kms1212 
+.RE
+.PP
+\fBTodo\fP
+.RS 4
+File Read, Directory write, File write, FS format, UCS-2 Unicode Codepage
+.RE
+.PP
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "FS_FAT32::FS_FAT32 (\fBDiskDevice\fP * dd_, \fBFAT32_Option\fP option, std::string pathSeparator_ = \fC'\\\\'\fP)"
+
+.PP
+\fBFS_FAT32\fP constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdd_\fP Disk device driver class pointer 
+.br
+\fIoption\fP FAT32 option 
+.br
+ 
+.br
+\fIpathSeparator_\fP = '\\': File system path separator 
+.RE
+.PP
+
+.SS "FS_FAT32::~FS_FAT32 ()"
+
+.PP
+\fBFS_FAT32\fP destructor\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "int FS_FAT32::chdir (std::string path, std::vector< std::string > * subdir = \fCNULL\fP)"
+
+.PP
+Change directory\&. Changes working directory\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpath\fP working directory 
+.br
+\fIsubdir\fP = NULL: Parameter for recursive search\&. DO NOT SET THIS ARGUMENT ARBITRARILY 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+uint32_t: Subitem count 
+.RE
+.PP
+
+.SS "uint32_t FS_FAT32::getChildCount (std::string path)"
+
+.PP
+Subitem counter\&. Gets subitem count of working directory\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpath\fP working directory 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+uint32_t: Subitem count 
+.RE
+.PP
+
+.SS "\fBFAT32_fileInfo\fP * FS_FAT32::getDirList (std::string path, \fBFAT32_fileInfo\fP * buf)"
+
+.PP
+Directory lister\&. Gets subitem information of working directory\&. The size of file information buffer has to be same or more than the count of subitem of working directory\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpath\fP working directory 
+.br
+\fIbuf\fP File information buffer 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+uint32_t: Subitem count 
+.RE
+.PP
+
+.SS "\fBDiskDevice\fP * FS_FAT32::getDiskDevice ()"
+
+.PP
+Disk device getter\&. Gets disk driver class\&. 
+.PP
+\fBReturns\fP
+.RS 4
+DiskDevice*: Disk driver 
+.RE
+.PP
+
+.SS "uint32_t FS_FAT32::getNextCluster (uint32_t cluster)"
+
+.PP
+Next cluster picker\&. Gets next cluster number from FAT Area\&. Return Value Status  0x?0000000 Free cluster  0x?0000002 - 0x?FFFFFEF Using cluster, points next linked cluster  0x?FFFFFF0 - 0x?FFFFFF6 Reserved values  0x?FFFFFF7 Bad cluster (function returns 0xFFFFFFF7)  0x?FFFFFF8 - 0x?FFFFFFF End of linked cluster (function returns 0xFFFFFFF8)  
+.PP
+\fBParameters\fP
+.RS 4
+\fIcluster\fP Current cluster 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+uint32_t: Next cluster 
+.RE
+.PP
+
+.SS "std::string FS_FAT32::getPath ()"
+
+.PP
+Path getter\&. Gets current path\&. 
+.PP
+\fBReturns\fP
+.RS 4
+std::string: Current path 
+.RE
+.PP
+
+.SS "uint32_t FS_FAT32::getState ()"
+
+.PP
+Error state getter\&. Gets error state\&. 
+.PP
+\fBReturns\fP
+.RS 4
+uint32_t: Error state 
+.RE
+.PP
+
+.SS "void FS_FAT32::initialize ()"
+
+.PP
+\fBFS_FAT32\fP intializer\&. Initializes Disk driver and FAT32 class\&. Function checks signatures: 
+.PD 0
+
+.IP "\(bu" 2
+Jump code in BPB (0xEB 0x58 0x90) 
+.IP "\(bu" 2
+VBR Signature in BPB (0x55 0xAA) 
+.IP "\(bu" 2
+FSINFO Signature (0x55 0xAA)
+.PP
+Warns if free cluster amount is unknown (0xFFFFFFFF) Warns if path separator is not given (default='\\') Loads FATArea to memory When Fail: If disk fails, the errorState variable is set to FAT32_ERROR_DISKDEVICE If it fails to verify signature, the errorState variable is set to FAT32_ERROR_SIGNATURE 
+.SS "void FS_FAT32::setDiskDevice (\fBDiskDevice\fP * dd_)"
+
+.PP
+Disk device setter\&. Sets disk driver class\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdd_\fP Disk device driver 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for OpenFSL from the source code\&.

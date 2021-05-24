@@ -1,0 +1,139 @@
+.TH "src/header/fs_fat32/fs_fat32.h" 3 "Tue May 25 2021" "OpenFSL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/header/fs_fat32/fs_fat32.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdint\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+\fC#include <iostream>\fP
+.br
+\fC#include <string>\fP
+.br
+\fC#include <algorithm>\fP
+.br
+\fC#include <iterator>\fP
+.br
+\fC#include <vector>\fP
+.br
+\fC#include <bitset>\fP
+.br
+\fC#include <stddef\&.h>\fP
+.br
+\fC#include <time\&.h>\fP
+.br
+\fC#include 'spdlog/spdlog\&.h'\fP
+.br
+\fC#include '\&.\&./diskdevice\&.h'\fP
+.br
+\fC#include '\&.\&./fslservices\&.h'\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBopenFSL::fatBPBStruct\fP"
+.br
+.RI "FAT32 BIOS Parameter Block\&. "
+.ti -1c
+.RI "struct \fBopenFSL::fileTimeStruct\fP"
+.br
+.RI "FAT32 time\&. "
+.ti -1c
+.RI "struct \fBopenFSL::fatFSINFOStruct\fP"
+.br
+.RI "FAT32 FSINFO structure\&. "
+.ti -1c
+.RI "struct \fBopenFSL::fileEntryStruct\fP"
+.br
+.RI "FAT32 directory entry struct\&. "
+.ti -1c
+.RI "struct \fBopenFSL::lfnEntryStruct\fP"
+.br
+.RI "FAT32 directory entry for LFN\&. "
+.ti -1c
+.RI "struct \fBopenFSL::fileInfoStruct\fP"
+.br
+.RI "FAT32 file information\&. "
+.ti -1c
+.RI "class \fBopenFSL::FS_FAT32\fP"
+.br
+.RI "FAT32 imeplementation\&. "
+.in -1c
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI " \fBopenFSL\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBFAT32_ERROR_SUCCESS\fP   0x00"
+.br
+.ti -1c
+.RI "#define \fBFAT32_ERROR_NOT_INITIALIZED\fP   0x01"
+.br
+.ti -1c
+.RI "#define \fBFAT32_ERROR_DISKDEVICE\fP   0x02"
+.br
+.ti -1c
+.RI "#define \fBFAT32_ERROR_SIGNATURE\fP   0x03"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct \fBopenFSL::fatBPBStruct\fP \fBopenFSL::FAT32_bpb\fP"
+.br
+.RI "FAT32 BIOS Parameter Block\&. "
+.ti -1c
+.RI "typedef struct \fBopenFSL::fileTimeStruct\fP \fBopenFSL::FAT32_fileInfoTime\fP"
+.br
+.RI "FAT32 time\&. "
+.ti -1c
+.RI "typedef struct \fBopenFSL::fatFSINFOStruct\fP \fBopenFSL::FAT32_fsinfo\fP"
+.br
+.RI "FAT32 FSINFO structure\&. "
+.ti -1c
+.RI "typedef struct \fBopenFSL::fileEntryStruct\fP \fBopenFSL::FAT32_entry\fP"
+.br
+.RI "FAT32 directory entry struct\&. "
+.ti -1c
+.RI "typedef struct \fBopenFSL::lfnEntryStruct\fP \fBopenFSL::FAT32_lfn\fP"
+.br
+.RI "FAT32 directory entry for LFN\&. "
+.ti -1c
+.RI "typedef struct \fBopenFSL::fileInfoStruct\fP \fBopenFSL::FAT32_fileInfo\fP"
+.br
+.RI "FAT32 file information\&. "
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBopenFSL::FAT32_Option\fP { \fBopenFSL::FAT32_OPTION_NONE\fP = 0x00000000, \fBopenFSL::FAT32_OPTION_LFN\fP = 0x00000001 }"
+.br
+.RI "FAT32 option\&. "
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define FAT32_ERROR_DISKDEVICE   0x02"
+
+.SS "#define FAT32_ERROR_NOT_INITIALIZED   0x01"
+
+.SS "#define FAT32_ERROR_SIGNATURE   0x03"
+
+.SS "#define FAT32_ERROR_SUCCESS   0x00"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for OpenFSL from the source code\&.

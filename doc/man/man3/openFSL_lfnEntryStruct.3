@@ -1,0 +1,73 @@
+.TH "openFSL::lfnEntryStruct" 3 "Tue May 25 2021" "OpenFSL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+openFSL::lfnEntryStruct \- FAT32 directory entry for LFN\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <fs_fat32\&.h>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "uint8_t \fBlfnSeqNum\fP"
+.br
+.ti -1c
+.RI "uint16_t \fBlfnFileName1\fP [5]"
+.br
+.ti -1c
+.RI "uint8_t \fBlfnAttr\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBlfnReserved1\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBlfnCheckSum\fP"
+.br
+.ti -1c
+.RI "uint16_t \fBlfnFileName2\fP [6]"
+.br
+.ti -1c
+.RI "uint16_t \fBlfnLocationLow\fP"
+.br
+.ti -1c
+.RI "uint16_t \fBlfnFileName3\fP [2]"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+FAT32 directory entry for LFN\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+kms1212
+.RE
+.PP
+Type Name Offset  uint8_t lfnSeqNum 0x00  uint16_t lfnFileName1[5] 0x01  uint8_t lfnAttr 0x0B  uint8_t lfnReserved1 0x0C  uint8_t lfnCheckSum 0x0D  uint16_t lfnFileName2[6] 0x0E  uint16_t lfnLocationLow 0x1A  uint16_t lfnFileName3[2] 0x1C  
+.SH "Member Data Documentation"
+.PP 
+.SS "uint8_t openFSL::lfnEntryStruct::lfnAttr"
+
+.SS "uint8_t openFSL::lfnEntryStruct::lfnCheckSum"
+
+.SS "uint16_t openFSL::lfnEntryStruct::lfnFileName1[5]"
+
+.SS "uint16_t openFSL::lfnEntryStruct::lfnFileName2[6]"
+
+.SS "uint16_t openFSL::lfnEntryStruct::lfnFileName3[2]"
+
+.SS "uint16_t openFSL::lfnEntryStruct::lfnLocationLow"
+
+.SS "uint8_t openFSL::lfnEntryStruct::lfnReserved1"
+
+.SS "uint8_t openFSL::lfnEntryStruct::lfnSeqNum"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for OpenFSL from the source code\&.

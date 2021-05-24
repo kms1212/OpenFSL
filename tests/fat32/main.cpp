@@ -14,7 +14,7 @@
 #include "openfsl/diskdevice.h"
 #include "openfsl/sector.h"
 #include "openfsl/vint.h"
-#include "openfsl/fs_fat32.h"
+#include "openfsl/fs/fs_fat32.h"
 
 using namespace std;
 using namespace openFSL;

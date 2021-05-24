@@ -8,11 +8,20 @@
 #include "stddef.h"
 
 namespace openFSL {
-	
-	/* Library initializer */
-	uint32_t        initializeLibrary();
-	
-	/* String tokenizer */
+		
+	/**
+	 *
+	 * @brief Library initializer
+	 * @return int: Error code 
+	 *
+	 */
+	int        initializeLibrary();
+		
+	/**
+	 *
+	 * @brief String tokenizer
+	 *
+	 */
 	void            fsl_strtokenize(const std::string& str, std::vector<std::string>& tokens, const std::string& delimiters);
 }
 

@@ -1,0 +1,178 @@
+.TH "openFSL::fatBPBStruct" 3 "Tue May 25 2021" "OpenFSL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+openFSL::fatBPBStruct \- FAT32 BIOS Parameter Block\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <fs_fat32\&.h>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "uint8_t \fBbpbJumpCode\fP [3]"
+.br
+.ti -1c
+.RI "uint8_t \fBbpbOEMName\fP [8]"
+.br
+.ti -1c
+.RI "uint16_t \fBbpbBytesPerSector\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBbpbSectorPerCluster\fP"
+.br
+.ti -1c
+.RI "uint16_t \fBbpbReservedSectors\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBbpbFATCount\fP"
+.br
+.ti -1c
+.RI "uint16_t \fBbpbRootEntries\fP"
+.br
+.ti -1c
+.RI "uint16_t \fBbpbTotalSectors\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBbpbMedia\fP"
+.br
+.ti -1c
+.RI "uint16_t \fBbpbSectorsPerFAT16\fP"
+.br
+.ti -1c
+.RI "uint16_t \fBbpbSectorsPerTrack\fP"
+.br
+.ti -1c
+.RI "uint16_t \fBbpbDiskHeads\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBbpbHiddenSectors\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBbpbTotalSector32\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBebpbSectorsPerFAT32\fP"
+.br
+.ti -1c
+.RI "uint16_t \fBebpbFlags\fP"
+.br
+.ti -1c
+.RI "uint16_t \fBebpbFSVersion\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBebpbRootDirectoryCluster\fP"
+.br
+.ti -1c
+.RI "uint16_t \fBebpbFSInfoSector\fP"
+.br
+.ti -1c
+.RI "uint16_t \fBebpbBSBackupSector\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBebpbReserved1\fP [12]"
+.br
+.ti -1c
+.RI "uint8_t \fBebpbPhysicalDriveNum\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBebpbReserved2\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBebpbExtendedBootSign\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBebpbVolumeSerial\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBebpbVolumeLabel\fP [11]"
+.br
+.ti -1c
+.RI "uint8_t \fBebpbFSType\fP [8]"
+.br
+.ti -1c
+.RI "uint8_t \fBbpbBootCode\fP [420]"
+.br
+.ti -1c
+.RI "uint16_t \fBbpbVBRSignature\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+FAT32 BIOS Parameter Block\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+kms1212
+.RE
+.PP
+Type Name Offset  uint8_t bpbJumpCode[3] 0x0000  uint8_t bpbOEMName[8] 0x0003  uint16_t bpbBytesPerSector 0x000B  uint8_t bpbSectorPerCluster 0x000D  uint16_t bpbReservedSectors 0x000E  uint8_t bpbFATCount 0x0010  uint16_t bpbRootEntries 0x0011  uint16_t bpbTotalSectors 0x0013  uint8_t bpbMedia 0x0015  uint16_t bpbSectorsPerFAT16 0x0016  uint16_t bpbSectorsPerTrack 0x0018  uint16_t bpbDiskHeads 0x001A  uint32_t bpbHiddenSectors 0x001C  uint32_t bpbTotalSector32 0x0020  uint32_t ebpbSectorsPerFAT32 0x0024  uint16_t ebpbFlags 0x0028  uint16_t ebpbFSVersion 0x002A  uint32_t ebpbRootDirectoryCluster 0x002C  uint16_t ebpbFSInfoSector 0x0030  uint16_t ebpbBSBackupSector 0x0032  uint8_t ebpbReserved1[12] 0x0034  uint8_t ebpbPhysicalDriveNum 0x0040  uint8_t ebpbReserved2 0x0041  uint8_t ebpbExtendedBootSign 0x0042  uint32_t ebpbVolumeSerial 0x0043  uint8_t ebpbVolumeLabel[11] 0x0047  uint8_t ebpbFSType[8] 0x0052  uint8_t bpbBootCode[420] 0x005A  uint16_t bpbVBRSignature 0x01FE  
+.SH "Member Data Documentation"
+.PP 
+.SS "uint8_t openFSL::fatBPBStruct::bpbBootCode[420]"
+
+.SS "uint16_t openFSL::fatBPBStruct::bpbBytesPerSector"
+
+.SS "uint16_t openFSL::fatBPBStruct::bpbDiskHeads"
+
+.SS "uint8_t openFSL::fatBPBStruct::bpbFATCount"
+
+.SS "uint32_t openFSL::fatBPBStruct::bpbHiddenSectors"
+
+.SS "uint8_t openFSL::fatBPBStruct::bpbJumpCode[3]"
+
+.SS "uint8_t openFSL::fatBPBStruct::bpbMedia"
+
+.SS "uint8_t openFSL::fatBPBStruct::bpbOEMName[8]"
+
+.SS "uint16_t openFSL::fatBPBStruct::bpbReservedSectors"
+
+.SS "uint16_t openFSL::fatBPBStruct::bpbRootEntries"
+
+.SS "uint8_t openFSL::fatBPBStruct::bpbSectorPerCluster"
+
+.SS "uint16_t openFSL::fatBPBStruct::bpbSectorsPerFAT16"
+
+.SS "uint16_t openFSL::fatBPBStruct::bpbSectorsPerTrack"
+
+.SS "uint32_t openFSL::fatBPBStruct::bpbTotalSector32"
+
+.SS "uint16_t openFSL::fatBPBStruct::bpbTotalSectors"
+
+.SS "uint16_t openFSL::fatBPBStruct::bpbVBRSignature"
+
+.SS "uint16_t openFSL::fatBPBStruct::ebpbBSBackupSector"
+
+.SS "uint8_t openFSL::fatBPBStruct::ebpbExtendedBootSign"
+
+.SS "uint16_t openFSL::fatBPBStruct::ebpbFlags"
+
+.SS "uint16_t openFSL::fatBPBStruct::ebpbFSInfoSector"
+
+.SS "uint8_t openFSL::fatBPBStruct::ebpbFSType[8]"
+
+.SS "uint16_t openFSL::fatBPBStruct::ebpbFSVersion"
+
+.SS "uint8_t openFSL::fatBPBStruct::ebpbPhysicalDriveNum"
+
+.SS "uint8_t openFSL::fatBPBStruct::ebpbReserved1[12]"
+
+.SS "uint8_t openFSL::fatBPBStruct::ebpbReserved2"
+
+.SS "uint32_t openFSL::fatBPBStruct::ebpbRootDirectoryCluster"
+
+.SS "uint32_t openFSL::fatBPBStruct::ebpbSectorsPerFAT32"
+
+.SS "uint8_t openFSL::fatBPBStruct::ebpbVolumeLabel[11]"
+
+.SS "uint32_t openFSL::fatBPBStruct::ebpbVolumeSerial"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for OpenFSL from the source code\&.

@@ -1,8 +1,8 @@
-#include "../header/fs_fat32.h"
+#include "../header/fs_fat32/fs_fat32.h"
 
 using namespace openFSL;
 
-FS_FAT32::FS_FAT32(DiskDevice* dd_, uint32_t option_, std::string pathSeparator_) {
+FS_FAT32::FS_FAT32(DiskDevice* dd_, FAT32_Option option_, std::string pathSeparator_) {
 	dd = dd_;
 	option = option_;
 	pathSeparator = pathSeparator_;
@@ -10,6 +10,7 @@ FS_FAT32::FS_FAT32(DiskDevice* dd_, uint32_t option_, std::string pathSeparator_
 
 FS_FAT32::~FS_FAT32() {
 	dd->close();
+	errorState = FAT32_ERROR_NOT_INITIALIZED;
 	delete fatArea;
 }
 
