@@ -6,7 +6,7 @@
 
 An open source filesystem library
 
-![badge-build](https://github.com/kms1212/OpenFSL/actions/workflows/cmake.yml/badge.svg)
+[![Build](https://github.com/kms1212/OpenFSL/actions/workflows/cmake.yml/badge.svg)](https://github.com/kms1212/OpenFSL/actions/workflows/cmake.yml)
 
 
 
