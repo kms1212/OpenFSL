@@ -21,10 +21,20 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     
+    - name: Install Doxygen
+      run: |
+        sudo apt-get update
+        sudo apt-get install doxygen
+    
+    - name: Install graphviz
+      run: |
+        sudo apt-get update
+        sudo apt-get install graphviz
+        
     - name: Install dependencies
       run: |
         sudo apt-get update
-        sudo apt-get install libspdlog-dev doxygen
+        sudo apt-get install libspdlog-dev
 
     - name: Configure CMake
       # Configure CMake in a 'build' subdirectory. `CMAKE_BUILD_TYPE` is only required if you are using a single-configuration generator such as make.
