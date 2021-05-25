@@ -1,6 +1,6 @@
 # OpenFSL
 
-![openfsl-logo](./doc/logo/openfsl-dark-1280x540.png)
+![openfsl-logo](https://raw.githubusercontent.com/kms1212/OpenFSL/main/doc/logo/openfsl-dark-1280x540.png)
 
 
 

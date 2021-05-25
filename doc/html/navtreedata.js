@@ -23,10 +23,9 @@ for the JavaScript code in this file
 var NAVTREE =
 [
   [ "OpenFSL", "index.html", [
-    [ "OpenFSL Documentation", "index.html", [
-      [ "Library Structure", "index.html#autotoc_md1", null ],
-      [ "Pseudo code for main", "index.html#autotoc_md2", null ]
-    ] ],
+    [ "Progress", "index.html#autotoc_md1", null ],
+    [ "Library Structure", "index.html#autotoc_md2", null ],
+    [ "Pseudo code for main", "index.html#autotoc_md3", null ],
     [ "Todo List", "todo.html", null ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
