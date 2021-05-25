@@ -53,7 +53,8 @@ int main(int argc, char** argv) {
 		fat32->initialize();
 		
 		FAT32_fileInfo* buf = new FAT32_fileInfo[fat32->getChildCount("::")];
-		fat32->getDirList("::", buf);
+		fat32->getDirList(buf, "::");
+		
 		std::string dir;
 		
 		cout << "type \"exit\" to exit\n";
@@ -68,9 +69,9 @@ int main(int argc, char** argv) {
 			else if (dir == "dir") {
 				if (buf != NULL)
 					delete[] buf;
-				buf = new FAT32_fileInfo[fat32->getChildCount("")];
-				fat32->getDirList("", buf);
-				for (int i = 0; i < fat32->getChildCount(""); i++)
+				buf = new FAT32_fileInfo[fat32->getChildCount()];
+				fat32->getDirList(buf);
+				for (int i = 0; i < fat32->getChildCount(); i++)
 				{
 					cout << i << " " << buf[i].fileName << " " << (int)buf[i].fileCreateTime.time_month << "-" << (int)buf[i].fileCreateTime.time_day << "-" << (int)buf[i].fileCreateTime.time_year << " " << (int)buf[i].fileCreateTime.time_hour << ":" << (int)buf[i].fileCreateTime.time_min << ":" << (int)buf[i].fileCreateTime.time_sec << "\n";
 				}

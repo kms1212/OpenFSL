@@ -254,7 +254,6 @@ namespace openFSL {
 	 * uint32_t           | fileSize
 	 *
 	 */
-#pragma pack (push, 1)
 	typedef struct fileInfoStruct {
 		std::string    fileName;
 		uint8_t        fileAttr;
@@ -264,7 +263,6 @@ namespace openFSL {
 		uint32_t       fileLocation;
 		uint32_t       fileSize;
 	} FAT32_fileInfo;
-#pragma pack (pop)
 
 	/**
 	 *
@@ -306,7 +304,7 @@ namespace openFSL {
 		 * @brief FS_FAT32 constructor
 		 * @param dd_: Disk device driver class pointer
 		 * @param option: FAT32 option     
-		 * @param pathSeparator_ = "\": File system path separator
+		 * @param pathSeparator_: File system path separator (Default: "\")
 		 *
 		 */
 		FS_FAT32(DiskDevice* dd_, FAT32_Option option, std::string pathSeparator_ = "\\");
@@ -335,7 +333,7 @@ namespace openFSL {
 		 *   If it fails to verify signature, the errorState variable is set to FAT32_ERROR_SIGNATURE
 		 *
 		 */
-		void         initialize();
+		void initialize();
 		
 		/**
 		 *
@@ -344,7 +342,7 @@ namespace openFSL {
 		 * @param dd_: Disk device driver 
 		 *
 		 */
-		void         setDiskDevice(DiskDevice* dd_);
+		void setDiskDevice(DiskDevice* dd_);
 		
 		/**
 		 *
@@ -353,7 +351,7 @@ namespace openFSL {
 		 * @return DiskDevice*: Disk driver
 		 *
 		 */
-		DiskDevice*  getDiskDevice();
+		DiskDevice* getDiskDevice();
 		
 		/**
 		 *
@@ -362,7 +360,7 @@ namespace openFSL {
 		 * @return uint32_t: Error state
 		 *
 		 */
-		uint32_t     getState();
+		uint32_t getState();
 		
 		/**
 		 *
@@ -371,40 +369,40 @@ namespace openFSL {
 		 * @return std::string: Current path
 		 *
 		 */
-		std::string  getPath();
+		std::string getPath();
 		
 		/**
 		 *
 		 * @brief Subitem counter
 		 * @details Gets subitem count of working directory. 
-		 * @param path: working directory
+		 * @param path: working directory (Default: "")
 		 * @return uint32_t: Subitem count
 		 *
 		 */
-		uint32_t     getChildCount(std::string path);
+		uint32_t getChildCount(std::string path = "");
 		
 		/**
 		 *
 		 * @brief Directory lister
 		 * @details Gets subitem information of working directory. 
 		 * The size of file information buffer has to be same or more than the count of subitem of working directory.
-		 * @param path: working directory
 		 * @param buf: File information buffer
-		 * @return uint32_t: Subitem count
+		 * @param path: working directory (Default: "")
+		 * @return FAT32_fileInfo*: Parameter buf
 		 *
 		 */
-		FAT32_fileInfo*  getDirList(std::string path, FAT32_fileInfo* buf);
+		FAT32_fileInfo* getDirList(FAT32_fileInfo* buf, std::string path = "");
 		
 		/**
 		 *
 		 * @brief Change directory
 		 * @details Changes working directory.
 		 * @param path: working directory
-		 * @param subdir = NULL: Parameter for recursive search. DO NOT SET THIS ARGUMENT ARBITRARILY
-		 * @return uint32_t: Subitem count
+		 * @param subdir: Parameter for recursive search. DO NOT SET THIS ARGUMENT ARBITRARILY (Default: NULL)
+		 * @return int: Error code
 		 *
 		 */
-		int          chdir(std::string path, std::vector<std::string>* subdir = NULL);
+		int chdir(std::string path, std::vector<std::string>* subdir = NULL);
 		
 		/**
 		 *
@@ -421,7 +419,18 @@ namespace openFSL {
 		 * @return uint32_t: Next cluster
 		 *
 		 */
-		uint32_t     getNextCluster(uint32_t cluster);
+		uint32_t getNextCluster(uint32_t cluster);
+		
+		/**
+		 *
+		 * @brief Get file information
+		 * @details Gets file information to open file.
+		 * If file is not found, it returns an empty FAT32_fileInfo structure.
+		 * @param path: file path
+		 * @return FAT32_fileInfo: File information
+		 *
+		 */
+		FAT32_fileInfo getFileInformation(std::string path);
 	}; 
 }
 

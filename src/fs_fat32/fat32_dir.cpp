@@ -63,7 +63,7 @@ uint8_t* str16to8(uint8_t* dest, const uint16_t* src, size_t size)
 	return dest;
 }
 
-FAT32_fileInfo* FS_FAT32::getDirList(std::string path, FAT32_fileInfo* buf) {
+FAT32_fileInfo* FS_FAT32::getDirList(FAT32_fileInfo* buf, std::string path) {
 	std::string currentPath_temp = currentPath;
 	uint32_t currentCluster_temp = currentCluster;
 	
