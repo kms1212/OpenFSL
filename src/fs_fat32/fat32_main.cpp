@@ -33,8 +33,6 @@ void FS_FAT32::initialize() {
 		return;
 	}
 	
-    spdlog::debug("Checking VBR signature");
-	
 	if (bpb->bpbVBRSignature != 0xAA55)
 	{
 		errorState = FAT32_ERROR_SIGNATURE;
