@@ -1,3 +1,5 @@
 <map id="openFSL::lfnEntryStruct" name="openFSL::lfnEntryStruct">
-<area shape="rect" id="node1" title="FAT32 directory entry for LFN." alt="" coords="5,5,179,185"/>
+<area shape="rect" id="node1" title="FAT32 directory entry for LFN." alt="" coords="28,189,201,267"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,5,80,83"/>
+<area shape="rect" id="node3" title=" " alt="" coords="153,5,220,83"/>
 </map>

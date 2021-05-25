@@ -13,7 +13,7 @@ openFSL::FS_FAT32 \- FAT32 imeplementation\&.
 
 .in +1c
 .ti -1c
-.RI "\fBFS_FAT32\fP (\fBDiskDevice\fP *dd_, \fBFAT32_Option\fP option, std::string pathSeparator_='\\\\')"
+.RI "\fBFS_FAT32\fP (\fBDiskDevice\fP *dd_, \fBFAT32_Option\fP \fBoption\fP, std::string pathSeparator_='\\\\')"
 .br
 .RI "\fBFS_FAT32\fP constructor\&. "
 .ti -1c
@@ -57,6 +57,73 @@ openFSL::FS_FAT32 \- FAT32 imeplementation\&.
 .br
 .RI "Next cluster picker\&. "
 .in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBDiskDevice\fP * \fBdd\fP"
+.br
+.ti -1c
+.RI "\fBFAT32_Option\fP \fBoption\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBerrorState\fP = \fBFAT32_ERROR_NOT_INITIALIZED\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBvolumeID\fP"
+.br
+.ti -1c
+.RI "std::string \fBoemLabel\fP"
+.br
+.ti -1c
+.RI "std::string \fBvolumeLabel\fP"
+.br
+.ti -1c
+.RI "std::string \fBfsType\fP"
+.br
+.ti -1c
+.RI "uint16_t \fBsectorPerCluster\fP"
+.br
+.ti -1c
+.RI "uint16_t \fBresvSectorCount\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBtotalSector32\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBfatSize32\fP"
+.br
+.ti -1c
+.RI "uint16_t \fBfsinfoSector\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBrootCluster\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBfreeCluster\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBnextCluster\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBfatCount\fP"
+.br
+.ti -1c
+.RI "std::string \fBpathSeparator\fP"
+.br
+.ti -1c
+.RI "std::string \fBcurrentPath\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBcurrentCluster\fP"
+.br
+.ti -1c
+.RI "\fBSector\fP * \fBfatArea\fP"
+.br
+.ti -1c
+.RI "uint32_t * \fBfatClusterList\fP"
+.br
+.in -1c
 .SH "Detailed Description"
 .PP 
 FAT32 imeplementation\&. 
@@ -74,6 +141,8 @@ File Read, Directory write, File write, FS format, UCS-2 Unicode Codepage
 .RE
 .PP
 
+.PP
+Definition at line 278 of file fs_fat32\&.h\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "FS_FAT32::FS_FAT32 (\fBDiskDevice\fP * dd_, \fBFAT32_Option\fP option, std::string pathSeparator_ = \fC'\\\\'\fP)"
@@ -93,10 +162,14 @@ File Read, Directory write, File write, FS format, UCS-2 Unicode Codepage
 .RE
 .PP
 
+.PP
+Definition at line 5 of file fat32_main\&.cpp\&.
 .SS "FS_FAT32::~FS_FAT32 ()"
 
 .PP
 \fBFS_FAT32\fP destructor\&. 
+.PP
+Definition at line 11 of file fat32_main\&.cpp\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "int FS_FAT32::chdir (std::string path, std::vector< std::string > * subdir = \fCNULL\fP)"
@@ -117,6 +190,8 @@ uint32_t: Subitem count
 .RE
 .PP
 
+.PP
+Definition at line 167 of file fat32_dir\&.cpp\&.
 .SS "uint32_t FS_FAT32::getChildCount (std::string path)"
 
 .PP
@@ -133,6 +208,8 @@ uint32_t: Subitem count
 .RE
 .PP
 
+.PP
+Definition at line 5 of file fat32_dir\&.cpp\&.
 .SS "\fBFAT32_fileInfo\fP * FS_FAT32::getDirList (std::string path, \fBFAT32_fileInfo\fP * buf)"
 
 .PP
@@ -151,6 +228,8 @@ uint32_t: Subitem count
 .RE
 .PP
 
+.PP
+Definition at line 68 of file fat32_dir\&.cpp\&.
 .SS "\fBDiskDevice\fP * FS_FAT32::getDiskDevice ()"
 
 .PP
@@ -162,6 +241,8 @@ DiskDevice*: Disk driver
 .RE
 .PP
 
+.PP
+Definition at line 119 of file fat32_main\&.cpp\&.
 .SS "uint32_t FS_FAT32::getNextCluster (uint32_t cluster)"
 
 .PP
@@ -178,6 +259,8 @@ uint32_t: Next cluster
 .RE
 .PP
 
+.PP
+Definition at line 5 of file fat32_cluster\&.cpp\&.
 .SS "std::string FS_FAT32::getPath ()"
 
 .PP
@@ -189,6 +272,8 @@ std::string: Current path
 .RE
 .PP
 
+.PP
+Definition at line 128 of file fat32_main\&.cpp\&.
 .SS "uint32_t FS_FAT32::getState ()"
 
 .PP
@@ -200,6 +285,8 @@ uint32_t: Error state
 .RE
 .PP
 
+.PP
+Definition at line 124 of file fat32_main\&.cpp\&.
 .SS "void FS_FAT32::initialize ()"
 
 .PP
@@ -214,6 +301,8 @@ VBR Signature in BPB (0x55 0xAA)
 FSINFO Signature (0x55 0xAA)
 .PP
 Warns if free cluster amount is unknown (0xFFFFFFFF) Warns if path separator is not given (default='\\') Loads FATArea to memory When Fail: If disk fails, the errorState variable is set to FAT32_ERROR_DISKDEVICE If it fails to verify signature, the errorState variable is set to FAT32_ERROR_SIGNATURE 
+.PP
+Definition at line 17 of file fat32_main\&.cpp\&.
 .SS "void FS_FAT32::setDiskDevice (\fBDiskDevice\fP * dd_)"
 
 .PP
@@ -225,6 +314,94 @@ Disk device setter\&. Sets disk driver class\&.
 .RE
 .PP
 
+.PP
+Definition at line 114 of file fat32_main\&.cpp\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "uint32_t openFSL::FS_FAT32::currentCluster\fC [private]\fP"
+
+.PP
+Definition at line 300 of file fs_fat32\&.h\&.
+.SS "std::string openFSL::FS_FAT32::currentPath\fC [private]\fP"
+
+.PP
+Definition at line 299 of file fs_fat32\&.h\&.
+.SS "\fBDiskDevice\fP* openFSL::FS_FAT32::dd\fC [private]\fP"
+
+.PP
+Definition at line 280 of file fs_fat32\&.h\&.
+.SS "uint32_t openFSL::FS_FAT32::errorState = \fBFAT32_ERROR_NOT_INITIALIZED\fP\fC [private]\fP"
+
+.PP
+Definition at line 282 of file fs_fat32\&.h\&.
+.SS "\fBSector\fP* openFSL::FS_FAT32::fatArea\fC [private]\fP"
+
+.PP
+Definition at line 302 of file fs_fat32\&.h\&.
+.SS "uint32_t* openFSL::FS_FAT32::fatClusterList\fC [private]\fP"
+
+.PP
+Definition at line 303 of file fs_fat32\&.h\&.
+.SS "uint8_t openFSL::FS_FAT32::fatCount\fC [private]\fP"
+
+.PP
+Definition at line 296 of file fs_fat32\&.h\&.
+.SS "uint32_t openFSL::FS_FAT32::fatSize32\fC [private]\fP"
+
+.PP
+Definition at line 291 of file fs_fat32\&.h\&.
+.SS "uint32_t openFSL::FS_FAT32::freeCluster\fC [private]\fP"
+
+.PP
+Definition at line 294 of file fs_fat32\&.h\&.
+.SS "uint16_t openFSL::FS_FAT32::fsinfoSector\fC [private]\fP"
+
+.PP
+Definition at line 292 of file fs_fat32\&.h\&.
+.SS "std::string openFSL::FS_FAT32::fsType\fC [private]\fP"
+
+.PP
+Definition at line 287 of file fs_fat32\&.h\&.
+.SS "uint32_t openFSL::FS_FAT32::nextCluster\fC [private]\fP"
+
+.PP
+Definition at line 295 of file fs_fat32\&.h\&.
+.SS "std::string openFSL::FS_FAT32::oemLabel\fC [private]\fP"
+
+.PP
+Definition at line 285 of file fs_fat32\&.h\&.
+.SS "\fBFAT32_Option\fP openFSL::FS_FAT32::option\fC [private]\fP"
+
+.PP
+Definition at line 281 of file fs_fat32\&.h\&.
+.SS "std::string openFSL::FS_FAT32::pathSeparator\fC [private]\fP"
+
+.PP
+Definition at line 298 of file fs_fat32\&.h\&.
+.SS "uint16_t openFSL::FS_FAT32::resvSectorCount\fC [private]\fP"
+
+.PP
+Definition at line 289 of file fs_fat32\&.h\&.
+.SS "uint32_t openFSL::FS_FAT32::rootCluster\fC [private]\fP"
+
+.PP
+Definition at line 293 of file fs_fat32\&.h\&.
+.SS "uint16_t openFSL::FS_FAT32::sectorPerCluster\fC [private]\fP"
+
+.PP
+Definition at line 288 of file fs_fat32\&.h\&.
+.SS "uint32_t openFSL::FS_FAT32::totalSector32\fC [private]\fP"
+
+.PP
+Definition at line 290 of file fs_fat32\&.h\&.
+.SS "uint32_t openFSL::FS_FAT32::volumeID\fC [private]\fP"
+
+.PP
+Definition at line 284 of file fs_fat32\&.h\&.
+.SS "std::string openFSL::FS_FAT32::volumeLabel\fC [private]\fP"
+
+.PP
+Definition at line 286 of file fs_fat32\&.h\&.
 
 .SH "Author"
 .PP 

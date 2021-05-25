@@ -9,9 +9,18 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -20,12 +29,27 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="openfsl-dark-640x270.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="openfsl-dark-320x135.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenFSL
    </div>
    <div id="projectbrief">An open source filesystem library</div>
   </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -37,16 +61,23 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
+$(document).ready(function(){initNavTree('classopen_f_s_l_1_1_f_s___f_a_t32.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -61,11 +92,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="namespaceopen_f_s_l.html">openFSL</a></li><li class="navelem"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html">FS_FAT32</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">openFSL::FS_FAT32 Member List</div>  </div>
@@ -75,22 +101,46 @@ $(function() {
 <p>This is the complete list of members for <a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html">openFSL::FS_FAT32</a>, including all inherited members.</p>
 <table class="directory">
   <tr class="even"><td class="entry"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#ad5dd6f60a83f74b45ba7d557023a5890">chdir</a>(std::string path, std::vector&lt; std::string &gt; *subdir=NULL)</td><td class="entry"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html">openFSL::FS_FAT32</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#afcf6a32e4782a53bcb5ca69573c02e2d">FS_FAT32</a>(DiskDevice *dd_, FAT32_Option option, std::string pathSeparator_=&quot;\\&quot;)</td><td class="entry"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html">openFSL::FS_FAT32</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a4adf121362d61a64fac420a7d21805d9">getChildCount</a>(std::string path)</td><td class="entry"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html">openFSL::FS_FAT32</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a7576676a59c8c79a10ff851ed2ed4344">getDirList</a>(std::string path, FAT32_fileInfo *buf)</td><td class="entry"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html">openFSL::FS_FAT32</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a2db2ce36269789056e4aabdb1385408f">getDiskDevice</a>()</td><td class="entry"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html">openFSL::FS_FAT32</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a1930b23806258c71a260e01b603634fa">getNextCluster</a>(uint32_t cluster)</td><td class="entry"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html">openFSL::FS_FAT32</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#ade27bc59ef329910cd5fb8e008c813a3">getPath</a>()</td><td class="entry"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html">openFSL::FS_FAT32</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a9a2b087f7f9becb789f7ab6fd82c74bf">getState</a>()</td><td class="entry"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html">openFSL::FS_FAT32</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#af566a65b037158e7d8e881ac508b8a40">initialize</a>()</td><td class="entry"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html">openFSL::FS_FAT32</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a275fe7152ab687964bf4ca6b449e2dac">currentCluster</a></td><td class="entry"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html">openFSL::FS_FAT32</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#aa9d033b20a66827798d7f979e9c0e7a6">currentPath</a></td><td class="entry"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html">openFSL::FS_FAT32</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a40f7e4b624550b57a8c8cea6228bae28">dd</a></td><td class="entry"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html">openFSL::FS_FAT32</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#acf9d0180806b9057683e195342fa54aa">errorState</a></td><td class="entry"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html">openFSL::FS_FAT32</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a1883a7da080f121d8283dfd40c36790c">fatArea</a></td><td class="entry"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html">openFSL::FS_FAT32</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a8d2621636e91f7b822ff3cbadbcf2481">fatClusterList</a></td><td class="entry"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html">openFSL::FS_FAT32</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a0465cc6ddfe10bbcaf32e91b8f35b9db">fatCount</a></td><td class="entry"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html">openFSL::FS_FAT32</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#ad0a3e4ed34916cf77dea3759831bb2d0">fatSize32</a></td><td class="entry"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html">openFSL::FS_FAT32</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a31e6aa188916e531d9a6dd6a56bb505f">freeCluster</a></td><td class="entry"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html">openFSL::FS_FAT32</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#afcf6a32e4782a53bcb5ca69573c02e2d">FS_FAT32</a>(DiskDevice *dd_, FAT32_Option option, std::string pathSeparator_=&quot;\\&quot;)</td><td class="entry"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html">openFSL::FS_FAT32</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a91671b2a9aabff0bf2c9cdb04654b828">fsinfoSector</a></td><td class="entry"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html">openFSL::FS_FAT32</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a12c2b41f5e09d49e40eb83b08bea26e8">fsType</a></td><td class="entry"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html">openFSL::FS_FAT32</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a4adf121362d61a64fac420a7d21805d9">getChildCount</a>(std::string path)</td><td class="entry"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html">openFSL::FS_FAT32</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a7576676a59c8c79a10ff851ed2ed4344">getDirList</a>(std::string path, FAT32_fileInfo *buf)</td><td class="entry"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html">openFSL::FS_FAT32</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a2db2ce36269789056e4aabdb1385408f">getDiskDevice</a>()</td><td class="entry"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html">openFSL::FS_FAT32</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a1930b23806258c71a260e01b603634fa">getNextCluster</a>(uint32_t cluster)</td><td class="entry"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html">openFSL::FS_FAT32</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#ade27bc59ef329910cd5fb8e008c813a3">getPath</a>()</td><td class="entry"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html">openFSL::FS_FAT32</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a9a2b087f7f9becb789f7ab6fd82c74bf">getState</a>()</td><td class="entry"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html">openFSL::FS_FAT32</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#af566a65b037158e7d8e881ac508b8a40">initialize</a>()</td><td class="entry"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html">openFSL::FS_FAT32</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#ae644daa3fe6c92d7f8f9a15bb5b68b7f">nextCluster</a></td><td class="entry"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html">openFSL::FS_FAT32</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a006e69a4876c75a52a3f39acdcbabc7a">oemLabel</a></td><td class="entry"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html">openFSL::FS_FAT32</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#aaad39c6076948da0b2d2be33c6970bb2">option</a></td><td class="entry"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html">openFSL::FS_FAT32</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a7421632dee11923f5e196e14a0e6c2d8">pathSeparator</a></td><td class="entry"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html">openFSL::FS_FAT32</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a314fd6562624adaefde62ffb3362cc78">resvSectorCount</a></td><td class="entry"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html">openFSL::FS_FAT32</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a1898864f8bcd063f94107760d960eb2c">rootCluster</a></td><td class="entry"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html">openFSL::FS_FAT32</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#afeb14dbebb5b0fe08cd77f2af41338c5">sectorPerCluster</a></td><td class="entry"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html">openFSL::FS_FAT32</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr><td class="entry"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a21af94044f93bd5beba549449ef4f754">setDiskDevice</a>(DiskDevice *dd_)</td><td class="entry"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html">openFSL::FS_FAT32</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a0e8779b0397783bc4d0bccdd6e9ce934">~FS_FAT32</a>()</td><td class="entry"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html">openFSL::FS_FAT32</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#ae291ffc6823e4a5899d8e3793a5a9e2d">totalSector32</a></td><td class="entry"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html">openFSL::FS_FAT32</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#aff5b5fb72f0387bf2bda810da95e48bd">volumeID</a></td><td class="entry"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html">openFSL::FS_FAT32</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#ab83033bef42f6999377ef5fd9d69a4f2">volumeLabel</a></td><td class="entry"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html">openFSL::FS_FAT32</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a0e8779b0397783bc4d0bccdd6e9ce934">~FS_FAT32</a>()</td><td class="entry"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html">openFSL::FS_FAT32</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.17
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
 </body>
 </html>

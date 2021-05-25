@@ -29,6 +29,16 @@ openFSL::Sector \- \fBSector\fP buffer\&.
 .br
 .RI "Data buffer getter\&. "
 .in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "vint_arch \fBsector_count\fP"
+.br
+.ti -1c
+.RI "uint8_t * \fBdata\fP"
+.br
+.in -1c
 .SH "Detailed Description"
 .PP 
 \fBSector\fP buffer\&. 
@@ -46,6 +56,8 @@ Change buffer addressing process
 .RE
 .PP
 
+.PP
+Definition at line 18 of file sector\&.h\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "Sector::Sector (size_t sector_count_, uint32_t bytespersector)"
@@ -61,10 +73,14 @@ Change buffer addressing process
 .RE
 .PP
 
+.PP
+Definition at line 5 of file sector\&.cpp\&.
 .SS "Sector::~Sector ()"
 
 .PP
 \fBSector\fP class destructor\&. 
+.PP
+Definition at line 22 of file sector\&.cpp\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "uint8_t * Sector::getData ()"
@@ -78,6 +94,8 @@ uint8_t*: Data buffer pointer
 .RE
 .PP
 
+.PP
+Definition at line 18 of file sector\&.cpp\&.
 .SS "uint64_t Sector::getSectorCount ()"
 
 .PP
@@ -89,6 +107,18 @@ vint_arch: \fBSector\fP count
 .RE
 .PP
 
+.PP
+Definition at line 14 of file sector\&.cpp\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "uint8_t* openFSL::Sector::data\fC [private]\fP"
+
+.PP
+Definition at line 21 of file sector\&.h\&.
+.SS "vint_arch openFSL::Sector::sector_count\fC [private]\fP"
+
+.PP
+Definition at line 20 of file sector\&.h\&.
 
 .SH "Author"
 .PP 

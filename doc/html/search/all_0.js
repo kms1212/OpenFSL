@@ -15,5 +15,6 @@ var searchData=
   ['bpbsectorspertrack_12',['bpbSectorsPerTrack',['../structopen_f_s_l_1_1fat_b_p_b_struct.html#ac7c502fba73cd85a164ede14c612a90f',1,'openFSL::fatBPBStruct']]],
   ['bpbtotalsector32_13',['bpbTotalSector32',['../structopen_f_s_l_1_1fat_b_p_b_struct.html#a6b31a58f5ae1b9949033902416d6eb05',1,'openFSL::fatBPBStruct']]],
   ['bpbtotalsectors_14',['bpbTotalSectors',['../structopen_f_s_l_1_1fat_b_p_b_struct.html#a4e7e68ae8543e8abc713ad66b346841e',1,'openFSL::fatBPBStruct']]],
-  ['bpbvbrsignature_15',['bpbVBRSignature',['../structopen_f_s_l_1_1fat_b_p_b_struct.html#a9baa21d2d759c00523386bce6a440b95',1,'openFSL::fatBPBStruct']]]
+  ['bpbvbrsignature_15',['bpbVBRSignature',['../structopen_f_s_l_1_1fat_b_p_b_struct.html#a9baa21d2d759c00523386bce6a440b95',1,'openFSL::fatBPBStruct']]],
+  ['bytespersector_16',['bytespersector',['../classopen_f_s_l_1_1_disk_device.html#aa02ece0bf9ab80edcb261a2f2f6d45ec',1,'openFSL::DiskDevice']]]
 ];

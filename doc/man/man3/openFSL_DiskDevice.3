@@ -53,6 +53,16 @@ openFSL::DiskDevice \- Disk driver\&.
 .br
 .RI "Disk close function wrapper\&. "
 .in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "uint32_t \fBerrorState\fP = \fBDISKDEV_ERROR_NOT_INITIALIZED\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBbytespersector\fP"
+.br
+.in -1c
 .SH "Detailed Description"
 .PP 
 Disk driver\&. 
@@ -70,6 +80,8 @@ Write function wrapper
 .RE
 .PP
 
+.PP
+Definition at line 23 of file diskdevice\&.h\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "DiskDevice::DiskDevice (uint32_t bytespersector_ = \fC512\fP)"
@@ -83,16 +95,22 @@ Write function wrapper
 .RE
 .PP
 
+.PP
+Definition at line 5 of file diskdevice\&.cpp\&.
 .SS "DiskDevice::~DiskDevice ()"
 
 .PP
 \fBDiskDevice\fP destructor\&. 
+.PP
+Definition at line 28 of file diskdevice\&.cpp\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "void DiskDevice::close ()"
 
 .PP
 \fBDiskDevice\fP closer\&. Stops disk driver\&. 
+.PP
+Definition at line 33 of file diskdevice\&.cpp\&.
 .SS "uint32_t DiskDevice::getBytespersector ()"
 
 .PP
@@ -104,6 +122,8 @@ uint32_t: Bytes per sector
 .RE
 .PP
 
+.PP
+Definition at line 45 of file diskdevice\&.cpp\&.
 .SS "uint32_t DiskDevice::getState ()"
 
 .PP
@@ -115,6 +135,8 @@ uint32_t: Error state
 .RE
 .PP
 
+.PP
+Definition at line 41 of file diskdevice\&.cpp\&.
 .SS "void DiskDevice::initialize ()"
 
 .PP
@@ -131,8 +153,14 @@ writeDisk() (--)
 \fBcloseDisk()\fP 
 .PP
 
+.PP
+Definition at line 9 of file diskdevice\&.cpp\&.
 .SH "Member Data Documentation"
 .PP 
+.SS "uint32_t openFSL::DiskDevice::bytespersector\fC [private]\fP"
+
+.PP
+Definition at line 26 of file diskdevice\&.h\&.
 .SS "int(* openFSL::DiskDevice::closeDisk) ()"
 
 .PP
@@ -144,6 +172,12 @@ int: Error code
 .RE
 .PP
 
+.PP
+Definition at line 111 of file diskdevice\&.h\&.
+.SS "uint32_t openFSL::DiskDevice::errorState = \fBDISKDEV_ERROR_NOT_INITIALIZED\fP\fC [private]\fP"
+
+.PP
+Definition at line 25 of file diskdevice\&.h\&.
 .SS "int(* openFSL::DiskDevice::openDisk) ()"
 
 .PP
@@ -155,6 +189,8 @@ int: Error code
 .RE
 .PP
 
+.PP
+Definition at line 90 of file diskdevice\&.h\&.
 .SS "int(* openFSL::DiskDevice::readDisk) (\fBSector\fP *, vint_arch, vint_arch)"
 
 .PP
@@ -175,6 +211,8 @@ int: Error code
 .RE
 .PP
 
+.PP
+Definition at line 102 of file diskdevice\&.h\&.
 
 .SH "Author"
 .PP 

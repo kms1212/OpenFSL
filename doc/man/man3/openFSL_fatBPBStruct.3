@@ -112,66 +112,126 @@ kms1212
 .RE
 .PP
 Type Name Offset  uint8_t bpbJumpCode[3] 0x0000  uint8_t bpbOEMName[8] 0x0003  uint16_t bpbBytesPerSector 0x000B  uint8_t bpbSectorPerCluster 0x000D  uint16_t bpbReservedSectors 0x000E  uint8_t bpbFATCount 0x0010  uint16_t bpbRootEntries 0x0011  uint16_t bpbTotalSectors 0x0013  uint8_t bpbMedia 0x0015  uint16_t bpbSectorsPerFAT16 0x0016  uint16_t bpbSectorsPerTrack 0x0018  uint16_t bpbDiskHeads 0x001A  uint32_t bpbHiddenSectors 0x001C  uint32_t bpbTotalSector32 0x0020  uint32_t ebpbSectorsPerFAT32 0x0024  uint16_t ebpbFlags 0x0028  uint16_t ebpbFSVersion 0x002A  uint32_t ebpbRootDirectoryCluster 0x002C  uint16_t ebpbFSInfoSector 0x0030  uint16_t ebpbBSBackupSector 0x0032  uint8_t ebpbReserved1[12] 0x0034  uint8_t ebpbPhysicalDriveNum 0x0040  uint8_t ebpbReserved2 0x0041  uint8_t ebpbExtendedBootSign 0x0042  uint32_t ebpbVolumeSerial 0x0043  uint8_t ebpbVolumeLabel[11] 0x0047  uint8_t ebpbFSType[8] 0x0052  uint8_t bpbBootCode[420] 0x005A  uint16_t bpbVBRSignature 0x01FE  
+.PP
+Definition at line 81 of file fs_fat32\&.h\&.
 .SH "Member Data Documentation"
 .PP 
 .SS "uint8_t openFSL::fatBPBStruct::bpbBootCode[420]"
 
+.PP
+Definition at line 111 of file fs_fat32\&.h\&.
 .SS "uint16_t openFSL::fatBPBStruct::bpbBytesPerSector"
 
+.PP
+Definition at line 84 of file fs_fat32\&.h\&.
 .SS "uint16_t openFSL::fatBPBStruct::bpbDiskHeads"
 
+.PP
+Definition at line 93 of file fs_fat32\&.h\&.
 .SS "uint8_t openFSL::fatBPBStruct::bpbFATCount"
 
+.PP
+Definition at line 87 of file fs_fat32\&.h\&.
 .SS "uint32_t openFSL::fatBPBStruct::bpbHiddenSectors"
 
+.PP
+Definition at line 94 of file fs_fat32\&.h\&.
 .SS "uint8_t openFSL::fatBPBStruct::bpbJumpCode[3]"
 
+.PP
+Definition at line 82 of file fs_fat32\&.h\&.
 .SS "uint8_t openFSL::fatBPBStruct::bpbMedia"
 
+.PP
+Definition at line 90 of file fs_fat32\&.h\&.
 .SS "uint8_t openFSL::fatBPBStruct::bpbOEMName[8]"
 
+.PP
+Definition at line 83 of file fs_fat32\&.h\&.
 .SS "uint16_t openFSL::fatBPBStruct::bpbReservedSectors"
 
+.PP
+Definition at line 86 of file fs_fat32\&.h\&.
 .SS "uint16_t openFSL::fatBPBStruct::bpbRootEntries"
 
+.PP
+Definition at line 88 of file fs_fat32\&.h\&.
 .SS "uint8_t openFSL::fatBPBStruct::bpbSectorPerCluster"
 
+.PP
+Definition at line 85 of file fs_fat32\&.h\&.
 .SS "uint16_t openFSL::fatBPBStruct::bpbSectorsPerFAT16"
 
+.PP
+Definition at line 91 of file fs_fat32\&.h\&.
 .SS "uint16_t openFSL::fatBPBStruct::bpbSectorsPerTrack"
 
+.PP
+Definition at line 92 of file fs_fat32\&.h\&.
 .SS "uint32_t openFSL::fatBPBStruct::bpbTotalSector32"
 
+.PP
+Definition at line 95 of file fs_fat32\&.h\&.
 .SS "uint16_t openFSL::fatBPBStruct::bpbTotalSectors"
 
+.PP
+Definition at line 89 of file fs_fat32\&.h\&.
 .SS "uint16_t openFSL::fatBPBStruct::bpbVBRSignature"
 
+.PP
+Definition at line 112 of file fs_fat32\&.h\&.
 .SS "uint16_t openFSL::fatBPBStruct::ebpbBSBackupSector"
 
+.PP
+Definition at line 102 of file fs_fat32\&.h\&.
 .SS "uint8_t openFSL::fatBPBStruct::ebpbExtendedBootSign"
 
+.PP
+Definition at line 106 of file fs_fat32\&.h\&.
 .SS "uint16_t openFSL::fatBPBStruct::ebpbFlags"
 
+.PP
+Definition at line 98 of file fs_fat32\&.h\&.
 .SS "uint16_t openFSL::fatBPBStruct::ebpbFSInfoSector"
 
+.PP
+Definition at line 101 of file fs_fat32\&.h\&.
 .SS "uint8_t openFSL::fatBPBStruct::ebpbFSType[8]"
 
+.PP
+Definition at line 109 of file fs_fat32\&.h\&.
 .SS "uint16_t openFSL::fatBPBStruct::ebpbFSVersion"
 
+.PP
+Definition at line 99 of file fs_fat32\&.h\&.
 .SS "uint8_t openFSL::fatBPBStruct::ebpbPhysicalDriveNum"
 
+.PP
+Definition at line 104 of file fs_fat32\&.h\&.
 .SS "uint8_t openFSL::fatBPBStruct::ebpbReserved1[12]"
 
+.PP
+Definition at line 103 of file fs_fat32\&.h\&.
 .SS "uint8_t openFSL::fatBPBStruct::ebpbReserved2"
 
+.PP
+Definition at line 105 of file fs_fat32\&.h\&.
 .SS "uint32_t openFSL::fatBPBStruct::ebpbRootDirectoryCluster"
 
+.PP
+Definition at line 100 of file fs_fat32\&.h\&.
 .SS "uint32_t openFSL::fatBPBStruct::ebpbSectorsPerFAT32"
 
+.PP
+Definition at line 97 of file fs_fat32\&.h\&.
 .SS "uint8_t openFSL::fatBPBStruct::ebpbVolumeLabel[11]"
 
+.PP
+Definition at line 108 of file fs_fat32\&.h\&.
 .SS "uint32_t openFSL::fatBPBStruct::ebpbVolumeSerial"
 
+.PP
+Definition at line 107 of file fs_fat32\&.h\&.
 
 .SH "Author"
 .PP 

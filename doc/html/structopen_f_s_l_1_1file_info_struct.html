@@ -9,9 +9,18 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -20,12 +29,27 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="openfsl-dark-640x270.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="openfsl-dark-320x135.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenFSL
    </div>
    <div id="projectbrief">An open source filesystem library</div>
   </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -37,16 +61,23 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
+$(document).ready(function(){initNavTree('structopen_f_s_l_1_1file_info_struct.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -61,11 +92,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="namespaceopen_f_s_l.html">openFSL</a></li><li class="navelem"><a class="el" href="structopen_f_s_l_1_1file_info_struct.html">fileInfoStruct</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-attribs">Public Attributes</a> &#124;
@@ -84,8 +110,12 @@ Collaboration diagram for openFSL::fileInfoStruct:</div>
 <div class="dyncontent">
 <div class="center"><img src="structopen_f_s_l_1_1file_info_struct__coll__graph.png" border="0" usemap="#open_f_s_l_1_1file_info_struct_coll__map" alt="Collaboration graph"/></div>
 <map name="open_f_s_l_1_1file_info_struct_coll__map" id="open_f_s_l_1_1file_info_struct_coll__map">
-<area shape="rect" title="FAT32 file information." alt="" coords="9,263,176,384"/>
-<area shape="rect" href="structopen_f_s_l_1_1file_time_struct.html" title="FAT32 time." alt="" coords="5,5,180,171"/>
+<area shape="rect" title="FAT32 file information." alt="" coords="119,388,286,465"/>
+<area shape="rect" title=" " alt="" coords="5,219,80,296"/>
+<area shape="rect" title=" " alt="" coords="139,5,205,83"/>
+<area shape="rect" href="structopen_f_s_l_1_1file_time_struct.html" title="FAT32 time." alt="" coords="234,219,409,296"/>
+<area shape="rect" title=" " alt="" coords="433,219,492,296"/>
+<area shape="rect" title=" " alt="" coords="284,5,359,83"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -127,6 +157,8 @@ Public Attributes</h2></td></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">uint32_t </td><td class="markdownTableBodyNone">fileSize  </td></tr>
 </table>
+
+<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00259">259</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
 </div><h2 class="groupheader">Member Data Documentation</h2>
 <a id="acc5f8301b821a809b8bdd77cdb009da4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acc5f8301b821a809b8bdd77cdb009da4">&#9670;&nbsp;</a></span>fileAccessTime</h2>
@@ -139,6 +171,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00263">263</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
 
 </div>
 </div>
@@ -154,6 +188,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00261">261</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
+
 </div>
 </div>
 <a id="aa57f8411305b09fca121d445ff632a48"></a>
@@ -167,6 +203,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00262">262</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
 
 </div>
 </div>
@@ -182,6 +220,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00265">265</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
+
 </div>
 </div>
 <a id="abb0a76c7b50543e711802d5964010bef"></a>
@@ -195,6 +235,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00264">264</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
 
 </div>
 </div>
@@ -210,6 +252,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00260">260</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
+
 </div>
 </div>
 <a id="a92f386a8233c91e2b3d789f66f40d01b"></a>
@@ -224,17 +268,23 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00266">266</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li>src/header/fs_fat32/<a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.17
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespaceopen_f_s_l.html">openFSL</a></li><li class="navelem"><a class="el" href="structopen_f_s_l_1_1file_info_struct.html">fileInfoStruct</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
 </body>
 </html>
