@@ -27,4 +27,4 @@ jobs:
           command: 'apt-get update && cmake ./ -Bbuild'
       - run:
           name: Creating Binary Files
-          command: 'cmake ./ --build build'
+          command: 'cmake --build ./build'
