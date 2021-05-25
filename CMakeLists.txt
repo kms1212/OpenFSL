@@ -11,9 +11,18 @@ file(GLOB INCLUDE_FILES_FS "src/header/fs_*/*.h")
 file(COPY ${INCLUDE_FILES} DESTINATION "include/openfsl/")
 file(COPY ${INCLUDE_FILES_FS} DESTINATION "include/openfsl/fs/")
 
-SET (LIB_PKG
-    spdlog
-)
+SET (LIB_PKG spdlog)
 
 find_package(${LIB_PKG} REQUIRED)
 target_link_libraries(openfsl ${LIB_PKG})
+
+option(BUILD_DOC "Build documentation" ON)
+
+find_package(Doxygen)
+if (DOXYGEN_FOUND)
+    add_custom_target( doc_doxygen ALL
+        COMMAND ${DOXYGEN_EXECUTABLE} Doxyfile
+        WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/doc
+        COMMENT "Generating API documentation with Doxygen"
+        VERBATIM )
+endif (DOXYGEN_FOUND)
