@@ -68,3 +68,6 @@ CMakeUserPresets.json
 
 # Includes
 /include
+
+# Docs
+/doc/html

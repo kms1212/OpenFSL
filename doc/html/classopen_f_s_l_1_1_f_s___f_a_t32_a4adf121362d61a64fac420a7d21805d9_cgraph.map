@@ -1,9 +1,0 @@
-<map id="openFSL::FS_FAT32::getChildCount" name="openFSL::FS_FAT32::getChildCount">
-<area shape="rect" id="node1" title="Subitem counter." alt="" coords="5,140,157,181"/>
-<area shape="rect" id="node2" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#ad5dd6f60a83f74b45ba7d557023a5890" title="Change directory." alt="" coords="205,111,357,152"/>
-<area shape="rect" id="node4" href="$classopen_f_s_l_1_1_disk_device.html#a3c7507d9af94c12bf3f3d573ad670341" title="Sector size getter." alt="" coords="419,5,577,47"/>
-<area shape="rect" id="node5" href="$classopen_f_s_l_1_1_sector.html#af2a17aad9f4f4d65d08b259a1e8ae29c" title="Data buffer getter." alt="" coords="405,173,591,199"/>
-<area shape="rect" id="node6" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a1930b23806258c71a260e01b603634fa" title="Next cluster picker." alt="" coords="422,224,574,265"/>
-<area shape="rect" id="node3" href="$namespaceopen_f_s_l.html#a93d37096baa2dd91e4ae24d62ff7fbad" title="String tokenizer." alt="" coords="409,122,587,149"/>
-<area shape="rect" id="node7" href="$fat32__dir_8cpp.html#a8c2f71cc395df104866f1763be127644" title=" " alt="" coords="460,71,536,98"/>
-</map>

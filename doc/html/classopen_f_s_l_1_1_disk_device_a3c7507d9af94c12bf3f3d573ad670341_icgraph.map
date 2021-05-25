@@ -1,7 +1,0 @@
-<map id="openFSL::DiskDevice::getBytespersector" name="openFSL::DiskDevice::getBytespersector">
-<area shape="rect" id="node1" title="Sector size getter." alt="" coords="405,80,564,121"/>
-<area shape="rect" id="node2" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#ad5dd6f60a83f74b45ba7d557023a5890" title="Change directory." alt="" coords="205,51,357,92"/>
-<area shape="rect" id="node3" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a4adf121362d61a64fac420a7d21805d9" title="Subitem counter." alt="" coords="5,5,157,47"/>
-<area shape="rect" id="node4" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a7576676a59c8c79a10ff851ed2ed4344" title="Directory lister." alt="" coords="5,84,157,125"/>
-<area shape="rect" id="node5" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#af566a65b037158e7d8e881ac508b8a40" title="FS_FAT32 intializer." alt="" coords="205,168,357,209"/>
-</map>
