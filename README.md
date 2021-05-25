@@ -1,4 +1,4 @@
-# OpenFSL
+# OpenFSL README
 
 ![openfsl-logo](https://raw.githubusercontent.com/kms1212/OpenFSL/main/doc/logo/openfsl-dark-1280x540.png)
 
@@ -6,7 +6,7 @@
 
 An open source filesystem library
 
-[![Build](https://github.com/kms1212/OpenFSL/actions/workflows/cmake.yml/badge.svg)](https://github.com/kms1212/OpenFSL/actions/workflows/cmake.yml)[![CircleCI](https://circleci.com/gh/kms1212/OpenFSL.svg?style=shield)](https://circleci.com/gh/kms1212/OpenFSL)
+[![Build](https://github.com/kms1212/OpenFSL/actions/workflows/cmake.yml/badge.svg)](https://github.com/kms1212/OpenFSL/actions/workflows/cmake.yml) [![CircleCI](https://circleci.com/gh/kms1212/OpenFSL.svg?style=shield)](https://circleci.com/gh/kms1212/OpenFSL)
 
 
 
@@ -31,14 +31,6 @@ File systems:
 | 13   | UFS                  | Not Implemented |
 
 
-
-## Library Structure
-
-File System
-
-- Logger driver wrapper (inherited from Driver class)
-- Disk driver wrapper (inherited from Driver class)
-- File system implementation with driver
 
 ## Pseudo code for main
 

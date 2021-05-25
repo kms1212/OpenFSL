@@ -71,3 +71,6 @@ CMakeUserPresets.json
 
 # Docs
 /doc/html
+
+# Test program binaries
+/tests/*/test
