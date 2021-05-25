@@ -32,7 +32,6 @@ uint32_t FS_FAT32::getChildCount(std::string path) {
 					if (fileEntry[i].fileName[0] != 0xE5 && (fileEntry[i].fileAttr == 0x10 || fileEntry[i].fileAttr == 0x20))
 						count++;
 				} else {
-					spdlog::warn("File entry count is over 65535");
 					currentPath = currentPath_temp;
 					currentCluster = currentCluster_temp;
 					return count;
@@ -43,7 +42,6 @@ uint32_t FS_FAT32::getChildCount(std::string path) {
 		cluster = getNextCluster(cluster);
 		if (cluster == 0xFFFFFFF7)
 		{
-			spdlog::error("Bad sector found");
 			currentPath = currentPath_temp;
 			currentCluster = currentCluster_temp;
 			return -1;
@@ -148,7 +146,6 @@ FAT32_fileInfo* FS_FAT32::getDirList(std::string path, FAT32_fileInfo* buf) {
 		cluster = getNextCluster(cluster);
 		if (cluster == 0xFFFFFFF7)
 		{
-			spdlog::error("Bad sector found");
 			currentPath = currentPath_temp;
 			currentCluster = currentCluster_temp;
 			return NULL;
@@ -257,7 +254,6 @@ int FS_FAT32::chdir(std::string path, std::vector<std::string>* subdir) {
 		cluster = getNextCluster(cluster);
 		if (cluster == 0xFFFFFFF7)
 		{
-			spdlog::error("Bad sector found");
 			return 1;
 		}
 		if (cluster == 0xFFFFFFF8)

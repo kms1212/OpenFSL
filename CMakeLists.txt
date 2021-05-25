@@ -11,11 +11,6 @@ file(GLOB INCLUDE_FILES_FS "src/header/fs_*/*.h")
 file(COPY ${INCLUDE_FILES} DESTINATION "include/openfsl/")
 file(COPY ${INCLUDE_FILES_FS} DESTINATION "include/openfsl/fs/")
 
-SET (LIB_PKG spdlog)
-
-find_package(${LIB_PKG} REQUIRED)
-target_link_libraries(openfsl ${LIB_PKG})
-
 option(BUILD_DOC "Build documentation" ON)
 
 find_package(Doxygen)

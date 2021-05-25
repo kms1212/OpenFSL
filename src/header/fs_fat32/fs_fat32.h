@@ -12,7 +12,6 @@
 #include <stddef.h>
 #include <time.h>
 
-#include "spdlog/spdlog.h"
 #include "../diskdevice.h"
 #include "../fslservices.h"
 

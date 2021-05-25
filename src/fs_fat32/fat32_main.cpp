@@ -15,10 +15,8 @@ FS_FAT32::~FS_FAT32() {
 }
 
 void FS_FAT32::initialize() {
-    spdlog::debug("Initializing disk device");
 	dd->initialize();
 	if (dd->getState() != DISKDEV_ERROR_SUCCESS) {
-		spdlog::error("Disk device is not present");
 		errorState = FAT32_ERROR_DISKDEVICE;
 		return;
 	}
@@ -28,12 +26,9 @@ void FS_FAT32::initialize() {
 	FAT32_bpb* bpb = (FAT32_bpb*)fat32_sector.getData();
 	
 	uint32_t sigCode = 0x009058EB;
-	
-    spdlog::debug("Checking jump code for FAT32");
 		
 	if (memcmp(bpb->bpbJumpCode, &sigCode, 3) != 0)
 	{
-		spdlog::error("FAT32 signature is not valid.");
 		errorState = FAT32_ERROR_SIGNATURE;
 		return;
 	}
@@ -42,7 +37,6 @@ void FS_FAT32::initialize() {
 	
 	if (bpb->bpbVBRSignature != 0xAA55)
 	{
-		spdlog::error("FAT32 signature is not valid.");
 		errorState = FAT32_ERROR_SIGNATURE;
 		return;
 	}
@@ -75,22 +69,14 @@ void FS_FAT32::initialize() {
 	
 	FAT32_fsinfo* fsinfo = (FAT32_fsinfo*)fat32_sector.getData();
 	
-    spdlog::debug("Checking FSINFO signature");
-	
 	if (fsinfo->fsinfoSignature3 != 0xAA550000)
 	{
-		spdlog::error("FAT32 signature is not valid.");
 		errorState = FAT32_ERROR_SIGNATURE;
 		return;
 	}
 	
 	freeCluster = fsinfo->fsinfoFreeCluster;
 	nextCluster = fsinfo->fsinfoNextFree;
-	
-	if (freeCluster == 0xFFFFFFFF)
-	{
-		spdlog::warn("Free cluster amount is unknown");
-	}
 	
 	currentPath = "::";
 	currentCluster = rootCluster;
@@ -101,11 +87,8 @@ void FS_FAT32::initialize() {
 	
 	if (pathSeparator == "")
 	{
-		spdlog::warn("No path separator is given. Setting to default...");
 		pathSeparator = "\\";
 	}
-	
-    spdlog::info("FAT32 initialized");
 	
 	errorState = DISKDEV_ERROR_SUCCESS;
 	

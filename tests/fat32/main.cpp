@@ -37,8 +37,6 @@ int main(int argc, char** argv) {
 	}
 	filename = argv[1];
 	
-	spdlog::set_level(spdlog::level::warn);
-	
 	if (argc == 3 && argv[2] == "-t")
 	{
 		
