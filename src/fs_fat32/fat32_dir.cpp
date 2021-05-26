@@ -1,3 +1,12 @@
+/* Copyright (c) 2021. kms1212(권민수)
+This file is part of OpenFSL.
+
+OpenFSL and its source code is published over BSD 3-Clause License.
+See the BSD-3-Clause for more details.
+<https://github.com/kms1212/OpenFSL/blob/main/LICENSE>
+
+*/
+
 #include "../header/fs_fat32/fs_fat32.h"
 
 using namespace openFSL;
@@ -119,8 +128,8 @@ FAT32_fileInfo* FS_FAT32::getDirList(FAT32_fileInfo* buf, std::string path) {
 					
 					buf[index].fileName = filename;
 					buf[index].fileAttr = fileEntry[i].fileAttr;
-					buf[index].fileCreateTime.time_tenth = fileEntry[i].fileCreateTenth;
-					buf[index].fileCreateTime.time_sec = (fileEntry[i].fileCreateTime & 0b0000000000011111) * 2;
+					buf[index].fileCreateTime.time_millis = (fileEntry[i].fileCreateTenth % 10) * 100;
+					buf[index].fileCreateTime.time_sec = ((fileEntry[i].fileCreateTime & 0b0000000000011111) * 2) + fileEntry[i].fileCreateTenth / 10;
 					buf[index].fileCreateTime.time_min = (fileEntry[i].fileCreateTime & 0b0000011111100000) >> 5;
 					buf[index].fileCreateTime.time_hour = (fileEntry[i].fileCreateTime & 0b1111100000000000) >> 11;
 					buf[index].fileCreateTime.time_day = (fileEntry[i].fileCreateDate & 0b0000000000011111);
@@ -137,6 +146,9 @@ FAT32_fileInfo* FS_FAT32::getDirList(FAT32_fileInfo* buf, std::string path) {
 					buf[index].fileAccessTime.time_day = (fileEntry[i].fileAccessDate & 0b0000000000011111);
 					buf[index].fileAccessTime.time_month = (fileEntry[i].fileAccessDate & 0b0000000111100000) >> 5;
 					buf[index].fileAccessTime.time_year = ((fileEntry[i].fileAccessDate & 0b1111111000000000) >> 9) + 1980;
+					
+					buf[index].fileSize = fileEntry[i].fileSize;
+					buf[index].fileLocation = (fileEntry[i].fileLocationHigh << 16) + fileEntry[i].fileLocationLow;
 					
 					index++;
 				}

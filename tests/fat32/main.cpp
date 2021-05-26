@@ -1,3 +1,12 @@
+/* Copyright (c) 2021. kms1212(권민수)
+This file is part of OpenFSL.
+
+OpenFSL and its source code is published over BSD 3-Clause License.
+See the BSD-3-Clause for more details.
+<https://github.com/kms1212/OpenFSL/blob/main/LICENSE>
+
+*/
+
 #include <iostream>
 #include <fstream>
 #include <iomanip>
@@ -20,6 +29,7 @@ using namespace std;
 using namespace openFSL;
 
 void hexdump(uint8_t* p, int offset, int len);
+size_t split(const std::string &txt, std::vector<std::string> &strs, char ch);
 int readDisk(Sector* dest, vint_arch lba, vint_arch size);
 int openDisk();
 int closeDisk();
@@ -55,18 +65,21 @@ int main(int argc, char** argv) {
 		FAT32_fileInfo* buf = new FAT32_fileInfo[fat32->getChildCount("::")];
 		fat32->getDirList(buf, "::");
 		
-		std::string dir;
+		std::string command;
 		
 		cout << "type \"exit\" to exit\n";
 		while(true)
 		{
-			cout << fat32->getPath() << "> ";
-			cin >> dir;
+			vector<string> cmd;
 			
-			if (dir == "exit") {
+			cout << fat32->getPath() << "> ";
+			getline(cin, command);
+			split(command, cmd, ' ');
+			
+			if (cmd[0] == "exit") {
 				break;
 			}
-			else if (dir == "dir") {
+			else if (cmd[0] == "dir") {
 				if (buf != NULL)
 					delete[] buf;
 				buf = new FAT32_fileInfo[fat32->getChildCount()];
@@ -76,18 +89,42 @@ int main(int argc, char** argv) {
 					cout << i << " " << buf[i].fileName << " " << (int)buf[i].fileCreateTime.time_month << "-" << (int)buf[i].fileCreateTime.time_day << "-" << (int)buf[i].fileCreateTime.time_year << " " << (int)buf[i].fileCreateTime.time_hour << ":" << (int)buf[i].fileCreateTime.time_min << ":" << (int)buf[i].fileCreateTime.time_sec << "\n";
 				}
 			}
-			else {
-				if (fat32->chdir(dir))
+			else if (cmd[0] == "cd") {
+				if (fat32->chdir(cmd[1]))
 					cout << "Error\n";
 			}
-			cin.clear();
-			cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+			else if (cmd[0] == "info") {
+				FAT32_fileInfo fileInfo = fat32->getFileInformation(cmd[1]);
+				if (fileInfo.fileName != "") {
+					cout << fileInfo.fileName << " " << (int)fileInfo.fileCreateTime.time_month << "-" << (int)fileInfo.fileCreateTime.time_day << "-" << (int)fileInfo.fileCreateTime.time_year << " " << (int)fileInfo.fileCreateTime.time_hour << ":" << (int)fileInfo.fileCreateTime.time_min << ":" << (int)fileInfo.fileCreateTime.time_sec << "\n";
+				}
+			}
 		}
 
 		delete fat32->getDiskDevice();
 		
 		return 0;
 	}
+}
+
+size_t split(const std::string &txt, std::vector<std::string> &strs, char ch)
+{
+    size_t pos = txt.find( ch );
+    size_t initialPos = 0;
+    strs.clear();
+
+    // Decompose statement
+    while( pos != std::string::npos ) {
+        strs.push_back( txt.substr( initialPos, pos - initialPos ) );
+        initialPos = pos + 1;
+
+        pos = txt.find( ch, initialPos );
+    }
+
+    // Add the last one
+    strs.push_back( txt.substr( initialPos, std::min( pos, txt.size() ) - initialPos + 1 ) );
+
+    return strs.size();
 }
 
 void hexdump(uint8_t* p, int offset, int len)

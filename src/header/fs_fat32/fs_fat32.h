@@ -1,3 +1,12 @@
+/* Copyright (c) 2021. kms1212(권민수)
+This file is part of OpenFSL.
+
+OpenFSL and its source code is published over BSD 3-Clause License.
+See the BSD-3-Clause for more details.
+<https://github.com/kms1212/OpenFSL/blob/main/LICENSE>
+
+*/
+
 #ifndef __FS_FAT32_H
 #define __FS_FAT32_H
 
@@ -14,6 +23,7 @@
 
 #include "../diskdevice.h"
 #include "../fslservices.h"
+#include "../file.h"
 
 #define FAT32_ERROR_SUCCESS         0x00
 #define FAT32_ERROR_NOT_INITIALIZED 0x01
@@ -110,34 +120,6 @@ namespace openFSL {
 		uint8_t        bpbBootCode[420];
 		uint16_t       bpbVBRSignature;
 	} FAT32_bpb;
-#pragma pack (pop)
-
-	/**
-	 *
-	 * @brief FAT32 time
-	 * @author kms1212
-	 * @details
-	 * Type       | Name                    
-	 * -----------|-------------------------
-	 * uint8_t    | time_tenth
-	 * uint8_t    | time_sec
-	 * uint8_t    | time_min
-	 * uint8_t    | time_hour
-	 * uint8_t    | time_day
-	 * uint8_t    | time_month
-	 * uint16_t   | time_year
-	 *
-	 */
-#pragma pack (push, 1)
-	typedef struct fileTimeStruct {
-		uint8_t        time_tenth;
-		uint8_t        time_sec;
-		uint8_t        time_min;
-		uint8_t        time_hour;
-		uint8_t        time_day;
-		uint8_t        time_month;
-		uint16_t       time_year;
-	} FAT32_fileInfoTime;
 #pragma pack (pop)
 
 	/**
@@ -257,9 +239,9 @@ namespace openFSL {
 	typedef struct fileInfoStruct {
 		std::string    fileName;
 		uint8_t        fileAttr;
-		FAT32_fileInfoTime fileCreateTime;
-		FAT32_fileInfoTime fileAccessTime;
-		FAT32_fileInfoTime fileModTime;
+		FSL_Time       fileCreateTime;
+		FSL_Time       fileAccessTime;
+		FSL_Time       fileModTime;
 		uint32_t       fileLocation;
 		uint32_t       fileSize;
 	} FAT32_fileInfo;
