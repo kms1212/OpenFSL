@@ -24,7 +24,7 @@ jobs:
           command: 'apt-get update && sudo apt-get install -y graphviz'
       - run:
           name: Configure & build
-          command: './build.sh'
+          command: 'bash ./build.sh'
       - run:
           name: Creating Binary Files
           command: 'cmake --build ./build'
