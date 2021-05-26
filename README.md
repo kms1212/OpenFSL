@@ -57,3 +57,16 @@ void fsctrl_main() {
 }
 ```
 
+## Documentation
+
+### Manuals
+
+HTML documents will automatically created by doxygen in build time.
+
+See doc/html/index.html file after build to get manuals.
+
+### License
+
+OpenFSL is licensed under the BSD-3-Clause.
+
+See the LICENSE file for more details.
