@@ -11,9 +11,9 @@ file(GLOB libSources "${CMAKE_SOURCE_DIR}/src/fs_*/*.cpp" "${CMAKE_SOURCE_DIR}/s
 add_library(openfsl STATIC ${libSources})
 
 file(GLOB INCLUDE_FILES ${CMAKE_SOURCE_DIR}/src/header/*.h)
-file(COPY ${INCLUDE_FILES} DESTINATION ${CMAKE_SOURCE_DIR}include/openfsl/)
+file(COPY ${INCLUDE_FILES} DESTINATION ${CMAKE_SOURCE_DIR}/include/openfsl/)
 file(GLOB INCLUDE_FILES_FS ${CMAKE_SOURCE_DIR}/src/header/fs_*/*.h)
-file(COPY ${INCLUDE_FILES_FS} DESTINATION ${CMAKE_SOURCE_DIR}include/openfsl/fs/)
+file(COPY ${INCLUDE_FILES_FS} DESTINATION ${CMAKE_SOURCE_DIR}/include/openfsl/fs/)
 
 find_package(Doxygen
              REQUIRED dot)
