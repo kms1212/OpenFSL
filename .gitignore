@@ -74,3 +74,6 @@ CMakeUserPresets.json
 
 # Test program binaries
 /tests/*/test
+
+# Binary directory
+build

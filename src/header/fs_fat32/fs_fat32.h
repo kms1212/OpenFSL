@@ -41,6 +41,7 @@ namespace openFSL {
 	 * ------------------|----------------
 	 * FAT32_OPTION_NONE | 0x00000000
 	 * FAT32_OPTION_LFN  | 0x00000001
+	 * @bug LFN does not apply in the border of cluster.
 	 *
 	 */
 	enum FAT32_Option {
