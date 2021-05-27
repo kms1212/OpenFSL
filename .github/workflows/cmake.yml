@@ -14,9 +14,9 @@ jobs:
         platform: [x86, x64]
         os: [ubuntu-latest, macos-latest, windows-latest]
         
-    runs-on: '$[{ matrix.os }]'
+    runs-on: '${{ matrix.os }}'
     
-    name: '$[{ matrix.os }]-$[{ matrix.platform }]: build'
+    name: '${{ matrix.os }}-${{ matrix.platform }}: build'
 
     steps:
     - uses: actions/checkout@v2
