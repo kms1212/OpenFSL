@@ -424,6 +424,17 @@ namespace openFSL {
 		 *
 		 */
 		FAT32_fileInfo getFileInformation(std::string path);
+		
+		/**
+		 *
+		 * @brief Get entire linked cluster
+		 * @details Gets cluster array
+		 * @param sector: Data buffer
+		 * @param cluster: cluster address
+		 * @return int: Error code
+		 *
+		 */
+		int getLinkedCluster(Sector* sector, uint32_t cluster);
 	}; 
 }
 

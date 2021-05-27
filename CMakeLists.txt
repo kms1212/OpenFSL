@@ -1,8 +1,8 @@
 cmake_minimum_required(VERSION 3.1)
 project("OpenFSL")
 
-option(DOXYGEN_GENERATE "Generate doxygen file?")
-option(NO_TEST "DIsable building/creating test?")
+option(DOXYGEN_GENERATE "Generate doxygen file?" true)
+option(NO_TEST "DIsable building/creating test?" false)
 
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)

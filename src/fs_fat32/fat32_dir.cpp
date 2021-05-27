@@ -32,22 +32,11 @@ uint32_t FS_FAT32::getChildCount(std::string path) {
 	
 	Sector dir_cluster(sectorPerCluster * linkedClusterCount, dd->getBytespersector());
 	
-	int clusterCursor = currentCluster;
-	for (int i = 0; i < linkedClusterCount; i++)
+	if (getLinkedCluster(&dir_cluster, currentCluster))
 	{
-		Sector temp(1, dd->getBytespersector());
-		dd->readDisk(&temp, resvSectorCount + fatSize32 * fatCount + clusterCursor - rootCluster, sectorPerCluster);
-		
-		memcpy(dir_cluster.getData() + i * dd->getBytespersector(), temp.getData(), dd->getBytespersector());
-		clusterCursor = getNextCluster(clusterCursor);
-		if (clusterCursor == 0xFFFFFFF7)
-		{
-			currentPath = currentPath_temp;
-			currentCluster = currentCluster_temp;
-			return 0;
-		}
-		if (clusterCursor == 0xFFFFFFF8)
-			break;
+		currentPath = currentPath_temp;
+		currentCluster = currentCluster_temp;
+		return 0;
 	}
 	
 	FAT32_entry* fileEntry = (FAT32_entry*)dir_cluster.getData();
@@ -102,22 +91,11 @@ FAT32_fileInfo* FS_FAT32::getDirList(FAT32_fileInfo* buf, std::string path) {
 	
 	Sector dir_cluster(sectorPerCluster * linkedClusterCount, dd->getBytespersector());
 	
-	int clusterCursor = currentCluster;
-	for (int i = 0; i < linkedClusterCount; i++)
+	if (getLinkedCluster(&dir_cluster, currentCluster))
 	{
-		Sector temp(1, dd->getBytespersector());
-		dd->readDisk(&temp, resvSectorCount + fatSize32 * fatCount + clusterCursor - rootCluster, sectorPerCluster);
-		
-		memcpy(dir_cluster.getData() + i * dd->getBytespersector(), temp.getData(), dd->getBytespersector());
-		clusterCursor = getNextCluster(clusterCursor);
-		if (clusterCursor == 0xFFFFFFF7)
-		{
-			currentPath = currentPath_temp;
-			currentCluster = currentCluster_temp;
-			return NULL;
-		}
-		if (clusterCursor == 0xFFFFFFF8)
-			break;
+		currentPath = currentPath_temp;
+		currentCluster = currentCluster_temp;
+		return NULL;
 	}
 	
 	int index = 0;
@@ -197,6 +175,9 @@ FAT32_fileInfo* FS_FAT32::getDirList(FAT32_fileInfo* buf, std::string path) {
 }
 
 int FS_FAT32::chdir(std::string path, std::vector<std::string>* subdir) {
+	std::string currentPath_temp = currentPath;
+	uint32_t currentCluster_temp = currentCluster;
+	
 	int count = 0;
 	int index = 0;
 	
@@ -223,30 +204,22 @@ int FS_FAT32::chdir(std::string path, std::vector<std::string>* subdir) {
 	
 	if (subdir->empty())
 		return 0;
-		
 	
 	uint32_t linkedClusterCount = getLinkedClusterCount(currentCluster);
 	if (linkedClusterCount == 0)
 	{
+		currentPath = currentPath_temp;
+		currentCluster = currentCluster_temp;
 		return 1;
 	}
 	
 	Sector dir_cluster(sectorPerCluster * linkedClusterCount, dd->getBytespersector());
 	
-	int clusterCursor = currentCluster;
-	for (int i = 0; i < linkedClusterCount; i++)
+	if (getLinkedCluster(&dir_cluster, currentCluster))
 	{
-		Sector temp(1, dd->getBytespersector());
-		dd->readDisk(&temp, resvSectorCount + fatSize32 * fatCount + clusterCursor - rootCluster, sectorPerCluster);
-		
-		memcpy(dir_cluster.getData() + i * dd->getBytespersector(), temp.getData(), dd->getBytespersector());
-		clusterCursor = getNextCluster(clusterCursor);
-		if (clusterCursor == 0xFFFFFFF7)
-		{
-			return 1;
-		}
-		if (clusterCursor == 0xFFFFFFF8)
-			break;
+		currentPath = currentPath_temp;
+		currentCluster = currentCluster_temp;
+		return 1;
 	}
 	
 	FAT32_entry* fileEntry = (FAT32_entry*)dir_cluster.getData();

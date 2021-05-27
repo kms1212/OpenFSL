@@ -30,3 +30,30 @@ uint32_t FS_FAT32::getLinkedClusterCount(uint32_t cluster)
 		count++;
 	return count;
 }
+
+int FS_FAT32::getLinkedCluster(Sector* sector, uint32_t cluster)
+{
+	uint32_t linkedClusterCount = getLinkedClusterCount(currentCluster);
+	if (linkedClusterCount == 0)
+	{
+		return 1;
+	}
+	
+	int clusterCursor = currentCluster;
+	for (int i = 0; i < linkedClusterCount; i++)
+	{
+		Sector temp(1, dd->getBytespersector());
+		dd->readDisk(&temp, resvSectorCount + fatSize32 * fatCount + clusterCursor - rootCluster, sectorPerCluster);
+		
+		memcpy(sector->getData() + i * dd->getBytespersector(), temp.getData(), dd->getBytespersector());
+		clusterCursor = getNextCluster(clusterCursor);
+		if (clusterCursor == 0xFFFFFFF7)
+		{
+			return 1;
+		}
+		if (clusterCursor == 0xFFFFFFF8)
+			break;
+	}
+	
+	return 0;
+}
