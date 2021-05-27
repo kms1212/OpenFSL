@@ -1,4 +1,4 @@
-/* Copyright (c) 2020. kms1212(권민수)
+/* Copyright (c) 2021. kms1212(권민수)
 This file is part of OpenFSL.
 
 OpenFSL and its source code is published over BSD 3-Clause License.
@@ -23,6 +23,7 @@ See the BSD-3-Clause for more details.
 #include "openfsl/diskdevice.h"
 #include "openfsl/sector.h"
 #include "openfsl/vint.h"
+#include "openfsl/file.h"
 #include "openfsl/fs/fs_fat32.h"
 
 using namespace std;
@@ -44,16 +45,29 @@ int main(int argc, char** argv) {
 	
 	fat32->initialize();
 	
-	uint32_t errorState = fat32->getState();
+	uint32_t result = fat32->getState();
+	
+	FAT32_fileInfo fileInfo = fat32->getFileInformation("::/lfnfilename1.txt");
+	if (fileInfo.fileName != "lfnfilename1.txt")
+		result++;
+	else if (fileInfo.fileSize != 22)
+		result++;
+	
+	fileInfo = fat32->getFileInformation("::/directory1/../lfnfilename2.txt");
+	if (fileInfo.fileName != "lfnfilename2.txt")
+		result++;
+	else if (fileInfo.fileSize != 22)
+		result++;
+	
 
 	delete fat32->getDiskDevice();
 	
-	return errorState;
+	return result;
 }
 
 int openDisk()
 {
-	disk.open("../fat32.img", ios::in | ios::binary);
+	disk.open("fat32.img", ios::in | ios::binary);
 	return disk.fail();
 }
 

@@ -1,4 +1,4 @@
-/* Copyright (c) 2020. kms1212(권민수)
+/* Copyright (c) 2021. kms1212(권민수)
 This file is part of OpenFSL.
 
 OpenFSL and its source code is published over BSD 3-Clause License.
@@ -80,6 +80,7 @@ int main(int argc, char** argv) {
 	string filename;
 	for (int i = 0; i < fat32->getChildCount(); i++)
 	{
+		cout << buf[i].fileName << "\n";
 		filename = buf[i].fileName;
 		std::transform(filename.begin(), filename.end(), filename.begin(), ::toupper);
 		if (find(list.begin(), list.end(), filename) != list.end()) {

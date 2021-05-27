@@ -1,4 +1,4 @@
-/* Copyright (c) 2020. kms1212(권민수)
+/* Copyright (c) 2021. kms1212(권민수)
 This file is part of OpenFSL.
 
 OpenFSL and its source code is published over BSD 3-Clause License.
@@ -21,4 +21,12 @@ uint32_t FS_FAT32::getNextCluster(uint32_t cluster)
 		return 0xFFFFFFF7;
 	else
 		return temp;
+}
+
+uint32_t FS_FAT32::getLinkedClusterCount(uint32_t cluster)
+{
+	uint32_t count = 0;
+	for (uint32_t temp = cluster; temp != 0xFFFFFFF8; temp = getNextCluster(temp))
+		count++;
+	return count;
 }

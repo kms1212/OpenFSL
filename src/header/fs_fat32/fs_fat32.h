@@ -1,4 +1,4 @@
-/* Copyright (c) 2020. kms1212(권민수)
+/* Copyright (c) 2021. kms1212(권민수)
 This file is part of OpenFSL.
 
 OpenFSL and its source code is published over BSD 3-Clause License.
@@ -41,7 +41,6 @@ namespace openFSL {
 	 * ------------------|----------------
 	 * FAT32_OPTION_NONE | 0x00000000
 	 * FAT32_OPTION_LFN  | 0x00000001
-	 * @bug LFN does not apply in the border of cluster.
 	 *
 	 */
 	enum FAT32_Option {
@@ -286,7 +285,7 @@ namespace openFSL {
 		 *
 		 * @brief FS_FAT32 constructor
 		 * @param dd_: Disk device driver class pointer
-		 * @param option: FAT32 option     
+		 * @param option: FAT32 option (See enum FAT32_Option)
 		 * @param pathSeparator_: File system path separator (Default: "\")
 		 *
 		 */
@@ -390,7 +389,7 @@ namespace openFSL {
 		/**
 		 *
 		 * @brief Next cluster picker
-		 * @details Gets next cluster number from FAT Area.
+		 * @details Returns next cluster number from FAT Area.
 		 * Return Value              | Status
 		 * --------------------------|----------------------------------------------------
 		 * 0x?0000000                | Free cluster
@@ -403,6 +402,17 @@ namespace openFSL {
 		 *
 		 */
 		uint32_t getNextCluster(uint32_t cluster);
+		
+		/**
+		 *
+		 * @brief Linked cluster counter
+		 * @details Returns linked cluster count starting from argument cluster
+		 * param cluster: returns 0x0 when bad cluster found.
+		 * @param cluster: Current cluster
+		 * @return uint32_t: Linked cluster count
+		 *
+		 **/
+		uint32_t getLinkedClusterCount(uint32_t cluster);
 		
 		/**
 		 *

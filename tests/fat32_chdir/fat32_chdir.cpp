@@ -1,4 +1,4 @@
-/* Copyright (c) 2020. kms1212(권민수)
+/* Copyright (c) 2021. kms1212(권민수)
 This file is part of OpenFSL.
 
 OpenFSL and its source code is published over BSD 3-Clause License.
@@ -44,12 +44,17 @@ int main(int argc, char** argv) {
 	
 	fat32->initialize();
 	
-	uint32_t result = 0;
+	uint32_t result = fat32->getState();
+	if (result)
+		return result;
+	
+	result = 0;
 	result += fat32->chdir("::/.");
 	result += fat32->chdir("::/..");
 	result += fat32->chdir("::/directory1/..");
 	result += fat32->chdir("::/directory1/subdir1");
-	result += fat32->chdir("::/directory1/subdir1/../..");
+	result += fat32->chdir("../..");
+	result += fat32->chdir("::/directory9/..");
 
 	delete fat32->getDiskDevice();
 	
