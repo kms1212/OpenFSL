@@ -26,6 +26,14 @@ if (DOXYGEN_FOUND AND DOXYGEN_GENERATE)
 endif (DOXYGEN_FOUND AND DOXYGEN_GENERATE)
 
 if (NOT NO_TEST)
+    if(NOT EXISTS "${CMAKE_BINARY_DIR}/fat32.img")
+        file(DOWNLOAD 
+            ftp://kms1212.kro.kr/fsimage/fat32.img
+            ${CMAKE_BINARY_DIR}/fat32.img
+            SHOW_PROGRESS
+        )
+    endif()
+
     add_subdirectory(tests)
     enable_testing()
     include (CTest)
