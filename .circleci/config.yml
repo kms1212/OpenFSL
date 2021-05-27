@@ -25,6 +25,3 @@ jobs:
       - run:
           name: Configure & build
           command: 'bash ./build.sh'
-      - run:
-          name: Creating Binary Files
-          command: 'cmake --build ./build'
