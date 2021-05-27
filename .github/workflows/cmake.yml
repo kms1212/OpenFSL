@@ -26,11 +26,6 @@ jobs:
         sudo apt-get update
         sudo apt-get install cmake
     
-    - name: Install graphviz
-      run: |
-        sudo apt-get update
-        sudo apt-get install graphviz
-    
     - name: Install Doxygen
       run: |
         sudo apt-get update
