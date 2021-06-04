@@ -16,19 +16,7 @@ File systems:
 
 | #    | File System Name     | Status          |
 | ---- | -------------------- | --------------- |
-| 1    | FAT(12/16/32)        | In progress     |
-| 2    | VFAT                 | Not Implemented |
-| 3    | exFAT                | Not Implemented |
-| 4    | NTFS                 | Not Implemented |
-| 5    | ext(2/3/4)           | Not Implemented |
-| 6    | BtrFS                | Not Implemented |
-| 7    | JFS                  | Not Implemented |
-| 8    | XFS                  | Not Implemented |
-| 9    | ZFS                  | Not Implemented |
-| 10   | HFS+                 | Not Implemented |
-| 11   | ISO 9660 + El Torito | Not Implemented |
-| 12   | UDF                  | Not Implemented |
-| 13   | UFS                  | Not Implemented |
+| 1    | FAT(12/16/32)        | In progress     | 
 
 
 
