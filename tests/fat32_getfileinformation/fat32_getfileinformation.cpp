@@ -1,4 +1,4 @@
-/* Copyright (c) 2021. kms1212(권민수)
+/* Copyright (c) 2021. kms1212(Min Su Kwon)
 This file is part of OpenFSL.
 
 OpenFSL and its source code is published over BSD 3-Clause License.

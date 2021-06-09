@@ -60,6 +60,10 @@ CMakeUserPresets.json
 # External projects
 *-prefix/
 
+### CMake Doxygen ###
+CMakeDoxyfile.in
+CMakeDoxygenDefaults.cmake
+
 # End of https://www.toptal.com/developers/gitignore/api/cmake,c++
 
 ### Etc ###

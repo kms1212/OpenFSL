@@ -1,4 +1,4 @@
-/* Copyright (c) 2021. kms1212(권민수)
+/* Copyright (c) 2021. kms1212(Min Su Kwon)
 This file is part of OpenFSL.
 
 OpenFSL and its source code is published over BSD 3-Clause License.
@@ -41,7 +41,7 @@ uint32_t FS_FAT32::getChildCount(std::string path) {
 	
 	FAT32_entry* fileEntry = (FAT32_entry*)dir_cluster.getData();
 		
-	for (int i = 0; i < 16 * linkedClusterCount; i++) {
+	for (uint32_t i = 0; i < 16 * linkedClusterCount; i++) {
 		if (fileEntry[i].fileAttr == 0x00) // return if entry is blank
 		{
 			currentPath = currentPath_temp;
@@ -102,7 +102,7 @@ FAT32_fileInfo* FS_FAT32::getDirList(FAT32_fileInfo* buf, std::string path) {
 	
 	FAT32_entry* fileEntry = (FAT32_entry*)dir_cluster.getData();
 		
-	for (int i = 0; i < 16 * linkedClusterCount; i++) {
+	for (uint32_t i = 0; i < 16 * linkedClusterCount; i++) {
 		if (fileEntry[i].fileAttr == 0x00)
 		{
 			currentPath = currentPath_temp;
@@ -227,60 +227,62 @@ int FS_FAT32::chdir(std::string path, std::vector<std::string>* subdir) {
 	std::string path_tmp = subdir->front();
 	std::transform(path_tmp.begin(), path_tmp.end(), path_tmp.begin(), ::toupper);
 	
-	for (int i = 0; i < 16 * linkedClusterCount; i++) {
-		if (fileEntry[i].fileAttr == 0x00)
-			return 1;
-		
-		if (fileEntry[i].fileName[0] != 0xE5) {
-			if (fileEntry[i].fileAttr == 0x10)
-			{
-				std::string filename;
-				if (fileEntry[i - 1].fileAttr == 0x0F){
-					for (int lfnIndex = i - 1; fileEntry[lfnIndex].fileAttr == 0x0F; lfnIndex--)
-					{
-						char buf[14];
-						FAT32_lfn* entry = (FAT32_lfn*)&fileEntry[lfnIndex];
-						str16to8((uint8_t*)buf, entry->lfnFileName1, 5);
-						str16to8((uint8_t*)(buf + 5), entry->lfnFileName2, 6);
-						str16to8((uint8_t*)(buf + 11), entry->lfnFileName3, 2);
-						filename += buf;
+	for (uint32_t j = 0; j < linkedClusterCount; j++) {
+		for (int i = 0; i < 16; i++) {
+			if (fileEntry[i + j * 16].fileAttr == 0x00)
+				return 1;
+			
+			if (fileEntry[i + j * 16].fileName[0] != 0xE5) {
+				if (fileEntry[i + j * 16].fileAttr == 0x10)
+				{
+					std::string filename;
+					if (fileEntry[i + j * 16 - 1].fileAttr == 0x0F){
+						for (int lfnIndex = i + j * 16 - 1; fileEntry[lfnIndex].fileAttr == 0x0F; lfnIndex--)
+						{
+							char buf[14];
+							FAT32_lfn* entry = (FAT32_lfn*)&fileEntry[lfnIndex];
+							str16to8((uint8_t*)buf, entry->lfnFileName1, 5);
+							str16to8((uint8_t*)(buf + 5), entry->lfnFileName2, 6);
+							str16to8((uint8_t*)(buf + 11), entry->lfnFileName3, 2);
+							filename += buf;
+						}
 					}
-				}
-				else {
-					filename = (char*)fileEntry[i].fileName;
-					filename = filename.substr(0, 8);
-					filename.erase(filename.find_last_not_of(" ") + 1);
-				}
-				std::transform(filename.begin(), filename.end(), filename.begin(), ::toupper);
-				
-				std::cout << i + 1 << " " << filename << "\n";
-				
-				if (currentCluster == rootCluster) {
-					if (path_tmp == "." || path_tmp == "..") {
+					else {
+						filename = (char*)fileEntry[i].fileName;
+						filename = filename.substr(0, 8);
+						filename.erase(filename.find_last_not_of(" ") + 1);
+					}
+					std::transform(filename.begin(), filename.end(), filename.begin(), ::toupper);
+					
+					std::cout << i + j * 16 + 1 << " " << filename << "\n";
+					
+					if (currentCluster == rootCluster) {
+						if (path_tmp == "." || path_tmp == "..") {
+							subdir->erase(subdir->begin());
+							return FS_FAT32::chdir(path, subdir);
+						}
+					}
+					
+					if (path_tmp == filename)
+					{ 
+						if (filename == ".");
+						else if (filename == "..")
+							currentPath = currentPath.substr(0, currentPath.find_last_of(pathSeparator));
+						 else
+							currentPath += pathSeparator.at(0) + subdir->front();
 						subdir->erase(subdir->begin());
+						currentCluster = fileEntry[i + j * 16].fileLocationHigh * 0x10000 + fileEntry[i + j * 16].fileLocationLow;
+						if (currentCluster == 0)
+							currentCluster = rootCluster;
 						return FS_FAT32::chdir(path, subdir);
 					}
 				}
-				
-				if (path_tmp == filename)
-				{ 
-					if (filename == ".");
-					else if (filename == "..")
-						currentPath = currentPath.substr(0, currentPath.find_last_of(pathSeparator));
-					 else
-						currentPath += pathSeparator.at(0) + subdir->front();
-					subdir->erase(subdir->begin());
-					currentCluster = fileEntry[i].fileLocationHigh * 0x10000 + fileEntry[i].fileLocationLow;
-					if (currentCluster == 0)
-						currentCluster = rootCluster;
-					return FS_FAT32::chdir(path, subdir);
-				}
 			}
+			else
+				return 1;
+			count++;
 		}
-		else
-			return 1;
-		count++;
 	}
-
+	
 	return 1;
 }

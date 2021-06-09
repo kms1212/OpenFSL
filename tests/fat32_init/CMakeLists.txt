@@ -4,4 +4,4 @@ project("fat32_init")
 include_directories(${CMAKE_SOURCE_DIR}/include)
 add_executable(fat32_init fat32_init.cpp)
 
-TARGET_LINK_LIBRARIES(fat32_init ${CMAKE_BINARY_DIR}/libopenfsl.a)
+target_link_libraries(fat32_init openfsl)

@@ -1,6 +1,6 @@
 # OpenFSL README
 
-![openfsl-logo](https://raw.githubusercontent.com/kms1212/OpenFSL/main/doc/logo/openfsl-dark-1280x540.png)
+![openfsl-logo](https://raw.githubusercontent.com/kms1212/OpenFSL/main/doc/logo/openfsl-dark-320x135.png)
 
 
 
@@ -16,7 +16,7 @@ File systems:
 
 | #    | File System Name     | Status          |
 | ---- | -------------------- | --------------- |
-| 1    | FAT(12/16/32)        | In progress     | 
+| 1    | FAT(12/16/32)        | In progress     |
 
 
 

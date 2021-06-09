@@ -1,4 +1,4 @@
-/* Copyright (c) 2021. kms1212(권민수)
+/* Copyright (c) 2021. kms1212(Min Su Kwon)
 This file is part of OpenFSL.
 
 OpenFSL and its source code is published over BSD 3-Clause License.
@@ -239,13 +239,13 @@ namespace openFSL {
 	 *
 	 */
 	typedef struct fileInfoStruct {
-		std::string    fileName;
-		uint8_t        fileAttr;
-		FSL_Time       fileCreateTime;
-		FSL_Time       fileAccessTime;
-		FSL_Time       fileModTime;
-		uint32_t       fileLocation;
-		uint32_t       fileSize;
+		std::string    fileName = "";
+		uint8_t        fileAttr = 0;
+		FSL_Time       fileCreateTime = {0};
+		FSL_Time       fileAccessTime = {0};
+		FSL_Time       fileModTime = {0};
+		uint32_t       fileLocation = 0;
+		uint32_t       fileSize = 0;
 	} FAT32_fileInfo;
 
 	/**
@@ -261,10 +261,10 @@ namespace openFSL {
 	 * uint8_t*           | cacheData
 	 */
 	typedef struct cacheEntryStruct {
-		uint32_t       cacheIndex;
-		std::string    cacheKey;
-		uint8_t        cacheType;
-		uint8_t*       cacheData;
+		uint32_t       cacheIndex = 0;
+		std::string    cacheKey = "";
+		uint8_t        cacheType = 0;
+		uint8_t*       cacheData = NULL;
 	} FAT32_cacheEntry;
 
 	/**

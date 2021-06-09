@@ -1,4 +1,4 @@
-/* Copyright (c) 2021. kms1212(권민수)
+/* Copyright (c) 2021. kms1212(Min Su Kwon)
 This file is part of OpenFSL.
 
 OpenFSL and its source code is published over BSD 3-Clause License.
@@ -36,7 +36,7 @@ FAT32_fileInfo FS_FAT32::getFileInformation(std::string path) {
 	getDirList(buf);
 	
 	std::string filename;
-	for (int i = 0; i < getChildCount(); i++)
+	for (uint32_t i = 0; i < getChildCount(); i++)
 	{
 		filename = buf[i].fileName;
 		std::transform(filename.begin(), filename.end(), filename.begin(), ::toupper);
@@ -81,7 +81,7 @@ int FAT32_File::read(uint8_t* buf, uint32_t len) {
 	if (openMode.find_first_of("r+") != std::string::npos) {
 		uint32_t cluster = fileInfo.fileLocation;
 		
-		for (int i = 0; i < seekLocation / fileSystem->getDiskDevice()->getBytespersector(); i++)
+		for (uint32_t i = 0; i < seekLocation / fileSystem->getDiskDevice()->getBytespersector(); i++)
 		{
 			cluster = fileSystem->getNextCluster(cluster);
 			if (cluster >= 0xFFFFFFF7)
@@ -98,7 +98,7 @@ int FAT32_File::read(uint8_t* buf, uint32_t len) {
 			return 1;
 		else {
 			int base = seekLocation % fileSystem->getDiskDevice()->getBytespersector();
-			for (int i = 0; i < len; i++)
+			for (uint32_t i = 0; i < len; i++)
 				buf[i] = sector.getData()[i + base];
 			std::cout << openMode << "\n";
 			if (openMode.find_first_of('b') == std::string::npos)
