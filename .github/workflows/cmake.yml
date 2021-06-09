@@ -24,8 +24,8 @@ jobs:
     - name: Install Required Software
       run: |
         if [ "$RUNNER_OS" == "Linux" ]; then
-          apt-get update
-          apt-get install cmake doxygen graphviz
+          sudo apt-get update
+          sudo apt-get install cmake doxygen graphviz
         elif [ "$RUNNER_OS" == "Windows" ]; then
           choco install cmake doxygen.install graphviz
         else
