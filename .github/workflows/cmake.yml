@@ -36,12 +36,12 @@ jobs:
 
     - name: Configure CMake
       run: |
-        cmake -B $(subst \,/,$(subst C:\,/c/,${{github.workspace}}))/build -DDOXYGEN_GENERATE=false
+        cmake -B build -DDOXYGEN_GENERATE=false
       shell: bash
 
     - name: Build
       run: |
-        cmake --build $(subst \,/,$(subst C:\,/c/,${{github.workspace}}))/build
+        cmake --build build
       shell: bash
       
     - name: Test
