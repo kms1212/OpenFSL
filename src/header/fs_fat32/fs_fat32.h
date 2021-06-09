@@ -32,6 +32,8 @@ See the BSD-3-Clause for more details.
 
 
 namespace openFSL {
+	class FAT32_File;
+	
 	/**
 	 *
 	 * @brief FAT32 option
@@ -248,10 +250,29 @@ namespace openFSL {
 
 	/**
 	 *
+	 * @brief FAT32 cache entry
+	 * @author kms1212
+	 * @details
+	 * Type               | Name                  
+	 * -------------------|-----------------
+	 * uint32_t           | cacheIndex
+	 * std::string        | cacheKey
+	 * uint8_t            | cacheType
+	 * uint8_t*           | cacheData
+	 */
+	typedef struct cacheEntryStruct {
+		uint32_t       cacheIndex;
+		std::string    cacheKey;
+		uint8_t        cacheType;
+		uint8_t*       cacheData;
+	} FAT32_cacheEntry;
+
+	/**
+	 *
 	 * @brief FAT32 imeplementation
 	 * @details Implements FAT32 with configurable options
 	 * @author kms1212
-	 * @todo File Read, Directory write, File write, FS format, UCS-2 Unicode Codepage
+	 * @todo Directory write, File write, FS format, UCS-2 Unicode Codepage
 	 *
 	 */
 	class FS_FAT32 {
@@ -355,6 +376,15 @@ namespace openFSL {
 		
 		/**
 		 *
+		 * @brief Get sector per cluster
+		 * @details Gets sector per cluster.
+		 * @return uint16_t: Sector per cluster
+		 *
+		 */
+		uint16_t getSectorPerCluster();
+		
+		/**
+		 *
 		 * @brief Subitem counter
 		 * @details Gets subitem count of working directory. 
 		 * @param path: working directory (Default: "")
@@ -407,7 +437,7 @@ namespace openFSL {
 		 *
 		 * @brief Linked cluster counter
 		 * @details Returns linked cluster count starting from argument cluster
-		 * param cluster: returns 0x0 when bad cluster found.
+		 * @param cluster: returns 0x0 when bad cluster found.
 		 * @param cluster: Current cluster
 		 * @return uint32_t: Linked cluster count
 		 *
@@ -434,8 +464,51 @@ namespace openFSL {
 		 * @return int: Error code
 		 *
 		 */
-		int getLinkedCluster(Sector* sector, uint32_t cluster);
+		int getLinkedCluster(Sector* sector, uint32_t cluster, uint32_t count = 0);
+		
+		FAT32_File* openFile(std::string path, std::string mode_);
+		void closeFile(FAT32_File* file);
 	}; 
+
+	/**
+	 *
+	 * @brief openFSL file
+	 * @details Implements file control
+	 * @author kms1212
+	 *
+	 */
+	class FAT32_File {
+	private:
+		FAT32_fileInfo   fileInfo;
+		FS_FAT32*        fileSystem;
+		std::string      openMode;
+		
+		uint32_t         seekLocation = 0;
+		
+	public:
+		FAT32_File(FS_FAT32* fileSystem_, FAT32_fileInfo fileInfo_, std::string mode_);
+		
+		FAT32_fileInfo getFileInfo();
+
+		/**
+		 *
+		 * @brief Read file
+		 * @details Reads file from disk
+		 * @param uint8_t* buf: Data buffer
+		 * @param uint32_t len: Data length
+		 *
+		 */
+		int read(uint8_t* buf, uint32_t len);
+		
+		/**
+		 *
+		 * @brief Seek file
+		 * @details Seek file location
+		 * @param uint32_t location: Seek location
+		 *
+		 */
+		int seek(uint32_t location);
+	};
 }
 
 #endif

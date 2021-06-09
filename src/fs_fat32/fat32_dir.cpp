@@ -22,7 +22,7 @@ uint32_t FS_FAT32::getChildCount(std::string path) {
 	int count = 0;
 	int countWithDeletedFiles = 0;
 	
-	uint32_t linkedClusterCount = getLinkedClusterCount(currentCluster);
+	uint32_t linkedClusterCount = getLinkedClusterCount(currentCluster); // Get linked cluster count.
 	if (linkedClusterCount == 0)
 	{
 		currentPath = currentPath_temp;
@@ -30,7 +30,7 @@ uint32_t FS_FAT32::getChildCount(std::string path) {
 		return 0;
 	}
 	
-	Sector dir_cluster(sectorPerCluster * linkedClusterCount, dd->getBytespersector());
+	Sector dir_cluster(sectorPerCluster * linkedClusterCount, dd->getBytespersector()); // Get entire linked cluster of directory entry
 	
 	if (getLinkedCluster(&dir_cluster, currentCluster))
 	{
@@ -42,7 +42,7 @@ uint32_t FS_FAT32::getChildCount(std::string path) {
 	FAT32_entry* fileEntry = (FAT32_entry*)dir_cluster.getData();
 		
 	for (int i = 0; i < 16 * linkedClusterCount; i++) {
-		if (fileEntry[i].fileAttr == 0x00)
+		if (fileEntry[i].fileAttr == 0x00) // return if entry is blank
 		{
 			currentPath = currentPath_temp;
 			currentCluster = currentCluster_temp;
@@ -50,10 +50,10 @@ uint32_t FS_FAT32::getChildCount(std::string path) {
 		}
 		else {
 			if (countWithDeletedFiles < 65536) {
-				countWithDeletedFiles++;
-				if (fileEntry[i].fileName[0] != 0xE5 && (fileEntry[i].fileAttr == 0x10 || fileEntry[i].fileAttr == 0x20))
+				countWithDeletedFiles++; // Increase entry count
+				if (fileEntry[i].fileName[0] != 0xE5 && (fileEntry[i].fileAttr == 0x10 || fileEntry[i].fileAttr == 0x20)) // Increase count if file is exist
 					count++;
-			} else {
+			} else { // return if entry count is over 65535
 				currentPath = currentPath_temp;
 				currentCluster = currentCluster_temp;
 				return count;
@@ -66,7 +66,7 @@ uint32_t FS_FAT32::getChildCount(std::string path) {
 	return count;
 }
 
-uint8_t* str16to8(uint8_t* dest, const uint16_t* src, size_t size)
+uint8_t* str16to8(uint8_t* dest, const uint16_t* src, size_t size) // Temporary function to convert 16bit UCS-2 value to 8bit ASCII (drain)
 {
 	for (int i = 0; i < size; i++)
 		dest[i] = (uint8_t)src[i];

@@ -31,7 +31,11 @@ void DiskDevice::initialize() {
 		return;
 	}
 	errorState = DISKDEV_ERROR_SUCCESS;
-	openDisk();
+	if (openDisk())
+	{
+		errorState = DISKDEV_ERROR_DISK_ERROR;
+		return;
+	}
 }
 
 DiskDevice::~DiskDevice() {

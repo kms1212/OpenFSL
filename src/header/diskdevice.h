@@ -103,8 +103,8 @@ namespace openFSL {
 		 * @brief Disk read function wrapper
 		 * @details Reads disk and stores data by sector.
 		 * @param Sector* dest: buffer to store data
-		 * @param vint_arch lba
-		 * @param vint_arch size
+		 * @param vint_arch lba: Data location
+		 * @param vint_arch size: Sector count
 		 * @return int: Error code
 		 *
 		 */

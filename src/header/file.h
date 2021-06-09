@@ -1,4 +1,4 @@
-/* Copyright (c) 2021. kms1212(권민수)
+/* Copyright (c) 2021z. kms1212(권민수)
 This file is part of OpenFSL.
 
 OpenFSL and its source code is published over BSD 3-Clause License.
@@ -39,23 +39,6 @@ namespace openFSL {
 		int       time_month;
 		int       time_year;
 	} FSL_Time;
-	
-	class FSLFile {
-	private:
-		std::string        fileSystem;
-		std::string        fileName;
-		struct tm fileCreateTime;
-		struct tm fileAccessTime;
-		struct tm fileModTime;
-		uint32_t           fileLocation;
-		uint32_t           fileSize;
-		
-	public:
-		FSLFile();
-		~FSLFile();
-		
-		
-	};
 }
 
 #endif
