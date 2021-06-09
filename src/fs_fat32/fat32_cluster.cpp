@@ -26,7 +26,7 @@ uint32_t FS_FAT32::getNextCluster(uint32_t cluster)
 uint32_t FS_FAT32::getLinkedClusterCount(uint32_t cluster)
 {
 	uint32_t count = 0;
-	for (uint32_t temp = cluster; (temp != 0xFFFFFFF7) || (temp != 0xFFFFFFF8); temp = getNextCluster(temp)) // Repeat getNextCluster() while end
+	for (uint32_t temp = cluster; (temp != 0xFFFFFFF7) && (temp != 0xFFFFFFF8); temp = getNextCluster(temp)) // Repeat getNextCluster() while end
 		count++;
 	return count;
 }
