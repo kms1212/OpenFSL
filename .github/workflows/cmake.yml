@@ -27,7 +27,7 @@ jobs:
           sudo apt-get update
           sudo apt-get install cmake doxygen graphviz
         elif [ "$RUNNER_OS" == "Windows" ]; then
-          choco install cmake doxygen.install graphviz
+          choco install -v make doxygen.install graphviz
         else
           echo "$RUNNER_OS not supported"
           exit 1
