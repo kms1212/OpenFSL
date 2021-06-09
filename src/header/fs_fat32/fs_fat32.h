@@ -278,7 +278,8 @@ namespace openFSL {
 	class FS_FAT32 {
 	private:
 		DiskDevice*  dd;
-		FAT32_Option option;	
+		bool         isDiskDeviceAllocated;
+		FAT32_Option option;
 		uint32_t     errorState = FAT32_ERROR_NOT_INITIALIZED;
 		
 		uint32_t     volumeID;

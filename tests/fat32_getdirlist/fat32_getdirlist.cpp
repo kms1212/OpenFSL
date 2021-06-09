@@ -35,8 +35,51 @@ int closeDisk();
 fstream disk;
 FS_FAT32* fat32;
 
+void hexdump(uint8_t* p, int offset, int len)
+{
+	ios init(NULL);
+	init.copyfmt(cout);
+	
+    int address = 0;
+    int row = 0;
+    int nread = 0;
+ 
+    std::cout << std::hex << std::setfill('0');
+    while (1) {
+        if (address >= len) break;
+        nread = ((len - address) > 16) ? 16 : (len - address);
+		
+        // Show the address
+        std::cout << std::setw(8) << address + offset;
+ 
+        // Show the hex codes
+        for (int i = 0; i < 16; i++)
+        {
+            if (i % 8 == 0) std::cout << ' ';
+            if (i < nread)
+                    std::cout << ' ' << std::setw(2) << (int)p[16 * row + i + offset];
+            else
+                std::cout << "   ";
+        }
+ 
+        // Show printable characters
+        std::cout << "  ";
+        for (int i = 0; i < nread; i++)
+        {
+			char ch = p[16 * row + i + offset];
+            if (ch < 32 || ch > 125) std::cout << '.';
+            else std::cout << ch;
+        }
+ 
+        std::cout << "\n";
+        address += 16;
+        row++;
+    }
+	cout.copyfmt(init);
+}
+
 int main(int argc, char** argv) {
-	fat32 = new FS_FAT32(new DiskDevice(), FAT32_OPTION_NONE, "\\/");
+	fat32 = new FS_FAT32(NULL, FAT32_OPTION_NONE, "\\/");
 	
 	fat32->getDiskDevice()->readDisk = readDisk;
 	fat32->getDiskDevice()->openDisk = openDisk;
@@ -82,6 +125,7 @@ int main(int argc, char** argv) {
 	{
 		cout << buf[i].fileName << "\n";
 		filename = buf[i].fileName;
+		
 		std::transform(filename.begin(), filename.end(), filename.begin(), ::toupper);
 		if (find(list.begin(), list.end(), filename) != list.end()) {
 			result--;
@@ -89,7 +133,8 @@ int main(int argc, char** argv) {
 	}
 	
 	delete[] buf;
-	delete fat32->getDiskDevice();
+
+	delete fat32;
 	
 	return ret + result;
 }

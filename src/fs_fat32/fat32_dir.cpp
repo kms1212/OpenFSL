@@ -69,7 +69,7 @@ uint32_t FS_FAT32::getChildCount(std::string path) {
 uint8_t* str16to8(uint8_t* dest, const uint16_t* src, size_t size) // Temporary function to convert 16bit UCS-2 value to 8bit ASCII (drain)
 {
 	for (int i = 0; i < size; i++)
-		dest[i] = (uint8_t)src[i];
+		dest[i] = src[i] == 0xFF ? 0 : (uint8_t)src[i];
 	return dest;
 }
 
@@ -118,7 +118,7 @@ FAT32_fileInfo* FS_FAT32::getDirList(FAT32_fileInfo* buf, std::string path) {
 				if (fileEntry[i - 1].fileAttr == 0x0F){
 					for (int lfnIndex = i - 1; fileEntry[lfnIndex].fileAttr == 0x0F; lfnIndex--)
 					{
-						char buf[14];
+						char buf[14] = { 0 };
 						FAT32_lfn* entry = (FAT32_lfn*)&fileEntry[lfnIndex];
 						str16to8((uint8_t*)buf, entry->lfnFileName1, 5);
 						str16to8((uint8_t*)(buf + 5), entry->lfnFileName2, 6);

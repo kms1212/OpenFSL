@@ -79,7 +79,7 @@ void hexdump(uint8_t* p, int offset, int len)
 }
 
 int main(int argc, char** argv) {
-	fat32 = new FS_FAT32(new DiskDevice(), FAT32_OPTION_NONE, "\\/");
+	fat32 = new FS_FAT32(NULL, FAT32_OPTION_NONE, "\\/");
 	
 	fat32->getDiskDevice()->readDisk = readDisk;
 	fat32->getDiskDevice()->openDisk = openDisk;
@@ -117,7 +117,6 @@ int main(int argc, char** argv) {
 	
 	fat32->closeFile(file);
 
-	delete fat32->getDiskDevice();
 	delete fat32;
 	
 	return result;

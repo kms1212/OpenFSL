@@ -36,7 +36,7 @@ fstream disk;
 FS_FAT32* fat32;
 
 int main(int argc, char** argv) {
-	fat32 = new FS_FAT32(new DiskDevice(), FAT32_OPTION_NONE, "\\/");
+	fat32 = new FS_FAT32(NULL, FAT32_OPTION_NONE, "\\/");
 	
 	fat32->getDiskDevice()->readDisk = readDisk;
 	fat32->getDiskDevice()->openDisk = openDisk;
@@ -46,7 +46,7 @@ int main(int argc, char** argv) {
 	
 	uint32_t errorState = fat32->getState();
 
-	delete fat32->getDiskDevice();
+	delete fat32;
 	
 	return errorState;
 }

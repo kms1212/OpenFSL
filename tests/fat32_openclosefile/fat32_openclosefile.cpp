@@ -79,7 +79,7 @@ void hexdump(uint8_t* p, int offset, int len)
 }
 
 int main(int argc, char** argv) {
-	fat32 = new FS_FAT32(new DiskDevice(), FAT32_OPTION_NONE, "\\/");
+	fat32 = new FS_FAT32(NULL, FAT32_OPTION_NONE, "\\/");
 	
 	fat32->getDiskDevice()->readDisk = readDisk;
 	fat32->getDiskDevice()->openDisk = openDisk;
@@ -108,7 +108,7 @@ int main(int argc, char** argv) {
 		
 		string buf_s(buf);
 		string comp_s("Hello, World!\nOpenFSL\n");
-		cout << buf_s << "\n";
+		cout << buf_s << endl;
 		
 		if (buf_s != comp_s) {
 			result++;
@@ -117,7 +117,6 @@ int main(int argc, char** argv) {
 	
 	fat32->closeFile(file);
 
-	delete fat32->getDiskDevice();
 	delete fat32;
 	
 	return result;

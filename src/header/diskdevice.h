@@ -11,6 +11,7 @@ See the BSD-3-Clause for more details.
 #define __DISKDEVICE_H
 
 #include <stdint.h>
+#include <iostream>
 
 #include "sector.h"
 #include "vint.h"

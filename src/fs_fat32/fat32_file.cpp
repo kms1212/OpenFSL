@@ -30,7 +30,6 @@ FAT32_fileInfo FS_FAT32::getFileInformation(std::string path) {
 	
 	std::transform(filename_path.begin(), filename_path.end(), filename_path.begin(), ::toupper);
 	
-	
 	FAT32_fileInfo* buf = new FAT32_fileInfo[getChildCount()];
 		
 	getDirList(buf);
@@ -90,6 +89,7 @@ int FAT32_File::read(uint8_t* buf, uint32_t len) {
 		
 		uint32_t readCount = len / fileSystem->getDiskDevice()->getBytespersector() + 1;
 		readCount = fileSystem->getLinkedClusterCount(cluster) < readCount ? fileSystem->getLinkedClusterCount(cluster) : readCount;
+	
 		
 		Sector sector(readCount, fileSystem->getSectorPerCluster() * fileSystem->getDiskDevice()->getBytespersector());
 		fileSystem->getLinkedCluster(&sector, cluster, readCount);
@@ -100,7 +100,6 @@ int FAT32_File::read(uint8_t* buf, uint32_t len) {
 			int base = seekLocation % fileSystem->getDiskDevice()->getBytespersector();
 			for (uint32_t i = 0; i < len; i++)
 				buf[i] = sector.getData()[i + base];
-			std::cout << openMode << "\n";
 			if (openMode.find_first_of('b') == std::string::npos)
 			{
 				buf[len] = 0;

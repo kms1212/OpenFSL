@@ -12,14 +12,25 @@ See the BSD-3-Clause for more details.
 using namespace openFSL;
 
 FS_FAT32::FS_FAT32(DiskDevice* dd_, FAT32_Option option_, std::string pathSeparator_) {
-	dd = dd_;
+	if (dd_ == NULL) {
+		isDiskDeviceAllocated = true;
+		dd = new DiskDevice();
+	}
+	else {
+		isDiskDeviceAllocated = false;
+		dd = dd_;
+	}
 	option = option_;
 	pathSeparator = pathSeparator_;
 }
 
 FS_FAT32::~FS_FAT32() {
-	dd->close();                               // Close disk device
 	errorState = FAT32_ERROR_NOT_INITIALIZED; 
+	
+	if (isDiskDeviceAllocated) {
+		dd->close();                               // Close disk device
+		delete dd;                             // Delete disk device
+	}
 	delete fatArea;                            // Delete loaded fat area
 }
 
