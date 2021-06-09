@@ -6,6 +6,9 @@ on:
   pull_request:
     branches: [ main ]
 
+env:
+    BUILD_TYPE: Debug
+
 jobs:
   build:
     strategy:
@@ -46,6 +49,6 @@ jobs:
       
     - name: Test
       run: |
-        ctest
+        ctest -C ${{env.BUILD_TYPE}}
       shell: bash
       working-directory: ${{github.workspace}}/build
