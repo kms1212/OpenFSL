@@ -12,7 +12,7 @@ jobs:
       fail-fast: false
       matrix:
         platform: [x86, x64]
-        os: [ ubuntu-latest ] # [ubuntu-latest, macos-latest, windows-latest]
+        os: [ ubuntu-latest, windows-latest ] # [ubuntu-latest, macos-latest, windows-latest]
         
     runs-on: '${{ matrix.os }}'
     
@@ -21,27 +21,31 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     
-    - name: Install CMake
+    - name: Install Required Software
       run: |
-        sudo apt-get update
-        sudo apt-get install cmake
-    
-    - name: Install Doxygen
-      run: |
-        sudo apt-get update
-        sudo apt-get install doxygen
-    
-    - name: Install graphviz
-      run: |
-        sudo apt-get update
-        sudo apt-get install graphviz
+        if [ "$RUNNER_OS" == "Linux" ]; then
+          apt-get update
+          apt-get install cmake doxygen graphviz
+        elif [ "$RUNNER_OS" == "Windows" ]; then
+          choco install cmake doxygen.install graphviz
+        else
+          echo "$RUNNER_OS not supported"
+          exit 1
+        fi
+      shell: bash
 
     - name: Configure CMake
-      run: cmake -B ${{github.workspace}}/build -DDOXYGEN_GENERATE=false
+      run: |
+        cmake -B ${{github.workspace}}/build -DDOXYGEN_GENERATE=false
+      shell: bash
 
     - name: Build
-      run: cmake --build ${{github.workspace}}/build
+      run: |
+        cmake --build ${{github.workspace}}/build
+      shell: bash
       
     - name: Test
+      run: |
+        ctest
+      shell: bash
       working-directory: ${{github.workspace}}/build
-      run: ctest
