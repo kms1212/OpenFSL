@@ -1,13 +1,11 @@
 # OpenFSL README
 
-![openfsl-logo](https://raw.githubusercontent.com/kms1212/OpenFSL/main/doc/logo/openfsl-dark-320x135.png)[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fkms1212%2FOpenFSL.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fkms1212%2FOpenFSL?ref=badge_shield)
-
-
-
+![openfsl-logo](https://raw.githubusercontent.com/kms1212/OpenFSL/main/doc/logo/openfsl-dark-320x135.png)
 
 An open source filesystem library
 
 [![Build](https://github.com/kms1212/OpenFSL/actions/workflows/cmake.yml/badge.svg)](https://github.com/kms1212/OpenFSL/actions/workflows/cmake.yml)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fkms1212%2FOpenFSL.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fkms1212%2FOpenFSL?ref=badge_shield
 
 
 
