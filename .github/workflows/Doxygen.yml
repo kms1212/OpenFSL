@@ -25,6 +25,11 @@ jobs:
       run: |
           sudo apt-get update
           sudo apt-get install cmake doxygen graphviz git
+    
+    - name: Resolve submodule
+      run: |
+          git submodule init
+          git submodule update
       shell: bash
 
     - name: Configure CMake
