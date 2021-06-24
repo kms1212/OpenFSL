@@ -17,21 +17,21 @@ See the BSD-3-Clause for more details.
 #include "stddef.h"
 
 namespace openFSL {
-		
-	/**
-	 *
-	 * @brief Library initializer
-	 * @return int: Error code 
-	 *
-	 */
-	int        initializeLibrary();
-		
-	/**
-	 *
-	 * @brief String tokenizer
-	 *
-	 */
-	void            fsl_strtokenize(const std::string& str, std::vector<std::string>& tokens, const std::string& delimiters);
+        
+    /**
+     *
+     * @brief Library initializer
+     * @return int: Error code 
+     *
+     */
+    int        initializeLibrary();
+        
+    /**
+     *
+     * @brief String tokenizer
+     *
+     */
+    void            fsl_strtokenize(const std::string& str, std::vector<std::string>& tokens, const std::string& delimiters);
 }
 
 #endif

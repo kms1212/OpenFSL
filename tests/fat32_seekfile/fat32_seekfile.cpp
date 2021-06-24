@@ -29,6 +29,7 @@ using namespace std;
 using namespace openFSL;
 
 int readDisk(Sector* dest, vint_arch lba, vint_arch size);
+int writeDisk(Sector* src, vint_arch lba);
 int openDisk();
 int closeDisk();
 
@@ -37,9 +38,9 @@ FS_FAT32* fat32;
 
 void hexdump(uint8_t* p, int offset, int len)
 {
-	ios init(NULL);
-	init.copyfmt(cout);
-	
+    ios init(NULL);
+    init.copyfmt(cout);
+    
     int address = 0;
     int row = 0;
     int nread = 0;
@@ -48,7 +49,7 @@ void hexdump(uint8_t* p, int offset, int len)
     while (1) {
         if (address >= len) break;
         nread = ((len - address) > 16) ? 16 : (len - address);
-		
+        
         // Show the address
         std::cout << std::setw(8) << address + offset;
  
@@ -66,7 +67,7 @@ void hexdump(uint8_t* p, int offset, int len)
         std::cout << "  ";
         for (int i = 0; i < nread; i++)
         {
-			char ch = p[16 * row + i + offset];
+            char ch = p[16 * row + i + offset];
             if (ch < 32 || ch > 125) std::cout << '.';
             else std::cout << ch;
         }
@@ -75,68 +76,76 @@ void hexdump(uint8_t* p, int offset, int len)
         address += 16;
         row++;
     }
-	cout.copyfmt(init);
+    cout.copyfmt(init);
 }
 
 int main(int argc, char** argv) {
-	fat32 = new FS_FAT32(NULL, FAT32_OPTION_NONE, "\\/");
-	
-	fat32->getDiskDevice()->readDisk = readDisk;
-	fat32->getDiskDevice()->openDisk = openDisk;
-	fat32->getDiskDevice()->closeDisk = closeDisk;
-	
-	fat32->initialize();
-	
-	if (fat32->getState())
-	{
-		delete fat32->getDiskDevice();
-		delete fat32;
-		return 1;
-	}
-	
-	int result = 0;
-	
-	FAT32_File* file = fat32->openFile("file1.txt", "r");
-	
-	if (file == NULL)
-	{
-		result++;
-	}
-	else {
-		char* buf = new char[file->getFileInfo().fileSize - 14]();
-		file->seek(14);
-		result += file->read((uint8_t*)buf, file->getFileInfo().fileSize - 14);
-		
-		string buf_s(buf);
-		string comp_s("OpenFSL\n");
-		
-		if (buf_s != comp_s) {
-			result++;
-		}
-	}
-	
-	fat32->closeFile(file);
+    fat32 = new FS_FAT32(NULL, FAT32_OPTION_NONE, "\\/");
+    
+    fat32->getDiskDevice()->readDisk = readDisk;
+    fat32->getDiskDevice()->writeDisk = writeDisk;
+    fat32->getDiskDevice()->openDisk = openDisk;
+    fat32->getDiskDevice()->closeDisk = closeDisk;
+    
+    fat32->initialize();
+    
+    if (fat32->getState())
+    {
+        delete fat32->getDiskDevice();
+        delete fat32;
+        return 1;
+    }
+    
+    int result = 0;
+    
+    FAT32_File* file = fat32->openFile("file1.txt", "r");
+    
+    if (file == NULL)
+    {
+        result++;
+    }
+    else {
+        char* buf = new char[file->getFileInfo().fileSize - 14]();
+        file->seek(14);
+        result += file->read((uint8_t*)buf, file->getFileInfo().fileSize - 14);
+        
+        string buf_s(buf);
+        string comp_s("OpenFSL\n");
+        
+        if (buf_s != comp_s) {
+            result++;
+        }
+    }
+    
+    fat32->closeFile(file);
 
-	delete fat32;
-	
-	return result;
+    delete fat32;
+    
+    return result;
 }
 
 int openDisk()
 {
-	disk.open("fat32.img", ios::in | ios::binary);
-	return disk.fail();
+    disk.open("fat32.img", ios::in | ios::out | ios::binary | ios::ate);
+    return disk.fail();
 }
 
 int closeDisk()
 {
-	disk.close();
-	return 0;
+    disk.close();
+    return 0;
 }
 
 int readDisk(Sector* dest, vint_arch lba, vint_arch size)
 {
-	disk.seekg(lba * fat32->getDiskDevice()->getBytespersector(), ios::beg);
-	disk.read((char*)dest->getData(), size * fat32->getDiskDevice()->getBytespersector());
-	return 0;
+    disk.seekg(lba * fat32->getDiskDevice()->getBytespersector(), ios::beg);
+    disk.read((char*)dest->getData(), size * fat32->getDiskDevice()->getBytespersector());
+    return disk.tellg() == -1 ? 1 : 0;
+}
+
+int writeDisk(Sector* src, vint_arch lba)
+{
+    disk.seekp(lba * fat32->getDiskDevice()->getBytespersector(), ios::beg);
+    disk.write((char*)src->getData(), src->getSectorCount() * fat32->getDiskDevice()->getBytespersector());
+    return disk.tellp() == -1 ? 1 : 0;
 }

@@ -98,26 +98,7 @@ int main(int argc, char** argv) {
     
     int result = 0;
     
-    FAT32_File* file = fat32->openFile("file1.txt", "r");
-    
-    if (file == NULL)
-    {
-        result++;
-    }
-    else {
-        char* buf = new char[file->getFileInfo().fileSize]();
-        result += file->read((uint8_t*)buf, file->getFileInfo().fileSize);
-        
-        string buf_s(buf);
-        string comp_s("Hello, World!\nOpenFSL\n");
-        cout << buf_s << endl;
-        
-        if (buf_s != comp_s) {
-            result++;
-        }
-    }
-    
-    fat32->closeFile(file);
+    result += fat32->mkdir("::/mkdirtest");
 
     delete fat32;
     
