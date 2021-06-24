@@ -41,8 +41,9 @@ jobs:
       run: |
         git clone https://github.com/kms1212/kms1212.github.com
         mkdir -p ./kms1212.github.com/OpenFSL/doc/html
-        cp -R ./doc/html ./kms1212.github.com/OpenFSL/doc/html
+        cp -R ./doc/html ./kms1212.github.com/OpenFSL/doc/html/
         cd kms1212.github.com
+        echo $
       shell: bash
       
     - name: Push to GH Page
