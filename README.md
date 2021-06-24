@@ -4,8 +4,7 @@
 
 An open source filesystem library
 
-[![Build](https://github.com/kms1212/OpenFSL/actions/workflows/cmake.yml/badge.svg)](https://github.com/kms1212/OpenFSL/actions/workflows/cmake.yml)
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fkms1212%2FOpenFSL.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fkms1212%2FOpenFSL?ref=badge_shield)
+[![Build](https://github.com/kms1212/OpenFSL/actions/workflows/Build.yml/badge.svg)](https://github.com/kms1212/OpenFSL/actions/workflows/Build.yml)[![Doxygen](https://github.com/kms1212/OpenFSL/actions/workflows/Doxygen.yml/badge.svg)](https://github.com/kms1212/OpenFSL/actions/workflows/Doxygen.yml)[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fkms1212%2FOpenFSL.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fkms1212%2FOpenFSL?ref=badge_shield)
 
 
 ## Progress
