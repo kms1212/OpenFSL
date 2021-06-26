@@ -47,13 +47,9 @@ int main(int argc, char** argv) {
     }
     filename = argv[1];
     
-    if (argc == 3 && argv[2] == "-t")
-    {
-        
-    }
+    if (argc == 3 && argv[2] == "-t") { }
     else if (argc == 2)
     {
-        
         fat32 = new FS_FAT32(new DiskDevice(), FAT32_OPTION_NONE, "\\/");
     
         fat32->getDiskDevice()->readDisk = readDisk;

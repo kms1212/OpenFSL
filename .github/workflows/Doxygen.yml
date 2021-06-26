@@ -1,11 +1,9 @@
 name: Doxygen
-
 on:
   push:
     branches: [ main ]
   pull_request:
     branches: [ main ]
-
 jobs:
   build:
     strategy:
@@ -13,35 +11,27 @@ jobs:
       matrix:
         platform: [x64]
         os: [ ubuntu-latest ]
-        
     runs-on: '${{ matrix.os }}'
-    
     name: 'Doxygen'
-
     steps:
     - uses: actions/checkout@v2
-    
     - name: Install Required Software
       run: |
           sudo apt-get update
           sudo apt-get install cmake doxygen graphviz git
-    
     - name: Resolve submodule
       run: |
           git submodule init
           git submodule update
       shell: bash
-
     - name: Configure CMake
       run: |
         cmake -B build -DDOXYGEN_GENERATE=true -DNO_BUILD=true
       shell: bash
-
     - name: Generate document
       run: |
         cmake --build build
       shell: bash
-      
     - name: Prepare publishing to GH Page
       run: |
         git clone https://github.com/kms1212/kms1212.github.com
@@ -50,7 +40,6 @@ jobs:
         cd kms1212.github.com
         echo $
       shell: bash
-      
     - name: Push to GH Page
       uses: cpina/github-action-push-to-another-repository@main
       env:
