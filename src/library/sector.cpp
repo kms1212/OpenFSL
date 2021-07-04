@@ -20,7 +20,7 @@ Sector::Sector(size_t sector_count_, uint32_t bytespersector) {
     data = new uint8_t[bufsize];
 }
 
-uint64_t Sector::getSectorCount() {
+vint_arch Sector::getSectorCount() {
     return sector_count;
 }
 
