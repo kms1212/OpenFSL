@@ -7,7 +7,7 @@ See the BSD-3-Clause for more details.
 
 */
 
-#include "../header/fs_fat32/fs_fat32.h"
+#include "openfsl/fs_fat32.h"
 
 using namespace openFSL;
 
@@ -273,9 +273,9 @@ int FS_FAT32::chdir(std::string path, std::vector<std::string>* subdir) {
                 }
             }
         }
-		else if (!(i < 65536)) {
-			return 1;
-		}
+        else if (!(i < 65536)) {
+            return 1;
+        }
         count++;
     }
 
@@ -338,8 +338,8 @@ int FS_FAT32::mkdir(std::string path, std::vector<std::string>* subdir) {
     
     for (int i = 0; i < 16 * linkedClusterCount; i++) {
         if (fileEntry[i].fileAttr == 0x00) {
-		    break;
-		}
+            break;
+        }
         else if (fileEntry[i].fileName[0] != 0xE5) {
             if (fileEntry[i].fileAttr == 0x10)
             {
@@ -366,43 +366,43 @@ int FS_FAT32::mkdir(std::string path, std::vector<std::string>* subdir) {
                     return 1;
             }
         }
-		else if (!(i < 65536)) {
-			return 1;
-		}
+        else if (!(i < 65536)) {
+            return 1;
+        }
         count++;
     }
     
-	int emptySpace = -1;
-	int firstDeletedEntry = -1;
-	for (int i = 0; i < 16 * linkedClusterCount; i++) {
-		if (fileEntry[i].fileAttr == 0x00) {
-			emptySpace = i;
-		    break;
-		} else if ((fileEntry[i].fileName[0] == 0xE5) && (firstDeletedEntry == -1)) {
-			firstDeletedEntry = i;
-		}
-	}
-	
-	if ((emptySpace == -1) && (firstDeletedEntry == -1)) {
-		for (int i = 2;; i++) {
-			if (fatClusterList[i] == 0)
-				break;
-			std::cout << i << ": " << fatClusterList[i] << "\n";
-		}
-		int ret = allocateFreeCluster(currentCluster);
-		if (ret == 0)
-			return 1;
-		
+    int emptySpace = -1;
+    int firstDeletedEntry = -1;
+    for (int i = 0; i < 16 * linkedClusterCount; i++) {
+        if (fileEntry[i].fileAttr == 0x00) {
+            emptySpace = i;
+            break;
+        } else if ((fileEntry[i].fileName[0] == 0xE5) && (firstDeletedEntry == -1)) {
+            firstDeletedEntry = i;
+        }
+    }
+    
+    if ((emptySpace == -1) && (firstDeletedEntry == -1)) {
+        for (int i = 2;; i++) {
+            if (fatClusterList[i] == 0)
+                break;
+            std::cout << i << ": " << fatClusterList[i] << "\n";
+        }
+        int ret = allocateFreeCluster(currentCluster);
+        if (ret == 0)
+            return 1;
+        
         Sector temp(1, dd->getBytespersector());
         dd->readDisk(&temp, resvSectorCount + fatSize32 * fatCount + ret - rootCluster, 1);
-		
-		std::cout << temp.getData()[0] << "\n";
-		for (int i = 2;; i++) {
-			if (fatClusterList[i] == 0)
-				break;
-			std::cout << i << ": " << fatClusterList[i] << "\n";
-		}
-		std::cout << getLastCluster(currentCluster) << "\n";
-	}
+        
+        std::cout << temp.getData()[0] << "\n";
+        for (int i = 2;; i++) {
+            if (fatClusterList[i] == 0)
+                break;
+            std::cout << i << ": " << fatClusterList[i] << "\n";
+        }
+        std::cout << getLastCluster(currentCluster) << "\n";
+    }
     return 0;
 }

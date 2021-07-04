@@ -23,8 +23,7 @@ See the BSD-3-Clause for more details.
 #include "openfsl/diskdevice.h"
 #include "openfsl/sector.h"
 #include "openfsl/vint.h"
-#include "openfsl/file.h"
-#include "openfsl/fs/fs_fat32.h"
+#include "openfsl/fs_fat32.h"
 
 using namespace std;
 using namespace openFSL;
@@ -37,6 +36,49 @@ int closeDisk();
 fstream disk;
 FS_FAT32* fat32;
 
+void hexdump(uint8_t* p, int offset, int len)
+{
+    ios init(NULL);
+    init.copyfmt(cout);
+    
+    int address = 0;
+    int row = 0;
+    int nread = 0;
+ 
+    std::cout << std::hex << std::setfill('0');
+    while (1) {
+        if (address >= len) break;
+        nread = ((len - address) > 16) ? 16 : (len - address);
+        
+        // Show the address
+        std::cout << std::setw(8) << address + offset;
+ 
+        // Show the hex codes
+        for (int i = 0; i < 16; i++)
+        {
+            if (i % 8 == 0) std::cout << ' ';
+            if (i < nread)
+                    std::cout << ' ' << std::setw(2) << (int)p[16 * row + i + offset];
+            else
+                std::cout << "   ";
+        }
+ 
+        // Show printable characters
+        std::cout << "  ";
+        for (int i = 0; i < nread; i++)
+        {
+            char ch = p[16 * row + i + offset];
+            if (ch < 32 || ch > 125) std::cout << '.';
+            else std::cout << ch;
+        }
+ 
+        std::cout << "\n";
+        address += 16;
+        row++;
+    }
+    cout.copyfmt(init);
+}
+
 int main(int argc, char** argv) {
     fat32 = new FS_FAT32(NULL, FAT32_OPTION_NONE, "\\/");
     
@@ -47,19 +89,16 @@ int main(int argc, char** argv) {
     
     fat32->initialize();
     
-    uint32_t result = fat32->getState();
+    if (fat32->getState())
+    {
+        delete fat32->getDiskDevice();
+        delete fat32;
+        return 1;
+    }
     
-    FAT32_fileInfo fileInfo = fat32->getFileInformation("::/lfnfilename1.txt");
-    if (fileInfo.fileName != "lfnfilename1.txt")
-        result++;
-    else if (fileInfo.fileSize != 22)
-        result++;
+    int result = 0;
     
-    fileInfo = fat32->getFileInformation("::/directory1/../lfnfilename2.txt");
-    if (fileInfo.fileName != "lfnfilename2.txt")
-        result++;
-    else if (fileInfo.fileSize != 22)
-        result++;
+    result += fat32->mkdir("::/mkdirtest");
 
     delete fat32;
     

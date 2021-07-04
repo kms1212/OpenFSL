@@ -7,7 +7,7 @@ See the BSD-3-Clause for more details.
 
 */
 
-#include "../header/fslservices.h"
+#include "openfsl/fslservices.h"
 
 using namespace openFSL;
 

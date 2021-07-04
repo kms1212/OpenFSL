@@ -23,7 +23,7 @@ See the BSD-3-Clause for more details.
 #include "openfsl/diskdevice.h"
 #include "openfsl/sector.h"
 #include "openfsl/vint.h"
-#include "openfsl/fs/fs_fat32.h"
+#include "openfsl/fs_fat32.h"
 
 using namespace std;
 using namespace openFSL;
@@ -105,12 +105,12 @@ int main(int argc, char** argv) {
         result++;
     }
     else {
-        char* buf = new char[file->getFileInfo().fileSize]();
-        result += file->read((uint8_t*)buf, file->getFileInfo().fileSize);
+        char* buf = new char[file->getFileInfo().fileSize - 14]();
+        file->seek(14);
+        result += file->read((uint8_t*)buf, file->getFileInfo().fileSize - 14);
         
         string buf_s(buf);
-        string comp_s("Hello, World!\nOpenFSL\n");
-        cout << buf_s << endl;
+        string comp_s("OpenFSL\n");
         
         if (buf_s != comp_s) {
             result++;

@@ -7,7 +7,7 @@ See the BSD-3-Clause for more details.
 
 */
 
-#include "../header/fs_fat32/fs_fat32.h"
+#include "openfsl/fs_fat32.h"
 
 using namespace openFSL;
 

@@ -23,7 +23,7 @@ See the BSD-3-Clause for more details.
 #include "openfsl/diskdevice.h"
 #include "openfsl/sector.h"
 #include "openfsl/vint.h"
-#include "openfsl/fs/fs_fat32.h"
+#include "openfsl/fs_fat32.h"
 
 using namespace std;
 using namespace openFSL;
@@ -89,56 +89,39 @@ int main(int argc, char** argv) {
     
     fat32->initialize();
     
-    fat32->chdir("::");
-    
-    vector<string> list;
-    list.push_back("DIRECTORY1");
-    list.push_back("DIRECTORY2");
-    list.push_back("DIRECTORY3");
-    list.push_back("DIRECTORY4");
-    list.push_back("DIRECTORY5");
-    list.push_back("DIRECTORY6");
-    list.push_back("DIRECTORY7");
-    list.push_back("DIRECTORY8");
-    list.push_back("FILE1.TXT");
-    list.push_back("FILE2.TXT");
-    list.push_back("FILE3.TXT");
-    list.push_back("FILE4.TXT");
-    list.push_back("FILE5.TXT");
-    list.push_back("FILE6.TXT");
-    list.push_back("FILE7.TXT");
-    list.push_back("FILE8.TXT");
-    list.push_back("LFNFILENAME1.TXT");
-    list.push_back("LFNFILENAME2.TXT");
-    list.push_back("LFNFILENAME3.TXT");
-    list.push_back("LFNFILENAME4.TXT");
-    list.push_back("DIRECTORY9");
-    
-    int result = fat32->getChildCount();
-    int ret = 0;
-    
-    FAT32_fileInfo* buf = new FAT32_fileInfo[fat32->getChildCount()];
-    fat32->getDirList(buf);
-    if (result != 24)
-        ret = -1;
-    
-    string filename;
-    for (uint32_t i = 0; i < fat32->getChildCount(); i++)
+    if (fat32->getState())
     {
-        cout << buf[i].fileName << "\n";
-        filename = buf[i].fileName;
+        delete fat32->getDiskDevice();
+        delete fat32;
+        return 1;
+    }
+    
+    int result = 0;
+    
+    FAT32_File* file = fat32->openFile("file1.txt", "r");
+    
+    if (file == NULL)
+    {
+        result++;
+    }
+    else {
+        char* buf = new char[file->getFileInfo().fileSize]();
+        result += file->read((uint8_t*)buf, file->getFileInfo().fileSize);
         
-        std::transform(filename.begin(), filename.end(), filename.begin(), ::toupper);
-        if (find(list.begin(), list.end(), filename) != list.end()) {
-            result--;
+        string buf_s(buf);
+        string comp_s("Hello, World!\nOpenFSL\n");
+        cout << buf_s << endl;
+        
+        if (buf_s != comp_s) {
+            result++;
         }
     }
     
-    delete[] buf;
+    fat32->closeFile(file);
 
     delete fat32;
     
-    return ret + result;
+    return result;
 }
 
 int openDisk()

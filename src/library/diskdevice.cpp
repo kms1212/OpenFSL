@@ -7,7 +7,7 @@ See the BSD-3-Clause for more details.
 
 */
 
-#include "../header/diskdevice.h"
+#include "openfsl/diskdevice.h"
 
 using namespace openFSL;
 

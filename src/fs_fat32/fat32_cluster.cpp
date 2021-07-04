@@ -7,7 +7,7 @@ See the BSD-3-Clause for more details.
 
 */
 
-#include "../header/fs_fat32/fs_fat32.h"
+#include "openfsl/fs_fat32.h"
 
 using namespace openFSL;
 
@@ -25,38 +25,38 @@ uint32_t FS_FAT32::getNextCluster(uint32_t cluster)
 
 uint32_t FS_FAT32::getNextFreeCluster()
 {
-	int freeCluster;
+    int freeCluster;
     for (int i = 0; i < fatSize32; i++)
-		if (fatClusterList[i] == 0) {
-			std::cout << i << "\n";
-			return i;
-		}
-	return 0;
+        if (fatClusterList[i] == 0) {
+            std::cout << i << "\n";
+            return i;
+        }
+    return 0;
 }
 
 uint32_t FS_FAT32::allocateFreeCluster(uint32_t cluster)
 {
-	int next = getNextFreeCluster(); // get free cluster
-	if (next == 0) // return if cannot get free cluster
-		return 0;
-	fatClusterList[next] = 0x0FFFFFFF; // allocate cluster
-	fatClusterList[getLastCluster(cluster)] = next; // set pointer to allocated cluster
-	nextCluster = getNextFreeCluster(); // set next free cluster
-	freeCluster--; // decrease free cluster
-	return nextCluster;
+    int next = getNextFreeCluster(); // get free cluster
+    if (next == 0) // return if cannot get free cluster
+        return 0;
+    fatClusterList[next] = 0x0FFFFFFF; // allocate cluster
+    fatClusterList[getLastCluster(cluster)] = next; // set pointer to allocated cluster
+    nextCluster = getNextFreeCluster(); // set next free cluster
+    freeCluster--; // decrease free cluster
+    return nextCluster;
 }
 
 uint32_t FS_FAT32::getLastCluster(uint32_t cluster)
 {
-	uint32_t clusterCursor = cluster;
+    uint32_t clusterCursor = cluster;
     for (;;) {
-		uint32_t clusterTmp = clusterCursor;
-		clusterCursor = getNextCluster(clusterCursor);
+        uint32_t clusterTmp = clusterCursor;
+        clusterCursor = getNextCluster(clusterCursor);
         if (clusterCursor == 0xFFFFFFF7)
             return -1;
         if (clusterCursor == 0xFFFFFFF8)
             return clusterTmp;
-	}
+    }
 }
 
 uint32_t FS_FAT32::getLinkedClusterCount(uint32_t cluster)
