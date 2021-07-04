@@ -53,7 +53,7 @@ jobs:
         
         
         
-        cmake -G"${{matrix.kind}}" -S. -Bbuild -DBUILD_TESTING=true -DDOXYGEN_GENERATE=false
+        cmake -G"${generator_option}" -S. -Bbuild -DBUILD_TESTING=true -DDOXYGEN_GENERATE=false
       shell: bash
       
     - name: Build
