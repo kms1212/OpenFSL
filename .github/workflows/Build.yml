@@ -34,13 +34,13 @@ jobs:
       run: |
         option=""
         if [ "$RUNNER_OS" == "Linux" ]; then
-          option="-G 'Unix Makefiles'"
+          cmake -G "Unix Makefiles" -S. -Bbuild -DBUILD_TESTING=true -DDOXYGEN_GENERATE=false -Bbuild -DNO_BUILD=false
           
         elif [ "$RUNNER_OS" == "Windows" ]; then
           if [ "${{matrix.platform}}" == "x86" ]; then
-            option="-G 'Visual Studio 16 2019' -A x86"
+            cmake -G "Visual Studio 16 2019" -A x86 -S. -Bbuild -DBUILD_TESTING=true -DDOXYGEN_GENERATE=false -Bbuild -DNO_BUILD=false
           elif [ "${{matrix.platform}}" == "x64" ]; then
-            option="-G 'Visual Studio 16 2019' -A x64"
+            cmake -G "Visual Studio 16 2019" -A x64 -S. -Bbuild -DBUILD_TESTING=true -DDOXYGEN_GENERATE=false -Bbuild -DNO_BUILD=false
           else
             echo "${{matrix.platform}} not supported"
             exit 1
@@ -50,8 +50,6 @@ jobs:
           echo "$RUNNER_OS not supported"
           exit 1
         fi
-        echo ${option}
-        cmake ${option} -S. -Bbuild -DBUILD_TESTING=true -DDOXYGEN_GENERATE=false -Bbuild -DNO_BUILD=false
       shell: bash
       
     - name: Build
