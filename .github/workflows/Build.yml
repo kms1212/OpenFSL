@@ -32,15 +32,15 @@ jobs:
       
     - name: Configure CMake
       run: |
-        generator_option=""
+        option=""
         if [ "$RUNNER_OS" == "Linux" ]; then
-          generator_option="Unix Makefiles"
+          option="-G \"Unix Makefiles\""
           
         elif [ "$RUNNER_OS" == "Windows" ]; then
           if [ "${{matrix.platform}}" == "x86" ]; then
-            generator_option="Visual Studio 16 2019 Win64"
+            option="-G \"Visual Studio 16 2019\" -A x86"
           elif [ "${{matrix.platform}}" == "x64" ]; then
-            generator_option="Visual Studio 16 2019"
+            option="-G \"Visual Studio 16 2019\" -A x64"
           else
             echo "${{matrix.platform}} not supported"
             exit 1
@@ -51,7 +51,7 @@ jobs:
           exit 1
         fi
         
-        cmake -G"${generator_option}" -S. -Bbuild -DBUILD_TESTING=true -DDOXYGEN_GENERATE=false -Bbuild -DNO_BUILD=false
+        cmake ${option} -S. -Bbuild -DBUILD_TESTING=true -DDOXYGEN_GENERATE=false -Bbuild -DNO_BUILD=false
       shell: bash
       
     - name: Build
