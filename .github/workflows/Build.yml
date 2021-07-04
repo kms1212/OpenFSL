@@ -32,7 +32,28 @@ jobs:
       
     - name: Configure CMake
       run: |
-        cmake -S. -Bbuild -DBUILD_TESTING=true -DDOXYGEN_GENERATE=false
+        generator_option=""
+        if [ "$RUNNER_OS" == "Linux" ]; then
+          generator_option="Unix Makefiles"
+          
+        elif [ "$RUNNER_OS" == "Windows" ]; then
+          if [ "${{matrix.platform}}" == "x86" ]; then
+            generator_option="Visual Studio 16 2019"
+          elif [ "${{matrix.platform}}" == "x64" ]; then
+            generator_option="Visual Studio 16 2019 Win64"
+          else
+            echo "${{matrix.platform}} not supported"
+            exit 1
+          fi
+          
+        else
+          echo "$RUNNER_OS not supported"
+          exit 1
+        fi
+        
+        
+        
+        cmake -G"${{matrix.kind}}" -S. -Bbuild -DBUILD_TESTING=true -DDOXYGEN_GENERATE=false
       shell: bash
       
     - name: Build
@@ -45,3 +66,53 @@ jobs:
         ctest -C ${{env.BUILD_TYPE}}
       shell: bash
       working-directory: ${{github.workspace}}/build
+
+  doc:
+    strategy:
+      fail-fast: false
+        
+    runs-on: 'ubuntu-latest'
+    name: 'Doxygen'
+    steps:
+    - uses: actions/checkout@v2
+    - name: Install Required Software
+      run: |
+          sudo apt-get update
+          sudo apt-get install cmake doxygen graphviz git
+          
+    - name: Resolve submodule
+      run: |
+          git submodule init
+          git submodule update
+      shell: bash
+      
+    - name: Configure CMake
+      run: |
+        cmake -B build -DDOXYGEN_GENERATE=true -DNO_BUILD=true
+      shell: bash
+      
+    - name: Generate document
+      run: |
+        cmake --build build
+      shell: bash
+      
+    - name: Prepare publishing to GH Page
+      run: |
+        git clone https://github.com/kms1212/kms1212.github.com
+        mkdir -p ./kms1212.github.com/docs/OpenFSL/html
+        cp -r ./doc/html/* ./kms1212.github.com/docs/OpenFSL/html
+        cd kms1212.github.com
+        echo $
+      shell: bash
+      
+    - name: Push to GH Page
+      uses: cpina/github-action-push-to-another-repository@main
+      env:
+        API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+      with:
+        source-directory: 'kms1212.github.com'
+        destination-github-username: 'kms1212'
+        destination-repository-name: 'kms1212.github.com'
+        user-email: kms1212g@gmail.com
+        commit-message: OpenFSL Document update
+        target-branch: main
