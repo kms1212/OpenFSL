@@ -50,7 +50,7 @@ jobs:
           echo "$RUNNER_OS not supported"
           exit 1
         fi
-        
+        echo ${option}
         cmake ${option} -S. -Bbuild -DBUILD_TESTING=true -DDOXYGEN_GENERATE=false -Bbuild -DNO_BUILD=false
       shell: bash
       
