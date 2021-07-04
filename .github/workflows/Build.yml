@@ -34,13 +34,13 @@ jobs:
       run: |
         option=""
         if [ "$RUNNER_OS" == "Linux" ]; then
-          option="-G \"Unix Makefiles\""
+          option="-G 'Unix Makefiles'"
           
         elif [ "$RUNNER_OS" == "Windows" ]; then
           if [ "${{matrix.platform}}" == "x86" ]; then
-            option="-G \"Visual Studio 16 2019\" -A x86"
+            option="-G 'Visual Studio 16 2019' -A x86"
           elif [ "${{matrix.platform}}" == "x64" ]; then
-            option="-G \"Visual Studio 16 2019\" -A x64"
+            option="-G 'Visual Studio 16 2019' -A x64"
           else
             echo "${{matrix.platform}} not supported"
             exit 1
