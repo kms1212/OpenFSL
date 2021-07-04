@@ -70,9 +70,6 @@ CMakeDoxygenDefaults.cmake
 # Images
 *.img
 
-# Includes
-/include
-
 # Doxygen docs
 /doc/html
 
