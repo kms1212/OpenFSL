@@ -29,11 +29,6 @@ jobs:
           exit 1
         fi
       shell: bash
-      
-    - name: Set up Visual Studio shell
-      uses: egor-tensin/vs-shell@v2
-      with:
-        arch: x86
       if: ${{matrix.os == 'windows-latest' && matrix.platform == 'x86'}}
       
     - name: Configure CMake
@@ -43,7 +38,7 @@ jobs:
           
         elif [ "$RUNNER_OS" == "Windows" ]; then
           if [ "${{matrix.platform}}" == "x86" ]; then
-            cmake -G "Visual Studio 16 2019" -A x86 -S. -Bbuild -DBUILD_TESTING=true -DDOXYGEN_GENERATE=false -Bbuild -DNO_BUILD=false
+            cmake -G "Visual Studio 16 2019" -A Win32 -S. -Bbuild -DBUILD_TESTING=true -DDOXYGEN_GENERATE=false -Bbuild -DNO_BUILD=false
           elif [ "${{matrix.platform}}" == "x64" ]; then
             cmake -G "Visual Studio 16 2019" -A x64 -S. -Bbuild -DBUILD_TESTING=true -DDOXYGEN_GENERATE=false -Bbuild -DNO_BUILD=false
           else
