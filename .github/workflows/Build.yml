@@ -30,9 +30,9 @@ jobs:
         fi
       shell: bash
       
-    - name: MSBuild prepare
+    - name: MSBuild prepare for win32
       run: |
-         cmd /k "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvars64.bat"
+         cmd /k '"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvars32.bat"'
       if: ${{matrix.os == 'windows-latest' && matrix.platform == 'x86'}} 
         
       
