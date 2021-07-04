@@ -31,7 +31,7 @@ jobs:
       shell: bash
     - name: Configure CMake
       run: |
-        cmake -B build -DDOXYGEN_GENERATE=false
+        cmake -S. -Bbuild -DBUILD_TESTING=true -DDOXYGEN_GENERATE=false
       shell: bash
     - name: Build
       run: |
