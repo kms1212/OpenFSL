@@ -37,8 +37,9 @@ jobs:
       
     - name: Build
       run: |
-        cmake --build build
+        make VERBOSE=1
       shell: bash
+      working-directory: ${{github.workspace}}/build
       
     - name: Test
       run: |
