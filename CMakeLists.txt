@@ -29,8 +29,8 @@ if (NOT NO_BUILD)
     file(GLOB libSources "${CMAKE_SOURCE_DIR}/src/*/*.cpp")
     add_library(openfsl STATIC ${libSources})
     target_include_directories(openfsl PUBLIC 
-        $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/openfsl/>
-        $<INSTALL_INTERFACE:include/openfsl/>)
+        $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/include/>
+        $<INSTALL_INTERFACE:include/>)
 
     if (BUILD_TESTING)
         if(NOT EXISTS "${CMAKE_BINARY_DIR}/fat32.img")
