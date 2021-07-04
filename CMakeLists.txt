@@ -24,6 +24,7 @@ endif (DOXYGEN_FOUND AND DOXYGEN_GENERATE)
 if (NOT NO_BUILD)
     set(CMAKE_CXX_STANDARD 14)
     set(CMAKE_CXX_STANDARD_REQUIRED ON)
+    set (CMAKE_CXX_FLAGS "verbose")
     
     file(GLOB libSources "${CMAKE_SOURCE_DIR}/src/*/*.cpp")
     add_library(openfsl STATIC ${libSources})
