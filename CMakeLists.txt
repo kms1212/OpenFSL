@@ -22,22 +22,20 @@ if (DOXYGEN_FOUND AND DOXYGEN_GENERATE)
 endif (DOXYGEN_FOUND AND DOXYGEN_GENERATE)
     
 if (NOT NO_BUILD)
-    
     set(CMAKE_CXX_STANDARD 14)
     set(CMAKE_CXX_STANDARD_REQUIRED ON)
-    set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
-    
     
     file(GLOB libSources "${CMAKE_SOURCE_DIR}/src/*/*.cpp")
     add_library(openfsl STATIC ${libSources})
-    target_include_directories(openfsl PRIVATE "${CMAKE_SOURCE_DIR}/include/")
+    target_include_directories(openfsl PUBLIC 
+        $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+        $<INSTALL_INTERFACE:include>)
 
     if (BUILD_TESTING)
         if(NOT EXISTS "${CMAKE_BINARY_DIR}/fat32.img")
             file(DOWNLOAD 
                 ftp://kms1212.kro.kr/fsimage/fat32.img
                 ${CMAKE_BINARY_DIR}/fat32.img)
-        
         endif()
         
         enable_testing()
