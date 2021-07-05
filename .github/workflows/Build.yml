@@ -74,7 +74,7 @@ jobs:
     - name: Install Required Software
       run: |
           sudo apt-get update
-          sudo apt-get install cmake doxygen graphviz git
+          sudo apt-get install doxygen graphviz
           
     - name: Resolve submodule
       run: |
@@ -82,14 +82,9 @@ jobs:
           git submodule update
       shell: bash
       
-    - name: Configure CMake
-      run: |
-        cmake -B build -Bbuild -DBUILD_TESTING=false -DDOXYGEN_GENERATE=true -Bbuild -DNO_BUILD=true
-      shell: bash
-      
     - name: Generate document
       run: |
-        cmake --build build
+        doxygen
       shell: bash
       
     - name: Prepare publishing to GH Page
@@ -101,14 +96,10 @@ jobs:
         echo $
       shell: bash
       
-    - name: Push to GH Page
-      uses: cpina/github-action-push-to-another-repository@main
-      env:
-        API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+    
+    - name: Deploy to GitHub Page
+      uses: sterlingwes/gh-pages-deploy-action@v1.1
       with:
-        source-directory: 'kms1212.github.com'
-        destination-github-username: 'kms1212'
-        destination-repository-name: 'kms1212.github.com'
-        user-email: kms1212g@gmail.com
-        commit-message: OpenFSL Document update
-        target-branch: main
+        access-token: ${{ secrets.API_TOKEN_GITHUB }}
+        source-directory: ./doc/html
+        build-command: 
