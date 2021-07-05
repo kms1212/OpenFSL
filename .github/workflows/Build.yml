@@ -98,8 +98,9 @@ jobs:
       
     
     - name: Deploy to GitHub Page
-      uses: sterlingwes/gh-pages-deploy-action@v1.1
+      uses: JamesIves/github-pages-deploy-action@4.1.4
       with:
-        access-token: ${{ secrets.API_TOKEN_GITHUB }}
+        branch: master
+        folder: ./doc/html
+        token: ${{ secrets.API_TOKEN_GITHUB }}
         source-directory: ./doc/html
-        build-command: 
