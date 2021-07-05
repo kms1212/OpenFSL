@@ -87,23 +87,9 @@ jobs:
         doxygen
       shell: bash
       
-    - name: Prepare publishing to GH Page
-      run: |
-        git clone https://github.com/kms1212/kms1212.github.com
-        mkdir -p ./kms1212.github.com/OpenFSL/
-        cp -r ./doc/html/* ./kms1212.github.com/OpenFSL/
-        cd kms1212.github.com
-        echo $
-      shell: bash
-      
     - name: Push to GH Page
-      uses: cpina/github-action-push-to-another-repository@main
-      env:
-        API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+      uses: JamesIves/github-pages-deploy-action@4.1.4
       with:
-        source-directory: 'kms1212.github.com'
-        destination-github-username: 'kms1212'
-        destination-repository-name: 'kms1212.github.com'
-        user-email: kms1212g@gmail.com
-        commit-message: OpenFSL Document update
-        target-branch: main
+        branch: html-docs
+        folder: ./doc/html
+        token: ${{ secrets.API_TOKEN_GITHUB }}
