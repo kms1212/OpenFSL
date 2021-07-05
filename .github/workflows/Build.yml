@@ -96,11 +96,14 @@ jobs:
         echo $
       shell: bash
       
-    
-    - name: Deploy to GitHub Page
-      uses: JamesIves/github-pages-deploy-action@4.1.4
+    - name: Push to GH Page
+      uses: cpina/github-action-push-to-another-repository@main
+      env:
+        API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
       with:
-        branch: master
-        folder: ./doc/html
-        token: ${{ secrets.API_TOKEN_GITHUB }}
-        source-directory: ./doc/html
+        source-directory: 'kms1212.github.com'
+        destination-github-username: 'kms1212'
+        destination-repository-name: 'kms1212.github.com'
+        user-email: kms1212g@gmail.com
+        commit-message: OpenFSL Document update
+        target-branch: main
