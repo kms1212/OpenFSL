@@ -90,7 +90,7 @@ jobs:
     - name: Prepare publishing to GH Page
       run: |
         git clone https://github.com/kms1212/kms1212.github.com
-        mkdir -p ./kms1212.github.com/docs/OpenFSL/html
+        mkdir -p ./kms1212.github.com/OpenFSL/
         cp -r ./doc/html/* ./kms1212.github.com/OpenFSL/
         cd kms1212.github.com
         echo $
