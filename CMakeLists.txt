@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.1)
 project("OpenFSL")
 
+include(FindZIP.cmake)
+
 option(BUILD_TESTING "Build test file?" true)
 option(DOXYGEN_GENERATE "Generate doxygen file?" false)
 option(NO_BUILD "Skip build?" false)
@@ -12,7 +14,7 @@ else (DOXYGEN_FOUND)
     message(WARNING "Doxygen is not found. Creating documents will be disabled.")
     set (DOXYGEN_GENERATE false)
 endif(DOXYGEN_FOUND)
-    
+
 if (DOXYGEN_FOUND AND DOXYGEN_GENERATE)
     add_custom_target( doc_doxygen ALL
         COMMAND ${DOXYGEN_EXECUTABLE} ${CMAKE_SOURCE_DIR}/Doxyfile
@@ -35,8 +37,15 @@ if (NOT NO_BUILD)
     if (BUILD_TESTING)
         if(NOT EXISTS "${CMAKE_BINARY_DIR}/fat32.img")
             file(DOWNLOAD 
-                ftp://kms1212.kro.kr/fsimage/fat32.img
-                ${CMAKE_BINARY_DIR}/fat32.img)
+                https://github.com/kms1212/OpenFSL-TestFiles/raw/main/fat32.zip
+                ${CMAKE_BINARY_DIR}/fat32.zip)
+            ZIP_UNPACK_TARGET(zipfile 
+				${CMAKE_BINARY_DIR}/ 
+			    ${CMAKE_BINARY_DIR}/fat32.zip 
+				)
+#           file(ARCHIVE_EXTRACT 
+#               INPUT ${CMAKE_BINARY_DIR}/fat32.zip
+#               DESTINATION ${CMAKE_BINARY_DIR}/)
         endif()
         
         enable_testing()
