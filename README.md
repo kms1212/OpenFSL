@@ -42,19 +42,20 @@ void fsctrl_main() {
 }
 ```
 
-## Documentation
+## Other
 
-### Manuals
+### Documents
 
-HTML documents will automatically created by doxygen in build time.
+Go to [OpenFSL Mainpage](https://kms1212.github.io/OpenFSL) to see Documents.
 
-See doc/html/index.html file after build to get manuals.
+### Discord
+
+[![Discord](https://img.shields.io/badge/Discord-go-blue)](https://discord.gg/BvwV4U3Skr)
 
 ### License
 
 OpenFSL is licensed under the BSD-3-Clause.
 
 See the LICENSE file for more details.
-
 
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fkms1212%2FOpenFSL.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fkms1212%2FOpenFSL?ref=badge_large)
