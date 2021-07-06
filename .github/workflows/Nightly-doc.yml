@@ -1,0 +1,37 @@
+name: Build
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+    
+jobs:
+  doc:
+    strategy:
+      fail-fast: false
+        
+    runs-on: 'ubuntu-latest'
+    name: 'Doxygen'
+    steps:
+    - uses: actions/checkout@v2
+    - name: Install Required Software
+      run: |
+          sudo apt-get update
+          sudo apt-get install doxygen graphviz
+          
+    - name: Resolve submodule
+      run: |
+          git submodule init
+          git submodule update
+      shell: bash
+      
+    - name: Generate document
+      run: |
+        doxygen
+      shell: bash
+      
+    - name: Push to GH Page
+      uses: JamesIves/github-pages-deploy-action@4.1.4
+      with:
+        branch: html-docs
+        folder: ./doc/html
+        token: ${{ secrets.API_TOKEN_GITHUB }}

@@ -1,9 +1,6 @@
 name: Build
 
 on: [push, pull_request]
-
-env:
-    BUILD_TYPE: Debug
     
 jobs:
   build:
@@ -62,53 +59,3 @@ jobs:
         ctest -C ${{env.BUILD_TYPE}}
       shell: bash
       working-directory: ${{github.workspace}}/build
-
-  doc:
-    strategy:
-      fail-fast: false
-        
-    runs-on: 'ubuntu-latest'
-    name: 'Doxygen'
-    steps:
-    - uses: actions/checkout@v2
-    - name: Install Required Software
-      run: |
-          sudo apt-get update
-          sudo apt-get install cmake doxygen graphviz git
-          
-    - name: Resolve submodule
-      run: |
-          git submodule init
-          git submodule update
-      shell: bash
-      
-    - name: Configure CMake
-      run: |
-        cmake -B build -Bbuild -DBUILD_TESTING=false -DDOXYGEN_GENERATE=true -Bbuild -DNO_BUILD=true
-      shell: bash
-      
-    - name: Generate document
-      run: |
-        cmake --build build
-      shell: bash
-      
-    - name: Prepare publishing to GH Page
-      run: |
-        git clone https://github.com/kms1212/kms1212.github.com
-        mkdir -p ./kms1212.github.com/docs/OpenFSL/html
-        cp -r ./doc/html/* ./kms1212.github.com/docs/OpenFSL/html
-        cd kms1212.github.com
-        echo $
-      shell: bash
-      
-    - name: Push to GH Page
-      uses: cpina/github-action-push-to-another-repository@main
-      env:
-        API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
-      with:
-        source-directory: 'kms1212.github.com'
-        destination-github-username: 'kms1212'
-        destination-repository-name: 'kms1212.github.com'
-        user-email: kms1212g@gmail.com
-        commit-message: OpenFSL Document update
-        target-branch: main
