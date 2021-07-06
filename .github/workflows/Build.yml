@@ -1,9 +1,6 @@
 name: Build
 
 on: [push, pull_request]
-
-env:
-    BUILD_TYPE: Debug
     
 jobs:
   build:
