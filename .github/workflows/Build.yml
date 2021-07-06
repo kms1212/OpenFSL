@@ -22,9 +22,9 @@ jobs:
       run: |
         if [ "$RUNNER_OS" == "Linux" ]; then
           sudo apt-get update
-          sudo apt-get install cmake doxygen graphviz
+          sudo apt-get install cmake doxygen graphviz zip
         elif [ "$RUNNER_OS" == "Windows" ]; then
-          choco install cmake doxygen.install graphviz
+          choco install cmake doxygen.install graphviz 7zip
         else
           echo "$RUNNER_OS not supported"
           exit 1

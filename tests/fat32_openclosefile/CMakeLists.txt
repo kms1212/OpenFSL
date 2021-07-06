@@ -6,5 +6,5 @@ target_include_directories(fat32_openclosefile PRIVATE ${CMAKE_SOURCE_DIR}/inclu
 target_link_libraries(fat32_openclosefile openfsl)
 
 add_test(NAME FAT32_OpenCloseFile
-    COMMAND "${CMAKE_CURRENT_BINARY_DIR}/fat32_openclosefile"
+    COMMAND ${CMAKE_CURRENT_BINARY_DIR}/fat32_openclosefile
     WORKING_DIRECTORY "${CMAKE_BINARY_DIR}")
