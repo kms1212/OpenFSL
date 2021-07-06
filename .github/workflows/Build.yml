@@ -17,6 +17,12 @@ jobs:
     name: '${{ matrix.os }}-${{ matrix.platform }}: build'
     steps:
     - uses: actions/checkout@v2
+    
+    - name: Check ftp server online
+      uses: Leocardoso94/is-my-site-up@v1.2
+      with:
+        site: ftp://kms1212.kro.kr/
+      
     - name: Install Required Software
       run: |
         if [ "$RUNNER_OS" == "Linux" ]; then
