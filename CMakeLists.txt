@@ -16,7 +16,7 @@ else (DOXYGEN_FOUND)
 endif(DOXYGEN_FOUND)
 
 if (DOXYGEN_FOUND AND DOXYGEN_GENERATE)
-    add_custom_target( doc_doxygen ALL
+    add_custom_targe(doc_doxygen ALL
         COMMAND ${DOXYGEN_EXECUTABLE} ${CMAKE_SOURCE_DIR}/Doxyfile
         WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
         COMMENT "Generating library documentation with Doxygen"
@@ -26,23 +26,22 @@ endif (DOXYGEN_FOUND AND DOXYGEN_GENERATE)
 if (NOT NO_BUILD)
     set(CMAKE_CXX_STANDARD 14)
     set(CMAKE_CXX_STANDARD_REQUIRED ON)
-    set (CMAKE_CXX_FLAGS "")
+    set(CMAKE_CXX_FLAGS "")
     
-    file(GLOB libSources "${CMAKE_SOURCE_DIR}/src/*/*.cpp")
+    file(GLOB libSources ${CMAKE_SOURCE_DIR}/src/*/*.cpp)
     add_library(openfsl STATIC ${libSources})
     target_include_directories(openfsl PUBLIC 
         $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/include/>
         $<INSTALL_INTERFACE:include/>)
 
     if (BUILD_TESTING)
-        if(NOT EXISTS "${CMAKE_BINARY_DIR}/fat32.img")
+        if(NOT EXISTS ${CMAKE_BINARY_DIR}/fat32.img)
             file(DOWNLOAD 
                 https://github.com/kms1212/OpenFSL-TestFiles/raw/main/fat32.zip
                 ${CMAKE_BINARY_DIR}/fat32.zip)
             ZIP_UNPACK_TARGET(zipfile 
 				${CMAKE_BINARY_DIR}/ 
-			    ${CMAKE_BINARY_DIR}/fat32.zip 
-				)
+			    ${CMAKE_BINARY_DIR}/fat32.zip)
 #           file(ARCHIVE_EXTRACT 
 #               INPUT ${CMAKE_BINARY_DIR}/fat32.zip
 #               DESTINATION ${CMAKE_BINARY_DIR}/)
