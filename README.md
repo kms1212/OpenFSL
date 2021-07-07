@@ -10,9 +10,9 @@ An open source filesystem library
 
 File systems:
 
-| #    | File System Name     | Status          |
-| ---- | -------------------- | --------------- |
-| 1    | FAT(12/16/32)        | In progress     |
+| #    | File System | Status                  |
+| ---- | ----------- | ----------------------- |
+| 1    | FAT32       | In progress (Read only) |
 
 ## Pseudo code for main
 
@@ -26,7 +26,7 @@ void fsctrl_main() {
     DiskDriver dd = DiskDriver(disk_in, disk_out); // Initialize disk I/O driver
     FS_FAT32 fat32 = FS_FAT32(dd, FAT32_LFN, "/"); // Initialize file system
     
-    fat32.start(); // Start file system
+    fat32.initialize(); // Start file system
     fat32.chdir("::/test1"); // Set directory cursor
     
     FAT32_file file = fat32.openFile("./test2/test3.txt"); // Read file from disk
