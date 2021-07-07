@@ -25,8 +25,6 @@ FS_FAT32::FS_FAT32(DiskDevice* dd_, FAT32_Option option_, std::string pathSepara
 }
 
 FS_FAT32::~FS_FAT32() {
-    errorState = FAT32_ERROR_NOT_INITIALIZED; 
-    
     if (isDiskDeviceAllocated) {
         dd->close();                               // Close disk device
         delete dd;                             // Delete disk device
@@ -34,8 +32,6 @@ FS_FAT32::~FS_FAT32() {
     delete fatArea;                            // Delete loaded fat area
 }
 
-void FS_FAT32::initialize() {
-    dd->initialize();                                               // Initialize disk device
 int FS_FAT32::initialize() {
     int result = 0;
     
