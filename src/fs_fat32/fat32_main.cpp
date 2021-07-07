@@ -36,27 +36,27 @@ FS_FAT32::~FS_FAT32() {
 
 void FS_FAT32::initialize() {
     dd->initialize();                                               // Initialize disk device
-    if (dd->getState() != DISKDEV_ERROR_SUCCESS) {                  // Return if disk device is not initialized
-        errorState = FAT32_ERROR_DISKDEVICE;
-        return;
-    }
-	
+int FS_FAT32::initialize() {
+    int result = 0;
+    
+    result += dd->initialize();                                     // Initialize disk device
+    
     Sector fat32_sector(1, dd->getBytespersector());
-    dd->readDisk(&fat32_sector, 0, 1);                              // Read BPB sector
+    result += dd->readDisk(&fat32_sector, 0, 1);                    // Read BPB sector
     FAT32_bpb* bpb = (FAT32_bpb*)fat32_sector.getData();
     
     uint32_t sigCode = 0x009058EB;
         
     if (memcmp(bpb->bpbJumpCode, &sigCode, 3) != 0)                 // Check boot jump code
     {
-        errorState = FAT32_ERROR_SIGNATURE;
-        return;
+        result++;
+        return result;
     }
     
     if (bpb->bpbVBRSignature != 0xAA55)                             // Check BPB signature
     {
-        errorState = FAT32_ERROR_SIGNATURE;
-        return;
+        result++;
+        return result;
     }
     
     volumeID = bpb->ebpbVolumeSerial;                               // Copy data to class.
@@ -83,14 +83,14 @@ void FS_FAT32::initialize() {
     rootCluster = bpb->ebpbRootDirectoryCluster;                    //
     fatCount = bpb->bpbFATCount;                                    //
     
-    dd->readDisk(&fat32_sector, fsinfoSector, 1);                   // Read FSINFO sector
+    result += dd->readDisk(&fat32_sector, fsinfoSector, 1);         // Read FSINFO sector
     
     FAT32_fsinfo* fsinfo = (FAT32_fsinfo*)fat32_sector.getData();
     
     if (fsinfo->fsinfoSignature3 != 0xAA550000)                     // Check FSINFO signature
     {
-        errorState = FAT32_ERROR_SIGNATURE;
-        return;
+        result++;
+        return result;
     }
     
     freeCluster = fsinfo->fsinfoFreeCluster;                        // Copy data to class.
@@ -99,16 +99,11 @@ void FS_FAT32::initialize() {
     currentPath = "::";                                             //
     currentCluster = rootCluster;                                   //
     
-    fatArea = new Sector(fatSize32, dd->getBytespersector());   // Read FAT area
-    dd->readDisk(fatArea, resvSectorCount, fatSize32);
+    fatArea = new Sector(fatSize32, dd->getBytespersector());       // Read FAT area
+    result += dd->readDisk(fatArea, resvSectorCount, fatSize32);
     fatClusterList = (uint32_t*)fatArea->getData();
     
-    if (pathSeparator == "")
-    {
-        pathSeparator = "\\";
-    }
-    
-    errorState = DISKDEV_ERROR_SUCCESS;
+    return result;
 }
 
 void FS_FAT32::setDiskDevice(DiskDevice* dd_)
@@ -119,10 +114,6 @@ void FS_FAT32::setDiskDevice(DiskDevice* dd_)
 DiskDevice* FS_FAT32::getDiskDevice()
 {
     return dd;
-}
-
-uint32_t FS_FAT32::getState() {
-    return errorState;
 }
 
 std::string FS_FAT32::getPath() {

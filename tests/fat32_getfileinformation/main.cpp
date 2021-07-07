@@ -45,9 +45,7 @@ int main(int argc, char** argv) {
     fat32->getDiskDevice()->openDisk = openDisk;
     fat32->getDiskDevice()->closeDisk = closeDisk;
     
-    fat32->initialize();
-    
-    uint32_t result = fat32->getState();
+    uint32_t result = fat32->initialize();
     
     FAT32_fileInfo fileInfo = fat32->getFileInformation("::/lfnfilename1.txt");
     if (fileInfo.fileName != "lfnfilename1.txt")
@@ -80,8 +78,8 @@ int closeDisk()
 
 int readDisk(Sector* dest, vint_arch lba, vint_arch size)
 {
-	if (dest->getSectorCount() * fat32->getDiskDevice()->getBytespersector() < size *  fat32->getDiskDevice()->getBytespersector())
-	    return 1;
+    if (dest->getSectorCount() * fat32->getDiskDevice()->getBytespersector() < size * fat32->getDiskDevice()->getBytespersector())
+        return 1;
     disk.seekg(lba * fat32->getDiskDevice()->getBytespersector(), ios::beg);
     disk.read((char*)dest->getData(), size * fat32->getDiskDevice()->getBytespersector());
 	
