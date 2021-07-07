@@ -43,12 +43,11 @@ void hexdump(uint8_t* p, int offset, int len)
     
     int address = 0;
     int row = 0;
-    int nread = 0;
  
     std::cout << std::hex << std::setfill('0');
     while (1) {
         if (address >= len) break;
-        nread = ((len - address) > 16) ? 16 : (len - address);
+        int nread = ((len - address) > 16) ? 16 : (len - address);
         
         // Show the address
         std::cout << std::setw(8) << address + offset;
