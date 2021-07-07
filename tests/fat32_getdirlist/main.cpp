@@ -43,12 +43,11 @@ void hexdump(uint8_t* p, int offset, int len)
     
     int address = 0;
     int row = 0;
-    int nread = 0;
  
     std::cout << std::hex << std::setfill('0');
     while (1) {
         if (address >= len) break;
-        nread = ((len - address) > 16) ? 16 : (len - address);
+        int nread = ((len - address) > 16) ? 16 : (len - address);
         
         // Show the address
         std::cout << std::setw(8) << address + offset;
@@ -114,12 +113,13 @@ int main(int argc, char** argv) {
     list.push_back("LFNFILENAME4.TXT");
     list.push_back("DIRECTORY9");
     
-    int result = fat32->getChildCount();
+    std::vector<FAT32_fileInfo> buf;
+    fat32->getDirList(&buf);
     
-    FAT32_fileInfo* buf = new FAT32_fileInfo[fat32->getChildCount()];
-    fat32->getDirList(buf);
+    int result = buf.size();
+	
     string filename;
-    for (uint32_t i = 0; i < fat32->getChildCount(); i++)
+    for (uint32_t i = 0; i < buf.size(); i++)
     {
         cout << buf[i].fileName << "\n";
         filename = buf[i].fileName;
@@ -129,9 +129,7 @@ int main(int argc, char** argv) {
             result--;
         }
     }
-    
-    delete[] buf;
-
+	
     delete fat32;
     
     return result;
@@ -151,6 +149,10 @@ int closeDisk()
 
 int readDisk(Sector* dest, vint_arch lba, vint_arch size)
 {
+    if (dest->getSectorCount() * fat32->getDiskDevice()->getBytespersector() < size *  fat32->getDiskDevice()->getBytespersector())
+        return 1;
+    if (dest->getSectorCount() * fat32->getDiskDevice()->getBytespersector() < size *  fat32->getDiskDevice()->getBytespersector())
+        return 1;
     disk.seekg(lba * fat32->getDiskDevice()->getBytespersector(), ios::beg);
     disk.read((char*)dest->getData(), size * fat32->getDiskDevice()->getBytespersector());
     return disk.tellg() == -1 ? 1 : 0;

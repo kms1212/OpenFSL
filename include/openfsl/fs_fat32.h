@@ -18,17 +18,13 @@ See the BSD-3-Clause for more details.
 #include <iterator>
 #include <vector>
 #include <bitset>
+#include <list>
 #include <stddef.h>
 #include <time.h>
 
 #include "diskdevice.h"
 #include "fslservices.h"
 #include "file.h"
-
-#define FAT32_ERROR_SUCCESS         0x00
-#define FAT32_ERROR_NOT_INITIALIZED 0x01
-#define FAT32_ERROR_DISKDEVICE      0x02
-#define FAT32_ERROR_SIGNATURE       0x03
 
 
 namespace openFSL {
@@ -272,7 +268,7 @@ namespace openFSL {
      * @brief FAT32 imeplementation
      * @details Implements FAT32 with configurable options
      * @author kms1212
-     * @todo Directory write, File write, FS format, UCS-2 Unicode Codepage
+     * @todo Directory write, File write, FS format, UCS-2 Unicode Codepage, Make class thread-safe
      *
      */
     class FS_FAT32 {
@@ -280,7 +276,6 @@ namespace openFSL {
         DiskDevice*  dd;
         bool         isDiskDeviceAllocated;
         FAT32_Option option;
-        uint32_t     errorState = FAT32_ERROR_NOT_INITIALIZED;
         
         uint32_t     volumeID;
         std::string  oemLabel;
@@ -332,12 +327,10 @@ namespace openFSL {
          * Warns if free cluster amount is unknown (0xFFFFFFFF)
          * Warns if path separator is not given (default="\")
          * Loads FATArea to memory
-         * When Fail:
-         *   If disk fails, the errorState variable is set to FAT32_ERROR_DISKDEVICE
-         *   If it fails to verify signature, the errorState variable is set to FAT32_ERROR_SIGNATURE
+         * @return int: Number of errors
          *
          */
-        void initialize();
+        int initialize();
         
         /**
          *
@@ -356,15 +349,6 @@ namespace openFSL {
          *
          */
         DiskDevice* getDiskDevice();
-        
-        /**
-         *
-         * @brief Error state getter
-         * @details Gets error state.
-         * @return uint32_t: Error state
-         *
-         */
-        uint32_t getState();
         
         /**
          *
@@ -401,10 +385,11 @@ namespace openFSL {
          * The size of file information buffer has to be same or more than the count of subitem of working directory.
          * @param buf: File information buffer
          * @param path: working directory (Default: "")
-         * @return FAT32_fileInfo*: Parameter buf
+         * @param cluster: working cluster (Default: 0xFFFFFFFF)
+         * @return std::vector<FAT32_fileInfo>: Parameter buf
          *
          */
-        FAT32_fileInfo* getDirList(FAT32_fileInfo* buf, std::string path = "");
+        std::vector<FAT32_fileInfo>* getDirList(std::vector<FAT32_fileInfo>* buf, std::string path = "", uint32_t cluster = 0xFFFFFFFF);
         
         /**
          *
@@ -412,10 +397,12 @@ namespace openFSL {
          * @details Changes working directory.
          * @param path: working directory
          * @param subdir: Parameter for recursive search. DO NOT SET THIS ARGUMENT ARBITRARILY (Default: NULL)
+         * @param tmpPath: Parameter for recursive search. DO NOT SET THIS ARGUMENT ARBITRARILY (Default: "")
+         * @param tmpCluster: Parameter for recursive search. DO NOT SET THIS ARGUMENT ARBITRARILY (Default: 0)
          * @return int: Error code
          *
          */
-        int chdir(std::string path, std::vector<std::string>* subdir = NULL);
+        int chdir(std::string path, std::vector<std::string>* subdir = NULL, std::string tmpPath = "", uint32_t tmpCluster = 0);
         
         /**
          *
@@ -500,12 +487,11 @@ namespace openFSL {
          * @brief Make directory
          * @details Makes directory
          * @param path: working directory + directory to create (no recursive)
-         * @param subdir: Parameter for recursive search. DO NOT SET THIS ARGUMENT ARBITRARILY (Default: NULL)
          * @return int: Error code
          * @todo recursive directory creation
          *
          */
-        int mkdir(std::string path, std::vector<std::string>* subdir = NULL);
+        int mkdir(std::string path);
         
         /**
          *

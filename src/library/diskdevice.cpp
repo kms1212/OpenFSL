@@ -15,49 +15,35 @@ DiskDevice::DiskDevice(uint32_t bytespersector_) {
     bytespersector = bytespersector_;
 }
 
-void DiskDevice::initialize() {
+int DiskDevice::initialize() {
     if (openDisk == NULL) {
-        errorState = DISKDEV_ERROR_INIT_NOFUNC;
-        return;
+        return 1;
     }
     else if (readDisk == NULL) 
     {
-        errorState = DISKDEV_ERROR_INIT_NOFUNC;
-        return;
+        return 1;
     }
     else if (writeDisk == NULL) 
     {
-        errorState = DISKDEV_ERROR_INIT_NOFUNC;
-        return;
+        return 1;
     }
     else if (closeDisk == NULL) 
     {
-        errorState = DISKDEV_ERROR_INIT_NOFUNC;
-        return;
+        return 1;
     }
-    errorState = DISKDEV_ERROR_SUCCESS;
     if (openDisk())
     {
-        errorState = DISKDEV_ERROR_DISK_ERROR;
-        return;
+        return 1;
     }
+	return 0;
 }
 
 DiskDevice::~DiskDevice() {
-    if (errorState != DISKDEV_ERROR_NOT_INITIALIZED)
-        close();
+    close();
 }
 
 void DiskDevice::close() {
-    errorState = DISKDEV_ERROR_NOT_INITIALIZED;
-    if (closeDisk())
-    {
-        errorState = DISKDEV_ERROR_DISK_ERROR;
-    }
-}
-
-uint32_t DiskDevice::getState() {
-    return errorState;
+    closeDisk();
 }
 
 uint32_t DiskDevice::getBytespersector() {

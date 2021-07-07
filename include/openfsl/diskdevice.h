@@ -16,11 +16,6 @@ See the BSD-3-Clause for more details.
 #include "sector.h"
 #include "vint.h"
 
-#define DISKDEV_ERROR_SUCCESS         0x0
-#define DISKDEV_ERROR_NOT_INITIALIZED 0x01
-#define DISKDEV_ERROR_INIT_NOFUNC     0x02
-#define DISKDEV_ERROR_DISK_ERROR      0x03
-
 namespace openFSL {
     /**
      *
@@ -32,7 +27,6 @@ namespace openFSL {
      */
     class DiskDevice {
     private:
-        uint32_t errorState = DISKDEV_ERROR_NOT_INITIALIZED;
         uint32_t bytespersector;
         
     public:
@@ -62,7 +56,7 @@ namespace openFSL {
          * @li closeDisk()
          *
          */
-        void     initialize();
+        int      initialize();
         
         /**
          *
@@ -71,15 +65,6 @@ namespace openFSL {
          *
          */
         void     close();
-        
-        /**
-         *
-         * @brief Error state getter
-         * @details Gets error state.
-         * @return uint32_t: Error state
-         *
-         */
-        uint32_t getState();
         
         /**
          *
