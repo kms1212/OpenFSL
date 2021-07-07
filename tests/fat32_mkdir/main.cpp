@@ -98,7 +98,7 @@ int main(int argc, char** argv) {
     
     int result = 0;
     
-    result += fat32->mkdir("::/mkdirtest");
+    //result += fat32->mkdir("::/mkdirtest");
 
     delete fat32;
     

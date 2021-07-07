@@ -30,12 +30,11 @@ FAT32_fileInfo FS_FAT32::getFileInformation(std::string path) {
     
     std::transform(filename_path.begin(), filename_path.end(), filename_path.begin(), ::toupper);
     
-    FAT32_fileInfo* buf = new FAT32_fileInfo[getChildCount()];
-        
-    getDirList(buf);
+    std::vector<FAT32_fileInfo> buf;
+    getDirList(&buf);
     
     std::string filename;
-    for (uint32_t i = 0; i < getChildCount(); i++)
+    for (uint32_t i = 0; i < buf.size(); i++)
     {
         filename = buf[i].fileName;
         std::transform(filename.begin(), filename.end(), filename.begin(), ::toupper);
@@ -44,8 +43,6 @@ FAT32_fileInfo FS_FAT32::getFileInformation(std::string path) {
             ret = buf[i];
         }
     }
-    
-    delete[] buf;
     
     currentPath = currentPath_temp;
     currentCluster = currentCluster_temp;

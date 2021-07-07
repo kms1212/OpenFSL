@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.1)
 project("OpenFSL")
 
-include(FindZIP.cmake)
+include(${CMAKE_SOURCE_DIR}/cmakeModules/FindZIP.cmake)
 
 option(BUILD_TESTING "Build test file?" true)
 option(DOXYGEN_GENERATE "Generate doxygen file?" false)

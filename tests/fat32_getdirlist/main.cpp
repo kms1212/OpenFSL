@@ -114,12 +114,13 @@ int main(int argc, char** argv) {
     list.push_back("LFNFILENAME4.TXT");
     list.push_back("DIRECTORY9");
     
-    int result = fat32->getChildCount();
+    std::vector<FAT32_fileInfo> buf;
+    fat32->getDirList(&buf);
     
-    FAT32_fileInfo* buf = new FAT32_fileInfo[fat32->getChildCount()];
-    fat32->getDirList(buf);
+    int result = buf.size();
+	
     string filename;
-    for (uint32_t i = 0; i < fat32->getChildCount(); i++)
+    for (uint32_t i = 0; i < buf.size(); i++)
     {
         cout << buf[i].fileName << "\n";
         filename = buf[i].fileName;
@@ -129,9 +130,7 @@ int main(int argc, char** argv) {
             result--;
         }
     }
-    
-    delete[] buf;
-
+	
     delete fat32;
     
     return result;

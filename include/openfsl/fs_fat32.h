@@ -18,6 +18,7 @@ See the BSD-3-Clause for more details.
 #include <iterator>
 #include <vector>
 #include <bitset>
+#include <list>
 #include <stddef.h>
 #include <time.h>
 
@@ -272,7 +273,7 @@ namespace openFSL {
      * @brief FAT32 imeplementation
      * @details Implements FAT32 with configurable options
      * @author kms1212
-     * @todo Directory write, File write, FS format, UCS-2 Unicode Codepage
+     * @todo Directory write, File write, FS format, UCS-2 Unicode Codepage, Make class thread-safe
      *
      */
     class FS_FAT32 {
@@ -401,10 +402,10 @@ namespace openFSL {
          * The size of file information buffer has to be same or more than the count of subitem of working directory.
          * @param buf: File information buffer
          * @param path: working directory (Default: "")
-         * @return FAT32_fileInfo*: Parameter buf
+         * @return std::vector<FAT32_fileInfo>: Parameter buf
          *
          */
-        FAT32_fileInfo* getDirList(FAT32_fileInfo* buf, std::string path = "");
+        std::vector<FAT32_fileInfo>* getDirList(std::vector<FAT32_fileInfo>* buf, std::string path = "");
         
         /**
          *
@@ -500,12 +501,11 @@ namespace openFSL {
          * @brief Make directory
          * @details Makes directory
          * @param path: working directory + directory to create (no recursive)
-         * @param subdir: Parameter for recursive search. DO NOT SET THIS ARGUMENT ARBITRARILY (Default: NULL)
          * @return int: Error code
          * @todo recursive directory creation
          *
          */
-        int mkdir(std::string path, std::vector<std::string>* subdir = NULL);
+        int mkdir(std::string path);
         
         /**
          *
