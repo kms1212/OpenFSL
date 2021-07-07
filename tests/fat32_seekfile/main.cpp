@@ -138,6 +138,8 @@ int closeDisk()
 
 int readDisk(Sector* dest, vint_arch lba, vint_arch size)
 {
+	if (dest->getSectorCount() * fat32->getDiskDevice()->getBytespersector() < size *  fat32->getDiskDevice()->getBytespersector())
+	    return 1;
     disk.seekg(lba * fat32->getDiskDevice()->getBytespersector(), ios::beg);
     disk.read((char*)dest->getData(), size * fat32->getDiskDevice()->getBytespersector());
     return disk.tellg() == -1 ? 1 : 0;

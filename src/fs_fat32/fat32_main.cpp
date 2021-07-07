@@ -40,7 +40,7 @@ void FS_FAT32::initialize() {
         errorState = FAT32_ERROR_DISKDEVICE;
         return;
     }
-        
+	
     Sector fat32_sector(1, dd->getBytespersector());
     dd->readDisk(&fat32_sector, 0, 1);                              // Read BPB sector
     FAT32_bpb* bpb = (FAT32_bpb*)fat32_sector.getData();
@@ -99,7 +99,7 @@ void FS_FAT32::initialize() {
     currentPath = "::";                                             //
     currentCluster = rootCluster;                                   //
     
-    fatArea = new Sector(1, dd->getBytespersector() * fatSize32);   // Read FAT area
+    fatArea = new Sector(fatSize32, dd->getBytespersector());   // Read FAT area
     dd->readDisk(fatArea, resvSectorCount, fatSize32);
     fatClusterList = (uint32_t*)fatArea->getData();
     

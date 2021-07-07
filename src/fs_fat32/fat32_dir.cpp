@@ -238,5 +238,5 @@ int FS_FAT32::chdir(std::string path, std::vector<std::string>* subdir) {
 }
 
 int FS_FAT32::mkdir(std::string path) {
-    
+    return 1;
 }
