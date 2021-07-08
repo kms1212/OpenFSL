@@ -6,11 +6,9 @@
 
 ## Branch Creation Rule
 
-#### Name
+### Name
 
-The name of the branch should be in the format [Username]-[Change scope]-[Short comment].
-
-
+The name of the branch should be in the format \[Username\]-\[Change scope\]-\[Short comment\].
 
 ## License
 

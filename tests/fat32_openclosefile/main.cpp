@@ -43,12 +43,11 @@ void hexdump(uint8_t* p, int offset, int len)
     
     int address = 0;
     int row = 0;
-    int nread = 0;
  
     std::cout << std::hex << std::setfill('0');
     while (1) {
         if (address >= len) break;
-        nread = ((len - address) > 16) ? 16 : (len - address);
+        int nread = ((len - address) > 16) ? 16 : (len - address);
         
         // Show the address
         std::cout << std::setw(8) << address + offset;
@@ -87,16 +86,7 @@ int main(int argc, char** argv) {
     fat32->getDiskDevice()->openDisk = openDisk;
     fat32->getDiskDevice()->closeDisk = closeDisk;
     
-    fat32->initialize();
-    
-    if (fat32->getState())
-    {
-        delete fat32->getDiskDevice();
-        delete fat32;
-        return 1;
-    }
-    
-    int result = 0;
+    int result = fat32->initialize();
     
     FAT32_File* file = fat32->openFile("file1.txt", "r");
     
@@ -138,6 +128,8 @@ int closeDisk()
 
 int readDisk(Sector* dest, vint_arch lba, vint_arch size)
 {
+    if (dest->getSectorCount() * fat32->getDiskDevice()->getBytespersector() < size *  fat32->getDiskDevice()->getBytespersector())
+        return 1;
     disk.seekg(lba * fat32->getDiskDevice()->getBytespersector(), ios::beg);
     disk.read((char*)dest->getData(), size * fat32->getDiskDevice()->getBytespersector());
     return disk.tellg() == -1 ? 1 : 0;

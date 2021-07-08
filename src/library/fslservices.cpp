@@ -16,7 +16,6 @@ namespace openFSL {
 }
 
 int openFSL::initializeLibrary() {
-    
     return 0;
 }
 

@@ -44,19 +44,24 @@ int main(int argc, char** argv) {
     fat32->getDiskDevice()->openDisk = openDisk;
     fat32->getDiskDevice()->closeDisk = closeDisk;
     
-    fat32->initialize();
-    
-    uint32_t result = fat32->getState();
+    int result = fat32->initialize();
     if (result)
         return result;
     
-    result = 0;
+    result += fat32->chdir("::");
+	cout << result << endl;
     result += fat32->chdir("::/.");
+	cout << result << endl;
     result += fat32->chdir("::/..");
+	cout << result << endl;
     result += fat32->chdir("::/directory1/..");
+	cout << result << endl;
     result += fat32->chdir("::/directory1/subdir1");
+	cout << result << endl;
     result += fat32->chdir("../..");
+	cout << result << endl;
     result += fat32->chdir("::/directory9/..");
+	cout << result << endl;
 
     delete fat32;
     
@@ -77,6 +82,8 @@ int closeDisk()
 
 int readDisk(Sector* dest, vint_arch lba, vint_arch size)
 {
+    if (dest->getSectorCount() * fat32->getDiskDevice()->getBytespersector() < size *  fat32->getDiskDevice()->getBytespersector())
+        return 1;
     disk.seekg(lba * fat32->getDiskDevice()->getBytespersector(), ios::beg);
     disk.read((char*)dest->getData(), size * fat32->getDiskDevice()->getBytespersector());
     return disk.tellg() == -1 ? 1 : 0;
