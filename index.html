@@ -106,9 +106,9 @@ Progress</h1>
 <p>File systems:</p>
 <table class="markdownTable">
 <tr class="markdownTableHead">
-<th class="markdownTableHeadNone"># </th><th class="markdownTableHeadNone">File System Name </th><th class="markdownTableHeadNone">Status  </th></tr>
+<th class="markdownTableHeadNone"># </th><th class="markdownTableHeadNone">File System </th><th class="markdownTableHeadNone">Status  </th></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">1 </td><td class="markdownTableBodyNone">FAT(12/16/32) </td><td class="markdownTableBodyNone">In progress  </td></tr>
+<td class="markdownTableBodyNone">1 </td><td class="markdownTableBodyNone">FAT32 </td><td class="markdownTableBodyNone">In progress (Read only)  </td></tr>
 </table>
 <h1><a class="anchor" id="autotoc_md2"></a>
 Pseudo code for main</h1>
@@ -122,7 +122,7 @@ Pseudo code for main</h1>
 <div class="line">    DiskDriver dd = DiskDriver(disk_in, disk_out); // Initialize disk I/O driver</div>
 <div class="line">    FS_FAT32 fat32 = FS_FAT32(dd, FAT32_LFN, &quot;/&quot;); // Initialize file system</div>
 <div class="line">    </div>
-<div class="line">    fat32.start(); // Start file system</div>
+<div class="line">    fat32.initialize(); // Start file system</div>
 <div class="line">    fat32.chdir(&quot;::/test1&quot;); // Set directory cursor</div>
 <div class="line">    </div>
 <div class="line">    FAT32_file file = fat32.openFile(&quot;./test2/test3.txt&quot;); // Read file from disk</div>
