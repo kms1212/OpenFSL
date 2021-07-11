@@ -4,7 +4,7 @@
 
 An open source filesystem library
 
-[![Build](https://github.com/kms1212/OpenFSL/actions/workflows/Build.yml/badge.svg)](https://github.com/kms1212/OpenFSL/actions/workflows/Build.yml) [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fkms1212%2FOpenFSL.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fkms1212%2FOpenFSL?ref=badge_shield) [![CodeFactor](https://www.codefactor.io/repository/github/kms1212/openfsl/badge)](https://www.codefactor.io/repository/github/kms1212/openfsl) [![Codacy Badge](https://app.codacy.com/project/badge/Grade/f1e571ec17324d228a85e182f7f649f1)](https://www.codacy.com/gh/kms1212/OpenFSL/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=kms1212/OpenFSL&amp;utm_campaign=Badge_Grade)
+[![Build](https://github.com/kms1212/OpenFSL/actions/workflows/Build.yml/badge.svg)](https://github.com/kms1212/OpenFSL/actions/workflows/Build.yml) [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fkms1212%2FOpenFSL.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fkms1212%2FOpenFSL?ref=badge_shield) [![Codacy Badge](https://app.codacy.com/project/badge/Grade/f1e571ec17324d228a85e182f7f649f1)](https://www.codacy.com/gh/kms1212/OpenFSL/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=kms1212/OpenFSL&amp;utm_campaign=Badge_Grade)
 
 ## Progress
 

@@ -11,36 +11,15 @@ See the BSD-3-Clause for more details.
 
 using namespace openFSL;
 
-int FAT32_File::read(uint8_t* buf, uint32_t len) {
-    if (openMode.find_first_of("r+") != std::string::npos) {
-        uint32_t cluster = fileInfo.fileLocation;
-        
-        for (uint32_t i = 0; i < seekLocation / fileSystem->getDiskDevice()->getBytespersector(); i++)
+size_t FS_FAT32::FILE::read(void* ptr, size_t size, size_t count) {
+    if (openMode & FSL_OpenMode::read) {
+        for (size_t i = 0; i < count; i++) // i: Number of elements actually read
         {
-            cluster = fileSystem->getNextCluster(cluster);
-            if (cluster >= 0xFFFFFFF7)
-                return 1;
+            if ((i + 1) * size > fileInfo.fileSize)
+                return i;
+            else if (fileCluster->fetch(((uint8_t*)ptr) + i * size, i * size + seekLocation, size))
+                return i;
         }
-        
-        uint32_t readCount = len / fileSystem->getDiskDevice()->getBytespersector() + 1;
-        readCount = fileSystem->getLinkedClusterCount(cluster) < readCount ? fileSystem->getLinkedClusterCount(cluster) : readCount;
-    
-        
-        Sector sector(readCount, fileSystem->getSectorPerCluster() * fileSystem->getDiskDevice()->getBytespersector());
-        fileSystem->getLinkedCluster(&sector, cluster, readCount);
-        
-        if (seekLocation + len > fileInfo.fileSize)
-            return 1;
-        else {
-            int base = seekLocation % fileSystem->getDiskDevice()->getBytespersector();
-            for (uint32_t i = 0; i < len; i++)
-                buf[i] = sector.getData()[i + base];
-            if (openMode.find_first_of('b') == std::string::npos)
-            {
-                buf[len] = 0;
-            }
-        }
-    } else return 1;
-        
+    }
     return 0;
 }

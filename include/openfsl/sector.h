@@ -13,7 +13,6 @@ See the BSD-3-Clause for more details.
 #include <stdint.h>
 
 #include "fslservices.h"
-#include "vint.h"
 
 namespace openFSL {
     /**
@@ -26,7 +25,7 @@ namespace openFSL {
      */
     class Sector {
     private:
-        vint_arch sector_count;
+        size_t sector_count;
         uint8_t* data;
         
     public:
@@ -37,7 +36,7 @@ namespace openFSL {
          * @param bytespersector: Bytes per sector
          *
          */
-        Sector(size_t sector_count_, uint32_t bytespersector);
+        Sector(size_t sector_count_, size_t bytespersector);
         /**
          *
          * @brief Sector class destructor
@@ -48,18 +47,18 @@ namespace openFSL {
         /**
          *
          * @brief Sector count getter
-         * @return vint_arch: Sector count
+         * @return size_t: Sector count
          *
          */
-        vint_arch getSectorCount();
+        size_t getSectorCount();
         
         /**
          *
          * @brief Data buffer getter
-         * @return uint8_t*: Data buffer pointer
+         * @return void*: Data buffer pointer
          *
          */
-        uint8_t* getData();
+        void* getData();
     };
 }
 

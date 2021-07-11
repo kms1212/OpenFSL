@@ -22,15 +22,14 @@ See the BSD-3-Clause for more details.
 #include "openfsl/fslservices.h"
 #include "openfsl/diskdevice.h"
 #include "openfsl/sector.h"
-#include "openfsl/vint.h"
 #include "openfsl/file.h"
 #include "openfsl/fs_fat32.h"
 
 using namespace std;
 using namespace openFSL;
 
-int readDisk(Sector* dest, vint_arch lba, vint_arch size);
-int writeDisk(Sector* src, vint_arch lba);
+int readDisk(DiskDevice* dd, uint8_t* dest, size_t lba, size_t size);
+int writeDisk(Sector* src, size_t lba);
 int openDisk();
 int closeDisk();
 
@@ -38,16 +37,16 @@ fstream disk;
 FS_FAT32* fat32;
 
 int main(int argc, char** argv) {
-    fat32 = new FS_FAT32(NULL, FAT32_OPTION_NONE, "\\/");
+    fat32 = new FS_FAT32(NULL, "\\/");
     
-    fat32->getDiskDevice()->readDisk = readDisk;
-    fat32->getDiskDevice()->writeDisk = writeDisk;
-    fat32->getDiskDevice()->openDisk = openDisk;
-    fat32->getDiskDevice()->closeDisk = closeDisk;
+    fat32->getDiskDevice()->read = readDisk;
+    fat32->getDiskDevice()->write = writeDisk;
+    fat32->getDiskDevice()->open = openDisk;
+    fat32->getDiskDevice()->close = closeDisk;
     
     uint32_t result = fat32->initialize();
     
-    FAT32_fileInfo fileInfo = fat32->getFileInformation("::/lfnfilename1.txt");
+    FS_FAT32::FileInfo fileInfo = fat32->getFileInformation("::/lfnfilename1.txt");
     if (fileInfo.fileName != "lfnfilename1.txt")
         result++;
     else if (fileInfo.fileSize != 22)
@@ -76,17 +75,15 @@ int closeDisk()
     return 0;
 }
 
-int readDisk(Sector* dest, vint_arch lba, vint_arch size)
+int readDisk(DiskDevice* dd, uint8_t* dest, size_t lba, size_t size)
 {
-    if (dest->getSectorCount() * fat32->getDiskDevice()->getBytespersector() < size * fat32->getDiskDevice()->getBytespersector())
-        return 1;
-    disk.seekg(lba * fat32->getDiskDevice()->getBytespersector(), ios::beg);
-    disk.read((char*)dest->getData(), size * fat32->getDiskDevice()->getBytespersector());
-	
+    disk.seekg(lba * dd->getBytespersector(), ios::beg);
+    disk.read((char*)dest, size * dd->getBytespersector());
+    
     return disk.tellg() == -1 ? 1 : 0;
 }
 
-int writeDisk(Sector* src, vint_arch lba)
+int writeDisk(Sector* src, size_t lba)
 {
     disk.seekp(lba * fat32->getDiskDevice()->getBytespersector(), ios::beg);
     disk.write((char*)src->getData(), src->getSectorCount() * fat32->getDiskDevice()->getBytespersector());

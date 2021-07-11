@@ -11,6 +11,6 @@ See the BSD-3-Clause for more details.
 
 using namespace openFSL;
 
-FAT32_fileInfo FAT32_File::getFileInfo() {
+FS_FAT32::FileInfo FS_FAT32::FILE::getFileInfo() {
     return fileInfo;
 }

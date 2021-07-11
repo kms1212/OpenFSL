@@ -17,8 +17,9 @@ int FS_FAT32::initialize() {
     result += dd->initialize();                                     // Initialize disk device
     
     Sector fat32_sector(1, dd->getBytespersector());
-    result += dd->readDisk(&fat32_sector, 0, 1);                    // Read BPB sector
-    FAT32_bpb* bpb = (FAT32_bpb*)fat32_sector.getData();
+    result += dd->readDisk((uint8_t*)fat32_sector.getData(), 0, 1);                    // Read BPB sector
+    bpb = new FAT32_bpb();
+    memcpy(bpb, fat32_sector.getData(), sizeof(FAT32_bpb));
     
     uint32_t sigCode = 0x009058EB;
         
@@ -34,33 +35,10 @@ int FS_FAT32::initialize() {
         return result;
     }
     
-    volumeID = bpb->ebpbVolumeSerial;                               // Copy data to class.
-                                                                    //
-    char buffer[12];                                                //
-                                                                    //
-    memcpy(buffer, bpb->bpbOEMName, 8);                             //
-    oemLabel = buffer;                                              //
-    memset(buffer, 0, 8);                                           //
-                                                                    //
-    memcpy(buffer, bpb->ebpbVolumeLabel, 11);                       //
-    volumeLabel = buffer;                                           //
-    memset(buffer, 0, 11);                                          //
-                                                                    //
-    memcpy(buffer, bpb->ebpbFSType, 8);                             //
-    fsType = buffer;                                                //
-    memset(buffer, 0, 8);                                           //
-                                                                    //
-    sectorPerCluster = bpb->bpbSectorPerCluster;                    //
-    resvSectorCount = bpb->bpbReservedSectors;                      //
-    totalSector32 = bpb->bpbTotalSector32;                          //
-    fatSize32 = bpb->ebpbSectorsPerFAT32;                           //
-    fsinfoSector = bpb->ebpbFSInfoSector;                           //
-    rootCluster = bpb->ebpbRootDirectoryCluster;                    //
-    fatCount = bpb->bpbFATCount;                                    //
+    result += dd->readDisk((uint8_t*)fat32_sector.getData(), bpb->ebpbFSInfoSector, 1);         // Read FSINFO sector
     
-    result += dd->readDisk(&fat32_sector, fsinfoSector, 1);         // Read FSINFO sector
-    
-    FAT32_fsinfo* fsinfo = (FAT32_fsinfo*)fat32_sector.getData();
+    fsinfo = new FAT32_fsinfo();
+    memcpy(fsinfo, fat32_sector.getData(), sizeof(FAT32_fsinfo));
     
     if (fsinfo->fsinfoSignature3 != 0xAA550000)                     // Check FSINFO signature
     {
@@ -68,15 +46,11 @@ int FS_FAT32::initialize() {
         return result;
     }
     
-    freeCluster = fsinfo->fsinfoFreeCluster;                        // Copy data to class.
-    nextCluster = fsinfo->fsinfoNextFree;                           //
-                                                                    //
-    currentPath = "::";                                             //
-    currentCluster = rootCluster;                                   //
+    currentPath = "::";
+    currentCluster = bpb->ebpbRootDirectoryCluster;
     
-    fatArea = new Sector(fatSize32, dd->getBytespersector());       // Read FAT area
-    result += dd->readDisk(fatArea, resvSectorCount, fatSize32);
-    fatClusterList = (uint32_t*)fatArea->getData();
+    fatClusterList = new uint32_t[bpb->ebpbSectorsPerFAT32 * dd->getBytespersector() / 4]();
+    result += dd->readDisk((uint8_t*)fatClusterList, bpb->bpbReservedSectors, bpb->ebpbSectorsPerFAT32);
     
     return result;
 }

@@ -12,7 +12,7 @@ See the BSD-3-Clause for more details.
 using namespace openFSL;
 
 /*
-uint32_t FS_FAT32::allocateFreeCluster(uint32_t cluster)
+int FS_FAT32::updateFAT(uint32_t cluster)
 {
     int next = getNextFreeCluster(); // get free cluster
     if (next == 0) // return if cannot get free cluster
@@ -22,4 +22,5 @@ uint32_t FS_FAT32::allocateFreeCluster(uint32_t cluster)
     nextCluster = getNextFreeCluster(); // set next free cluster
     freeCluster--; // decrease free cluster
     return nextCluster;
-} */
+}
+*/

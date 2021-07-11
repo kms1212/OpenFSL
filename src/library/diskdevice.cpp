@@ -11,41 +11,45 @@ See the BSD-3-Clause for more details.
 
 using namespace openFSL;
 
-DiskDevice::DiskDevice(uint32_t bytespersector_) {
+DiskDevice::DiskDevice(size_t bytespersector_) {
     bytespersector = bytespersector_;
 }
 
 int DiskDevice::initialize() {
-    if (openDisk == NULL) {
+    if (open == NULL) {
         return 1;
     }
-    else if (readDisk == NULL) 
+    else if (read == NULL) 
     {
         return 1;
     }
-    else if (writeDisk == NULL) 
+    else if (write == NULL) 
     {
         return 1;
     }
-    else if (closeDisk == NULL) 
+    else if (close == NULL) 
     {
         return 1;
     }
-    if (openDisk())
+    if (open())
     {
         return 1;
     }
-	return 0;
+    return 0;
 }
 
 DiskDevice::~DiskDevice() {
     close();
 }
 
-void DiskDevice::close() {
-    closeDisk();
+size_t DiskDevice::getBytespersector() {
+    return bytespersector;
 }
 
-uint32_t DiskDevice::getBytespersector() {
-    return bytespersector;
+int DiskDevice::readDisk(uint8_t* dest, size_t lba, size_t size) {
+    if (read != NULL)
+        read(this, dest, lba, size);
+    else
+        return 1;
+    return 0;
 }

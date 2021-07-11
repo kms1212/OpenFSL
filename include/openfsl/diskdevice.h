@@ -14,7 +14,6 @@ See the BSD-3-Clause for more details.
 #include <iostream>
 
 #include "sector.h"
-#include "vint.h"
 
 namespace openFSL {
     /**
@@ -27,7 +26,7 @@ namespace openFSL {
      */
     class DiskDevice {
     private:
-        uint32_t bytespersector;
+        size_t bytespersector;
         
     public:
         /**
@@ -36,7 +35,7 @@ namespace openFSL {
          * @param bytespersector_ = 512: Bytes per sector
          *
          */
-        DiskDevice(uint32_t bytespersector_ = 512);
+        DiskDevice(size_t bytespersector_ = 512);
         
         /**
          *
@@ -60,61 +59,56 @@ namespace openFSL {
         
         /**
          *
-         * @brief DiskDevice closer
-         * @details Stops disk driver.
-         *
-         */
-        void     close();
-        
-        /**
-         *
          * @brief Sector size getter
          * @details Gets bytes per sector.
-         * @return uint32_t: Bytes per sector
+         * @return size_t: Bytes per sector
          *
          */
-        uint32_t getBytespersector();
+        size_t getBytespersector();
         
         /**
          *
-         * @brief Disk open function wrapper
+         * @brief Disk open function
          * @details Opens disk.
          * @return int: Error code
          *
          */
-        int      (*openDisk)() = NULL;
+        int      (*open)() = NULL;
     
         /**
          *
-         * @brief Disk read function wrapper
+         * @brief Disk read function
          * @details Reads disk and stores data by sector.
+         * @param DiskDevice* dd: this
          * @param Sector* dest: buffer to read data
-         * @param vint_arch lba: Data location
-         * @param vint_arch size: Sector count
+         * @param size_t lba: Offset location
+         * @param size_t size: Sector count
          * @return int: Error code
          *
          */
-        int      (*readDisk)(Sector*, vint_arch, vint_arch) = NULL;
+        int (*read)(DiskDevice* dd, uint8_t* dest, size_t lba, size_t size) = NULL;
+        int readDisk(uint8_t* dest, size_t lba, size_t size);
     
         /**
          *
-         * @brief Disk write function wrapper
+         * @brief Disk write function
          * @details Reads data and writes to disk by sector.
          * @param Sector* src: buffer to write data
-         * @param vint_arch lba: Location to write
+         * @param size_t lba: Location to write
          * @return int: Error code
          *
          */
-        int      (*writeDisk)(Sector*, vint_arch) = NULL;
+        int      (*write)(Sector*, size_t) = NULL;
+        
         
         /**
          *
-         * @brief Disk close function wrapper
+         * @brief Disk close function
          * @details Closes disk.
          * @return int: Error code
          *
          */
-        int      (*closeDisk)() = NULL;
+        int      (*close)() = NULL;
     };
 }
 
