@@ -73,15 +73,15 @@ namespace openFSL {
      * @author kms1212
      * @param T Filesystem class
      */
-    template <class T> class FSL_File {
+    template <typename T> class FSL_File {
     private:
-        class T::FILE* fileController;
+        typename T::FILE* fileController;
         
     public:
-        FSL_File<T>(T* fileSystem_, class T::FileInfo fileInfo_, FSL_OpenMode openMode_);
+        FSL_File<T>(T* fileSystem_, typename T::FileInfo fileInfo_, FSL_OpenMode openMode_);
         ~FSL_File();
         
-        class T::FILE* getFileController();
+        typename T::FILE* getFileController();
 		int seek(size_t loc);
         size_t read(void* ptr, size_t size, size_t count);
     };

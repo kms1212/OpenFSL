@@ -18,43 +18,43 @@ See the BSD-3-Clause for more details.
 
 using namespace openFSL;
 
-template<class T> FSL_File<T>::FSL_File(T* fileSystem_, class T::FileInfo fileInfo_, FSL_OpenMode openMode_) {
-    fileController = new class T::FILE(fileSystem_, fileInfo_, openMode_);
+template<typename T> FSL_File<T>::FSL_File(T* fileSystem_, typename T::FileInfo fileInfo_, FSL_OpenMode openMode_) {
+    fileController = new typename T::FILE(fileSystem_, fileInfo_, openMode_);
 }
 
-template<class T> FSL_File<T>::~FSL_File()
+template<typename T> FSL_File<T>::~FSL_File()
 {
     delete fileController;
 }
 
-template<class T> class T::FILE* FSL_File<T>::getFileController()
+template<typename T> typename T::FILE* FSL_File<T>::getFileController()
 {
     return fileController;
 }
 
-template<class T> size_t FSL_File<T>::read(void* ptr, size_t size, size_t count)
+template<typename T> size_t FSL_File<T>::read(void* ptr, size_t size, size_t count)
 {
     return fileController->read(ptr, size, count);
 }
 
-template<class T> int FSL_File<T>::seek(size_t loc)
+template<typename T> int FSL_File<T>::seek(size_t loc)
 {
     return fileController->seek(loc);
 }
 
 /*
 
-template<class T> uint8_t FSL_File<T>::getc()
+template<typename T> uint8_t FSL_File<T>::getc()
 {
     return 0;
 }
 
-template<class T> int FSL_File<T>::getw()
+template<typename T> int FSL_File<T>::getw()
 {
     return 0;
 }
 
-template<class T> std::string FSL_File<T>::gets()
+template<typename T> std::string FSL_File<T>::gets()
 {
     
     return 0;
