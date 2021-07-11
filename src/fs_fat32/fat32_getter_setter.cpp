@@ -25,6 +25,10 @@ std::string FS_FAT32::getPath() {
     return currentPath;
 }
 
-uint16_t FS_FAT32::getSectorPerCluster() {
-    return sectorPerCluster;
+uint32_t* FS_FAT32::getFatClusterList() {
+    return fatClusterList;
+}
+
+FS_FAT32::FAT32_bpb* FS_FAT32::getBPB() {
+    return bpb;
 }

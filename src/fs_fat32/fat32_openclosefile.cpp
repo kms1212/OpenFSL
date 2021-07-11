@@ -11,15 +11,15 @@ See the BSD-3-Clause for more details.
 
 using namespace openFSL;
 
-FAT32_File* FS_FAT32::openFile(std::string path, std::string mode_) {
-    FAT32_File* ret = new FAT32_File(this, getFileInformation(path), std::string(mode_));
+FSL_File<FS_FAT32>* FS_FAT32::openFile(std::string path, FSL_OpenMode mode_) {
+    FSL_File<FS_FAT32>* ret = new FSL_File<FS_FAT32>(this, getFileInformation(path), mode_);
     
-    if (ret->getFileInfo().fileName == "")
+    if (ret->getFileController()->getFileInfo().fileName == "")
         return NULL;
     
     return ret;
 }
 
-void FS_FAT32::closeFile(FAT32_File* file) {
+void FS_FAT32::closeFile(FSL_File<FS_FAT32>* file) {
     delete file;
 }

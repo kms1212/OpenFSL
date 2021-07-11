@@ -11,8 +11,14 @@ See the BSD-3-Clause for more details.
 
 using namespace openFSL;
 
-FAT32_File::FAT32_File(FS_FAT32* fileSystem_, FAT32_fileInfo fileInfo_, std::string mode_) {
+FS_FAT32::FILE::FILE(FS_FAT32* fileSystem_, FS_FAT32::FileInfo fileInfo_, FSL_OpenMode openMode_) {
     fileSystem = fileSystem_;
     fileInfo = fileInfo_;
-    openMode = mode_;
+    openMode = openMode_;
+	
+	fileCluster = new LinkedCluster(fileSystem, fileInfo.fileLocation);
+}
+
+FS_FAT32::FILE::~FILE() {
+	delete fileCluster;
 }

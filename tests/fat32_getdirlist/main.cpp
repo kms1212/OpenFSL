@@ -22,14 +22,13 @@ See the BSD-3-Clause for more details.
 #include "openfsl/fslservices.h"
 #include "openfsl/diskdevice.h"
 #include "openfsl/sector.h"
-#include "openfsl/vint.h"
 #include "openfsl/fs_fat32.h"
 
 using namespace std;
 using namespace openFSL;
 
-int readDisk(Sector* dest, vint_arch lba, vint_arch size);
-int writeDisk(Sector* src, vint_arch lba);
+int readDisk(DiskDevice* dd, uint8_t* dest, size_t lba, size_t size);
+int writeDisk(Sector* src, size_t lba);
 int openDisk();
 int closeDisk();
 
@@ -79,45 +78,30 @@ void hexdump(uint8_t* p, int offset, int len)
 }
 
 int main(int argc, char** argv) {
-    fat32 = new FS_FAT32(NULL, FAT32_OPTION_NONE, "\\/");
+    fat32 = new FS_FAT32(NULL, "\\/");
     
-    fat32->getDiskDevice()->readDisk = readDisk;
-    fat32->getDiskDevice()->writeDisk = writeDisk;
-    fat32->getDiskDevice()->openDisk = openDisk;
-    fat32->getDiskDevice()->closeDisk = closeDisk;
+    fat32->getDiskDevice()->read = readDisk;
+    fat32->getDiskDevice()->write = writeDisk;
+    fat32->getDiskDevice()->open = openDisk;
+    fat32->getDiskDevice()->close = closeDisk;
     
     fat32->initialize();
     
-    fat32->chdir("::");
+    fat32->chdir("::/directory1");
     
     vector<string> list;
-    list.push_back("DIRECTORY1");
-    list.push_back("DIRECTORY2");
-    list.push_back("DIRECTORY3");
-    list.push_back("DIRECTORY4");
-    list.push_back("DIRECTORY5");
-    list.push_back("DIRECTORY6");
-    list.push_back("DIRECTORY7");
-    list.push_back("DIRECTORY8");
-    list.push_back("FILE1.TXT");
-    list.push_back("FILE2.TXT");
-    list.push_back("FILE3.TXT");
-    list.push_back("FILE4.TXT");
-    list.push_back("FILE5.TXT");
-    list.push_back("FILE6.TXT");
-    list.push_back("FILE7.TXT");
-    list.push_back("FILE8.TXT");
-    list.push_back("LFNFILENAME1.TXT");
-    list.push_back("LFNFILENAME2.TXT");
-    list.push_back("LFNFILENAME3.TXT");
-    list.push_back("LFNFILENAME4.TXT");
-    list.push_back("DIRECTORY9");
+    list.push_back(".");
+    list.push_back("..");
+    list.push_back("SUBDIR1");
+    list.push_back("SUBDIR2");
+    list.push_back("SUBDIR3");
+    list.push_back("SUBDIR4");
     
-    std::vector<FAT32_fileInfo> buf;
+    std::vector<FS_FAT32::FileInfo> buf;
     fat32->getDirList(&buf);
     
     int result = buf.size();
-	
+    
     string filename;
     for (uint32_t i = 0; i < buf.size(); i++)
     {
@@ -129,7 +113,7 @@ int main(int argc, char** argv) {
             result--;
         }
     }
-	
+    
     delete fat32;
     
     return result;
@@ -147,18 +131,15 @@ int closeDisk()
     return 0;
 }
 
-int readDisk(Sector* dest, vint_arch lba, vint_arch size)
+int readDisk(DiskDevice* dd, uint8_t* dest, size_t lba, size_t size)
 {
-    if (dest->getSectorCount() * fat32->getDiskDevice()->getBytespersector() < size *  fat32->getDiskDevice()->getBytespersector())
-        return 1;
-    if (dest->getSectorCount() * fat32->getDiskDevice()->getBytespersector() < size *  fat32->getDiskDevice()->getBytespersector())
-        return 1;
-    disk.seekg(lba * fat32->getDiskDevice()->getBytespersector(), ios::beg);
-    disk.read((char*)dest->getData(), size * fat32->getDiskDevice()->getBytespersector());
+    disk.seekg(lba * dd->getBytespersector(), ios::beg);
+    disk.read((char*)dest, size * dd->getBytespersector());
+    
     return disk.tellg() == -1 ? 1 : 0;
 }
 
-int writeDisk(Sector* src, vint_arch lba)
+int writeDisk(Sector* src, size_t lba)
 {
     disk.seekp(lba * fat32->getDiskDevice()->getBytespersector(), ios::beg);
     disk.write((char*)src->getData(), src->getSectorCount() * fat32->getDiskDevice()->getBytespersector());

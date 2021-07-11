@@ -18,7 +18,7 @@ uint8_t* str16to8(uint8_t* dest, const uint16_t* src, size_t size) // Temporary 
     return dest;
 }
 
-std::vector<FAT32_fileInfo>* FS_FAT32::getDirList(std::vector<FAT32_fileInfo>* buf, std::string path, uint32_t cluster) {
+std::vector<FS_FAT32::FileInfo>* FS_FAT32::getDirList(std::vector<FS_FAT32::FileInfo>* buf, std::string path, uint32_t cluster) {
     if (path != "") { // Change directory if path is set
         chdir(path);
     }
@@ -26,50 +26,29 @@ std::vector<FAT32_fileInfo>* FS_FAT32::getDirList(std::vector<FAT32_fileInfo>* b
         cluster = currentCluster;
     }
     
-    uint32_t linkedClusterCount = getLinkedClusterCount(cluster);                       // Get linked clusters
-    if (linkedClusterCount == 0)                                                        //
-    {                                                                                   //
-        return buf;                                                                     //
-    }                                                                                   //
-                                                                                        //
-    Sector dir_cluster(sectorPerCluster * linkedClusterCount, dd->getBytespersector()); //
-                                                                                        //
-    if (getLinkedCluster(&dir_cluster, cluster))                                        //
-    {                                                                                   //
-        return buf;                                                                     //
-    }                                                                                   //
+    LinkedCluster lcluster(this, cluster);
     
     int index = 0;
     
-    FAT32_entry* fileEntry = (FAT32_entry*)dir_cluster.getData(); // Clusters list to fileEntry
+    FAT32_entry* fileEntry = new FAT32_entry();
         
-    for (uint32_t i = 0; i < 16 * linkedClusterCount; i++) { // Add entries to buuffer
-        if (index > 65535) // Entry limit: 65535
+    std::string lfnBuf = "";
+    for (size_t i = 0; i < 65535; i++) { // Add entries to buffer
+        if (lcluster.fetch(fileEntry, i * sizeof(FAT32_entry), sizeof(FAT32_entry)) || fileEntry->fileAttr == 0x00) // Return if search hits bottom of the directory file entry list
         {
             return buf;
         }
-        else if (fileEntry[i].fileAttr == 0x00) // Return if search hits bottom of the directory file entry list
+        else if (fileEntry->fileName[0] != 0xE5) // If file is not deleted
         {
-            return buf;
-        }
-        else if (fileEntry[i].fileName[0] != 0xE5) // If file is not deleted
-        {
-            if ((fileEntry[i].fileAttr == 0x10) || (fileEntry[i].fileAttr == 0x20)) { // If file is file or folder
+            if ((fileEntry->fileAttr == 0x10) || (fileEntry->fileAttr == 0x20)) { // If file is file or folder
                 std::string filename;
                 
-                if ((i > 0) && (fileEntry[i - 1].fileAttr == 0x0F)){ // LFN to string
-                    for (int lfnIndex = i - 1; fileEntry[lfnIndex].fileAttr == 0x0F; lfnIndex--)
-                    {
-                        char buf[14] = { 0 };
-                        FAT32_lfn* entry = (FAT32_lfn*)&fileEntry[lfnIndex];
-                        str16to8((uint8_t*)buf, entry->lfnFileName1, 5);
-                        str16to8((uint8_t*)(buf + 5), entry->lfnFileName2, 6);
-                        str16to8((uint8_t*)(buf + 11), entry->lfnFileName3, 2);
-                        filename += buf;
-                    }
+                if (lfnBuf != ""){ // Get LFN name
+                    filename = lfnBuf;
+                    lfnBuf = "";
                 }
                 else { // Get SFN name
-                    filename = (char*)fileEntry[i].fileName;
+                    filename = (char*)fileEntry->fileName;
                     std::string fileext;
                     if (fileext != "   ") {
                         fileext = filename.substr(8, 3);
@@ -81,35 +60,44 @@ std::vector<FAT32_fileInfo>* FS_FAT32::getDirList(std::vector<FAT32_fileInfo>* b
                         filename += "." + fileext;
                 }
                 
-                FAT32_fileInfo fileInfo; // Copy informatiton to buf
+                FileInfo fileInfo; // Copy information to buf
                 
                 fileInfo.fileName = filename;
-                fileInfo.fileAttr = fileEntry[i].fileAttr;
-                fileInfo.fileCreateTime.time_millis = (fileEntry[i].fileCreateTenth % 10) * 100;
-                fileInfo.fileCreateTime.time_sec = ((fileEntry[i].fileCreateTime & 0b0000000000011111) * 2) + fileEntry[i].fileCreateTenth / 10;
-                fileInfo.fileCreateTime.time_min = (fileEntry[i].fileCreateTime & 0b0000011111100000) >> 5;
-                fileInfo.fileCreateTime.time_hour = (fileEntry[i].fileCreateTime & 0b1111100000000000) >> 11;
-                fileInfo.fileCreateTime.time_day = (fileEntry[i].fileCreateDate & 0b0000000000011111);
-                fileInfo.fileCreateTime.time_month = (fileEntry[i].fileCreateDate & 0b0000000111100000) >> 5;
-                fileInfo.fileCreateTime.time_year = ((fileEntry[i].fileCreateDate & 0b1111111000000000) >> 9) + 1980;
+                fileInfo.fileAttr = fileEntry->fileAttr;
+                fileInfo.fileCreateTime.time_millis = (fileEntry->fileCreateTenth % 10) * 100;
+                fileInfo.fileCreateTime.time_sec = ((fileEntry->fileCreateTime & 0x001F) * 2) + fileEntry->fileCreateTenth / 10;
+                fileInfo.fileCreateTime.time_min = (fileEntry->fileCreateTime & 0x07E0) >> 5;
+                fileInfo.fileCreateTime.time_hour = (fileEntry->fileCreateTime & 0xF800) >> 11;
+                fileInfo.fileCreateTime.time_day = (fileEntry->fileCreateDate & 0x001F);
+                fileInfo.fileCreateTime.time_month = (fileEntry->fileCreateDate & 0x01E0) >> 5;
+                fileInfo.fileCreateTime.time_year = ((fileEntry->fileCreateDate & 0xFE00) >> 9) + 1980;
                 
-                fileInfo.fileModTime.time_sec = (fileEntry[i].fileModTime & 0b0000000000011111) * 2;
-                fileInfo.fileModTime.time_min = (fileEntry[i].fileModTime & 0b0000011111100000) >> 5;
-                fileInfo.fileModTime.time_hour = (fileEntry[i].fileModTime & 0b1111100000000000) >> 11;
-                fileInfo.fileModTime.time_day = (fileEntry[i].fileModDate & 0b0000000000011111);
-                fileInfo.fileModTime.time_month = (fileEntry[i].fileModDate & 0b0000000111100000) >> 5;
-                fileInfo.fileModTime.time_year = ((fileEntry[i].fileModDate & 0b1111111000000000) >> 9) + 1980;
+                fileInfo.fileModTime.time_sec = (fileEntry->fileModTime & 0x001F) * 2;
+                fileInfo.fileModTime.time_min = (fileEntry->fileModTime & 0x07E0) >> 5;
+                fileInfo.fileModTime.time_hour = (fileEntry->fileModTime & 0xF800) >> 11;
+                fileInfo.fileModTime.time_day = (fileEntry->fileModDate & 0x001F);
+                fileInfo.fileModTime.time_month = (fileEntry->fileModDate & 0x01E0) >> 5;
+                fileInfo.fileModTime.time_year = ((fileEntry->fileModDate & 0xFE00) >> 9) + 1980;
                 
-                fileInfo.fileAccessTime.time_day = (fileEntry[i].fileAccessDate & 0b0000000000011111);
-                fileInfo.fileAccessTime.time_month = (fileEntry[i].fileAccessDate & 0b0000000111100000) >> 5;
-                fileInfo.fileAccessTime.time_year = ((fileEntry[i].fileAccessDate & 0b1111111000000000) >> 9) + 1980;
+                fileInfo.fileAccessTime.time_day = (fileEntry->fileAccessDate & 0x001F);
+                fileInfo.fileAccessTime.time_month = (fileEntry->fileAccessDate & 0x01E0) >> 5;
+                fileInfo.fileAccessTime.time_year = ((fileEntry->fileAccessDate & 0xFE00) >> 9) + 1980;
                 
-                fileInfo.fileSize = fileEntry[i].fileSize;
-                fileInfo.fileLocation = (fileEntry[i].fileLocationHigh << 16) + fileEntry[i].fileLocationLow;
+                fileInfo.fileSize = fileEntry->fileSize;
+                fileInfo.fileLocation = (fileEntry->fileLocationHigh << 16) + fileEntry->fileLocationLow;
                 
                 buf->push_back(fileInfo);
                 
                 index++;
+            }
+            else if (fileEntry->fileAttr == 0x0F)
+            {
+                char buf[14] = { 0 };
+                FAT32_lfn* entry = (FAT32_lfn*)fileEntry;
+                str16to8((uint8_t*)buf, entry->lfnFileName1, 5);
+                str16to8((uint8_t*)(buf + 5), entry->lfnFileName2, 6);
+                str16to8((uint8_t*)(buf + 11), entry->lfnFileName3, 2);
+                lfnBuf.insert(0, buf);
             }
         }
     }

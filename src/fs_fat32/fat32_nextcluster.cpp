@@ -11,22 +11,10 @@ See the BSD-3-Clause for more details.
 
 using namespace openFSL;
 
-uint32_t FS_FAT32::getNextCluster(uint32_t cluster)
-{
-    uint32_t temp = cluster & ~(0xF << 28);     // Ignore first 4 bits
-    temp = fatClusterList[temp] & ~(0xF << 28); // Get next cluster
-    if (0xFFFFFFF - temp <= 7)                  // Check bad cluster or cluster end
-        return 0xFFFFFFF8;
-    else if (0xFFFFFFF - temp == 8)
-        return 0xFFFFFFF7;
-    else
-        return temp;
-}
-
 uint32_t FS_FAT32::getNextFreeCluster()
 {
     int freeCluster;
-    for (int i = 0; i < fatSize32; i++)
+    for (int i = 0; i < bpb->bpbReservedSectors; i++)
         if (fatClusterList[i] == 0) {
             std::cout << i << "\n";
             return i;

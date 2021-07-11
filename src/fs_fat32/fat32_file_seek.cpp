@@ -11,7 +11,7 @@ See the BSD-3-Clause for more details.
 
 using namespace openFSL;
 
-int FAT32_File::seek(uint32_t location) {
+int FS_FAT32::FILE::seek(size_t location) {
     if (seekLocation > fileInfo.fileSize)
         return 1;
     else {

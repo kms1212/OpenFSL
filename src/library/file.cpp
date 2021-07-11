@@ -9,6 +9,4 @@ See the BSD-3-Clause for more details.
 
 #include "openfsl/file.h"
 
-namespace openFSL {
-    
-}
+using namespace openFSL;

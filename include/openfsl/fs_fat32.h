@@ -28,240 +28,6 @@ See the BSD-3-Clause for more details.
 
 
 namespace openFSL {
-    class FAT32_File;
-    
-    /**
-     *
-     * @brief FAT32 option
-     * @author kms1212
-     * @details 
-     * Option            | Value
-     * ------------------|----------------
-     * FAT32_OPTION_NONE | 0x00000000
-     * FAT32_OPTION_LFN  | 0x00000001
-     *
-     */
-    enum FAT32_Option {
-        FAT32_OPTION_NONE =   0x00000000,
-        FAT32_OPTION_LFN =    0x00000001
-    };
-    
-    /**
-     *
-     * @brief FAT32 BIOS Parameter Block
-     * @author kms1212
-     * @details
-     * Type       | Name                    | Offset
-     * -----------|-------------------------|----------
-     * uint8_t    | bpbJumpCode[3]          | 0x0000
-     * uint8_t    | bpbOEMName[8]           | 0x0003
-     * uint16_t   | bpbBytesPerSector       | 0x000B
-     * uint8_t    | bpbSectorPerCluster     | 0x000D
-     * uint16_t   | bpbReservedSectors      | 0x000E
-     * uint8_t    | bpbFATCount             | 0x0010
-     * uint16_t   | bpbRootEntries          | 0x0011
-     * uint16_t   | bpbTotalSectors         | 0x0013
-     * uint8_t    | bpbMedia                | 0x0015
-     * uint16_t   | bpbSectorsPerFAT16      | 0x0016
-     * uint16_t   | bpbSectorsPerTrack      | 0x0018
-     * uint16_t   | bpbDiskHeads            | 0x001A
-     * uint32_t   | bpbHiddenSectors        | 0x001C
-     * uint32_t   | bpbTotalSector32        | 0x0020
-     * uint32_t   | ebpbSectorsPerFAT32     | 0x0024
-     * uint16_t   | ebpbFlags               | 0x0028
-     * uint16_t   | ebpbFSVersion           | 0x002A
-     * uint32_t   | ebpbRootDirectoryCluster| 0x002C
-     * uint16_t   | ebpbFSInfoSector        | 0x0030
-     * uint16_t   | ebpbBSBackupSector      | 0x0032
-     * uint8_t    | ebpbReserved1[12]       | 0x0034
-     * uint8_t    | ebpbPhysicalDriveNum    | 0x0040
-     * uint8_t    | ebpbReserved2           | 0x0041
-     * uint8_t    | ebpbExtendedBootSign    | 0x0042
-     * uint32_t   | ebpbVolumeSerial        | 0x0043
-     * uint8_t    | ebpbVolumeLabel[11]     | 0x0047
-     * uint8_t    | ebpbFSType[8]           | 0x0052
-     * uint8_t    | bpbBootCode[420]        | 0x005A
-     * uint16_t   | bpbVBRSignature         | 0x01FE
-     *
-     */
-#pragma pack (push, 1)
-    typedef struct fatBPBStruct {
-        uint8_t        bpbJumpCode[3];
-        uint8_t        bpbOEMName[8];
-        uint16_t       bpbBytesPerSector;
-        uint8_t        bpbSectorPerCluster;
-        uint16_t       bpbReservedSectors;
-        uint8_t        bpbFATCount;
-        uint16_t       bpbRootEntries;
-        uint16_t       bpbTotalSectors;
-        uint8_t        bpbMedia;
-        uint16_t       bpbSectorsPerFAT16;
-        uint16_t       bpbSectorsPerTrack;
-        uint16_t       bpbDiskHeads;
-        uint32_t       bpbHiddenSectors;
-        uint32_t       bpbTotalSector32;
-        
-        uint32_t       ebpbSectorsPerFAT32;
-        uint16_t       ebpbFlags;
-        uint16_t       ebpbFSVersion;
-        uint32_t       ebpbRootDirectoryCluster;
-        uint16_t       ebpbFSInfoSector;
-        uint16_t       ebpbBSBackupSector;
-        uint8_t        ebpbReserved1[12];
-        uint8_t        ebpbPhysicalDriveNum;
-        uint8_t        ebpbReserved2;
-        uint8_t        ebpbExtendedBootSign;
-        uint32_t       ebpbVolumeSerial;
-        uint8_t        ebpbVolumeLabel[11];
-        uint8_t        ebpbFSType[8];
-        
-        uint8_t        bpbBootCode[420];
-        uint16_t       bpbVBRSignature;
-    } FAT32_bpb;
-#pragma pack (pop)
-
-    /**
-     *
-     * @brief FAT32 FSINFO structure
-     * @author kms1212
-     * @details
-     * Type       | Name                    | Offset
-     * -----------|-------------------------|----------
-     * uint32_t   | fsinfoSignature1        | 0x0000
-     * uint8_t    | fsinfoReserved1[480]    | 0x0004
-     * uint32_t   | fsinfoSignature2        | 0x01E4
-     * uint32_t   | fsinfoFreeCluster       | 0x01E8
-     * uint32_t   | fsinfoNextFree          | 0x01EC
-     * uint8_t    | fsinfoReserved2[12]     | 0x01F0
-     * uint32_t   | fsinfoSignature3        | 0x01FE
-     *
-     */
-#pragma pack (push, 1)
-    typedef struct fatFSINFOStruct {
-        uint32_t       fsinfoSignature1;
-        uint8_t        fsinfoReserved1[480];
-        uint32_t       fsinfoSignature2;
-        uint32_t       fsinfoFreeCluster;
-        uint32_t       fsinfoNextFree;
-        uint8_t        fsinfoReserved2[12];
-        uint32_t       fsinfoSignature3;
-    } FAT32_fsinfo;
-#pragma pack (pop)
-
-    /**
-     *
-     * @brief FAT32 directory entry struct
-     * @author kms1212
-     * @details
-     * Type       | Name                    | Offset
-     * -----------|-------------------------|----------
-     * uint8_t    | fileName[8]             | 0x00
-     * uint8_t    | fileExt[3]              | 0x08
-     * uint8_t    | fileAttr                | 0x0B
-     * uint8_t    | fileReserved1           | 0x0C
-     * uint8_t    | fileCreateTenth         | 0x0D
-     * uint16_t   | fileCreateTime          | 0x0E
-     * uint16_t   | fileCreateDate          | 0x10
-     * uint16_t   | fileAccessDate          | 0x12
-     * uint16_t   | fileLocationHigh        | 0x14
-     * uint16_t   | fileModTime             | 0x16
-     * uint16_t   | fileModDate             | 0x18
-     * uint16_t   | fileLocationLow         | 0x1A
-     * uint32_t   | fileSize                | 0x1C
-     *
-     */
-#pragma pack (push, 1)
-    typedef struct fileEntryStruct {
-        uint8_t        fileName[8];
-        uint8_t        fileExt[3];
-        uint8_t        fileAttr;
-        uint8_t        fileReserved1;
-        uint8_t        fileCreateTenth;
-        uint16_t       fileCreateTime;
-        uint16_t       fileCreateDate;
-        uint16_t       fileAccessDate;
-        uint16_t       fileLocationHigh;
-        uint16_t       fileModTime;
-        uint16_t       fileModDate;
-        uint16_t       fileLocationLow;
-        uint32_t       fileSize;
-    } FAT32_entry;
-#pragma pack (pop)
-
-    /**
-     *
-     * @brief FAT32 directory entry for LFN
-     * @author kms1212
-     * @details
-     * Type       | Name                    | Offset
-     * -----------|-------------------------|----------
-     * uint8_t    | lfnSeqNum               | 0x00
-     * uint16_t   | lfnFileName1[5]         | 0x01
-     * uint8_t    | lfnAttr                 | 0x0B
-     * uint8_t    | lfnReserved1            | 0x0C
-     * uint8_t    | lfnCheckSum             | 0x0D
-     * uint16_t   | lfnFileName2[6]         | 0x0E
-     * uint16_t   | lfnLocationLow          | 0x1A
-     * uint16_t   | lfnFileName3[2]         | 0x1C
-     * 
-     */
-#pragma pack (push, 1)
-    typedef struct lfnEntryStruct {
-        uint8_t        lfnSeqNum;
-        uint16_t       lfnFileName1[5];
-        uint8_t        lfnAttr;
-        uint8_t        lfnReserved1;
-        uint8_t        lfnCheckSum;
-        uint16_t       lfnFileName2[6];
-        uint16_t       lfnLocationLow;
-        uint16_t       lfnFileName3[2];
-    } FAT32_lfn;
-#pragma pack (pop)
-
-    /**
-     *
-     * @brief FAT32 file information
-     * @author kms1212
-     * @details
-     * Type               | Name                  
-     * -------------------|-----------------
-     * std::string        | fileName
-     * uint8_t            | fileAttr
-     * FAT32_fileInfoTime | fileCreateTime
-     * FAT32_fileInfoTime | fileAccessTime
-     * FAT32_fileInfoTime | fileModTime
-     * uint32_t           | fileLocation
-     * uint32_t           | fileSize
-     *
-     */
-    typedef struct fileInfoStruct {
-        std::string    fileName = "";
-        uint8_t        fileAttr = 0;
-        FSL_Time       fileCreateTime = {0};
-        FSL_Time       fileAccessTime = {0};
-        FSL_Time       fileModTime = {0};
-        uint32_t       fileLocation = 0;
-        uint32_t       fileSize = 0;
-    } FAT32_fileInfo;
-
-    /**
-     *
-     * @brief FAT32 cache entry
-     * @author kms1212
-     * @details
-     * Type               | Name                  
-     * -------------------|-----------------
-     * uint32_t           | cacheIndex
-     * std::string        | cacheKey
-     * uint8_t            | cacheType
-     * uint8_t*           | cacheData
-     */
-    typedef struct cacheEntryStruct {
-        uint32_t       cacheIndex = 0;
-        std::string    cacheKey = "";
-        uint8_t        cacheType = 0;
-        uint8_t*       cacheData = NULL;
-    } FAT32_cacheEntry;
 
     /**
      *
@@ -272,32 +38,238 @@ namespace openFSL {
      *
      */
     class FS_FAT32 {
-    private:
+        private:
+            
+        /**
+         *
+         * @brief FAT32 BIOS Parameter Block
+         * @author kms1212
+         * @details
+         * Type       | Name                    | Offset
+         * -----------|-------------------------|----------
+         * uint8_t    | bpbJumpCode[3]          | 0x0000
+         * uint8_t    | bpbOEMName[8]           | 0x0003
+         * uint16_t   | bpbBytesPerSector       | 0x000B
+         * uint8_t    | bpbSectorPerCluster     | 0x000D
+         * uint16_t   | bpbReservedSectors      | 0x000E
+         * uint8_t    | bpbFATCount             | 0x0010
+         * uint16_t   | bpbRootEntries          | 0x0011
+         * uint16_t   | bpbTotalSectors         | 0x0013
+         * uint8_t    | bpbMedia                | 0x0015
+         * uint16_t   | bpbSectorsPerFAT16      | 0x0016
+         * uint16_t   | bpbSectorsPerTrack      | 0x0018
+         * uint16_t   | bpbDiskHeads            | 0x001A
+         * uint32_t   | bpbHiddenSectors        | 0x001C
+         * uint32_t   | bpbTotalSector32        | 0x0020
+         * uint32_t   | ebpbSectorsPerFAT32     | 0x0024
+         * uint16_t   | ebpbFlags               | 0x0028
+         * uint16_t   | ebpbFSVersion           | 0x002A
+         * uint32_t   | ebpbRootDirectoryCluster| 0x002C
+         * uint16_t   | ebpbFSInfoSector        | 0x0030
+         * uint16_t   | ebpbBSBackupSector      | 0x0032
+         * uint8_t    | ebpbReserved1[12]       | 0x0034
+         * uint8_t    | ebpbPhysicalDriveNum    | 0x0040
+         * uint8_t    | ebpbReserved2           | 0x0041
+         * uint8_t    | ebpbExtendedBootSign    | 0x0042
+         * uint32_t   | ebpbVolumeSerial        | 0x0043
+         * uint8_t    | ebpbVolumeLabel[11]     | 0x0047
+         * uint8_t    | ebpbFSType[8]           | 0x0052
+         * uint8_t    | bpbBootCode[420]        | 0x005A
+         * uint16_t   | bpbVBRSignature         | 0x01FE
+         *
+         */
+#pragma pack (push, 1)
+        typedef struct fatBPBStruct {
+            uint8_t        bpbJumpCode[3];
+            uint8_t        bpbOEMName[8];
+            uint16_t       bpbBytesPerSector;
+            uint8_t        bpbSectorPerCluster;
+            uint16_t       bpbReservedSectors;
+            uint8_t        bpbFATCount;
+            uint16_t       bpbRootEntries;
+            uint16_t       bpbTotalSectors;
+            uint8_t        bpbMedia;
+            uint16_t       bpbSectorsPerFAT16;
+            uint16_t       bpbSectorsPerTrack;
+            uint16_t       bpbDiskHeads;
+            uint32_t       bpbHiddenSectors;
+            uint32_t       bpbTotalSector32;
+            
+            uint32_t       ebpbSectorsPerFAT32;
+            uint16_t       ebpbFlags;
+            uint16_t       ebpbFSVersion;
+            uint32_t       ebpbRootDirectoryCluster;
+            uint16_t       ebpbFSInfoSector;
+            uint16_t       ebpbBSBackupSector;
+            uint8_t        ebpbReserved1[12];
+            uint8_t        ebpbPhysicalDriveNum;
+            uint8_t        ebpbReserved2;
+            uint8_t        ebpbExtendedBootSign;
+            uint32_t       ebpbVolumeSerial;
+            uint8_t        ebpbVolumeLabel[11];
+            uint8_t        ebpbFSType[8];
+            
+            uint8_t        bpbBootCode[420];
+            uint16_t       bpbVBRSignature;
+        } FAT32_bpb;
+#pragma pack (pop)
+
+        /**
+         *
+         * @brief FAT32 FSINFO structure
+         * @author kms1212
+         * @details
+         * Type       | Name                    | Offset
+         * -----------|-------------------------|----------
+         * uint32_t   | fsinfoSignature1        | 0x0000
+         * uint8_t    | fsinfoReserved1[480]    | 0x0004
+         * uint32_t   | fsinfoSignature2        | 0x01E4
+         * uint32_t   | fsinfoFreeCluster       | 0x01E8
+         * uint32_t   | fsinfoNextFree          | 0x01EC
+         * uint8_t    | fsinfoReserved2[12]     | 0x01F0
+         * uint32_t   | fsinfoSignature3        | 0x01FE
+         *
+         */
+#pragma pack (push, 1)
+        typedef struct fatFSINFOStruct {
+            uint32_t       fsinfoSignature1;
+            uint8_t        fsinfoReserved1[480];
+            uint32_t       fsinfoSignature2;
+            uint32_t       fsinfoFreeCluster;
+            uint32_t       fsinfoNextFree;
+            uint8_t        fsinfoReserved2[12];
+            uint32_t       fsinfoSignature3;
+        } FAT32_fsinfo;
+#pragma pack (pop)
+
+        /**
+         *
+         * @brief FAT32 directory entry struct
+         * @author kms1212
+         * @details
+         * Type       | Name                    | Offset
+         * -----------|-------------------------|----------
+         * uint8_t    | fileName[8]             | 0x00
+         * uint8_t    | fileExt[3]              | 0x08
+         * uint8_t    | fileAttr                | 0x0B
+         * uint8_t    | fileReserved1           | 0x0C
+         * uint8_t    | fileCreateTenth         | 0x0D
+         * uint16_t   | fileCreateTime          | 0x0E
+         * uint16_t   | fileCreateDate          | 0x10
+         * uint16_t   | fileAccessDate          | 0x12
+         * uint16_t   | fileLocationHigh        | 0x14
+         * uint16_t   | fileModTime             | 0x16
+         * uint16_t   | fileModDate             | 0x18
+         * uint16_t   | fileLocationLow         | 0x1A
+         * uint32_t   | fileSize                | 0x1C
+         *
+         */
+    #pragma pack (push, 1)
+        typedef struct fileEntryStruct {
+            uint8_t        fileName[8];
+            uint8_t        fileExt[3];
+            uint8_t        fileAttr;
+            uint8_t        fileReserved1;
+            uint8_t        fileCreateTenth;
+            uint16_t       fileCreateTime;
+            uint16_t       fileCreateDate;
+            uint16_t       fileAccessDate;
+            uint16_t       fileLocationHigh;
+            uint16_t       fileModTime;
+            uint16_t       fileModDate;
+            uint16_t       fileLocationLow;
+            uint32_t       fileSize;
+        } FAT32_entry;
+#pragma pack (pop)
+
+        /**
+         *
+         * @brief FAT32 directory entry for LFN
+         * @author kms1212
+         * @details
+         * Type       | Name                    | Offset
+         * -----------|-------------------------|----------
+         * uint8_t    | lfnSeqNum               | 0x00
+         * uint16_t   | lfnFileName1[5]         | 0x01
+         * uint8_t    | lfnAttr                 | 0x0B
+         * uint8_t    | lfnReserved1            | 0x0C
+         * uint8_t    | lfnCheckSum             | 0x0D
+         * uint16_t   | lfnFileName2[6]         | 0x0E
+         * uint16_t   | lfnLocationLow          | 0x1A
+         * uint16_t   | lfnFileName3[2]         | 0x1C
+         * 
+         */
+#pragma pack (push, 1)
+        typedef struct lfnEntryStruct {
+            uint8_t        lfnSeqNum;
+            uint16_t       lfnFileName1[5];
+            uint8_t        lfnAttr;
+            uint8_t        lfnReserved1;
+            uint8_t        lfnCheckSum;
+            uint16_t       lfnFileName2[6];
+            uint16_t       lfnLocationLow;
+            uint16_t       lfnFileName3[2];
+        } FAT32_lfn;
+#pragma pack (pop)
+
+        /**
+         *
+         * @brief FAT32 cache entry
+         * @author kms1212
+         * @details
+         * Type               | Name                  
+         * -------------------|-----------------
+         * uint32_t           | cacheIndex
+         * std::string        | cacheKey
+         * uint8_t            | cacheType
+         * uint8_t*           | cacheData
+         */
+        typedef struct cacheEntryStruct {
+            uint32_t       cacheIndex = 0;
+            std::string    cacheKey = "";
+            uint8_t        cacheType = 0;
+            uint8_t*       cacheData = NULL;
+        } FAT32_cacheEntry;
+    
         DiskDevice*  dd;
         bool         isDiskDeviceAllocated;
-        FAT32_Option option;
-        
-        uint32_t     volumeID;
-        std::string  oemLabel;
-        std::string  volumeLabel;
-        std::string  fsType;
-        uint16_t     sectorPerCluster;
-        uint16_t     resvSectorCount;
-        uint32_t     totalSector32;
-        uint32_t     fatSize32;
-        uint16_t     fsinfoSector;
-        uint32_t     rootCluster;
-        uint32_t     freeCluster;
-        uint32_t     nextCluster;
-        uint8_t      fatCount;
         
         std::string  pathSeparator;
         std::string  currentPath;
         uint32_t     currentCluster;
         
-        Sector*      fatArea;
         uint32_t*    fatClusterList;
+        FAT32_bpb* bpb;
+        FAT32_fsinfo* fsinfo;
     public:
+        class FILE;
+        
+        /**
+         *
+         * @brief FAT32 file information
+         * @author kms1212
+         * @details
+         * Type               | Name                  
+         * -------------------|-----------------
+         * std::string        | fileName
+         * uint8_t            | fileAttr
+         * FAT32_fileInfoTime | fileCreateTime
+         * FAT32_fileInfoTime | fileAccessTime
+         * FAT32_fileInfoTime | fileModTime
+         * uint32_t           | fileLocation
+         * uint32_t           | fileSize
+         *
+         */
+        typedef struct fileInfoStruct {
+            std::string    fileName = "";
+            uint8_t        fileAttr = 0;
+            FSL_Time       fileCreateTime = {0};
+            FSL_Time       fileAccessTime = {0};
+            FSL_Time       fileModTime = {0};
+            uint32_t       fileLocation = 0;
+            uint32_t       fileSize = 0;
+        } FileInfo;
+        
         /**
          *
          * @brief FS_FAT32 constructor
@@ -306,7 +278,7 @@ namespace openFSL {
          * @param pathSeparator_: File system path separator (Default: "\")
          *
          */
-        FS_FAT32(DiskDevice* dd_, FAT32_Option option, std::string pathSeparator_ = "\\");
+        FS_FAT32(DiskDevice* dd_, std::string pathSeparator_ = "\\");
         
         /**
          *
@@ -361,12 +333,12 @@ namespace openFSL {
         
         /**
          *
-         * @brief Get sector per cluster
-         * @details Gets sector per cluster.
-         * @return uint16_t: Sector per cluster
+         * @brief BPB pointer getter
+         * @details Gets BPB pointer. 
+         * @return FAT32_bpb: BPB pointer
          *
          */
-        uint16_t getSectorPerCluster();
+        FAT32_bpb* getBPB();
         
         /**
          *
@@ -389,7 +361,7 @@ namespace openFSL {
          * @return std::vector<FAT32_fileInfo>: Parameter buf
          *
          */
-        std::vector<FAT32_fileInfo>* getDirList(std::vector<FAT32_fileInfo>* buf, std::string path = "", uint32_t cluster = 0xFFFFFFFF);
+        std::vector<FileInfo>* getDirList(std::vector<FileInfo>* buf, std::string path = "", uint32_t cluster = 0xFFFFFFFF);
         
         /**
          *
@@ -403,23 +375,6 @@ namespace openFSL {
          *
          */
         int chdir(std::string path, std::vector<std::string>* subdir = NULL, std::string tmpPath = "", uint32_t tmpCluster = 0);
-        
-        /**
-         *
-         * @brief Next cluster picker
-         * @details Returns next cluster number from FAT Area.
-         * Return Value              | Status
-         * --------------------------|----------------------------------------------------
-         * 0x?0000000                | Free cluster
-         * 0x?0000002 - 0x?FFFFFEF   | Using cluster, points next linked cluster
-         * 0x?FFFFFF0 - 0x?FFFFFF6   | Reserved values
-         * 0x?FFFFFF7                | Bad cluster (function returns 0xFFFFFFF7)
-         * 0x?FFFFFF8 - 0x?FFFFFFF   | End of linked cluster (function returns 0xFFFFFFF8)
-         * @param cluster: Current cluster
-         * @return uint32_t: Next cluster
-         *
-         */
-        uint32_t getNextCluster(uint32_t cluster);
         
         /**
          *
@@ -442,16 +397,6 @@ namespace openFSL {
         
         /**
          *
-         * @brief Linked cluster counter
-         * @details Returns linked cluster count starting from argument cluster
-         * @param cluster: Current cluster (returns 0x0 when bad cluster found.)
-         * @return uint32_t: Linked cluster count
-         *
-         **/
-        uint32_t getLinkedClusterCount(uint32_t cluster);
-        
-        /**
-         *
          * @brief Allocate free cluster
          * @details Gets next free cluster and 
          * @param cluster: linked cluster address to allocate
@@ -469,18 +414,16 @@ namespace openFSL {
          * @return FAT32_fileInfo: File information
          *
          */
-        FAT32_fileInfo getFileInformation(std::string path);
+        FileInfo getFileInformation(std::string path);
         
         /**
          *
-         * @brief Get entire linked cluster
-         * @details Gets cluster array
-         * @param sector: Data buffer
-         * @param cluster: cluster address
-         * @return int: Error code
+         * @brief Get FAT Area cluster list
+         * @details Gets FAT Area list.
+         * @return uint32_t*: FAT Area cluster array
          *
          */
-        int getLinkedCluster(Sector* sector, uint32_t cluster, uint32_t count = 0);
+        uint32_t*    getFatClusterList();
         
         /**
          *
@@ -496,13 +439,13 @@ namespace openFSL {
         /**
          *
          * @brief Open file
-         * @details Opens file and create FAT32_File class
+         * @details Opens file and create FILE class
          * @param path: working directory + filename
          * @param mode_: file open mode
-         * @return FAT32_File*: file pointer
+         * @return FSL_File*: file pointer
          *
          */
-        FAT32_File* openFile(std::string path, std::string mode_);
+        FSL_File<FS_FAT32>* openFile(std::string path, FSL_OpenMode mode_);
         
         /**
          *
@@ -511,48 +454,86 @@ namespace openFSL {
          * @param file: file pointer
          *
          */
-        void closeFile(FAT32_File* file);
+        void closeFile(FSL_File<FS_FAT32>* file);
+
+        /**
+         *
+         * @brief FAT32 linked cluster
+         * @details Implements cluster controls
+         * @author kms1212
+         *
+         */
+        class LinkedCluster {
+        private:
+            FS_FAT32* fileSystem;
+            
+            uint32_t* clusterList;
+            
+            Sector* fetchedSectorCache = NULL;
+            size_t currentCacheClusterIndex = 0;
+            size_t currentCacheClusterSize = 0;
+            
+            size_t lastFetchedCluster;
+            
+            int getLinkedClusterList(uint32_t* list, uint32_t cluster, size_t count = 0);
+            size_t getLinkedClusterCount(uint32_t cluster);
+            uint32_t getNextCluster(uint32_t cluster);
+            
+            size_t clusterToLBA(size_t cluster);
+        public:
+            LinkedCluster(FS_FAT32* fileSystem_, size_t startCluster);
+            ~LinkedCluster();
+            
+            int fetch(void* buf, size_t pos, size_t size);
+            
+            int setCache(size_t cluster, size_t size);
+            int shrinkCache(size_t clusterSize);
+        };
+
+        /**
+         *
+         * @brief FAT32 file
+         * @details Implements fat32 file controls
+         * @author kms1212
+         *
+         */
+        class FILE {
+        private:
+            FS_FAT32::FileInfo fileInfo;
+            FS_FAT32* fileSystem;
+            FSL_OpenMode openMode;
+            
+            size_t         seekLocation = 0;
+            LinkedCluster* fileCluster = NULL;
+        public:
+            
+            FILE(FS_FAT32* fileSystem_, FS_FAT32::FileInfo fileInfo_, FSL_OpenMode openMode_);
+			~FILE();
+            
+            FS_FAT32::FileInfo getFileInfo();
+
+            /**
+             *
+             * @brief Read file
+             * @details Reads file from disk
+             * @param void* buf: Data buffer
+             * @param size_t size: Element size
+             * @param size_t count: Element count
+             * @return size_t: Count of elements actually read
+             *
+             */
+            size_t read(void* buf, size_t size, size_t count);
+            
+            /**
+             *
+             * @brief Seek file
+             * @details Seek file location
+             * @param uint32_t location: Seek location
+             *
+             */
+            int seek(size_t location);
+        };
     }; 
-
-    /**
-     *
-     * @brief openFSL file
-     * @details Implements file control
-     * @author kms1212
-     *
-     */
-    class FAT32_File {
-    private:
-        FAT32_fileInfo   fileInfo;
-        FS_FAT32*        fileSystem;
-        std::string      openMode;
-        
-        uint32_t         seekLocation = 0;
-        
-    public:
-        FAT32_File(FS_FAT32* fileSystem_, FAT32_fileInfo fileInfo_, std::string mode_);
-        
-        FAT32_fileInfo getFileInfo();
-
-        /**
-         *
-         * @brief Read file
-         * @details Reads file from disk
-         * @param uint8_t* buf: Data buffer
-         * @param uint32_t len: Data length
-         *
-         */
-        int read(uint8_t* buf, uint32_t len);
-        
-        /**
-         *
-         * @brief Seek file
-         * @details Seek file location
-         * @param uint32_t location: Seek location
-         *
-         */
-        int seek(uint32_t location);
-    };
 }
 
 #endif

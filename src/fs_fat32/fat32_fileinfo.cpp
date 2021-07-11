@@ -11,12 +11,9 @@ See the BSD-3-Clause for more details.
 
 using namespace openFSL;
 
-FAT32_fileInfo FS_FAT32::getFileInformation(std::string path) {
-    std::string currentPath_temp = currentPath;
-    uint32_t currentCluster_temp = currentCluster;
-    
+FS_FAT32::FileInfo FS_FAT32::getFileInformation(std::string path) {
     std::string filename_path = "";
-    FAT32_fileInfo ret;
+    FileInfo ret;
     
     for (int i = 0; i < pathSeparator.length(); i++)
     {
@@ -30,7 +27,7 @@ FAT32_fileInfo FS_FAT32::getFileInformation(std::string path) {
     
     std::transform(filename_path.begin(), filename_path.end(), filename_path.begin(), ::toupper);
     
-    std::vector<FAT32_fileInfo> buf;
+    std::vector<FileInfo> buf;
     getDirList(&buf);
     
     std::string filename;
@@ -43,9 +40,6 @@ FAT32_fileInfo FS_FAT32::getFileInformation(std::string path) {
             ret = buf[i];
         }
     }
-    
-    currentPath = currentPath_temp;
-    currentCluster = currentCluster_temp;
     
     return ret;
 }
