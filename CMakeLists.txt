@@ -26,7 +26,15 @@ endif (DOXYGEN_FOUND AND DOXYGEN_GENERATE)
 if (NOT NO_BUILD)
     set(CMAKE_CXX_STANDARD 14)
     set(CMAKE_CXX_STANDARD_REQUIRED ON)
-    set(CMAKE_CXX_FLAGS "")
+    if (CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
+        set(CMAKE_CXX_FLAGS "")
+    elseif (CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
+        set(CMAKE_CXX_FLAGS "")
+    elseif (CMAKE_CXX_COMPILER_ID STREQUAL "Intel")
+        set(CMAKE_CXX_FLAGS "")
+    elseif (CMAKE_CXX_COMPILER_ID STREQUAL "MSVC")
+        set(CMAKE_CXX_FLAGS "/EHsc")
+    endif()
     
     file(GLOB libSources ${CMAKE_SOURCE_DIR}/src/*/*.cpp)
     add_library(openfsl STATIC ${libSources})
@@ -40,8 +48,8 @@ if (NOT NO_BUILD)
                 https://github.com/kms1212/OpenFSL-TestFiles/raw/main/fat32.zip
                 ${CMAKE_BINARY_DIR}/fat32.zip)
             ZIP_UNPACK_TARGET(zipfile 
-				${CMAKE_BINARY_DIR}/ 
-			    ${CMAKE_BINARY_DIR}/fat32.zip)
+                ${CMAKE_BINARY_DIR}/ 
+                ${CMAKE_BINARY_DIR}/fat32.zip)
 #           file(ARCHIVE_EXTRACT 
 #               INPUT ${CMAKE_BINARY_DIR}/fat32.zip
 #               DESTINATION ${CMAKE_BINARY_DIR}/)

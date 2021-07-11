@@ -11,7 +11,10 @@ jobs:
       fail-fast: false
       matrix:
         platform: [ x86, x64 ]
-        os: [ ubuntu-latest, windows-latest ] # [ubuntu-latest, macos-latest, windows-latest]
+        os: [ ubuntu-latest, windows-latest, macos-latest ]
+        exclude:
+        - os: macos-latest
+          platform: x86
         
     runs-on: '${{ matrix.os }}'
     name: '${{ matrix.os }}-${{ matrix.platform }}: build'
@@ -22,9 +25,11 @@ jobs:
       run: |
         if [ "$RUNNER_OS" == "Linux" ]; then
           sudo apt-get update
-          sudo apt-get install cmake doxygen graphviz zip
+          sudo apt-get install cmake zip
         elif [ "$RUNNER_OS" == "Windows" ]; then
-          choco install cmake doxygen.install graphviz 7zip
+          choco install cmake 7zip
+        elif [ "$RUNNER_OS" == "Windows" ]; then
+          brew install cmake p7zip make
         else
           echo "$RUNNER_OS not supported"
           exit 1
@@ -35,7 +40,6 @@ jobs:
       run: |
         if [ "$RUNNER_OS" == "Linux" ]; then
           cmake -G "Unix Makefiles" -S. -Bbuild -DBUILD_TESTING=true -DDOXYGEN_GENERATE=false -Bbuild -DNO_BUILD=false
-          
         elif [ "$RUNNER_OS" == "Windows" ]; then
           if [ "${{matrix.platform}}" == "x86" ]; then
             cmake -G "Visual Studio 16 2019" -A Win32 -S. -Bbuild -DBUILD_TESTING=true -DDOXYGEN_GENERATE=false -Bbuild -DNO_BUILD=false
@@ -45,7 +49,8 @@ jobs:
             echo "${{matrix.platform}} not supported"
             exit 1
           fi
-          
+        elif [ "$RUNNER_OS" == "macOS" ]; then
+          cmake -G "Unix Makefiles" -S. -Bbuild -DBUILD_TESTING=true -DDOXYGEN_GENERATE=false -Bbuild -DNO_BUILD=false
         else
           echo "$RUNNER_OS not supported"
           exit 1
