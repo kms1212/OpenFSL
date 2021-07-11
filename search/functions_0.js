@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['str16to8_48',['str16to8',['../fat32__getdirlist_8cpp.html#a8c2f71cc395df104866f1763be127644',1,'fat32_getdirlist.cpp']]]
+  ['allocatefreecluster_241',['allocateFreeCluster',['../classopen_f_s_l_1_1_f_s___f_a_t32.html#aa5cc996d161460d4f5c000de629939fa',1,'openFSL::FS_FAT32']]]
 ];

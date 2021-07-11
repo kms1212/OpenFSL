@@ -32,8 +32,26 @@ var NAVTREE =
         [ "License", "index.html#autotoc_md6", null ]
       ] ]
     ] ],
+    [ "Todo List", "todo.html", null ],
     [ "Namespaces", "namespaces.html", [
-      [ "Namespace List", "namespaces.html", "namespaces_dup" ]
+      [ "Namespace List", "namespaces.html", "namespaces_dup" ],
+      [ "Namespace Members", "namespacemembers.html", [
+        [ "All", "namespacemembers.html", null ],
+        [ "Functions", "namespacemembers_func.html", null ],
+        [ "Typedefs", "namespacemembers_type.html", null ],
+        [ "Enumerations", "namespacemembers_enum.html", null ],
+        [ "Enumerator", "namespacemembers_eval.html", null ]
+      ] ]
+    ] ],
+    [ "Classes", "annotated.html", [
+      [ "Class List", "annotated.html", "annotated_dup" ],
+      [ "Class Index", "classes.html", null ],
+      [ "Class Members", "functions.html", [
+        [ "All", "functions.html", null ],
+        [ "Functions", "functions_func.html", null ],
+        [ "Variables", "functions_vars.html", null ],
+        [ "Typedefs", "functions_type.html", null ]
+      ] ]
     ] ],
     [ "Files", "files.html", [
       [ "File List", "files.html", "files_dup" ],
@@ -47,7 +65,8 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"dir_0aacf3aed1a5c7085b23ed9486273ee2.html"
+"annotated.html",
+"structopen_f_s_l_1_1_f_s___f_a_t32_1_1file_info_struct.html#a40a3a89cb7c6f6d10bef605897059102"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

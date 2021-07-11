@@ -107,51 +107,41 @@ $(document).ready(function(){initNavTree('fat32__classgeneral_8cpp_source.html',
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">*/</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;openfsl/fs_fat32.h&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="fs__fat32_8h.html">openfsl/fs_fat32.h</a>&quot;</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespaceopen_f_s_l.html">openFSL</a>;</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;FS_FAT32::FS_FAT32(DiskDevice* dd_, FAT32_Option option_, std::string pathSeparator_) {</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a57b3dee50c731cd793707fdd4ada02ac">   14</a></span>&#160;<a class="code" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a57b3dee50c731cd793707fdd4ada02ac">FS_FAT32::FS_FAT32</a>(<a class="code" href="classopen_f_s_l_1_1_disk_device.html">DiskDevice</a>* dd_, std::string pathSeparator_) {</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordflow">if</span> (dd_ == NULL) {</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        isDiskDeviceAllocated = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        dd = <span class="keyword">new</span> DiskDevice();</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <a class="code" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a582be5521524a027203a403147b951d2">isDiskDeviceAllocated</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <a class="code" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a40f7e4b624550b57a8c8cea6228bae28">dd</a> = <span class="keyword">new</span> <a class="code" href="classopen_f_s_l_1_1_disk_device.html">DiskDevice</a>();</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    }</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        isDiskDeviceAllocated = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        dd = dd_;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <a class="code" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a582be5521524a027203a403147b951d2">isDiskDeviceAllocated</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <a class="code" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a40f7e4b624550b57a8c8cea6228bae28">dd</a> = dd_;</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    }</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    option = option_;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    pathSeparator = pathSeparator_;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;}</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;FS_FAT32::~FS_FAT32() {</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordflow">if</span> (isDiskDeviceAllocated) {</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        dd-&gt;close();                               <span class="comment">// Close disk device</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keyword">delete</span> dd;                             <span class="comment">// Delete disk device</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    }</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">delete</span> fatArea;                            <span class="comment">// Delete loaded fat area</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keywordtype">void</span> FS_FAT32::setDiskDevice(DiskDevice* dd_)</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    dd = dd_;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;DiskDevice* FS_FAT32::getDiskDevice()</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;{</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">return</span> dd;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;std::string FS_FAT32::getPath() {</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordflow">return</span> currentPath;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;uint16_t FS_FAT32::getSectorPerCluster() {</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">return</span> sectorPerCluster;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a7421632dee11923f5e196e14a0e6c2d8">pathSeparator</a> = pathSeparator_;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a0e8779b0397783bc4d0bccdd6e9ce934">   26</a></span>&#160;<a class="code" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a0e8779b0397783bc4d0bccdd6e9ce934">FS_FAT32::~FS_FAT32</a>() {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a582be5521524a027203a403147b951d2">isDiskDeviceAllocated</a>) {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <a class="code" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a40f7e4b624550b57a8c8cea6228bae28">dd</a>-&gt;<a class="code" href="classopen_f_s_l_1_1_disk_device.html#ad442994336ed6da38e713907ab4d7487">close</a>();                               <span class="comment">// Close disk device</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keyword">delete</span> <a class="code" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a40f7e4b624550b57a8c8cea6228bae28">dd</a>;                             <span class="comment">// Delete disk device</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    }</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">delete</span> <a class="code" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a8d2621636e91f7b822ff3cbadbcf2481">fatClusterList</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="anamespaceopen_f_s_l_html"><div class="ttname"><a href="namespaceopen_f_s_l.html">openFSL</a></div><div class="ttdef"><b>Definition:</b> <a href="file_8cpp_source.html#l00012">file.cpp:12</a></div></div>
+<div class="ttc" id="afs__fat32_8h_html"><div class="ttname"><a href="fs__fat32_8h.html">fs_fat32.h</a></div></div>
+<div class="ttc" id="aclassopen_f_s_l_1_1_disk_device_html"><div class="ttname"><a href="classopen_f_s_l_1_1_disk_device.html">openFSL::DiskDevice</a></div><div class="ttdoc">Disk driver.</div><div class="ttdef"><b>Definition:</b> <a href="diskdevice_8h_source.html#l00027">diskdevice.h:27</a></div></div>
+<div class="ttc" id="aclassopen_f_s_l_1_1_f_s___f_a_t32_html_a582be5521524a027203a403147b951d2"><div class="ttname"><a href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a582be5521524a027203a403147b951d2">openFSL::FS_FAT32::isDiskDeviceAllocated</a></div><div class="ttdeci">bool isDiskDeviceAllocated</div><div class="ttdef"><b>Definition:</b> <a href="fs__fat32_8h_source.html#l00235">fs_fat32.h:235</a></div></div>
+<div class="ttc" id="aclassopen_f_s_l_1_1_f_s___f_a_t32_html_a0e8779b0397783bc4d0bccdd6e9ce934"><div class="ttname"><a href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a0e8779b0397783bc4d0bccdd6e9ce934">openFSL::FS_FAT32::~FS_FAT32</a></div><div class="ttdeci">~FS_FAT32()</div><div class="ttdoc">FS_FAT32 destructor.</div><div class="ttdef"><b>Definition:</b> <a href="fat32__classgeneral_8cpp_source.html#l00026">fat32_classgeneral.cpp:26</a></div></div>
+<div class="ttc" id="aclassopen_f_s_l_1_1_disk_device_html_ad442994336ed6da38e713907ab4d7487"><div class="ttname"><a href="classopen_f_s_l_1_1_disk_device.html#ad442994336ed6da38e713907ab4d7487">openFSL::DiskDevice::close</a></div><div class="ttdeci">int(* close)()</div><div class="ttdoc">Disk close function.</div><div class="ttdef"><b>Definition:</b> <a href="diskdevice_8h_source.html#l00111">diskdevice.h:111</a></div></div>
+<div class="ttc" id="anamespaceopen_f_s_l_html"><div class="ttname"><a href="namespaceopen_f_s_l.html">openFSL</a></div><div class="ttdef"><b>Definition:</b> <a href="fslservices_8cpp_source.html#l00014">fslservices.cpp:14</a></div></div>
+<div class="ttc" id="aclassopen_f_s_l_1_1_f_s___f_a_t32_html_a40f7e4b624550b57a8c8cea6228bae28"><div class="ttname"><a href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a40f7e4b624550b57a8c8cea6228bae28">openFSL::FS_FAT32::dd</a></div><div class="ttdeci">DiskDevice * dd</div><div class="ttdef"><b>Definition:</b> <a href="fs__fat32_8h_source.html#l00234">fs_fat32.h:234</a></div></div>
+<div class="ttc" id="aclassopen_f_s_l_1_1_f_s___f_a_t32_html_a7421632dee11923f5e196e14a0e6c2d8"><div class="ttname"><a href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a7421632dee11923f5e196e14a0e6c2d8">openFSL::FS_FAT32::pathSeparator</a></div><div class="ttdeci">std::string pathSeparator</div><div class="ttdef"><b>Definition:</b> <a href="fs__fat32_8h_source.html#l00237">fs_fat32.h:237</a></div></div>
+<div class="ttc" id="aclassopen_f_s_l_1_1_f_s___f_a_t32_html_a8d2621636e91f7b822ff3cbadbcf2481"><div class="ttname"><a href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a8d2621636e91f7b822ff3cbadbcf2481">openFSL::FS_FAT32::fatClusterList</a></div><div class="ttdeci">uint32_t * fatClusterList</div><div class="ttdef"><b>Definition:</b> <a href="fs__fat32_8h_source.html#l00241">fs_fat32.h:241</a></div></div>
+<div class="ttc" id="aclassopen_f_s_l_1_1_f_s___f_a_t32_html_a57b3dee50c731cd793707fdd4ada02ac"><div class="ttname"><a href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a57b3dee50c731cd793707fdd4ada02ac">openFSL::FS_FAT32::FS_FAT32</a></div><div class="ttdeci">FS_FAT32(DiskDevice *dd_, std::string pathSeparator_=&quot;\\&quot;)</div><div class="ttdoc">FS_FAT32 constructor.</div><div class="ttdef"><b>Definition:</b> <a href="fat32__classgeneral_8cpp_source.html#l00014">fat32_classgeneral.cpp:14</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
