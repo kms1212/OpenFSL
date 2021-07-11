@@ -20,31 +20,25 @@
 # Copyright (c) Kevin Harrison 2016
 # Released under the MIT License (https://opensource.org/licenses/MIT)
 
-# This file will deprecated when the CMake >3.18 is released on apt
+# This file will be unused when the CMake >3.18 is released on apt
 
 if (WIN32)
-	set(ZIP_PROGRAMS "7z" "jar")
+	set(ZIP_PROGRAMS "7z")
 else (WIN32)
-	set(ZIP_PROGRAMS "zip" "jar" "7z")
+	set(ZIP_PROGRAMS "zip" "7z")
 endif (WIN32)
 
 set(ZIP_PATH_7z "$ENV{ProgramFiles}/7-Zip")
 set(ZIP_PACK_7z "7z")
 set(ZIP_UNPACK_7z "7z")
 set(ZIP_PACK_FLAGS_7z "a" "-tzip")
-set(ZIP_UNPACK_FLAGS_7z "x" "-tzip")
-
-set(ZIP_PATH_jar "$ENV{JDKroot}/bin")
-set(ZIP_PACK_jar "jar")
-set(ZIP_UNPACK_jar "jar")
-set(ZIP_PACK_FLAGS_jar "cf")
-set(ZIP_UNPACK_FLAGS_jar "xf")
+set(ZIP_UNPACK_FLAGS_7z "x" "-tzip" "-aoa")
 
 set(ZIP_PATH_zip "/usr/bin")
 set(ZIP_PACK_zip "zip")
 set(ZIP_UNPACK_zip "unzip")
 set(ZIP_PACK_FLAGS_zip "-r" "-9" "-q")
-set(ZIP_UNPACK_FLAGS_zip "")
+set(ZIP_UNPACK_FLAGS_zip "-o")
 
 foreach (zip ${ZIP_PROGRAMS})
 	if (NOT ZIP_FOUND)

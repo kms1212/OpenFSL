@@ -96,7 +96,7 @@ int main(int argc, char** argv) {
     else {
         char* buf = new char[file->getFileController()->getFileInfo().fileSize - 14]();
 		file->seek(14);
-        file->read((uint8_t*)buf, 1, file->getFileController()->getFileInfo().fileSize);
+        file->read((uint8_t*)buf, 1, file->getFileController()->getFileInfo().fileSize - 14);
         buf[file->getFileController()->getFileInfo().fileSize - 14] = 0;
         
         cout << file->getFileController()->getFileInfo().fileSize << endl;
