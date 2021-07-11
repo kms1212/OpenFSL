@@ -28,7 +28,7 @@ jobs:
           sudo apt-get install cmake zip
         elif [ "$RUNNER_OS" == "Windows" ]; then
           choco install cmake 7zip
-        elif [ "$RUNNER_OS" == "Windows" ]; then
+        elif [ "$RUNNER_OS" == "macOS" ]; then
           brew install cmake p7zip make
         else
           echo "$RUNNER_OS not supported"
