@@ -274,7 +274,6 @@ namespace openFSL {
          *
          * @brief FS_FAT32 constructor
          * @param dd_: Disk device driver class pointer
-         * @param option: FAT32 option (See enum FAT32_Option)
          * @param pathSeparator_: File system path separator (Default: "\")
          *
          */

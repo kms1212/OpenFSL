@@ -71,7 +71,8 @@ CMakeDoxygenDefaults.cmake
 *.img
 
 # Doxygen docs
-/doc/html
+/doc/*
+!/doc/logo
 
 # Binary directory
 build

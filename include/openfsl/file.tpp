@@ -14,7 +14,7 @@ See the BSD-3-Clause for more details.
 #error __FILE__ should only be included from file.h
 #endif
 
-#include "openfsl/file.h"
+#include "file.h"
 
 using namespace openFSL;
 

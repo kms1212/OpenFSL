@@ -13,8 +13,10 @@ jobs:
         platform: [ x86, x64 ]
         os: [ ubuntu-latest, windows-latest, macos-latest ]
         exclude:
-        - os: macos-latest
-          platform: x86
+          - os: macos-latest
+            platform: x86
+          - os: ubuntu-latest
+            platform: x86
         
     runs-on: '${{ matrix.os }}'
     name: '${{ matrix.os }}-${{ matrix.platform }}: build'
