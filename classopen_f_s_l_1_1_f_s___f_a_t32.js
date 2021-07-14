@@ -32,6 +32,7 @@ var classopen_f_s_l_1_1_f_s___f_a_t32 =
     [ "mkdir", "classopen_f_s_l_1_1_f_s___f_a_t32.html#a402b7d65afdac440f31c71c6a2a390a8", null ],
     [ "openFile", "classopen_f_s_l_1_1_f_s___f_a_t32.html#a3536bff1641a6d7f8145855db825a939", null ],
     [ "setDiskDevice", "classopen_f_s_l_1_1_f_s___f_a_t32.html#a21af94044f93bd5beba549449ef4f754", null ],
+    [ "_padding1", "classopen_f_s_l_1_1_f_s___f_a_t32.html#aa191075607626bfbc47e13a438e9ba3f", null ],
     [ "bpb", "classopen_f_s_l_1_1_f_s___f_a_t32.html#a2f651e2d1199f451d6c2d60d4e30dcc8", null ],
     [ "currentCluster", "classopen_f_s_l_1_1_f_s___f_a_t32.html#a275fe7152ab687964bf4ca6b449e2dac", null ],
     [ "currentPath", "classopen_f_s_l_1_1_f_s___f_a_t32.html#aa9d033b20a66827798d7f979e9c0e7a6", null ],
