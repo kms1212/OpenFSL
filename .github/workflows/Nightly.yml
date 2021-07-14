@@ -10,14 +10,20 @@ jobs:
       fail-fast: false
       matrix:
         platform: [ x86, x64 ]
-        os: [ ubuntu-latest, windows-latest ] # macos-latest
+        os: [ ubuntu-latest, windows-latest, macos-latest ]
         pkg: [ ZIP, TGZ, DEB, NSIS ]
         exclude:
         - os: windows-latest
           pkg: DEB
         - os: ubuntu-latest
           pkg: NSIS
+        - os: macos-latest
+          pkg: DEB
+        - os: macos-latest
+          pkg: NSIS
         - os: ubuntu-latest
+          platform: x86
+        - os: macos-latest
           platform: x86
         
     runs-on: '${{ matrix.os }}'
@@ -43,18 +49,18 @@ jobs:
     - name: Configure CMake
       run: |
         if [ "$RUNNER_OS" == "Linux" ]; then
-          cmake -G "Unix Makefiles" -S. -Bbuild -DBUILD_TESTING=true -DDOXYGEN_GENERATE=false -DNO_BUILD=false -DPACKAGE_GENERATE=true -DCMAKE_BUILD_TYPE=Release -DPACKAGE_GENERATOR=${{matrix.pkg}}
+          cmake -G "Unix Makefiles" -S. -Bbuild -DBUILD_TESTING=true -DDOXYGEN_GENERATE=false -DNO_BUILD=false -DPACKAGE_GENERATE=true -DCMAKE_BUILD_TYPE=Release -DPACKAGE_GENERATE=true -DPACKAGE_GENERATOR=${{matrix.pkg}}
         elif [ "$RUNNER_OS" == "Windows" ]; then
           if [ "${{matrix.platform}}" == "x86" ]; then
-            cmake -G "Visual Studio 16 2019" -A Win32 -S. -Bbuild -DBUILD_TESTING=true -DDOXYGEN_GENERATE=false -DNO_BUILD=false -DPACKAGE_GENERATE=true -DCMAKE_BUILD_TYPE=Release -DPACKAGE_GENERATOR=${{matrix.pkg}}
+            cmake -G "Visual Studio 16 2019" -A Win32 -S. -Bbuild -DBUILD_TESTING=true -DDOXYGEN_GENERATE=false -DNO_BUILD=false -DPACKAGE_GENERATE=true -DCMAKE_BUILD_TYPE=Release -DPACKAGE_GENERATE=true -DPACKAGE_GENERATOR=${{matrix.pkg}}
           elif [ "${{matrix.platform}}" == "x64" ]; then
-            cmake -G "Visual Studio 16 2019" -A x64 -S. -Bbuild -DBUILD_TESTING=true -DDOXYGEN_GENERATE=false -DNO_BUILD=false -DPACKAGE_GENERATE=true -DCMAKE_BUILD_TYPE=Release -DPACKAGE_GENERATOR=${{matrix.pkg}}
+            cmake -G "Visual Studio 16 2019" -A x64 -S. -Bbuild -DBUILD_TESTING=true -DDOXYGEN_GENERATE=false -DNO_BUILD=false -DPACKAGE_GENERATE=true -DCMAKE_BUILD_TYPE=Release -DPACKAGE_GENERATE=true -DPACKAGE_GENERATOR=${{matrix.pkg}}
           else
             echo "${{matrix.platform}} not supported"
             exit 1
           fi
         elif [ "$RUNNER_OS" == "macOS" ]; then
-          cmake -G "Unix Makefiles" -S. -Bbuild -DBUILD_TESTING=true -DDOXYGEN_GENERATE=false -Bbuild -DNO_BUILD=false
+          cmake -G "Unix Makefiles" -S. -Bbuild -DBUILD_TESTING=true -DDOXYGEN_GENERATE=false -Bbuild -DNO_BUILD=false -DPACKAGE_GENERATE=true -DPACKAGE_GENERATOR=${{matrix.pkg}}
         else
           echo "$RUNNER_OS not supported"
           exit 1
@@ -90,11 +96,10 @@ jobs:
       
     - name: "Build & test"
       uses: "marvinpinto/action-automatic-releases@latest"
-      working-directory: ${{github.workspace}}/build
       with:
         repo_token: "${{ secrets.API_TOKEN_GITHUB }}"
         automatic_release_tag: "nightly"
         prerelease: true
         title: "Nightly build"
         files: |
-          OpenFSL*
+          build/OpenFSL*

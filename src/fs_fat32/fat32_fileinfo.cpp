@@ -15,7 +15,7 @@ FS_FAT32::FileInfo FS_FAT32::getFileInformation(std::string path) {
     std::string filename_path = "";
     FileInfo ret;
     
-    for (int i = 0; i < pathSeparator.length(); i++)
+    for (size_t i = 0; i < pathSeparator.length(); i++)
     {
         if (path.find(pathSeparator.at(i)) < path.length()) {
             chdir(path.substr(0, path.find_last_of(pathSeparator)));
@@ -25,7 +25,7 @@ FS_FAT32::FileInfo FS_FAT32::getFileInformation(std::string path) {
     if (filename_path == "")
         filename_path = path;
     
-    std::transform(filename_path.begin(), filename_path.end(), filename_path.begin(), ::toupper);
+    for (auto & c: filename_path) c = (char)toupper(c);
     
     std::vector<FileInfo> buf;
     getDirList(&buf);
@@ -34,7 +34,7 @@ FS_FAT32::FileInfo FS_FAT32::getFileInformation(std::string path) {
     for (uint32_t i = 0; i < buf.size(); i++)
     {
         filename = buf[i].fileName;
-        std::transform(filename.begin(), filename.end(), filename.begin(), ::toupper);
+        for (auto & c: filename) c = (char)toupper(c);;
         if (filename == filename_path && buf[i].fileAttr == 0x20)
         {
             ret = buf[i];

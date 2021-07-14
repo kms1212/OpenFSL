@@ -10,7 +10,7 @@ See the BSD-3-Clause for more details.
 #ifndef __FILE_H
 #define __FILE_H
 
-#include <iostream>
+#include <stddef.h>
 
 namespace openFSL {
 
@@ -82,7 +82,7 @@ namespace openFSL {
         ~FSL_File();
         
         typename T::FILE* getFileController();
-		int seek(size_t loc);
+        int seek(size_t loc);
         size_t read(void* ptr, size_t size, size_t count);
     };
 }

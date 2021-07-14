@@ -225,22 +225,25 @@ namespace openFSL {
          * uint8_t*           | cacheData
          */
         typedef struct cacheEntryStruct {
-            uint32_t       cacheIndex = 0;
-            std::string    cacheKey = "";
-            uint8_t        cacheType = 0;
             uint8_t*       cacheData = NULL;
+            std::string    cacheKey = "";
+            uint32_t       cacheIndex = 0;
+            uint32_t       cacheType = 0;
         } FAT32_cacheEntry;
     
         DiskDevice*  dd;
-        bool         isDiskDeviceAllocated;
+        FAT32_bpb* bpb;
+        FAT32_fsinfo* fsinfo;
+        
+        uint32_t*    fatClusterList;
         
         std::string  pathSeparator;
         std::string  currentPath;
-        uint32_t     currentCluster;
         
-        uint32_t*    fatClusterList;
-        FAT32_bpb* bpb;
-        FAT32_fsinfo* fsinfo;
+        uint32_t     currentCluster;
+        bool         isDiskDeviceAllocated;
+        uint8_t      _padding1[3];
+        
     public:
         class FILE;
         
@@ -262,12 +265,13 @@ namespace openFSL {
          */
         typedef struct fileInfoStruct {
             std::string    fileName = "";
-            uint8_t        fileAttr = 0;
             FSL_Time       fileCreateTime = {0};
             FSL_Time       fileAccessTime = {0};
             FSL_Time       fileModTime = {0};
             uint32_t       fileLocation = 0;
             uint32_t       fileSize = 0;
+            uint8_t        fileAttr = 0;
+            uint8_t        _padding1[3];
         } FileInfo;
         
         /**
@@ -507,7 +511,7 @@ namespace openFSL {
         public:
             
             FILE(FS_FAT32* fileSystem_, FS_FAT32::FileInfo fileInfo_, FSL_OpenMode openMode_);
-			~FILE();
+            ~FILE();
             
             FS_FAT32::FileInfo getFileInfo();
 

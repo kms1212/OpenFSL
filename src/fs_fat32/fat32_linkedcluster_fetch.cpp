@@ -27,12 +27,12 @@ int FS_FAT32::LinkedCluster::fetch(void* buf, size_t pos, size_t size)
             delete fetchedSectorCache;
         fetchedSectorCache = new Sector(currentCacheClusterSize * fileSystem->getBPB()->bpbSectorPerCluster, fileSystem->getDiskDevice()->getBytespersector());
         
-        for (int i = 0; i < currentCacheClusterSize; i++)
+        for (size_t i = 0; i < currentCacheClusterSize; i++)
             result += fileSystem->getDiskDevice()->readDisk(((uint8_t*)fetchedSectorCache->getData()) + i * fileSystem->getBPB()->bpbSectorPerCluster * fileSystem->getDiskDevice()->getBytespersector()
             , clusterToLBA(clusterList[currentCacheClusterIndex]), fileSystem->getBPB()->bpbSectorPerCluster); //
     }
     
-    for (int i = 0; i < size; i++)
+    for (size_t i = 0; i < size; i++)
     {
         ((uint8_t*)buf)[i] = ((uint8_t*)fetchedSectorCache->getData())[pos % fileSystem->getDiskDevice()->getBytespersector() + i];
     }

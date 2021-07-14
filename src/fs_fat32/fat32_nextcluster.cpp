@@ -13,11 +13,11 @@ using namespace openFSL;
 
 uint32_t FS_FAT32::getNextFreeCluster()
 {
-    int freeCluster;
-    for (int i = 0; i < bpb->bpbReservedSectors; i++)
+    for (uint32_t i = 0; i < bpb->bpbReservedSectors; i++) {
         if (fatClusterList[i] == 0) {
             std::cout << i << "\n";
             return i;
         }
+    }
     return 0;
 }

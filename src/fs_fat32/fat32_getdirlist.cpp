@@ -13,8 +13,8 @@ using namespace openFSL;
 
 uint8_t* str16to8(uint8_t* dest, const uint16_t* src, size_t size) // Temporary function to convert 16bit UCS-2 value to 8bit ASCII (drain)
 {
-    for (int i = 0; i < size; i++)
-        dest[i] = src[i] == 0xFF ? 0 : (uint8_t)src[i];
+    for (size_t i = 0; i < size; i++)
+        dest[i] = (uint8_t)(src[i] == 0xFFFF ? 0 : src[i]);
     return dest;
 }
 
@@ -84,7 +84,7 @@ std::vector<FS_FAT32::FileInfo>* FS_FAT32::getDirList(std::vector<FS_FAT32::File
                 fileInfo.fileAccessTime.time_year = ((fileEntry->fileAccessDate & 0xFE00) >> 9) + 1980;
                 
                 fileInfo.fileSize = fileEntry->fileSize;
-                fileInfo.fileLocation = (fileEntry->fileLocationHigh << 16) + fileEntry->fileLocationLow;
+                fileInfo.fileLocation = (uint32_t)((fileEntry->fileLocationHigh << 16) + fileEntry->fileLocationLow);
                 
                 buf->push_back(fileInfo);
                 
@@ -92,12 +92,12 @@ std::vector<FS_FAT32::FileInfo>* FS_FAT32::getDirList(std::vector<FS_FAT32::File
             }
             else if (fileEntry->fileAttr == 0x0F)
             {
-                char buf[14] = { 0 };
+                char filename[14] = { 0 };
                 FAT32_lfn* entry = (FAT32_lfn*)fileEntry;
-                str16to8((uint8_t*)buf, entry->lfnFileName1, 5);
-                str16to8((uint8_t*)(buf + 5), entry->lfnFileName2, 6);
-                str16to8((uint8_t*)(buf + 11), entry->lfnFileName3, 2);
-                lfnBuf.insert(0, buf);
+                str16to8((uint8_t*)filename, entry->lfnFileName1, 5);
+                str16to8((uint8_t*)(filename + 5), entry->lfnFileName2, 6);
+                str16to8((uint8_t*)(filename + 11), entry->lfnFileName3, 2);
+                lfnBuf.insert(0, filename);
             }
         }
     }

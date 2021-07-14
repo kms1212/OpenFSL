@@ -15,10 +15,10 @@ FS_FAT32::FILE::FILE(FS_FAT32* fileSystem_, FS_FAT32::FileInfo fileInfo_, FSL_Op
     fileSystem = fileSystem_;
     fileInfo = fileInfo_;
     openMode = openMode_;
-	
-	fileCluster = new LinkedCluster(fileSystem, fileInfo.fileLocation);
+    
+    fileCluster = new LinkedCluster(fileSystem, fileInfo.fileLocation);
 }
 
 FS_FAT32::FILE::~FILE() {
-	delete fileCluster;
+    delete fileCluster;
 }
