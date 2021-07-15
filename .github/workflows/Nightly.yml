@@ -9,95 +9,173 @@ env:
   BUILD_TYPE: Release
   
 jobs:
-  build:
-    strategy:
-      fail-fast: false
-      matrix:
-        platform: [ x86, x64 ]
-        os: [ ubuntu-latest, windows-latest, macos-latest ]
-        pkg: [ ZIP, TGZ, DEB, NSIS ]
-        exclude:
-        - os: windows-latest
-          pkg: DEB
-        - os: ubuntu-latest
-          pkg: NSIS
-        - os: macos-latest
-          pkg: DEB
-        - os: macos-latest
-          pkg: NSIS
-        - os: ubuntu-latest
-          platform: x86
-        - os: macos-latest
-          platform: x86
-        
-    runs-on: '${{ matrix.os }}'
-    name: '${{ matrix.os }}-${{ matrix.platform }}-${{ matrix.pkg }}: Deploy'
+  linux-x64-build:
+    runs-on: 'ubuntu-latest'
+    name: 'Linux-x64: Deploy'
     steps:
     - uses: actions/checkout@v2
       
     - name: Install Required Software
       run: |
-        if [ "$RUNNER_OS" == "Linux" ]; then
-          sudo apt-get update
-          sudo apt-get install cmake zip
-        elif [ "$RUNNER_OS" == "Windows" ]; then
-          choco install cmake 7zip nsis
-        elif [ "$RUNNER_OS" == "macOS" ]; then
-          brew install cmake p7zip make
-        else
-          echo "$RUNNER_OS not supported"
-          exit 1
-        fi
+        sudo apt-get update
+        sudo apt-get install cmake zip
       shell: bash
       
-    - name: Configure CMake
+    - name: Build & Test & Pack
       run: |
-        if [ "$RUNNER_OS" == "Linux" ]; then
-          cmake -G "Unix Makefiles" -S. -Bbuild -DBUILD_TESTING=true -DDOXYGEN_GENERATE=false -DNO_BUILD=false -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DPACKAGE_GENERATE=true -DPACKAGE_GENERATOR=${{matrix.pkg}}
-        elif [ "$RUNNER_OS" == "Windows" ]; then
-          if [ "${{matrix.platform}}" == "x86" ]; then
-            cmake -G "Visual Studio 16 2019" -A Win32 -S. -Bbuild -DBUILD_TESTING=true -DDOXYGEN_GENERATE=false -DNO_BUILD=false -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DPACKAGE_GENERATE=true -DPACKAGE_GENERATOR=${{matrix.pkg}}
-          elif [ "${{matrix.platform}}" == "x64" ]; then
-            cmake -G "Visual Studio 16 2019" -A x64 -S. -Bbuild -DBUILD_TESTING=true -DDOXYGEN_GENERATE=false -DNO_BUILD=false -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DPACKAGE_GENERATE=true -DPACKAGE_GENERATOR=${{matrix.pkg}}
-          else
-            echo "${{matrix.platform}} not supported"
-            exit 1
-          fi
-        elif [ "$RUNNER_OS" == "macOS" ]; then
-          cmake -G "Unix Makefiles" -S. -Bbuild -DBUILD_TESTING=true -DDOXYGEN_GENERATE=false -Bbuild -DNO_BUILD=false -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DPACKAGE_GENERATE=true -DPACKAGE_GENERATOR=${{matrix.pkg}}
-        else
-          echo "$RUNNER_OS not supported"
-          exit 1
-        fi
-      shell: bash
-      
-    - name: Build
-      run: |
-        if [ "$RUNNER_OS" == "Linux" ]; then
-          cmake --build build
-        elif [ "$RUNNER_OS" == "Windows" ]; then
-          cmake --build build --config ${{env.BUILD_TYPE}}
-        elif [ "$RUNNER_OS" == "macOS" ]; then
-          cmake --build build
-        else
-          echo "$RUNNER_OS not supported"
-          exit 1
-        fi
-      shell: bash
-      
-    - name: Test
-      run: |
+        cmake -G "Unix Makefiles" -S. -Bbuild -DBUILD_TESTING=true -DDOXYGEN_GENERATE=false -DNO_BUILD=false -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DPACKAGE_GENERATE=true -DPACKAGE_GENERATOR=TGZ
+        cmake --build build
+        cd build
         ctest -C ${{env.BUILD_TYPE}}
-      shell: bash
-      working-directory: ${{github.workspace}}/build
-      
-    - name: Make Package
-      run: |
         cpack
         mkdir packages
+        cd ..
+        
+        cmake -G "Unix Makefiles" -S. -Bbuild -DBUILD_TESTING=true -DDOXYGEN_GENERATE=false -DNO_BUILD=false -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DPACKAGE_GENERATE=true -DPACKAGE_GENERATOR=ZIP
+        cmake --build build
+        cd build
+        ctest -C ${{env.BUILD_TYPE}}
+        cpack
+        cd ..
+        
+        cmake -G "Unix Makefiles" -S. -Bbuild -DBUILD_TESTING=true -DDOXYGEN_GENERATE=false -DNO_BUILD=false -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DPACKAGE_GENERATE=true -DPACKAGE_GENERATOR=DEB
+        cmake --build build
+        cd build
+        ctest -C ${{env.BUILD_TYPE}}
+        cpack
         cp OpenFSL-* packages/
       shell: bash
-      working-directory: ${{github.workspace}}/build
+      
+    - name: Push to temporary branch
+      uses: JamesIves/github-pages-deploy-action@4.1.4
+      with:
+        branch: release-temp
+        folder: ./build/packages/
+        token: ${{ secrets.API_TOKEN_GITHUB }}
+        clean: false
+        
+        
+  windows-x64-build:
+    needs: [linux-x64-build]
+    runs-on: 'windows-latest'
+    name: 'Windows-x64: Deploy'
+    steps:
+    - uses: actions/checkout@v2
+      
+    - name: Install Required Software
+      run: |
+        choco install cmake 7zip nsis
+      shell: bash
+      
+    - name: Build & Test & Pack
+      run: |
+        cmake -G "Visual Studio 16 2019" -A x64 -S. -Bbuild -DBUILD_TESTING=true -DDOXYGEN_GENERATE=false -DNO_BUILD=false -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DPACKAGE_GENERATE=true -DPACKAGE_GENERATOR=TGZ
+        cmake --build build --config ${{env.BUILD_TYPE}}
+        cd build
+        ctest -C ${{env.BUILD_TYPE}}
+        cpack
+        mkdir packages
+        cd ..
+        
+        cmake -G "Visual Studio 16 2019" -A x64 -S. -Bbuild -DBUILD_TESTING=true -DDOXYGEN_GENERATE=false -DNO_BUILD=false -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DPACKAGE_GENERATE=true -DPACKAGE_GENERATOR=ZIP
+        cmake --build build --config ${{env.BUILD_TYPE}}
+        cd build
+        ctest -C ${{env.BUILD_TYPE}}
+        cpack
+        cd ..
+        
+        cmake -G "Visual Studio 16 2019" -A x64 -S. -Bbuild -DBUILD_TESTING=true -DDOXYGEN_GENERATE=false -DNO_BUILD=false -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DPACKAGE_GENERATE=true -DPACKAGE_GENERATOR=NSIS
+        cmake --build build --config ${{env.BUILD_TYPE}}
+        cd build
+        ctest -C ${{env.BUILD_TYPE}}
+        cpack
+        cp OpenFSL-* packages/
+      shell: bash
+      
+    - name: Push to temporary branch
+      uses: JamesIves/github-pages-deploy-action@4.1.4
+      with:
+        branch: release-temp
+        folder: ./build/packages/
+        token: ${{ secrets.API_TOKEN_GITHUB }}
+        clean: false
+        
+        
+  windows-x86-build:
+    needs: [windows-x64-build]
+    runs-on: 'windows-latest'
+    name: 'Windows-x86: Deploy'
+    steps:
+    - uses: actions/checkout@v2
+      
+    - name: Install Required Software
+      run: |
+        choco install cmake 7zip nsis
+      shell: bash
+      
+    - name: Build & Test & Pack
+      run: |
+        cmake -G "Visual Studio 16 2019" -A Win32 -S. -Bbuild -DBUILD_TESTING=true -DDOXYGEN_GENERATE=false -DNO_BUILD=false -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DPACKAGE_GENERATE=true -DPACKAGE_GENERATOR=TGZ
+        cmake --build build --config ${{env.BUILD_TYPE}}
+        cd build
+        ctest -C ${{env.BUILD_TYPE}}
+        cpack
+        mkdir packages
+        cd ..
+        
+        cmake -G "Visual Studio 16 2019" -A Win32 -S. -Bbuild -DBUILD_TESTING=true -DDOXYGEN_GENERATE=false -DNO_BUILD=false -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DPACKAGE_GENERATE=true -DPACKAGE_GENERATOR=ZIP
+        cmake --build build --config ${{env.BUILD_TYPE}}
+        cd build
+        ctest -C ${{env.BUILD_TYPE}}
+        cpack
+        cd ..
+        
+        cmake -G "Visual Studio 16 2019" -A Win32 -S. -Bbuild -DBUILD_TESTING=true -DDOXYGEN_GENERATE=false -DNO_BUILD=false -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DPACKAGE_GENERATE=true -DPACKAGE_GENERATOR=NSIS
+        cmake --build build --config ${{env.BUILD_TYPE}}
+        cd build
+        ctest -C ${{env.BUILD_TYPE}}
+        cpack
+        cp OpenFSL-* packages/
+      shell: bash
+      
+    - name: Push to temporary branch
+      uses: JamesIves/github-pages-deploy-action@4.1.4
+      with:
+        branch: release-temp
+        folder: ./build/packages/
+        token: ${{ secrets.API_TOKEN_GITHUB }}
+        clean: false
+        
+        
+  macos-x64-build:
+    needs: [windows-x86-build]
+    runs-on: 'macos-latest'
+    name: 'macOS-x64: Deploy'
+    steps:
+    - uses: actions/checkout@v2
+      
+    - name: Install Required Software
+      run: |
+        brew install cmake p7zip make
+      shell: bash
+      
+    - name: Build & Test & Pack
+      run: |
+        cmake -G "Unix Makefiles" -S. -Bbuild -DBUILD_TESTING=true -DDOXYGEN_GENERATE=false -DNO_BUILD=false -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DPACKAGE_GENERATE=true -DPACKAGE_GENERATOR=TGZ
+        cmake --build build
+        cd build
+        ctest -C ${{env.BUILD_TYPE}}
+        cpack
+        mkdir packages
+        cd ..
+        
+        cmake -G "Unix Makefiles" -S. -Bbuild -DBUILD_TESTING=true -DDOXYGEN_GENERATE=false -DNO_BUILD=false -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DPACKAGE_GENERATE=true -DPACKAGE_GENERATOR=ZIP
+        cmake --build build
+        cd build
+        ctest -C ${{env.BUILD_TYPE}}
+        cpack
+        cp OpenFSL-* packages/
+      shell: bash
       
     - name: Push to temporary branch
       uses: JamesIves/github-pages-deploy-action@4.1.4
