@@ -26,6 +26,7 @@ jobs:
         git clone https://github.com/kms1212/OpenFSL/ ./build/packages
         cd ./build/packages
         git checkout --orphan release-temp
+        rm -rf .gitignore .github .gitmodules
         rm -rf ./*
       shell: bash
       
@@ -88,7 +89,6 @@ jobs:
         cd build
         ctest -C ${{env.BUILD_TYPE}}
         cpack
-        mkdir packages
         cd ..
         
         cmake -G "Visual Studio 16 2019" -A x64 -S. -Bbuild -DBUILD_TESTING=true -DDOXYGEN_GENERATE=false -DNO_BUILD=false -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DPACKAGE_GENERATE=true -DPACKAGE_GENERATOR=ZIP
@@ -141,7 +141,6 @@ jobs:
         cd build
         ctest -C ${{env.BUILD_TYPE}}
         cpack
-        mkdir packages
         cd ..
         
         cmake -G "Visual Studio 16 2019" -A Win32 -S. -Bbuild -DBUILD_TESTING=true -DDOXYGEN_GENERATE=false -DNO_BUILD=false -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DPACKAGE_GENERATE=true -DPACKAGE_GENERATOR=ZIP
@@ -194,7 +193,6 @@ jobs:
         cd build
         ctest -C ${{env.BUILD_TYPE}}
         cpack
-        mkdir packages
         cd ..
         
         cmake -G "Unix Makefiles" -S. -Bbuild -DBUILD_TESTING=true -DDOXYGEN_GENERATE=false -DNO_BUILD=false -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DPACKAGE_GENERATE=true -DPACKAGE_GENERATOR=ZIP
