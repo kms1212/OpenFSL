@@ -1,13 +1,13 @@
 <map id="openFSL::FS_FAT32" name="openFSL::FS_FAT32">
-<area shape="rect" id="node1" title="FAT32 imeplementation." alt="" coords="847,505,1021,832"/>
-<area shape="rect" id="node2" href="$structopen_f_s_l_1_1_f_s___f_a_t32_1_1fat_b_p_b_struct.html" title="FAT32 BIOS Parameter Block." alt="" coords="665,292,835,428"/>
-<area shape="rect" id="node3" title=" " alt="" coords="381,5,455,83"/>
-<area shape="rect" id="node4" title=" " alt="" coords="13,5,87,83"/>
-<area shape="rect" id="node11" href="$structopen_f_s_l_1_1_f_s___f_a_t32_1_1fat_f_s_i_n_f_o_struct.html" title="FAT32 FSINFO structure." alt="" coords="489,314,641,406"/>
-<area shape="rect" id="node5" title=" " alt="" coords="717,5,783,83"/>
-<area shape="rect" id="node6" href="$classopen_f_s_l_1_1_disk_device.html" title="Disk driver." alt="" coords="1219,292,1385,428"/>
-<area shape="rect" id="node7" title=" " alt="" coords="1312,5,1372,83"/>
-<area shape="rect" id="node8" title=" " alt="" coords="1243,5,1281,83"/>
-<area shape="rect" id="node9" title=" " alt="" coords="1035,321,1086,399"/>
-<area shape="rect" id="node10" title=" " alt="" coords="1135,321,1194,399"/>
+<area shape="rect" id="node1" title="FAT32 imeplementation." alt="" coords="413,505,586,832"/>
+<area shape="rect" id="node2" href="$classopen_f_s_l_1_1_disk_device.html" title="Disk driver." alt="" coords="19,292,185,428"/>
+<area shape="rect" id="node3" title=" " alt="" coords="75,5,135,83"/>
+<area shape="rect" id="node4" title=" " alt="" coords="5,5,44,83"/>
+<area shape="rect" id="node5" title=" " alt="" coords="257,5,331,83"/>
+<area shape="rect" id="node9" href="$structopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_a_t32__fsinfo.html" title="FAT32 FSINFO structure." alt="" coords="359,314,511,406"/>
+<area shape="rect" id="node10" href="$structopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_a_t32__bpb.html" title="FAT32 BIOS Parameter Block." alt="" coords="905,292,1075,428"/>
+<area shape="rect" id="node6" title=" " alt="" coords="770,5,837,83"/>
+<area shape="rect" id="node7" title=" " alt="" coords="535,321,586,399"/>
+<area shape="rect" id="node8" title=" " alt="" coords="657,321,715,399"/>
+<area shape="rect" id="node11" title=" " alt="" coords="1005,5,1079,83"/>
 </map>
