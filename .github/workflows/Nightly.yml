@@ -186,7 +186,7 @@ jobs:
         clean: false
         
   release:
-    needs: [build]
+    needs: [macos-x64-build]
     name: Release
     runs-on: ubuntu-latest
     steps:
