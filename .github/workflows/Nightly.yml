@@ -94,31 +94,30 @@ jobs:
     - name: Make Package
       run: |
         cpack
+        mkdir packages
+        cp OpenFSL-* packages/
       shell: bash
       working-directory: ${{github.workspace}}/build
       
-    - name: Create Release
-      id: create_release
-      uses: actions/create-release@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.API_TOKEN_GITHUB }}
+    - name: Push to temporary branch
+      uses: JamesIves/github-pages-deploy-action@4.1.4
       with:
-        tag_name: nightly
-        release_name: Nightly Build
-        draft: false
-        prerelease: true
+        branch: release-temp
+        folder: ./build/packages/
+        token: ${{ secrets.API_TOKEN_GITHUB }}
         
-    - name: Upload Release Asset
-      id: upload-release-asset 
-      uses: actions/upload-release-asset@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: ./build/OpenFSL-*
+  release:
+    needs: [build]
+    name: Release
+    runs-on: ubuntu-latest
+    steps:
+    - name: Clone release-temp branch of OpenFSL
+      run: |
+        git clone -b release-temp https://github.com/kms1212/OpenFSL
+      shell: bash
       
       
-    - name: "Build & test"
+    - name: Update assets
       uses: "marvinpinto/action-automatic-releases@latest"
       with:
         repo_token: "${{ secrets.API_TOKEN_GITHUB }}"
@@ -126,4 +125,9 @@ jobs:
         prerelease: true
         title: "Nightly build"
         files: |
-          build/OpenFSL-*
+          OpenFSL/*
+          
+    - name: Delete temporary branch
+      run: |
+        git branch -d release-temp
+      shell: bash
