@@ -21,6 +21,13 @@ jobs:
         sudo apt-get install cmake zip
       shell: bash
       
+    - name: Create Temp Branch
+      uses: peterjgrainger/action-create-branch@v2.0.1
+      env:
+        GITHUB_TOKEN: ${{ secrets.API_TOKEN_GITHUB }}
+      with:
+        branch: 'release-temp'
+      
     - name: Build & Test & Pack
       run: |
         git clone -b release-temp https://github.com/kms1212/OpenFSL/ ./build/packages
@@ -67,7 +74,7 @@ jobs:
       
     - name: Install Required Software
       run: |
-        choco install cmake 7zip nsis rsync
+        choco install cmake 7zip nsis
       shell: bash
       
     - name: Build & Test & Pack
@@ -118,7 +125,7 @@ jobs:
       
     - name: Install Required Software
       run: |
-        choco install cmake 7zip nsis rsync
+        choco install cmake 7zip nsis
       shell: bash
       
     - name: Build & Test & Pack
