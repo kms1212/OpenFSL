@@ -6,7 +6,7 @@ include(${CMAKE_SOURCE_DIR}/cmakeModules/FindZIP.cmake)
 set(BUILD_TESTING true CACHE BOOL "Build test file?")
 set(DOXYGEN_GENERATE false CACHE BOOL "Generate doxygen file?")
 set(NO_BUILD false CACHE BOOL "Skip build?")
-set(PACKAGE_GENERATE true CACHE BOOL "Generate package?")
+set(PACKAGE_GENERATE false CACHE BOOL "Generate package?")
 set(PACKAGE_TYPE "NIGHTLY" CACHE STRING "Package type (NIGHTLY, BETA, RELEASE)")
 set(PACKAGE_GENERATOR "ZIP" CACHE STRING "Package generator")
 
@@ -50,7 +50,7 @@ if (NOT NO_BUILD)
         endif()
         set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}")
     elseif (CMAKE_CXX_COMPILER_ID STREQUAL "MSVC")
-        set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /EHsc /Wall /wd5045 /wd4668 /wd4514")
+        set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /EHsc /W3 /wd5045 /wd4668 /wd4514")
         set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS true)
         set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
     endif()
@@ -148,11 +148,15 @@ if (NOT NO_BUILD)
             set(CPACK_COMPONENT_COMP_OFSL_DOC_DISPLAY_NAME "OpenFSL")
             set(CPACK_COMPONENT_COMP_OFSL_DOC_DESCRIPTION "OpenFSL documents.")
             
+            set(CPACK_COMPONENT_GROUP_GROUP_LIBRARIES_DISPLAY_NAME "Libraries")
             set(CPACK_COMPONENT_GROUP_GROUP_LIBRARIES_DESCRIPTION "List of libraries provided by this installer.")
             set(CPACK_COMPONENT_GROUP_GROUP_LIBRARIES_EXPANDED true)
             set(CPACK_COMPONENT_GROUP_GROUP_LIBRARIES_BOLD_TITLE true)
             
+            set(CPACK_COMPONENT_GROUP_GROUP_DEVEL_DISPLAY_NAME "Devel")
             set(CPACK_COMPONENT_GROUP_GROUP_DEVEL_DESCRIPTION "Header files for development.")
+			
+            set(CPACK_COMPONENT_GROUP_GROUP_DOCUMENTS_DISPLAY_NAME "Docs")
             
             set(CPACK_COMPONENT_GROUP_GROUP_DOCUMENTS_DESCRIPTION "List of documents about package.")
             
@@ -166,7 +170,7 @@ if (NOT NO_BUILD)
             # GROUP_DOCUMENTS
             #   COMP_OFSL_DOC
             
-            set(CPACK_COMPONENTS_ALL COMP_OFSL_BINARY COMP_OFSL_BINARY COMP_OFSL_DOC)
+            set(CPACK_COMPONENTS_ALL COMP_OFSL_BINARY COMP_OFSL_DEVEL COMP_OFSL_DOC)
             
             include(CPack)
         elseif (PACKAGE_TYPE STREQUAL "BETA")
