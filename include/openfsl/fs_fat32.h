@@ -79,7 +79,7 @@ namespace openFSL {
          *
          */
 #pragma pack (push, 1)
-        typedef struct fatBPBStruct {
+        typedef struct FAT32_bpb {
             uint8_t        bpbJumpCode[3];
             uint8_t        bpbOEMName[8];
             uint16_t       bpbBytesPerSector;
@@ -131,7 +131,7 @@ namespace openFSL {
          *
          */
 #pragma pack (push, 1)
-        typedef struct fatFSINFOStruct {
+        typedef struct FAT32_fsinfo {
             uint32_t       fsinfoSignature1;
             uint8_t        fsinfoReserved1[480];
             uint32_t       fsinfoSignature2;
@@ -165,7 +165,7 @@ namespace openFSL {
          *
          */
     #pragma pack (push, 1)
-        typedef struct fileEntryStruct {
+        typedef struct FAT32_entry {
             uint8_t        fileName[8];
             uint8_t        fileExt[3];
             uint8_t        fileAttr;
@@ -200,7 +200,7 @@ namespace openFSL {
          * 
          */
 #pragma pack (push, 1)
-        typedef struct lfnEntryStruct {
+        typedef struct FAT32_lfn {
             uint8_t        lfnSeqNum;
             uint16_t       lfnFileName1[5];
             uint8_t        lfnAttr;
@@ -224,7 +224,7 @@ namespace openFSL {
          * uint8_t            | cacheType
          * uint8_t*           | cacheData
          */
-        typedef struct cacheEntryStruct {
+        typedef struct FAT32_cacheEntry {
             uint8_t*       cacheData = NULL;
             std::string    cacheKey = "";
             uint32_t       cacheIndex = 0;
@@ -263,7 +263,7 @@ namespace openFSL {
          * uint32_t           | fileSize
          *
          */
-        typedef struct fileInfoStruct {
+        typedef struct FileInfo {
             std::string    fileName = "";
             FSL_Time       fileCreateTime = {0};
             FSL_Time       fileAccessTime = {0};

@@ -30,7 +30,7 @@ namespace openFSL {
      * time_year   | Year
      *
      */
-    typedef struct fileTimeStruct {
+    typedef struct FSL_Time {
         int       time_millis;
         int       time_sec;
         int       time_min;

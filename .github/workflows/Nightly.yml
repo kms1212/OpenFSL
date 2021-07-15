@@ -84,21 +84,21 @@ jobs:
       run: |
         git clone -b release-temp https://github.com/kms1212/OpenFSL/ ./build/packages
         
-        cmake -G "Visual Studio 16 2019" -A x64 -S. -Bbuild -DBUILD_TESTING=true -DDOXYGEN_GENERATE=false -DNO_BUILD=false -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DPACKAGE_GENERATE=true -DPACKAGE_GENERATOR=TGZ
+        cmake -G "Visual Studio 16 2019" -A x64 -S. -Bbuild -DBUILD_TESTING=true -DDOXYGEN_GENERATE=false -DNO_BUILD=false -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DPACKAGE_GENERATE=true -DPACKAGE_GENERATOR=TGZ -DPACKAGE_TYPE=NIGHTLY
         cmake --build build --config ${{env.BUILD_TYPE}}
         cd build
         ctest -C ${{env.BUILD_TYPE}}
         cpack
         cd ..
         
-        cmake -G "Visual Studio 16 2019" -A x64 -S. -Bbuild -DBUILD_TESTING=true -DDOXYGEN_GENERATE=false -DNO_BUILD=false -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DPACKAGE_GENERATE=true -DPACKAGE_GENERATOR=ZIP
+        cmake -G "Visual Studio 16 2019" -A x64 -S. -Bbuild -DBUILD_TESTING=true -DDOXYGEN_GENERATE=false -DNO_BUILD=false -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DPACKAGE_GENERATE=true -DPACKAGE_GENERATOR=ZIP -DPACKAGE_TYPE=NIGHTLY
         cmake --build build --config ${{env.BUILD_TYPE}}
         cd build
         ctest -C ${{env.BUILD_TYPE}}
         cpack
         cd ..
         
-        cmake -G "Visual Studio 16 2019" -A x64 -S. -Bbuild -DBUILD_TESTING=true -DDOXYGEN_GENERATE=false -DNO_BUILD=false -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DPACKAGE_GENERATE=true -DPACKAGE_GENERATOR=NSIS
+        cmake -G "Visual Studio 16 2019" -A x64 -S. -Bbuild -DBUILD_TESTING=true -DDOXYGEN_GENERATE=false -DNO_BUILD=false -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DPACKAGE_GENERATE=true -DPACKAGE_GENERATOR=NSIS -DPACKAGE_TYPE=NIGHTLY
         cmake --build build --config ${{env.BUILD_TYPE}}
         cd build
         ctest -C ${{env.BUILD_TYPE}}
@@ -136,21 +136,21 @@ jobs:
       run: |
         git clone -b release-temp https://github.com/kms1212/OpenFSL/ ./build/packages
         
-        cmake -G "Visual Studio 16 2019" -A Win32 -S. -Bbuild -DBUILD_TESTING=true -DDOXYGEN_GENERATE=false -DNO_BUILD=false -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DPACKAGE_GENERATE=true -DPACKAGE_GENERATOR=TGZ
+        cmake -G "Visual Studio 16 2019" -A Win32 -S. -Bbuild -DBUILD_TESTING=true -DDOXYGEN_GENERATE=true -DNO_BUILD=false -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DPACKAGE_GENERATE=true -DPACKAGE_GENERATOR=TGZ
         cmake --build build --config ${{env.BUILD_TYPE}}
         cd build
         ctest -C ${{env.BUILD_TYPE}}
         cpack
         cd ..
         
-        cmake -G "Visual Studio 16 2019" -A Win32 -S. -Bbuild -DBUILD_TESTING=true -DDOXYGEN_GENERATE=false -DNO_BUILD=false -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DPACKAGE_GENERATE=true -DPACKAGE_GENERATOR=ZIP
+        cmake -G "Visual Studio 16 2019" -A Win32 -S. -Bbuild -DBUILD_TESTING=true -DDOXYGEN_GENERATE=true -DNO_BUILD=false -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DPACKAGE_GENERATE=true -DPACKAGE_GENERATOR=ZIP
         cmake --build build --config ${{env.BUILD_TYPE}}
         cd build
         ctest -C ${{env.BUILD_TYPE}}
         cpack
         cd ..
         
-        cmake -G "Visual Studio 16 2019" -A Win32 -S. -Bbuild -DBUILD_TESTING=true -DDOXYGEN_GENERATE=false -DNO_BUILD=false -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DPACKAGE_GENERATE=true -DPACKAGE_GENERATOR=NSIS
+        cmake -G "Visual Studio 16 2019" -A Win32 -S. -Bbuild -DBUILD_TESTING=true -DDOXYGEN_GENERATE=true -DNO_BUILD=false -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DPACKAGE_GENERATE=true -DPACKAGE_GENERATOR=NSIS
         cmake --build build --config ${{env.BUILD_TYPE}}
         cd build
         ctest -C ${{env.BUILD_TYPE}}
