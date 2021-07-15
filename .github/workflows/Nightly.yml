@@ -54,6 +54,8 @@ jobs:
         cp OpenFSL-* packages/
         
         cd packages
+        git config --global user.email "kms1212g@gmail.com"
+        git config --global user.name "kms1212"
         git add -A
         git commit -m "Update" -a
       shell: bash
@@ -104,6 +106,8 @@ jobs:
         cp OpenFSL-* packages/
         
         cd packages
+        git config --global user.email "kms1212g@gmail.com"
+        git config --global user.name "kms1212"
         git add -A
         git commit -m "Update" -a
       shell: bash
@@ -155,6 +159,8 @@ jobs:
         cp OpenFSL-* packages/
         
         cd packages
+        git config --global user.email "kms1212g@gmail.com"
+        git config --global user.name "kms1212"
         git add -A
         git commit -m "Update" -a
       shell: bash
@@ -199,6 +205,8 @@ jobs:
         cp OpenFSL-* packages/
         
         cd packages
+        git config --global user.email "kms1212g@gmail.com"
+        git config --global user.name "kms1212"
         git add -A
         git commit -m "Update" -a
       shell: bash
