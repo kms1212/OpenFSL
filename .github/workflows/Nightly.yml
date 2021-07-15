@@ -23,12 +23,13 @@ jobs:
       
     - name: Build & Test & Pack
       run: |
+        git clone -b release-temp https://github.com/kms1212/OpenFSL/ ./build/packages
+        
         cmake -G "Unix Makefiles" -S. -Bbuild -DBUILD_TESTING=true -DDOXYGEN_GENERATE=false -DNO_BUILD=false -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DPACKAGE_GENERATE=true -DPACKAGE_GENERATOR=TGZ
         cmake --build build
         cd build
         ctest -C ${{env.BUILD_TYPE}}
         cpack
-        mkdir packages
         cd ..
         
         cmake -G "Unix Makefiles" -S. -Bbuild -DBUILD_TESTING=true -DDOXYGEN_GENERATE=false -DNO_BUILD=false -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DPACKAGE_GENERATE=true -DPACKAGE_GENERATOR=ZIP
@@ -44,16 +45,18 @@ jobs:
         ctest -C ${{env.BUILD_TYPE}}
         cpack
         cp OpenFSL-* packages/
+        
+        cd packages
+        git add -A
+        git commit -m "Update" -a
       shell: bash
       
     - name: Push to temporary branch
-      uses: JamesIves/github-pages-deploy-action@4.1.4
+      uses: ad-m/github-push-action@master
       with:
+        github_token: ${{ secrets.API_TOKEN_GITHUB }}
         branch: release-temp
-        folder: ./build/packages/
-        token: ${{ secrets.API_TOKEN_GITHUB }}
-        clean: false
-        
+        directory: ./build/packages/
         
   windows-x64-build:
     needs: [linux-x64-build]
@@ -69,6 +72,8 @@ jobs:
       
     - name: Build & Test & Pack
       run: |
+        git clone -b release-temp https://github.com/kms1212/OpenFSL/ ./build/packages
+        
         cmake -G "Visual Studio 16 2019" -A x64 -S. -Bbuild -DBUILD_TESTING=true -DDOXYGEN_GENERATE=false -DNO_BUILD=false -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DPACKAGE_GENERATE=true -DPACKAGE_GENERATOR=TGZ
         cmake --build build --config ${{env.BUILD_TYPE}}
         cd build
@@ -90,15 +95,18 @@ jobs:
         ctest -C ${{env.BUILD_TYPE}}
         cpack
         cp OpenFSL-* packages/
+        
+        cd packages
+        git add -A
+        git commit -m "Update" -a
       shell: bash
       
     - name: Push to temporary branch
-      uses: JamesIves/github-pages-deploy-action@4.1.4
+      uses: ad-m/github-push-action@master
       with:
+        github_token: ${{ secrets.API_TOKEN_GITHUB }}
         branch: release-temp
-        folder: ./build/packages/
-        token: ${{ secrets.API_TOKEN_GITHUB }}
-        clean: false
+        directory: ./build/packages/
         
         
   windows-x86-build:
@@ -115,6 +123,8 @@ jobs:
       
     - name: Build & Test & Pack
       run: |
+        git clone -b release-temp https://github.com/kms1212/OpenFSL/ ./build/packages
+        
         cmake -G "Visual Studio 16 2019" -A Win32 -S. -Bbuild -DBUILD_TESTING=true -DDOXYGEN_GENERATE=false -DNO_BUILD=false -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DPACKAGE_GENERATE=true -DPACKAGE_GENERATOR=TGZ
         cmake --build build --config ${{env.BUILD_TYPE}}
         cd build
@@ -136,15 +146,18 @@ jobs:
         ctest -C ${{env.BUILD_TYPE}}
         cpack
         cp OpenFSL-* packages/
+        
+        cd packages
+        git add -A
+        git commit -m "Update" -a
       shell: bash
       
     - name: Push to temporary branch
-      uses: JamesIves/github-pages-deploy-action@4.1.4
+      uses: ad-m/github-push-action@master
       with:
+        github_token: ${{ secrets.API_TOKEN_GITHUB }}
         branch: release-temp
-        folder: ./build/packages/
-        token: ${{ secrets.API_TOKEN_GITHUB }}
-        clean: false
+        directory: ./build/packages/
         
         
   macos-x64-build:
@@ -161,6 +174,8 @@ jobs:
       
     - name: Build & Test & Pack
       run: |
+        git clone -b release-temp https://github.com/kms1212/OpenFSL/ ./build/packages
+        
         cmake -G "Unix Makefiles" -S. -Bbuild -DBUILD_TESTING=true -DDOXYGEN_GENERATE=false -DNO_BUILD=false -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DPACKAGE_GENERATE=true -DPACKAGE_GENERATOR=TGZ
         cmake --build build
         cd build
@@ -175,15 +190,18 @@ jobs:
         ctest -C ${{env.BUILD_TYPE}}
         cpack
         cp OpenFSL-* packages/
+        
+        cd packages
+        git add -A
+        git commit -m "Update" -a
       shell: bash
       
     - name: Push to temporary branch
-      uses: JamesIves/github-pages-deploy-action@4.1.4
+      uses: ad-m/github-push-action@master
       with:
+        github_token: ${{ secrets.API_TOKEN_GITHUB }}
         branch: release-temp
-        folder: ./build/packages/
-        token: ${{ secrets.API_TOKEN_GITHUB }}
-        clean: false
+        directory: ./build/packages/
         
   release:
     needs: [macos-x64-build]
