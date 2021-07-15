@@ -64,7 +64,7 @@ jobs:
       
     - name: Install Required Software
       run: |
-        choco install cmake 7zip nsis
+        choco install cmake 7zip nsis rsync
       shell: bash
       
     - name: Build & Test & Pack
@@ -110,7 +110,7 @@ jobs:
       
     - name: Install Required Software
       run: |
-        choco install cmake 7zip nsis
+        choco install cmake 7zip nsis rsync
       shell: bash
       
     - name: Build & Test & Pack
