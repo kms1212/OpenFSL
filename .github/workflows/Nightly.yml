@@ -105,7 +105,7 @@ jobs:
         branch: release-temp
         folder: ./build/packages/
         token: ${{ secrets.API_TOKEN_GITHUB }}
-        clean: true
+        clean: false
         
   release:
     needs: [build]
