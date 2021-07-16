@@ -1,12 +1,10 @@
 var searchData=
 [
-  ['lastfetchedcluster_355',['lastFetchedCluster',['../classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#ac73c9eac3a2a94aa108ccb3986915448',1,'openFSL::FS_FAT32::LinkedCluster']]],
-  ['lfnattr_356',['lfnAttr',['../structopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_a_t32__lfn.html#af584ce62c8214b4de4960d396bfebf4e',1,'openFSL::FS_FAT32::FAT32_lfn']]],
-  ['lfnchecksum_357',['lfnCheckSum',['../structopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_a_t32__lfn.html#abb43399bafe856426198ddb14c8c009d',1,'openFSL::FS_FAT32::FAT32_lfn']]],
-  ['lfnfilename1_358',['lfnFileName1',['../structopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_a_t32__lfn.html#a78302b2b05eca2c656f68c9d69c964f6',1,'openFSL::FS_FAT32::FAT32_lfn']]],
-  ['lfnfilename2_359',['lfnFileName2',['../structopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_a_t32__lfn.html#a594b9af6d29a638de86e65e0a2f79448',1,'openFSL::FS_FAT32::FAT32_lfn']]],
-  ['lfnfilename3_360',['lfnFileName3',['../structopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_a_t32__lfn.html#a7b131a6867a1bc3478768db6451a29cd',1,'openFSL::FS_FAT32::FAT32_lfn']]],
-  ['lfnlocationlow_361',['lfnLocationLow',['../structopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_a_t32__lfn.html#aa6e8312b9cbc44001bc8123d4e440faf',1,'openFSL::FS_FAT32::FAT32_lfn']]],
-  ['lfnreserved1_362',['lfnReserved1',['../structopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_a_t32__lfn.html#ab8cb1e6e45dddd93e94b8029dd598348',1,'openFSL::FS_FAT32::FAT32_lfn']]],
-  ['lfnseqnum_363',['lfnSeqNum',['../structopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_a_t32__lfn.html#af5dd34dbd26d319a2895ac3a34738cce',1,'openFSL::FS_FAT32::FAT32_lfn']]]
+  ['time_5fday_94',['time_day',['../structopen_f_s_l_1_1_f_s_l___time.html#abea2195e095118d17836411aadac78d5',1,'openFSL::FSL_Time']]],
+  ['time_5fhour_95',['time_hour',['../structopen_f_s_l_1_1_f_s_l___time.html#a713be1a83589e8287962f1f7e10581c5',1,'openFSL::FSL_Time']]],
+  ['time_5fmillis_96',['time_millis',['../structopen_f_s_l_1_1_f_s_l___time.html#ad7b53357a4828f1979b37ba901bf6c04',1,'openFSL::FSL_Time']]],
+  ['time_5fmin_97',['time_min',['../structopen_f_s_l_1_1_f_s_l___time.html#a713e5b345afacd59e4204828c7299b1e',1,'openFSL::FSL_Time']]],
+  ['time_5fmonth_98',['time_month',['../structopen_f_s_l_1_1_f_s_l___time.html#a67aa86615e6bbffdd7221479164bc7c6',1,'openFSL::FSL_Time']]],
+  ['time_5fsec_99',['time_sec',['../structopen_f_s_l_1_1_f_s_l___time.html#a8db61b1339fd7280d61935dc1842ae7f',1,'openFSL::FSL_Time']]],
+  ['time_5fyear_100',['time_year',['../structopen_f_s_l_1_1_f_s_l___time.html#aeec782f30b96e6498c96178497f52ff8',1,'openFSL::FSL_Time']]]
 ];

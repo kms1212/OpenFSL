@@ -1,7 +1,0 @@
-<map id="openFSL::FS_FAT32::initialize" name="openFSL::FS_FAT32::initialize">
-<area shape="rect" id="node1" title="FS_FAT32 intializer." alt="" coords="5,93,157,135"/>
-<area shape="rect" id="node2" href="$classopen_f_s_l_1_1_disk_device.html#abf24cf4f82259254963692008a0e927e" title="Sector size getter." alt="" coords="219,5,377,47"/>
-<area shape="rect" id="node3" href="$classopen_f_s_l_1_1_sector.html#a4216b770df1b0b98eafa60e3c5d84ea0" title="Data buffer getter." alt="" coords="205,71,391,98"/>
-<area shape="rect" id="node4" href="$classopen_f_s_l_1_1_disk_device.html#a00850641c490b87c14ca0013f1b26ea3" title="DiskDevice initializer." alt="" coords="219,123,377,164"/>
-<area shape="rect" id="node5" href="$classopen_f_s_l_1_1_disk_device.html#ad5f6968ae65cad9148123f65a0165da8" title=" " alt="" coords="219,188,377,229"/>
-</map>

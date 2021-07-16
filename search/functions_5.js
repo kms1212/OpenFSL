@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['initialize_262',['initialize',['../classopen_f_s_l_1_1_disk_device.html#a00850641c490b87c14ca0013f1b26ea3',1,'openFSL::DiskDevice::initialize()'],['../classopen_f_s_l_1_1_f_s___f_a_t32.html#aca79ddbddb1c9c1ccde9d15bb7d11159',1,'openFSL::FS_FAT32::initialize()']]],
-  ['initializelibrary_263',['initializeLibrary',['../namespaceopen_f_s_l.html#acdc7d1803efd843778624e9feb1c644d',1,'openFSL']]]
+  ['sector_82',['Sector',['../classopen_f_s_l_1_1_sector.html#a87defaacfb9dd109a83bf1c0cae29420',1,'openFSL::Sector']]],
+  ['seek_83',['seek',['../classopen_f_s_l_1_1_f_s_l___file.html#a3d546552a32c831d857abc3ae890e5ea',1,'openFSL::FSL_File']]]
 ];
