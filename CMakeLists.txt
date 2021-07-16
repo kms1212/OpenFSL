@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.4)
 project("OpenFSL")
 
-include(${CMAKE_SOURCE_DIR}/cmakeModules/FindZIP.cmake)
+include(ExternalProject)
 
 set(BUILD_TESTING true CACHE BOOL "Build test file?")
 set(DOXYGEN_GENERATE false CACHE BOOL "Generate doxygen file?")
@@ -9,6 +9,7 @@ set(NO_BUILD false CACHE BOOL "Skip build?")
 set(PACKAGE_GENERATE false CACHE BOOL "Generate package?")
 set(PACKAGE_TYPE "NIGHTLY" CACHE STRING "Package type (NIGHTLY, BETA, RELEASE)")
 set(PACKAGE_GENERATOR "ZIP" CACHE STRING "Package generator")
+set(BUILD_FAT32 true CACHE BOOL "Build fat32 filesystem?")
 
 if (DOXYGEN_GENERATE)
     find_package(Doxygen)
@@ -52,7 +53,6 @@ if (NOT NO_BUILD)
     elseif (CMAKE_CXX_COMPILER_ID STREQUAL "MSVC")
         set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /EHsc /W3 /wd5045 /wd4668 /wd4514")
         set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS true)
-        set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
     endif()
     
     string(TOLOWER ${CMAKE_PROJECT_NAME} PROJECT_TARGET)
@@ -60,30 +60,48 @@ if (NOT NO_BUILD)
     file(GLOB LIBRARY_SOURCES ${CMAKE_SOURCE_DIR}/src/*/*)
     add_library(${PROJECT_TARGET} SHARED ${LIBRARY_SOURCES})
     target_include_directories(${PROJECT_TARGET} PUBLIC 
-        $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/include/>
-        $<INSTALL_INTERFACE:include/>)
+        $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/include/>)
+    set_target_properties(${PROJECT_TARGET} PROPERTIES
+        ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}"
+        LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}"
+        RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}")
         
+    if (MSVC)
+        file(GLOB PROJECT_OUTPUT_FILES ${CMAKE_BINARY_DIR}/${CMAKE_BUILD_TYPE}/${PROJECT_TARGET}.*)
+    else()
+        file(GLOB PROJECT_OUTPUT_FILES "${CMAKE_BINARY_DIR}/lib${PROJECT_TARGET}.so")
+    endif()
+    
+    add_custom_command(POST_BUILD VERBATIM
+        TARGET ${PROJECT_TARGET}
+        COMMAND ${CMAKE_COMMAND} -E make_directory "${CMAKE_BINARY_DIR}/output/${PROJECT_TARGET}"
+        COMMENT "Copying output files to temp directory...")
+    
+    foreach(FILENAME ${PROJECT_OUTPUT_FILES})
+        add_custom_command(POST_BUILD VERBATIM
+            TARGET ${PROJECT_TARGET}
+            COMMAND ${CMAKE_COMMAND} -E copy "${FILENAME}" "${CMAKE_BINARY_DIR}/output/${PROJECT_TARGET}"
+            COMMENT "${FILENAME} ")
+    endforeach()
+        
+    ## Submodule configurations ##############################################
+    if (BUILD_FAT32)
+        add_subdirectory(fs/fat32)
+    endif()
     
     #########################
     # TEST
     #########################
     if (BUILD_TESTING)
-        if(NOT EXISTS ${CMAKE_BINARY_DIR}/fat32.img)
-            file(DOWNLOAD 
-                https://github.com/kms1212/OpenFSL-TestFiles/raw/main/fat32.zip
-                ${CMAKE_BINARY_DIR}/fat32.zip)
-            ZIP_UNPACK_TARGET(zipfile 
-                ${CMAKE_BINARY_DIR}/ 
-                ${CMAKE_BINARY_DIR}/fat32.zip)
-#           file(ARCHIVE_EXTRACT 
-#               INPUT ${CMAKE_BINARY_DIR}/fat32.zip
-#               DESTINATION ${CMAKE_BINARY_DIR}/)
-        endif()
-        
         enable_testing()
         include (CTest)
     
         add_subdirectory(tests)
+        
+        ## Submodule configurations ##############################################
+        if (BUILD_FAT32)
+            add_subdirectory(fs/fat32/tests)
+        endif()
     endif (BUILD_TESTING)
     
     #########################
@@ -103,75 +121,87 @@ if (NOT NO_BUILD)
             set(CPACK_RPM_COMPONENT_INSTALL ON)
             set(CPACK_COMPONENTS_IGNORE_GROUPS 1)
             set(CPACK_COMPONENTS_ALL_IN_ONE_PACKAGE 1)
-            set(CPACK_PACKAGE_NAME "${CMAKE_PROJECT_NAME}")
+            set(CPACK_PACKAGE_NAME "${PROJECT_TARGET}")
             set(CPACK_PACKAGE_VENDOR "kms1212")
             set(CPACK_PACKAGE_MAINTAINER "kms1212")
             set(CPACK_PACKAGE_CONTACT "kms1212g@gmail.com")
             set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "OpenFSL - An open source filesystem library")
             set(CPACK_PACKAGE_VERSION ${PACKAGE_VERSION})
             set(CPACK_PACKAGE_INSTALL_DIRECTORY "OpenFSL")
-			if (MSVC)
-			    set(CPACK_PACKAGE_FILE_NAME "${CPACK_PACKAGE_NAME}-${CPACK_PACKAGE_VERSION}-${CMAKE_SYSTEM_NAME}.${CMAKE_GENERATOR_PLATFORM}")
-			else()
-			    set(CPACK_PACKAGE_FILE_NAME "${CPACK_PACKAGE_NAME}-${CPACK_PACKAGE_VERSION}-${CMAKE_SYSTEM_NAME}.${CMAKE_SYSTEM_PROCESSOR}")
-			endif()
+            if (MSVC)
+                set(CPACK_PACKAGE_FILE_NAME "${PROJECT_TARGET}-${CPACK_PACKAGE_VERSION}-${CMAKE_SYSTEM_NAME}.${CMAKE_GENERATOR_PLATFORM}")
+            else()
+                set(CPACK_PACKAGE_FILE_NAME "${PROJECT_TARGET}-${CPACK_PACKAGE_VERSION}-${CMAKE_SYSTEM_NAME}.${CMAKE_SYSTEM_PROCESSOR}")
+            endif()
             set(CPACK_RESOURCE_FILE_LICENSE "${CMAKE_SOURCE_DIR}/LICENSE")
             set(CPACK_RESOURCE_FILE_README "${CMAKE_SOURCE_DIR}/README.md")
             
-            install(TARGETS ${PROJECT_TARGET} # Add files to archive
+            install(DIRECTORY "${CMAKE_BINARY_DIR}/output/${PROJECT_TARGET}" # Add files to archive
                     DESTINATION lib
-                    COMPONENT COMP_OFSL_BINARY)
+                    COMPONENT OFSL_BINARY)
             install(DIRECTORY "${CMAKE_SOURCE_DIR}/include/${PROJECT_TARGET}"
                     DESTINATION include
-                    COMPONENT COMP_OFSL_DEVEL)
+                    COMPONENT OFSL_DEVEL)
                     
             if (DOXYGEN_GENERATE)
                 install(DIRECTORY "${CMAKE_SOURCE_DIR}/docs"
                         DESTINATION "share/doc/${PROJECT_TARGET}"
-                        COMPONENT COMP_OFSL_DOC)
+                        COMPONENT OFSL_DOC)
             endif (DOXYGEN_GENERATE)
             install(FILES "${CMAKE_SOURCE_DIR}/LICENSE" "${CMAKE_SOURCE_DIR}/README.md"
                     DESTINATION "share/doc/${PROJECT_TARGET}"
-                    COMPONENT COMP_OFSL_DOC)
-                    
-            set(CPACK_COMPONENT_COMP_OFSL_BINARY_GROUP GROUP_LIBRARIES) # Component informations
-            set(CPACK_COMPONENT_COMP_OFSL_BINARY_DISPLAY_NAME "OpenFSL")
-            set(CPACK_COMPONENT_COMP_OFSL_BINARY_DESCRIPTION "OpenFSL library binaries.")
-            set(CPACK_COMPONENT_COMP_OFSL_BINARY_REQUIRED true)
-            
-            set(CPACK_COMPONENT_COMP_OFSL_DEVEL_GROUP GROUP_DEVEL)
-            set(CPACK_COMPONENT_COMP_OFSL_DEVEL_DISPLAY_NAME "OpenFSL")
-            set(CPACK_COMPONENT_COMP_OFSL_DEVEL_DESCRIPTION "Files to develop with OpenFSL.")
-            set(CPACK_COMPONENT_COMP_OFSL_DEVEL_DEPENDS "COMP_OFSL_BINARY")
-            
-            set(CPACK_COMPONENT_COMP_OFSL_DOC_GROUP GROUP_DOCUMENTS)
-            set(CPACK_COMPONENT_COMP_OFSL_DOC_DISPLAY_NAME "OpenFSL")
-            set(CPACK_COMPONENT_COMP_OFSL_DOC_DESCRIPTION "OpenFSL documents.")
-            
-            set(CPACK_COMPONENT_GROUP_GROUP_LIBRARIES_DISPLAY_NAME "Libraries")
-            set(CPACK_COMPONENT_GROUP_GROUP_LIBRARIES_DESCRIPTION "List of libraries provided by this installer.")
-            set(CPACK_COMPONENT_GROUP_GROUP_LIBRARIES_EXPANDED true)
-            set(CPACK_COMPONENT_GROUP_GROUP_LIBRARIES_BOLD_TITLE true)
-            
-            set(CPACK_COMPONENT_GROUP_GROUP_DEVEL_DISPLAY_NAME "Devel")
-            set(CPACK_COMPONENT_GROUP_GROUP_DEVEL_DESCRIPTION "Header files for development.")
+                    COMPONENT OFSL_DOC)
+					
+			set(CPACK_COMPONENT_GROUP_GROUP_LIBRARIES_DISPLAY_NAME "Libraries")
+			set(CPACK_COMPONENT_GROUP_GROUP_LIBRARIES_DESCRIPTION "Binary files of OpenFSL base library and modules")
+			set(CPACK_COMPONENT_GROUP_GROUP_LIBRARIES_BOLD_TITLE true)
+			set(CPACK_COMPONENT_GROUP_GROUP_LIBRARIES_EXPANDED true)
 			
-            set(CPACK_COMPONENT_GROUP_GROUP_DOCUMENTS_DISPLAY_NAME "Docs")
+			set(CPACK_COMPONENT_GROUP_GROUP_DEVEL_DISPLAY_NAME "Devel")
+			set(CPACK_COMPONENT_GROUP_GROUP_DEVEL_DESCRIPTION "Additional files for developing with OpenFSL")
+                    
+            set(CPACK_COMPONENT_OFSL_BINARY_GROUP GROUP_LIBRARIES) 
+            set(CPACK_COMPONENT_OFSL_BINARY_DISPLAY_NAME "Base library") # Component informations
+            set(CPACK_COMPONENT_OFSL_BINARY_DESCRIPTION "OpenFSL base library binarie")
+            set(CPACK_COMPONENT_OFSL_BINARY_REQUIRED true)
+			set(CPACK_COMPONENT_OFSL_BINARY_INSTALL_TYPES Binary Full)
             
-            set(CPACK_COMPONENT_GROUP_GROUP_DOCUMENTS_DESCRIPTION "List of documents about package.")
+            set(CPACK_COMPONENT_OFSL_DEVEL_GROUP GROUP_DEVEL) 
+            set(CPACK_COMPONENT_OFSL_DEVEL_DISPLAY_NAME "Base library")
+            set(CPACK_COMPONENT_OFSL_DEVEL_DESCRIPTION "OpenFSL base library development kit")
+            set(CPACK_COMPONENT_OFSL_DEVEL_DEPENDS OFSL_BINARY)
+			set(CPACK_COMPONENT_OFSL_DEVEL_INSTALL_TYPES Full)
             
-            #########################
-            # PACKAGE STRUCTURE
-            #########################
-            # GROUP_LIBRARIES
-            #   COMP_OFSL_BINARY
-            # GROUP_DEVEL
-            #   COMP_OFSL_DEVEL
-            # GROUP_DOCUMENTS
-            #   COMP_OFSL_DOC
-            
-            set(CPACK_COMPONENTS_ALL COMP_OFSL_BINARY COMP_OFSL_DEVEL COMP_OFSL_DOC)
-            
+            set(CPACK_COMPONENT_OFSL_DOC_DISPLAY_NAME "Documents")
+            set(CPACK_COMPONENT_OFSL_DOC_DESCRIPTION "OpenFSL documents.")
+			set(CPACK_COMPONENT_OFSL_DOC_INSTALL_TYPES Full)
+			
+            list(APPEND CPACK_COMPONENTS_ALL OFSL_BINARY OFSL_DEVEL OFSL_DOC)
+			
+            ## Submodule configurations ##############################################
+            if(BUILD_FAT32)
+                install(DIRECTORY "${CMAKE_BINARY_DIR}/output/openfsl_fat32/"
+                        DESTINATION lib/openfsl
+                        COMPONENT OFSL_FAT32_BINARY)
+                install(DIRECTORY "${CMAKE_SOURCE_DIR}/fs/fat32/include/${PROJECT_TARGET}"
+                        DESTINATION include
+                        COMPONENT OFSL_FAT32_DEVEL)
+                        
+                set(CPACK_COMPONENT_OFSL_FAT32_BINARY_GROUP GROUP_LIBRARIES) 
+                set(CPACK_COMPONENT_OFSL_FAT32_BINARY_DISPLAY_NAME "FAT32 module") # Component informations
+                set(CPACK_COMPONENT_OFSL_FAT32_BINARY_DESCRIPTION "OpenFSL fat32 module binaries")
+                set(CPACK_COMPONENT_OFSL_FAT32_DEVEL_DEPENDS OFSL_BINARY)
+			    set(CPACK_COMPONENT_OFSL_FAT32_BINARY_INSTALL_TYPES Binary Full)
+                
+                set(CPACK_COMPONENT_OFSL_FAT32_DEVEL_GROUP GROUP_DEVEL) 
+                set(CPACK_COMPONENT_OFSL_FAT32_DEVEL_DISPLAY_NAME "FAT32 module")
+                set(CPACK_COMPONENT_OFSL_FAT32_DEVEL_DESCRIPTION "OpenFSL fat32 development kit")
+                set(CPACK_COMPONENT_OFSL_FAT32_DEVEL_DEPENDS OFSL_FAT32_BINARY)
+			    set(CPACK_COMPONENT_OFSL_FAT32_DEVEL_INSTALL_TYPES Full)
+                
+                list(APPEND CPACK_COMPONENTS_ALL OFSL_FAT32_BINARY OFSL_FAT32_DEVEL)
+            endif()
+			
             include(CPack)
         elseif (PACKAGE_TYPE STREQUAL "BETA")
         elseif (PACKAGE_TYPE STREQUAL "RELEASE")

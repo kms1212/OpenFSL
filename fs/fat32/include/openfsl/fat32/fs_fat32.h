@@ -22,9 +22,9 @@ See the BSD-3-Clause for more details.
 #include <stddef.h>
 #include <time.h>
 
-#include "diskdevice.h"
-#include "fslservices.h"
-#include "file.h"
+#include "openfsl/diskdevice.h"
+#include "openfsl/fslservices.h"
+#include "openfsl/file.h"
 
 
 namespace openFSL {

@@ -22,7 +22,7 @@ See the BSD-3-Clause for more details.
 #include "openfsl/fslservices.h"
 #include "openfsl/diskdevice.h"
 #include "openfsl/sector.h"
-#include "openfsl/fs_fat32.h"
+#include "openfsl/fat32/fs_fat32.h"
 
 using namespace std;
 using namespace openFSL;

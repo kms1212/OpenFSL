@@ -7,15 +7,10 @@ See the BSD-3-Clause for more details.
 
 */
 
-#include "openfsl/fs_fat32.h"
+#include "openfsl/fat32/fs_fat32.h"
 
 using namespace openFSL;
 
-int FS_FAT32::FILE::seek(size_t location) {
-    if (seekLocation > fileInfo.fileSize)
-        return 1;
-    else {
-        seekLocation = location;
-        return 0;
-    }
+FS_FAT32::FileInfo FS_FAT32::FILE::getFileInfo() {
+    return fileInfo;
 }

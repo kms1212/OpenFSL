@@ -41,18 +41,30 @@ jobs:
     - name: Configure CMake
       run: |
         if [ "$RUNNER_OS" == "Linux" ]; then
-          cmake -G "Unix Makefiles" -S. -Bbuild -DBUILD_TESTING=true -DDOXYGEN_GENERATE=false -Bbuild -DNO_BUILD=false
+          cmake -G "Unix Makefiles" -S. -Bbuild \
+                -DBUILD_TESTING=true \
+                -DDOXYGEN_GENERATE=false \
+                -DNO_BUILD=false
         elif [ "$RUNNER_OS" == "Windows" ]; then
           if [ "${{matrix.platform}}" == "x86" ]; then
-            cmake -G "Visual Studio 16 2019" -A Win32 -S. -Bbuild -DBUILD_TESTING=true -DDOXYGEN_GENERATE=false -Bbuild -DNO_BUILD=false
+            cmake -G "Visual Studio 16 2019" -A Win32 -S. -Bbuild \
+                  -DBUILD_TESTING=true \
+                  -DDOXYGEN_GENERATE=false \
+                  -DNO_BUILD=false
           elif [ "${{matrix.platform}}" == "x64" ]; then
-            cmake -G "Visual Studio 16 2019" -A x64 -S. -Bbuild -DBUILD_TESTING=true -DDOXYGEN_GENERATE=false -Bbuild -DNO_BUILD=false
+            cmake -G "Visual Studio 16 2019" -A x64 -S. -Bbuild \
+                  -DBUILD_TESTING=true \
+                  -DDOXYGEN_GENERATE=false \
+                  -DNO_BUILD=false
           else
             echo "${{matrix.platform}} not supported"
             exit 1
           fi
         elif [ "$RUNNER_OS" == "macOS" ]; then
-          cmake -G "Unix Makefiles" -S. -Bbuild -DBUILD_TESTING=true -DDOXYGEN_GENERATE=false -Bbuild -DNO_BUILD=false
+          cmake -G "Unix Makefiles" -S. -Bbuild \
+               -DBUILD_TESTING=true \
+               -DDOXYGEN_GENERATE=false \
+               -DNO_BUILD=false
         else
           echo "$RUNNER_OS not supported"
           exit 1

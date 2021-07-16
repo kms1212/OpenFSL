@@ -32,22 +32,45 @@ jobs:
       
     - name: Build & Test & Pack
       run: |
-        
-        cmake -G "Unix Makefiles" -S. -Bbuild -DBUILD_TESTING=true -DDOXYGEN_GENERATE=false -DNO_BUILD=false -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DPACKAGE_GENERATE=true -DPACKAGE_GENERATOR=TGZ
+        cmake -G "Unix Makefiles" -S. -Bbuild \
+              -DBUILD_TESTING=true \
+              -DDOXYGEN_GENERATE=false \
+              -DNO_BUILD=false \
+              -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} \
+              -DPACKAGE_TYPE=NIGHTLY \
+              -DPACKAGE_GENERATE=true \
+              -DPACKAGE_GENERATOR=TGZ \
+              -DBUILD_FAT32=true
         cmake --build build
         cd build
         ctest -C ${{env.BUILD_TYPE}}
         cpack
         cd ..
         
-        cmake -G "Unix Makefiles" -S. -Bbuild -DBUILD_TESTING=true -DDOXYGEN_GENERATE=false -DNO_BUILD=false -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DPACKAGE_GENERATE=true -DPACKAGE_GENERATOR=ZIP
+        cmake -G "Unix Makefiles" -S. -Bbuild \
+              -DBUILD_TESTING=true \
+              -DDOXYGEN_GENERATE=false \
+              -DNO_BUILD=false \
+              -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} \
+              -DPACKAGE_TYPE=NIGHTLY \
+              -DPACKAGE_GENERATE=true \
+              -DPACKAGE_GENERATOR=ZIP \
+              -DBUILD_FAT32=true
         cmake --build build
         cd build
         ctest -C ${{env.BUILD_TYPE}}
         cpack
         cd ..
         
-        cmake -G "Unix Makefiles" -S. -Bbuild -DBUILD_TESTING=true -DDOXYGEN_GENERATE=false -DNO_BUILD=false -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DPACKAGE_GENERATE=true -DPACKAGE_GENERATOR=DEB
+        cmake -G "Unix Makefiles" -S. -Bbuild \
+              -DBUILD_TESTING=true \
+              -DDOXYGEN_GENERATE=false \
+              -DNO_BUILD=false \
+              -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} \
+              -DPACKAGE_TYPE=NIGHTLY \
+              -DPACKAGE_GENERATE=true \
+              -DPACKAGE_GENERATOR=DEB \
+              -DBUILD_FAT32=true
         cmake --build build
         cd build
         ctest -C ${{env.BUILD_TYPE}}
@@ -84,21 +107,45 @@ jobs:
       run: |
         git clone -b release-temp https://github.com/kms1212/OpenFSL/ ./build/packages
         
-        cmake -G "Visual Studio 16 2019" -A x64 -S. -Bbuild -DBUILD_TESTING=true -DDOXYGEN_GENERATE=false -DNO_BUILD=false -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DPACKAGE_GENERATE=true -DPACKAGE_GENERATOR=TGZ -DPACKAGE_TYPE=NIGHTLY
+        cmake -G "Visual Studio 16 2019" -A x64 -S. -Bbuild \
+              -DBUILD_TESTING=true \
+              -DDOXYGEN_GENERATE=false \
+              -DNO_BUILD=false \
+              -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} \
+              -DPACKAGE_TYPE=NIGHTLY \
+              -DPACKAGE_GENERATE=true \
+              -DPACKAGE_GENERATOR=TGZ \
+              -DBUILD_FAT32=true
         cmake --build build --config ${{env.BUILD_TYPE}}
         cd build
         ctest -C ${{env.BUILD_TYPE}}
         cpack
         cd ..
         
-        cmake -G "Visual Studio 16 2019" -A x64 -S. -Bbuild -DBUILD_TESTING=true -DDOXYGEN_GENERATE=false -DNO_BUILD=false -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DPACKAGE_GENERATE=true -DPACKAGE_GENERATOR=ZIP -DPACKAGE_TYPE=NIGHTLY
+        cmake -G "Visual Studio 16 2019" -A x64 -S. -Bbuild \
+              -DBUILD_TESTING=true \
+              -DDOXYGEN_GENERATE=false \
+              -DNO_BUILD=false \
+              -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} \
+              -DPACKAGE_TYPE=NIGHTLY \
+              -DPACKAGE_GENERATE=true \
+              -DPACKAGE_GENERATOR=ZIP \
+              -DBUILD_FAT32=true
         cmake --build build --config ${{env.BUILD_TYPE}}
         cd build
         ctest -C ${{env.BUILD_TYPE}}
         cpack
         cd ..
         
-        cmake -G "Visual Studio 16 2019" -A x64 -S. -Bbuild -DBUILD_TESTING=true -DDOXYGEN_GENERATE=false -DNO_BUILD=false -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DPACKAGE_GENERATE=true -DPACKAGE_GENERATOR=NSIS -DPACKAGE_TYPE=NIGHTLY
+        cmake -G "Visual Studio 16 2019" -A x64 -S. -Bbuild \
+              -DBUILD_TESTING=true \
+              -DDOXYGEN_GENERATE=false \
+              -DNO_BUILD=false \
+              -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} \
+              -DPACKAGE_TYPE=NIGHTLY \
+              -DPACKAGE_GENERATE=true \
+              -DPACKAGE_GENERATOR=NSIS64 \
+              -DBUILD_FAT32=true
         cmake --build build --config ${{env.BUILD_TYPE}}
         cd build
         ctest -C ${{env.BUILD_TYPE}}
@@ -136,21 +183,45 @@ jobs:
       run: |
         git clone -b release-temp https://github.com/kms1212/OpenFSL/ ./build/packages
         
-        cmake -G "Visual Studio 16 2019" -A Win32 -S. -Bbuild -DBUILD_TESTING=true -DDOXYGEN_GENERATE=true -DNO_BUILD=false -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DPACKAGE_GENERATE=true -DPACKAGE_GENERATOR=TGZ
+        cmake -G "Visual Studio 16 2019" -A Win32 -S. -Bbuild \
+              -DBUILD_TESTING=true \
+              -DDOXYGEN_GENERATE=true \
+              -DNO_BUILD=false \
+              -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} \
+              -DPACKAGE_TYPE=NIGHTLY \
+              -DPACKAGE_GENERATE=true \
+              -DPACKAGE_GENERATOR=TGZ \
+              -DBUILD_FAT32=true
         cmake --build build --config ${{env.BUILD_TYPE}}
         cd build
         ctest -C ${{env.BUILD_TYPE}}
         cpack
         cd ..
         
-        cmake -G "Visual Studio 16 2019" -A Win32 -S. -Bbuild -DBUILD_TESTING=true -DDOXYGEN_GENERATE=true -DNO_BUILD=false -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DPACKAGE_GENERATE=true -DPACKAGE_GENERATOR=ZIP
+        cmake -G "Visual Studio 16 2019" -A Win32 -S. -Bbuild \
+              -DBUILD_TESTING=true \
+              -DDOXYGEN_GENERATE=true \
+              -DNO_BUILD=false \
+              -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} \
+              -DPACKAGE_TYPE=NIGHTLY \
+              -DPACKAGE_GENERATE=true \
+              -DPACKAGE_GENERATOR=ZIP \
+              -DBUILD_FAT32=true
         cmake --build build --config ${{env.BUILD_TYPE}}
         cd build
         ctest -C ${{env.BUILD_TYPE}}
         cpack
         cd ..
         
-        cmake -G "Visual Studio 16 2019" -A Win32 -S. -Bbuild -DBUILD_TESTING=true -DDOXYGEN_GENERATE=true -DNO_BUILD=false -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DPACKAGE_GENERATE=true -DPACKAGE_GENERATOR=NSIS
+        cmake -G "Visual Studio 16 2019" -A Win32 -S. -Bbuild \
+              -DBUILD_TESTING=true \
+              -DDOXYGEN_GENERATE=true \
+              -DNO_BUILD=false \
+              -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} \
+              -DPACKAGE_TYPE=NIGHTLY \
+              -DPACKAGE_GENERATE=true \
+              -DPACKAGE_GENERATOR=NSIS \
+              -DBUILD_FAT32=true
         cmake --build build --config ${{env.BUILD_TYPE}}
         cd build
         ctest -C ${{env.BUILD_TYPE}}
@@ -188,14 +259,30 @@ jobs:
       run: |
         git clone -b release-temp https://github.com/kms1212/OpenFSL/ ./build/packages
         
-        cmake -G "Unix Makefiles" -S. -Bbuild -DBUILD_TESTING=true -DDOXYGEN_GENERATE=false -DNO_BUILD=false -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DPACKAGE_GENERATE=true -DPACKAGE_GENERATOR=TGZ
+        cmake -G "Unix Makefiles" -S. -Bbuild \
+              -DBUILD_TESTING=true \
+              -DDOXYGEN_GENERATE=false \
+              -DNO_BUILD=false \
+              -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} \
+              -DPACKAGE_TYPE=NIGHTLY \
+              -DPACKAGE_GENERATE=true \
+              -DPACKAGE_GENERATOR=TGZ \
+              -DBUILD_FAT32=true
         cmake --build build
         cd build
         ctest -C ${{env.BUILD_TYPE}}
         cpack
         cd ..
         
-        cmake -G "Unix Makefiles" -S. -Bbuild -DBUILD_TESTING=true -DDOXYGEN_GENERATE=false -DNO_BUILD=false -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DPACKAGE_GENERATE=true -DPACKAGE_GENERATOR=ZIP
+        cmake -G "Unix Makefiles" -S. -Bbuild \
+              -DBUILD_TESTING=true \
+              -DDOXYGEN_GENERATE=false \
+              -DNO_BUILD=false \
+              -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} \
+              -DPACKAGE_TYPE=NIGHTLY \
+              -DPACKAGE_GENERATE=true \
+              -DPACKAGE_GENERATOR=ZIP \
+              -DBUILD_FAT32=true
         cmake --build build
         cd build
         ctest -C ${{env.BUILD_TYPE}}

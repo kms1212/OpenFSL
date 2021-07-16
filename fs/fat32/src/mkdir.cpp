@@ -7,17 +7,11 @@ See the BSD-3-Clause for more details.
 
 */
 
-#include "openfsl/fs_fat32.h"
+#include "openfsl/fat32/fs_fat32.h"
 
 using namespace openFSL;
 
-uint32_t FS_FAT32::getNextFreeCluster()
-{
-    for (uint32_t i = 0; i < bpb->bpbReservedSectors; i++) {
-        if (fatClusterList[i] == 0) {
-            std::cout << i << "\n";
-            return i;
-        }
-    }
-    return 0;
+int FS_FAT32::mkdir(std::string path) {
+    
+    return 1;
 }
