@@ -33,6 +33,7 @@ jobs:
     - name: Build & Test & Pack
       run: |
         cmake -G "Unix Makefiles" -S. -Bbuild \
+              -DTARGET_ARCHITECTURE="AMD64" \
               -DBUILD_TESTING=true \
               -DDOXYGEN_GENERATE=false \
               -DNO_BUILD=false \
@@ -41,13 +42,10 @@ jobs:
               -DPACKAGE_GENERATE=true \
               -DPACKAGE_GENERATOR=TGZ \
               -DBUILD_FAT32=true
-        cmake --build build
-        cd build
-        ctest -C ${{env.BUILD_TYPE}}
-        cpack
-        cd ..
+        cmake --build build --target all test package
         
         cmake -G "Unix Makefiles" -S. -Bbuild \
+              -DTARGET_ARCHITECTURE="AMD64" \
               -DBUILD_TESTING=true \
               -DDOXYGEN_GENERATE=false \
               -DNO_BUILD=false \
@@ -56,13 +54,10 @@ jobs:
               -DPACKAGE_GENERATE=true \
               -DPACKAGE_GENERATOR=ZIP \
               -DBUILD_FAT32=true
-        cmake --build build
-        cd build
-        ctest -C ${{env.BUILD_TYPE}}
-        cpack
-        cd ..
+        cmake --build build --target all test package
         
         cmake -G "Unix Makefiles" -S. -Bbuild \
+              -DTARGET_ARCHITECTURE="AMD64" \
               -DBUILD_TESTING=true \
               -DDOXYGEN_GENERATE=false \
               -DNO_BUILD=false \
@@ -71,10 +66,82 @@ jobs:
               -DPACKAGE_GENERATE=true \
               -DPACKAGE_GENERATOR=DEB \
               -DBUILD_FAT32=true
-        cmake --build build
-        cd build
-        ctest -C ${{env.BUILD_TYPE}}
-        cpack
+        cmake --build build --target all test package
+        cp openfsl-* packages/
+        
+        cd packages
+        git config --global user.email "kms1212g@gmail.com"
+        git config --global user.name "kms1212"
+        git add -A
+        git commit -m "Update" -a
+      shell: bash
+      
+    - name: Push to temporary branch
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.API_TOKEN_GITHUB }}
+        branch: release-temp
+        directory: ./build/packages/
+        
+  linux-x86-build:
+    needs: [linux-x64-build]
+    runs-on: 'ubuntu-latest'
+    name: 'Linux-x64: Deploy'
+    steps:
+    - uses: actions/checkout@v2
+      
+    - name: Install Required Software
+      run: |
+        sudo apt-get update
+        sudo apt-get install cmake zip
+      shell: bash
+      
+    - name: Install Required Software
+      run: |
+        git clone https://github.com/kms1212/OpenFSL/ ./build/packages
+        cd ./build/packages
+        git checkout --orphan release-temp
+        rm -rf .gitignore .github .gitmodules
+        rm -rf ./*
+      shell: bash
+      
+    - name: Build & Test & Pack
+      run: |
+        cmake -G "Unix Makefiles" -S. -Bbuild \
+              -DTARGET_ARCHITECTURE="x86" \
+              -DBUILD_TESTING=true \
+              -DDOXYGEN_GENERATE=false \
+              -DNO_BUILD=false \
+              -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} \
+              -DPACKAGE_TYPE=NIGHTLY \
+              -DPACKAGE_GENERATE=true \
+              -DPACKAGE_GENERATOR=TGZ \
+              -DBUILD_FAT32=true
+        cmake --build build --target all test package
+        
+        cmake -G "Unix Makefiles" -S. -Bbuild \
+              -DTARGET_ARCHITECTURE="x86" \
+              -DBUILD_TESTING=true \
+              -DDOXYGEN_GENERATE=false \
+              -DNO_BUILD=false \
+              -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} \
+              -DPACKAGE_TYPE=NIGHTLY \
+              -DPACKAGE_GENERATE=true \
+              -DPACKAGE_GENERATOR=ZIP \
+              -DBUILD_FAT32=true
+        cmake --build build --target all test package
+        
+        cmake -G "Unix Makefiles" -S. -Bbuild \
+              -DTARGET_ARCHITECTURE="x86" \
+              -DBUILD_TESTING=true \
+              -DDOXYGEN_GENERATE=false \
+              -DNO_BUILD=false \
+              -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} \
+              -DPACKAGE_TYPE=NIGHTLY \
+              -DPACKAGE_GENERATE=true \
+              -DPACKAGE_GENERATOR=DEB \
+              -DBUILD_FAT32=true
+        cmake --build build --target all test package
         cp openfsl-* packages/
         
         cd packages
@@ -92,7 +159,7 @@ jobs:
         directory: ./build/packages/
         
   windows-x64-build:
-    needs: [linux-x64-build]
+    needs: [linux-x86-build]
     runs-on: 'windows-latest'
     name: 'Windows-x64: Deploy'
     steps:
@@ -116,11 +183,7 @@ jobs:
               -DPACKAGE_GENERATE=true \
               -DPACKAGE_GENERATOR=TGZ \
               -DBUILD_FAT32=true
-        cmake --build build --config ${{env.BUILD_TYPE}}
-        cd build
-        ctest -C ${{env.BUILD_TYPE}}
-        cpack
-        cd ..
+        cmake --build build --config ${{env.BUILD_TYPE}} --target all_build run_tests package
         
         cmake -G "Visual Studio 16 2019" -A x64 -S. -Bbuild \
               -DBUILD_TESTING=true \
@@ -131,11 +194,7 @@ jobs:
               -DPACKAGE_GENERATE=true \
               -DPACKAGE_GENERATOR=ZIP \
               -DBUILD_FAT32=true
-        cmake --build build --config ${{env.BUILD_TYPE}}
-        cd build
-        ctest -C ${{env.BUILD_TYPE}}
-        cpack
-        cd ..
+        cmake --build build --config ${{env.BUILD_TYPE}} --target all_build run_tests package
         
         cmake -G "Visual Studio 16 2019" -A x64 -S. -Bbuild \
               -DBUILD_TESTING=true \
@@ -146,10 +205,7 @@ jobs:
               -DPACKAGE_GENERATE=true \
               -DPACKAGE_GENERATOR=NSIS64 \
               -DBUILD_FAT32=true
-        cmake --build build --config ${{env.BUILD_TYPE}}
-        cd build
-        ctest -C ${{env.BUILD_TYPE}}
-        cpack
+        cmake --build build --config ${{env.BUILD_TYPE}} --target all_build run_tests package
         cp openfsl-* packages/
         
         cd packages
@@ -192,11 +248,7 @@ jobs:
               -DPACKAGE_GENERATE=true \
               -DPACKAGE_GENERATOR=TGZ \
               -DBUILD_FAT32=true
-        cmake --build build --config ${{env.BUILD_TYPE}}
-        cd build
-        ctest -C ${{env.BUILD_TYPE}}
-        cpack
-        cd ..
+        cmake --build build --config ${{env.BUILD_TYPE}} --target all_build run_tests package
         
         cmake -G "Visual Studio 16 2019" -A Win32 -S. -Bbuild \
               -DBUILD_TESTING=true \
@@ -207,11 +259,7 @@ jobs:
               -DPACKAGE_GENERATE=true \
               -DPACKAGE_GENERATOR=ZIP \
               -DBUILD_FAT32=true
-        cmake --build build --config ${{env.BUILD_TYPE}}
-        cd build
-        ctest -C ${{env.BUILD_TYPE}}
-        cpack
-        cd ..
+        cmake --build build --config ${{env.BUILD_TYPE}} --target all_build run_tests package
         
         cmake -G "Visual Studio 16 2019" -A Win32 -S. -Bbuild \
               -DBUILD_TESTING=true \
@@ -222,10 +270,7 @@ jobs:
               -DPACKAGE_GENERATE=true \
               -DPACKAGE_GENERATOR=NSIS \
               -DBUILD_FAT32=true
-        cmake --build build --config ${{env.BUILD_TYPE}}
-        cd build
-        ctest -C ${{env.BUILD_TYPE}}
-        cpack
+        cmake --build build --config ${{env.BUILD_TYPE}} --target all_build run_tests package
         cp openfsl-* packages/
         
         cd packages
@@ -260,6 +305,7 @@ jobs:
         git clone -b release-temp https://github.com/kms1212/OpenFSL/ ./build/packages
         
         cmake -G "Unix Makefiles" -S. -Bbuild \
+              -DTARGET_ARCHITECTURE="AMD64" \
               -DBUILD_TESTING=true \
               -DDOXYGEN_GENERATE=false \
               -DNO_BUILD=false \
@@ -268,13 +314,10 @@ jobs:
               -DPACKAGE_GENERATE=true \
               -DPACKAGE_GENERATOR=TGZ \
               -DBUILD_FAT32=true
-        cmake --build build
-        cd build
-        ctest -C ${{env.BUILD_TYPE}}
-        cpack
-        cd ..
+        cmake --build build --target all test package
         
         cmake -G "Unix Makefiles" -S. -Bbuild \
+              -DTARGET_ARCHITECTURE="AMD64" \
               -DBUILD_TESTING=true \
               -DDOXYGEN_GENERATE=false \
               -DNO_BUILD=false \
@@ -283,10 +326,7 @@ jobs:
               -DPACKAGE_GENERATE=true \
               -DPACKAGE_GENERATOR=ZIP \
               -DBUILD_FAT32=true
-        cmake --build build
-        cd build
-        ctest -C ${{env.BUILD_TYPE}}
-        cpack
+        cmake --build build --target all test package
         cp openfsl-* packages/
         
         cd packages

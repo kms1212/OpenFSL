@@ -78,9 +78,6 @@ void hexdump(uint8_t* p, size_t offset, size_t len)
 }
 
 int main(int argc, char** argv) {
-    argc = argc; // Ignore MSVC warning C4100
-    argv = argv; 
-    
     fat32 = new FS_FAT32(NULL, "\\/");
     
     fat32->getDiskDevice()->read = readDisk;

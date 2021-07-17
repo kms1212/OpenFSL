@@ -15,8 +15,6 @@ jobs:
         exclude:
           - os: macos-latest
             platform: x86
-          - os: ubuntu-latest
-            platform: x86
         
     runs-on: '${{ matrix.os }}'
     name: '${{ matrix.os }}-${{ matrix.platform }}: build'
@@ -28,6 +26,9 @@ jobs:
         if [ "$RUNNER_OS" == "Linux" ]; then
           sudo apt-get update
           sudo apt-get install cmake zip
+          if [ "${{ matrix.platform }}" == "x86" ]; then
+            sudo apt-get install gcc-multilib g++-multilib
+          fi
         elif [ "$RUNNER_OS" == "Windows" ]; then
           choco install cmake 7zip
         elif [ "$RUNNER_OS" == "macOS" ]; then
@@ -41,10 +42,19 @@ jobs:
     - name: Configure CMake
       run: |
         if [ "$RUNNER_OS" == "Linux" ]; then
-          cmake -G "Unix Makefiles" -S. -Bbuild \
-                -DBUILD_TESTING=true \
-                -DDOXYGEN_GENERATE=false \
-                -DNO_BUILD=false
+          if [ "${{matrix.platform}}" == "x86" ]; then
+            cmake -G "Unix Makefiles" -S. -Bbuild \
+                  -DTARGET_ARCHITECTURE="x86" \
+                  -DBUILD_TESTING=true \
+                  -DDOXYGEN_GENERATE=false \
+                  -DNO_BUILD=false
+          elif [ "${{matrix.platform}}" == "x64" ]; then
+            cmake -G "Unix Makefiles" -S. -Bbuild \
+                  -DTARGET_ARCHITECTURE="AMD64" \
+                  -DBUILD_TESTING=true \
+                  -DDOXYGEN_GENERATE=false \
+                  -DNO_BUILD=false
+          else
         elif [ "$RUNNER_OS" == "Windows" ]; then
           if [ "${{matrix.platform}}" == "x86" ]; then
             cmake -G "Visual Studio 16 2019" -A Win32 -S. -Bbuild \
@@ -62,6 +72,7 @@ jobs:
           fi
         elif [ "$RUNNER_OS" == "macOS" ]; then
           cmake -G "Unix Makefiles" -S. -Bbuild \
+               -DTARGET_ARCHITECTURE="AMD64" \
                -DBUILD_TESTING=true \
                -DDOXYGEN_GENERATE=false \
                -DNO_BUILD=false
