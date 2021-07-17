@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['sector_5fcount_93',['sector_count',['../classopen_f_s_l_1_1_sector.html#a7dcd0297f5b57370e962319bcfad0f2b',1,'openFSL::Sector']]]
+  ['isdiskdeviceallocated_354',['isDiskDeviceAllocated',['../classopen_f_s_l_1_1_f_s___f_a_t32.html#a582be5521524a027203a403147b951d2',1,'openFSL::FS_FAT32']]]
 ];

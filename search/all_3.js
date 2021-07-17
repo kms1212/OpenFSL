@@ -1,7 +1,18 @@
 var searchData=
 [
-  ['data_4',['data',['../classopen_f_s_l_1_1_sector.html#a20c6bbff15e90372bf920970cae286cc',1,'openFSL::Sector']]],
-  ['diskdevice_5',['DiskDevice',['../classopen_f_s_l_1_1_disk_device.html',1,'openFSL::DiskDevice'],['../classopen_f_s_l_1_1_disk_device.html#a21c4f5ce2b2807e4bd7676ef0426260d',1,'openFSL::DiskDevice::DiskDevice()']]],
-  ['diskdevice_2ecpp_6',['diskdevice.cpp',['../diskdevice_8cpp.html',1,'']]],
-  ['diskdevice_2eh_7',['diskdevice.h',['../diskdevice_8h.html',1,'']]]
+  ['cachedata_23',['cacheData',['../structopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_a_t32__cache_entry.html#a3a519a4df650f40a9285851be5ba7693',1,'openFSL::FS_FAT32::FAT32_cacheEntry']]],
+  ['cacheindex_24',['cacheIndex',['../structopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_a_t32__cache_entry.html#a371a67b6f59fa6e0da4382385a312a42',1,'openFSL::FS_FAT32::FAT32_cacheEntry']]],
+  ['cachekey_25',['cacheKey',['../structopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_a_t32__cache_entry.html#af54aa4e3cdebf35b52e4d6a039d1ac16',1,'openFSL::FS_FAT32::FAT32_cacheEntry']]],
+  ['cachetype_26',['cacheType',['../structopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_a_t32__cache_entry.html#ace74bd76e12d22633566cd3808336ce9',1,'openFSL::FS_FAT32::FAT32_cacheEntry']]],
+  ['chdir_27',['chdir',['../classopen_f_s_l_1_1_f_s___f_a_t32.html#a30158d5a3854a4e6adb68525409bec0f',1,'openFSL::FS_FAT32']]],
+  ['chdir_2ecpp_28',['chdir.cpp',['../chdir_8cpp.html',1,'']]],
+  ['classgeneral_2ecpp_29',['classgeneral.cpp',['../classgeneral_8cpp.html',1,'']]],
+  ['close_30',['close',['../classopen_f_s_l_1_1_disk_device.html#ad442994336ed6da38e713907ab4d7487',1,'openFSL::DiskDevice']]],
+  ['closefile_31',['closeFile',['../classopen_f_s_l_1_1_f_s___f_a_t32.html#a45c1e64bdf3562b0c37c4e0dbb9ee40b',1,'openFSL::FS_FAT32']]],
+  ['clusterlist_32',['clusterList',['../classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a35e9574af0aeff9c763265d9c3d36f6c',1,'openFSL::FS_FAT32::LinkedCluster']]],
+  ['clustertolba_33',['clusterToLBA',['../classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#aa0bb9ca47f6694ec138628d3196cf32f',1,'openFSL::FS_FAT32::LinkedCluster']]],
+  ['currentcacheclusterindex_34',['currentCacheClusterIndex',['../classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a1f9e8653929dd34f921f740ef7a6e591',1,'openFSL::FS_FAT32::LinkedCluster']]],
+  ['currentcacheclustersize_35',['currentCacheClusterSize',['../classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#aba1a89e42d0019d7d8756ae897ff3804',1,'openFSL::FS_FAT32::LinkedCluster']]],
+  ['currentcluster_36',['currentCluster',['../classopen_f_s_l_1_1_f_s___f_a_t32.html#a275fe7152ab687964bf4ca6b449e2dac',1,'openFSL::FS_FAT32']]],
+  ['currentpath_37',['currentPath',['../classopen_f_s_l_1_1_f_s___f_a_t32.html#aa9d033b20a66827798d7f979e9c0e7a6',1,'openFSL::FS_FAT32']]]
 ];
