@@ -40,10 +40,10 @@ if (NOT NO_BUILD)
         if (CMAKE_BUILD_TYPE STREQUAL "Debug")
             set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -Wall")
         endif()
-		if (TARGET_ARCHITECTURE STREQUAL "AMD64")
+        if (TARGET_ARCHITECTURE STREQUAL "AMD64")
             set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -m64")
         endif()
-		if (TARGET_ARCHITECTURE STREQUAL "x86")
+        if (TARGET_ARCHITECTURE STREQUAL "x86")
             set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -m32")
         endif()
         set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}")
@@ -51,10 +51,10 @@ if (NOT NO_BUILD)
         if (CMAKE_BUILD_TYPE STREQUAL "Debug")
             set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -Wall")
         endif()
-		if (TARGET_ARCHITECTURE STREQUAL "AMD64")
+        if (TARGET_ARCHITECTURE STREQUAL "AMD64")
             set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -m64")
         endif()
-		if (TARGET_ARCHITECTURE STREQUAL "x86")
+        if (TARGET_ARCHITECTURE STREQUAL "x86")
             set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -m32")
         endif()
         set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}")
@@ -62,10 +62,10 @@ if (NOT NO_BUILD)
         if (CMAKE_BUILD_TYPE STREQUAL "Debug")
             set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -Wall")
         endif()
-		if (TARGET_ARCHITECTURE STREQUAL "AMD64")
+        if (TARGET_ARCHITECTURE STREQUAL "AMD64")
             set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -m64")
         endif()
-		if (TARGET_ARCHITECTURE STREQUAL "x86")
+        if (TARGET_ARCHITECTURE STREQUAL "x86")
             set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -m32")
         endif()
         set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}")
@@ -87,9 +87,11 @@ if (NOT NO_BUILD)
         RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}")
         
     if (MSVC)
-        file(GLOB PROJECT_OUTPUT_FILES ${CMAKE_BINARY_DIR}/${CMAKE_BUILD_TYPE}/${PROJECT_TARGET}.*)
+        set(PROJECT_OUTPUT_FILES "${CMAKE_BINARY_DIR}/${CMAKE_BUILD_TYPE}/${PROJECT_TARGET}.dll" 
+             "${CMAKE_BINARY_DIR}/${CMAKE_BUILD_TYPE}/${PROJECT_TARGET}.exp" 
+             "${CMAKE_BINARY_DIR}/${CMAKE_BUILD_TYPE}/${PROJECT_TARGET}.lib")
     else()
-        file(GLOB PROJECT_OUTPUT_FILES "${CMAKE_BINARY_DIR}/lib${PROJECT_TARGET}.so")
+        set(PROJECT_OUTPUT_FILES "${CMAKE_BINARY_DIR}/lib${PROJECT_TARGET}.so")
     endif()
     
     add_custom_command(POST_BUILD VERBATIM
@@ -171,33 +173,33 @@ if (NOT NO_BUILD)
             install(FILES "${CMAKE_SOURCE_DIR}/LICENSE" "${CMAKE_SOURCE_DIR}/README.md"
                     DESTINATION "share/doc/${PROJECT_TARGET}"
                     COMPONENT OFSL_DOC)
-					
-			set(CPACK_COMPONENT_GROUP_GROUP_LIBRARIES_DISPLAY_NAME "Libraries")
-			set(CPACK_COMPONENT_GROUP_GROUP_LIBRARIES_DESCRIPTION "Binary files of OpenFSL base library and modules")
-			set(CPACK_COMPONENT_GROUP_GROUP_LIBRARIES_BOLD_TITLE true)
-			set(CPACK_COMPONENT_GROUP_GROUP_LIBRARIES_EXPANDED true)
-			
-			set(CPACK_COMPONENT_GROUP_GROUP_DEVEL_DISPLAY_NAME "Devel")
-			set(CPACK_COMPONENT_GROUP_GROUP_DEVEL_DESCRIPTION "Additional files for developing with OpenFSL")
+                    
+            set(CPACK_COMPONENT_GROUP_GROUP_LIBRARIES_DISPLAY_NAME "Libraries")
+            set(CPACK_COMPONENT_GROUP_GROUP_LIBRARIES_DESCRIPTION "Binary files of OpenFSL base library and modules")
+            set(CPACK_COMPONENT_GROUP_GROUP_LIBRARIES_BOLD_TITLE true)
+            set(CPACK_COMPONENT_GROUP_GROUP_LIBRARIES_EXPANDED true)
+            
+            set(CPACK_COMPONENT_GROUP_GROUP_DEVEL_DISPLAY_NAME "Devel")
+            set(CPACK_COMPONENT_GROUP_GROUP_DEVEL_DESCRIPTION "Additional files for developing with OpenFSL")
                     
             set(CPACK_COMPONENT_OFSL_BINARY_GROUP GROUP_LIBRARIES) 
             set(CPACK_COMPONENT_OFSL_BINARY_DISPLAY_NAME "Base library") # Component informations
             set(CPACK_COMPONENT_OFSL_BINARY_DESCRIPTION "OpenFSL base library binarie")
             set(CPACK_COMPONENT_OFSL_BINARY_REQUIRED true)
-			set(CPACK_COMPONENT_OFSL_BINARY_INSTALL_TYPES Binary Full)
+            set(CPACK_COMPONENT_OFSL_BINARY_INSTALL_TYPES Binary Full)
             
             set(CPACK_COMPONENT_OFSL_DEVEL_GROUP GROUP_DEVEL) 
             set(CPACK_COMPONENT_OFSL_DEVEL_DISPLAY_NAME "Base library")
             set(CPACK_COMPONENT_OFSL_DEVEL_DESCRIPTION "OpenFSL base library development kit")
             set(CPACK_COMPONENT_OFSL_DEVEL_DEPENDS OFSL_BINARY)
-			set(CPACK_COMPONENT_OFSL_DEVEL_INSTALL_TYPES Full)
+            set(CPACK_COMPONENT_OFSL_DEVEL_INSTALL_TYPES Full)
             
             set(CPACK_COMPONENT_OFSL_DOC_DISPLAY_NAME "Documents")
             set(CPACK_COMPONENT_OFSL_DOC_DESCRIPTION "OpenFSL documents.")
-			set(CPACK_COMPONENT_OFSL_DOC_INSTALL_TYPES Full)
-			
+            set(CPACK_COMPONENT_OFSL_DOC_INSTALL_TYPES Full)
+            
             list(APPEND CPACK_COMPONENTS_ALL OFSL_BINARY OFSL_DEVEL OFSL_DOC)
-			
+            
             ## Submodule configurations ##############################################
             if(BUILD_FAT32)
                 install(DIRECTORY "${CMAKE_BINARY_DIR}/output/openfsl_fat32/"
@@ -211,17 +213,17 @@ if (NOT NO_BUILD)
                 set(CPACK_COMPONENT_OFSL_FAT32_BINARY_DISPLAY_NAME "FAT32 module") # Component informations
                 set(CPACK_COMPONENT_OFSL_FAT32_BINARY_DESCRIPTION "OpenFSL fat32 module binaries")
                 set(CPACK_COMPONENT_OFSL_FAT32_DEVEL_DEPENDS OFSL_BINARY)
-			    set(CPACK_COMPONENT_OFSL_FAT32_BINARY_INSTALL_TYPES Binary Full)
+                set(CPACK_COMPONENT_OFSL_FAT32_BINARY_INSTALL_TYPES Binary Full)
                 
                 set(CPACK_COMPONENT_OFSL_FAT32_DEVEL_GROUP GROUP_DEVEL) 
                 set(CPACK_COMPONENT_OFSL_FAT32_DEVEL_DISPLAY_NAME "FAT32 module")
                 set(CPACK_COMPONENT_OFSL_FAT32_DEVEL_DESCRIPTION "OpenFSL fat32 development kit")
                 set(CPACK_COMPONENT_OFSL_FAT32_DEVEL_DEPENDS OFSL_FAT32_BINARY)
-			    set(CPACK_COMPONENT_OFSL_FAT32_DEVEL_INSTALL_TYPES Full)
+                set(CPACK_COMPONENT_OFSL_FAT32_DEVEL_INSTALL_TYPES Full)
                 
                 list(APPEND CPACK_COMPONENTS_ALL OFSL_FAT32_BINARY OFSL_FAT32_DEVEL)
             endif()
-			
+            
             include(CPack)
         elseif (PACKAGE_TYPE STREQUAL "BETA")
         elseif (PACKAGE_TYPE STREQUAL "RELEASE")

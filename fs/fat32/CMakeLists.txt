@@ -32,26 +32,28 @@ if (NOT NO_BUILD)
     target_include_directories(${PROJECT_TARGET} PRIVATE ${CMAKE_SOURCE_DIR}/include/openfsl)
     target_include_directories(${PROJECT_TARGET} PUBLIC 
         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/>)
-	set_target_properties(${PROJECT_TARGET} PROPERTIES
+    set_target_properties(${PROJECT_TARGET} PROPERTIES
         ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}"
         LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}"
         RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}")
-		
-	if (MSVC)
-		file(GLOB PROJECT_OUTPUT_FILES ${CMAKE_BINARY_DIR}/${CMAKE_BUILD_TYPE}/${PROJECT_TARGET}.*)
-	else()
-		file(GLOB PROJECT_OUTPUT_FILES ${CMAKE_BINARY_DIR}/lib${PROJECT_TARGET}.so)
-	endif()
-	
-	add_custom_command(POST_BUILD VERBATIM
-	    TARGET ${PROJECT_TARGET}
-		COMMAND ${CMAKE_COMMAND} -E make_directory "${CMAKE_BINARY_DIR}/output/${PROJECT_TARGET}"
-		COMMENT "Copying output files to temp directory...")
-	
-	foreach(FILENAME ${PROJECT_OUTPUT_FILES})
-		add_custom_command(POST_BUILD VERBATIM
-			TARGET ${PROJECT_TARGET}
-			COMMAND ${CMAKE_COMMAND} -E copy "${FILENAME}" "${CMAKE_BINARY_DIR}/output/${PROJECT_TARGET}"
-		    COMMENT "${FILENAME} ")
+        
+    if (MSVC)
+        set(PROJECT_OUTPUT_FILES "${CMAKE_BINARY_DIR}/${CMAKE_BUILD_TYPE}/${PROJECT_TARGET}.dll" 
+             "${CMAKE_BINARY_DIR}/${CMAKE_BUILD_TYPE}/${PROJECT_TARGET}.exp" 
+             "${CMAKE_BINARY_DIR}/${CMAKE_BUILD_TYPE}/${PROJECT_TARGET}.lib")
+    else()
+        set(PROJECT_OUTPUT_FILES "${CMAKE_BINARY_DIR}/lib${PROJECT_TARGET}.so")
+    endif()
+    
+    add_custom_command(POST_BUILD VERBATIM
+        TARGET ${PROJECT_TARGET}
+        COMMAND ${CMAKE_COMMAND} -E make_directory "${CMAKE_BINARY_DIR}/output/${PROJECT_TARGET}"
+        COMMENT "Copying output files to temp directory...")
+    
+    foreach(FILENAME ${PROJECT_OUTPUT_FILES})
+        add_custom_command(POST_BUILD VERBATIM
+            TARGET ${PROJECT_TARGET}
+            COMMAND ${CMAKE_COMMAND} -E copy "${FILENAME}" "${CMAKE_BINARY_DIR}/output/${PROJECT_TARGET}"
+            COMMENT "${FILENAME} ")
     endforeach()
 endif (NOT NO_BUILD)

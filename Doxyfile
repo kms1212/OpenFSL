@@ -831,6 +831,8 @@ WARN_LOGFILE           =
 
 INPUT                  = ./src \
                          ./include \
+                         ./fs/fat32/src \
+                         ./fs/fat32/include \
                          README.md
 
 # This tag can be used to specify the character encoding of the source files

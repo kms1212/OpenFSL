@@ -76,7 +76,40 @@ void hexdump(uint8_t* p, size_t offset, size_t len)
 }
 
 int main(int argc, char** argv) {   
+    DiskDevice* dd = new DiskDevice();
+    dd->read = readDisk;
+    dd->write = writeDisk;
+    dd->open = openDisk;
+    dd->close = closeDisk;
+    
+    dd->initialize();
+    
+    int result = 0;
 	
+    cout << "===========================\n";
+    cout << " DISKDEEVICE TEST\n";
+    cout << "===========================\n";
+    
+    for (uint8_t i = 0; i < 4; i++)
+    {
+        cout << "Reading sector " << (int)i << "...\n";
+        Sector sector(1, dd->getBytespersector());
+        
+        if (dd->readDisk((uint8_t*)sector.getData(), i, 1))
+            return 1;
+        
+        if (((uint8_t*)sector.getData())[3] != i + 1)
+        {
+            result++;
+            cout << (int)((uint8_t*)sector.getData())[3] << " != " << (int)i + 1 << "Fail\n";
+        }
+        else
+            cout << "Success\n";
+        
+        hexdump((uint8_t*)sector.getData(), 0, 32);
+    }
+    
+    return result;
 }
 
 int openDisk()
@@ -102,5 +135,5 @@ int readDisk(DiskDevice* dd, uint8_t* dest, size_t lba, size_t size)
 
 int writeDisk(Sector* src, size_t lba)
 {
-	return 1;
+    return 1;
 }
