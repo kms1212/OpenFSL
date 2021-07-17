@@ -35,7 +35,7 @@ int FS_FAT32::initialize() {
         return result;
     }
     
-    result += dd->readDisk((uint8_t*)fat32_sector.getData(), bpb->ebpbFSInfoSector, 1);         // Read FSINFO sector
+    result += dd->readDisk((uint8_t*)fat32_sector.getData(), bpb->ebpbFSInfoSector, 1);  // Read FSINFO sector
     
     fsinfo = new FAT32_fsinfo();
     memcpy(fsinfo, fat32_sector.getData(), sizeof(FAT32_fsinfo));

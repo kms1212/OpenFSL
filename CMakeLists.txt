@@ -12,64 +12,64 @@ set(PACKAGE_GENERATE false CACHE BOOL "Generate package?")
 set(PACKAGE_GENERATOR "ZIP" CACHE STRING "Package generator")
 set(TARGET_ARCHITECTURE "AMD64" CACHE STRING "Target system architecture(AMD64, x86)")
 
-if (DOXYGEN_GENERATE)
+if(DOXYGEN_GENERATE)
     find_package(Doxygen)
-    if (DOXYGEN_FOUND)
+    if(DOXYGEN_FOUND)
         find_package(Doxygen REQUIRED dot)
-    else (DOXYGEN_FOUND)
+    else(DOXYGEN_FOUND)
         message(WARNING "Doxygen is not found. Creating documents will be disabled.")
         set (DOXYGEN_GENERATE false)
     endif(DOXYGEN_FOUND)
 
-    if (DOXYGEN_FOUND)
+    if(DOXYGEN_FOUND)
         add_custom_target(doc_doxygen ALL
             COMMAND ${DOXYGEN_EXECUTABLE} ${CMAKE_SOURCE_DIR}/Doxyfile
             WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
             COMMENT "Generating library documentation with Doxygen"
             VERBATIM )
-    endif (DOXYGEN_FOUND)
-endif (DOXYGEN_GENERATE)
+    endif(DOXYGEN_FOUND)
+endif(DOXYGEN_GENERATE)
     
-if (NOT NO_BUILD)
+if(NOT NO_BUILD)
     #########################
     # BUILD
     #########################
     set(CMAKE_CXX_STANDARD 14)
     set(CMAKE_CXX_STANDARD_REQUIRED ON)
-    if (CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
-        if (CMAKE_BUILD_TYPE STREQUAL "Debug")
+    if(CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
+        if(CMAKE_BUILD_TYPE STREQUAL "Debug")
             set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -Wall")
         endif()
-        if (TARGET_ARCHITECTURE STREQUAL "AMD64")
+        if(TARGET_ARCHITECTURE STREQUAL "AMD64")
             set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -m64")
         endif()
-        if (TARGET_ARCHITECTURE STREQUAL "x86")
+        if(TARGET_ARCHITECTURE STREQUAL "x86")
             set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -m32")
         endif()
         set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}")
-    elseif (CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
-        if (CMAKE_BUILD_TYPE STREQUAL "Debug")
+    elseif(CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
+        if(CMAKE_BUILD_TYPE STREQUAL "Debug")
             set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -Wall")
         endif()
-        if (TARGET_ARCHITECTURE STREQUAL "AMD64")
+        if(TARGET_ARCHITECTURE STREQUAL "AMD64")
             set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -m64")
         endif()
-        if (TARGET_ARCHITECTURE STREQUAL "x86")
+        if(TARGET_ARCHITECTURE STREQUAL "x86")
             set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -m32")
         endif()
         set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}")
-    elseif (CMAKE_CXX_COMPILER_ID STREQUAL "Intel")
-        if (CMAKE_BUILD_TYPE STREQUAL "Debug")
+    elseif(CMAKE_CXX_COMPILER_ID STREQUAL "Intel")
+        if(CMAKE_BUILD_TYPE STREQUAL "Debug")
             set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -Wall")
         endif()
-        if (TARGET_ARCHITECTURE STREQUAL "AMD64")
+        if(TARGET_ARCHITECTURE STREQUAL "AMD64")
             set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -m64")
         endif()
-        if (TARGET_ARCHITECTURE STREQUAL "x86")
+        if(TARGET_ARCHITECTURE STREQUAL "x86")
             set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -m32")
         endif()
         set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}")
-    elseif (CMAKE_CXX_COMPILER_ID STREQUAL "MSVC")
+    elseif(CMAKE_CXX_COMPILER_ID STREQUAL "MSVC")
         set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /EHsc /W3 /wd5045 /wd4668 /wd4514")
         set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS true)
     endif()
@@ -86,8 +86,9 @@ if (NOT NO_BUILD)
         LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}"
         RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}")
         
-    if (WIN32)
-        set(PROJECT_OUTPUT_FILES "${CMAKE_BINARY_DIR}/${CMAKE_BUILD_TYPE}/${PROJECT_TARGET}.dll" 
+    if(WIN32)
+        set(PROJECT_OUTPUT_FILES 
+		     "${CMAKE_BINARY_DIR}/${CMAKE_BUILD_TYPE}/${PROJECT_TARGET}.dll" 
              "${CMAKE_BINARY_DIR}/${CMAKE_BUILD_TYPE}/${PROJECT_TARGET}.exp" 
              "${CMAKE_BINARY_DIR}/${CMAKE_BUILD_TYPE}/${PROJECT_TARGET}.lib")
     elseif(APPLE)
@@ -109,21 +110,21 @@ if (NOT NO_BUILD)
     endforeach()
         
     ## Submodule configurations ##############################################
-    if (BUILD_FAT32)
+    if(BUILD_FAT32)
         add_subdirectory(fs/fat32)
     endif()
     
     #########################
     # TEST
     #########################
-    if (BUILD_TESTING)
+    if(BUILD_TESTING)
         enable_testing()
         include (CTest)
     
         add_subdirectory(tests)
         
         ## Submodule configurations ##############################################
-        if (BUILD_FAT32)
+        if(BUILD_FAT32)
             add_subdirectory(fs/fat32/tests)
         endif()
     endif (BUILD_TESTING)
@@ -134,7 +135,7 @@ if (NOT NO_BUILD)
     if(PACKAGE_GENERATE)
         STRING(TIMESTAMP TODAY "%Y%m%d")
         
-        if (PACKAGE_TYPE STREQUAL "NIGHTLY")
+        if(PACKAGE_TYPE STREQUAL "NIGHTLY")
             set(PACKAGE_VERSION "${TODAY}nr")
             
             if(PACKAGE_GENERATOR STREQUAL "DEB")
@@ -152,10 +153,12 @@ if (NOT NO_BUILD)
             set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "OpenFSL - An open source filesystem library")
             set(CPACK_PACKAGE_VERSION ${PACKAGE_VERSION})
             set(CPACK_PACKAGE_INSTALL_DIRECTORY "OpenFSL")
-            if (MSVC)
-                set(CPACK_PACKAGE_FILE_NAME "${PROJECT_TARGET}-${CPACK_PACKAGE_VERSION}-${CMAKE_SYSTEM_NAME}.${CMAKE_GENERATOR_PLATFORM}")
+            if(MSVC)
+                set(CPACK_PACKAGE_FILE_NAME 
+				    "${PROJECT_TARGET}-${CPACK_PACKAGE_VERSION}-${CMAKE_SYSTEM_NAME}.${CMAKE_GENERATOR_PLATFORM}")
             else()
-                set(CPACK_PACKAGE_FILE_NAME "${PROJECT_TARGET}-${CPACK_PACKAGE_VERSION}-${CMAKE_SYSTEM_NAME}.${TARGET_ARCHITECTURE}")
+                set(CPACK_PACKAGE_FILE_NAME 
+				    "${PROJECT_TARGET}-${CPACK_PACKAGE_VERSION}-${CMAKE_SYSTEM_NAME}.${TARGET_ARCHITECTURE}")
             endif()
             set(CPACK_RESOURCE_FILE_LICENSE "${CMAKE_SOURCE_DIR}/LICENSE")
             set(CPACK_RESOURCE_FILE_README "${CMAKE_SOURCE_DIR}/README.md")
@@ -167,11 +170,11 @@ if (NOT NO_BUILD)
                     DESTINATION include
                     COMPONENT OFSL_DEVEL)
                     
-            if (DOXYGEN_GENERATE)
+            if(DOXYGEN_GENERATE)
                 install(DIRECTORY "${CMAKE_SOURCE_DIR}/docs"
                         DESTINATION "share/doc/${PROJECT_TARGET}"
                         COMPONENT OFSL_DOC)
-            endif (DOXYGEN_GENERATE)
+            endif(DOXYGEN_GENERATE)
             install(FILES "${CMAKE_SOURCE_DIR}/LICENSE" "${CMAKE_SOURCE_DIR}/README.md"
                     DESTINATION "share/doc/${PROJECT_TARGET}"
                     COMPONENT OFSL_DOC)
@@ -227,8 +230,8 @@ if (NOT NO_BUILD)
             endif()
             
             include(CPack)
-        elseif (PACKAGE_TYPE STREQUAL "BETA")
-        elseif (PACKAGE_TYPE STREQUAL "RELEASE")
+        elseif(PACKAGE_TYPE STREQUAL "BETA")
+        elseif(PACKAGE_TYPE STREQUAL "RELEASE")
         endif()
     endif()
 endif (NOT NO_BUILD)
