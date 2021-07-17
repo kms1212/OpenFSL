@@ -57,6 +57,7 @@ jobs:
           else
             echo "${{matrix.platform}} not supported"
             exit 1
+          fi
         elif [ "$RUNNER_OS" == "Windows" ]; then
           if [ "${{matrix.platform}}" == "x86" ]; then
             cmake -G "Visual Studio 16 2019" -A Win32 -S. -Bbuild \
