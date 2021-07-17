@@ -55,6 +55,8 @@ jobs:
                   -DDOXYGEN_GENERATE=false \
                   -DNO_BUILD=false
           else
+            echo "${{matrix.platform}} not supported"
+            exit 1
         elif [ "$RUNNER_OS" == "Windows" ]; then
           if [ "${{matrix.platform}}" == "x86" ]; then
             cmake -G "Visual Studio 16 2019" -A Win32 -S. -Bbuild \
