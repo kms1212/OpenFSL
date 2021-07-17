@@ -23,7 +23,7 @@ jobs:
       
     - name: Install Required Software
       run: |
-        git clone https://github.com/kms1212/OpenFSL/ ./build/packages
+        git clone https://github.com/kms1212/OpenFSL/ ./packages
         cd ./packages
         git checkout --orphan release-temp
         rm -rf .gitignore .github .gitmodules
