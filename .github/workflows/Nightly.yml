@@ -98,6 +98,8 @@ jobs:
       
     - name: Build & Test & Pack
       run: |
+        git clone -b release-temp https://github.com/kms1212/OpenFSL/ ./packages
+        
         cmake -G "Unix Makefiles" -S. -Bbuild \
               -DTARGET_ARCHITECTURE="x86" \
               -DBUILD_TESTING=true \
