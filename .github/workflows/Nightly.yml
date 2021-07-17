@@ -81,7 +81,7 @@ jobs:
       with:
         github_token: ${{ secrets.API_TOKEN_GITHUB }}
         branch: release-temp
-        directory: ./build/packages/
+        directory: ./packages/
         
   linux-x86-build:
     needs: [linux-x64-build]
@@ -98,8 +98,8 @@ jobs:
       
     - name: Install Required Software
       run: |
-        git clone https://github.com/kms1212/OpenFSL/ ./build/packages
-        cd ./build/packages
+        git clone https://github.com/kms1212/OpenFSL/ ./packages
+        cd ./packages
         git checkout --orphan release-temp
         rm -rf .gitignore .github .gitmodules
         rm -rf ./*
@@ -156,7 +156,7 @@ jobs:
       with:
         github_token: ${{ secrets.API_TOKEN_GITHUB }}
         branch: release-temp
-        directory: ./build/packages/
+        directory: ./packages/
         
   windows-x64-build:
     needs: [linux-x86-build]
@@ -172,7 +172,7 @@ jobs:
       
     - name: Build & Test & Pack
       run: |
-        git clone -b release-temp https://github.com/kms1212/OpenFSL/ ./build/packages
+        git clone -b release-temp https://github.com/kms1212/OpenFSL/ ./packages
         
         cmake -G "Visual Studio 16 2019" -A x64 -S. -Bbuild \
               -DBUILD_TESTING=true \
@@ -220,7 +220,7 @@ jobs:
       with:
         github_token: ${{ secrets.API_TOKEN_GITHUB }}
         branch: release-temp
-        directory: ./build/packages/
+        directory: ./packages/
         
         
   windows-x86-build:
@@ -237,7 +237,7 @@ jobs:
       
     - name: Build & Test & Pack
       run: |
-        git clone -b release-temp https://github.com/kms1212/OpenFSL/ ./build/packages
+        git clone -b release-temp https://github.com/kms1212/OpenFSL/ ./packages
         
         cmake -G "Visual Studio 16 2019" -A Win32 -S. -Bbuild \
               -DBUILD_TESTING=true \
@@ -285,7 +285,7 @@ jobs:
       with:
         github_token: ${{ secrets.API_TOKEN_GITHUB }}
         branch: release-temp
-        directory: ./build/packages/
+        directory: ./packages/
         
         
   macos-x64-build:
@@ -302,7 +302,7 @@ jobs:
       
     - name: Build & Test & Pack
       run: |
-        git clone -b release-temp https://github.com/kms1212/OpenFSL/ ./build/packages
+        git clone -b release-temp https://github.com/kms1212/OpenFSL/ ./packages
         
         cmake -G "Unix Makefiles" -S. -Bbuild \
               -DTARGET_ARCHITECTURE="AMD64" \
