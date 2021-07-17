@@ -86,12 +86,14 @@ if (NOT NO_BUILD)
         LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}"
         RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}")
         
-    if (MSVC)
+    if (WIN32)
         set(PROJECT_OUTPUT_FILES "${CMAKE_BINARY_DIR}/${CMAKE_BUILD_TYPE}/${PROJECT_TARGET}.dll" 
              "${CMAKE_BINARY_DIR}/${CMAKE_BUILD_TYPE}/${PROJECT_TARGET}.exp" 
              "${CMAKE_BINARY_DIR}/${CMAKE_BUILD_TYPE}/${PROJECT_TARGET}.lib")
-    else()
+    elseif(UNIX)
         set(PROJECT_OUTPUT_FILES "${CMAKE_BINARY_DIR}/lib${PROJECT_TARGET}.so")
+    elseif(APPLE)
+        set(PROJECT_OUTPUT_FILES "${CMAKE_BINARY_DIR}/lib${PROJECT_TARGET}.dylib")
     endif()
     
     add_custom_command(POST_BUILD VERBATIM
