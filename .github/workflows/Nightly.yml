@@ -67,7 +67,7 @@ jobs:
               -DPACKAGE_GENERATOR=DEB \
               -DBUILD_FAT32=true
         cmake --build build --target all test package
-        cp openfsl-* packages/
+        cp build/openfsl-* packages/
         
         cd packages
         git config --global user.email "kms1212g@gmail.com"
@@ -142,7 +142,7 @@ jobs:
               -DPACKAGE_GENERATOR=DEB \
               -DBUILD_FAT32=true
         cmake --build build --target all test package
-        cp openfsl-* packages/
+        cp build/openfsl-* packages/
         
         cd packages
         git config --global user.email "kms1212g@gmail.com"
@@ -206,7 +206,7 @@ jobs:
               -DPACKAGE_GENERATOR=NSIS64 \
               -DBUILD_FAT32=true
         cmake --build build --config ${{env.BUILD_TYPE}} --target all_build run_tests package
-        cp openfsl-* packages/
+        cp build/openfsl-* packages/
         
         cd packages
         git config --global user.email "kms1212g@gmail.com"
@@ -271,7 +271,7 @@ jobs:
               -DPACKAGE_GENERATOR=NSIS \
               -DBUILD_FAT32=true
         cmake --build build --config ${{env.BUILD_TYPE}} --target all_build run_tests package
-        cp openfsl-* packages/
+        cp build/openfsl-* packages/
         
         cd packages
         git config --global user.email "kms1212g@gmail.com"
@@ -327,7 +327,7 @@ jobs:
               -DPACKAGE_GENERATOR=ZIP \
               -DBUILD_FAT32=true
         cmake --build build --target all test package
-        cp openfsl-* packages/
+        cp build/openfsl-* packages/
         
         cd packages
         git config --global user.email "kms1212g@gmail.com"
