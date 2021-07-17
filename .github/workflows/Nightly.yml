@@ -84,7 +84,7 @@ jobs:
         directory: ./packages/
         
   linux-x86-build:
-    needs: [linux-x86-build]
+    needs: [linux-x64-build]
     runs-on: 'ubuntu-latest'
     name: 'Linux-x86: Deploy'
     steps:
