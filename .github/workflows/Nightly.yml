@@ -96,15 +96,6 @@ jobs:
         sudo apt-get install cmake zip gcc-multilib g++-multilib
       shell: bash
       
-    - name: Install Required Software
-      run: |
-        git clone https://github.com/kms1212/OpenFSL/ ./packages
-        cd ./packages
-        git checkout --orphan release-temp
-        rm -rf .gitignore .github .gitmodules
-        rm -rf ./*
-      shell: bash
-      
     - name: Build & Test & Pack
       run: |
         cmake -G "Unix Makefiles" -S. -Bbuild \
