@@ -84,16 +84,16 @@ jobs:
         directory: ./packages/
         
   linux-x86-build:
-    needs: [linux-x64-build]
+    needs: [linux-x86-build]
     runs-on: 'ubuntu-latest'
-    name: 'Linux-x64: Deploy'
+    name: 'Linux-x86: Deploy'
     steps:
     - uses: actions/checkout@v2
       
     - name: Install Required Software
       run: |
         sudo apt-get update
-        sudo apt-get install cmake zip
+        sudo apt-get install cmake zip gcc-multilib g++-multilib
       shell: bash
       
     - name: Install Required Software
