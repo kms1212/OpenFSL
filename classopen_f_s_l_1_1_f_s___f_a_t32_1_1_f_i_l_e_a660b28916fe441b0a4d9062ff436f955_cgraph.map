@@ -1,10 +1,11 @@
 <map id="openFSL::FS_FAT32::FILE::read" name="openFSL::FS_FAT32::FILE::read">
-<area shape="rect" id="node1" title="Read file." alt="" coords="5,165,157,207"/>
-<area shape="rect" id="node2" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#af8142312e46e465a8383907b716e5e5e" title=" " alt="" coords="205,165,357,207"/>
-<area shape="rect" id="node3" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#aa0bb9ca47f6694ec138628d3196cf32f" title=" " alt="" coords="405,5,607,47"/>
-<area shape="rect" id="node4" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a0b76e4e0ec7014489abd33759703401a" title="BPB pointer getter." alt="" coords="430,71,582,112"/>
-<area shape="rect" id="node5" href="$classopen_f_s_l_1_1_disk_device.html#abf24cf4f82259254963692008a0e927e" title="Sector size getter." alt="" coords="427,136,585,177"/>
-<area shape="rect" id="node6" href="$classopen_f_s_l_1_1_sector.html#a4216b770df1b0b98eafa60e3c5d84ea0" title="Data buffer getter." alt="" coords="413,202,599,229"/>
-<area shape="rect" id="node7" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a2db2ce36269789056e4aabdb1385408f" title="Disk device getter." alt="" coords="430,253,582,295"/>
-<area shape="rect" id="node8" href="$classopen_f_s_l_1_1_disk_device.html#ad5f6968ae65cad9148123f65a0165da8" title=" " alt="" coords="427,319,585,360"/>
+<area shape="rect" id="node1" title="Read file." alt="" coords="5,188,157,229"/>
+<area shape="rect" id="node2" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#af8142312e46e465a8383907b716e5e5e" title=" " alt="" coords="205,188,357,229"/>
+<area shape="rect" id="node3" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#aa0bb9ca47f6694ec138628d3196cf32f" title=" " alt="" coords="406,5,607,47"/>
+<area shape="rect" id="node4" href="$classopen_f_s_l_1_1_f_s.html#a7dcd9b50ce7ca28ba28c8187740b8b16" title=" " alt="" coords="409,71,604,98"/>
+<area shape="rect" id="node5" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a9f18028119fe31d20cc8a5f8479ccbcc" title="BPB pointer getter." alt="" coords="431,123,583,164"/>
+<area shape="rect" id="node6" href="$classopen_f_s_l_1_1_disk_device.html#abf24cf4f82259254963692008a0e927e" title="Sector size getter." alt="" coords="427,188,586,229"/>
+<area shape="rect" id="node7" href="$classopen_f_s_l_1_1_sector.html#a4216b770df1b0b98eafa60e3c5d84ea0" title="Data buffer getter." alt="" coords="414,254,599,281"/>
+<area shape="rect" id="node8" href="$classopen_f_s_l_1_1_f_s.html#a0f2c85516f7370ae26392515c4adecd8" title=" " alt="" coords="405,305,608,331"/>
+<area shape="rect" id="node9" href="$classopen_f_s_l_1_1_disk_device.html#ad5f6968ae65cad9148123f65a0165da8" title=" " alt="" coords="427,356,586,397"/>
 </map>

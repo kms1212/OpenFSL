@@ -1,9 +1,10 @@
 <map id="openFSL::FS_FAT32::LinkedCluster::fetch" name="openFSL::FS_FAT32::LinkedCluster::fetch">
-<area shape="rect" id="node1" title=" " alt="" coords="5,165,157,207"/>
-<area shape="rect" id="node2" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#aa0bb9ca47f6694ec138628d3196cf32f" title=" " alt="" coords="205,5,407,47"/>
-<area shape="rect" id="node3" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a0b76e4e0ec7014489abd33759703401a" title="BPB pointer getter." alt="" coords="230,71,382,112"/>
-<area shape="rect" id="node4" href="$classopen_f_s_l_1_1_disk_device.html#abf24cf4f82259254963692008a0e927e" title="Sector size getter." alt="" coords="227,136,385,177"/>
-<area shape="rect" id="node5" href="$classopen_f_s_l_1_1_sector.html#a4216b770df1b0b98eafa60e3c5d84ea0" title="Data buffer getter." alt="" coords="213,202,399,229"/>
-<area shape="rect" id="node6" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a2db2ce36269789056e4aabdb1385408f" title="Disk device getter." alt="" coords="230,253,382,295"/>
-<area shape="rect" id="node7" href="$classopen_f_s_l_1_1_disk_device.html#ad5f6968ae65cad9148123f65a0165da8" title=" " alt="" coords="227,319,385,360"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,188,157,229"/>
+<area shape="rect" id="node2" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#aa0bb9ca47f6694ec138628d3196cf32f" title=" " alt="" coords="206,5,407,47"/>
+<area shape="rect" id="node3" href="$classopen_f_s_l_1_1_f_s.html#a7dcd9b50ce7ca28ba28c8187740b8b16" title=" " alt="" coords="209,71,404,98"/>
+<area shape="rect" id="node4" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a9f18028119fe31d20cc8a5f8479ccbcc" title="BPB pointer getter." alt="" coords="231,123,383,164"/>
+<area shape="rect" id="node5" href="$classopen_f_s_l_1_1_disk_device.html#abf24cf4f82259254963692008a0e927e" title="Sector size getter." alt="" coords="227,188,386,229"/>
+<area shape="rect" id="node6" href="$classopen_f_s_l_1_1_sector.html#a4216b770df1b0b98eafa60e3c5d84ea0" title="Data buffer getter." alt="" coords="214,254,399,281"/>
+<area shape="rect" id="node7" href="$classopen_f_s_l_1_1_f_s.html#a0f2c85516f7370ae26392515c4adecd8" title=" " alt="" coords="205,305,408,331"/>
+<area shape="rect" id="node8" href="$classopen_f_s_l_1_1_disk_device.html#ad5f6968ae65cad9148123f65a0165da8" title=" " alt="" coords="227,356,386,397"/>
 </map>

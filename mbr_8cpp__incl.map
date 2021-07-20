@@ -1,4 +1,13 @@
-<map id="src/tables/mbr.cpp" name="src/tables/mbr.cpp">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,147,32"/>
-<area shape="rect" id="node2" href="$mbr_8h.html" title=" " alt="" coords="21,80,131,107"/>
+<map id="src/mbr.cpp" name="src/mbr.cpp">
+<area shape="rect" id="node1" title=" " alt="" coords="84,5,181,32"/>
+<area shape="rect" id="node2" href="$mbr_8h.html" title=" " alt="" coords="77,80,188,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,453,76,480"/>
+<area shape="rect" id="node4" title=" " alt="" coords="235,155,305,181"/>
+<area shape="rect" id="node5" href="$filesystem_8h.html" title=" " alt="" coords="55,155,210,181"/>
+<area shape="rect" id="node6" title=" " alt="" coords="286,453,345,480"/>
+<area shape="rect" id="node7" href="$diskdevice_8h.html" title=" " alt="" coords="55,229,211,256"/>
+<area shape="rect" id="node8" href="$sector_8h.html" title=" " alt="" coords="101,304,175,331"/>
+<area shape="rect" id="node9" href="$fslservices_8h.html" title=" " alt="" coords="151,379,255,405"/>
+<area shape="rect" id="node10" title=" " alt="" coords="100,453,163,480"/>
+<area shape="rect" id="node11" title=" " alt="" coords="187,453,262,480"/>
 </map>

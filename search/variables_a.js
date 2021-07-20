@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['read_367',['read',['../classopen_f_s_l_1_1_disk_device.html#a7e9a3f86d91f699942a114ada11212c4',1,'openFSL::DiskDevice']]]
+  ['pathseparator_435',['pathSeparator',['../classopen_f_s_l_1_1_f_s___f_a_t32.html#a7421632dee11923f5e196e14a0e6c2d8',1,'openFSL::FS_FAT32']]]
 ];

@@ -1,5 +1,7 @@
 <map id="openFSL::DiskDevice" name="openFSL::DiskDevice">
-<area shape="rect" id="node1" title="Disk driver." alt="" coords="20,189,187,325"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,5,65,83"/>
-<area shape="rect" id="node3" title=" " alt="" coords="153,5,192,83"/>
+<area shape="rect" id="node1" title="Disk driver." alt="" coords="249,189,416,325"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,5,172,112"/>
+<area shape="rect" id="node3" title=" " alt="" coords="196,20,360,97"/>
+<area shape="rect" id="node4" title=" " alt="" coords="384,20,444,97"/>
+<area shape="rect" id="node5" title=" " alt="" coords="493,20,559,97"/>
 </map>

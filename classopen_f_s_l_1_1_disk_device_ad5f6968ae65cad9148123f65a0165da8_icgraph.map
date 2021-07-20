@@ -1,7 +1,8 @@
 <map id="openFSL::DiskDevice::readDisk" name="openFSL::DiskDevice::readDisk">
-<area shape="rect" id="node1" title=" " alt="" coords="1005,72,1164,113"/>
-<area shape="rect" id="node2" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#af8142312e46e465a8383907b716e5e5e" title=" " alt="" coords="805,39,957,80"/>
-<area shape="rect" id="node8" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#aca79ddbddb1c9c1ccde9d15bb7d11159" title="FS_FAT32 intializer." alt="" coords="805,104,957,145"/>
+<area shape="rect" id="node1" title=" " alt="" coords="1056,97,1215,139"/>
+<area shape="rect" id="node2" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#af8142312e46e465a8383907b716e5e5e" title=" " alt="" coords="831,39,983,80"/>
+<area shape="rect" id="node8" href="$classopen_f_s_l_1_1_t_b___m_b_r.html#a1001101393d346b1c22c278accbca577" title=" " alt="" coords="805,105,1008,131"/>
+<area shape="rect" id="node9" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#aca79ddbddb1c9c1ccde9d15bb7d11159" title="FS_FAT32 intializer." alt="" coords="831,156,983,197"/>
 <area shape="rect" id="node3" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a4f896e3685a27057fcafb0e1a7d42566" title="Directory lister." alt="" coords="605,5,757,47"/>
 <area shape="rect" id="node7" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_i_l_e.html#a660b28916fe441b0a4d9062ff436f955" title="Read file." alt="" coords="605,71,757,112"/>
 <area shape="rect" id="node4" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a30158d5a3854a4e6adb68525409bec0f" title="Change directory." alt="" coords="405,5,557,47"/>

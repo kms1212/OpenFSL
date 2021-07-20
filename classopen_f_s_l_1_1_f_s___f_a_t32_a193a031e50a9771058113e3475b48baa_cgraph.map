@@ -1,14 +1,15 @@
 <map id="openFSL::FS_FAT32::getFileInformation" name="openFSL::FS_FAT32::getFileInformation">
-<area shape="rect" id="node1" title="Get file information." alt="" coords="5,195,157,236"/>
-<area shape="rect" id="node2" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a30158d5a3854a4e6adb68525409bec0f" title="Change directory." alt="" coords="205,165,357,207"/>
-<area shape="rect" id="node4" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a4f896e3685a27057fcafb0e1a7d42566" title="Directory lister." alt="" coords="419,195,571,236"/>
-<area shape="rect" id="node3" href="$namespaceopen_f_s_l.html#a93d37096baa2dd91e4ae24d62ff7fbad" title="String tokenizer." alt="" coords="405,143,584,170"/>
-<area shape="rect" id="node5" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#af8142312e46e465a8383907b716e5e5e" title=" " alt="" coords="632,165,784,207"/>
-<area shape="rect" id="node12" href="$getdirlist_8cpp.html#a8c2f71cc395df104866f1763be127644" title=" " alt="" coords="670,231,746,258"/>
-<area shape="rect" id="node6" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#aa0bb9ca47f6694ec138628d3196cf32f" title=" " alt="" coords="832,5,1033,47"/>
-<area shape="rect" id="node7" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a0b76e4e0ec7014489abd33759703401a" title="BPB pointer getter." alt="" coords="857,71,1009,112"/>
-<area shape="rect" id="node8" href="$classopen_f_s_l_1_1_disk_device.html#abf24cf4f82259254963692008a0e927e" title="Sector size getter." alt="" coords="853,136,1012,177"/>
-<area shape="rect" id="node9" href="$classopen_f_s_l_1_1_sector.html#a4216b770df1b0b98eafa60e3c5d84ea0" title="Data buffer getter." alt="" coords="840,202,1025,229"/>
-<area shape="rect" id="node10" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a2db2ce36269789056e4aabdb1385408f" title="Disk device getter." alt="" coords="857,253,1009,295"/>
-<area shape="rect" id="node11" href="$classopen_f_s_l_1_1_disk_device.html#ad5f6968ae65cad9148123f65a0165da8" title=" " alt="" coords="853,319,1012,360"/>
+<area shape="rect" id="node1" title="Get file information." alt="" coords="5,217,157,259"/>
+<area shape="rect" id="node2" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a30158d5a3854a4e6adb68525409bec0f" title="Change directory." alt="" coords="205,188,357,229"/>
+<area shape="rect" id="node4" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a4f896e3685a27057fcafb0e1a7d42566" title="Directory lister." alt="" coords="419,217,571,259"/>
+<area shape="rect" id="node3" href="$namespaceopen_f_s_l.html#a93d37096baa2dd91e4ae24d62ff7fbad" title="String tokenizer." alt="" coords="405,166,584,193"/>
+<area shape="rect" id="node5" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#af8142312e46e465a8383907b716e5e5e" title=" " alt="" coords="632,188,784,229"/>
+<area shape="rect" id="node13" href="$getdirlist_8cpp.html#a8c2f71cc395df104866f1763be127644" title=" " alt="" coords="670,254,746,281"/>
+<area shape="rect" id="node6" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#aa0bb9ca47f6694ec138628d3196cf32f" title=" " alt="" coords="833,5,1034,47"/>
+<area shape="rect" id="node7" href="$classopen_f_s_l_1_1_f_s.html#a7dcd9b50ce7ca28ba28c8187740b8b16" title=" " alt="" coords="836,71,1031,98"/>
+<area shape="rect" id="node8" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a9f18028119fe31d20cc8a5f8479ccbcc" title="BPB pointer getter." alt="" coords="857,123,1009,164"/>
+<area shape="rect" id="node9" href="$classopen_f_s_l_1_1_disk_device.html#abf24cf4f82259254963692008a0e927e" title="Sector size getter." alt="" coords="854,188,1013,229"/>
+<area shape="rect" id="node10" href="$classopen_f_s_l_1_1_sector.html#a4216b770df1b0b98eafa60e3c5d84ea0" title="Data buffer getter." alt="" coords="841,254,1026,281"/>
+<area shape="rect" id="node11" href="$classopen_f_s_l_1_1_f_s.html#a0f2c85516f7370ae26392515c4adecd8" title=" " alt="" coords="832,305,1035,331"/>
+<area shape="rect" id="node12" href="$classopen_f_s_l_1_1_disk_device.html#ad5f6968ae65cad9148123f65a0165da8" title=" " alt="" coords="854,356,1013,397"/>
 </map>

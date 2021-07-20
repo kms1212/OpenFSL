@@ -1,13 +1,5 @@
 var searchData=
 [
-  ['cachedata_300',['cacheData',['../structopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_a_t32__cache_entry.html#a3a519a4df650f40a9285851be5ba7693',1,'openFSL::FS_FAT32::FAT32_cacheEntry']]],
-  ['cacheindex_301',['cacheIndex',['../structopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_a_t32__cache_entry.html#a371a67b6f59fa6e0da4382385a312a42',1,'openFSL::FS_FAT32::FAT32_cacheEntry']]],
-  ['cachekey_302',['cacheKey',['../structopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_a_t32__cache_entry.html#af54aa4e3cdebf35b52e4d6a039d1ac16',1,'openFSL::FS_FAT32::FAT32_cacheEntry']]],
-  ['cachetype_303',['cacheType',['../structopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_a_t32__cache_entry.html#ace74bd76e12d22633566cd3808336ce9',1,'openFSL::FS_FAT32::FAT32_cacheEntry']]],
-  ['close_304',['close',['../classopen_f_s_l_1_1_disk_device.html#ad442994336ed6da38e713907ab4d7487',1,'openFSL::DiskDevice']]],
-  ['clusterlist_305',['clusterList',['../classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a35e9574af0aeff9c763265d9c3d36f6c',1,'openFSL::FS_FAT32::LinkedCluster']]],
-  ['currentcacheclusterindex_306',['currentCacheClusterIndex',['../classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a1f9e8653929dd34f921f740ef7a6e591',1,'openFSL::FS_FAT32::LinkedCluster']]],
-  ['currentcacheclustersize_307',['currentCacheClusterSize',['../classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#aba1a89e42d0019d7d8756ae897ff3804',1,'openFSL::FS_FAT32::LinkedCluster']]],
-  ['currentcluster_308',['currentCluster',['../classopen_f_s_l_1_1_f_s___f_a_t32.html#a275fe7152ab687964bf4ca6b449e2dac',1,'openFSL::FS_FAT32']]],
-  ['currentpath_309',['currentPath',['../classopen_f_s_l_1_1_f_s___f_a_t32.html#aa9d033b20a66827798d7f979e9c0e7a6',1,'openFSL::FS_FAT32']]]
+  ['data_364',['data',['../classopen_f_s_l_1_1_sector.html#a20c6bbff15e90372bf920970cae286cc',1,'openFSL::Sector']]],
+  ['dd_365',['dd',['../classopen_f_s_l_1_1_f_s.html#a9a285f5a89e84f6ebe9c7b0fbd1706b9',1,'openFSL::FS::dd()'],['../classopen_f_s_l_1_1_t_b___m_b_r.html#a66f4f57ab3c5c566a368d407c17781ad',1,'openFSL::TB_MBR::dd()']]]
 ];

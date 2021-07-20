@@ -1,8 +1,22 @@
 var searchData=
 [
-  ['data_38',['data',['../classopen_f_s_l_1_1_sector.html#a20c6bbff15e90372bf920970cae286cc',1,'openFSL::Sector']]],
-  ['dd_39',['dd',['../classopen_f_s_l_1_1_f_s___f_a_t32.html#a40f7e4b624550b57a8c8cea6228bae28',1,'openFSL::FS_FAT32']]],
-  ['diskdevice_40',['DiskDevice',['../classopen_f_s_l_1_1_disk_device.html',1,'openFSL::DiskDevice'],['../classopen_f_s_l_1_1_disk_device.html#a21c4f5ce2b2807e4bd7676ef0426260d',1,'openFSL::DiskDevice::DiskDevice()']]],
-  ['diskdevice_2ecpp_41',['diskdevice.cpp',['../diskdevice_8cpp.html',1,'']]],
-  ['diskdevice_2eh_42',['diskdevice.h',['../diskdevice_8h.html',1,'']]]
+  ['ebpbbsbackupsector_45',['ebpbBSBackupSector',['../structopen_f_s_l_1_1_f_s___f_a_t32_1_1_b_p_b_sector.html#a8141b92388bbdbf322ba1121d19e6aa4',1,'openFSL::FS_FAT32::BPBSector']]],
+  ['ebpbextendedbootsign_46',['ebpbExtendedBootSign',['../structopen_f_s_l_1_1_f_s___f_a_t32_1_1_b_p_b_sector.html#a68e4396e598c2b010979598b1e0ee58a',1,'openFSL::FS_FAT32::BPBSector']]],
+  ['ebpbflags_47',['ebpbFlags',['../structopen_f_s_l_1_1_f_s___f_a_t32_1_1_b_p_b_sector.html#a01352b3b21a8b4eed60c73f453a19e0c',1,'openFSL::FS_FAT32::BPBSector']]],
+  ['ebpbfsinfosector_48',['ebpbFSInfoSector',['../structopen_f_s_l_1_1_f_s___f_a_t32_1_1_b_p_b_sector.html#acf45f6fbc9fa86a0ea8dd8b803b3f79c',1,'openFSL::FS_FAT32::BPBSector']]],
+  ['ebpbfstype_49',['ebpbFSType',['../structopen_f_s_l_1_1_f_s___f_a_t32_1_1_b_p_b_sector.html#a09bea369b31fb69ae3144636a7a40065',1,'openFSL::FS_FAT32::BPBSector']]],
+  ['ebpbfsversion_50',['ebpbFSVersion',['../structopen_f_s_l_1_1_f_s___f_a_t32_1_1_b_p_b_sector.html#a985b4f4b65366fc0e5ef1ab53cb7ee45',1,'openFSL::FS_FAT32::BPBSector']]],
+  ['ebpbphysicaldrivenum_51',['ebpbPhysicalDriveNum',['../structopen_f_s_l_1_1_f_s___f_a_t32_1_1_b_p_b_sector.html#ae9cf277ddccd1239556b0eb2b54d2a3f',1,'openFSL::FS_FAT32::BPBSector']]],
+  ['ebpbreserved1_52',['ebpbReserved1',['../structopen_f_s_l_1_1_f_s___f_a_t32_1_1_b_p_b_sector.html#ae3a8c4c6861064cce4578414d64f1081',1,'openFSL::FS_FAT32::BPBSector']]],
+  ['ebpbreserved2_53',['ebpbReserved2',['../structopen_f_s_l_1_1_f_s___f_a_t32_1_1_b_p_b_sector.html#a4fe00f5dbb1f50e4834a365a08abf47b',1,'openFSL::FS_FAT32::BPBSector']]],
+  ['ebpbrootdirectorycluster_54',['ebpbRootDirectoryCluster',['../structopen_f_s_l_1_1_f_s___f_a_t32_1_1_b_p_b_sector.html#a585089f4013debad763eea825bffd6db',1,'openFSL::FS_FAT32::BPBSector']]],
+  ['ebpbsectorsperfat32_55',['ebpbSectorsPerFAT32',['../structopen_f_s_l_1_1_f_s___f_a_t32_1_1_b_p_b_sector.html#a4ea88a074117d1994c67e205c08ea0fd',1,'openFSL::FS_FAT32::BPBSector']]],
+  ['ebpbvolumelabel_56',['ebpbVolumeLabel',['../structopen_f_s_l_1_1_f_s___f_a_t32_1_1_b_p_b_sector.html#aa7709ebbeec3f016f073a1dc7505d870',1,'openFSL::FS_FAT32::BPBSector']]],
+  ['ebpbvolumeserial_57',['ebpbVolumeSerial',['../structopen_f_s_l_1_1_f_s___f_a_t32_1_1_b_p_b_sector.html#a86741e023ca527dba3a089b73b763ecd',1,'openFSL::FS_FAT32::BPBSector']]],
+  ['entrybootflag_58',['entryBootFlag',['../structopen_f_s_l_1_1_t_b___m_b_r_1_1_partition_entry.html#a146ccf2ab6657d5656b911fb50765450',1,'openFSL::TB_MBR::PartitionEntry']]],
+  ['entryendingchsaddr_59',['entryEndingCHSAddr',['../structopen_f_s_l_1_1_t_b___m_b_r_1_1_partition_entry.html#a7cba2204701e029b410996397726e68b',1,'openFSL::TB_MBR::PartitionEntry']]],
+  ['entrylbasize_60',['entryLBASize',['../structopen_f_s_l_1_1_t_b___m_b_r_1_1_partition_entry.html#a332b6a1312dc20a734cb95885231624b',1,'openFSL::TB_MBR::PartitionEntry']]],
+  ['entrypartitiontype_61',['entryPartitionType',['../structopen_f_s_l_1_1_t_b___m_b_r_1_1_partition_entry.html#a9693352ab7da728e35b537da9a8492c3',1,'openFSL::TB_MBR::PartitionEntry']]],
+  ['entrystartingchsaddr_62',['entryStartingCHSAddr',['../structopen_f_s_l_1_1_t_b___m_b_r_1_1_partition_entry.html#af371b3fa234dfaab2821f3bda154096b',1,'openFSL::TB_MBR::PartitionEntry']]],
+  ['entrystartinglbaaddr_63',['entryStartingLBAAddr',['../structopen_f_s_l_1_1_t_b___m_b_r_1_1_partition_entry.html#a2ac4182772cbe730ad2b65dcfed43144',1,'openFSL::TB_MBR::PartitionEntry']]]
 ];

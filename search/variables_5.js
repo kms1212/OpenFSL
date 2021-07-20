@@ -1,32 +1,4 @@
 var searchData=
 [
-  ['fatclusterlist_325',['fatClusterList',['../classopen_f_s_l_1_1_f_s___f_a_t32.html#a8d2621636e91f7b822ff3cbadbcf2481',1,'openFSL::FS_FAT32']]],
-  ['fetchedsectorcache_326',['fetchedSectorCache',['../classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#aa3e0397c763244a543bec96c4423af89',1,'openFSL::FS_FAT32::LinkedCluster']]],
-  ['fileaccessdate_327',['fileAccessDate',['../structopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_a_t32__entry.html#a28baa885f716d7efc7d5fe055a154bb2',1,'openFSL::FS_FAT32::FAT32_entry']]],
-  ['fileaccesstime_328',['fileAccessTime',['../structopen_f_s_l_1_1_f_s___f_a_t32_1_1_file_info.html#a1ae678d2f6dc51a3502cfaf45d45f5e2',1,'openFSL::FS_FAT32::FileInfo']]],
-  ['fileattr_329',['fileAttr',['../structopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_a_t32__entry.html#aa1542efe8ff707d6802d021d18b0358e',1,'openFSL::FS_FAT32::FAT32_entry::fileAttr()'],['../structopen_f_s_l_1_1_f_s___f_a_t32_1_1_file_info.html#a976e8f2900dcb2120e57d67285bd4720',1,'openFSL::FS_FAT32::FileInfo::fileAttr()']]],
-  ['filecluster_330',['fileCluster',['../classopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_i_l_e.html#a04c46df5616f98726414f0072779ff85',1,'openFSL::FS_FAT32::FILE']]],
-  ['filecontroller_331',['fileController',['../classopen_f_s_l_1_1_f_s_l___file.html#afe0f088001169cd07d1f2b4367932b94',1,'openFSL::FSL_File']]],
-  ['filecreatedate_332',['fileCreateDate',['../structopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_a_t32__entry.html#aee1cc24bbfcfee92faea00c69bf4ccdb',1,'openFSL::FS_FAT32::FAT32_entry']]],
-  ['filecreatetenth_333',['fileCreateTenth',['../structopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_a_t32__entry.html#adffd25c5fe27ec0de68d44afec6cda90',1,'openFSL::FS_FAT32::FAT32_entry']]],
-  ['filecreatetime_334',['fileCreateTime',['../structopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_a_t32__entry.html#a9d9d97e550225f021e617880cf4d13a9',1,'openFSL::FS_FAT32::FAT32_entry::fileCreateTime()'],['../structopen_f_s_l_1_1_f_s___f_a_t32_1_1_file_info.html#ae7cdd3b482e6ece4063c62a405411dc1',1,'openFSL::FS_FAT32::FileInfo::fileCreateTime()']]],
-  ['fileext_335',['fileExt',['../structopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_a_t32__entry.html#a257b9fa27db2eff59cb6eba080d53ad2',1,'openFSL::FS_FAT32::FAT32_entry']]],
-  ['fileinfo_336',['fileInfo',['../classopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_i_l_e.html#a7833dd14c890face61ea17fe4ef4b914',1,'openFSL::FS_FAT32::FILE']]],
-  ['filelocation_337',['fileLocation',['../structopen_f_s_l_1_1_f_s___f_a_t32_1_1_file_info.html#a4e7b5440e98fcc2e298644b18e2da55a',1,'openFSL::FS_FAT32::FileInfo']]],
-  ['filelocationhigh_338',['fileLocationHigh',['../structopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_a_t32__entry.html#aa2d5b4cb59a1a462109ce49ae6fc1dce',1,'openFSL::FS_FAT32::FAT32_entry']]],
-  ['filelocationlow_339',['fileLocationLow',['../structopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_a_t32__entry.html#ab1247d16cb0eba41d74f930fbb8791c1',1,'openFSL::FS_FAT32::FAT32_entry']]],
-  ['filemoddate_340',['fileModDate',['../structopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_a_t32__entry.html#ab1cad278dc02a45d69243fceed7a4a5a',1,'openFSL::FS_FAT32::FAT32_entry']]],
-  ['filemodtime_341',['fileModTime',['../structopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_a_t32__entry.html#aa04328adca99f916febf61fefcdef884',1,'openFSL::FS_FAT32::FAT32_entry::fileModTime()'],['../structopen_f_s_l_1_1_f_s___f_a_t32_1_1_file_info.html#a6016b33b6c10bea17433df1fea4f7e23',1,'openFSL::FS_FAT32::FileInfo::fileModTime()']]],
-  ['filename_342',['fileName',['../structopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_a_t32__entry.html#af3b26655bc32a087ebc2e361d84fda6e',1,'openFSL::FS_FAT32::FAT32_entry::fileName()'],['../structopen_f_s_l_1_1_f_s___f_a_t32_1_1_file_info.html#a13042588c9bdd103e396779d47f280a5',1,'openFSL::FS_FAT32::FileInfo::fileName()']]],
-  ['filereserved1_343',['fileReserved1',['../structopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_a_t32__entry.html#a9aa1a5870007ec04e940b1234aa9fab5',1,'openFSL::FS_FAT32::FAT32_entry']]],
-  ['filesize_344',['fileSize',['../structopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_a_t32__entry.html#a99304bd209a21a638314f4a3d671dc65',1,'openFSL::FS_FAT32::FAT32_entry::fileSize()'],['../structopen_f_s_l_1_1_f_s___f_a_t32_1_1_file_info.html#a58da6192f377efcf9dde17715cea93a0',1,'openFSL::FS_FAT32::FileInfo::fileSize()']]],
-  ['filesystem_345',['fileSystem',['../classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#ab84c07204b66158f45c4df39db66cf67',1,'openFSL::FS_FAT32::LinkedCluster::fileSystem()'],['../classopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_i_l_e.html#a0ffd99fa99869210d3219ce7c9126081',1,'openFSL::FS_FAT32::FILE::fileSystem()']]],
-  ['fsinfo_346',['fsinfo',['../classopen_f_s_l_1_1_f_s___f_a_t32.html#ada58c41b1693d711faf81a331049e732',1,'openFSL::FS_FAT32']]],
-  ['fsinfofreecluster_347',['fsinfoFreeCluster',['../structopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_a_t32__fsinfo.html#a1c0fb57ae8ab3126c11b6d912231e7bd',1,'openFSL::FS_FAT32::FAT32_fsinfo']]],
-  ['fsinfonextfree_348',['fsinfoNextFree',['../structopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_a_t32__fsinfo.html#aa948600842ffc78ba8e0825ea0d03f99',1,'openFSL::FS_FAT32::FAT32_fsinfo']]],
-  ['fsinforeserved1_349',['fsinfoReserved1',['../structopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_a_t32__fsinfo.html#ae01730965cdec69446f98466b65e2dc7',1,'openFSL::FS_FAT32::FAT32_fsinfo']]],
-  ['fsinforeserved2_350',['fsinfoReserved2',['../structopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_a_t32__fsinfo.html#afcc4bc69b13c6a85a313ed745ff1acbf',1,'openFSL::FS_FAT32::FAT32_fsinfo']]],
-  ['fsinfosignature1_351',['fsinfoSignature1',['../structopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_a_t32__fsinfo.html#a99d3cbe8ddf4a19ba10e594609414aa8',1,'openFSL::FS_FAT32::FAT32_fsinfo']]],
-  ['fsinfosignature2_352',['fsinfoSignature2',['../structopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_a_t32__fsinfo.html#a5f1469beb28cc36301d07563272a3c08',1,'openFSL::FS_FAT32::FAT32_fsinfo']]],
-  ['fsinfosignature3_353',['fsinfoSignature3',['../structopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_a_t32__fsinfo.html#aa587a1027d727707b7125f7fc3dafd37',1,'openFSL::FS_FAT32::FAT32_fsinfo']]]
+  ['hitcount_417',['hitCount',['../classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a150638c43856298f03b6fc9c3dcd1526',1,'openFSL::FS_FAT32::LinkedCluster']]]
 ];

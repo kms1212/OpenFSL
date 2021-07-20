@@ -1,0 +1,6 @@
+<map id="openFSL::TB_MBR::initialize" name="openFSL::TB_MBR::initialize">
+<area shape="rect" id="node1" title=" " alt="" coords="5,71,208,98"/>
+<area shape="rect" id="node2" href="$classopen_f_s_l_1_1_disk_device.html#abf24cf4f82259254963692008a0e927e" title="Sector size getter." alt="" coords="269,5,428,47"/>
+<area shape="rect" id="node3" href="$classopen_f_s_l_1_1_sector.html#a4216b770df1b0b98eafa60e3c5d84ea0" title="Data buffer getter." alt="" coords="256,71,441,98"/>
+<area shape="rect" id="node4" href="$classopen_f_s_l_1_1_disk_device.html#ad5f6968ae65cad9148123f65a0165da8" title=" " alt="" coords="269,123,428,164"/>
+</map>

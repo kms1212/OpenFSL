@@ -2,6 +2,7 @@ var classopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_i_l_e =
 [
     [ "FILE", "classopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_i_l_e.html#a2e00c1d6b0fe2381496918ad8c5ace83", null ],
     [ "~FILE", "classopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_i_l_e.html#a1c1913d662350424f1911d9670d3ab1a", null ],
+    [ "getCacheHitRatio", "classopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_i_l_e.html#a3f675f9816e038610277eaa7f4c746ea", null ],
     [ "getFileInfo", "classopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_i_l_e.html#a3abaa7a3c6e16d211f90bb768cf73d1a", null ],
     [ "read", "classopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_i_l_e.html#a660b28916fe441b0a4d9062ff436f955", null ],
     [ "seek", "classopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_i_l_e.html#a653184cf8a6849e5e622459738fc29e0", null ],
