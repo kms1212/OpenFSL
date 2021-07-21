@@ -1,5 +1,6 @@
 var namespaceopen_f_s_l =
 [
+    [ "CHS", "structopen_f_s_l_1_1_c_h_s.html", "structopen_f_s_l_1_1_c_h_s" ],
     [ "DiskDevice", "classopen_f_s_l_1_1_disk_device.html", "classopen_f_s_l_1_1_disk_device" ],
     [ "FS", "classopen_f_s_l_1_1_f_s.html", "classopen_f_s_l_1_1_f_s" ],
     [ "FS_FAT32", "classopen_f_s_l_1_1_f_s___f_a_t32.html", "classopen_f_s_l_1_1_f_s___f_a_t32" ],

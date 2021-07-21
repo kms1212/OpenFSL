@@ -1,6 +1,7 @@
 <map id="openFSL::FS_FAT32::FileEntry" name="openFSL::FS_FAT32::FileEntry">
-<area shape="rect" id="node1" title="FAT32 directory entry struct." alt="" coords="115,233,267,325"/>
+<area shape="rect" id="node1" title="FAT32 directory entry struct." alt="" coords="161,233,313,325"/>
 <area shape="rect" id="node2" title=" " alt="" coords="5,5,80,83"/>
-<area shape="rect" id="node3" title=" " alt="" coords="153,5,228,83"/>
-<area shape="rect" id="node4" title=" " alt="" coords="252,5,319,83"/>
+<area shape="rect" id="node3" title=" " alt="" coords="152,5,227,83"/>
+<area shape="rect" id="node4" title=" " alt="" coords="251,5,317,83"/>
+<area shape="rect" id="node5" title=" " alt="" coords="373,5,475,83"/>
 </map>

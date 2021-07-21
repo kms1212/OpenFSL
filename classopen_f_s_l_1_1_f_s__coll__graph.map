@@ -1,10 +1,10 @@
 <map id="openFSL::FS" name="openFSL::FS">
-<area shape="rect" id="node1" title=" " alt="" coords="581,388,727,568"/>
-<area shape="rect" id="node2" href="$classopen_f_s_l_1_1_disk_device.html" title="Disk driver." alt="" coords="301,189,468,325"/>
-<area shape="rect" id="node3" title=" " alt="" coords="193,5,360,112"/>
-<area shape="rect" id="node4" title=" " alt="" coords="5,20,169,97"/>
-<area shape="rect" id="node5" title=" " alt="" coords="519,20,579,97"/>
-<area shape="rect" id="node6" title=" " alt="" coords="385,20,451,97"/>
-<area shape="rect" id="node7" title=" " alt="" coords="700,219,739,296"/>
-<area shape="rect" id="node8" title=" " alt="" coords="763,219,830,296"/>
+<area shape="rect" id="node1" title=" " alt="" coords="234,403,381,583"/>
+<area shape="rect" id="node2" href="$classopen_f_s_l_1_1_disk_device.html" title="Disk driver." alt="" coords="129,189,296,340"/>
+<area shape="rect" id="node3" title=" " alt="" coords="388,5,555,112"/>
+<area shape="rect" id="node4" title=" " alt="" coords="11,20,71,97"/>
+<area shape="rect" id="node5" title=" " alt="" coords="105,5,272,112"/>
+<area shape="rect" id="node6" title=" " alt="" coords="297,20,363,97"/>
+<area shape="rect" id="node7" title=" " alt="" coords="320,226,359,303"/>
+<area shape="rect" id="node8" title=" " alt="" coords="383,226,450,303"/>
 </map>
