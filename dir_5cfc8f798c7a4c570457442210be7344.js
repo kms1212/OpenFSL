@@ -1,5 +1,6 @@
 var dir_5cfc8f798c7a4c570457442210be7344 =
 [
+    [ "detectstruct.h", "detectstruct_8h.html", "detectstruct_8h" ],
     [ "diskdevice.h", "diskdevice_8h.html", [
       [ "DiskDevice", "classopen_f_s_l_1_1_disk_device.html", "classopen_f_s_l_1_1_disk_device" ],
       [ "DiskParameter", "structopen_f_s_l_1_1_disk_device_1_1_disk_parameter.html", null ]

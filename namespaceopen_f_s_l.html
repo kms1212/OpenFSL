@@ -95,8 +95,8 @@ $(document).ready(function(){initNavTree('namespaceopen_f_s_l.html',''); initRes
 
 <div class="header">
   <div class="summary">
+<a href="#namespaces">Namespaces</a> &#124;
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
@@ -104,6 +104,11 @@ $(document).ready(function(){initNavTree('namespaceopen_f_s_l.html',''); initRes
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:namespaceopen_f_s_l_1_1fs_structure"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopen_f_s_l_1_1fs_structure.html">fsStructure</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structopen_f_s_l_1_1_c_h_s.html">CHS</a></td></tr>
@@ -115,6 +120,8 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html">FS_FAT32</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">FAT32 imeplementation.  <a href="classopen_f_s_l_1_1_f_s___f_a_t32.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structopen_f_s_l_1_1_f_s_l___disk_structure.html">FSL_DiskStructure</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopen_f_s_l_1_1_f_s_l___file.html">FSL_File</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">OpenFSL file.  <a href="classopen_f_s_l_1_1_f_s_l___file.html#details">More...</a><br /></td></tr>
@@ -128,14 +135,34 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopen_f_s_l_1_1_t_b___m_b_r.html">TB_MBR</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
-Typedefs</h2></td></tr>
-<tr class="memitem:aba6b1548085a45ae430e0871af690360"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structopen_f_s_l_1_1_f_s_l___time.html">openFSL::FSL_Time</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopen_f_s_l.html#aba6b1548085a45ae430e0871af690360">FSL_Time</a></td></tr>
-<tr class="memdesc:aba6b1548085a45ae430e0871af690360"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="namespaceopen_f_s_l.html">openFSL</a> time  <a href="namespaceopen_f_s_l.html#aba6b1548085a45ae430e0871af690360">More...</a><br /></td></tr>
-<tr class="separator:aba6b1548085a45ae430e0871af690360"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
+<tr class="memitem:a59de55e866bfc93ace1b58ada5e56b07"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopen_f_s_l.html#a59de55e866bfc93ace1b58ada5e56b07">FSL_FileSystem</a> { <br />
+&#160;&#160;<a class="el" href="namespaceopen_f_s_l.html#a59de55e866bfc93ace1b58ada5e56b07adeaae1eb49b2590eacd1c4a92e21b28a">fs_None</a> = 0x00, 
+<a class="el" href="namespaceopen_f_s_l.html#a59de55e866bfc93ace1b58ada5e56b07a86903191a756b37e34b4157c8648877b">fs_FAT12</a> = 0x01, 
+<a class="el" href="namespaceopen_f_s_l.html#a59de55e866bfc93ace1b58ada5e56b07a01b33cda57c2542ed2ba393596943857">fs_FAT16</a> = 0x02, 
+<a class="el" href="namespaceopen_f_s_l.html#a59de55e866bfc93ace1b58ada5e56b07af038db4b3e5473120b43b956ade7e100">fs_FAT32</a> = 0x03, 
+<br />
+&#160;&#160;<a class="el" href="namespaceopen_f_s_l.html#a59de55e866bfc93ace1b58ada5e56b07ab5b740f33cdb2e2b4b750fcb7c370961">fs_ExFAT</a> = 0x04, 
+<a class="el" href="namespaceopen_f_s_l.html#a59de55e866bfc93ace1b58ada5e56b07abcf62dc1edd84db159c5db01094a7f8c">fs_NTFS</a> = 0x05, 
+<a class="el" href="namespaceopen_f_s_l.html#a59de55e866bfc93ace1b58ada5e56b07ab0e0c8caacc3f28f778ef7300c1b857a">fs_Ext2</a> = 0x06, 
+<a class="el" href="namespaceopen_f_s_l.html#a59de55e866bfc93ace1b58ada5e56b07a60fba6d746af6df9f3f02634fd21a184">fs_Ext3</a> = 0x07, 
+<br />
+&#160;&#160;<a class="el" href="namespaceopen_f_s_l.html#a59de55e866bfc93ace1b58ada5e56b07a61d6424d2ac07b2e8427d2ad242dcbe6">fs_Ext4</a> = 0x08, 
+<a class="el" href="namespaceopen_f_s_l.html#a59de55e866bfc93ace1b58ada5e56b07a34646d3e652a9104ba199d3e8c3e64f2">fs_Btrfs</a> = 0x09, 
+<a class="el" href="namespaceopen_f_s_l.html#a59de55e866bfc93ace1b58ada5e56b07a68a04084ebdbbc86d59d18b87d3cb2b7">fs_HFSPlus</a> = 0x0A, 
+<a class="el" href="namespaceopen_f_s_l.html#a59de55e866bfc93ace1b58ada5e56b07a8e095554889c2b07e6e98f6836463600">fs_APFS</a> = 0x0B, 
+<br />
+&#160;&#160;<a class="el" href="namespaceopen_f_s_l.html#a59de55e866bfc93ace1b58ada5e56b07afd004e8e3f0191525fec0c479a88ed07">fs_ISO9660</a> = 0x0C, 
+<a class="el" href="namespaceopen_f_s_l.html#a59de55e866bfc93ace1b58ada5e56b07a4360ef2f0b91a2faa3b07517e0ff3aee">fs_UDF</a> = 0x0D
+<br />
+ }</td></tr>
+<tr class="separator:a59de55e866bfc93ace1b58ada5e56b07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a739ff7969c54a68880c0364da4f06d88"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopen_f_s_l.html#a739ff7969c54a68880c0364da4f06d88">FSL_PartitionTable</a> { <a class="el" href="namespaceopen_f_s_l.html#a739ff7969c54a68880c0364da4f06d88a0214185f79c62ba0ec00b175f4d942e4">pt_None</a> = 0x00, 
+<a class="el" href="namespaceopen_f_s_l.html#a739ff7969c54a68880c0364da4f06d88a3ec5ebc05d01bb63e8fa5572112047f8">pt_MBR</a> = 0x01, 
+<a class="el" href="namespaceopen_f_s_l.html#a739ff7969c54a68880c0364da4f06d88a519efcd37a9b016f9ae2c03f6c109a09">pt_GPT</a> = 0x02
+ }</td></tr>
+<tr class="separator:a739ff7969c54a68880c0364da4f06d88"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a380c2eccf46edc459f218a38835a3a"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopen_f_s_l.html#a4a380c2eccf46edc459f218a38835a3a">FSL_OpenMode</a> { <br />
 &#160;&#160;<a class="el" href="namespaceopen_f_s_l.html#a4a380c2eccf46edc459f218a38835a3aa6e4d5fa5405b13e275958d949f1fa9fd">Read</a> = 0x0001, 
 <a class="el" href="namespaceopen_f_s_l.html#a4a380c2eccf46edc459f218a38835a3aa2db7ab5674808cb7cbc07ac7a0902128">Write</a> = 0x0002, 
@@ -152,6 +179,8 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a735c65a716284c8a448f13e6e04351a8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopen_f_s_l.html#a735c65a716284c8a448f13e6e04351a8">detectDiskStructure</a> (<a class="el" href="structopen_f_s_l_1_1_f_s_l___disk_structure.html">FSL_DiskStructure</a> *buf, <a class="el" href="classopen_f_s_l_1_1_disk_device.html">DiskDevice</a> *dd)</td></tr>
+<tr class="separator:a735c65a716284c8a448f13e6e04351a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acdc7d1803efd843778624e9feb1c644d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopen_f_s_l.html#acdc7d1803efd843778624e9feb1c644d">initializeLibrary</a> ()</td></tr>
 <tr class="memdesc:acdc7d1803efd843778624e9feb1c644d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Library initializer.  <a href="namespaceopen_f_s_l.html#acdc7d1803efd843778624e9feb1c644d">More...</a><br /></td></tr>
 <tr class="separator:acdc7d1803efd843778624e9feb1c644d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -165,43 +194,39 @@ Functions</h2></td></tr>
 <tr class="memitem:a6c20b3ce5054211a15f4616a9695f93d"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopen_f_s_l.html#a6c20b3ce5054211a15f4616a9695f93d">createUUID</a> ()</td></tr>
 <tr class="separator:a6c20b3ce5054211a15f4616a9695f93d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Typedef Documentation</h2>
-<a id="aba6b1548085a45ae430e0871af690360"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aba6b1548085a45ae430e0871af690360">&#9670;&nbsp;</a></span>FSL_Time</h2>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="a59de55e866bfc93ace1b58ada5e56b07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59de55e866bfc93ace1b58ada5e56b07">&#9670;&nbsp;</a></span>FSL_FileSystem</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef struct <a class="el" href="structopen_f_s_l_1_1_f_s_l___time.html">openFSL::FSL_Time</a> <a class="el" href="structopen_f_s_l_1_1_f_s_l___time.html">openFSL::FSL_Time</a></td>
+          <td class="memname">enum <a class="el" href="namespaceopen_f_s_l.html#a59de55e866bfc93ace1b58ada5e56b07">openFSL::FSL_FileSystem</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p><a class="el" href="namespaceopen_f_s_l.html">openFSL</a> time </p>
-<dl class="section author"><dt>Author</dt><dd>kms1212</dd></dl>
-<table class="markdownTable">
-<tr class="markdownTableHead">
-<th class="markdownTableHeadNone">Name </th><th class="markdownTableHeadNone">Description  </th></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">time_millis </td><td class="markdownTableBodyNone">1/1000 second  </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">time_sec </td><td class="markdownTableBodyNone">Second  </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">time_min </td><td class="markdownTableBodyNone">Minute  </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">time_hour </td><td class="markdownTableBodyNone">Hour  </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">time_day </td><td class="markdownTableBodyNone">Day  </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">time_month </td><td class="markdownTableBodyNone">Month  </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">time_year </td><td class="markdownTableBodyNone">Year  </td></tr>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a59de55e866bfc93ace1b58ada5e56b07adeaae1eb49b2590eacd1c4a92e21b28a"></a>fs_None&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a59de55e866bfc93ace1b58ada5e56b07a86903191a756b37e34b4157c8648877b"></a>fs_FAT12&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a59de55e866bfc93ace1b58ada5e56b07a01b33cda57c2542ed2ba393596943857"></a>fs_FAT16&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a59de55e866bfc93ace1b58ada5e56b07af038db4b3e5473120b43b956ade7e100"></a>fs_FAT32&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a59de55e866bfc93ace1b58ada5e56b07ab5b740f33cdb2e2b4b750fcb7c370961"></a>fs_ExFAT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a59de55e866bfc93ace1b58ada5e56b07abcf62dc1edd84db159c5db01094a7f8c"></a>fs_NTFS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a59de55e866bfc93ace1b58ada5e56b07ab0e0c8caacc3f28f778ef7300c1b857a"></a>fs_Ext2&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a59de55e866bfc93ace1b58ada5e56b07a60fba6d746af6df9f3f02634fd21a184"></a>fs_Ext3&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a59de55e866bfc93ace1b58ada5e56b07a61d6424d2ac07b2e8427d2ad242dcbe6"></a>fs_Ext4&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a59de55e866bfc93ace1b58ada5e56b07a34646d3e652a9104ba199d3e8c3e64f2"></a>fs_Btrfs&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a59de55e866bfc93ace1b58ada5e56b07a68a04084ebdbbc86d59d18b87d3cb2b7"></a>fs_HFSPlus&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a59de55e866bfc93ace1b58ada5e56b07a8e095554889c2b07e6e98f6836463600"></a>fs_APFS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a59de55e866bfc93ace1b58ada5e56b07afd004e8e3f0191525fec0c479a88ed07"></a>fs_ISO9660&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a59de55e866bfc93ace1b58ada5e56b07a4360ef2f0b91a2faa3b07517e0ff3aee"></a>fs_UDF&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
+<p class="definition">Definition at line <a class="el" href="detectstruct_8h_source.html#l00022">22</a> of file <a class="el" href="detectstruct_8h_source.html">detectstruct.h</a>.</p>
+
 </div>
 </div>
-<h2 class="groupheader">Enumeration Type Documentation</h2>
 <a id="a4a380c2eccf46edc459f218a38835a3a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4a380c2eccf46edc459f218a38835a3a">&#9670;&nbsp;</a></span>FSL_OpenMode</h2>
 
@@ -245,6 +270,27 @@ Functions</h2></td></tr>
 </table>
 
 <p class="definition">Definition at line <a class="el" href="file_8h_source.html#l00059">59</a> of file <a class="el" href="file_8h_source.html">file.h</a>.</p>
+
+</div>
+</div>
+<a id="a739ff7969c54a68880c0364da4f06d88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a739ff7969c54a68880c0364da4f06d88">&#9670;&nbsp;</a></span>FSL_PartitionTable</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="namespaceopen_f_s_l.html#a739ff7969c54a68880c0364da4f06d88">openFSL::FSL_PartitionTable</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a739ff7969c54a68880c0364da4f06d88a0214185f79c62ba0ec00b175f4d942e4"></a>pt_None&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a739ff7969c54a68880c0364da4f06d88a3ec5ebc05d01bb63e8fa5572112047f8"></a>pt_MBR&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a739ff7969c54a68880c0364da4f06d88a519efcd37a9b016f9ae2c03f6c109a09"></a>pt_GPT&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">Definition at line <a class="el" href="detectstruct_8h_source.html#l00039">39</a> of file <a class="el" href="detectstruct_8h_source.html">detectstruct.h</a>.</p>
 
 </div>
 </div>
@@ -340,6 +386,49 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a735c65a716284c8a448f13e6e04351a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a735c65a716284c8a448f13e6e04351a8">&#9670;&nbsp;</a></span>detectDiskStructure()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int openFSL::detectDiskStructure </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structopen_f_s_l_1_1_f_s_l___disk_structure.html">FSL_DiskStructure</a> *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classopen_f_s_l_1_1_disk_device.html">DiskDevice</a> *&#160;</td>
+          <td class="paramname"><em>dd</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="detectstruct_8cpp_source.html#l00014">14</a> of file <a class="el" href="detectstruct_8cpp_source.html">detectstruct.cpp</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespaceopen_f_s_l_a735c65a716284c8a448f13e6e04351a8_cgraph.png" border="0" usemap="#namespaceopen_f_s_l_a735c65a716284c8a448f13e6e04351a8_cgraph" alt=""/></div>
+<map name="namespaceopen_f_s_l_a735c65a716284c8a448f13e6e04351a8_cgraph" id="namespaceopen_f_s_l_a735c65a716284c8a448f13e6e04351a8_cgraph">
+<area shape="rect" title=" " alt="" coords="5,109,219,135"/>
+<area shape="rect" href="classopen_f_s_l_1_1_disk_device.html#abf24cf4f82259254963692008a0e927e" title="Sector size getter." alt="" coords="549,5,708,47"/>
+<area shape="rect" href="classopen_f_s_l_1_1_sector.html#a4216b770df1b0b98eafa60e3c5d84ea0" title="Data buffer getter." alt="" coords="536,75,721,102"/>
+<area shape="rect" href="classopen_f_s_l_1_1_t_b___m_b_r.html#a89c8ac7f2fe13a625297b41fba939576" title=" " alt="" coords="267,211,488,252"/>
+<area shape="rect" href="classopen_f_s_l_1_1_t_b___m_b_r.html#a1001101393d346b1c22c278accbca577" title=" " alt="" coords="276,109,479,135"/>
+<area shape="rect" href="classopen_f_s_l_1_1_disk_device.html#ad5f6968ae65cad9148123f65a0165da8" title=" " alt="" coords="549,135,708,176"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="a93d37096baa2dd91e4ae24d62ff7fbad"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a93d37096baa2dd91e4ae24d62ff7fbad">&#9670;&nbsp;</a></span>fsl_strtokenize()</h2>
 
@@ -380,11 +469,11 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespaceopen_f_s_l_a93d37096baa2dd91e4ae24d62ff7fbad_icgraph.png" border="0" usemap="#namespaceopen_f_s_l_a93d37096baa2dd91e4ae24d62ff7fbad_icgraph" alt=""/></div>
 <map name="namespaceopen_f_s_l_a93d37096baa2dd91e4ae24d62ff7fbad_icgraph" id="namespaceopen_f_s_l_a93d37096baa2dd91e4ae24d62ff7fbad_icgraph">
-<area shape="rect" title="String tokenizer." alt="" coords="805,13,984,39"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a30158d5a3854a4e6adb68525409bec0f" title="Change directory." alt="" coords="605,5,757,47"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a8e67a114f43ce2737f514e825f800a32" title="Directory lister." alt="" coords="405,5,557,47"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a193a031e50a9771058113e3475b48baa" title="Get file information." alt="" coords="205,35,357,76"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a3536bff1641a6d7f8145855db825a939" title="Open file." alt="" coords="5,35,157,76"/>
+<area shape="rect" title="String tokenizer." alt="" coords="805,42,984,69"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a30158d5a3854a4e6adb68525409bec0f" title="Change directory." alt="" coords="605,35,757,76"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a193a031e50a9771058113e3475b48baa" title="Get file information." alt="" coords="205,5,357,47"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#ab2a1c56a5fd6313f5fcaa47f46222e53" title="Directory lister." alt="" coords="405,35,557,76"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a3536bff1641a6d7f8145855db825a939" title="Open file." alt="" coords="5,5,157,47"/>
 </map>
 </div>
 

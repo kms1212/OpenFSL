@@ -1,8 +1,13 @@
 var searchData=
 [
-  ['read_204',['read',['../classopen_f_s_l_1_1_disk_device.html#a7e9a3f86d91f699942a114ada11212c4',1,'openFSL::DiskDevice::read()'],['../classopen_f_s_l_1_1_f_s_l___file.html#a66e81d558159e97f316425a4e29a4ba2',1,'openFSL::FSL_File::read()'],['../classopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_i_l_e.html#a660b28916fe441b0a4d9062ff436f955',1,'openFSL::FS_FAT32::FILE::read()'],['../namespaceopen_f_s_l.html#a4a380c2eccf46edc459f218a38835a3aa6e4d5fa5405b13e275958d949f1fa9fd',1,'openFSL::Read()']]],
-  ['readdisk_205',['readDisk',['../classopen_f_s_l_1_1_disk_device.html#ad5f6968ae65cad9148123f65a0165da8',1,'openFSL::DiskDevice']]],
-  ['readme_2emd_206',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]],
-  ['readonly_207',['ReadOnly',['../classopen_f_s_l_1_1_f_s___f_a_t32.html#adbb09877a5c254353089e03349416768a7973b95ceef2daef9b644f922f545f76',1,'openFSL::FS_FAT32']]],
-  ['registerfilesystem_208',['registerFilesystem',['../classopen_f_s_l_1_1_t_b___m_b_r.html#ad66951e1acc1934d7b6094100587a890',1,'openFSL::TB_MBR']]]
+  ['partitionentry_235',['PartitionEntry',['../structopen_f_s_l_1_1_t_b___m_b_r_1_1_partition_entry.html',1,'openFSL::TB_MBR']]],
+  ['partitionlist_236',['partitionList',['../classopen_f_s_l_1_1_t_b___m_b_r.html#a3b7d0a52737498ed3ec2f95c2d386366',1,'openFSL::TB_MBR']]],
+  ['partitiontable_237',['PartitionTable',['../structopen_f_s_l_1_1_t_b___m_b_r_1_1_partition_table.html',1,'openFSL::TB_MBR']]],
+  ['partitiontype_238',['PartitionType',['../classopen_f_s_l_1_1_t_b___m_b_r.html#ad0a019c44ca379c52f78253e54d51c1c',1,'openFSL::TB_MBR']]],
+  ['partlist_239',['partList',['../structopen_f_s_l_1_1_f_s_l___disk_structure.html#a62538e21cdfcc87b1e307db3e5b3f5e4',1,'openFSL::FSL_DiskStructure']]],
+  ['parttable_240',['partTable',['../structopen_f_s_l_1_1_f_s_l___disk_structure.html#a40ac4ed2804cd338b68b46a5b80d7bef',1,'openFSL::FSL_DiskStructure']]],
+  ['pathseparator_241',['pathSeparator',['../classopen_f_s_l_1_1_f_s___f_a_t32.html#a7421632dee11923f5e196e14a0e6c2d8',1,'openFSL::FS_FAT32']]],
+  ['pt_5fgpt_242',['pt_GPT',['../namespaceopen_f_s_l.html#a739ff7969c54a68880c0364da4f06d88a519efcd37a9b016f9ae2c03f6c109a09',1,'openFSL']]],
+  ['pt_5fmbr_243',['pt_MBR',['../namespaceopen_f_s_l.html#a739ff7969c54a68880c0364da4f06d88a3ec5ebc05d01bb63e8fa5572112047f8',1,'openFSL']]],
+  ['pt_5fnone_244',['pt_None',['../namespaceopen_f_s_l.html#a739ff7969c54a68880c0364da4f06d88a0214185f79c62ba0ec00b175f4d942e4',1,'openFSL']]]
 ];

@@ -4,6 +4,7 @@ var classopen_f_s_l_1_1_t_b___m_b_r =
     [ "PartitionTable", "structopen_f_s_l_1_1_t_b___m_b_r_1_1_partition_table.html", "structopen_f_s_l_1_1_t_b___m_b_r_1_1_partition_table" ],
     [ "PartitionType", "classopen_f_s_l_1_1_t_b___m_b_r.html#ad0a019c44ca379c52f78253e54d51c1c", [
       [ "None", "classopen_f_s_l_1_1_t_b___m_b_r.html#ad0a019c44ca379c52f78253e54d51c1cac5a3c2bfb2859d09d1947f487c85df09", null ],
+      [ "FAT12", "classopen_f_s_l_1_1_t_b___m_b_r.html#ad0a019c44ca379c52f78253e54d51c1ca0fb1e7c51d04581a63f5fe48b6e7a491", null ],
       [ "ExtPart_S", "classopen_f_s_l_1_1_t_b___m_b_r.html#ad0a019c44ca379c52f78253e54d51c1ca25fd761c10b70f6be7ce1ec653e21830", null ],
       [ "NTFS", "classopen_f_s_l_1_1_t_b___m_b_r.html#ad0a019c44ca379c52f78253e54d51c1cae180cae870d18809dd1ff1190a9c91ed", null ],
       [ "FAT32", "classopen_f_s_l_1_1_t_b___m_b_r.html#ad0a019c44ca379c52f78253e54d51c1ca8bb51daba95a3e7f85dcbb08978f2068", null ],
@@ -13,6 +14,7 @@ var classopen_f_s_l_1_1_t_b___m_b_r =
     ] ],
     [ "TB_MBR", "classopen_f_s_l_1_1_t_b___m_b_r.html#ad1bb6ea8d5fe8e28a2f91cb98728942d", null ],
     [ "~TB_MBR", "classopen_f_s_l_1_1_t_b___m_b_r.html#ac66f3a83429c990be790a503ef9f0f28", null ],
+    [ "getPartitionTypes", "classopen_f_s_l_1_1_t_b___m_b_r.html#a89c8ac7f2fe13a625297b41fba939576", null ],
     [ "initialize", "classopen_f_s_l_1_1_t_b___m_b_r.html#a1001101393d346b1c22c278accbca577", null ],
     [ "registerFilesystem", "classopen_f_s_l_1_1_t_b___m_b_r.html#ad66951e1acc1934d7b6094100587a890", null ],
     [ "dd", "classopen_f_s_l_1_1_t_b___m_b_r.html#a66f4f57ab3c5c566a368d407c17781ad", null ],

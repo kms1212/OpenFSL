@@ -111,7 +111,7 @@ Collaboration diagram for openFSL::TB_MBR:</div>
 <div class="dyncontent">
 <div class="center"><img src="classopen_f_s_l_1_1_t_b___m_b_r__coll__graph.png" border="0" usemap="#open_f_s_l_1_1_t_b___m_b_r_coll__map" alt="Collaboration graph"/></div>
 <map name="open_f_s_l_1_1_t_b___m_b_r_coll__map" id="open_f_s_l_1_1_t_b___m_b_r_coll__map">
-<area shape="rect" title=" " alt="" coords="603,572,771,693"/>
+<area shape="rect" title=" " alt="" coords="603,572,771,708"/>
 <area shape="rect" title=" " alt="" coords="285,388,456,480"/>
 <area shape="rect" href="structopen_f_s_l_1_1_t_b___m_b_r_1_1_partition_table.html" title="MBR Partition Table." alt="" coords="480,388,680,480"/>
 <area shape="rect" title=" " alt="" coords="207,189,281,267"/>
@@ -147,16 +147,19 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a1001101393d346b1c22c278accbca577"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad66951e1acc1934d7b6094100587a890"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopen_f_s_l_1_1_t_b___m_b_r.html#ad66951e1acc1934d7b6094100587a890">registerFilesystem</a> (<a class="el" href="classopen_f_s_l_1_1_f_s.html">FS</a> *fs, uint8_t index)</td></tr>
 <tr class="separator:ad66951e1acc1934d7b6094100587a890"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89c8ac7f2fe13a625297b41fba939576"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="namespaceopen_f_s_l.html#a59de55e866bfc93ace1b58ada5e56b07">FSL_FileSystem</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopen_f_s_l_1_1_t_b___m_b_r.html#a89c8ac7f2fe13a625297b41fba939576">getPartitionTypes</a> ()</td></tr>
+<tr class="separator:a89c8ac7f2fe13a625297b41fba939576"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-types"></a>
 Private Types</h2></td></tr>
 <tr class="memitem:ad0a019c44ca379c52f78253e54d51c1c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopen_f_s_l_1_1_t_b___m_b_r.html#ad0a019c44ca379c52f78253e54d51c1c">PartitionType</a> : uint8_t { <br />
 &#160;&#160;<a class="el" href="classopen_f_s_l_1_1_t_b___m_b_r.html#ad0a019c44ca379c52f78253e54d51c1cac5a3c2bfb2859d09d1947f487c85df09">None</a> = 0x00, 
+<a class="el" href="classopen_f_s_l_1_1_t_b___m_b_r.html#ad0a019c44ca379c52f78253e54d51c1ca0fb1e7c51d04581a63f5fe48b6e7a491">FAT12</a> = 0x01, 
 <a class="el" href="classopen_f_s_l_1_1_t_b___m_b_r.html#ad0a019c44ca379c52f78253e54d51c1ca25fd761c10b70f6be7ce1ec653e21830">ExtPart_S</a> = 0x05, 
 <a class="el" href="classopen_f_s_l_1_1_t_b___m_b_r.html#ad0a019c44ca379c52f78253e54d51c1cae180cae870d18809dd1ff1190a9c91ed">NTFS</a> = 0x07, 
-<a class="el" href="classopen_f_s_l_1_1_t_b___m_b_r.html#ad0a019c44ca379c52f78253e54d51c1ca8bb51daba95a3e7f85dcbb08978f2068">FAT32</a> = 0x0B, 
 <br />
-&#160;&#160;<a class="el" href="classopen_f_s_l_1_1_t_b___m_b_r.html#ad0a019c44ca379c52f78253e54d51c1ca322c33fe4f88c19c2124ce0ecc7f10e9">FAT32_LBA</a> = 0x0C, 
+&#160;&#160;<a class="el" href="classopen_f_s_l_1_1_t_b___m_b_r.html#ad0a019c44ca379c52f78253e54d51c1ca8bb51daba95a3e7f85dcbb08978f2068">FAT32</a> = 0x0B, 
+<a class="el" href="classopen_f_s_l_1_1_t_b___m_b_r.html#ad0a019c44ca379c52f78253e54d51c1ca322c33fe4f88c19c2124ce0ecc7f10e9">FAT32_LBA</a> = 0x0C, 
 <a class="el" href="classopen_f_s_l_1_1_t_b___m_b_r.html#ad0a019c44ca379c52f78253e54d51c1cace1b3e9cab1f9548e01216a8b8598705">FAT16_LBA</a> = 0x0E, 
 <a class="el" href="classopen_f_s_l_1_1_t_b___m_b_r.html#ad0a019c44ca379c52f78253e54d51c1ca81aeb5b003abd562a1bdca703ba9d5aa">ExtPart_L</a> = 0x0F
 <br />
@@ -176,7 +179,7 @@ Private Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="mbr_8h_source.html#l00021">21</a> of file <a class="el" href="mbr_8h_source.html">mbr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mbr_8h_source.html#l00022">22</a> of file <a class="el" href="mbr_8h_source.html">mbr.h</a>.</p>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a id="ad0a019c44ca379c52f78253e54d51c1c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad0a019c44ca379c52f78253e54d51c1c">&#9670;&nbsp;</a></span>PartitionType</h2>
@@ -199,6 +202,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ad0a019c44ca379c52f78253e54d51c1cac5a3c2bfb2859d09d1947f487c85df09"></a>None&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad0a019c44ca379c52f78253e54d51c1ca0fb1e7c51d04581a63f5fe48b6e7a491"></a>FAT12&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="ad0a019c44ca379c52f78253e54d51c1ca25fd761c10b70f6be7ce1ec653e21830"></a>ExtPart_S&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="ad0a019c44ca379c52f78253e54d51c1cae180cae870d18809dd1ff1190a9c91ed"></a>NTFS&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="ad0a019c44ca379c52f78253e54d51c1ca8bb51daba95a3e7f85dcbb08978f2068"></a>FAT32&#160;</td><td class="fielddoc"></td></tr>
@@ -207,7 +211,7 @@ Private Attributes</h2></td></tr>
 <tr><td class="fieldname"><a id="ad0a019c44ca379c52f78253e54d51c1ca81aeb5b003abd562a1bdca703ba9d5aa"></a>ExtPart_L&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="mbr_8h_source.html#l00023">23</a> of file <a class="el" href="mbr_8h_source.html">mbr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mbr_8h_source.html#l00024">24</a> of file <a class="el" href="mbr_8h_source.html">mbr.h</a>.</p>
 
 </div>
 </div>
@@ -252,6 +256,34 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a89c8ac7f2fe13a625297b41fba939576"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89c8ac7f2fe13a625297b41fba939576">&#9670;&nbsp;</a></span>getPartitionTypes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="namespaceopen_f_s_l.html#a59de55e866bfc93ace1b58ada5e56b07">FSL_FileSystem</a> &gt; TB_MBR::getPartitionTypes </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="mbr_8cpp_source.html#l00094">94</a> of file <a class="el" href="mbr_8cpp_source.html">mbr.cpp</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classopen_f_s_l_1_1_t_b___m_b_r_a89c8ac7f2fe13a625297b41fba939576_icgraph.png" border="0" usemap="#classopen_f_s_l_1_1_t_b___m_b_r_a89c8ac7f2fe13a625297b41fba939576_icgraph" alt=""/></div>
+<map name="classopen_f_s_l_1_1_t_b___m_b_r_a89c8ac7f2fe13a625297b41fba939576_icgraph" id="classopen_f_s_l_1_1_t_b___m_b_r_a89c8ac7f2fe13a625297b41fba939576_icgraph">
+<area shape="rect" title=" " alt="" coords="267,5,488,47"/>
+<area shape="rect" href="namespaceopen_f_s_l.html#a735c65a716284c8a448f13e6e04351a8" title=" " alt="" coords="5,13,219,39"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="a1001101393d346b1c22c278accbca577"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1001101393d346b1c22c278accbca577">&#9670;&nbsp;</a></span>initialize()</h2>
 
@@ -277,6 +309,15 @@ Here is the call graph for this function:</div>
 <area shape="rect" href="classopen_f_s_l_1_1_disk_device.html#abf24cf4f82259254963692008a0e927e" title="Sector size getter." alt="" coords="269,5,428,47"/>
 <area shape="rect" href="classopen_f_s_l_1_1_sector.html#a4216b770df1b0b98eafa60e3c5d84ea0" title="Data buffer getter." alt="" coords="256,71,441,98"/>
 <area shape="rect" href="classopen_f_s_l_1_1_disk_device.html#ad5f6968ae65cad9148123f65a0165da8" title=" " alt="" coords="269,123,428,164"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classopen_f_s_l_1_1_t_b___m_b_r_a1001101393d346b1c22c278accbca577_icgraph.png" border="0" usemap="#classopen_f_s_l_1_1_t_b___m_b_r_a1001101393d346b1c22c278accbca577_icgraph" alt=""/></div>
+<map name="classopen_f_s_l_1_1_t_b___m_b_r_a1001101393d346b1c22c278accbca577_icgraph" id="classopen_f_s_l_1_1_t_b___m_b_r_a1001101393d346b1c22c278accbca577_icgraph">
+<area shape="rect" title=" " alt="" coords="267,5,469,32"/>
+<area shape="rect" href="namespaceopen_f_s_l.html#a735c65a716284c8a448f13e6e04351a8" title=" " alt="" coords="5,5,219,32"/>
 </map>
 </div>
 
@@ -308,7 +349,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mbr_8cpp_source.html#l00092">92</a> of file <a class="el" href="mbr_8cpp_source.html">mbr.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mbr_8cpp_source.html#l00113">113</a> of file <a class="el" href="mbr_8cpp_source.html">mbr.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -342,7 +383,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mbr_8h_source.html#l00075">75</a> of file <a class="el" href="mbr_8h_source.html">mbr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mbr_8h_source.html#l00077">77</a> of file <a class="el" href="mbr_8h_source.html">mbr.h</a>.</p>
 
 </div>
 </div>
@@ -366,7 +407,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mbr_8h_source.html#l00079">79</a> of file <a class="el" href="mbr_8h_source.html">mbr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mbr_8h_source.html#l00081">81</a> of file <a class="el" href="mbr_8h_source.html">mbr.h</a>.</p>
 
 </div>
 </div>
@@ -390,7 +431,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mbr_8h_source.html#l00077">77</a> of file <a class="el" href="mbr_8h_source.html">mbr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mbr_8h_source.html#l00079">79</a> of file <a class="el" href="mbr_8h_source.html">mbr.h</a>.</p>
 
 </div>
 </div>
@@ -414,7 +455,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mbr_8h_source.html#l00076">76</a> of file <a class="el" href="mbr_8h_source.html">mbr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mbr_8h_source.html#l00078">78</a> of file <a class="el" href="mbr_8h_source.html">mbr.h</a>.</p>
 
 </div>
 </div>

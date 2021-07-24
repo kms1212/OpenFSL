@@ -1,10 +1,26 @@
 var searchData=
 [
-  ['data_45',['data',['../classopen_f_s_l_1_1_sector.html#a20c6bbff15e90372bf920970cae286cc',1,'openFSL::Sector']]],
-  ['dd_46',['dd',['../classopen_f_s_l_1_1_f_s.html#a9a285f5a89e84f6ebe9c7b0fbd1706b9',1,'openFSL::FS::dd()'],['../classopen_f_s_l_1_1_t_b___m_b_r.html#a66f4f57ab3c5c566a368d407c17781ad',1,'openFSL::TB_MBR::dd()']]],
-  ['directory_47',['Directory',['../classopen_f_s_l_1_1_f_s___f_a_t32.html#adbb09877a5c254353089e03349416768a193c491201f8e01764fd30360d51dc54',1,'openFSL::FS_FAT32']]],
-  ['diskdevice_48',['DiskDevice',['../classopen_f_s_l_1_1_disk_device.html',1,'openFSL::DiskDevice'],['../classopen_f_s_l_1_1_disk_device.html#a21c4f5ce2b2807e4bd7676ef0426260d',1,'openFSL::DiskDevice::DiskDevice()']]],
-  ['diskdevice_2ecpp_49',['diskdevice.cpp',['../diskdevice_8cpp.html',1,'']]],
-  ['diskdevice_2eh_50',['diskdevice.h',['../diskdevice_8h.html',1,'']]],
-  ['diskparameter_51',['DiskParameter',['../structopen_f_s_l_1_1_disk_device_1_1_disk_parameter.html',1,'openFSL::DiskDevice']]]
+  ['cachedata_26',['cacheData',['../structopen_f_s_l_1_1_f_s___f_a_t32_1_1_cache_entry.html#a1c2fa3e63c96b16fde0dda25eaf20fbf',1,'openFSL::FS_FAT32::CacheEntry']]],
+  ['cacheentry_27',['CacheEntry',['../structopen_f_s_l_1_1_f_s___f_a_t32_1_1_cache_entry.html',1,'openFSL::FS_FAT32']]],
+  ['cacheindex_28',['cacheIndex',['../structopen_f_s_l_1_1_f_s___f_a_t32_1_1_cache_entry.html#a4f11afe01e23a202a7533b3cf7d09ae3',1,'openFSL::FS_FAT32::CacheEntry']]],
+  ['cachekey_29',['cacheKey',['../structopen_f_s_l_1_1_f_s___f_a_t32_1_1_cache_entry.html#a8fa8e7d6b59988d914e8674d600ad883',1,'openFSL::FS_FAT32::CacheEntry']]],
+  ['cachetype_30',['cacheType',['../structopen_f_s_l_1_1_f_s___f_a_t32_1_1_cache_entry.html#ab758ba87e4e91b3bef7ef993b36b227f',1,'openFSL::FS_FAT32::CacheEntry']]],
+  ['chdir_31',['chdir',['../classopen_f_s_l_1_1_f_s___f_a_t32.html#a30158d5a3854a4e6adb68525409bec0f',1,'openFSL::FS_FAT32']]],
+  ['chdir_2ecpp_32',['chdir.cpp',['../chdir_8cpp.html',1,'']]],
+  ['chs_33',['CHS',['../structopen_f_s_l_1_1_c_h_s.html',1,'openFSL']]],
+  ['classgeneral_2ecpp_34',['classgeneral.cpp',['../classgeneral_8cpp.html',1,'']]],
+  ['close_35',['close',['../classopen_f_s_l_1_1_disk_device.html#ad442994336ed6da38e713907ab4d7487',1,'openFSL::DiskDevice']]],
+  ['closefile_36',['closeFile',['../classopen_f_s_l_1_1_f_s___f_a_t32.html#a45c1e64bdf3562b0c37c4e0dbb9ee40b',1,'openFSL::FS_FAT32']]],
+  ['clusterlist_37',['clusterList',['../classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a5a7b498f77fe9c6253ed82a5cc09836d',1,'openFSL::FS_FAT32::LinkedCluster']]],
+  ['clustertolba_38',['clusterToLBA',['../classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#aa0bb9ca47f6694ec138628d3196cf32f',1,'openFSL::FS_FAT32::LinkedCluster']]],
+  ['commaa55h_39',['COMMAA55h',['../structopen_f_s_l_1_1fs_structure_1_1_c_o_m_m_a_a55h.html',1,'openFSL::fsStructure']]],
+  ['convertchstolba_40',['convertCHSToLBA',['../namespaceopen_f_s_l.html#a593d21c029dcd556a9e549da0cf41019',1,'openFSL']]],
+  ['convertlbatochs_41',['convertLBAToCHS',['../namespaceopen_f_s_l.html#ae8905e7eeb7b258c4bb9424ded762b39',1,'openFSL']]],
+  ['createentry_2ecpp_42',['createentry.cpp',['../createentry_8cpp.html',1,'']]],
+  ['createuuid_43',['createUUID',['../namespaceopen_f_s_l.html#a6c20b3ce5054211a15f4616a9695f93d',1,'openFSL']]],
+  ['currentcacheclusterindex_44',['currentCacheClusterIndex',['../classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a1f9e8653929dd34f921f740ef7a6e591',1,'openFSL::FS_FAT32::LinkedCluster']]],
+  ['currentcacheclustersize_45',['currentCacheClusterSize',['../classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#aba1a89e42d0019d7d8756ae897ff3804',1,'openFSL::FS_FAT32::LinkedCluster']]],
+  ['currentcluster_46',['currentCluster',['../classopen_f_s_l_1_1_f_s___f_a_t32.html#a275fe7152ab687964bf4ca6b449e2dac',1,'openFSL::FS_FAT32']]],
+  ['currentpath_47',['currentPath',['../classopen_f_s_l_1_1_f_s___f_a_t32.html#aa9d033b20a66827798d7f979e9c0e7a6',1,'openFSL::FS_FAT32']]],
+  ['cyl_48',['cyl',['../structopen_f_s_l_1_1_c_h_s.html#a64e123cead74bfc8b177294ee614b07e',1,'openFSL::CHS']]]
 ];

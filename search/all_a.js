@@ -1,10 +1,25 @@
 var searchData=
 [
-  ['mbr_2ecpp_181',['mbr.cpp',['../mbr_8cpp.html',1,'']]],
-  ['mbr_2eh_182',['mbr.h',['../mbr_8h.html',1,'']]],
-  ['mbrbootcode_183',['mbrBootCode',['../structopen_f_s_l_1_1_t_b___m_b_r_1_1_partition_table.html#ae1e25d9b6eeeac90e146c70a6f33b5c6',1,'openFSL::TB_MBR::PartitionTable']]],
-  ['mbrpartitionentry_184',['mbrPartitionEntry',['../structopen_f_s_l_1_1_t_b___m_b_r_1_1_partition_table.html#a0f56e5cd0237b5d70fb57f95a0d2f5d8',1,'openFSL::TB_MBR::PartitionTable']]],
-  ['mbrsignature_185',['mbrSignature',['../structopen_f_s_l_1_1_t_b___m_b_r_1_1_partition_table.html#a890d4ec28c28ea6db83405c0a7299721',1,'openFSL::TB_MBR::PartitionTable']]],
-  ['mkdir_186',['mkdir',['../classopen_f_s_l_1_1_f_s___f_a_t32.html#a402b7d65afdac440f31c71c6a2a390a8',1,'openFSL::FS_FAT32']]],
-  ['mkdir_2ecpp_187',['mkdir.cpp',['../mkdir_8cpp.html',1,'']]]
+  ['lastfetchedcluster_192',['lastFetchedCluster',['../classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#ac73c9eac3a2a94aa108ccb3986915448',1,'openFSL::FS_FAT32::LinkedCluster']]],
+  ['lfn_193',['LFN',['../classopen_f_s_l_1_1_f_s___f_a_t32.html#adbb09877a5c254353089e03349416768a71d5f5cefab99540d21c309dccbb51eb',1,'openFSL::FS_FAT32']]],
+  ['lfnattr_194',['lfnAttr',['../structopen_f_s_l_1_1_f_s___f_a_t32_1_1_l_f_n_entry.html#a441d119b443749a919fc22102031a735',1,'openFSL::FS_FAT32::LFNEntry']]],
+  ['lfnchecksum_195',['lfnCheckSum',['../structopen_f_s_l_1_1_f_s___f_a_t32_1_1_l_f_n_entry.html#a830220ae942b26ebed5d16c65a59aabc',1,'openFSL::FS_FAT32::LFNEntry']]],
+  ['lfnentry_196',['LFNEntry',['../structopen_f_s_l_1_1_f_s___f_a_t32_1_1_l_f_n_entry.html',1,'openFSL::FS_FAT32']]],
+  ['lfnfilename1_197',['lfnFileName1',['../structopen_f_s_l_1_1_f_s___f_a_t32_1_1_l_f_n_entry.html#a06698008006ebd5b83ffa82b23bf15c7',1,'openFSL::FS_FAT32::LFNEntry']]],
+  ['lfnfilename2_198',['lfnFileName2',['../structopen_f_s_l_1_1_f_s___f_a_t32_1_1_l_f_n_entry.html#a8c675c65743c5aa9478658579a653cfc',1,'openFSL::FS_FAT32::LFNEntry']]],
+  ['lfnfilename3_199',['lfnFileName3',['../structopen_f_s_l_1_1_f_s___f_a_t32_1_1_l_f_n_entry.html#a4c1d3379b85afef2c11eb4e8f3ad37a6',1,'openFSL::FS_FAT32::LFNEntry']]],
+  ['lfnlocationlow_200',['lfnLocationLow',['../structopen_f_s_l_1_1_f_s___f_a_t32_1_1_l_f_n_entry.html#a4c15c538a3857b5b3448de286b9e677b',1,'openFSL::FS_FAT32::LFNEntry']]],
+  ['lfnreserved1_201',['lfnReserved1',['../structopen_f_s_l_1_1_f_s___f_a_t32_1_1_l_f_n_entry.html#a5fa593c616aeebdb823c93ac5e0e0209',1,'openFSL::FS_FAT32::LFNEntry']]],
+  ['lfnseqnum_202',['lfnSeqNum',['../structopen_f_s_l_1_1_f_s___f_a_t32_1_1_l_f_n_entry.html#adf52f44ca5afa4b71f97e0a0920137d5',1,'openFSL::FS_FAT32::LFNEntry']]],
+  ['linkedcluster_203',['LinkedCluster',['../classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html',1,'openFSL::FS_FAT32::LinkedCluster'],['../classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a35c253c8cdb74f8bad30a7dd5dca5a27',1,'openFSL::FS_FAT32::LinkedCluster::LinkedCluster()']]],
+  ['linkedcluster_5fcache_2ecpp_204',['linkedcluster_cache.cpp',['../linkedcluster__cache_8cpp.html',1,'']]],
+  ['linkedcluster_5fclassgeneral_2ecpp_205',['linkedcluster_classgeneral.cpp',['../linkedcluster__classgeneral_8cpp.html',1,'']]],
+  ['linkedcluster_5fcluster_2ecpp_206',['linkedcluster_cluster.cpp',['../linkedcluster__cluster_8cpp.html',1,'']]],
+  ['linkedcluster_5ffetch_2ecpp_207',['linkedcluster_fetch.cpp',['../linkedcluster__fetch_8cpp.html',1,'']]],
+  ['linkedcluster_5finternal_2ecpp_208',['linkedcluster_internal.cpp',['../linkedcluster__internal_8cpp.html',1,'']]],
+  ['linkedcluster_5fread_2ecpp_209',['linkedcluster_read.cpp',['../linkedcluster__read_8cpp.html',1,'']]],
+  ['linkedcluster_5futil_2ecpp_210',['linkedcluster_util.cpp',['../linkedcluster__util_8cpp.html',1,'']]],
+  ['linkedcluster_5fwrite_2ecpp_211',['linkedcluster_write.cpp',['../linkedcluster__write_8cpp.html',1,'']]],
+  ['listdir_212',['listDir',['../classopen_f_s_l_1_1_f_s___f_a_t32.html#ab2a1c56a5fd6313f5fcaa47f46222e53',1,'openFSL::FS_FAT32']]],
+  ['listdir_2ecpp_213',['listdir.cpp',['../listdir_8cpp.html',1,'']]]
 ];

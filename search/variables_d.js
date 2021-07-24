@@ -1,11 +1,7 @@
 var searchData=
 [
-  ['table_473',['table',['../classopen_f_s_l_1_1_t_b___m_b_r.html#ab2c816a850da42657fb032b61bfccdbd',1,'openFSL::TB_MBR']]],
-  ['time_5fday_474',['time_day',['../structopen_f_s_l_1_1_f_s_l___time.html#abea2195e095118d17836411aadac78d5',1,'openFSL::FSL_Time']]],
-  ['time_5fhour_475',['time_hour',['../structopen_f_s_l_1_1_f_s_l___time.html#a713be1a83589e8287962f1f7e10581c5',1,'openFSL::FSL_Time']]],
-  ['time_5fmillis_476',['time_millis',['../structopen_f_s_l_1_1_f_s_l___time.html#ad7b53357a4828f1979b37ba901bf6c04',1,'openFSL::FSL_Time']]],
-  ['time_5fmin_477',['time_min',['../structopen_f_s_l_1_1_f_s_l___time.html#a713e5b345afacd59e4204828c7299b1e',1,'openFSL::FSL_Time']]],
-  ['time_5fmonth_478',['time_month',['../structopen_f_s_l_1_1_f_s_l___time.html#a67aa86615e6bbffdd7221479164bc7c6',1,'openFSL::FSL_Time']]],
-  ['time_5fsec_479',['time_sec',['../structopen_f_s_l_1_1_f_s_l___time.html#a8db61b1339fd7280d61935dc1842ae7f',1,'openFSL::FSL_Time']]],
-  ['time_5fyear_480',['time_year',['../structopen_f_s_l_1_1_f_s_l___time.html#aeec782f30b96e6498c96178497f52ff8',1,'openFSL::FSL_Time']]]
+  ['sect_534',['sect',['../structopen_f_s_l_1_1_c_h_s.html#aaaba5b97d7b1d088260ea237899e6a2e',1,'openFSL::CHS']]],
+  ['sector_5fcount_535',['sector_count',['../classopen_f_s_l_1_1_sector.html#a7dcd0297f5b57370e962319bcfad0f2b',1,'openFSL::Sector']]],
+  ['seeklocation_536',['seekLocation',['../classopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_i_l_e.html#a4ddf952905662b1735046368007896a1',1,'openFSL::FS_FAT32::FILE']]],
+  ['startcluster_537',['startCluster',['../classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a8e93e48ed8c5af69df463c6832eab7f0',1,'openFSL::FS_FAT32::LinkedCluster']]]
 ];

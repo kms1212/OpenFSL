@@ -115,7 +115,7 @@ Inheritance diagram for openFSL::FS_FAT32:</div>
 <div class="dyncontent">
 <div class="center"><img src="classopen_f_s_l_1_1_f_s___f_a_t32__inherit__graph.png" border="0" usemap="#open_f_s_l_1_1_f_s___f_a_t32_inherit__map" alt="Inheritance graph"/></div>
 <map name="open_f_s_l_1_1_f_s___f_a_t32_inherit__map" id="open_f_s_l_1_1_f_s___f_a_t32_inherit__map">
-<area shape="rect" title="FAT32 imeplementation." alt="" coords="5,277,179,692"/>
+<area shape="rect" title="FAT32 imeplementation." alt="" coords="5,277,179,721"/>
 <area shape="rect" href="classopen_f_s_l_1_1_f_s.html" title=" " alt="" coords="19,5,165,229"/>
 </map>
 </div>
@@ -124,20 +124,21 @@ Collaboration diagram for openFSL::FS_FAT32:</div>
 <div class="dyncontent">
 <div class="center"><img src="classopen_f_s_l_1_1_f_s___f_a_t32__coll__graph.png" border="0" usemap="#open_f_s_l_1_1_f_s___f_a_t32_coll__map" alt="Collaboration graph"/></div>
 <map name="open_f_s_l_1_1_f_s___f_a_t32_coll__map" id="open_f_s_l_1_1_f_s___f_a_t32_coll__map">
-<area shape="rect" title="FAT32 imeplementation." alt="" coords="677,807,850,1133"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s.html" title=" " alt="" coords="242,549,389,729"/>
-<area shape="rect" href="classopen_f_s_l_1_1_disk_device.html" title="Disk driver." alt="" coords="124,189,291,340"/>
-<area shape="rect" title=" " alt="" coords="383,5,549,112"/>
-<area shape="rect" title=" " alt="" coords="5,20,65,97"/>
-<area shape="rect" title=" " alt="" coords="100,5,267,112"/>
-<area shape="rect" title=" " alt="" coords="291,20,358,97"/>
-<area shape="rect" title=" " alt="" coords="315,226,353,303"/>
-<area shape="rect" title=" " alt="" coords="429,226,495,303"/>
-<area shape="rect" href="structopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_s_i_n_f_o_sector.html" title="FAT32 FSINFO structure." alt="" coords="559,593,711,685"/>
-<area shape="rect" href="structopen_f_s_l_1_1_f_s___f_a_t32_1_1_b_p_b_sector.html" title="FAT32 BIOS Parameter Block." alt="" coords="1015,571,1184,707"/>
-<area shape="rect" title=" " alt="" coords="935,226,1010,303"/>
-<area shape="rect" title=" " alt="" coords="1209,601,1267,678"/>
-<area shape="rect" title=" " alt="" coords="1194,226,1269,303"/>
+<area shape="rect" title="FAT32 imeplementation." alt="" coords="1165,807,1338,1163"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s.html" title=" " alt="" coords="591,549,738,729"/>
+<area shape="rect" href="classopen_f_s_l_1_1_disk_device.html" title="Disk driver." alt="" coords="307,189,473,340"/>
+<area shape="rect" title=" " alt="" coords="5,5,172,112"/>
+<area shape="rect" title=" " alt="" coords="565,20,625,97"/>
+<area shape="rect" href="classopen_f_s_l_1_1_sector.html" title="Sector buffer." alt="" coords="763,564,929,715"/>
+<area shape="rect" title=" " alt="" coords="196,5,363,112"/>
+<area shape="rect" title=" " alt="" coords="387,20,454,97"/>
+<area shape="rect" title=" " alt="" coords="705,226,744,303"/>
+<area shape="rect" title=" " alt="" coords="945,226,1011,303"/>
+<area shape="rect" href="structopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_s_i_n_f_o_sector.html" title="FAT32 FSINFO structure." alt="" coords="1175,593,1327,685"/>
+<area shape="rect" href="structopen_f_s_l_1_1_f_s___f_a_t32_1_1_b_p_b_sector.html" title="FAT32 BIOS Parameter Block." alt="" coords="1395,571,1564,707"/>
+<area shape="rect" title=" " alt="" coords="1485,226,1559,303"/>
+<area shape="rect" title=" " alt="" coords="1851,601,1910,678"/>
+<area shape="rect" title=" " alt="" coords="1733,226,1807,303"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -208,9 +209,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a02e28663ef1b95eb7e84f3d891f05d7c"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a02e28663ef1b95eb7e84f3d891f05d7c">getChildCount</a> (std::string path=&quot;&quot;)</td></tr>
 <tr class="memdesc:a02e28663ef1b95eb7e84f3d891f05d7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subitem counter.  <a href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a02e28663ef1b95eb7e84f3d891f05d7c">More...</a><br /></td></tr>
 <tr class="separator:a02e28663ef1b95eb7e84f3d891f05d7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8e67a114f43ce2737f514e825f800a32"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structopen_f_s_l_1_1_f_s___f_a_t32_1_1_file_info.html">FileInfo</a> &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a8e67a114f43ce2737f514e825f800a32">getDirList</a> (std::vector&lt; <a class="el" href="structopen_f_s_l_1_1_f_s___f_a_t32_1_1_file_info.html">FileInfo</a> &gt; *buf, <a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#adbb09877a5c254353089e03349416768">FileAttribute</a> searchAttr=(<a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#adbb09877a5c254353089e03349416768">FileAttribute</a>)(FileAttribute::Archive|FileAttribute::Directory), std::string path=&quot;&quot;, uint32_t cluster=0xFFFFFFFF)</td></tr>
-<tr class="memdesc:a8e67a114f43ce2737f514e825f800a32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Directory lister.  <a href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a8e67a114f43ce2737f514e825f800a32">More...</a><br /></td></tr>
-<tr class="separator:a8e67a114f43ce2737f514e825f800a32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2a1c56a5fd6313f5fcaa47f46222e53"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structopen_f_s_l_1_1_f_s___f_a_t32_1_1_file_info.html">FileInfo</a> &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#ab2a1c56a5fd6313f5fcaa47f46222e53">listDir</a> (std::vector&lt; <a class="el" href="structopen_f_s_l_1_1_f_s___f_a_t32_1_1_file_info.html">FileInfo</a> &gt; *buf, <a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#adbb09877a5c254353089e03349416768">FileAttribute</a> searchAttr=(<a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#adbb09877a5c254353089e03349416768">FileAttribute</a>)(FileAttribute::Archive|FileAttribute::Directory), std::string path=&quot;&quot;, uint32_t cluster=0xFFFFFFFF)</td></tr>
+<tr class="memdesc:ab2a1c56a5fd6313f5fcaa47f46222e53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Directory lister.  <a href="classopen_f_s_l_1_1_f_s___f_a_t32.html#ab2a1c56a5fd6313f5fcaa47f46222e53">More...</a><br /></td></tr>
+<tr class="separator:ab2a1c56a5fd6313f5fcaa47f46222e53"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a30158d5a3854a4e6adb68525409bec0f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a30158d5a3854a4e6adb68525409bec0f">chdir</a> (std::string path, std::vector&lt; std::string &gt; *subdir=NULL, std::string tmpPath=&quot;&quot;, uint32_t tmpCluster=0)</td></tr>
 <tr class="memdesc:a30158d5a3854a4e6adb68525409bec0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change directory.  <a href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a30158d5a3854a4e6adb68525409bec0f">More...</a><br /></td></tr>
 <tr class="separator:a30158d5a3854a4e6adb68525409bec0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -226,9 +227,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a193a031e50a9771058113e3475b48baa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structopen_f_s_l_1_1_f_s___f_a_t32_1_1_file_info.html">FileInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a193a031e50a9771058113e3475b48baa">getFileInformation</a> (std::string path)</td></tr>
 <tr class="memdesc:a193a031e50a9771058113e3475b48baa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get file information.  <a href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a193a031e50a9771058113e3475b48baa">More...</a><br /></td></tr>
 <tr class="separator:a193a031e50a9771058113e3475b48baa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7199b52b5bfafcd344b5dc9789ca892f"><td class="memItemLeft" align="right" valign="top">uint32_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a7199b52b5bfafcd344b5dc9789ca892f">getFatClusterList</a> ()</td></tr>
-<tr class="memdesc:a7199b52b5bfafcd344b5dc9789ca892f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get FAT Area cluster list.  <a href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a7199b52b5bfafcd344b5dc9789ca892f">More...</a><br /></td></tr>
-<tr class="separator:a7199b52b5bfafcd344b5dc9789ca892f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a020badcc08e734a1a5f5b868983ae70a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classopen_f_s_l_1_1_sector.html">Sector</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a020badcc08e734a1a5f5b868983ae70a">getFatArea</a> ()</td></tr>
+<tr class="memdesc:a020badcc08e734a1a5f5b868983ae70a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get FAT Area.  <a href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a020badcc08e734a1a5f5b868983ae70a">More...</a><br /></td></tr>
+<tr class="separator:a020badcc08e734a1a5f5b868983ae70a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a402b7d65afdac440f31c71c6a2a390a8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a402b7d65afdac440f31c71c6a2a390a8">mkdir</a> (std::string path)</td></tr>
 <tr class="memdesc:a402b7d65afdac440f31c71c6a2a390a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make directory.  <a href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a402b7d65afdac440f31c71c6a2a390a8">More...</a><br /></td></tr>
 <tr class="separator:a402b7d65afdac440f31c71c6a2a390a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -238,6 +239,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a45c1e64bdf3562b0c37c4e0dbb9ee40b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a45c1e64bdf3562b0c37c4e0dbb9ee40b">closeFile</a> (<a class="el" href="classopen_f_s_l_1_1_f_s_l___file.html">FSL_File</a>&lt; <a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html">FS_FAT32</a> &gt; *file)</td></tr>
 <tr class="memdesc:a45c1e64bdf3562b0c37c4e0dbb9ee40b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close file.  <a href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a45c1e64bdf3562b0c37c4e0dbb9ee40b">More...</a><br /></td></tr>
 <tr class="separator:a45c1e64bdf3562b0c37c4e0dbb9ee40b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a734d7cc4e6abf4c6c132fa8adf317f15"><td class="memItemLeft" align="right" valign="top">uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a734d7cc4e6abf4c6c132fa8adf317f15">str16to8</a> (uint8_t *dest, const uint16_t *src, size_t size)</td></tr>
+<tr class="separator:a734d7cc4e6abf4c6c132fa8adf317f15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05f1424ccba0f575dddb697d664921dd"><td class="memItemLeft" align="right" valign="top">uint16_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a05f1424ccba0f575dddb697d664921dd">str8to16</a> (uint16_t *dest, const uint8_t *src, size_t size)</td></tr>
+<tr class="separator:a05f1424ccba0f575dddb697d664921dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classopen_f_s_l_1_1_f_s"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classopen_f_s_l_1_1_f_s')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classopen_f_s_l_1_1_f_s.html">openFSL::FS</a></td></tr>
 <tr class="memitem:a9a253ac32976b5bb31080149294f3eb4 inherit pub_methods_classopen_f_s_l_1_1_f_s"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopen_f_s_l_1_1_f_s.html#a9a253ac32976b5bb31080149294f3eb4">FS</a> ()</td></tr>
 <tr class="separator:a9a253ac32976b5bb31080149294f3eb4 inherit pub_methods_classopen_f_s_l_1_1_f_s"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -267,8 +272,8 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a147ec282ca63d961325a8d2989319161"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3e017c5fc6b42aa2aea4ac8ce022a8ec"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_s_i_n_f_o_sector.html">FSINFOSector</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a3e017c5fc6b42aa2aea4ac8ce022a8ec">fsinfo</a> = NULL</td></tr>
 <tr class="separator:a3e017c5fc6b42aa2aea4ac8ce022a8ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8d2621636e91f7b822ff3cbadbcf2481"><td class="memItemLeft" align="right" valign="top">uint32_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a8d2621636e91f7b822ff3cbadbcf2481">fatClusterList</a></td></tr>
-<tr class="separator:a8d2621636e91f7b822ff3cbadbcf2481"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1883a7da080f121d8283dfd40c36790c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classopen_f_s_l_1_1_sector.html">Sector</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a1883a7da080f121d8283dfd40c36790c">fatArea</a> = NULL</td></tr>
+<tr class="separator:a1883a7da080f121d8283dfd40c36790c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7421632dee11923f5e196e14a0e6c2d8"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a7421632dee11923f5e196e14a0e6c2d8">pathSeparator</a></td></tr>
 <tr class="separator:a7421632dee11923f5e196e14a0e6c2d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa9d033b20a66827798d7f979e9c0e7a6"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#aa9d033b20a66827798d7f979e9c0e7a6">currentPath</a></td></tr>
@@ -464,18 +469,20 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classopen_f_s_l_1_1_f_s___f_a_t32_a30158d5a3854a4e6adb68525409bec0f_cgraph.png" border="0" usemap="#classopen_f_s_l_1_1_f_s___f_a_t32_a30158d5a3854a4e6adb68525409bec0f_cgraph" alt=""/></div>
 <map name="classopen_f_s_l_1_1_f_s___f_a_t32_a30158d5a3854a4e6adb68525409bec0f_cgraph" id="classopen_f_s_l_1_1_f_s___f_a_t32_a30158d5a3854a4e6adb68525409bec0f_cgraph">
-<area shape="rect" title="Change directory." alt="" coords="5,217,157,259"/>
-<area shape="rect" href="namespaceopen_f_s_l.html#a93d37096baa2dd91e4ae24d62ff7fbad" title="String tokenizer." alt="" coords="205,166,384,193"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a8e67a114f43ce2737f514e825f800a32" title="Directory lister." alt="" coords="219,217,371,259"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#af8142312e46e465a8383907b716e5e5e" title=" " alt="" coords="432,188,584,229"/>
-<area shape="rect" href="getdirlist_8cpp.html#a8c2f71cc395df104866f1763be127644" title=" " alt="" coords="470,254,546,281"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#aa0bb9ca47f6694ec138628d3196cf32f" title=" " alt="" coords="633,5,834,47"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s.html#a7dcd9b50ce7ca28ba28c8187740b8b16" title=" " alt="" coords="636,71,831,98"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a9f18028119fe31d20cc8a5f8479ccbcc" title="BPB pointer getter." alt="" coords="657,123,809,164"/>
-<area shape="rect" href="classopen_f_s_l_1_1_disk_device.html#abf24cf4f82259254963692008a0e927e" title="Sector size getter." alt="" coords="654,188,813,229"/>
-<area shape="rect" href="classopen_f_s_l_1_1_sector.html#a4216b770df1b0b98eafa60e3c5d84ea0" title="Data buffer getter." alt="" coords="641,254,826,281"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s.html#a0f2c85516f7370ae26392515c4adecd8" title=" " alt="" coords="632,305,835,331"/>
-<area shape="rect" href="classopen_f_s_l_1_1_disk_device.html#ad5f6968ae65cad9148123f65a0165da8" title=" " alt="" coords="654,356,813,397"/>
+<area shape="rect" title="Change directory." alt="" coords="5,273,157,315"/>
+<area shape="rect" href="namespaceopen_f_s_l.html#a93d37096baa2dd91e4ae24d62ff7fbad" title="String tokenizer." alt="" coords="205,222,384,249"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#ab2a1c56a5fd6313f5fcaa47f46222e53" title="Directory lister." alt="" coords="219,273,371,315"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#aacb457ea5d8202a670c99cf95c3f13de" title=" " alt="" coords="673,181,825,223"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a6d867ff7423c61e71921b209f8787f33" title=" " alt="" coords="432,305,625,347"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a8059886547a26e1901667927a11f87dd" title=" " alt="" coords="453,240,605,281"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a734d7cc4e6abf4c6c132fa8adf317f15" title=" " alt="" coords="453,371,605,412"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#aa0bb9ca47f6694ec138628d3196cf32f" title=" " alt="" coords="874,71,1075,112"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a9f18028119fe31d20cc8a5f8479ccbcc" title="BPB pointer getter." alt="" coords="1124,100,1276,141"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s.html#a7dcd9b50ce7ca28ba28c8187740b8b16" title=" " alt="" coords="877,187,1072,214"/>
+<area shape="rect" href="classopen_f_s_l_1_1_disk_device.html#abf24cf4f82259254963692008a0e927e" title="Sector size getter." alt="" coords="895,239,1054,280"/>
+<area shape="rect" href="classopen_f_s_l_1_1_sector.html#a4216b770df1b0b98eafa60e3c5d84ea0" title="Data buffer getter." alt="" coords="882,305,1067,331"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s.html#a0f2c85516f7370ae26392515c4adecd8" title=" " alt="" coords="873,355,1076,382"/>
+<area shape="rect" href="classopen_f_s_l_1_1_disk_device.html#ad5f6968ae65cad9148123f65a0165da8" title=" " alt="" coords="895,5,1054,47"/>
 </map>
 </div>
 <div class="dynheader">
@@ -483,10 +490,10 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classopen_f_s_l_1_1_f_s___f_a_t32_a30158d5a3854a4e6adb68525409bec0f_icgraph.png" border="0" usemap="#classopen_f_s_l_1_1_f_s___f_a_t32_a30158d5a3854a4e6adb68525409bec0f_icgraph" alt=""/></div>
 <map name="classopen_f_s_l_1_1_f_s___f_a_t32_a30158d5a3854a4e6adb68525409bec0f_icgraph" id="classopen_f_s_l_1_1_f_s___f_a_t32_a30158d5a3854a4e6adb68525409bec0f_icgraph">
-<area shape="rect" title="Change directory." alt="" coords="605,5,757,47"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a8e67a114f43ce2737f514e825f800a32" title="Directory lister." alt="" coords="405,5,557,47"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a193a031e50a9771058113e3475b48baa" title="Get file information." alt="" coords="205,35,357,76"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a3536bff1641a6d7f8145855db825a939" title="Open file." alt="" coords="5,35,157,76"/>
+<area shape="rect" title="Change directory." alt="" coords="605,35,757,76"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a193a031e50a9771058113e3475b48baa" title="Get file information." alt="" coords="205,5,357,47"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#ab2a1c56a5fd6313f5fcaa47f46222e53" title="Directory lister." alt="" coords="405,35,557,76"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a3536bff1641a6d7f8145855db825a939" title="Open file." alt="" coords="5,5,157,47"/>
 </map>
 </div>
 
@@ -544,13 +551,17 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classopen_f_s_l_1_1_f_s___f_a_t32_a9f18028119fe31d20cc8a5f8479ccbcc_icgraph.png" border="0" usemap="#classopen_f_s_l_1_1_f_s___f_a_t32_a9f18028119fe31d20cc8a5f8479ccbcc_icgraph" alt=""/></div>
 <map name="classopen_f_s_l_1_1_f_s___f_a_t32_a9f18028119fe31d20cc8a5f8479ccbcc_icgraph" id="classopen_f_s_l_1_1_f_s___f_a_t32_a9f18028119fe31d20cc8a5f8479ccbcc_icgraph">
-<area shape="rect" title="BPB pointer getter." alt="" coords="1005,39,1157,80"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#af8142312e46e465a8383907b716e5e5e" title=" " alt="" coords="805,39,957,80"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a8e67a114f43ce2737f514e825f800a32" title="Directory lister." alt="" coords="605,5,757,47"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_i_l_e.html#a660b28916fe441b0a4d9062ff436f955" title="Read file." alt="" coords="605,71,757,112"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a30158d5a3854a4e6adb68525409bec0f" title="Change directory." alt="" coords="405,5,557,47"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a193a031e50a9771058113e3475b48baa" title="Get file information." alt="" coords="205,35,357,76"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a3536bff1641a6d7f8145855db825a939" title="Open file." alt="" coords="5,35,157,76"/>
+<area shape="rect" title="BPB pointer getter." alt="" coords="1455,93,1607,135"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a2b4ce7f3fef365fb859ba6ce7c4a6663" title=" " alt="" coords="1212,5,1400,47"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#aa0bb9ca47f6694ec138628d3196cf32f" title=" " alt="" coords="1205,123,1407,164"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#aacb457ea5d8202a670c99cf95c3f13de" title=" " alt="" coords="1005,67,1157,108"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a1656e46b098eec3af17a44104dbdaa37" title=" " alt="" coords="805,132,957,173"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#ab2a1c56a5fd6313f5fcaa47f46222e53" title="Directory lister." alt="" coords="605,8,757,49"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a8059886547a26e1901667927a11f87dd" title=" " alt="" coords="805,67,957,108"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a30158d5a3854a4e6adb68525409bec0f" title="Change directory." alt="" coords="405,8,557,49"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a193a031e50a9771058113e3475b48baa" title="Get file information." alt="" coords="205,37,357,79"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a3536bff1641a6d7f8145855db825a939" title="Open file." alt="" coords="5,37,157,79"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_i_l_e.html#a660b28916fe441b0a4d9062ff436f955" title="Read file." alt="" coords="605,73,757,115"/>
 </map>
 </div>
 
@@ -583,98 +594,14 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a8e67a114f43ce2737f514e825f800a32"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8e67a114f43ce2737f514e825f800a32">&#9670;&nbsp;</a></span>getDirList()</h2>
+<a id="a020badcc08e734a1a5f5b868983ae70a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a020badcc08e734a1a5f5b868983ae70a">&#9670;&nbsp;</a></span>getFatArea()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt; <a class="el" href="structopen_f_s_l_1_1_f_s___f_a_t32_1_1_file_info.html">FS_FAT32::FileInfo</a> &gt; * FS_FAT32::getDirList </td>
-          <td>(</td>
-          <td class="paramtype">std::vector&lt; <a class="el" href="structopen_f_s_l_1_1_f_s___f_a_t32_1_1_file_info.html">FileInfo</a> &gt; *&#160;</td>
-          <td class="paramname"><em>buf</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#adbb09877a5c254353089e03349416768">FileAttribute</a>&#160;</td>
-          <td class="paramname"><em>searchAttr</em> = <code>(<a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#adbb09877a5c254353089e03349416768">FileAttribute</a>)(FileAttribute::Archive&#160;|&#160;FileAttribute::Directory)</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>path</em> = <code>&quot;&quot;</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>cluster</em> = <code>0xFFFFFFFF</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Directory lister. </p>
-<p>Gets subitem information of working directory. The size of file information buffer has to be same or more than the count of subitem of working directory. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">buf</td><td>File information buffer </td></tr>
-    <tr><td class="paramname">searchAttr</td><td>Attribute filter </td></tr>
-    <tr><td class="paramname">path</td><td>working directory (Default: "") </td></tr>
-    <tr><td class="paramname">cluster</td><td>working cluster (Default: 0xFFFFFFFF) </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>std::vector&lt;FAT32_fileInfo&gt;: Parameter buf </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="getdirlist_8cpp_source.html#l00021">21</a> of file <a class="el" href="getdirlist_8cpp_source.html">getdirlist.cpp</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classopen_f_s_l_1_1_f_s___f_a_t32_a8e67a114f43ce2737f514e825f800a32_cgraph.png" border="0" usemap="#classopen_f_s_l_1_1_f_s___f_a_t32_a8e67a114f43ce2737f514e825f800a32_cgraph" alt=""/></div>
-<map name="classopen_f_s_l_1_1_f_s___f_a_t32_a8e67a114f43ce2737f514e825f800a32_cgraph" id="classopen_f_s_l_1_1_f_s___f_a_t32_a8e67a114f43ce2737f514e825f800a32_cgraph">
-<area shape="rect" title="Directory lister." alt="" coords="5,175,157,217"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a30158d5a3854a4e6adb68525409bec0f" title="Change directory." alt="" coords="205,142,357,183"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#af8142312e46e465a8383907b716e5e5e" title=" " alt="" coords="205,207,357,249"/>
-<area shape="rect" href="getdirlist_8cpp.html#a8c2f71cc395df104866f1763be127644" title=" " alt="" coords="243,273,319,300"/>
-<area shape="rect" href="namespaceopen_f_s_l.html#a93d37096baa2dd91e4ae24d62ff7fbad" title="String tokenizer." alt="" coords="417,5,596,32"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#aa0bb9ca47f6694ec138628d3196cf32f" title=" " alt="" coords="406,57,607,98"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s.html#a7dcd9b50ce7ca28ba28c8187740b8b16" title=" " alt="" coords="409,123,604,149"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a9f18028119fe31d20cc8a5f8479ccbcc" title="BPB pointer getter." alt="" coords="431,174,583,215"/>
-<area shape="rect" href="classopen_f_s_l_1_1_disk_device.html#abf24cf4f82259254963692008a0e927e" title="Sector size getter." alt="" coords="427,239,586,281"/>
-<area shape="rect" href="classopen_f_s_l_1_1_sector.html#a4216b770df1b0b98eafa60e3c5d84ea0" title="Data buffer getter." alt="" coords="414,305,599,332"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s.html#a0f2c85516f7370ae26392515c4adecd8" title=" " alt="" coords="405,356,608,383"/>
-<area shape="rect" href="classopen_f_s_l_1_1_disk_device.html#ad5f6968ae65cad9148123f65a0165da8" title=" " alt="" coords="427,407,586,449"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classopen_f_s_l_1_1_f_s___f_a_t32_a8e67a114f43ce2737f514e825f800a32_icgraph.png" border="0" usemap="#classopen_f_s_l_1_1_f_s___f_a_t32_a8e67a114f43ce2737f514e825f800a32_icgraph" alt=""/></div>
-<map name="classopen_f_s_l_1_1_f_s___f_a_t32_a8e67a114f43ce2737f514e825f800a32_icgraph" id="classopen_f_s_l_1_1_f_s___f_a_t32_a8e67a114f43ce2737f514e825f800a32_icgraph">
-<area shape="rect" title="Directory lister." alt="" coords="605,5,757,47"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a30158d5a3854a4e6adb68525409bec0f" title="Change directory." alt="" coords="405,5,557,47"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a193a031e50a9771058113e3475b48baa" title="Get file information." alt="" coords="205,35,357,76"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a3536bff1641a6d7f8145855db825a939" title="Open file." alt="" coords="5,35,157,76"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a7199b52b5bfafcd344b5dc9789ca892f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7199b52b5bfafcd344b5dc9789ca892f">&#9670;&nbsp;</a></span>getFatClusterList()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint32_t * FS_FAT32::getFatClusterList </td>
+          <td class="memname"><a class="el" href="classopen_f_s_l_1_1_sector.html">Sector</a> * FS_FAT32::getFatArea </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -682,10 +609,19 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Get FAT Area cluster list. </p>
-<p>Gets FAT Area list. </p><dl class="section return"><dt>Returns</dt><dd>uint32_t*: FAT Area cluster array </dd></dl>
+<p>Get FAT Area. </p>
+<p>Gets FAT Area. </p><dl class="section return"><dt>Returns</dt><dd>Sector*: FAT Area </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="getter__setter_8cpp_source.html#l00018">18</a> of file <a class="el" href="getter__setter_8cpp_source.html">getter_setter.cpp</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classopen_f_s_l_1_1_f_s___f_a_t32_a020badcc08e734a1a5f5b868983ae70a_icgraph.png" border="0" usemap="#classopen_f_s_l_1_1_f_s___f_a_t32_a020badcc08e734a1a5f5b868983ae70a_icgraph" alt=""/></div>
+<map name="classopen_f_s_l_1_1_f_s___f_a_t32_a020badcc08e734a1a5f5b868983ae70a_icgraph" id="classopen_f_s_l_1_1_f_s___f_a_t32_a020badcc08e734a1a5f5b868983ae70a_icgraph">
+<area shape="rect" title="Get FAT Area." alt="" coords="241,5,393,47"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a2b4ce7f3fef365fb859ba6ce7c4a6663" title=" " alt="" coords="5,5,193,47"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -720,19 +656,21 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classopen_f_s_l_1_1_f_s___f_a_t32_a193a031e50a9771058113e3475b48baa_cgraph.png" border="0" usemap="#classopen_f_s_l_1_1_f_s___f_a_t32_a193a031e50a9771058113e3475b48baa_cgraph" alt=""/></div>
 <map name="classopen_f_s_l_1_1_f_s___f_a_t32_a193a031e50a9771058113e3475b48baa_cgraph" id="classopen_f_s_l_1_1_f_s___f_a_t32_a193a031e50a9771058113e3475b48baa_cgraph">
-<area shape="rect" title="Get file information." alt="" coords="5,217,157,259"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a30158d5a3854a4e6adb68525409bec0f" title="Change directory." alt="" coords="205,188,357,229"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a8e67a114f43ce2737f514e825f800a32" title="Directory lister." alt="" coords="419,217,571,259"/>
-<area shape="rect" href="namespaceopen_f_s_l.html#a93d37096baa2dd91e4ae24d62ff7fbad" title="String tokenizer." alt="" coords="405,166,584,193"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#af8142312e46e465a8383907b716e5e5e" title=" " alt="" coords="632,188,784,229"/>
-<area shape="rect" href="getdirlist_8cpp.html#a8c2f71cc395df104866f1763be127644" title=" " alt="" coords="670,254,746,281"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#aa0bb9ca47f6694ec138628d3196cf32f" title=" " alt="" coords="833,5,1034,47"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s.html#a7dcd9b50ce7ca28ba28c8187740b8b16" title=" " alt="" coords="836,71,1031,98"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a9f18028119fe31d20cc8a5f8479ccbcc" title="BPB pointer getter." alt="" coords="857,123,1009,164"/>
-<area shape="rect" href="classopen_f_s_l_1_1_disk_device.html#abf24cf4f82259254963692008a0e927e" title="Sector size getter." alt="" coords="854,188,1013,229"/>
-<area shape="rect" href="classopen_f_s_l_1_1_sector.html#a4216b770df1b0b98eafa60e3c5d84ea0" title="Data buffer getter." alt="" coords="841,254,1026,281"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s.html#a0f2c85516f7370ae26392515c4adecd8" title=" " alt="" coords="832,305,1035,331"/>
-<area shape="rect" href="classopen_f_s_l_1_1_disk_device.html#ad5f6968ae65cad9148123f65a0165da8" title=" " alt="" coords="854,356,1013,397"/>
+<area shape="rect" title="Get file information." alt="" coords="5,275,157,316"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a30158d5a3854a4e6adb68525409bec0f" title="Change directory." alt="" coords="205,245,357,287"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#ab2a1c56a5fd6313f5fcaa47f46222e53" title="Directory lister." alt="" coords="419,275,571,316"/>
+<area shape="rect" href="namespaceopen_f_s_l.html#a93d37096baa2dd91e4ae24d62ff7fbad" title="String tokenizer." alt="" coords="405,223,584,250"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#aacb457ea5d8202a670c99cf95c3f13de" title=" " alt="" coords="873,183,1025,224"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a6d867ff7423c61e71921b209f8787f33" title=" " alt="" coords="632,307,825,348"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a8059886547a26e1901667927a11f87dd" title=" " alt="" coords="653,241,805,283"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a734d7cc4e6abf4c6c132fa8adf317f15" title=" " alt="" coords="653,372,805,413"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#aa0bb9ca47f6694ec138628d3196cf32f" title=" " alt="" coords="1074,71,1275,112"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a9f18028119fe31d20cc8a5f8479ccbcc" title="BPB pointer getter." alt="" coords="1324,100,1476,141"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s.html#a7dcd9b50ce7ca28ba28c8187740b8b16" title=" " alt="" coords="1077,187,1272,214"/>
+<area shape="rect" href="classopen_f_s_l_1_1_disk_device.html#abf24cf4f82259254963692008a0e927e" title="Sector size getter." alt="" coords="1095,239,1254,280"/>
+<area shape="rect" href="classopen_f_s_l_1_1_sector.html#a4216b770df1b0b98eafa60e3c5d84ea0" title="Data buffer getter." alt="" coords="1082,305,1267,331"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s.html#a0f2c85516f7370ae26392515c4adecd8" title=" " alt="" coords="1073,355,1276,382"/>
+<area shape="rect" href="classopen_f_s_l_1_1_disk_device.html#ad5f6968ae65cad9148123f65a0165da8" title=" " alt="" coords="1095,5,1254,47"/>
 </map>
 </div>
 <div class="dynheader">
@@ -821,6 +759,24 @@ Here is the call graph for this function:</div>
 <p>Returns next free cluster (Next Available) </p><dl class="section return"><dt>Returns</dt><dd>uint32_t: Next free cluster </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="nextcluster_8cpp_source.html#l00014">14</a> of file <a class="el" href="nextcluster_8cpp_source.html">nextcluster.cpp</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classopen_f_s_l_1_1_f_s___f_a_t32_a58a9719bf310e867c3ab567e860ad5de_cgraph.png" border="0" usemap="#classopen_f_s_l_1_1_f_s___f_a_t32_a58a9719bf310e867c3ab567e860ad5de_cgraph" alt=""/></div>
+<map name="classopen_f_s_l_1_1_f_s___f_a_t32_a58a9719bf310e867c3ab567e860ad5de_cgraph" id="classopen_f_s_l_1_1_f_s___f_a_t32_a58a9719bf310e867c3ab567e860ad5de_cgraph">
+<area shape="rect" title="Get Next Free Cluster." alt="" coords="5,5,157,47"/>
+<area shape="rect" href="classopen_f_s_l_1_1_sector.html#a4216b770df1b0b98eafa60e3c5d84ea0" title="Data buffer getter." alt="" coords="205,13,391,39"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classopen_f_s_l_1_1_f_s___f_a_t32_a58a9719bf310e867c3ab567e860ad5de_icgraph.png" border="0" usemap="#classopen_f_s_l_1_1_f_s___f_a_t32_a58a9719bf310e867c3ab567e860ad5de_icgraph" alt=""/></div>
+<map name="classopen_f_s_l_1_1_f_s___f_a_t32_a58a9719bf310e867c3ab567e860ad5de_icgraph" id="classopen_f_s_l_1_1_f_s___f_a_t32_a58a9719bf310e867c3ab567e860ad5de_icgraph">
+<area shape="rect" title="Get Next Free Cluster." alt="" coords="241,5,393,47"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a2b4ce7f3fef365fb859ba6ce7c4a6663" title=" " alt="" coords="5,5,193,47"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -875,12 +831,97 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classopen_f_s_l_1_1_f_s___f_a_t32_aca79ddbddb1c9c1ccde9d15bb7d11159_cgraph.png" border="0" usemap="#classopen_f_s_l_1_1_f_s___f_a_t32_aca79ddbddb1c9c1ccde9d15bb7d11159_cgraph" alt=""/></div>
 <map name="classopen_f_s_l_1_1_f_s___f_a_t32_aca79ddbddb1c9c1ccde9d15bb7d11159_cgraph" id="classopen_f_s_l_1_1_f_s___f_a_t32_aca79ddbddb1c9c1ccde9d15bb7d11159_cgraph">
-<area shape="rect" title="FS_FAT32 intializer." alt="" coords="5,115,157,157"/>
+<area shape="rect" title="FS_FAT32 intializer." alt="" coords="5,74,157,115"/>
 <area shape="rect" href="classopen_f_s_l_1_1_f_s.html#a7dcd9b50ce7ca28ba28c8187740b8b16" title=" " alt="" coords="209,5,404,32"/>
-<area shape="rect" href="classopen_f_s_l_1_1_disk_device.html#abf24cf4f82259254963692008a0e927e" title="Sector size getter." alt="" coords="227,57,386,98"/>
-<area shape="rect" href="classopen_f_s_l_1_1_sector.html#a4216b770df1b0b98eafa60e3c5d84ea0" title="Data buffer getter." alt="" coords="214,123,399,149"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s.html#a0f2c85516f7370ae26392515c4adecd8" title=" " alt="" coords="205,173,408,200"/>
-<area shape="rect" href="classopen_f_s_l_1_1_disk_device.html#ad5f6968ae65cad9148123f65a0165da8" title=" " alt="" coords="227,225,386,266"/>
+<area shape="rect" href="classopen_f_s_l_1_1_sector.html#a4216b770df1b0b98eafa60e3c5d84ea0" title="Data buffer getter." alt="" coords="214,56,399,83"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s.html#a0f2c85516f7370ae26392515c4adecd8" title=" " alt="" coords="205,107,408,133"/>
+<area shape="rect" href="classopen_f_s_l_1_1_disk_device.html#ad5f6968ae65cad9148123f65a0165da8" title=" " alt="" coords="227,158,386,199"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab2a1c56a5fd6313f5fcaa47f46222e53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2a1c56a5fd6313f5fcaa47f46222e53">&#9670;&nbsp;</a></span>listDir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="structopen_f_s_l_1_1_f_s___f_a_t32_1_1_file_info.html">FS_FAT32::FileInfo</a> &gt; * FS_FAT32::listDir </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="structopen_f_s_l_1_1_f_s___f_a_t32_1_1_file_info.html">FileInfo</a> &gt; *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#adbb09877a5c254353089e03349416768">FileAttribute</a>&#160;</td>
+          <td class="paramname"><em>searchAttr</em> = <code>(<a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#adbb09877a5c254353089e03349416768">FileAttribute</a>)(FileAttribute::Archive&#160;|&#160;FileAttribute::Directory)</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>path</em> = <code>&quot;&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>cluster</em> = <code>0xFFFFFFFF</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Directory lister. </p>
+<p>Gets subitem information of working directory. The size of file information buffer has to be same or more than the count of subitem of working directory. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buf</td><td>File information buffer </td></tr>
+    <tr><td class="paramname">searchAttr</td><td>Attribute filter </td></tr>
+    <tr><td class="paramname">path</td><td>working directory (Default: "") </td></tr>
+    <tr><td class="paramname">cluster</td><td>working cluster (Default: 0xFFFFFFFF) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>std::vector&lt;FAT32_fileInfo&gt;: Parameter buf </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="listdir_8cpp_source.html#l00014">14</a> of file <a class="el" href="listdir_8cpp_source.html">listdir.cpp</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classopen_f_s_l_1_1_f_s___f_a_t32_ab2a1c56a5fd6313f5fcaa47f46222e53_cgraph.png" border="0" usemap="#classopen_f_s_l_1_1_f_s___f_a_t32_ab2a1c56a5fd6313f5fcaa47f46222e53_cgraph" alt=""/></div>
+<map name="classopen_f_s_l_1_1_f_s___f_a_t32_ab2a1c56a5fd6313f5fcaa47f46222e53_cgraph" id="classopen_f_s_l_1_1_f_s___f_a_t32_ab2a1c56a5fd6313f5fcaa47f46222e53_cgraph">
+<area shape="rect" title="Directory lister." alt="" coords="5,211,157,252"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a30158d5a3854a4e6adb68525409bec0f" title="Change directory." alt="" coords="226,123,378,164"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#aacb457ea5d8202a670c99cf95c3f13de" title=" " alt="" coords="460,181,612,223"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a6d867ff7423c61e71921b209f8787f33" title=" " alt="" coords="205,305,399,347"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a8059886547a26e1901667927a11f87dd" title=" " alt="" coords="226,240,378,281"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a734d7cc4e6abf4c6c132fa8adf317f15" title=" " alt="" coords="226,371,378,412"/>
+<area shape="rect" href="namespaceopen_f_s_l.html#a93d37096baa2dd91e4ae24d62ff7fbad" title="String tokenizer." alt="" coords="447,130,625,157"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#aa0bb9ca47f6694ec138628d3196cf32f" title=" " alt="" coords="674,71,875,112"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a9f18028119fe31d20cc8a5f8479ccbcc" title="BPB pointer getter." alt="" coords="924,100,1076,141"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s.html#a7dcd9b50ce7ca28ba28c8187740b8b16" title=" " alt="" coords="677,187,872,214"/>
+<area shape="rect" href="classopen_f_s_l_1_1_disk_device.html#abf24cf4f82259254963692008a0e927e" title="Sector size getter." alt="" coords="695,239,854,280"/>
+<area shape="rect" href="classopen_f_s_l_1_1_sector.html#a4216b770df1b0b98eafa60e3c5d84ea0" title="Data buffer getter." alt="" coords="682,305,867,331"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s.html#a0f2c85516f7370ae26392515c4adecd8" title=" " alt="" coords="673,355,876,382"/>
+<area shape="rect" href="classopen_f_s_l_1_1_disk_device.html#ad5f6968ae65cad9148123f65a0165da8" title=" " alt="" coords="695,5,854,47"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classopen_f_s_l_1_1_f_s___f_a_t32_ab2a1c56a5fd6313f5fcaa47f46222e53_icgraph.png" border="0" usemap="#classopen_f_s_l_1_1_f_s___f_a_t32_ab2a1c56a5fd6313f5fcaa47f46222e53_icgraph" alt=""/></div>
+<map name="classopen_f_s_l_1_1_f_s___f_a_t32_ab2a1c56a5fd6313f5fcaa47f46222e53_icgraph" id="classopen_f_s_l_1_1_f_s___f_a_t32_ab2a1c56a5fd6313f5fcaa47f46222e53_icgraph">
+<area shape="rect" title="Directory lister." alt="" coords="605,5,757,47"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a30158d5a3854a4e6adb68525409bec0f" title="Change directory." alt="" coords="405,5,557,47"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a193a031e50a9771058113e3475b48baa" title="Get file information." alt="" coords="205,35,357,76"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a3536bff1641a6d7f8145855db825a939" title="Open file." alt="" coords="5,35,157,76"/>
 </map>
 </div>
 
@@ -958,21 +999,23 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classopen_f_s_l_1_1_f_s___f_a_t32_a3536bff1641a6d7f8145855db825a939_cgraph.png" border="0" usemap="#classopen_f_s_l_1_1_f_s___f_a_t32_a3536bff1641a6d7f8145855db825a939_cgraph" alt=""/></div>
 <map name="classopen_f_s_l_1_1_f_s___f_a_t32_a3536bff1641a6d7f8145855db825a939_cgraph" id="classopen_f_s_l_1_1_f_s___f_a_t32_a3536bff1641a6d7f8145855db825a939_cgraph">
-<area shape="rect" title="Open file." alt="" coords="5,185,157,227"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s_l___file.html#ae20823e64d12607a49a4d2b4ef84f8ad" title=" " alt="" coords="209,152,353,193"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a193a031e50a9771058113e3475b48baa" title="Get file information." alt="" coords="205,217,357,259"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a30158d5a3854a4e6adb68525409bec0f" title="Change directory." alt="" coords="405,188,557,229"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a8e67a114f43ce2737f514e825f800a32" title="Directory lister." alt="" coords="619,217,771,259"/>
-<area shape="rect" href="namespaceopen_f_s_l.html#a93d37096baa2dd91e4ae24d62ff7fbad" title="String tokenizer." alt="" coords="605,166,784,193"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#af8142312e46e465a8383907b716e5e5e" title=" " alt="" coords="832,188,984,229"/>
-<area shape="rect" href="getdirlist_8cpp.html#a8c2f71cc395df104866f1763be127644" title=" " alt="" coords="870,254,946,281"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#aa0bb9ca47f6694ec138628d3196cf32f" title=" " alt="" coords="1033,5,1234,47"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s.html#a7dcd9b50ce7ca28ba28c8187740b8b16" title=" " alt="" coords="1036,71,1231,98"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a9f18028119fe31d20cc8a5f8479ccbcc" title="BPB pointer getter." alt="" coords="1057,123,1209,164"/>
-<area shape="rect" href="classopen_f_s_l_1_1_disk_device.html#abf24cf4f82259254963692008a0e927e" title="Sector size getter." alt="" coords="1054,188,1213,229"/>
-<area shape="rect" href="classopen_f_s_l_1_1_sector.html#a4216b770df1b0b98eafa60e3c5d84ea0" title="Data buffer getter." alt="" coords="1041,254,1226,281"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s.html#a0f2c85516f7370ae26392515c4adecd8" title=" " alt="" coords="1032,305,1235,331"/>
-<area shape="rect" href="classopen_f_s_l_1_1_disk_device.html#ad5f6968ae65cad9148123f65a0165da8" title=" " alt="" coords="1054,356,1213,397"/>
+<area shape="rect" title="Open file." alt="" coords="5,243,157,284"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s_l___file.html#ae20823e64d12607a49a4d2b4ef84f8ad" title=" " alt="" coords="209,209,353,251"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a193a031e50a9771058113e3475b48baa" title="Get file information." alt="" coords="205,275,357,316"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a30158d5a3854a4e6adb68525409bec0f" title="Change directory." alt="" coords="405,245,557,287"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#ab2a1c56a5fd6313f5fcaa47f46222e53" title="Directory lister." alt="" coords="619,275,771,316"/>
+<area shape="rect" href="namespaceopen_f_s_l.html#a93d37096baa2dd91e4ae24d62ff7fbad" title="String tokenizer." alt="" coords="605,223,784,250"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#aacb457ea5d8202a670c99cf95c3f13de" title=" " alt="" coords="1073,183,1225,224"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a6d867ff7423c61e71921b209f8787f33" title=" " alt="" coords="832,307,1025,348"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a8059886547a26e1901667927a11f87dd" title=" " alt="" coords="853,241,1005,283"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a734d7cc4e6abf4c6c132fa8adf317f15" title=" " alt="" coords="853,372,1005,413"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#aa0bb9ca47f6694ec138628d3196cf32f" title=" " alt="" coords="1274,71,1475,112"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a9f18028119fe31d20cc8a5f8479ccbcc" title="BPB pointer getter." alt="" coords="1524,100,1676,141"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s.html#a7dcd9b50ce7ca28ba28c8187740b8b16" title=" " alt="" coords="1277,187,1472,214"/>
+<area shape="rect" href="classopen_f_s_l_1_1_disk_device.html#abf24cf4f82259254963692008a0e927e" title="Sector size getter." alt="" coords="1295,239,1454,280"/>
+<area shape="rect" href="classopen_f_s_l_1_1_sector.html#a4216b770df1b0b98eafa60e3c5d84ea0" title="Data buffer getter." alt="" coords="1282,305,1467,331"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s.html#a0f2c85516f7370ae26392515c4adecd8" title=" " alt="" coords="1273,355,1476,382"/>
+<area shape="rect" href="classopen_f_s_l_1_1_disk_device.html#ad5f6968ae65cad9148123f65a0165da8" title=" " alt="" coords="1295,5,1454,47"/>
 </map>
 </div>
 
@@ -1007,6 +1050,90 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
+<a id="a734d7cc4e6abf4c6c132fa8adf317f15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a734d7cc4e6abf4c6c132fa8adf317f15">&#9670;&nbsp;</a></span>str16to8()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t * FS_FAT32::str16to8 </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>dest</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint16_t *&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="fsutil_8cpp_source.html#l00014">14</a> of file <a class="el" href="fsutil_8cpp_source.html">fsutil.cpp</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classopen_f_s_l_1_1_f_s___f_a_t32_a734d7cc4e6abf4c6c132fa8adf317f15_icgraph.png" border="0" usemap="#classopen_f_s_l_1_1_f_s___f_a_t32_a734d7cc4e6abf4c6c132fa8adf317f15_icgraph" alt=""/></div>
+<map name="classopen_f_s_l_1_1_f_s___f_a_t32_a734d7cc4e6abf4c6c132fa8adf317f15_icgraph" id="classopen_f_s_l_1_1_f_s___f_a_t32_a734d7cc4e6abf4c6c132fa8adf317f15_icgraph">
+<area shape="rect" title=" " alt="" coords="805,5,957,47"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#ab2a1c56a5fd6313f5fcaa47f46222e53" title="Directory lister." alt="" coords="605,5,757,47"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a30158d5a3854a4e6adb68525409bec0f" title="Change directory." alt="" coords="405,5,557,47"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a193a031e50a9771058113e3475b48baa" title="Get file information." alt="" coords="205,35,357,76"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a3536bff1641a6d7f8145855db825a939" title="Open file." alt="" coords="5,35,157,76"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a05f1424ccba0f575dddb697d664921dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05f1424ccba0f575dddb697d664921dd">&#9670;&nbsp;</a></span>str8to16()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t * FS_FAT32::str8to16 </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t *&#160;</td>
+          <td class="paramname"><em>dest</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t *&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="fsutil_8cpp_source.html#l00021">21</a> of file <a class="el" href="fsutil_8cpp_source.html">fsutil.cpp</a>.</p>
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
 <a id="a147ec282ca63d961325a8d2989319161"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a147ec282ca63d961325a8d2989319161">&#9670;&nbsp;</a></span>bpb</h2>
@@ -1028,7 +1155,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00242">242</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00279">279</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
 
 </div>
 </div>
@@ -1052,7 +1179,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00250">250</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00286">286</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
 
 </div>
 </div>
@@ -1076,12 +1203,12 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00248">248</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00284">284</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
 
 </div>
 </div>
-<a id="a8d2621636e91f7b822ff3cbadbcf2481"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8d2621636e91f7b822ff3cbadbcf2481">&#9670;&nbsp;</a></span>fatClusterList</h2>
+<a id="a1883a7da080f121d8283dfd40c36790c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1883a7da080f121d8283dfd40c36790c">&#9670;&nbsp;</a></span>fatArea</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1090,7 +1217,7 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">uint32_t* openFSL::FS_FAT32::fatClusterList</td>
+          <td class="memname"><a class="el" href="classopen_f_s_l_1_1_sector.html">Sector</a>* openFSL::FS_FAT32::fatArea = NULL</td>
         </tr>
       </table>
   </td>
@@ -1100,7 +1227,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00245">245</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00281">281</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
 
 </div>
 </div>
@@ -1124,7 +1251,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00243">243</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00280">280</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
 
 </div>
 </div>
@@ -1148,7 +1275,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00453">453</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00493">493</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
 
 </div>
 </div>
@@ -1172,7 +1299,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00247">247</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00283">283</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
 
 </div>
 </div>
@@ -1181,9 +1308,10 @@ Here is the call graph for this function:</div>
 <li>fs/fat32/src/<a class="el" href="chdir_8cpp_source.html">chdir.cpp</a></li>
 <li>fs/fat32/src/<a class="el" href="classgeneral_8cpp_source.html">classgeneral.cpp</a></li>
 <li>fs/fat32/src/<a class="el" href="fileinfo_8cpp_source.html">fileinfo.cpp</a></li>
-<li>fs/fat32/src/<a class="el" href="getdirlist_8cpp_source.html">getdirlist.cpp</a></li>
+<li>fs/fat32/src/<a class="el" href="fsutil_8cpp_source.html">fsutil.cpp</a></li>
 <li>fs/fat32/src/<a class="el" href="getter__setter_8cpp_source.html">getter_setter.cpp</a></li>
 <li>fs/fat32/src/<a class="el" href="initialize_8cpp_source.html">initialize.cpp</a></li>
+<li>fs/fat32/src/<a class="el" href="listdir_8cpp_source.html">listdir.cpp</a></li>
 <li>fs/fat32/src/<a class="el" href="mkdir_8cpp_source.html">mkdir.cpp</a></li>
 <li>fs/fat32/src/<a class="el" href="nextcluster_8cpp_source.html">nextcluster.cpp</a></li>
 <li>fs/fat32/src/<a class="el" href="openclosefile_8cpp_source.html">openclosefile.cpp</a></li>

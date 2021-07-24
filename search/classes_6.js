@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['sector_265',['Sector',['../classopen_f_s_l_1_1_sector.html',1,'openFSL']]]
+  ['partitionentry_310',['PartitionEntry',['../structopen_f_s_l_1_1_t_b___m_b_r_1_1_partition_entry.html',1,'openFSL::TB_MBR']]],
+  ['partitiontable_311',['PartitionTable',['../structopen_f_s_l_1_1_t_b___m_b_r_1_1_partition_table.html',1,'openFSL::TB_MBR']]]
 ];
