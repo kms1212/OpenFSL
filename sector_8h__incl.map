@@ -1,8 +1,8 @@
 <map id="include/openfsl/sector.h" name="include/openfsl/sector.h">
 <area shape="rect" id="node1" title=" " alt="" coords="5,5,181,32"/>
-<area shape="rect" id="node2" title=" " alt="" coords="13,155,83,181"/>
-<area shape="rect" id="node3" href="$fslservices_8h.html" title=" " alt="" coords="87,80,191,107"/>
-<area shape="rect" id="node4" title=" " alt="" coords="107,155,170,181"/>
-<area shape="rect" id="node5" title=" " alt="" coords="195,155,253,181"/>
-<area shape="rect" id="node6" title=" " alt="" coords="277,155,352,181"/>
+<area shape="rect" id="node2" title=" " alt="" coords="13,155,80,181"/>
+<area shape="rect" id="node3" href="$fslutils_8h.html" title=" " alt="" coords="101,80,179,107"/>
+<area shape="rect" id="node4" title=" " alt="" coords="105,155,175,181"/>
+<area shape="rect" id="node5" title=" " alt="" coords="199,155,262,181"/>
+<area shape="rect" id="node6" title=" " alt="" coords="287,155,345,181"/>
 </map>

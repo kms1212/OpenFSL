@@ -1,7 +1,9 @@
 <map id="openFSL::FS_FAT32::str16to8" name="openFSL::FS_FAT32::str16to8">
-<area shape="rect" id="node1" title=" " alt="" coords="805,5,957,47"/>
-<area shape="rect" id="node2" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#ab2a1c56a5fd6313f5fcaa47f46222e53" title="Directory lister." alt="" coords="605,5,757,47"/>
-<area shape="rect" id="node3" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a30158d5a3854a4e6adb68525409bec0f" title="Change directory." alt="" coords="405,5,557,47"/>
-<area shape="rect" id="node4" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a193a031e50a9771058113e3475b48baa" title="Get file information." alt="" coords="205,35,357,76"/>
-<area shape="rect" id="node5" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a3536bff1641a6d7f8145855db825a939" title="Open file." alt="" coords="5,35,157,76"/>
+<area shape="rect" id="node1" title=" " alt="" coords="805,51,957,92"/>
+<area shape="rect" id="node2" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#ab2a1c56a5fd6313f5fcaa47f46222e53" title="Directory lister." alt="" coords="605,51,757,92"/>
+<area shape="rect" id="node3" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a30158d5a3854a4e6adb68525409bec0f" title="Change directory." alt="" coords="405,51,557,92"/>
+<area shape="rect" id="node4" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#ab528f2bb95e6c6aa9d45797fac128f28" title=" " alt="" coords="205,5,357,47"/>
+<area shape="rect" id="node6" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a193a031e50a9771058113e3475b48baa" title="Get file information." alt="" coords="205,84,357,125"/>
+<area shape="rect" id="node5" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a0e996af74c798c35b8b803d78b96b806" title=" " alt="" coords="5,5,157,47"/>
+<area shape="rect" id="node7" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a3536bff1641a6d7f8145855db825a939" title="Open file." alt="" coords="5,84,157,125"/>
 </map>

@@ -1,15 +1,15 @@
 <map id="include/openfsl/mbr.h" name="include/openfsl/mbr.h">
-<area shape="rect" id="node1" title=" " alt="" coords="356,5,519,32"/>
-<area shape="rect" id="node2" title=" " alt="" coords="113,379,183,405"/>
-<area shape="rect" id="node3" title=" " alt="" coords="526,155,597,181"/>
-<area shape="rect" id="node4" title=" " alt="" coords="457,379,519,405"/>
-<area shape="rect" id="node5" title=" " alt="" coords="672,80,752,107"/>
-<area shape="rect" id="node6" href="$detectstruct_8h.html" title=" " alt="" coords="355,80,519,107"/>
-<area shape="rect" id="node13" href="$filesystem_8h.html" title=" " alt="" coords="160,80,315,107"/>
-<area shape="rect" id="node7" title=" " alt="" coords="348,379,407,405"/>
-<area shape="rect" id="node8" title=" " alt="" coords="325,155,400,181"/>
-<area shape="rect" id="node9" href="$diskdevice_8h.html" title=" " alt="" coords="43,155,199,181"/>
-<area shape="rect" id="node10" href="$sector_8h.html" title=" " alt="" coords="126,229,199,256"/>
-<area shape="rect" id="node11" href="$fslservices_8h.html" title=" " alt="" coords="236,304,340,331"/>
-<area shape="rect" id="node12" title=" " alt="" coords="249,379,324,405"/>
+<area shape="rect" id="node1" title=" " alt="" coords="191,5,353,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="412,379,479,405"/>
+<area shape="rect" id="node3" title=" " alt="" coords="43,155,109,181"/>
+<area shape="rect" id="node4" title=" " alt="" coords="94,379,157,405"/>
+<area shape="rect" id="node5" title=" " alt="" coords="533,229,613,256"/>
+<area shape="rect" id="node6" href="$detectstruct_8h.html" title=" " alt="" coords="190,80,354,107"/>
+<area shape="rect" id="node13" href="$filesystem_8h.html" title=" " alt="" coords="541,80,696,107"/>
+<area shape="rect" id="node7" title=" " alt="" coords="276,379,335,405"/>
+<area shape="rect" id="node8" title=" " alt="" coords="235,155,309,181"/>
+<area shape="rect" id="node9" href="$diskdevice_8h.html" title=" " alt="" coords="385,155,541,181"/>
+<area shape="rect" id="node10" href="$sector_8h.html" title=" " alt="" coords="385,229,458,256"/>
+<area shape="rect" id="node11" href="$fslutils_8h.html" title=" " alt="" coords="177,304,255,331"/>
+<area shape="rect" id="node12" title=" " alt="" coords="181,379,251,405"/>
 </map>

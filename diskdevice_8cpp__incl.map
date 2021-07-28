@@ -1,10 +1,11 @@
 <map id="src/diskdevice.cpp" name="src/diskdevice.cpp">
 <area shape="rect" id="node1" title=" " alt="" coords="12,5,155,32"/>
 <area shape="rect" id="node2" href="$diskdevice_8h.html" title=" " alt="" coords="5,80,161,107"/>
-<area shape="rect" id="node3" title=" " alt="" coords="35,304,105,331"/>
-<area shape="rect" id="node4" href="$sector_8h.html" title=" " alt="" coords="84,155,157,181"/>
-<area shape="rect" id="node5" href="$fslservices_8h.html" title=" " alt="" coords="134,229,238,256"/>
-<area shape="rect" id="node6" title=" " alt="" coords="129,304,192,331"/>
-<area shape="rect" id="node7" title=" " alt="" coords="217,304,275,331"/>
-<area shape="rect" id="node8" title=" " alt="" coords="299,304,374,331"/>
+<area shape="rect" id="node3" title=" " alt="" coords="15,304,82,331"/>
+<area shape="rect" id="node4" title=" " alt="" coords="43,155,123,181"/>
+<area shape="rect" id="node5" href="$sector_8h.html" title=" " alt="" coords="148,155,221,181"/>
+<area shape="rect" id="node6" href="$fslutils_8h.html" title=" " alt="" coords="145,229,224,256"/>
+<area shape="rect" id="node7" title=" " alt="" coords="107,304,177,331"/>
+<area shape="rect" id="node8" title=" " alt="" coords="201,304,264,331"/>
+<area shape="rect" id="node9" title=" " alt="" coords="289,304,347,331"/>
 </map>
