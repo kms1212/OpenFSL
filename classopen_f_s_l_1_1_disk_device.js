@@ -12,7 +12,6 @@ var classopen_f_s_l_1_1_disk_device =
     [ "bytespersector", "classopen_f_s_l_1_1_disk_device.html#aac584aa78eabb1d605e5383f7fdeed1e", null ],
     [ "close", "classopen_f_s_l_1_1_disk_device.html#ad442994336ed6da38e713907ab4d7487", null ],
     [ "diskParameter", "classopen_f_s_l_1_1_disk_device.html#a8b4d0b2ad6c8bd7884de561f0e8058a7", null ],
-    [ "isParameterSet", "classopen_f_s_l_1_1_disk_device.html#a4228fe63e16399321150f781557e4cae", null ],
     [ "open", "classopen_f_s_l_1_1_disk_device.html#a239f95cf3d55506c45caf4aa3306295a", null ],
     [ "read", "classopen_f_s_l_1_1_disk_device.html#a7e9a3f86d91f699942a114ada11212c4", null ],
     [ "write", "classopen_f_s_l_1_1_disk_device.html#a985ccae8941a0cd9f847b7bbe8acfcf0", null ]
