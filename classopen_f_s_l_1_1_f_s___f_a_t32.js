@@ -18,7 +18,7 @@ var classopen_f_s_l_1_1_f_s___f_a_t32 =
       [ "LFN", "classopen_f_s_l_1_1_f_s___f_a_t32.html#adbb09877a5c254353089e03349416768a71d5f5cefab99540d21c309dccbb51eb", null ],
       [ "Any", "classopen_f_s_l_1_1_f_s___f_a_t32.html#adbb09877a5c254353089e03349416768ae566d0af108b9a7e363ed66a0fac7b24", null ]
     ] ],
-    [ "FS_FAT32", "classopen_f_s_l_1_1_f_s___f_a_t32.html#a57b3dee50c731cd793707fdd4ada02ac", null ],
+    [ "FS_FAT32", "classopen_f_s_l_1_1_f_s___f_a_t32.html#a7690d5dd131d158906f6098306597ea0", null ],
     [ "~FS_FAT32", "classopen_f_s_l_1_1_f_s___f_a_t32.html#a0e8779b0397783bc4d0bccdd6e9ce934", null ],
     [ "allocateFreeCluster", "classopen_f_s_l_1_1_f_s___f_a_t32.html#aa5cc996d161460d4f5c000de629939fa", null ],
     [ "chdir", "classopen_f_s_l_1_1_f_s___f_a_t32.html#a30158d5a3854a4e6adb68525409bec0f", null ],
@@ -47,5 +47,6 @@ var classopen_f_s_l_1_1_f_s___f_a_t32 =
     [ "fatArea", "classopen_f_s_l_1_1_f_s___f_a_t32.html#a1883a7da080f121d8283dfd40c36790c", null ],
     [ "fsinfo", "classopen_f_s_l_1_1_f_s___f_a_t32.html#a3e017c5fc6b42aa2aea4ac8ce022a8ec", null ],
     [ "IDENTIFIER", "classopen_f_s_l_1_1_f_s___f_a_t32.html#ae5ec74a848fae29ac0b5dd600e20cb47", null ],
-    [ "pathSeparator", "classopen_f_s_l_1_1_f_s___f_a_t32.html#a7421632dee11923f5e196e14a0e6c2d8", null ]
+    [ "pathSeparator", "classopen_f_s_l_1_1_f_s___f_a_t32.html#a7421632dee11923f5e196e14a0e6c2d8", null ],
+    [ "rootPath", "classopen_f_s_l_1_1_f_s___f_a_t32.html#aa978661cb04050655c87a63e0ea91821", null ]
 ];

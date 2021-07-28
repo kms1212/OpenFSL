@@ -4,5 +4,6 @@ var searchData=
   ['readdisk_260',['readDisk',['../classopen_f_s_l_1_1_disk_device.html#a9d0c96c7447777bdca562bc667381b42',1,'openFSL::DiskDevice']]],
   ['readme_2emd_261',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]],
   ['readonly_262',['ReadOnly',['../classopen_f_s_l_1_1_f_s___f_a_t32.html#adbb09877a5c254353089e03349416768a7973b95ceef2daef9b644f922f545f76',1,'openFSL::FS_FAT32']]],
-  ['registerfilesystem_263',['registerFilesystem',['../classopen_f_s_l_1_1_t_b___m_b_r.html#ad66951e1acc1934d7b6094100587a890',1,'openFSL::TB_MBR']]]
+  ['registerfilesystem_263',['registerFilesystem',['../classopen_f_s_l_1_1_t_b___m_b_r.html#ad66951e1acc1934d7b6094100587a890',1,'openFSL::TB_MBR']]],
+  ['rootpath_264',['rootPath',['../classopen_f_s_l_1_1_f_s___f_a_t32.html#aa978661cb04050655c87a63e0ea91821',1,'openFSL::FS_FAT32']]]
 ];
