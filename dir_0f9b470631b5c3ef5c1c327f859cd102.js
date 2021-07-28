@@ -1,6 +1,8 @@
 var dir_0f9b470631b5c3ef5c1c327f859cd102 =
 [
+    [ "charcoding.cpp", "charcoding_8cpp.html", null ],
     [ "chdir.cpp", "chdir_8cpp.html", null ],
+    [ "checksum.cpp", "checksum_8cpp.html", null ],
     [ "classgeneral.cpp", "classgeneral_8cpp.html", null ],
     [ "createentry.cpp", "createentry_8cpp.html", null ],
     [ "file_classgeneral.cpp", "file__classgeneral_8cpp.html", null ],
@@ -8,7 +10,6 @@ var dir_0f9b470631b5c3ef5c1c327f859cd102 =
     [ "file_read.cpp", "file__read_8cpp.html", null ],
     [ "file_seek.cpp", "file__seek_8cpp.html", null ],
     [ "fileinfo.cpp", "fileinfo_8cpp.html", null ],
-    [ "fsutil.cpp", "fsutil_8cpp.html", null ],
     [ "getter_setter.cpp", "getter__setter_8cpp.html", null ],
     [ "initialize.cpp", "initialize_8cpp.html", null ],
     [ "linkedcluster_cache.cpp", "linkedcluster__cache_8cpp.html", null ],

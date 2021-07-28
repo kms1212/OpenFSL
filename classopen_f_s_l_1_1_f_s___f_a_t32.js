@@ -22,6 +22,7 @@ var classopen_f_s_l_1_1_f_s___f_a_t32 =
     [ "~FS_FAT32", "classopen_f_s_l_1_1_f_s___f_a_t32.html#a0e8779b0397783bc4d0bccdd6e9ce934", null ],
     [ "allocateFreeCluster", "classopen_f_s_l_1_1_f_s___f_a_t32.html#aa5cc996d161460d4f5c000de629939fa", null ],
     [ "chdir", "classopen_f_s_l_1_1_f_s___f_a_t32.html#a30158d5a3854a4e6adb68525409bec0f", null ],
+    [ "chksumSFN", "classopen_f_s_l_1_1_f_s___f_a_t32.html#ac8710c626da1b24c243310518797a511", null ],
     [ "closeFile", "classopen_f_s_l_1_1_f_s___f_a_t32.html#a45c1e64bdf3562b0c37c4e0dbb9ee40b", null ],
     [ "createEntry", "classopen_f_s_l_1_1_f_s___f_a_t32.html#ab528f2bb95e6c6aa9d45797fac128f28", null ],
     [ "getBPB", "classopen_f_s_l_1_1_f_s___f_a_t32.html#a9f18028119fe31d20cc8a5f8479ccbcc", null ],

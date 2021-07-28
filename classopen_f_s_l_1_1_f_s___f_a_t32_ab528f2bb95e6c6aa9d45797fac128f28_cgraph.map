@@ -1,13 +1,14 @@
 <map id="openFSL::FS_FAT32::createEntry" name="openFSL::FS_FAT32::createEntry">
-<area shape="rect" id="node1" title=" " alt="" coords="5,913,157,954"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,942,157,983"/>
 <area shape="rect" id="node2" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a2b4ce7f3fef365fb859ba6ce7c4a6663" title=" " alt="" coords="635,378,823,419"/>
 <area shape="rect" id="node15" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a30158d5a3854a4e6adb68525409bec0f" title="Change directory." alt="" coords="205,942,357,983"/>
 <area shape="rect" id="node17" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#ab2a1c56a5fd6313f5fcaa47f46222e53" title="Directory lister." alt="" coords="419,891,571,933"/>
 <area shape="rect" id="node18" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#aacb457ea5d8202a670c99cf95c3f13de" title=" " alt="" coords="923,909,1075,950"/>
-<area shape="rect" id="node20" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a6d867ff7423c61e71921b209f8787f33" title=" " alt="" coords="632,1095,825,1137"/>
+<area shape="rect" id="node20" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a6d867ff7423c61e71921b209f8787f33" title=" " alt="" coords="632,1127,825,1169"/>
 <area shape="rect" id="node21" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a8059886547a26e1901667927a11f87dd" title=" " alt="" coords="653,1007,805,1049"/>
-<area shape="rect" id="node23" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a05f1424ccba0f575dddb697d664921dd" title=" " alt="" coords="205,1059,357,1101"/>
-<area shape="rect" id="node24" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#aa2bbdaae9b624bb021dec7972ba1d505" title=" " alt="" coords="653,774,805,815"/>
+<area shape="rect" id="node23" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#ac8710c626da1b24c243310518797a511" title=" " alt="" coords="205,1059,357,1101"/>
+<area shape="rect" id="node24" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a05f1424ccba0f575dddb697d664921dd" title=" " alt="" coords="205,1125,357,1166"/>
+<area shape="rect" id="node25" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#aa2bbdaae9b624bb021dec7972ba1d505" title=" " alt="" coords="653,774,805,815"/>
 <area shape="rect" id="node3" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#aa0bb9ca47f6694ec138628d3196cf32f" title=" " alt="" coords="1185,807,1386,849"/>
 <area shape="rect" id="node4" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a9f18028119fe31d20cc8a5f8479ccbcc" title="BPB pointer getter." alt="" coords="1447,807,1599,849"/>
 <area shape="rect" id="node5" href="$classopen_f_s_l_1_1_f_s.html#a7dcd9b50ce7ca28ba28c8187740b8b16" title=" " alt="" coords="1188,655,1383,681"/>

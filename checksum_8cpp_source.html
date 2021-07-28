@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>OpenFSL: fs/fat32/src/fsutil.cpp Source File</title>
+<title>OpenFSL: fs/fat32/src/checksum.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -75,7 +75,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('fsutil_8cpp_source.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('checksum_8cpp_source.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -95,10 +95,10 @@ $(document).ready(function(){initNavTree('fsutil_8cpp_source.html',''); initResi
 
 <div class="header">
   <div class="headertitle">
-<div class="title">fsutil.cpp</div>  </div>
+<div class="title">checksum.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="fsutil_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* Copyright (c) 2021. kms1212(Min Su Kwon)</span></div>
+<a href="checksum_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* Copyright (c) 2021. kms1212(Min Su Kwon)</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">This file is part of OpenFSL.</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">OpenFSL and its source code is published over BSD 3-Clause License.</span></div>
@@ -111,29 +111,25 @@ $(document).ready(function(){initNavTree('fsutil_8cpp_source.html',''); initResi
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespaceopen_f_s_l.html">openFSL</a>;</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a734d7cc4e6abf4c6c132fa8adf317f15">   14</a></span>&#160;uint8_t* <a class="code" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a734d7cc4e6abf4c6c132fa8adf317f15">FS_FAT32::str16to8</a>(uint8_t* dest, <span class="keyword">const</span> uint16_t* src, <span class="keywordtype">size_t</span> size) <span class="comment">// Temporary function to convert 16bit UCS-2 value to 8bit ASCII (drain)</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#ac8710c626da1b24c243310518797a511">   14</a></span>&#160;uint8_t <a class="code" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#ac8710c626da1b24c243310518797a511">FS_FAT32::chksumSFN</a>(<span class="keyword">const</span> uint8_t* src)</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; size; i++)</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        dest[i] = (uint8_t)(src[i] == 0xFFFF ? 0 : src[i]);</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordflow">return</span> dest;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;}</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a05f1424ccba0f575dddb697d664921dd">   21</a></span>&#160;uint16_t* <a class="code" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a05f1424ccba0f575dddb697d664921dd">FS_FAT32::str8to16</a>(uint16_t* dest, <span class="keyword">const</span> uint8_t* src, <span class="keywordtype">size_t</span> size) <span class="comment">// Temporary function to convert 16bit UCS-2 value to 8bit ASCII (drain)</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;{</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; size; i++)</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        dest[i] = (uint16_t)src[i];</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordflow">return</span> dest;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    uint8_t ret = 0;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 11; i &gt; 0; i--)</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        ret = ((ret &amp; 1) ? 0x80 : 0) + (ret &gt;&gt; 1) + *src++;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    }</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordflow">return</span> ret;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="afs__fat32_8h_html"><div class="ttname"><a href="fs__fat32_8h.html">fs_fat32.h</a></div></div>
-<div class="ttc" id="aclassopen_f_s_l_1_1_f_s___f_a_t32_html_a05f1424ccba0f575dddb697d664921dd"><div class="ttname"><a href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a05f1424ccba0f575dddb697d664921dd">openFSL::FS_FAT32::str8to16</a></div><div class="ttdeci">uint16_t * str8to16(uint16_t *dest, const uint8_t *src, size_t size)</div><div class="ttdef"><b>Definition:</b> <a href="fsutil_8cpp_source.html#l00021">fsutil.cpp:21</a></div></div>
+<div class="ttc" id="aclassopen_f_s_l_1_1_f_s___f_a_t32_html_ac8710c626da1b24c243310518797a511"><div class="ttname"><a href="classopen_f_s_l_1_1_f_s___f_a_t32.html#ac8710c626da1b24c243310518797a511">openFSL::FS_FAT32::chksumSFN</a></div><div class="ttdeci">uint8_t chksumSFN(const uint8_t *src)</div><div class="ttdef"><b>Definition:</b> <a href="checksum_8cpp_source.html#l00014">checksum.cpp:14</a></div></div>
 <div class="ttc" id="anamespaceopen_f_s_l_html"><div class="ttname"><a href="namespaceopen_f_s_l.html">openFSL</a></div><div class="ttdef"><b>Definition:</b> <a href="fslutils_8cpp_source.html#l00014">fslutils.cpp:14</a></div></div>
-<div class="ttc" id="aclassopen_f_s_l_1_1_f_s___f_a_t32_html_a734d7cc4e6abf4c6c132fa8adf317f15"><div class="ttname"><a href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a734d7cc4e6abf4c6c132fa8adf317f15">openFSL::FS_FAT32::str16to8</a></div><div class="ttdeci">uint8_t * str16to8(uint8_t *dest, const uint16_t *src, size_t size)</div><div class="ttdef"><b>Definition:</b> <a href="fsutil_8cpp_source.html#l00014">fsutil.cpp:14</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_97b3d2b63ac216821c2d7a22ee0ab2b0.html">fs</a></li><li class="navelem"><a class="el" href="dir_5bb0d8727a6eaf81f8f318c34e708012.html">fat32</a></li><li class="navelem"><a class="el" href="dir_0f9b470631b5c3ef5c1c327f859cd102.html">src</a></li><li class="navelem"><a class="el" href="fsutil_8cpp.html">fsutil.cpp</a></li>
+    <li class="navelem"><a class="el" href="dir_97b3d2b63ac216821c2d7a22ee0ab2b0.html">fs</a></li><li class="navelem"><a class="el" href="dir_5bb0d8727a6eaf81f8f318c34e708012.html">fat32</a></li><li class="navelem"><a class="el" href="dir_0f9b470631b5c3ef5c1c327f859cd102.html">src</a></li><li class="navelem"><a class="el" href="checksum_8cpp.html">checksum.cpp</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>

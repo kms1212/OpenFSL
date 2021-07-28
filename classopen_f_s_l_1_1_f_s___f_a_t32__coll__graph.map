@@ -1,5 +1,5 @@
 <map id="openFSL::FS_FAT32" name="openFSL::FS_FAT32">
-<area shape="rect" id="node1" title="FAT32 imeplementation." alt="" coords="1435,991,1608,1376"/>
+<area shape="rect" id="node1" title="FAT32 imeplementation." alt="" coords="1435,991,1608,1391"/>
 <area shape="rect" id="node2" href="$classopen_f_s_l_1_1_f_s.html" title=" " alt="" coords="385,733,532,913"/>
 <area shape="rect" id="node3" href="$classopen_f_s_l_1_1_disk_device.html" title="Disk driver." alt="" coords="375,344,542,524"/>
 <area shape="rect" id="node4" title=" " alt="" coords="667,160,834,267"/>
