@@ -3,7 +3,7 @@
 <area shape="rect" id="node2" href="$filesystem_8cpp.html" title=" " alt="" coords="27,87,167,114"/>
 <area shape="rect" id="node3" href="$mbr_8h.html" title=" " alt="" coords="191,87,354,114"/>
 <area shape="rect" id="node7" href="$openfsl_8h.html" title=" " alt="" coords="311,259,496,285"/>
-<area shape="rect" id="node8" href="$fs__fat32_8h.html" title=" " alt="" coords="2767,80,2941,121"/>
+<area shape="rect" id="node8" href="$fs__fat32_8h.html" title=" " alt="" coords="2869,80,3044,121"/>
 <area shape="rect" id="node4" href="$mbr_8cpp.html" title=" " alt="" coords="5,177,103,203"/>
 <area shape="rect" id="node5" href="$detectstruct_8h.html" title=" " alt="" coords="127,177,341,203"/>
 <area shape="rect" id="node6" href="$detectstruct_8cpp.html" title=" " alt="" coords="136,259,287,285"/>
@@ -31,4 +31,5 @@
 <area shape="rect" id="node30" href="$makedir_8cpp.html" title=" " alt="" coords="4810,177,4989,203"/>
 <area shape="rect" id="node31" href="$nextcluster_8cpp.html" title=" " alt="" coords="5013,177,5212,203"/>
 <area shape="rect" id="node32" href="$openclosefile_8cpp.html" title=" " alt="" coords="5236,177,5448,203"/>
+<area shape="rect" id="node33" href="$remove_8cpp.html" title=" " alt="" coords="5473,177,5649,203"/>
 </map>

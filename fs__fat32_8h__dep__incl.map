@@ -1,5 +1,5 @@
 <map id="fs/fat32/include/openfsl/fat32/fs_fat32.h" name="fs/fat32/include/openfsl/fat32/fs_fat32.h">
-<area shape="rect" id="node1" title=" " alt="" coords="2407,5,2582,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="2511,5,2686,47"/>
 <area shape="rect" id="node2" href="$charcoding_8cpp.html" title=" " alt="" coords="5,102,203,129"/>
 <area shape="rect" id="node3" href="$chdir_8cpp.html" title=" " alt="" coords="227,102,384,129"/>
 <area shape="rect" id="node4" href="$checksum_8cpp.html" title=" " alt="" coords="408,102,600,129"/>
@@ -24,4 +24,5 @@
 <area shape="rect" id="node23" href="$makedir_8cpp.html" title=" " alt="" coords="4348,102,4527,129"/>
 <area shape="rect" id="node24" href="$nextcluster_8cpp.html" title=" " alt="" coords="4551,102,4750,129"/>
 <area shape="rect" id="node25" href="$openclosefile_8cpp.html" title=" " alt="" coords="4774,102,4986,129"/>
+<area shape="rect" id="node26" href="$remove_8cpp.html" title=" " alt="" coords="5011,102,5187,129"/>
 </map>

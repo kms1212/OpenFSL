@@ -1,8 +1,10 @@
 <map id="openFSL::FS_FAT32::FileInfo" name="openFSL::FS_FAT32::FileInfo">
-<area shape="rect" id="node1" title="FAT32 file information." alt="" coords="136,403,288,495"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,233,80,311"/>
-<area shape="rect" id="node3" title=" " alt="" coords="131,233,189,311"/>
-<area shape="rect" id="node4" title=" " alt="" coords="214,233,317,311"/>
-<area shape="rect" id="node5" href="$structopen_f_s_l_1_1_f_s_l___time.html" title="openFSL time" alt="" coords="341,233,488,311"/>
-<area shape="rect" id="node6" title=" " alt="" coords="395,5,434,83"/>
+<area shape="rect" id="node1" title="FAT32 file information." alt="" coords="287,403,439,495"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,233,65,311"/>
+<area shape="rect" id="node3" title=" " alt="" coords="134,233,209,311"/>
+<area shape="rect" id="node4" title=" " alt="" coords="263,233,314,311"/>
+<area shape="rect" id="node5" title=" " alt="" coords="410,233,469,311"/>
+<area shape="rect" id="node6" title=" " alt="" coords="520,233,623,311"/>
+<area shape="rect" id="node7" href="$structopen_f_s_l_1_1_f_s_l___time.html" title="openFSL time" alt="" coords="647,233,794,311"/>
+<area shape="rect" id="node8" title=" " alt="" coords="701,5,740,83"/>
 </map>

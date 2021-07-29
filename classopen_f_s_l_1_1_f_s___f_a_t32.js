@@ -38,6 +38,7 @@ var classopen_f_s_l_1_1_f_s___f_a_t32 =
     [ "makeDir", "classopen_f_s_l_1_1_f_s___f_a_t32.html#a0e996af74c798c35b8b803d78b96b806", null ],
     [ "mkdir", "classopen_f_s_l_1_1_f_s___f_a_t32.html#ac62bbc8c70484372a0e17a4dfc4bb69c", null ],
     [ "openFile", "classopen_f_s_l_1_1_f_s___f_a_t32.html#a3536bff1641a6d7f8145855db825a939", null ],
+    [ "remove", "classopen_f_s_l_1_1_f_s___f_a_t32.html#a78e203ae6489bd470bc080d3921221af", null ],
     [ "setLBAOffset", "classopen_f_s_l_1_1_f_s___f_a_t32.html#aa9b4a2be24ae7baa2dd6eb3cdb08112c", null ],
     [ "str16to8", "classopen_f_s_l_1_1_f_s___f_a_t32.html#a734d7cc4e6abf4c6c132fa8adf317f15", null ],
     [ "str8to16", "classopen_f_s_l_1_1_f_s___f_a_t32.html#a05f1424ccba0f575dddb697d664921dd", null ],

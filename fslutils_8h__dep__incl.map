@@ -3,7 +3,7 @@
 <area shape="rect" id="node2" href="$fslutils_8cpp.html" title=" " alt="" coords="5,80,121,107"/>
 <area shape="rect" id="node3" href="$sector_8h.html" title=" " alt="" coords="283,80,459,107"/>
 <area shape="rect" id="node11" href="$openfsl_8h.html" title=" " alt="" coords="143,401,328,427"/>
-<area shape="rect" id="node14" href="$fs__fat32_8h.html" title=" " alt="" coords="2541,304,2716,345"/>
+<area shape="rect" id="node14" href="$fs__fat32_8h.html" title=" " alt="" coords="2644,304,2819,345"/>
 <area shape="rect" id="node4" href="$sector_8cpp.html" title=" " alt="" coords="568,155,679,181"/>
 <area shape="rect" id="node5" href="$diskdevice_8h.html" title=" " alt="" coords="337,155,544,181"/>
 <area shape="rect" id="node6" href="$diskdevice_8cpp.html" title=" " alt="" coords="835,229,977,256"/>
@@ -13,10 +13,10 @@
 <area shape="rect" id="node9" href="$mbr_8h.html" title=" " alt="" coords="525,311,687,338"/>
 <area shape="rect" id="node10" href="$mbr_8cpp.html" title=" " alt="" coords="352,401,449,427"/>
 <area shape="rect" id="node13" href="$filesystem_8cpp.html" title=" " alt="" coords="763,311,903,338"/>
-<area shape="rect" id="node15" href="$charcoding_8cpp.html" title=" " alt="" coords="4627,401,4825,427"/>
-<area shape="rect" id="node16" href="$chdir_8cpp.html" title=" " alt="" coords="4849,401,5006,427"/>
-<area shape="rect" id="node17" href="$checksum_8cpp.html" title=" " alt="" coords="5030,401,5222,427"/>
-<area shape="rect" id="node18" href="$classgeneral_8cpp.html" title=" " alt="" coords="5246,401,5454,427"/>
+<area shape="rect" id="node15" href="$charcoding_8cpp.html" title=" " alt="" coords="4827,401,5025,427"/>
+<area shape="rect" id="node16" href="$chdir_8cpp.html" title=" " alt="" coords="5049,401,5206,427"/>
+<area shape="rect" id="node17" href="$checksum_8cpp.html" title=" " alt="" coords="5230,401,5422,427"/>
+<area shape="rect" id="node18" href="$classgeneral_8cpp.html" title=" " alt="" coords="5446,401,5654,427"/>
 <area shape="rect" id="node19" href="$createentry_8cpp.html" title=" " alt="" coords="473,401,672,427"/>
 <area shape="rect" id="node20" href="$file__classgeneral_8cpp.html" title=" " alt="" coords="695,401,930,427"/>
 <area shape="rect" id="node21" href="$file__getter__setter_8cpp.html" title=" " alt="" coords="954,393,1119,435"/>
@@ -37,4 +37,5 @@
 <area shape="rect" id="node36" href="$makedir_8cpp.html" title=" " alt="" coords="3965,401,4143,427"/>
 <area shape="rect" id="node37" href="$nextcluster_8cpp.html" title=" " alt="" coords="4168,401,4367,427"/>
 <area shape="rect" id="node38" href="$openclosefile_8cpp.html" title=" " alt="" coords="4391,401,4603,427"/>
+<area shape="rect" id="node39" href="$remove_8cpp.html" title=" " alt="" coords="4627,401,4803,427"/>
 </map>
