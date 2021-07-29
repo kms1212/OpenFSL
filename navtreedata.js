@@ -25,7 +25,7 @@ var NAVTREE =
   [ "OpenFSL", "index.html", [
     [ "OpenFSL README", "index.html", [
       [ "Progress", "index.html#autotoc_md1", null ],
-      [ "Pseudo code for main", "index.html#autotoc_md2", null ],
+      [ "Description", "index.html#autotoc_md2", null ],
       [ "Other", "index.html#autotoc_md3", [
         [ "Documents", "index.html#autotoc_md4", null ],
         [ "Discord", "index.html#autotoc_md5", null ],

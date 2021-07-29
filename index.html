@@ -99,8 +99,7 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p><img src="https://raw.githubusercontent.com/kms1212/OpenFSL/main/doc/logo/openfsl-dark-320x135.png" alt="openfsl-logo" class="inline"/></p>
-<p>An open source filesystem library</p>
-<p><a href="https://github.com/kms1212/OpenFSL/actions/workflows/Build.yml"><object type="image/svg+xml" data="https://github.com/kms1212/OpenFSL/actions/workflows/Build.yml/badge.svg" style="pointer-events: none;">Build</object></a> <a href="https://app.fossa.com/projects/git%2Bgithub.com%2Fkms1212%2FOpenFSL?ref=badge_shield"><object type="image/svg+xml" data="https://app.fossa.com/api/projects/git%2Bgithub.com%2Fkms1212%2FOpenFSL.svg?type=shield" style="pointer-events: none;">FOSSA Status</object></a> <a href="https://www.codacy.com/gh/kms1212/OpenFSL/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=kms1212/OpenFSL&amp;utm_campaign=Badge_Grade"><img src="https://app.codacy.com/project/badge/Grade/f1e571ec17324d228a85e182f7f649f1" alt="Codacy Badge" class="inline"/></a></p>
+<p>[<img src="https://img.shields.io/badge/platforms-Windows%20%7C%20Linux%20%7C%20macOS-blue" alt="Platforms" class="inline"/>]()<a href="https://github.com/kms1212/OpenFSL/actions/workflows/Build.yml"><object type="image/svg+xml" data="https://github.com/kms1212/OpenFSL/actions/workflows/Build.yml/badge.svg" style="pointer-events: none;">Build</object></a> <a href="https://app.fossa.com/projects/git%2Bgithub.com%2Fkms1212%2FOpenFSL?ref=badge_shield"><object type="image/svg+xml" data="https://app.fossa.com/api/projects/git%2Bgithub.com%2Fkms1212%2FOpenFSL.svg?type=shield" style="pointer-events: none;">FOSSA Status</object></a> <a href="https://www.codacy.com/gh/kms1212/OpenFSL/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=kms1212/OpenFSL&amp;utm_campaign=Badge_Grade"><img src="https://app.codacy.com/project/badge/Grade/f1e571ec17324d228a85e182f7f649f1" alt="Codacy Badge" class="inline"/></a></p>
 <h1><a class="anchor" id="autotoc_md1"></a>
 Progress</h1>
 <p>File systems:</p>
@@ -111,29 +110,15 @@ Progress</h1>
 <td class="markdownTableBodyNone">1 </td><td class="markdownTableBodyNone">FAT32 </td><td class="markdownTableBodyNone">In progress (Read only)  </td></tr>
 </table>
 <h1><a class="anchor" id="autotoc_md2"></a>
-Pseudo code for main</h1>
-<div class="fragment"><div class="line"> {c++}</div>
-<div class="line">extern Data disk_in(uint64_t offset, size_t sector);</div>
-<div class="line">extern int disk_out(uint64_t offset, Data data);</div>
-<div class="line"> </div>
-<div class="line">extern int mem_copy(char* dest, char* src, size_t size);</div>
-<div class="line"> </div>
-<div class="line">void fsctrl_main() {</div>
-<div class="line">    DiskDriver dd = DiskDriver(disk_in, disk_out); // Initialize disk I/O driver</div>
-<div class="line">    FS_FAT32 fat32 = FS_FAT32(dd, FAT32_LFN, &quot;/&quot;); // Initialize file system</div>
-<div class="line">    </div>
-<div class="line">    fat32.initialize(); // Start file system</div>
-<div class="line">    fat32.chdir(&quot;::/test1&quot;); // Set directory cursor</div>
-<div class="line">    </div>
-<div class="line">    FAT32_file file = fat32.openFile(&quot;./test2/test3.txt&quot;); // Read file from disk</div>
-<div class="line">    </div>
-<div class="line">    uint8_t buf[64];</div>
-<div class="line">    </div>
-<div class="line">    file.read(buf, 64); // Get data from file</div>
-<div class="line">    </div>
-<div class="line">    file.close(); // Close file</div>
-<div class="line">}</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md3"></a>
+Description</h1>
+<p>This is open source filesystem library. It is currently tested on Windows Server 2019, Ubuntu 18.04/20.04, macOS 10.15. Cross-compiling is not possible at this time because there are so many OS-specific build tasks. This library provides only file system control, so you have to implement the abstraction layer for the library. However, in this regard, it can have the advantage of being able to integrate into the Operating system.</p>
+<p><img src="./doc/images/OpenFSLtoApplicationCodeStructure.png" alt="image1" style="zoom:40%;" class="inline"/></p>
+<p>In this image, the disk device abstraction layer is in user application block. But if I transform this image a little bit...</p>
+<p><img src="./doc/images/OpenFSLtoOSCodeStructure.png" alt="image1" style="zoom:40%;" class="inline"/></p>
+<p>You can integrate the library to your operating system!<br  />
+</p>
+<p>But currently this repository is in dev, it is not thread-safe class. There's no disk scheduler. You can only create single thread for single filesystem.</p>
+<h1><a class="anchor" id="autotoc_md3"></a>
 Other</h1>
 <h2><a class="anchor" id="autotoc_md4"></a>
 Documents</h2>
