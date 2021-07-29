@@ -1,15 +1,16 @@
 <map id="openFSL::FS_FAT32::LinkedCluster::addCluster" name="openFSL::FS_FAT32::LinkedCluster::addCluster">
-<area shape="rect" id="node1" title=" " alt="" coords="5,245,193,287"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,283,193,324"/>
 <area shape="rect" id="node2" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#aa0bb9ca47f6694ec138628d3196cf32f" title=" " alt="" coords="266,5,467,47"/>
-<area shape="rect" id="node3" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a9f18028119fe31d20cc8a5f8479ccbcc" title="BPB pointer getter." alt="" coords="577,35,729,76"/>
-<area shape="rect" id="node4" href="$classopen_f_s_l_1_1_f_s.html#a7dcd9b50ce7ca28ba28c8187740b8b16" title=" " alt="" coords="269,122,464,149"/>
-<area shape="rect" id="node5" href="$classopen_f_s_l_1_1_sector.html#a4216b770df1b0b98eafa60e3c5d84ea0" title="Data buffer getter." alt="" coords="561,255,746,282"/>
-<area shape="rect" id="node6" href="$classopen_f_s_l_1_1_f_s.html#a0f2c85516f7370ae26392515c4adecd8" title=" " alt="" coords="265,223,468,250"/>
-<area shape="rect" id="node7" href="$classopen_f_s_l_1_1_disk_device.html#a6dde175530641e580e2059e61d7bc3fa" title=" " alt="" coords="287,275,446,316"/>
-<area shape="rect" id="node8" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a020badcc08e734a1a5f5b868983ae70a" title="Get FAT Area." alt="" coords="291,340,443,381"/>
-<area shape="rect" id="node9" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#ad46cd900ed094e9d7b3fae0fcf88810a" title=" " alt="" coords="241,471,492,512"/>
-<area shape="rect" id="node12" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a58a9719bf310e867c3ab567e860ad5de" title="Get Next Free Cluster." alt="" coords="291,405,443,447"/>
-<area shape="rect" id="node13" href="$classopen_f_s_l_1_1_disk_device.html#a6a9797bb1b7252c5faea926b2a7f7040" title=" " alt="" coords="287,536,446,577"/>
-<area shape="rect" id="node10" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a89e7e2eed12dffeeffac295df056ce2b" title=" " alt="" coords="540,426,767,482"/>
-<area shape="rect" id="node11" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a2f852396acdd66898788fdf1cf622de2" title=" " alt="" coords="545,507,761,548"/>
+<area shape="rect" id="node3" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a9f18028119fe31d20cc8a5f8479ccbcc" title="BPB pointer getter." alt="" coords="577,48,729,89"/>
+<area shape="rect" id="node4" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#afb002c4a1e3c51776f8a6179772cd2a3" title=" " alt="" coords="286,173,447,215"/>
+<area shape="rect" id="node5" href="$classopen_f_s_l_1_1_f_s.html#a0f2c85516f7370ae26392515c4adecd8" title=" " alt="" coords="552,139,755,166"/>
+<area shape="rect" id="node6" href="$classopen_f_s_l_1_1_disk_device.html#a6dde175530641e580e2059e61d7bc3fa" title=" " alt="" coords="574,212,733,253"/>
+<area shape="rect" id="node7" href="$classopen_f_s_l_1_1_f_s.html#a7dcd9b50ce7ca28ba28c8187740b8b16" title=" " alt="" coords="269,290,464,317"/>
+<area shape="rect" id="node8" href="$classopen_f_s_l_1_1_sector.html#a4216b770df1b0b98eafa60e3c5d84ea0" title="Data buffer getter." alt="" coords="561,366,746,393"/>
+<area shape="rect" id="node9" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a020badcc08e734a1a5f5b868983ae70a" title="Get FAT Area." alt="" coords="291,392,443,433"/>
+<area shape="rect" id="node10" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#ad46cd900ed094e9d7b3fae0fcf88810a" title=" " alt="" coords="241,523,492,564"/>
+<area shape="rect" id="node13" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a58a9719bf310e867c3ab567e860ad5de" title="Get Next Free Cluster." alt="" coords="291,457,443,499"/>
+<area shape="rect" id="node14" href="$classopen_f_s_l_1_1_disk_device.html#a6a9797bb1b7252c5faea926b2a7f7040" title=" " alt="" coords="287,588,446,629"/>
+<area shape="rect" id="node11" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a89e7e2eed12dffeeffac295df056ce2b" title=" " alt="" coords="540,478,767,534"/>
+<area shape="rect" id="node12" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a2f852396acdd66898788fdf1cf622de2" title=" " alt="" coords="545,559,761,600"/>
 </map>

@@ -25,6 +25,7 @@ var classopen_f_s_l_1_1_f_s___f_a_t32 =
     [ "chksumSFN", "classopen_f_s_l_1_1_f_s___f_a_t32.html#ac8710c626da1b24c243310518797a511", null ],
     [ "closeFile", "classopen_f_s_l_1_1_f_s___f_a_t32.html#a45c1e64bdf3562b0c37c4e0dbb9ee40b", null ],
     [ "createEntry", "classopen_f_s_l_1_1_f_s___f_a_t32.html#ab528f2bb95e6c6aa9d45797fac128f28", null ],
+    [ "fatAreaIndexToSector", "classopen_f_s_l_1_1_f_s___f_a_t32.html#afb002c4a1e3c51776f8a6179772cd2a3", null ],
     [ "getBPB", "classopen_f_s_l_1_1_f_s___f_a_t32.html#a9f18028119fe31d20cc8a5f8479ccbcc", null ],
     [ "getChildCount", "classopen_f_s_l_1_1_f_s___f_a_t32.html#a02e28663ef1b95eb7e84f3d891f05d7c", null ],
     [ "getFatArea", "classopen_f_s_l_1_1_f_s___f_a_t32.html#a020badcc08e734a1a5f5b868983ae70a", null ],
