@@ -23,15 +23,6 @@ for the JavaScript code in this file
 var NAVTREE =
 [
   [ "OpenFSL", "index.html", [
-    [ "OpenFSL README", "index.html", [
-      [ "Progress", "index.html#autotoc_md1", null ],
-      [ "Description", "index.html#autotoc_md2", null ],
-      [ "Other", "index.html#autotoc_md3", [
-        [ "Documents", "index.html#autotoc_md4", null ],
-        [ "Discord", "index.html#autotoc_md5", null ],
-        [ "License", "index.html#autotoc_md6", null ]
-      ] ]
-    ] ],
     [ "Todo List", "todo.html", null ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
@@ -63,7 +54,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"functions_o.html"
+"functions_m.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
