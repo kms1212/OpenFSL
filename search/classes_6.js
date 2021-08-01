@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['partitionentry_331',['PartitionEntry',['../structopen_f_s_l_1_1_t_b___m_b_r_1_1_partition_entry.html',1,'openFSL::TB_MBR']]],
-  ['partitiontable_332',['PartitionTable',['../structopen_f_s_l_1_1_t_b___m_b_r_1_1_partition_table.html',1,'openFSL::TB_MBR']]]
+  ['lfnentry_347',['LFNEntry',['../structopen_f_s_l_1_1_f_s___f_a_t32_1_1_l_f_n_entry.html',1,'openFSL::FS_FAT32']]],
+  ['linkedcluster_348',['LinkedCluster',['../classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html',1,'openFSL::FS_FAT32']]]
 ];

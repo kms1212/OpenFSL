@@ -1,3 +1,13 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$structopen_f_s_l_1_1_c_h_s.html" title=" " alt="" coords="5,5,116,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,159,92,185"/>
+<area shape="rect" id="node2" href="$classopen_f_s_l_1_1_bad_cluster_exception.html" title=" " alt="" coords="153,5,372,32"/>
+<area shape="rect" id="node3" href="$classopen_f_s_l_1_1_cannot_allocate_cluster_exception.html" title=" " alt="" coords="148,57,377,98"/>
+<area shape="rect" id="node4" href="$classopen_f_s_l_1_1_entry_list_too_long_exception.html" title=" " alt="" coords="165,122,360,163"/>
+<area shape="rect" id="node5" href="$classopen_f_s_l_1_1_file_is_read_only_exception.html" title=" " alt="" coords="140,188,385,215"/>
+<area shape="rect" id="node6" href="$classopen_f_s_l_1_1_invalid_entry_exception.html" title=" " alt="" coords="149,239,376,265"/>
+<area shape="rect" id="node7" href="$classopen_f_s_l_1_1_open_fsl_exception.html" title=" " alt="" coords="162,289,363,316"/>
+<area shape="rect" id="node8" href="$classopen_f_s_l_1_1_disk_error_exception.html" title=" " alt="" coords="445,197,653,224"/>
+<area shape="rect" id="node9" href="$classopen_f_s_l_1_1_file_already_exists_exception.html" title=" " alt="" coords="451,249,647,290"/>
+<area shape="rect" id="node10" href="$classopen_f_s_l_1_1_invalid_signature_exception.html" title=" " alt="" coords="453,314,644,355"/>
+<area shape="rect" id="node11" href="$classopen_f_s_l_1_1_no_such_file_or_directory_exception.html" title=" " alt="" coords="433,379,664,421"/>
 </map>

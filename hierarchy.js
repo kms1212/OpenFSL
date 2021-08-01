@@ -6,6 +6,19 @@ var hierarchy =
     [ "openFSL::fsStructure::COMMAA55h", "structopen_f_s_l_1_1fs_structure_1_1_c_o_m_m_a_a55h.html", null ],
     [ "openFSL::DiskDevice", "classopen_f_s_l_1_1_disk_device.html", null ],
     [ "openFSL::DiskDevice::DiskParameter", "structopen_f_s_l_1_1_disk_device_1_1_disk_parameter.html", null ],
+    [ "exception", null, [
+      [ "openFSL::BadClusterException", "classopen_f_s_l_1_1_bad_cluster_exception.html", null ],
+      [ "openFSL::CannotAllocateClusterException", "classopen_f_s_l_1_1_cannot_allocate_cluster_exception.html", null ],
+      [ "openFSL::EntryListTooLongException", "classopen_f_s_l_1_1_entry_list_too_long_exception.html", null ],
+      [ "openFSL::FileIsReadOnlyException", "classopen_f_s_l_1_1_file_is_read_only_exception.html", null ],
+      [ "openFSL::InvalidEntryException", "classopen_f_s_l_1_1_invalid_entry_exception.html", null ],
+      [ "openFSL::OpenFslException", "classopen_f_s_l_1_1_open_fsl_exception.html", [
+        [ "openFSL::DiskErrorException", "classopen_f_s_l_1_1_disk_error_exception.html", null ],
+        [ "openFSL::FileAlreadyExistsException", "classopen_f_s_l_1_1_file_already_exists_exception.html", null ],
+        [ "openFSL::InvalidSignatureException", "classopen_f_s_l_1_1_invalid_signature_exception.html", null ],
+        [ "openFSL::NoSuchFileOrDirectoryException", "classopen_f_s_l_1_1_no_such_file_or_directory_exception.html", null ]
+      ] ]
+    ] ],
     [ "openFSL::fsStructure::FAT1216BPB", "structopen_f_s_l_1_1fs_structure_1_1_f_a_t1216_b_p_b.html", null ],
     [ "openFSL::fsStructure::FAT32BPB", "structopen_f_s_l_1_1fs_structure_1_1_f_a_t32_b_p_b.html", null ],
     [ "openFSL::FS_FAT32::FILE", "classopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_i_l_e.html", null ],

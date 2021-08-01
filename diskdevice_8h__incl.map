@@ -1,10 +1,12 @@
 <map id="include/openfsl/diskdevice.h" name="include/openfsl/diskdevice.h">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,212,32"/>
-<area shape="rect" id="node2" title=" " alt="" coords="36,229,107,256"/>
-<area shape="rect" id="node3" title=" " alt="" coords="69,80,149,107"/>
-<area shape="rect" id="node4" href="$sector_8h.html" title=" " alt="" coords="173,80,247,107"/>
-<area shape="rect" id="node5" href="$fslutils_8h.html" title=" " alt="" coords="171,155,249,181"/>
-<area shape="rect" id="node6" title=" " alt="" coords="131,229,206,256"/>
-<area shape="rect" id="node7" title=" " alt="" coords="231,229,293,256"/>
-<area shape="rect" id="node8" title=" " alt="" coords="318,229,377,256"/>
+<area shape="rect" id="node1" title=" " alt="" coords="28,5,235,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="16,229,87,256"/>
+<area shape="rect" id="node3" title=" " alt="" coords="29,80,109,107"/>
+<area shape="rect" id="node4" href="$sector_8h.html" title=" " alt="" coords="133,80,258,107"/>
+<area shape="rect" id="node9" href="$include_2openfsl_2exception_8h.html" title=" " alt="" coords="283,80,434,107"/>
+<area shape="rect" id="node5" href="$fslutils_8h.html" title=" " alt="" coords="156,155,235,181"/>
+<area shape="rect" id="node6" title=" " alt="" coords="112,229,186,256"/>
+<area shape="rect" id="node7" title=" " alt="" coords="211,229,274,256"/>
+<area shape="rect" id="node8" title=" " alt="" coords="298,229,357,256"/>
+<area shape="rect" id="node10" title=" " alt="" coords="315,155,402,181"/>
 </map>
