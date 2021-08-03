@@ -16,7 +16,7 @@ var classopen_f_s_l_1_1_t_b___m_b_r =
     [ "~TB_MBR", "classopen_f_s_l_1_1_t_b___m_b_r.html#ac66f3a83429c990be790a503ef9f0f28", null ],
     [ "createEntry", "classopen_f_s_l_1_1_t_b___m_b_r.html#afbdcdd9794787f5bef7d31c5abe213ec", null ],
     [ "format", "classopen_f_s_l_1_1_t_b___m_b_r.html#ac877577c3463a011d4d2a984835f905e", null ],
-    [ "getPartitionTypes", "classopen_f_s_l_1_1_t_b___m_b_r.html#a89c8ac7f2fe13a625297b41fba939576", null ],
+    [ "getPartitionTypes", "classopen_f_s_l_1_1_t_b___m_b_r.html#a07fb3f3f99e9a36dd684de8345ad540b", null ],
     [ "initialize", "classopen_f_s_l_1_1_t_b___m_b_r.html#ae327afc96fc836e6a1663f1a486cdb2d", null ],
     [ "registerFilesystem", "classopen_f_s_l_1_1_t_b___m_b_r.html#af58783c52e3b7ea4cf037606c9f3c267", null ],
     [ "dd", "classopen_f_s_l_1_1_t_b___m_b_r.html#a66f4f57ab3c5c566a368d407c17781ad", null ],

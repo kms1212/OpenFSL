@@ -6,6 +6,7 @@ var hierarchy =
     [ "openFSL::fsStructure::COMMAA55h", "structopen_f_s_l_1_1fs_structure_1_1_c_o_m_m_a_a55h.html", null ],
     [ "openFSL::DiskDevice", "classopen_f_s_l_1_1_disk_device.html", null ],
     [ "openFSL::DiskDevice::DiskParameter", "structopen_f_s_l_1_1_disk_device_1_1_disk_parameter.html", null ],
+    [ "openFSL::DiskStructure", "structopen_f_s_l_1_1_disk_structure.html", null ],
     [ "exception", null, [
       [ "openFSL::BadClusterException", "classopen_f_s_l_1_1_bad_cluster_exception.html", null ],
       [ "openFSL::CannotAllocateClusterException", "classopen_f_s_l_1_1_cannot_allocate_cluster_exception.html", null ],
@@ -28,14 +29,15 @@ var hierarchy =
       [ "openFSL::FS_FAT32", "classopen_f_s_l_1_1_f_s___f_a_t32.html", null ]
     ] ],
     [ "openFSL::FS_FAT32::FSINFOSector", "structopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_s_i_n_f_o_sector.html", null ],
-    [ "openFSL::FSL_DiskStructure", "structopen_f_s_l_1_1_f_s_l___disk_structure.html", null ],
     [ "openFSL::FSL_File< T >", "classopen_f_s_l_1_1_f_s_l___file.html", null ],
-    [ "openFSL::FSL_Time", "structopen_f_s_l_1_1_f_s_l___time.html", null ],
     [ "openFSL::FS_FAT32::LFNEntry", "structopen_f_s_l_1_1_f_s___f_a_t32_1_1_l_f_n_entry.html", null ],
     [ "openFSL::FS_FAT32::LinkedCluster", "classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html", null ],
     [ "openFSL::fsStructure::NTFSBPB", "structopen_f_s_l_1_1fs_structure_1_1_n_t_f_s_b_p_b.html", null ],
     [ "openFSL::TB_MBR::PartitionEntry", "structopen_f_s_l_1_1_t_b___m_b_r_1_1_partition_entry.html", null ],
     [ "openFSL::TB_MBR::PartitionTable", "structopen_f_s_l_1_1_t_b___m_b_r_1_1_partition_table.html", null ],
+    [ "openFSL::Scheduler", "classopen_f_s_l_1_1_scheduler.html", null ],
     [ "openFSL::Sector", "classopen_f_s_l_1_1_sector.html", null ],
-    [ "openFSL::TB_MBR", "classopen_f_s_l_1_1_t_b___m_b_r.html", null ]
+    [ "openFSL::Scheduler::Task", "structopen_f_s_l_1_1_scheduler_1_1_task.html", null ],
+    [ "openFSL::TB_MBR", "classopen_f_s_l_1_1_t_b___m_b_r.html", null ],
+    [ "openFSL::Time", "structopen_f_s_l_1_1_time.html", null ]
 ];

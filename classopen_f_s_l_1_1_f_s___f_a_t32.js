@@ -36,7 +36,7 @@ var classopen_f_s_l_1_1_f_s___f_a_t32 =
     [ "getPath", "classopen_f_s_l_1_1_f_s___f_a_t32.html#ade27bc59ef329910cd5fb8e008c813a3", null ],
     [ "initialize", "classopen_f_s_l_1_1_f_s___f_a_t32.html#af566a65b037158e7d8e881ac508b8a40", null ],
     [ "listDir", "classopen_f_s_l_1_1_f_s___f_a_t32.html#ab2a1c56a5fd6313f5fcaa47f46222e53", null ],
-    [ "makeDir", "classopen_f_s_l_1_1_f_s___f_a_t32.html#a70e0d9e618205c7f4f3c94737ea5178c", null ],
+    [ "makeDir", "classopen_f_s_l_1_1_f_s___f_a_t32.html#add4dd1bff27f171cf7db674122fa3e41", null ],
     [ "mkdir", "classopen_f_s_l_1_1_f_s___f_a_t32.html#a1053d794ae80adef784ddd0bee49e7d0", null ],
     [ "openFile", "classopen_f_s_l_1_1_f_s___f_a_t32.html#a3536bff1641a6d7f8145855db825a939", null ],
     [ "remove", "classopen_f_s_l_1_1_f_s___f_a_t32.html#abb1addf3197435ae0f0ae5a8ea7d65df", null ],
@@ -48,6 +48,7 @@ var classopen_f_s_l_1_1_f_s___f_a_t32 =
     [ "currentPath", "classopen_f_s_l_1_1_f_s___f_a_t32.html#aa9d033b20a66827798d7f979e9c0e7a6", null ],
     [ "fatArea", "classopen_f_s_l_1_1_f_s___f_a_t32.html#a1883a7da080f121d8283dfd40c36790c", null ],
     [ "fsinfo", "classopen_f_s_l_1_1_f_s___f_a_t32.html#a3e017c5fc6b42aa2aea4ac8ce022a8ec", null ],
+    [ "fsScheduler", "classopen_f_s_l_1_1_f_s___f_a_t32.html#aa8704c3f0e0aa9d53d408480a7b64862", null ],
     [ "IDENTIFIER", "classopen_f_s_l_1_1_f_s___f_a_t32.html#ae5ec74a848fae29ac0b5dd600e20cb47", null ],
     [ "pathSeparator", "classopen_f_s_l_1_1_f_s___f_a_t32.html#a7421632dee11923f5e196e14a0e6c2d8", null ],
     [ "rootPath", "classopen_f_s_l_1_1_f_s___f_a_t32.html#aa978661cb04050655c87a63e0ea91821", null ]
