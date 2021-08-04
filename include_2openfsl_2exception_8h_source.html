@@ -158,13 +158,23 @@ $(document).ready(function(){initNavTree('include_2openfsl_2exception_8h_source.
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <span class="keywordflow">return</span> <span class="stringliteral">&quot;File already exists&quot;</span>;</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        }</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    };</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;}</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    </div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="classopen_f_s_l_1_1_name_is_reserved_exception.html">   62</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classopen_f_s_l_1_1_name_is_reserved_exception.html">NameIsReservedException</a> : <span class="keyword">public</span> <a class="code" href="classopen_f_s_l_1_1_open_fsl_exception.html">OpenFslException</a></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="classopen_f_s_l_1_1_name_is_reserved_exception.html#a63e96a5cc3576cf829126707c0fceb06">   65</a></span>&#160;        <span class="keyword">const</span> <span class="keywordtype">char</span> * <a class="code" href="classopen_f_s_l_1_1_name_is_reserved_exception.html#a63e96a5cc3576cf829126707c0fceb06">what</a>() const noexcept<span class="keyword"> override</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keyword">        </span>{</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <span class="keywordflow">return</span> <span class="stringliteral">&quot;Name is reserved&quot;</span>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        }</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    };</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aclassopen_f_s_l_1_1_open_fsl_exception_html_aabfc9640543d8487dc102195918329b3"><div class="ttname"><a href="classopen_f_s_l_1_1_open_fsl_exception.html#aabfc9640543d8487dc102195918329b3">openFSL::OpenFslException::what</a></div><div class="ttdeci">const char * what() const noexcept override</div><div class="ttdef"><b>Definition:</b> <a href="include_2openfsl_2exception_8h_source.html#l00019">exception.h:19</a></div></div>
 <div class="ttc" id="aclassopen_f_s_l_1_1_invalid_signature_exception_html"><div class="ttname"><a href="classopen_f_s_l_1_1_invalid_signature_exception.html">openFSL::InvalidSignatureException</a></div><div class="ttdef"><b>Definition:</b> <a href="include_2openfsl_2exception_8h_source.html#l00035">exception.h:35</a></div></div>
+<div class="ttc" id="aclassopen_f_s_l_1_1_name_is_reserved_exception_html_a63e96a5cc3576cf829126707c0fceb06"><div class="ttname"><a href="classopen_f_s_l_1_1_name_is_reserved_exception.html#a63e96a5cc3576cf829126707c0fceb06">openFSL::NameIsReservedException::what</a></div><div class="ttdeci">const char * what() const noexcept override</div><div class="ttdef"><b>Definition:</b> <a href="include_2openfsl_2exception_8h_source.html#l00065">exception.h:65</a></div></div>
 <div class="ttc" id="aclassopen_f_s_l_1_1_invalid_signature_exception_html_add786f347ce4c7798f60185542ba514a"><div class="ttname"><a href="classopen_f_s_l_1_1_invalid_signature_exception.html#add786f347ce4c7798f60185542ba514a">openFSL::InvalidSignatureException::what</a></div><div class="ttdeci">const char * what() const noexcept override</div><div class="ttdef"><b>Definition:</b> <a href="include_2openfsl_2exception_8h_source.html#l00038">exception.h:38</a></div></div>
 <div class="ttc" id="aclassopen_f_s_l_1_1_open_fsl_exception_html"><div class="ttname"><a href="classopen_f_s_l_1_1_open_fsl_exception.html">openFSL::OpenFslException</a></div><div class="ttdef"><b>Definition:</b> <a href="include_2openfsl_2exception_8h_source.html#l00016">exception.h:16</a></div></div>
 <div class="ttc" id="aclassopen_f_s_l_1_1_file_already_exists_exception_html_a47b6b98d8fce8a1173280d46e9aca8f1"><div class="ttname"><a href="classopen_f_s_l_1_1_file_already_exists_exception.html#a47b6b98d8fce8a1173280d46e9aca8f1">openFSL::FileAlreadyExistsException::what</a></div><div class="ttdeci">const char * what() const noexcept override</div><div class="ttdef"><b>Definition:</b> <a href="include_2openfsl_2exception_8h_source.html#l00056">exception.h:56</a></div></div>
@@ -174,6 +184,7 @@ $(document).ready(function(){initNavTree('include_2openfsl_2exception_8h_source.
 <div class="ttc" id="aclassopen_f_s_l_1_1_disk_error_exception_html_a20efc171761cdfc8ab9bb3a3e8db9c3a"><div class="ttname"><a href="classopen_f_s_l_1_1_disk_error_exception.html#a20efc171761cdfc8ab9bb3a3e8db9c3a">openFSL::DiskErrorException::what</a></div><div class="ttdeci">const char * what() const noexcept override</div><div class="ttdef"><b>Definition:</b> <a href="include_2openfsl_2exception_8h_source.html#l00029">exception.h:29</a></div></div>
 <div class="ttc" id="anamespaceopen_f_s_l_html"><div class="ttname"><a href="namespaceopen_f_s_l.html">openFSL</a></div><div class="ttdef"><b>Definition:</b> <a href="fslutils_8cpp_source.html#l00014">fslutils.cpp:14</a></div></div>
 <div class="ttc" id="aclassopen_f_s_l_1_1_disk_error_exception_html"><div class="ttname"><a href="classopen_f_s_l_1_1_disk_error_exception.html">openFSL::DiskErrorException</a></div><div class="ttdef"><b>Definition:</b> <a href="include_2openfsl_2exception_8h_source.html#l00026">exception.h:26</a></div></div>
+<div class="ttc" id="aclassopen_f_s_l_1_1_name_is_reserved_exception_html"><div class="ttname"><a href="classopen_f_s_l_1_1_name_is_reserved_exception.html">openFSL::NameIsReservedException</a></div><div class="ttdef"><b>Definition:</b> <a href="include_2openfsl_2exception_8h_source.html#l00062">exception.h:62</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

@@ -15,6 +15,7 @@ var namespaceopen_f_s_l =
     [ "FSL_File", "classopen_f_s_l_1_1_f_s_l___file.html", "classopen_f_s_l_1_1_f_s_l___file" ],
     [ "InvalidEntryException", "classopen_f_s_l_1_1_invalid_entry_exception.html", "classopen_f_s_l_1_1_invalid_entry_exception" ],
     [ "InvalidSignatureException", "classopen_f_s_l_1_1_invalid_signature_exception.html", "classopen_f_s_l_1_1_invalid_signature_exception" ],
+    [ "NameIsReservedException", "classopen_f_s_l_1_1_name_is_reserved_exception.html", "classopen_f_s_l_1_1_name_is_reserved_exception" ],
     [ "NoSuchFileOrDirectoryException", "classopen_f_s_l_1_1_no_such_file_or_directory_exception.html", "classopen_f_s_l_1_1_no_such_file_or_directory_exception" ],
     [ "OpenFslException", "classopen_f_s_l_1_1_open_fsl_exception.html", "classopen_f_s_l_1_1_open_fsl_exception" ],
     [ "Scheduler", "classopen_f_s_l_1_1_scheduler.html", "classopen_f_s_l_1_1_scheduler" ],

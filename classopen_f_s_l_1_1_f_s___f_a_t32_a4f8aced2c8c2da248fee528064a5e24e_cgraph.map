@@ -1,4 +1,4 @@
-<map id="openFSL::FS_FAT32::remove" name="openFSL::FS_FAT32::remove">
+<map id="openFSL::FS_FAT32::removeEntry" name="openFSL::FS_FAT32::removeEntry">
 <area shape="rect" id="node1" title=" " alt="" coords="5,260,157,301"/>
 <area shape="rect" id="node2" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#adbfb9ea42ab7d3fbcc68b5d7fe9ee5fe" title="Change directory." alt="" coords="205,201,357,242"/>
 <area shape="rect" id="node4" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#ab2a1c56a5fd6313f5fcaa47f46222e53" title="Directory lister." alt="" coords="419,245,571,286"/>

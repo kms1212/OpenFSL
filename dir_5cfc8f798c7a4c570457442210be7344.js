@@ -10,7 +10,8 @@ var dir_5cfc8f798c7a4c570457442210be7344 =
       [ "DiskErrorException", "classopen_f_s_l_1_1_disk_error_exception.html", "classopen_f_s_l_1_1_disk_error_exception" ],
       [ "InvalidSignatureException", "classopen_f_s_l_1_1_invalid_signature_exception.html", "classopen_f_s_l_1_1_invalid_signature_exception" ],
       [ "NoSuchFileOrDirectoryException", "classopen_f_s_l_1_1_no_such_file_or_directory_exception.html", "classopen_f_s_l_1_1_no_such_file_or_directory_exception" ],
-      [ "FileAlreadyExistsException", "classopen_f_s_l_1_1_file_already_exists_exception.html", "classopen_f_s_l_1_1_file_already_exists_exception" ]
+      [ "FileAlreadyExistsException", "classopen_f_s_l_1_1_file_already_exists_exception.html", "classopen_f_s_l_1_1_file_already_exists_exception" ],
+      [ "NameIsReservedException", "classopen_f_s_l_1_1_name_is_reserved_exception.html", "classopen_f_s_l_1_1_name_is_reserved_exception" ]
     ] ],
     [ "file.h", "file_8h.html", "file_8h" ],
     [ "filesystem.h", "filesystem_8h.html", [

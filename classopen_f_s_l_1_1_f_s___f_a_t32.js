@@ -8,6 +8,7 @@ var classopen_f_s_l_1_1_f_s___f_a_t32 =
     [ "FSINFOSector", "structopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_s_i_n_f_o_sector.html", "structopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_s_i_n_f_o_sector" ],
     [ "LFNEntry", "structopen_f_s_l_1_1_f_s___f_a_t32_1_1_l_f_n_entry.html", "structopen_f_s_l_1_1_f_s___f_a_t32_1_1_l_f_n_entry" ],
     [ "LinkedCluster", "classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html", "classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster" ],
+    [ "User", "classopen_f_s_l_1_1_f_s___f_a_t32_1_1_user.html", "classopen_f_s_l_1_1_f_s___f_a_t32_1_1_user" ],
     [ "FileAttribute", "classopen_f_s_l_1_1_f_s___f_a_t32.html#adbb09877a5c254353089e03349416768", [
       [ "ReadOnly", "classopen_f_s_l_1_1_f_s___f_a_t32.html#adbb09877a5c254353089e03349416768a7973b95ceef2daef9b644f922f545f76", null ],
       [ "Hidden", "classopen_f_s_l_1_1_f_s___f_a_t32.html#adbb09877a5c254353089e03349416768a7df53e3be3d1899bbeb0c7c5c7151bdf", null ],
@@ -31,6 +32,7 @@ var classopen_f_s_l_1_1_f_s___f_a_t32 =
     [ "getFatArea", "classopen_f_s_l_1_1_f_s___f_a_t32.html#a020badcc08e734a1a5f5b868983ae70a", null ],
     [ "getFileInformation", "classopen_f_s_l_1_1_f_s___f_a_t32.html#a193a031e50a9771058113e3475b48baa", null ],
     [ "getFsDiskDevice", "classopen_f_s_l_1_1_f_s___f_a_t32.html#a3c67e46c2665aa6934d8a0f1de7e5ae7", null ],
+    [ "getFsScheduler", "classopen_f_s_l_1_1_f_s___f_a_t32.html#a40e860b250c845b2d7c1523b9253d71e", null ],
     [ "getLastCluster", "classopen_f_s_l_1_1_f_s___f_a_t32.html#a4937321ce083dd4031cdb719765d6ee5", null ],
     [ "getNextFreeCluster", "classopen_f_s_l_1_1_f_s___f_a_t32.html#a58a9719bf310e867c3ab567e860ad5de", null ],
     [ "getPath", "classopen_f_s_l_1_1_f_s___f_a_t32.html#ade27bc59ef329910cd5fb8e008c813a3", null ],
@@ -39,7 +41,7 @@ var classopen_f_s_l_1_1_f_s___f_a_t32 =
     [ "makeDir", "classopen_f_s_l_1_1_f_s___f_a_t32.html#add4dd1bff27f171cf7db674122fa3e41", null ],
     [ "mkdir", "classopen_f_s_l_1_1_f_s___f_a_t32.html#a1053d794ae80adef784ddd0bee49e7d0", null ],
     [ "openFile", "classopen_f_s_l_1_1_f_s___f_a_t32.html#a3536bff1641a6d7f8145855db825a939", null ],
-    [ "remove", "classopen_f_s_l_1_1_f_s___f_a_t32.html#abb1addf3197435ae0f0ae5a8ea7d65df", null ],
+    [ "removeEntry", "classopen_f_s_l_1_1_f_s___f_a_t32.html#a4f8aced2c8c2da248fee528064a5e24e", null ],
     [ "setLBAOffset", "classopen_f_s_l_1_1_f_s___f_a_t32.html#aa9b4a2be24ae7baa2dd6eb3cdb08112c", null ],
     [ "str16to8", "classopen_f_s_l_1_1_f_s___f_a_t32.html#a734d7cc4e6abf4c6c132fa8adf317f15", null ],
     [ "str8to16", "classopen_f_s_l_1_1_f_s___f_a_t32.html#a05f1424ccba0f575dddb697d664921dd", null ],
@@ -48,8 +50,8 @@ var classopen_f_s_l_1_1_f_s___f_a_t32 =
     [ "currentPath", "classopen_f_s_l_1_1_f_s___f_a_t32.html#aa9d033b20a66827798d7f979e9c0e7a6", null ],
     [ "fatArea", "classopen_f_s_l_1_1_f_s___f_a_t32.html#a1883a7da080f121d8283dfd40c36790c", null ],
     [ "fsinfo", "classopen_f_s_l_1_1_f_s___f_a_t32.html#a3e017c5fc6b42aa2aea4ac8ce022a8ec", null ],
-    [ "fsScheduler", "classopen_f_s_l_1_1_f_s___f_a_t32.html#aa8704c3f0e0aa9d53d408480a7b64862", null ],
-    [ "IDENTIFIER", "classopen_f_s_l_1_1_f_s___f_a_t32.html#ae5ec74a848fae29ac0b5dd600e20cb47", null ],
+    [ "fsScheduler", "classopen_f_s_l_1_1_f_s___f_a_t32.html#a60d58620d06c9c48f51380bb25a00199", null ],
     [ "pathSeparator", "classopen_f_s_l_1_1_f_s___f_a_t32.html#a7421632dee11923f5e196e14a0e6c2d8", null ],
+    [ "reservedName", "classopen_f_s_l_1_1_f_s___f_a_t32.html#a287df4efc8c7fd379aace3ad1fa8f961", null ],
     [ "rootPath", "classopen_f_s_l_1_1_f_s___f_a_t32.html#aa978661cb04050655c87a63e0ea91821", null ]
 ];
