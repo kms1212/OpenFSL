@@ -11,6 +11,7 @@ var classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster =
     [ "getLinkSize", "classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a6d867ff7423c61e71921b209f8787f33", null ],
     [ "getNextCluster", "classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a2f852396acdd66898788fdf1cf622de2", null ],
     [ "read", "classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a59434200d27499047e3d46df75ac0f6e", null ],
+    [ "removeCluster", "classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a77eac8ae769c1777f70808a6beaa8624", null ],
     [ "shrinkCache", "classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a08a7d8342c2c58460f59123952f610e4", null ],
     [ "write", "classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a58dbf6545f673324445c70a51ac18fd8", null ],
     [ "clusterList", "classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a5a7b498f77fe9c6253ed82a5cc09836d", null ],

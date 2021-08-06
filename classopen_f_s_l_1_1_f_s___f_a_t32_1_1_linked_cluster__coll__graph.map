@@ -1,6 +1,6 @@
 <map id="openFSL::FS_FAT32::LinkedCluster" name="openFSL::FS_FAT32::LinkedCluster">
-<area shape="rect" id="node1" title="FAT32 linked cluster." alt="" coords="631,1541,825,1809"/>
-<area shape="rect" id="node2" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html" title="FAT32 imeplementation." alt="" coords="828,1035,1015,1479"/>
+<area shape="rect" id="node1" title="FAT32 linked cluster." alt="" coords="631,1556,825,1839"/>
+<area shape="rect" id="node2" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html" title="FAT32 imeplementation." alt="" coords="828,1035,1015,1493"/>
 <area shape="rect" id="node3" href="$classopen_f_s_l_1_1_f_s.html" title=" " alt="" coords="359,763,505,943"/>
 <area shape="rect" id="node4" href="$classopen_f_s_l_1_1_disk_device.html" title="Disk driver." alt="" coords="350,388,514,553"/>
 <area shape="rect" id="node5" href="$structopen_f_s_l_1_1_disk_device_1_1_disk_parameter.html" title="Disk Parameter." alt="" coords="349,189,507,281"/>
@@ -18,5 +18,5 @@
 <area shape="rect" id="node15" title=" " alt="" coords="1306,814,1465,891"/>
 <area shape="rect" id="node17" title=" " alt="" coords="1489,814,1548,891"/>
 <area shape="rect" id="node19" title=" " alt="" coords="1388,432,1463,509"/>
-<area shape="rect" id="node20" title=" " alt="" coords="1039,1218,1196,1295"/>
+<area shape="rect" id="node20" title=" " alt="" coords="1039,1225,1196,1303"/>
 </map>

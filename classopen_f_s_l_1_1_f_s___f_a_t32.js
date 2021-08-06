@@ -47,6 +47,7 @@ var classopen_f_s_l_1_1_f_s___f_a_t32 =
     [ "makeDir", "classopen_f_s_l_1_1_f_s___f_a_t32.html#add4dd1bff27f171cf7db674122fa3e41", null ],
     [ "mkdir", "classopen_f_s_l_1_1_f_s___f_a_t32.html#a1053d794ae80adef784ddd0bee49e7d0", null ],
     [ "openFile", "classopen_f_s_l_1_1_f_s___f_a_t32.html#a3536bff1641a6d7f8145855db825a939", null ],
+    [ "removeDir", "classopen_f_s_l_1_1_f_s___f_a_t32.html#a71a80ab5ad06a1debcb1f8fda55870be", null ],
     [ "removeEntry", "classopen_f_s_l_1_1_f_s___f_a_t32.html#a4f8aced2c8c2da248fee528064a5e24e", null ],
     [ "setLBAOffset", "classopen_f_s_l_1_1_f_s___f_a_t32.html#aa9b4a2be24ae7baa2dd6eb3cdb08112c", null ],
     [ "str16to8", "classopen_f_s_l_1_1_f_s___f_a_t32.html#a734d7cc4e6abf4c6c132fa8adf317f15", null ],

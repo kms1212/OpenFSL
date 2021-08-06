@@ -25,5 +25,6 @@ var dir_0f9b470631b5c3ef5c1c327f859cd102 =
     [ "makedir.cpp", "makedir_8cpp.html", null ],
     [ "nextcluster.cpp", "nextcluster_8cpp.html", null ],
     [ "openclosefile.cpp", "openclosefile_8cpp.html", null ],
+    [ "removedir.cpp", "removedir_8cpp.html", null ],
     [ "removeentry.cpp", "removeentry_8cpp.html", null ]
 ];
