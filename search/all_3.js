@@ -1,7 +1,7 @@
 var searchData=
 [
   ['cachedata_28',['cacheData',['../structopen_f_s_l_1_1_f_s___f_a_t32_1_1_cache_entry.html#a1c2fa3e63c96b16fde0dda25eaf20fbf',1,'openFSL::FS_FAT32::CacheEntry']]],
-  ['cacheentry_29',['CacheEntry',['../structopen_f_s_l_1_1_f_s___f_a_t32_1_1_cache_entry.html',1,'openFSL::FS_FAT32']]],
+  ['cacheentry_29',['CacheEntry',['../structopen_f_s_l_1_1_f_s___f_a_t32_1_1_cache_entry.html',1,'openFSL::FS_FAT32::CacheEntry'],['../classopen_f_s_l_1_1_f_s___f_a_t32.html#a787dde5458f64e50972cfd826a16ffa3',1,'openFSL::FS_FAT32::CacheEntry()']]],
   ['cacheindex_30',['cacheIndex',['../structopen_f_s_l_1_1_f_s___f_a_t32_1_1_cache_entry.html#a4f11afe01e23a202a7533b3cf7d09ae3',1,'openFSL::FS_FAT32::CacheEntry']]],
   ['cachekey_31',['cacheKey',['../structopen_f_s_l_1_1_f_s___f_a_t32_1_1_cache_entry.html#a8fa8e7d6b59988d914e8674d600ad883',1,'openFSL::FS_FAT32::CacheEntry']]],
   ['cachetype_32',['cacheType',['../structopen_f_s_l_1_1_f_s___f_a_t32_1_1_cache_entry.html#ab758ba87e4e91b3bef7ef993b36b227f',1,'openFSL::FS_FAT32::CacheEntry']]],

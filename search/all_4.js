@@ -10,6 +10,6 @@ var searchData=
   ['diskdevice_2ecpp_65',['diskdevice.cpp',['../diskdevice_8cpp.html',1,'']]],
   ['diskdevice_2eh_66',['diskdevice.h',['../diskdevice_8h.html',1,'']]],
   ['diskerrorexception_67',['DiskErrorException',['../classopen_f_s_l_1_1_disk_error_exception.html',1,'openFSL']]],
-  ['diskparameter_68',['DiskParameter',['../structopen_f_s_l_1_1_disk_device_1_1_disk_parameter.html',1,'openFSL::DiskDevice::DiskParameter'],['../classopen_f_s_l_1_1_disk_device.html#a8b4d0b2ad6c8bd7884de561f0e8058a7',1,'openFSL::DiskDevice::diskParameter()']]],
+  ['diskparameter_68',['DiskParameter',['../structopen_f_s_l_1_1_disk_device_1_1_disk_parameter.html',1,'openFSL::DiskDevice::DiskParameter'],['../classopen_f_s_l_1_1_disk_device.html#ae8262f6cf1ec80875ca95cd3cd6b4fb6',1,'openFSL::DiskDevice::DiskParameter()'],['../classopen_f_s_l_1_1_disk_device.html#a8b4d0b2ad6c8bd7884de561f0e8058a7',1,'openFSL::DiskDevice::diskParameter()']]],
   ['diskstructure_69',['DiskStructure',['../structopen_f_s_l_1_1_disk_structure.html',1,'openFSL']]]
 ];

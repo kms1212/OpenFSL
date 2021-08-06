@@ -9,6 +9,12 @@ var classopen_f_s_l_1_1_f_s___f_a_t32 =
     [ "LFNEntry", "structopen_f_s_l_1_1_f_s___f_a_t32_1_1_l_f_n_entry.html", "structopen_f_s_l_1_1_f_s___f_a_t32_1_1_l_f_n_entry" ],
     [ "LinkedCluster", "classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html", "classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster" ],
     [ "User", "classopen_f_s_l_1_1_f_s___f_a_t32_1_1_user.html", "classopen_f_s_l_1_1_f_s___f_a_t32_1_1_user" ],
+    [ "BPBSector", "classopen_f_s_l_1_1_f_s___f_a_t32.html#adf676068687cffbe0ac1334a6743a4ee", null ],
+    [ "CacheEntry", "classopen_f_s_l_1_1_f_s___f_a_t32.html#a787dde5458f64e50972cfd826a16ffa3", null ],
+    [ "FileEntry", "classopen_f_s_l_1_1_f_s___f_a_t32.html#a3fece39d0f0ab0ab26299d78384a2d8c", null ],
+    [ "FileInfo", "classopen_f_s_l_1_1_f_s___f_a_t32.html#a99a818447008a5b7dbbff0a602010626", null ],
+    [ "FSINFOSector", "classopen_f_s_l_1_1_f_s___f_a_t32.html#a7c4effc0a55552f199324f53cd6d890a", null ],
+    [ "LFNEntry", "classopen_f_s_l_1_1_f_s___f_a_t32.html#a4302365941eabe3ee71fb097d924646c", null ],
     [ "FileAttribute", "classopen_f_s_l_1_1_f_s___f_a_t32.html#adbb09877a5c254353089e03349416768", [
       [ "ReadOnly", "classopen_f_s_l_1_1_f_s___f_a_t32.html#adbb09877a5c254353089e03349416768a7973b95ceef2daef9b644f922f545f76", null ],
       [ "Hidden", "classopen_f_s_l_1_1_f_s___f_a_t32.html#adbb09877a5c254353089e03349416768a7df53e3be3d1899bbeb0c7c5c7151bdf", null ],

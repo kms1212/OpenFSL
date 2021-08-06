@@ -1,6 +1,7 @@
 var classopen_f_s_l_1_1_disk_device =
 [
     [ "DiskParameter", "structopen_f_s_l_1_1_disk_device_1_1_disk_parameter.html", "structopen_f_s_l_1_1_disk_device_1_1_disk_parameter" ],
+    [ "DiskParameter", "classopen_f_s_l_1_1_disk_device.html#ae8262f6cf1ec80875ca95cd3cd6b4fb6", null ],
     [ "DiskDevice", "classopen_f_s_l_1_1_disk_device.html#aea74a564aa9d1152d76ad7e6a6866b91", null ],
     [ "~DiskDevice", "classopen_f_s_l_1_1_disk_device.html#a152d104238e741b11ab363337172c23f", null ],
     [ "getDiskParameter", "classopen_f_s_l_1_1_disk_device.html#a6dde175530641e580e2059e61d7bc3fa", null ],
