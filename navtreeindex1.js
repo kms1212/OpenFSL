@@ -111,12 +111,10 @@ var NAVTREEINDEX1 =
 "linkedcluster__internal_8cpp.html":[3,0,1,0,1,19],
 "linkedcluster__internal_8cpp_source.html":[3,0,1,0,1,19],
 "linkedcluster__read_8cpp.html":[3,0,1,0,1,20],
-"linkedcluster__read_8cpp.html#ae75e7d1125b8bbfe06fcefd4f95ce4f4":[3,0,1,0,1,20,0],
 "linkedcluster__read_8cpp_source.html":[3,0,1,0,1,20],
 "linkedcluster__util_8cpp.html":[3,0,1,0,1,21],
 "linkedcluster__util_8cpp_source.html":[3,0,1,0,1,21],
 "linkedcluster__write_8cpp.html":[3,0,1,0,1,22],
-"linkedcluster__write_8cpp.html#ae75e7d1125b8bbfe06fcefd4f95ce4f4":[3,0,1,0,1,22,0],
 "linkedcluster__write_8cpp_source.html":[3,0,1,0,1,22],
 "listdir_8cpp.html":[3,0,1,0,1,23],
 "listdir_8cpp_source.html":[3,0,1,0,1,23],
@@ -249,5 +247,7 @@ var NAVTREEINDEX1 =
 "structopen_f_s_l_1_1_scheduler_1_1_task.html#a31937067e24f02c7203f017410973e0f":[2,0,0,18,0,1],
 "structopen_f_s_l_1_1_scheduler_1_1_task.html#a38a3d510ec95031b28dcd548f38f7a34":[2,0,0,18,0,0],
 "structopen_f_s_l_1_1_t_b___m_b_r_1_1_partition_entry.html":[2,0,0,20,0],
-"structopen_f_s_l_1_1_t_b___m_b_r_1_1_partition_entry.html#a146ccf2ab6657d5656b911fb50765450":[2,0,0,20,0,0]
+"structopen_f_s_l_1_1_t_b___m_b_r_1_1_partition_entry.html#a146ccf2ab6657d5656b911fb50765450":[2,0,0,20,0,0],
+"structopen_f_s_l_1_1_t_b___m_b_r_1_1_partition_entry.html#a2ac4182772cbe730ad2b65dcfed43144":[2,0,0,20,0,5],
+"structopen_f_s_l_1_1_t_b___m_b_r_1_1_partition_entry.html#a332b6a1312dc20a734cb95885231624b":[2,0,0,20,0,2]
 };
