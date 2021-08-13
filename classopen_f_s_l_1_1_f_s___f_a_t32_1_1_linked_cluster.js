@@ -5,6 +5,7 @@ var classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster =
     [ "addCluster", "classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a80bfcad7b0650aa1248ec2026efa93ad", null ],
     [ "clusterToLBA", "classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#aa0bb9ca47f6694ec138628d3196cf32f", null ],
     [ "fetch", "classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a7250fcdce6f1c08f66d763c7e4c395d2", null ],
+    [ "flush", "classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a00f87bd1ed0aa8bae0348cb1d51599d5", null ],
     [ "getClusterList", "classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a0f8d34e99ccadcab8d0b5bb5c1cf1063", null ],
     [ "getLinkedClusterCount", "classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a89e7e2eed12dffeeffac295df056ce2b", null ],
     [ "getLinkedClusterList", "classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#ad46cd900ed094e9d7b3fae0fcf88810a", null ],
@@ -20,5 +21,6 @@ var classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster =
     [ "fetchedSectorCache", "classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#aa3e0397c763244a543bec96c4423af89", null ],
     [ "fileSystem", "classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#ab84c07204b66158f45c4df39db66cf67", null ],
     [ "lastFetchedCluster", "classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#ac73c9eac3a2a94aa108ccb3986915448", null ],
+    [ "modifiedClusterIndex", "classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#ae81e9d5fa3ec38d2940113a0b1bec565", null ],
     [ "startCluster", "classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a8e93e48ed8c5af69df463c6832eab7f0", null ]
 ];

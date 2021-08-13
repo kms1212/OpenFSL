@@ -1,12 +1,6 @@
 var searchData=
 [
-  ['read_502',['read',['../classopen_f_s_l_1_1_f_s_l___file.html#a66e81d558159e97f316425a4e29a4ba2',1,'openFSL::FSL_File::read()'],['../classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a59434200d27499047e3d46df75ac0f6e',1,'openFSL::FS_FAT32::LinkedCluster::read()'],['../classopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_i_l_e.html#a660b28916fe441b0a4d9062ff436f955',1,'openFSL::FS_FAT32::FILE::read()']]],
-  ['readdisk_503',['readDisk',['../classopen_f_s_l_1_1_disk_device.html#af5b7aed1915b2a449d2c8a82a3524eb4',1,'openFSL::DiskDevice']]],
-  ['registerfilesystem_504',['registerFilesystem',['../classopen_f_s_l_1_1_t_b___m_b_r.html#af58783c52e3b7ea4cf037606c9f3c267',1,'openFSL::TB_MBR']]],
-  ['removecluster_505',['removeCluster',['../classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a77eac8ae769c1777f70808a6beaa8624',1,'openFSL::FS_FAT32::LinkedCluster']]],
-  ['removedir_506',['removeDir',['../classopen_f_s_l_1_1_f_s___f_a_t32.html#a71a80ab5ad06a1debcb1f8fda55870be',1,'openFSL::FS_FAT32']]],
-  ['removedirectory_507',['removeDirectory',['../classopen_f_s_l_1_1_f_s___f_a_t32_1_1_user.html#ad12961a40f75a2b728e884a31610ba5f',1,'openFSL::FS_FAT32::User']]],
-  ['removeentry_508',['removeEntry',['../classopen_f_s_l_1_1_f_s___f_a_t32.html#a4f8aced2c8c2da248fee528064a5e24e',1,'openFSL::FS_FAT32']]],
-  ['removefile_509',['removeFile',['../classopen_f_s_l_1_1_f_s___f_a_t32_1_1_user.html#a92d9c3c74e76deda14ff1be508b77976',1,'openFSL::FS_FAT32::User']]],
-  ['runtask_510',['runTask',['../classopen_f_s_l_1_1_scheduler.html#af27806c6029733c084950038733633bc',1,'openFSL::Scheduler']]]
+  ['openfile_515',['openFile',['../classopen_f_s_l_1_1_f_s___f_a_t32.html#a5bcfa37fea30158ce1316c6826a0b50f',1,'openFSL::FS_FAT32']]],
+  ['operator_5b_5d_516',['operator[]',['../classopen_f_s_l_1_1_sector.html#ae7f4df12b223b05e7c279bc9e39e28b8',1,'openFSL::Sector']]],
+  ['operator_7c_517',['operator|',['../operator_8cpp.html#a46eed9ee7ba9bf2e347f5c001d6d6bf6',1,'operator.cpp']]]
 ];

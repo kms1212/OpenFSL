@@ -14,9 +14,7 @@ var dir_5cfc8f798c7a4c570457442210be7344 =
       [ "NameIsReservedException", "classopen_f_s_l_1_1_name_is_reserved_exception.html", "classopen_f_s_l_1_1_name_is_reserved_exception" ]
     ] ],
     [ "file.h", "file_8h.html", "file_8h" ],
-    [ "filesystem.h", "filesystem_8h.html", [
-      [ "FS", "classopen_f_s_l_1_1_f_s.html", "classopen_f_s_l_1_1_f_s" ]
-    ] ],
+    [ "filesystem.h", "filesystem_8h.html", "filesystem_8h" ],
     [ "fsltime.h", "fsltime_8h.html", "fsltime_8h" ],
     [ "fslutils.h", "fslutils_8h.html", "fslutils_8h" ],
     [ "gpt.h", "gpt_8h.html", null ],

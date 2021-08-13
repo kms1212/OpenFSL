@@ -1,5 +1,5 @@
 var structopen_f_s_l_1_1_disk_structure =
 [
-    [ "partList", "structopen_f_s_l_1_1_disk_structure.html#a69da926cb469192902d230c40f032654", null ],
-    [ "partTable", "structopen_f_s_l_1_1_disk_structure.html#ab2373dbfe41cb219d1d2daea25744caf", null ]
+    [ "partList", "structopen_f_s_l_1_1_disk_structure.html#a0f6c643e8422d2f55b03997b3e385356", null ],
+    [ "partTable", "structopen_f_s_l_1_1_disk_structure.html#ae2e9e82bae5399c46424bf14c290e978", null ]
 ];

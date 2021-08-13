@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['initialize_491',['initialize',['../classopen_f_s_l_1_1_disk_device.html#a00850641c490b87c14ca0013f1b26ea3',1,'openFSL::DiskDevice::initialize()'],['../classopen_f_s_l_1_1_t_b___m_b_r.html#ae327afc96fc836e6a1663f1a486cdb2d',1,'openFSL::TB_MBR::initialize()'],['../classopen_f_s_l_1_1_f_s___f_a_t32.html#af566a65b037158e7d8e881ac508b8a40',1,'openFSL::FS_FAT32::initialize()']]],
-  ['initializelibrary_492',['initializeLibrary',['../namespaceopen_f_s_l.html#acdc7d1803efd843778624e9feb1c644d',1,'openFSL']]]
+  ['hexdump_505',['hexdump',['../linkedcluster__fetch_8cpp.html#ae75e7d1125b8bbfe06fcefd4f95ce4f4',1,'hexdump(uint8_t *p, size_t offset, size_t len):&#160;linkedcluster_fetch.cpp'],['../linkedcluster__read_8cpp.html#ae75e7d1125b8bbfe06fcefd4f95ce4f4',1,'hexdump(uint8_t *p, size_t offset, size_t len):&#160;linkedcluster_read.cpp'],['../linkedcluster__write_8cpp.html#ae75e7d1125b8bbfe06fcefd4f95ce4f4',1,'hexdump(uint8_t *p, size_t offset, size_t len):&#160;linkedcluster_write.cpp']]]
 ];

@@ -1,0 +1,13 @@
+<map id="openFSL::FS_FAT32::FILE::read" name="openFSL::FS_FAT32::FILE::read">
+<area shape="rect" id="node1" title="Read file." alt="" coords="5,247,157,288"/>
+<area shape="rect" id="node2" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a59434200d27499047e3d46df75ac0f6e" title=" " alt="" coords="205,247,357,288"/>
+<area shape="rect" id="node3" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a7250fcdce6f1c08f66d763c7e4c395d2" title=" " alt="" coords="405,217,557,259"/>
+<area shape="rect" id="node5" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a9f18028119fe31d20cc8a5f8479ccbcc" title="BPB pointer getter." alt="" coords="855,87,1007,128"/>
+<area shape="rect" id="node7" href="$classopen_f_s_l_1_1_sector.html#a4216b770df1b0b98eafa60e3c5d84ea0" title="Data buffer getter." alt="" coords="613,35,799,62"/>
+<area shape="rect" id="node8" href="$classopen_f_s_l_1_1_file_system.html#af5d55b2ebf97e4c70d553ceea7de97e0" title=" " alt="" coords="628,335,784,376"/>
+<area shape="rect" id="node9" href="$classopen_f_s_l_1_1_disk_device.html#a6dde175530641e580e2059e61d7bc3fa" title=" " alt="" coords="627,400,785,441"/>
+<area shape="rect" id="node11" href="$linkedcluster__read_8cpp.html#ae75e7d1125b8bbfe06fcefd4f95ce4f4" title=" " alt="" coords="440,385,523,411"/>
+<area shape="rect" id="node4" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#aa0bb9ca47f6694ec138628d3196cf32f" title=" " alt="" coords="605,87,807,128"/>
+<area shape="rect" id="node6" href="$classopen_f_s_l_1_1_file_system.html#ae3c9f59420f140e522e7b61504e4a9cd" title=" " alt="" coords="628,152,784,193"/>
+<area shape="rect" id="node10" href="$classopen_f_s_l_1_1_disk_device.html#af5b7aed1915b2a449d2c8a82a3524eb4" title=" " alt="" coords="627,217,785,259"/>
+</map>

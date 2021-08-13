@@ -9,5 +9,11 @@ var file_8h =
       [ "Nocreate", "file_8h.html#a4a380c2eccf46edc459f218a38835a3aaf53f9c4e987b23861bf4a9e8d41c6968", null ],
       [ "Noreplace", "file_8h.html#a4a380c2eccf46edc459f218a38835a3aa45d0fd06f8e80299773fd9d1575996cf", null ],
       [ "Binary", "file_8h.html#a4a380c2eccf46edc459f218a38835a3aa2ca2646e0480fd5c62253801abf5c9cd", null ]
-    ] ]
+    ] ],
+    [ "FSL_SeekMode", "file_8h.html#a25f310b6ebac58b688fec8e6ff48af8f", [
+      [ "SeekSet", "file_8h.html#a25f310b6ebac58b688fec8e6ff48af8fae8b6fa49d5969a5db38371ec2affd49d", null ],
+      [ "SeekCur", "file_8h.html#a25f310b6ebac58b688fec8e6ff48af8fa08fed505341fb5e134152d2607da3c31", null ],
+      [ "SeekEnd", "file_8h.html#a25f310b6ebac58b688fec8e6ff48af8fac81e065ca7d17ec1b162e30daf51e510", null ]
+    ] ],
+    [ "closeFile", "file_8h.html#a975c0df884acf7cf316d532e2109b9bb", null ]
 ];

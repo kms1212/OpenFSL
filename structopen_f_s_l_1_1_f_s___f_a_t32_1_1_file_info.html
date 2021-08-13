@@ -111,14 +111,13 @@ Collaboration diagram for openFSL::FS_FAT32::FileInfo:</div>
 <div class="dyncontent">
 <div class="center"><img src="structopen_f_s_l_1_1_f_s___f_a_t32_1_1_file_info__coll__graph.png" border="0" usemap="#open_f_s_l_1_1_f_s___f_a_t32_1_1_file_info_coll__map" alt="Collaboration graph"/></div>
 <map name="open_f_s_l_1_1_f_s___f_a_t32_1_1_file_info_coll__map" id="open_f_s_l_1_1_f_s___f_a_t32_1_1_file_info_coll__map">
-<area shape="rect" title="FAT32 file information." alt="" coords="323,403,475,495"/>
+<area shape="rect" title="FAT32 file information." alt="" coords="264,403,416,495"/>
 <area shape="rect" href="structopen_f_s_l_1_1_time.html" title="openFSL time" alt="" coords="5,233,123,311"/>
 <area shape="rect" title=" " alt="" coords="45,5,83,83"/>
 <area shape="rect" title=" " alt="" coords="174,233,234,311"/>
 <area shape="rect" title=" " alt="" coords="303,233,377,311"/>
-<area shape="rect" title=" " alt="" coords="432,233,483,311"/>
-<area shape="rect" title=" " alt="" coords="579,233,637,311"/>
-<area shape="rect" title=" " alt="" coords="689,233,791,311"/>
+<area shape="rect" title=" " alt="" coords="428,233,487,311"/>
+<area shape="rect" title=" " alt="" coords="538,233,641,311"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -144,42 +143,36 @@ Public Attributes</h2></td></tr>
 <tr class="separator:afbde284008b5302ce94f34e40cc4eb11"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae1d1220db296a042651dcf498acb1801"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#adbb09877a5c254353089e03349416768">FileAttribute</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structopen_f_s_l_1_1_f_s___f_a_t32_1_1_file_info.html#ae1d1220db296a042651dcf498acb1801">fileAttr</a> = (<a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#adbb09877a5c254353089e03349416768">FileAttribute</a>)0</td></tr>
 <tr class="separator:ae1d1220db296a042651dcf498acb1801"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a549661cdcbd0d9448d445a557d51cc18"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structopen_f_s_l_1_1_f_s___f_a_t32_1_1_file_info.html#a549661cdcbd0d9448d445a557d51cc18">fileHasLfnName</a> = false</td></tr>
-<tr class="separator:a549661cdcbd0d9448d445a557d51cc18"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>FAT32 file information. </p>
 <dl class="section author"><dt>Author</dt><dd>kms1212</dd></dl>
 <table class="markdownTable">
 <tr class="markdownTableHead">
-<th class="markdownTableHeadNone">Type </th><th class="markdownTableHeadNone">Name  </th></tr>
+<th class="markdownTableHeadNone">Type </th><th class="markdownTableHeadNone">Name </th><th class="markdownTableHeadNone">Description  </th></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">std::string </td><td class="markdownTableBodyNone">fileName  </td></tr>
+<td class="markdownTableBodyNone">std::string </td><td class="markdownTableBodyNone">fileName </td><td class="markdownTableBodyNone">Filename  </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">std::string </td><td class="markdownTableBodyNone">fileSFNName  </td></tr>
+<td class="markdownTableBodyNone">std::string </td><td class="markdownTableBodyNone">fileSFNName </td><td class="markdownTableBodyNone">Filename in SFN. (No check in entry creation)  </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">uint8_t </td><td class="markdownTableBodyNone">fileAttr  </td></tr>
+<td class="markdownTableBodyNone">FileAttribute </td><td class="markdownTableBodyNone">fileAttr </td><td class="markdownTableBodyNone">File attribute  </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone"><a class="el" href="structopen_f_s_l_1_1_time.html" title="openFSL time">Time</a> </td><td class="markdownTableBodyNone">fileCreateTime  </td></tr>
+<td class="markdownTableBodyNone"><a class="el" href="structopen_f_s_l_1_1_time.html" title="openFSL time">Time</a> </td><td class="markdownTableBodyNone">fileCreateTime </td><td class="markdownTableBodyNone">File create time  </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone"><a class="el" href="structopen_f_s_l_1_1_time.html" title="openFSL time">Time</a> </td><td class="markdownTableBodyNone">fileAccessTime  </td></tr>
+<td class="markdownTableBodyNone"><a class="el" href="structopen_f_s_l_1_1_time.html" title="openFSL time">Time</a> </td><td class="markdownTableBodyNone">fileAccessTime </td><td class="markdownTableBodyNone">File access time  </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone"><a class="el" href="structopen_f_s_l_1_1_time.html" title="openFSL time">Time</a> </td><td class="markdownTableBodyNone">fileModTime  </td></tr>
+<td class="markdownTableBodyNone"><a class="el" href="structopen_f_s_l_1_1_time.html" title="openFSL time">Time</a> </td><td class="markdownTableBodyNone">fileModTime </td><td class="markdownTableBodyNone">File moderation time  </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">uint32_t </td><td class="markdownTableBodyNone">fileLocation  </td></tr>
+<td class="markdownTableBodyNone">uint32_t </td><td class="markdownTableBodyNone">fileLocation </td><td class="markdownTableBodyNone">File location as cluster index (No check in entry creation)  </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">uint32_t </td><td class="markdownTableBodyNone">fileSize  </td></tr>
+<td class="markdownTableBodyNone">uint32_t </td><td class="markdownTableBodyNone">fileSize </td><td class="markdownTableBodyNone">File size (No check in entry creation)  </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">size_t </td><td class="markdownTableBodyNone">fileEntryIndex  </td></tr>
+<td class="markdownTableBodyNone">size_t </td><td class="markdownTableBodyNone">fileEntryIndex </td><td class="markdownTableBodyNone">SFN entry index (No check in entry creation)  </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">size_t </td><td class="markdownTableBodyNone">fileEntrySize  </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">FileAttribute </td><td class="markdownTableBodyNone">fileAttr  </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">bool </td><td class="markdownTableBodyNone">fileHasLfnName  </td></tr>
+<td class="markdownTableBodyNone">size_t </td><td class="markdownTableBodyNone">fileEntrySize </td><td class="markdownTableBodyNone">LFN entry count + 1(SFN entry count) (No check in entry creation)  </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00319">319</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00312">312</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
 </div><h2 class="groupheader">Member Data Documentation</h2>
 <a id="a77f951f62437ccd4374f2a0625591a09"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a77f951f62437ccd4374f2a0625591a09">&#9670;&nbsp;</a></span>fileAccessTime</h2>
@@ -193,7 +186,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00323">323</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00316">316</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
 
 </div>
 </div>
@@ -209,7 +202,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00329">329</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00322">322</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
 
 </div>
 </div>
@@ -225,7 +218,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00322">322</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00315">315</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
 
 </div>
 </div>
@@ -241,7 +234,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00327">327</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00320">320</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
 
 </div>
 </div>
@@ -257,23 +250,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00328">328</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
-
-</div>
-</div>
-<a id="a549661cdcbd0d9448d445a557d51cc18"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a549661cdcbd0d9448d445a557d51cc18">&#9670;&nbsp;</a></span>fileHasLfnName</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool openFSL::FS_FAT32::FileInfo::fileHasLfnName = false</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00330">330</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00321">321</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
 
 </div>
 </div>
@@ -289,7 +266,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00325">325</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00318">318</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
 
 </div>
 </div>
@@ -305,7 +282,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00324">324</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00317">317</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
 
 </div>
 </div>
@@ -321,7 +298,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00320">320</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00313">313</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
 
 </div>
 </div>
@@ -337,7 +314,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00321">321</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00314">314</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
 
 </div>
 </div>
@@ -353,7 +330,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00326">326</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00319">319</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
 
 </div>
 </div>

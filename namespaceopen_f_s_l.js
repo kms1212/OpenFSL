@@ -10,7 +10,7 @@ var namespaceopen_f_s_l =
     [ "EntryListTooLongException", "classopen_f_s_l_1_1_entry_list_too_long_exception.html", "classopen_f_s_l_1_1_entry_list_too_long_exception" ],
     [ "FileAlreadyExistsException", "classopen_f_s_l_1_1_file_already_exists_exception.html", "classopen_f_s_l_1_1_file_already_exists_exception" ],
     [ "FileIsReadOnlyException", "classopen_f_s_l_1_1_file_is_read_only_exception.html", "classopen_f_s_l_1_1_file_is_read_only_exception" ],
-    [ "FS", "classopen_f_s_l_1_1_f_s.html", "classopen_f_s_l_1_1_f_s" ],
+    [ "FileSystem", "classopen_f_s_l_1_1_file_system.html", "classopen_f_s_l_1_1_file_system" ],
     [ "FS_FAT32", "classopen_f_s_l_1_1_f_s___f_a_t32.html", "classopen_f_s_l_1_1_f_s___f_a_t32" ],
     [ "FSL_File", "classopen_f_s_l_1_1_f_s_l___file.html", "classopen_f_s_l_1_1_f_s_l___file" ],
     [ "InvalidEntryException", "classopen_f_s_l_1_1_invalid_entry_exception.html", "classopen_f_s_l_1_1_invalid_entry_exception" ],
