@@ -10,6 +10,5 @@ var searchData=
   ['openfslexception_273',['OpenFslException',['../classopen_f_s_l_1_1_open_fsl_exception.html',1,'openFSL']]],
   ['openmode_274',['openMode',['../classopen_f_s_l_1_1_f_s_l___file.html#a424e71c76fba6488a2fc30294d606ae7',1,'openFSL::FSL_File']]],
   ['operator_2ecpp_275',['operator.cpp',['../operator_8cpp.html',1,'']]],
-  ['operator_5b_5d_276',['operator[]',['../classopen_f_s_l_1_1_sector.html#ae7f4df12b223b05e7c279bc9e39e28b8',1,'openFSL::Sector']]],
-  ['operator_7c_277',['operator|',['../operator_8cpp.html#a46eed9ee7ba9bf2e347f5c001d6d6bf6',1,'operator.cpp']]]
+  ['operator_5b_5d_276',['operator[]',['../classopen_f_s_l_1_1_sector.html#ae7f4df12b223b05e7c279bc9e39e28b8',1,'openFSL::Sector']]]
 ];

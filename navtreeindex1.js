@@ -140,7 +140,6 @@ var NAVTREEINDEX1 =
 "openfsl_8h.html":[3,0,2,0,9],
 "openfsl_8h_source.html":[3,0,2,0,9],
 "operator_8cpp.html":[3,0,1,0,1,27],
-"operator_8cpp.html#a46eed9ee7ba9bf2e347f5c001d6d6bf6":[3,0,1,0,1,27,0],
 "operator_8cpp_source.html":[3,0,1,0,1,27],
 "pages.html":[],
 "removedir_8cpp.html":[3,0,1,0,1,28],
@@ -249,5 +248,6 @@ var NAVTREEINDEX1 =
 "structopen_f_s_l_1_1_t_b___m_b_r_1_1_partition_entry.html":[2,0,0,20,0],
 "structopen_f_s_l_1_1_t_b___m_b_r_1_1_partition_entry.html#a146ccf2ab6657d5656b911fb50765450":[2,0,0,20,0,0],
 "structopen_f_s_l_1_1_t_b___m_b_r_1_1_partition_entry.html#a2ac4182772cbe730ad2b65dcfed43144":[2,0,0,20,0,5],
-"structopen_f_s_l_1_1_t_b___m_b_r_1_1_partition_entry.html#a332b6a1312dc20a734cb95885231624b":[2,0,0,20,0,2]
+"structopen_f_s_l_1_1_t_b___m_b_r_1_1_partition_entry.html#a332b6a1312dc20a734cb95885231624b":[2,0,0,20,0,2],
+"structopen_f_s_l_1_1_t_b___m_b_r_1_1_partition_entry.html#a63d5c2436567da464e6e7d43437c4763":[2,0,0,20,0,3]
 };
