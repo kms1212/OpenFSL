@@ -1,5 +1,6 @@
 var dir_0f9b470631b5c3ef5c1c327f859cd102 =
 [
+    [ "bpb.cpp", "bpb_8cpp.html", null ],
     [ "charcoding.cpp", "charcoding_8cpp.html", null ],
     [ "chdir.cpp", "chdir_8cpp.html", null ],
     [ "checksum.cpp", "checksum_8cpp.html", null ],
@@ -12,6 +13,7 @@ var dir_0f9b470631b5c3ef5c1c327f859cd102 =
     [ "file_seek.cpp", "file__seek_8cpp.html", null ],
     [ "file_tell.cpp", "file__tell_8cpp.html", null ],
     [ "fileinfo.cpp", "fileinfo_8cpp.html", null ],
+    [ "fsinfo.cpp", "fsinfo_8cpp.html", null ],
     [ "getter_setter.cpp", "getter__setter_8cpp.html", null ],
     [ "initialize.cpp", "initialize_8cpp.html", null ],
     [ "linkedcluster_cache.cpp", "linkedcluster__cache_8cpp.html", null ],
@@ -26,8 +28,11 @@ var dir_0f9b470631b5c3ef5c1c327f859cd102 =
     [ "listdir.cpp", "listdir_8cpp.html", null ],
     [ "makedir.cpp", "makedir_8cpp.html", null ],
     [ "nextcluster.cpp", "nextcluster_8cpp.html", null ],
-    [ "openclosefile.cpp", "openclosefile_8cpp.html", null ],
     [ "operator.cpp", "operator_8cpp.html", null ],
     [ "removedir.cpp", "removedir_8cpp.html", null ],
-    [ "removeentry.cpp", "removeentry_8cpp.html", null ]
+    [ "removeentry.cpp", "removeentry_8cpp.html", null ],
+    [ "thread_classgeneral.cpp", "thread__classgeneral_8cpp.html", null ],
+    [ "thread_directory.cpp", "thread__directory_8cpp.html", null ],
+    [ "thread_entry.cpp", "thread__entry_8cpp.html", null ],
+    [ "thread_volume.cpp", "thread__volume_8cpp.html", null ]
 ];

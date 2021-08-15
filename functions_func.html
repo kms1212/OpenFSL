@@ -97,6 +97,9 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 &#160;
 
 <h3><a id="index_a"></a>- a -</h3><ul>
+<li>abortAll()
+: <a class="el" href="classopen_f_s_l_1_1_scheduler.html#a6c24ce4f9e5347d60c9d39b5eedc7d5b">openFSL::Scheduler</a>
+</li>
 <li>addCluster()
 : <a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a80bfcad7b0650aa1248ec2026efa93ad">openFSL::FS_FAT32::LinkedCluster</a>
 </li>
@@ -108,7 +111,7 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 
 <h3><a id="index_c"></a>- c -</h3><ul>
 <li>changeDirectory()
-: <a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_user.html#a9a56b1b4778710ee1929eb4db5176081">openFSL::FS_FAT32::User</a>
+: <a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_thread.html#ace995f3dffb28ce95a1c10fcbbb0ca9c">openFSL::FS_FAT32::Thread</a>
 </li>
 <li>chdir()
 : <a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#adbfb9ea42ab7d3fbcc68b5d7fe9ee5fe">openFSL::FS_FAT32</a>
@@ -174,11 +177,14 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 <li>getChildCount()
 : <a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a02e28663ef1b95eb7e84f3d891f05d7c">openFSL::FS_FAT32</a>
 </li>
+<li>getCluster()
+: <a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#af686d019883a7d5df7dd615b35e110bb">openFSL::FS_FAT32</a>
+</li>
 <li>getClusterList()
 : <a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a0f8d34e99ccadcab8d0b5bb5c1cf1063">openFSL::FS_FAT32::LinkedCluster</a>
 </li>
 <li>getCurrentDirectory()
-: <a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_user.html#ae10a93d5090af0911a7a6012ee1a0359">openFSL::FS_FAT32::User</a>
+: <a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_thread.html#a113b98813948575275efd3ac9e2ce1a2">openFSL::FS_FAT32::Thread</a>
 </li>
 <li>getData()
 : <a class="el" href="classopen_f_s_l_1_1_sector.html#a4216b770df1b0b98eafa60e3c5d84ea0">openFSL::Sector</a>
@@ -190,7 +196,7 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 : <a class="el" href="classopen_f_s_l_1_1_disk_device.html#a6dde175530641e580e2059e61d7bc3fa">openFSL::DiskDevice</a>
 </li>
 <li>getEntryInfo()
-: <a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_user.html#a7ad88798724b95734987535d6e70f8f8">openFSL::FS_FAT32::User</a>
+: <a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_thread.html#ac1923cf4d853606024ac788d55185754">openFSL::FS_FAT32::Thread</a>
 </li>
 <li>getFatArea()
 : <a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a020badcc08e734a1a5f5b868983ae70a">openFSL::FS_FAT32</a>
@@ -200,9 +206,6 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 </li>
 <li>getFileInformation()
 : <a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a193a031e50a9771058113e3475b48baa">openFSL::FS_FAT32</a>
-</li>
-<li>getFilesystemInfo()
-: <a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_user.html#a30d75da9e5df468a9a6e27eb3fad8ab6">openFSL::FS_FAT32::User</a>
 </li>
 <li>getFsDiskDevice()
 : <a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a3c67e46c2665aa6934d8a0f1de7e5ae7">openFSL::FS_FAT32</a>
@@ -240,11 +243,17 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 <li>getPath()
 : <a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#ade27bc59ef329910cd5fb8e008c813a3">openFSL::FS_FAT32</a>
 </li>
+<li>getPathSeparator()
+: <a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a343b575c40b33f766e9974789abad483">openFSL::FS_FAT32</a>
+</li>
 <li>getQueueSize()
 : <a class="el" href="classopen_f_s_l_1_1_scheduler.html#ae856108a54e41759efc0e7521fad4d37">openFSL::Scheduler</a>
 </li>
 <li>getSectorCount()
 : <a class="el" href="classopen_f_s_l_1_1_sector.html#a0a6a10d6780c3b2b7b158305d1b171a9">openFSL::Sector</a>
+</li>
+<li>getVolumeInfo()
+: <a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_thread.html#a47afc2d3a99e20c6b93caff0bc46d8c3">openFSL::FS_FAT32::Thread</a>
 </li>
 </ul>
 
@@ -266,7 +275,7 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 : <a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#ab2a1c56a5fd6313f5fcaa47f46222e53">openFSL::FS_FAT32</a>
 </li>
 <li>listDirectory()
-: <a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_user.html#a3b3c44bed0de676360644011eacdf9ab">openFSL::FS_FAT32::User</a>
+: <a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_thread.html#a839b67b793168f6e783d1de900847ad1">openFSL::FS_FAT32::Thread</a>
 </li>
 </ul>
 
@@ -276,10 +285,10 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 : <a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#add4dd1bff27f171cf7db674122fa3e41">openFSL::FS_FAT32</a>
 </li>
 <li>makeDirectory()
-: <a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_user.html#ac72f319c6cfceba0aa39f6eeceb18ef5">openFSL::FS_FAT32::User</a>
+: <a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_thread.html#ae67990ce13995cbf7bd7aa6f765c1fa7">openFSL::FS_FAT32::Thread</a>
 </li>
 <li>makeFile()
-: <a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_user.html#a601dd1fec7bd76c8125a5b230c9b4f10">openFSL::FS_FAT32::User</a>
+: <a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_thread.html#a13157437c4b203345edeaca4dae449d8">openFSL::FS_FAT32::Thread</a>
 </li>
 <li>mkdir()
 : <a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a1053d794ae80adef784ddd0bee49e7d0">openFSL::FS_FAT32</a>
@@ -289,7 +298,7 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 
 <h3><a id="index_o"></a>- o -</h3><ul>
 <li>openFile()
-: <a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a5bcfa37fea30158ce1316c6826a0b50f">openFSL::FS_FAT32</a>
+: <a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_thread.html#a20f313d6de65ed8f9d5a98cf0a82965e">openFSL::FS_FAT32::Thread</a>
 </li>
 <li>operator[]()
 : <a class="el" href="classopen_f_s_l_1_1_sector.html#ae7f4df12b223b05e7c279bc9e39e28b8">openFSL::Sector</a>
@@ -316,13 +325,13 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 : <a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a71a80ab5ad06a1debcb1f8fda55870be">openFSL::FS_FAT32</a>
 </li>
 <li>removeDirectory()
-: <a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_user.html#ad12961a40f75a2b728e884a31610ba5f">openFSL::FS_FAT32::User</a>
+: <a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_thread.html#a9ece340083f019a115fc6fa98dae03a7">openFSL::FS_FAT32::Thread</a>
 </li>
 <li>removeEntry()
 : <a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a4f8aced2c8c2da248fee528064a5e24e">openFSL::FS_FAT32</a>
 </li>
 <li>removeFile()
-: <a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_user.html#a92d9c3c74e76deda14ff1be508b77976">openFSL::FS_FAT32::User</a>
+: <a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_thread.html#aad6d82e0709d4fe5098e328ad7c06433">openFSL::FS_FAT32::Thread</a>
 </li>
 <li>runTask()
 : <a class="el" href="classopen_f_s_l_1_1_scheduler.html#af27806c6029733c084950038733633bc">openFSL::Scheduler</a>
@@ -338,6 +347,9 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 : <a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_i_l_e.html#a11619c4188e0dfb92c4dda720190e2ab">openFSL::FS_FAT32::FILE</a>
 , <a class="el" href="classopen_f_s_l_1_1_f_s_l___file.html#a4e949558f5c268876ae63713f138bf08">openFSL::FSL_File</a>
 </li>
+<li>setCluster()
+: <a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#ac0f8b6f580cce4e3a2056218e4693572">openFSL::FS_FAT32</a>
+</li>
 <li>setDiskDevice()
 : <a class="el" href="classopen_f_s_l_1_1_file_system.html#a4942cecd0ac8c994a01f6b9f0f4c637b">openFSL::FileSystem</a>
 </li>
@@ -345,10 +357,7 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 : <a class="el" href="classopen_f_s_l_1_1_disk_device.html#a81fcafdb0646335376079db3bb8e9b9e">openFSL::DiskDevice</a>
 </li>
 <li>setEntryInfo()
-: <a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_user.html#a43645f43802e72464df71df460faf7f5">openFSL::FS_FAT32::User</a>
-</li>
-<li>setFilesystemInfo()
-: <a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_user.html#a4cbad5bb9ad7502248f55093f3529de2">openFSL::FS_FAT32::User</a>
+: <a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_thread.html#abe0e4d808a136c15b07f871c31defdb3">openFSL::FS_FAT32::Thread</a>
 </li>
 <li>setFsLBAOffset()
 : <a class="el" href="classopen_f_s_l_1_1_file_system.html#a02392f27c35d1e316833b737e06fed16">openFSL::FileSystem</a>
@@ -358,6 +367,12 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 </li>
 <li>setLBAOffset()
 : <a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#aa9b4a2be24ae7baa2dd6eb3cdb08112c">openFSL::FS_FAT32</a>
+</li>
+<li>setPath()
+: <a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a656243a6c6d6cfd2fab98d34118acfd0">openFSL::FS_FAT32</a>
+</li>
+<li>setVolumeName()
+: <a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_thread.html#a2afe4438d47c48c9e494f1cac633d1fb">openFSL::FS_FAT32::Thread</a>
 </li>
 <li>shrinkCache()
 : <a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a08a7d8342c2c58460f59123952f610e4">openFSL::FS_FAT32::LinkedCluster</a>
@@ -379,12 +394,18 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 : <a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_i_l_e.html#ac2698f352fcca914cfbfb2306e9f22fd">openFSL::FS_FAT32::FILE</a>
 , <a class="el" href="classopen_f_s_l_1_1_f_s_l___file.html#a3fed28c209fcfba24dd40d133ef0d016">openFSL::FSL_File</a>
 </li>
+<li>Thread()
+: <a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_thread.html#a99713826abd25342e7c25c49158b7668">openFSL::FS_FAT32::Thread</a>
+</li>
 </ul>
 
 
 <h3><a id="index_u"></a>- u -</h3><ul>
-<li>User()
-: <a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_user.html#aa364199ea0eb7380f607a87cb07f734c">openFSL::FS_FAT32::User</a>
+<li>updateBpb()
+: <a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#af0b1bef43817ba5818ff3fff51e7f919">openFSL::FS_FAT32</a>
+</li>
+<li>updateFsInfo()
+: <a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a45ec1c0420c15a7b3e324abdac8c0bc6">openFSL::FS_FAT32</a>
 </li>
 </ul>
 
@@ -434,8 +455,8 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 <li>~TB_MBR()
 : <a class="el" href="classopen_f_s_l_1_1_t_b___m_b_r.html#ac66f3a83429c990be790a503ef9f0f28">openFSL::TB_MBR</a>
 </li>
-<li>~User()
-: <a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_user.html#a69ff8917e1cce96476d48f89c27bd5f9">openFSL::FS_FAT32::User</a>
+<li>~Thread()
+: <a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_thread.html#ab7c956a48c8fc0a17aba7a3ed8896f70">openFSL::FS_FAT32::Thread</a>
 </li>
 </ul>
 </div><!-- contents -->

@@ -41,6 +41,7 @@ var hierarchy =
     [ "openFSL::Sector", "classopen_f_s_l_1_1_sector.html", null ],
     [ "openFSL::Scheduler::Task", "structopen_f_s_l_1_1_scheduler_1_1_task.html", null ],
     [ "openFSL::TB_MBR", "classopen_f_s_l_1_1_t_b___m_b_r.html", null ],
+    [ "openFSL::FS_FAT32::Thread", "classopen_f_s_l_1_1_f_s___f_a_t32_1_1_thread.html", null ],
     [ "openFSL::Time", "structopen_f_s_l_1_1_time.html", null ],
-    [ "openFSL::FS_FAT32::User", "classopen_f_s_l_1_1_f_s___f_a_t32_1_1_user.html", null ]
+    [ "openFSL::FS_FAT32::Thread::VolumeInfo", "structopen_f_s_l_1_1_f_s___f_a_t32_1_1_thread_1_1_volume_info.html", null ]
 ];

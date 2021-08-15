@@ -1,14 +1,9 @@
 var searchData=
 [
-  ['table_674',['table',['../classopen_f_s_l_1_1_t_b___m_b_r.html#ab2c816a850da42657fb032b61bfccdbd',1,'openFSL::TB_MBR']]],
-  ['tailsig_675',['tailSig',['../structopen_f_s_l_1_1fs_structure_1_1_c_o_m_m_a_a55h.html#a14c626f55eaad0f4af96784d285199cb',1,'openFSL::fsStructure::COMMAA55h']]],
-  ['task_676',['task',['../structopen_f_s_l_1_1_scheduler_1_1_task.html#a31937067e24f02c7203f017410973e0f',1,'openFSL::Scheduler::Task']]],
-  ['taskqueue_677',['taskQueue',['../classopen_f_s_l_1_1_scheduler.html#a9f095b00c34428f050afcf0a18e73b9a',1,'openFSL::Scheduler']]],
-  ['time_5fday_678',['time_day',['../structopen_f_s_l_1_1_time.html#a74db3880e6b8ef6def8d40efbce253db',1,'openFSL::Time']]],
-  ['time_5fhour_679',['time_hour',['../structopen_f_s_l_1_1_time.html#a2695f991674c63ff500c01e6771ec7d9',1,'openFSL::Time']]],
-  ['time_5fmillis_680',['time_millis',['../structopen_f_s_l_1_1_time.html#ae140cb0dc8b8ec4ea3b8647ed853f499',1,'openFSL::Time']]],
-  ['time_5fmin_681',['time_min',['../structopen_f_s_l_1_1_time.html#ab34fd13e5c4f868befa96f436fbadf5d',1,'openFSL::Time']]],
-  ['time_5fmonth_682',['time_month',['../structopen_f_s_l_1_1_time.html#a3794bbbeb05ec94838b6db17b1401d3e',1,'openFSL::Time']]],
-  ['time_5fsec_683',['time_sec',['../structopen_f_s_l_1_1_time.html#adfa37b3dc1e1af9fa75854b890da8b45',1,'openFSL::Time']]],
-  ['time_5fyear_684',['time_year',['../structopen_f_s_l_1_1_time.html#a9a2ef832f1564fd4a70572e1ea227b7f',1,'openFSL::Time']]]
+  ['scheduler_701',['scheduler',['../classopen_f_s_l_1_1_disk_device.html#ab7f101ea75a796ac7e77210e90292a72',1,'openFSL::DiskDevice']]],
+  ['sect_702',['sect',['../structopen_f_s_l_1_1_c_h_s.html#aaaba5b97d7b1d088260ea237899e6a2e',1,'openFSL::CHS']]],
+  ['sector_5fcount_703',['sector_count',['../classopen_f_s_l_1_1_sector.html#a7dcd0297f5b57370e962319bcfad0f2b',1,'openFSL::Sector']]],
+  ['sectorpertrack_704',['sectorPerTrack',['../structopen_f_s_l_1_1_disk_device_1_1_disk_parameter.html#a690509f5ec713676d1388b12abb87c20',1,'openFSL::DiskDevice::DiskParameter']]],
+  ['seeklocation_705',['seekLocation',['../classopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_i_l_e.html#a4ddf952905662b1735046368007896a1',1,'openFSL::FS_FAT32::FILE']]],
+  ['startcluster_706',['startCluster',['../classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a8e93e48ed8c5af69df463c6832eab7f0',1,'openFSL::FS_FAT32::LinkedCluster']]]
 ];

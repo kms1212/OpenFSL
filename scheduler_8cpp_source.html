@@ -116,41 +116,43 @@ $(document).ready(function(){initNavTree('scheduler_8cpp_source.html',''); initR
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    taskTemp.<a class="code" href="structopen_f_s_l_1_1_scheduler_1_1_task.html#a38a3d510ec95031b28dcd548f38f7a34">key</a> = <a class="code" href="classopen_f_s_l_1_1_scheduler.html#a41a45b51d0723e725c2c848b53b62370">currentLastKey</a>++;</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    taskTemp.<a class="code" href="structopen_f_s_l_1_1_scheduler_1_1_task.html#a31937067e24f02c7203f017410973e0f">task</a> = task;</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="classopen_f_s_l_1_1_scheduler.html#a9f095b00c34428f050afcf0a18e73b9a">taskQueue</a>.push(taskTemp);</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;Registered task&quot;</span> &lt;&lt; taskTemp.<a class="code" href="structopen_f_s_l_1_1_scheduler_1_1_task.html#a38a3d510ec95031b28dcd548f38f7a34">key</a> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordflow">for</span> (;;) { <span class="comment">// Infinite loop</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="classopen_f_s_l_1_1_scheduler.html#a9f095b00c34428f050afcf0a18e73b9a">taskQueue</a>.front().key == taskTemp.<a class="code" href="structopen_f_s_l_1_1_scheduler_1_1_task.html#a38a3d510ec95031b28dcd548f38f7a34">key</a>) { <span class="comment">// If key value of front of queue is same with temp, run task.</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            std::cout &lt;&lt; <span class="stringliteral">&quot;Starting task&quot;</span> &lt;&lt; taskTemp.<a class="code" href="structopen_f_s_l_1_1_scheduler_1_1_task.html#a38a3d510ec95031b28dcd548f38f7a34">key</a> &lt;&lt; <span class="stringliteral">&quot;...&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            clock_t start, end;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            <span class="keywordflow">if</span> (execTime != NULL)</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                start = clock();</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordflow">for</span> (;;) { <span class="comment">// Infinite loop</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="classopen_f_s_l_1_1_scheduler.html#a9f095b00c34428f050afcf0a18e73b9a">taskQueue</a>.front().key == taskTemp.<a class="code" href="structopen_f_s_l_1_1_scheduler_1_1_task.html#a38a3d510ec95031b28dcd548f38f7a34">key</a>) { <span class="comment">// If key value of front of queue is same with temp, run task.</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            clock_t start, end;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            <span class="keywordflow">if</span> (execTime != NULL)</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                start = clock();</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            <span class="keywordtype">int</span> ret = <a class="code" href="classopen_f_s_l_1_1_scheduler.html#a9f095b00c34428f050afcf0a18e73b9a">taskQueue</a>.front().task();</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            <a class="code" href="classopen_f_s_l_1_1_scheduler.html#a9f095b00c34428f050afcf0a18e73b9a">taskQueue</a>.pop();</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            <span class="keywordtype">int</span> ret = <a class="code" href="classopen_f_s_l_1_1_scheduler.html#a9f095b00c34428f050afcf0a18e73b9a">taskQueue</a>.front().task();</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            <a class="code" href="classopen_f_s_l_1_1_scheduler.html#a9f095b00c34428f050afcf0a18e73b9a">taskQueue</a>.pop();</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            <span class="keywordflow">if</span> (execTime != NULL) {</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                end = clock();</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                *execTime = double(end - start) / double(CLOCKS_PER_SEC); <span class="comment">// Calculate execution time</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            }</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            <a class="code" href="classopen_f_s_l_1_1_scheduler.html#aeb1642024c2f4a7c489a38b27e772641">queueExec</a>.notify_all(); <span class="comment">// Run other threads waiting for releasing lock</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            <span class="keywordflow">return</span> ret;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        }</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        std::unique_lock&lt;std::mutex&gt; lock(<a class="code" href="classopen_f_s_l_1_1_scheduler.html#aea706d30813cd795e856a3db9ac2794f">queueLock</a>); <span class="comment">// Mutex lock class</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <a class="code" href="classopen_f_s_l_1_1_scheduler.html#aeb1642024c2f4a7c489a38b27e772641">queueExec</a>.wait(lock); <span class="comment">// Wait for release</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    }</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;}</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="classopen_f_s_l_1_1_scheduler.html#ae856108a54e41759efc0e7521fad4d37">   48</a></span>&#160;<span class="keywordtype">size_t</span> <a class="code" href="classopen_f_s_l_1_1_scheduler.html#ae856108a54e41759efc0e7521fad4d37">Scheduler::getQueueSize</a>() {</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classopen_f_s_l_1_1_scheduler.html#a9f095b00c34428f050afcf0a18e73b9a">taskQueue</a>.size();</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            <span class="keywordflow">if</span> (execTime != NULL) {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                end = clock();</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                *execTime = double(end - start) / double(CLOCKS_PER_SEC); <span class="comment">// Calculate execution time</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            }</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            <a class="code" href="classopen_f_s_l_1_1_scheduler.html#aeb1642024c2f4a7c489a38b27e772641">queueExec</a>.notify_all(); <span class="comment">// Run other threads waiting for releasing lock</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <span class="keywordflow">return</span> ret;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        }</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        std::unique_lock&lt;std::mutex&gt; lock(<a class="code" href="classopen_f_s_l_1_1_scheduler.html#aea706d30813cd795e856a3db9ac2794f">queueLock</a>); <span class="comment">// Mutex lock class</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <a class="code" href="classopen_f_s_l_1_1_scheduler.html#aeb1642024c2f4a7c489a38b27e772641">queueExec</a>.wait(lock); <span class="comment">// Wait for release</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    }</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classopen_f_s_l_1_1_scheduler.html#ae856108a54e41759efc0e7521fad4d37">   45</a></span>&#160;<span class="keywordtype">size_t</span> <a class="code" href="classopen_f_s_l_1_1_scheduler.html#ae856108a54e41759efc0e7521fad4d37">Scheduler::getQueueSize</a>() {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classopen_f_s_l_1_1_scheduler.html#a9f095b00c34428f050afcf0a18e73b9a">taskQueue</a>.size();</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classopen_f_s_l_1_1_scheduler.html#a6c24ce4f9e5347d60c9d39b5eedc7d5b">   49</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classopen_f_s_l_1_1_scheduler.html#a6c24ce4f9e5347d60c9d39b5eedc7d5b">Scheduler::abortAll</a>() {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    std::queue&lt;Task&gt; empty;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <a class="code" href="classopen_f_s_l_1_1_scheduler.html#a9f095b00c34428f050afcf0a18e73b9a">taskQueue</a>.swap(empty);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclassopen_f_s_l_1_1_scheduler_html_ae856108a54e41759efc0e7521fad4d37"><div class="ttname"><a href="classopen_f_s_l_1_1_scheduler.html#ae856108a54e41759efc0e7521fad4d37">openFSL::Scheduler::getQueueSize</a></div><div class="ttdeci">size_t getQueueSize()</div><div class="ttdef"><b>Definition:</b> <a href="scheduler_8cpp_source.html#l00048">scheduler.cpp:48</a></div></div>
+<div class="ttc" id="aclassopen_f_s_l_1_1_scheduler_html_ae856108a54e41759efc0e7521fad4d37"><div class="ttname"><a href="classopen_f_s_l_1_1_scheduler.html#ae856108a54e41759efc0e7521fad4d37">openFSL::Scheduler::getQueueSize</a></div><div class="ttdeci">size_t getQueueSize()</div><div class="ttdef"><b>Definition:</b> <a href="scheduler_8cpp_source.html#l00045">scheduler.cpp:45</a></div></div>
 <div class="ttc" id="ascheduler_8h_html"><div class="ttname"><a href="scheduler_8h.html">scheduler.h</a></div></div>
 <div class="ttc" id="aclassopen_f_s_l_1_1_scheduler_html_a9f095b00c34428f050afcf0a18e73b9a"><div class="ttname"><a href="classopen_f_s_l_1_1_scheduler.html#a9f095b00c34428f050afcf0a18e73b9a">openFSL::Scheduler::taskQueue</a></div><div class="ttdeci">std::queue&lt; Task &gt; taskQueue</div><div class="ttdef"><b>Definition:</b> <a href="scheduler_8h_source.html#l00030">scheduler.h:30</a></div></div>
 <div class="ttc" id="aclassopen_f_s_l_1_1_scheduler_html_aea706d30813cd795e856a3db9ac2794f"><div class="ttname"><a href="classopen_f_s_l_1_1_scheduler.html#aea706d30813cd795e856a3db9ac2794f">openFSL::Scheduler::queueLock</a></div><div class="ttdeci">std::mutex queueLock</div><div class="ttdef"><b>Definition:</b> <a href="scheduler_8h_source.html#l00032">scheduler.h:32</a></div></div>
@@ -159,6 +161,7 @@ $(document).ready(function(){initNavTree('scheduler_8cpp_source.html',''); initR
 <div class="ttc" id="aclassopen_f_s_l_1_1_scheduler_html_a41a45b51d0723e725c2c848b53b62370"><div class="ttname"><a href="classopen_f_s_l_1_1_scheduler.html#a41a45b51d0723e725c2c848b53b62370">openFSL::Scheduler::currentLastKey</a></div><div class="ttdeci">size_t currentLastKey</div><div class="ttdef"><b>Definition:</b> <a href="scheduler_8h_source.html#l00029">scheduler.h:29</a></div></div>
 <div class="ttc" id="astructopen_f_s_l_1_1_scheduler_1_1_task_html_a31937067e24f02c7203f017410973e0f"><div class="ttname"><a href="structopen_f_s_l_1_1_scheduler_1_1_task.html#a31937067e24f02c7203f017410973e0f">openFSL::Scheduler::Task::task</a></div><div class="ttdeci">std::function&lt; int()&gt; task</div><div class="ttdef"><b>Definition:</b> <a href="scheduler_8h_source.html#l00026">scheduler.h:26</a></div></div>
 <div class="ttc" id="anamespaceopen_f_s_l_html"><div class="ttname"><a href="namespaceopen_f_s_l.html">openFSL</a></div><div class="ttdef"><b>Definition:</b> <a href="fslutils_8cpp_source.html#l00014">fslutils.cpp:14</a></div></div>
+<div class="ttc" id="aclassopen_f_s_l_1_1_scheduler_html_a6c24ce4f9e5347d60c9d39b5eedc7d5b"><div class="ttname"><a href="classopen_f_s_l_1_1_scheduler.html#a6c24ce4f9e5347d60c9d39b5eedc7d5b">openFSL::Scheduler::abortAll</a></div><div class="ttdeci">void abortAll()</div><div class="ttdef"><b>Definition:</b> <a href="scheduler_8cpp_source.html#l00049">scheduler.cpp:49</a></div></div>
 <div class="ttc" id="aclassopen_f_s_l_1_1_scheduler_html_af27806c6029733c084950038733633bc"><div class="ttname"><a href="classopen_f_s_l_1_1_scheduler.html#af27806c6029733c084950038733633bc">openFSL::Scheduler::runTask</a></div><div class="ttdeci">int runTask(std::function&lt; int()&gt; task, double *execTime=NULL)</div><div class="ttdef"><b>Definition:</b> <a href="scheduler_8cpp_source.html#l00014">scheduler.cpp:14</a></div></div>
 <div class="ttc" id="astructopen_f_s_l_1_1_scheduler_1_1_task_html"><div class="ttname"><a href="structopen_f_s_l_1_1_scheduler_1_1_task.html">openFSL::Scheduler::Task</a></div><div class="ttdef"><b>Definition:</b> <a href="scheduler_8h_source.html#l00024">scheduler.h:24</a></div></div>
 <!-- start footer part -->

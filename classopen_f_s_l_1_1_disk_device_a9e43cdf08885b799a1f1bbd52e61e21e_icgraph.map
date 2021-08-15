@@ -1,10 +1,12 @@
 <map id="openFSL::DiskDevice::writeDisk" name="openFSL::DiskDevice::writeDisk">
-<area shape="rect" id="node1" title=" " alt="" coords="660,71,819,112"/>
-<area shape="rect" id="node2" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a80bfcad7b0650aa1248ec2026efa93ad" title=" " alt="" coords="415,5,603,47"/>
-<area shape="rect" id="node5" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a35c253c8cdb74f8bad30a7dd5dca5a27" title=" " alt="" coords="405,71,612,112"/>
-<area shape="rect" id="node6" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a58dbf6545f673324445c70a51ac18fd8" title=" " alt="" coords="433,136,585,177"/>
-<area shape="rect" id="node3" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#aec8bf206b058944ac5c59f29b2b31393" title=" " alt="" coords="205,39,357,80"/>
-<area shape="rect" id="node4" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#add4dd1bff27f171cf7db674122fa3e41" title=" " alt="" coords="5,39,157,80"/>
-<area shape="rect" id="node7" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a4f8aced2c8c2da248fee528064a5e24e" title=" " alt="" coords="205,136,357,177"/>
-<area shape="rect" id="node8" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a71a80ab5ad06a1debcb1f8fda55870be" title=" " alt="" coords="5,136,157,177"/>
+<area shape="rect" id="node1" title=" " alt="" coords="860,98,1019,139"/>
+<area shape="rect" id="node2" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a80bfcad7b0650aa1248ec2026efa93ad" title=" " alt="" coords="415,32,603,74"/>
+<area shape="rect" id="node5" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a35c253c8cdb74f8bad30a7dd5dca5a27" title=" " alt="" coords="405,98,612,139"/>
+<area shape="rect" id="node6" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#af0b1bef43817ba5818ff3fff51e7f919" title="Update BPB." alt="" coords="660,98,812,139"/>
+<area shape="rect" id="node7" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a45ec1c0420c15a7b3e324abdac8c0bc6" title="Update FSINFO." alt="" coords="660,32,812,74"/>
+<area shape="rect" id="node8" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a58dbf6545f673324445c70a51ac18fd8" title=" " alt="" coords="660,215,812,256"/>
+<area shape="rect" id="node3" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#aec8bf206b058944ac5c59f29b2b31393" title=" " alt="" coords="205,91,357,132"/>
+<area shape="rect" id="node4" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#add4dd1bff27f171cf7db674122fa3e41" title=" " alt="" coords="5,91,157,132"/>
+<area shape="rect" id="node9" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a4f8aced2c8c2da248fee528064a5e24e" title=" " alt="" coords="433,215,585,256"/>
+<area shape="rect" id="node10" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a71a80ab5ad06a1debcb1f8fda55870be" title=" " alt="" coords="205,215,357,256"/>
 </map>

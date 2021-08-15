@@ -13,5 +13,6 @@ var classopen_f_s_l_1_1_disk_device =
     [ "diskParameter", "classopen_f_s_l_1_1_disk_device.html#a8b4d0b2ad6c8bd7884de561f0e8058a7", null ],
     [ "open", "classopen_f_s_l_1_1_disk_device.html#a239f95cf3d55506c45caf4aa3306295a", null ],
     [ "read", "classopen_f_s_l_1_1_disk_device.html#a7e9a3f86d91f699942a114ada11212c4", null ],
+    [ "scheduler", "classopen_f_s_l_1_1_disk_device.html#ab7f101ea75a796ac7e77210e90292a72", null ],
     [ "write", "classopen_f_s_l_1_1_disk_device.html#a985ccae8941a0cd9f847b7bbe8acfcf0", null ]
 ];
