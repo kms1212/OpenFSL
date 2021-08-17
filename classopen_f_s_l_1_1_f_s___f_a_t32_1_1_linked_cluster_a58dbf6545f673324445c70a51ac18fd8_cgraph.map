@@ -1,7 +1,7 @@
 <map id="openFSL::FS_FAT32::LinkedCluster::write" name="openFSL::FS_FAT32::LinkedCluster::write">
 <area shape="rect" id="node1" title=" " alt="" coords="5,242,157,283"/>
 <area shape="rect" id="node2" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#aa0bb9ca47f6694ec138628d3196cf32f" title=" " alt="" coords="412,30,613,71"/>
-<area shape="rect" id="node3" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a9f18028119fe31d20cc8a5f8479ccbcc" title="BPB pointer getter." alt="" coords="661,30,813,71"/>
+<area shape="rect" id="node3" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a9f18028119fe31d20cc8a5f8479ccbcc" title=" " alt="" coords="661,30,813,71"/>
 <area shape="rect" id="node4" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a7250fcdce6f1c08f66d763c7e4c395d2" title=" " alt="" coords="209,212,361,254"/>
 <area shape="rect" id="node5" href="$classopen_f_s_l_1_1_file_system.html#ae3c9f59420f140e522e7b61504e4a9cd" title=" " alt="" coords="435,95,591,136"/>
 <area shape="rect" id="node6" href="$classopen_f_s_l_1_1_sector.html#a4216b770df1b0b98eafa60e3c5d84ea0" title="Data buffer getter." alt="" coords="420,278,605,305"/>

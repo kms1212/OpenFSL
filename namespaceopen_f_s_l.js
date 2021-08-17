@@ -4,6 +4,7 @@ var namespaceopen_f_s_l =
     [ "BadClusterException", "classopen_f_s_l_1_1_bad_cluster_exception.html", "classopen_f_s_l_1_1_bad_cluster_exception" ],
     [ "CannotAllocateClusterException", "classopen_f_s_l_1_1_cannot_allocate_cluster_exception.html", "classopen_f_s_l_1_1_cannot_allocate_cluster_exception" ],
     [ "CHS", "structopen_f_s_l_1_1_c_h_s.html", "structopen_f_s_l_1_1_c_h_s" ],
+    [ "Container", "classopen_f_s_l_1_1_container.html", "classopen_f_s_l_1_1_container" ],
     [ "DiskDevice", "classopen_f_s_l_1_1_disk_device.html", "classopen_f_s_l_1_1_disk_device" ],
     [ "DiskErrorException", "classopen_f_s_l_1_1_disk_error_exception.html", "classopen_f_s_l_1_1_disk_error_exception" ],
     [ "DiskStructure", "structopen_f_s_l_1_1_disk_structure.html", "structopen_f_s_l_1_1_disk_structure" ],

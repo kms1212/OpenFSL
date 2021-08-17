@@ -1,13 +1,13 @@
 <map id="openFSL::FS_FAT32::LinkedCluster::LinkedCluster" name="openFSL::FS_FAT32::LinkedCluster::LinkedCluster">
 <area shape="rect" id="node1" title=" " alt="" coords="5,311,212,352"/>
 <area shape="rect" id="node2" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#aa0bb9ca47f6694ec138628d3196cf32f" title=" " alt="" coords="285,55,486,96"/>
-<area shape="rect" id="node3" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a9f18028119fe31d20cc8a5f8479ccbcc" title="BPB pointer getter." alt="" coords="596,48,748,89"/>
-<area shape="rect" id="node4" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#afb002c4a1e3c51776f8a6179772cd2a3" title=" " alt="" coords="305,340,466,381"/>
+<area shape="rect" id="node3" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a9f18028119fe31d20cc8a5f8479ccbcc" title=" " alt="" coords="596,48,748,89"/>
+<area shape="rect" id="node4" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#afb002c4a1e3c51776f8a6179772cd2a3" title="Convert FAT area index to sector." alt="" coords="305,340,466,381"/>
 <area shape="rect" id="node5" href="$classopen_f_s_l_1_1_file_system.html#af5d55b2ebf97e4c70d553ceea7de97e0" title=" " alt="" coords="594,281,750,323"/>
 <area shape="rect" id="node6" href="$classopen_f_s_l_1_1_disk_device.html#a6dde175530641e580e2059e61d7bc3fa" title=" " alt="" coords="593,383,751,424"/>
 <area shape="rect" id="node7" href="$classopen_f_s_l_1_1_file_system.html#ae3c9f59420f140e522e7b61504e4a9cd" title=" " alt="" coords="594,121,750,163"/>
 <area shape="rect" id="node8" href="$classopen_f_s_l_1_1_sector.html#a4216b770df1b0b98eafa60e3c5d84ea0" title="Data buffer getter." alt="" coords="579,474,765,501"/>
-<area shape="rect" id="node9" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a020badcc08e734a1a5f5b868983ae70a" title="Get FAT Area." alt="" coords="309,573,461,615"/>
+<area shape="rect" id="node9" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a020badcc08e734a1a5f5b868983ae70a" title=" " alt="" coords="309,573,461,615"/>
 <area shape="rect" id="node10" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#ad46cd900ed094e9d7b3fae0fcf88810a" title=" " alt="" coords="260,639,511,680"/>
 <area shape="rect" id="node13" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a58a9719bf310e867c3ab567e860ad5de" title="Get Next Free Cluster." alt="" coords="309,508,461,549"/>
 <area shape="rect" id="node14" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a45ec1c0420c15a7b3e324abdac8c0bc6" title="Update FSINFO." alt="" coords="309,223,461,264"/>

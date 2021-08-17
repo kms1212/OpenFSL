@@ -1,13 +1,4 @@
 <map id="openFSL::FS_FAT32::FILE::read" name="openFSL::FS_FAT32::FILE::read">
-<area shape="rect" id="node1" title="Read file." alt="" coords="5,263,157,305"/>
-<area shape="rect" id="node2" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a59434200d27499047e3d46df75ac0f6e" title=" " alt="" coords="205,263,357,305"/>
-<area shape="rect" id="node3" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a7250fcdce6f1c08f66d763c7e4c395d2" title=" " alt="" coords="405,205,557,246"/>
-<area shape="rect" id="node5" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a9f18028119fe31d20cc8a5f8479ccbcc" title="BPB pointer getter." alt="" coords="855,15,1007,57"/>
-<area shape="rect" id="node7" href="$classopen_f_s_l_1_1_sector.html#a4216b770df1b0b98eafa60e3c5d84ea0" title="Data buffer getter." alt="" coords="613,271,799,297"/>
-<area shape="rect" id="node8" href="$classopen_f_s_l_1_1_file_system.html#af5d55b2ebf97e4c70d553ceea7de97e0" title=" " alt="" coords="628,322,784,363"/>
-<area shape="rect" id="node9" href="$classopen_f_s_l_1_1_disk_device.html#a6dde175530641e580e2059e61d7bc3fa" title=" " alt="" coords="627,387,785,429"/>
-<area shape="rect" id="node4" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#aa0bb9ca47f6694ec138628d3196cf32f" title=" " alt="" coords="605,74,807,115"/>
-<area shape="rect" id="node6" href="$classopen_f_s_l_1_1_file_system.html#ae3c9f59420f140e522e7b61504e4a9cd" title=" " alt="" coords="628,139,784,181"/>
-<area shape="rect" id="node10" href="$classopen_f_s_l_1_1_disk_device.html#af5b7aed1915b2a449d2c8a82a3524eb4" title=" " alt="" coords="627,205,785,246"/>
-<area shape="rect" id="node11" href="$classopen_f_s_l_1_1_scheduler.html#af27806c6029733c084950038733633bc" title=" " alt="" coords="857,205,1005,246"/>
+<area shape="rect" id="node1" title="Read file." alt="" coords="5,5,157,47"/>
+<area shape="rect" id="node2" href="$classopen_f_s_l_1_1_scheduler.html#af27806c6029733c084950038733633bc" title=" " alt="" coords="205,5,353,47"/>
 </map>

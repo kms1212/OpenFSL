@@ -111,56 +111,48 @@ $(document).ready(function(){initNavTree('fileinfo_8cpp_source.html',''); initRe
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespaceopen_f_s_l.html">openFSL</a>;</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a193a031e50a9771058113e3475b48baa">   14</a></span>&#160;<a class="code" href="structopen_f_s_l_1_1_f_s___f_a_t32_1_1_file_info.html">FS_FAT32::FileInfo</a> <a class="code" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a193a031e50a9771058113e3475b48baa">FS_FAT32::getFileInformation</a>(std::string path) {</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#ace77652809130392ed0d821d1deda36f">   14</a></span>&#160;<a class="code" href="structopen_f_s_l_1_1_f_s___f_a_t32_1_1_file_info.html">FS_FAT32::FileInfo</a> <a class="code" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#ace77652809130392ed0d821d1deda36f">FS_FAT32::getFileInformation</a>(std::string path, std::string filename) {</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    std::string tempPath = <a class="code" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#aa9d033b20a66827798d7f979e9c0e7a6">currentPath</a>;</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    uint32_t tempCluster = <a class="code" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a275fe7152ab687964bf4ca6b449e2dac">currentCluster</a>;</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    std::string filename_path = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="structopen_f_s_l_1_1_f_s___f_a_t32_1_1_file_info.html">FileInfo</a> ret;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; <a class="code" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a7421632dee11923f5e196e14a0e6c2d8">pathSeparator</a>.length(); i++)</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    {</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordflow">if</span> (path.find(<a class="code" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a7421632dee11923f5e196e14a0e6c2d8">pathSeparator</a>.at(i)) &lt; path.length()) {</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            <a class="code" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#adbfb9ea42ab7d3fbcc68b5d7fe9ee5fe">chdir</a>(path.substr(0, path.find_last_of(<a class="code" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a7421632dee11923f5e196e14a0e6c2d8">pathSeparator</a>)));</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            filename_path = path.substr(path.find_last_of(<a class="code" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a7421632dee11923f5e196e14a0e6c2d8">pathSeparator</a>) + 1, </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                path.length() - path.find_last_of(<a class="code" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a7421632dee11923f5e196e14a0e6c2d8">pathSeparator</a>) - 1);</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        }</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    }</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordflow">if</span> (filename_path == <span class="stringliteral">&quot;&quot;</span>)</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        filename_path = path;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp; c: filename_path) c = (char)toupper(c);</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    std::vector&lt;FileInfo&gt; buf;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#ab2a1c56a5fd6313f5fcaa47f46222e53">listDir</a>(&amp;buf);</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    std::string filename;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordflow">for</span> (uint32_t i = 0; i &lt; buf.size(); i++)</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    {</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        filename = buf[i].fileName;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp; c: filename) c = (char)toupper(c);;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keywordflow">if</span> (filename == filename_path)</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        {</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            ret = buf[i];</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        }</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    }</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#aa9d033b20a66827798d7f979e9c0e7a6">currentPath</a> = tempPath;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a275fe7152ab687964bf4ca6b449e2dac">currentCluster</a> = tempCluster;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordflow">return</span> ret;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;}</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordflow">if</span> (path != <span class="stringliteral">&quot;&quot;</span>)</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <a class="code" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#adbfb9ea42ab7d3fbcc68b5d7fe9ee5fe">chdir</a>(path);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    }</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="structopen_f_s_l_1_1_f_s___f_a_t32_1_1_file_info.html">FileInfo</a> ret;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp; c: filename) c = (char)toupper(c);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    std::vector&lt;FileInfo&gt; buf;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#ab2a1c56a5fd6313f5fcaa47f46222e53">listDir</a>(&amp;buf);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    std::string searchname;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordflow">for</span> (uint32_t i = 0; i &lt; buf.size(); i++)</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        searchname = buf[i].fileName;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp; c: searchname) c = (char)toupper(c);;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keywordflow">if</span> (filename == searchname)</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            ret = buf[i];</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        }</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#aa9d033b20a66827798d7f979e9c0e7a6">currentPath</a> = tempPath;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a275fe7152ab687964bf4ca6b449e2dac">currentCluster</a> = tempCluster;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordflow">return</span> ret;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="afs__fat32_8h_html"><div class="ttname"><a href="fs__fat32_8h.html">fs_fat32.h</a></div></div>
-<div class="ttc" id="aclassopen_f_s_l_1_1_f_s___f_a_t32_html_a193a031e50a9771058113e3475b48baa"><div class="ttname"><a href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a193a031e50a9771058113e3475b48baa">openFSL::FS_FAT32::getFileInformation</a></div><div class="ttdeci">FileInfo getFileInformation(std::string path)</div><div class="ttdoc">Get file information.</div><div class="ttdef"><b>Definition:</b> <a href="fileinfo_8cpp_source.html#l00014">fileinfo.cpp:14</a></div></div>
 <div class="ttc" id="aclassopen_f_s_l_1_1_f_s___f_a_t32_html_ab2a1c56a5fd6313f5fcaa47f46222e53"><div class="ttname"><a href="classopen_f_s_l_1_1_f_s___f_a_t32.html#ab2a1c56a5fd6313f5fcaa47f46222e53">openFSL::FS_FAT32::listDir</a></div><div class="ttdeci">std::vector&lt; FileInfo &gt; * listDir(std::vector&lt; FileInfo &gt; *buf, FileAttribute searchAttr=(FileAttribute)(FileAttribute::Archive|FileAttribute::Directory), std::string path=&quot;&quot;, uint32_t cluster=0xFFFFFFFF)</div><div class="ttdoc">Directory lister.</div><div class="ttdef"><b>Definition:</b> <a href="listdir_8cpp_source.html#l00014">listdir.cpp:14</a></div></div>
-<div class="ttc" id="aclassopen_f_s_l_1_1_f_s___f_a_t32_html_aa9d033b20a66827798d7f979e9c0e7a6"><div class="ttname"><a href="classopen_f_s_l_1_1_f_s___f_a_t32.html#aa9d033b20a66827798d7f979e9c0e7a6">openFSL::FS_FAT32::currentPath</a></div><div class="ttdeci">std::string currentPath</div><div class="ttdef"><b>Definition:</b> <a href="fs__fat32_8h_source.html#l00288">fs_fat32.h:288</a></div></div>
+<div class="ttc" id="aclassopen_f_s_l_1_1_f_s___f_a_t32_html_aa9d033b20a66827798d7f979e9c0e7a6"><div class="ttname"><a href="classopen_f_s_l_1_1_f_s___f_a_t32.html#aa9d033b20a66827798d7f979e9c0e7a6">openFSL::FS_FAT32::currentPath</a></div><div class="ttdeci">std::string currentPath</div><div class="ttdef"><b>Definition:</b> <a href="fs__fat32_8h_source.html#l00305">fs_fat32.h:305</a></div></div>
 <div class="ttc" id="anamespaceopen_f_s_l_html"><div class="ttname"><a href="namespaceopen_f_s_l.html">openFSL</a></div><div class="ttdef"><b>Definition:</b> <a href="fslutils_8cpp_source.html#l00014">fslutils.cpp:14</a></div></div>
 <div class="ttc" id="aclassopen_f_s_l_1_1_f_s___f_a_t32_html_adbfb9ea42ab7d3fbcc68b5d7fe9ee5fe"><div class="ttname"><a href="classopen_f_s_l_1_1_f_s___f_a_t32.html#adbfb9ea42ab7d3fbcc68b5d7fe9ee5fe">openFSL::FS_FAT32::chdir</a></div><div class="ttdeci">void chdir(std::string path, std::vector&lt; std::string &gt; *subdir=NULL, std::string tmpPath=&quot;&quot;, uint32_t tmpCluster=0)</div><div class="ttdoc">Change directory.</div><div class="ttdef"><b>Definition:</b> <a href="chdir_8cpp_source.html#l00014">chdir.cpp:14</a></div></div>
-<div class="ttc" id="aclassopen_f_s_l_1_1_f_s___f_a_t32_html_a7421632dee11923f5e196e14a0e6c2d8"><div class="ttname"><a href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a7421632dee11923f5e196e14a0e6c2d8">openFSL::FS_FAT32::pathSeparator</a></div><div class="ttdeci">std::string pathSeparator</div><div class="ttdef"><b>Definition:</b> <a href="fs__fat32_8h_source.html#l00286">fs_fat32.h:286</a></div></div>
-<div class="ttc" id="astructopen_f_s_l_1_1_f_s___f_a_t32_1_1_file_info_html"><div class="ttname"><a href="structopen_f_s_l_1_1_f_s___f_a_t32_1_1_file_info.html">openFSL::FS_FAT32::FileInfo</a></div><div class="ttdoc">FAT32 file information.</div><div class="ttdef"><b>Definition:</b> <a href="fs__fat32_8h_source.html#l00312">fs_fat32.h:312</a></div></div>
-<div class="ttc" id="aclassopen_f_s_l_1_1_f_s___f_a_t32_html_a275fe7152ab687964bf4ca6b449e2dac"><div class="ttname"><a href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a275fe7152ab687964bf4ca6b449e2dac">openFSL::FS_FAT32::currentCluster</a></div><div class="ttdeci">uint32_t currentCluster</div><div class="ttdef"><b>Definition:</b> <a href="fs__fat32_8h_source.html#l00290">fs_fat32.h:290</a></div></div>
+<div class="ttc" id="aclassopen_f_s_l_1_1_f_s___f_a_t32_html_ace77652809130392ed0d821d1deda36f"><div class="ttname"><a href="classopen_f_s_l_1_1_f_s___f_a_t32.html#ace77652809130392ed0d821d1deda36f">openFSL::FS_FAT32::getFileInformation</a></div><div class="ttdeci">FileInfo getFileInformation(std::string path, std::string filename)</div><div class="ttdoc">Get file information.</div><div class="ttdef"><b>Definition:</b> <a href="fileinfo_8cpp_source.html#l00014">fileinfo.cpp:14</a></div></div>
+<div class="ttc" id="astructopen_f_s_l_1_1_f_s___f_a_t32_1_1_file_info_html"><div class="ttname"><a href="structopen_f_s_l_1_1_f_s___f_a_t32_1_1_file_info.html">openFSL::FS_FAT32::FileInfo</a></div><div class="ttdoc">FAT32 file information.</div><div class="ttdef"><b>Definition:</b> <a href="fs__fat32_8h_source.html#l00329">fs_fat32.h:329</a></div></div>
+<div class="ttc" id="aclassopen_f_s_l_1_1_f_s___f_a_t32_html_a275fe7152ab687964bf4ca6b449e2dac"><div class="ttname"><a href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a275fe7152ab687964bf4ca6b449e2dac">openFSL::FS_FAT32::currentCluster</a></div><div class="ttdeci">uint32_t currentCluster</div><div class="ttdef"><b>Definition:</b> <a href="fs__fat32_8h_source.html#l00307">fs_fat32.h:307</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

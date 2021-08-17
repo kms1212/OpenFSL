@@ -11,7 +11,6 @@ var classopen_f_s_l_1_1_f_s___f_a_t32_1_1_thread =
     [ "listDirectory", "classopen_f_s_l_1_1_f_s___f_a_t32_1_1_thread.html#a839b67b793168f6e783d1de900847ad1", null ],
     [ "makeDirectory", "classopen_f_s_l_1_1_f_s___f_a_t32_1_1_thread.html#ae67990ce13995cbf7bd7aa6f765c1fa7", null ],
     [ "makeFile", "classopen_f_s_l_1_1_f_s___f_a_t32_1_1_thread.html#a13157437c4b203345edeaca4dae449d8", null ],
-    [ "openFile", "classopen_f_s_l_1_1_f_s___f_a_t32_1_1_thread.html#a20f313d6de65ed8f9d5a98cf0a82965e", null ],
     [ "removeDirectory", "classopen_f_s_l_1_1_f_s___f_a_t32_1_1_thread.html#a9ece340083f019a115fc6fa98dae03a7", null ],
     [ "removeFile", "classopen_f_s_l_1_1_f_s___f_a_t32_1_1_thread.html#aad6d82e0709d4fe5098e328ad7c06433", null ],
     [ "setEntryInfo", "classopen_f_s_l_1_1_f_s___f_a_t32_1_1_thread.html#abe0e4d808a136c15b07f871c31defdb3", null ],

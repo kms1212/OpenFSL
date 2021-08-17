@@ -1,5 +1,5 @@
 <map id="openFSL::FS_FAT32::chksumSFN" name="openFSL::FS_FAT32::chksumSFN">
-<area shape="rect" id="node1" title=" " alt="" coords="405,5,557,47"/>
-<area shape="rect" id="node2" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#aec8bf206b058944ac5c59f29b2b31393" title=" " alt="" coords="205,5,357,47"/>
-<area shape="rect" id="node3" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#add4dd1bff27f171cf7db674122fa3e41" title=" " alt="" coords="5,5,157,47"/>
+<area shape="rect" id="node1" title="Checksum." alt="" coords="405,5,557,47"/>
+<area shape="rect" id="node2" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#aec8bf206b058944ac5c59f29b2b31393" title="Create entry." alt="" coords="205,5,357,47"/>
+<area shape="rect" id="node3" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#add4dd1bff27f171cf7db674122fa3e41" title="Create directory." alt="" coords="5,5,157,47"/>
 </map>

@@ -4,6 +4,9 @@ var hierarchy =
     [ "openFSL::FS_FAT32::CacheEntry", "structopen_f_s_l_1_1_f_s___f_a_t32_1_1_cache_entry.html", null ],
     [ "openFSL::CHS", "structopen_f_s_l_1_1_c_h_s.html", null ],
     [ "openFSL::fsStructure::COMMAA55h", "structopen_f_s_l_1_1fs_structure_1_1_c_o_m_m_a_a55h.html", null ],
+    [ "openFSL::Container", "classopen_f_s_l_1_1_container.html", [
+      [ "openFSL::Sector", "classopen_f_s_l_1_1_sector.html", null ]
+    ] ],
     [ "openFSL::DiskDevice", "classopen_f_s_l_1_1_disk_device.html", null ],
     [ "openFSL::DiskDevice::DiskParameter", "structopen_f_s_l_1_1_disk_device_1_1_disk_parameter.html", null ],
     [ "openFSL::DiskStructure", "structopen_f_s_l_1_1_disk_structure.html", null ],
@@ -38,7 +41,6 @@ var hierarchy =
     [ "openFSL::TB_MBR::PartitionEntry", "structopen_f_s_l_1_1_t_b___m_b_r_1_1_partition_entry.html", null ],
     [ "openFSL::TB_MBR::PartitionTable", "structopen_f_s_l_1_1_t_b___m_b_r_1_1_partition_table.html", null ],
     [ "openFSL::Scheduler", "classopen_f_s_l_1_1_scheduler.html", null ],
-    [ "openFSL::Sector", "classopen_f_s_l_1_1_sector.html", null ],
     [ "openFSL::Scheduler::Task", "structopen_f_s_l_1_1_scheduler_1_1_task.html", null ],
     [ "openFSL::TB_MBR", "classopen_f_s_l_1_1_t_b___m_b_r.html", null ],
     [ "openFSL::FS_FAT32::Thread", "classopen_f_s_l_1_1_f_s___f_a_t32_1_1_thread.html", null ],
