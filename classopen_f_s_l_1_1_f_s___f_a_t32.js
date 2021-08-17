@@ -38,7 +38,6 @@ var classopen_f_s_l_1_1_f_s___f_a_t32 =
     [ "getCluster", "classopen_f_s_l_1_1_f_s___f_a_t32.html#af686d019883a7d5df7dd615b35e110bb", null ],
     [ "getFatArea", "classopen_f_s_l_1_1_f_s___f_a_t32.html#a020badcc08e734a1a5f5b868983ae70a", null ],
     [ "getFileInformation", "classopen_f_s_l_1_1_f_s___f_a_t32.html#ace77652809130392ed0d821d1deda36f", null ],
-    [ "getFsDiskDevice", "classopen_f_s_l_1_1_f_s___f_a_t32.html#a3c67e46c2665aa6934d8a0f1de7e5ae7", null ],
     [ "getFsScheduler", "classopen_f_s_l_1_1_f_s___f_a_t32.html#a40e860b250c845b2d7c1523b9253d71e", null ],
     [ "getLastCluster", "classopen_f_s_l_1_1_f_s___f_a_t32.html#a4937321ce083dd4031cdb719765d6ee5", null ],
     [ "getNextFreeCluster", "classopen_f_s_l_1_1_f_s___f_a_t32.html#a58a9719bf310e867c3ab567e860ad5de", null ],

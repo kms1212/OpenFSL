@@ -1,23 +1,23 @@
 <map id="openFSL::FS_FAT32::Thread" name="openFSL::FS_FAT32::Thread">
-<area shape="rect" id="node1" title=" " alt="" coords="825,1615,1001,1883"/>
-<area shape="rect" id="node2" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html" title="FAT32 imeplementation." alt="" coords="807,1035,1020,1552"/>
-<area shape="rect" id="node3" href="$classopen_f_s_l_1_1_file_system.html" title=" " alt="" coords="177,792,333,928"/>
-<area shape="rect" id="node4" title=" " alt="" coords="297,447,500,524"/>
-<area shape="rect" id="node5" href="$classopen_f_s_l_1_1_disk_device.html" title="Disk driver." alt="" coords="58,403,222,568"/>
-<area shape="rect" id="node6" href="$classopen_f_s_l_1_1_scheduler.html" title=" " alt="" coords="827,189,975,296"/>
-<area shape="rect" id="node7" title=" " alt="" coords="761,13,903,90"/>
-<area shape="rect" id="node8" title=" " alt="" coords="928,13,992,90"/>
-<area shape="rect" id="node9" title=" " alt="" coords="507,13,567,90"/>
-<area shape="rect" id="node11" href="$structopen_f_s_l_1_1_disk_device_1_1_disk_parameter.html" title="Disk Parameter." alt="" coords="97,197,255,289"/>
-<area shape="rect" id="node17" href="$classopen_f_s_l_1_1_sector.html" title="Sector buffer." alt="" coords="463,777,630,943"/>
-<area shape="rect" id="node18" href="$classopen_f_s_l_1_1_container.html" title="Data container." alt="" coords="587,410,733,561"/>
-<area shape="rect" id="node10" title=" " alt="" coords="1016,5,1219,97"/>
-<area shape="rect" id="node12" title=" " alt="" coords="14,204,53,281"/>
-<area shape="rect" id="node13" href="$structopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_s_i_n_f_o_sector.html" title="FAT32 FSINFO structure." alt="" coords="1039,814,1191,906"/>
-<area shape="rect" id="node14" title=" " alt="" coords="899,447,973,524"/>
-<area shape="rect" id="node20" href="$structopen_f_s_l_1_1_f_s___f_a_t32_1_1_b_p_b_sector.html" title="FAT32 BIOS Parameter Block." alt="" coords="1266,792,1435,928"/>
-<area shape="rect" id="node15" title=" " alt="" coords="1397,204,1464,281"/>
-<area shape="rect" id="node16" title=" " alt="" coords="706,821,865,899"/>
-<area shape="rect" id="node19" title=" " alt="" coords="1460,821,1519,899"/>
-<area shape="rect" id="node21" title=" " alt="" coords="1576,447,1651,524"/>
+<area shape="rect" id="node1" title=" " alt="" coords="832,1600,1008,1868"/>
+<area shape="rect" id="node2" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html" title="FAT32 imeplementation." alt="" coords="813,1035,1027,1537"/>
+<area shape="rect" id="node3" href="$classopen_f_s_l_1_1_file_system.html" title=" " alt="" coords="183,792,339,928"/>
+<area shape="rect" id="node4" title=" " alt="" coords="304,447,507,524"/>
+<area shape="rect" id="node5" href="$classopen_f_s_l_1_1_disk_device.html" title="Disk driver." alt="" coords="65,403,229,568"/>
+<area shape="rect" id="node6" href="$classopen_f_s_l_1_1_scheduler.html" title=" " alt="" coords="834,189,982,296"/>
+<area shape="rect" id="node7" title=" " alt="" coords="767,13,910,90"/>
+<area shape="rect" id="node8" title=" " alt="" coords="935,13,999,90"/>
+<area shape="rect" id="node9" title=" " alt="" coords="514,13,574,90"/>
+<area shape="rect" id="node11" href="$structopen_f_s_l_1_1_disk_device_1_1_disk_parameter.html" title="Disk Parameter." alt="" coords="78,197,237,289"/>
+<area shape="rect" id="node17" href="$classopen_f_s_l_1_1_sector.html" title="Sector buffer." alt="" coords="470,777,637,943"/>
+<area shape="rect" id="node18" href="$classopen_f_s_l_1_1_container.html" title="Data container." alt="" coords="593,410,740,561"/>
+<area shape="rect" id="node10" title=" " alt="" coords="1023,5,1225,97"/>
+<area shape="rect" id="node12" title=" " alt="" coords="15,204,54,281"/>
+<area shape="rect" id="node13" href="$structopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_s_i_n_f_o_sector.html" title="FAT32 FSINFO structure." alt="" coords="1045,814,1197,906"/>
+<area shape="rect" id="node14" title=" " alt="" coords="905,447,980,524"/>
+<area shape="rect" id="node20" href="$structopen_f_s_l_1_1_f_s___f_a_t32_1_1_b_p_b_sector.html" title="FAT32 BIOS Parameter Block." alt="" coords="1273,792,1442,928"/>
+<area shape="rect" id="node15" title=" " alt="" coords="1404,204,1471,281"/>
+<area shape="rect" id="node16" title=" " alt="" coords="713,821,871,899"/>
+<area shape="rect" id="node19" title=" " alt="" coords="1467,821,1525,899"/>
+<area shape="rect" id="node21" title=" " alt="" coords="1583,447,1657,524"/>
 </map>
