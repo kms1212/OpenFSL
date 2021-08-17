@@ -1,6 +1,6 @@
 var dir_a68dfbacda4050d78fe6a3edf681c9b7 =
 [
-    [ "exception.h", "fs_2fat32_2include_2openfsl_2fat32_2exception_8h.html", [
+    [ "fat32_exception.h", "fat32__exception_8h.html", [
       [ "EntryListTooLongException", "classopen_f_s_l_1_1_entry_list_too_long_exception.html", "classopen_f_s_l_1_1_entry_list_too_long_exception" ],
       [ "InvalidEntryException", "classopen_f_s_l_1_1_invalid_entry_exception.html", "classopen_f_s_l_1_1_invalid_entry_exception" ],
       [ "BadClusterException", "classopen_f_s_l_1_1_bad_cluster_exception.html", "classopen_f_s_l_1_1_bad_cluster_exception" ],

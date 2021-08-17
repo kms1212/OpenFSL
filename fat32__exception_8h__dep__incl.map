@@ -1,5 +1,5 @@
-<map id="fs/fat32/include/openfsl/fat32/exception.h" name="fs/fat32/include/openfsl/fat32/exception.h">
-<area shape="rect" id="node1" title=" " alt="" coords="4036,5,4211,47"/>
+<map id="fs/fat32/include/openfsl/fat32/fat32_exception.h" name="fs/fat32/include/openfsl/fat32/fat32_exception.h">
+<area shape="rect" id="node1" title=" " alt="" coords="4033,5,4214,47"/>
 <area shape="rect" id="node2" href="$fs__fat32_8h.html" title=" " alt="" coords="4036,95,4211,136"/>
 <area shape="rect" id="node3" href="$bpb_8cpp.html" title=" " alt="" coords="5,191,156,218"/>
 <area shape="rect" id="node4" href="$charcoding_8cpp.html" title=" " alt="" coords="181,191,378,218"/>

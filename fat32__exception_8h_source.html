@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>OpenFSL: fs/fat32/include/openfsl/fat32/exception.h Source File</title>
+<title>OpenFSL: fs/fat32/include/openfsl/fat32/fat32_exception.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -75,7 +75,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('fs_2fat32_2include_2openfsl_2fat32_2exception_8h_source.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('fat32__exception_8h_source.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -95,10 +95,10 @@ $(document).ready(function(){initNavTree('fs_2fat32_2include_2openfsl_2fat32_2ex
 
 <div class="header">
   <div class="headertitle">
-<div class="title">exception.h</div>  </div>
+<div class="title">fat32_exception.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="fs_2fat32_2include_2openfsl_2fat32_2exception_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* Copyright (c) 2021. kms1212(Min Su Kwon)</span></div>
+<a href="fat32__exception_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* Copyright (c) 2021. kms1212(Min Su Kwon)</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">This file is part of OpenFSL.</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">OpenFSL and its source code is published over BSD 3-Clause License.</span></div>
@@ -111,7 +111,7 @@ $(document).ready(function(){initNavTree('fs_2fat32_2include_2openfsl_2fat32_2ex
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#define __OPENFSL_FAT32_EXCEPTION_H__</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;exception&gt;</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="include_2openfsl_2exception_8h.html">openfsl/exception.h</a>&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="exception_8h.html">openfsl/exception.h</a>&gt;</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceopen_f_s_l.html">openFSL</a> {</div>
 <div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classopen_f_s_l_1_1_entry_list_too_long_exception.html">   17</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classopen_f_s_l_1_1_entry_list_too_long_exception.html">EntryListTooLongException</a> : <span class="keyword">public</span> std::exception</div>
@@ -163,22 +163,22 @@ $(document).ready(function(){initNavTree('fs_2fat32_2include_2openfsl_2fat32_2ex
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclassopen_f_s_l_1_1_file_is_read_only_exception_html"><div class="ttname"><a href="classopen_f_s_l_1_1_file_is_read_only_exception.html">openFSL::FileIsReadOnlyException</a></div><div class="ttdef"><b>Definition:</b> <a href="fs_2fat32_2include_2openfsl_2fat32_2exception_8h_source.html#l00044">exception.h:44</a></div></div>
-<div class="ttc" id="aclassopen_f_s_l_1_1_invalid_entry_exception_html_a1406a4fe3d791791fc3c9c5e8b117611"><div class="ttname"><a href="classopen_f_s_l_1_1_invalid_entry_exception.html#a1406a4fe3d791791fc3c9c5e8b117611">openFSL::InvalidEntryException::what</a></div><div class="ttdeci">const char * what() const noexcept override</div><div class="ttdef"><b>Definition:</b> <a href="fs_2fat32_2include_2openfsl_2fat32_2exception_8h_source.html#l00029">exception.h:29</a></div></div>
-<div class="ttc" id="ainclude_2openfsl_2exception_8h_html"><div class="ttname"><a href="include_2openfsl_2exception_8h.html">exception.h</a></div></div>
-<div class="ttc" id="aclassopen_f_s_l_1_1_entry_list_too_long_exception_html_a0c9fe46cfbdf685812e7eaf733fb9082"><div class="ttname"><a href="classopen_f_s_l_1_1_entry_list_too_long_exception.html#a0c9fe46cfbdf685812e7eaf733fb9082">openFSL::EntryListTooLongException::what</a></div><div class="ttdeci">const char * what() const noexcept override</div><div class="ttdef"><b>Definition:</b> <a href="fs_2fat32_2include_2openfsl_2fat32_2exception_8h_source.html#l00020">exception.h:20</a></div></div>
-<div class="ttc" id="aclassopen_f_s_l_1_1_cannot_allocate_cluster_exception_html_a1ad224917479a4c03790c0dbacc22039"><div class="ttname"><a href="classopen_f_s_l_1_1_cannot_allocate_cluster_exception.html#a1ad224917479a4c03790c0dbacc22039">openFSL::CannotAllocateClusterException::what</a></div><div class="ttdeci">const char * what() const noexcept override</div><div class="ttdef"><b>Definition:</b> <a href="fs_2fat32_2include_2openfsl_2fat32_2exception_8h_source.html#l00056">exception.h:56</a></div></div>
-<div class="ttc" id="aclassopen_f_s_l_1_1_entry_list_too_long_exception_html"><div class="ttname"><a href="classopen_f_s_l_1_1_entry_list_too_long_exception.html">openFSL::EntryListTooLongException</a></div><div class="ttdef"><b>Definition:</b> <a href="fs_2fat32_2include_2openfsl_2fat32_2exception_8h_source.html#l00017">exception.h:17</a></div></div>
-<div class="ttc" id="aclassopen_f_s_l_1_1_invalid_entry_exception_html"><div class="ttname"><a href="classopen_f_s_l_1_1_invalid_entry_exception.html">openFSL::InvalidEntryException</a></div><div class="ttdef"><b>Definition:</b> <a href="fs_2fat32_2include_2openfsl_2fat32_2exception_8h_source.html#l00026">exception.h:26</a></div></div>
-<div class="ttc" id="aclassopen_f_s_l_1_1_cannot_allocate_cluster_exception_html"><div class="ttname"><a href="classopen_f_s_l_1_1_cannot_allocate_cluster_exception.html">openFSL::CannotAllocateClusterException</a></div><div class="ttdef"><b>Definition:</b> <a href="fs_2fat32_2include_2openfsl_2fat32_2exception_8h_source.html#l00053">exception.h:53</a></div></div>
+<div class="ttc" id="aclassopen_f_s_l_1_1_file_is_read_only_exception_html"><div class="ttname"><a href="classopen_f_s_l_1_1_file_is_read_only_exception.html">openFSL::FileIsReadOnlyException</a></div><div class="ttdef"><b>Definition:</b> <a href="fat32__exception_8h_source.html#l00044">fat32_exception.h:44</a></div></div>
+<div class="ttc" id="aclassopen_f_s_l_1_1_invalid_entry_exception_html_a1406a4fe3d791791fc3c9c5e8b117611"><div class="ttname"><a href="classopen_f_s_l_1_1_invalid_entry_exception.html#a1406a4fe3d791791fc3c9c5e8b117611">openFSL::InvalidEntryException::what</a></div><div class="ttdeci">const char * what() const noexcept override</div><div class="ttdef"><b>Definition:</b> <a href="fat32__exception_8h_source.html#l00029">fat32_exception.h:29</a></div></div>
+<div class="ttc" id="aclassopen_f_s_l_1_1_entry_list_too_long_exception_html_a0c9fe46cfbdf685812e7eaf733fb9082"><div class="ttname"><a href="classopen_f_s_l_1_1_entry_list_too_long_exception.html#a0c9fe46cfbdf685812e7eaf733fb9082">openFSL::EntryListTooLongException::what</a></div><div class="ttdeci">const char * what() const noexcept override</div><div class="ttdef"><b>Definition:</b> <a href="fat32__exception_8h_source.html#l00020">fat32_exception.h:20</a></div></div>
+<div class="ttc" id="aclassopen_f_s_l_1_1_cannot_allocate_cluster_exception_html_a1ad224917479a4c03790c0dbacc22039"><div class="ttname"><a href="classopen_f_s_l_1_1_cannot_allocate_cluster_exception.html#a1ad224917479a4c03790c0dbacc22039">openFSL::CannotAllocateClusterException::what</a></div><div class="ttdeci">const char * what() const noexcept override</div><div class="ttdef"><b>Definition:</b> <a href="fat32__exception_8h_source.html#l00056">fat32_exception.h:56</a></div></div>
+<div class="ttc" id="aclassopen_f_s_l_1_1_entry_list_too_long_exception_html"><div class="ttname"><a href="classopen_f_s_l_1_1_entry_list_too_long_exception.html">openFSL::EntryListTooLongException</a></div><div class="ttdef"><b>Definition:</b> <a href="fat32__exception_8h_source.html#l00017">fat32_exception.h:17</a></div></div>
+<div class="ttc" id="aclassopen_f_s_l_1_1_invalid_entry_exception_html"><div class="ttname"><a href="classopen_f_s_l_1_1_invalid_entry_exception.html">openFSL::InvalidEntryException</a></div><div class="ttdef"><b>Definition:</b> <a href="fat32__exception_8h_source.html#l00026">fat32_exception.h:26</a></div></div>
+<div class="ttc" id="aclassopen_f_s_l_1_1_cannot_allocate_cluster_exception_html"><div class="ttname"><a href="classopen_f_s_l_1_1_cannot_allocate_cluster_exception.html">openFSL::CannotAllocateClusterException</a></div><div class="ttdef"><b>Definition:</b> <a href="fat32__exception_8h_source.html#l00053">fat32_exception.h:53</a></div></div>
 <div class="ttc" id="anamespaceopen_f_s_l_html"><div class="ttname"><a href="namespaceopen_f_s_l.html">openFSL</a></div><div class="ttdef"><b>Definition:</b> <a href="fslutils_8cpp_source.html#l00014">fslutils.cpp:14</a></div></div>
-<div class="ttc" id="aclassopen_f_s_l_1_1_bad_cluster_exception_html_aca8857e07c88ed28af145e84b61a662d"><div class="ttname"><a href="classopen_f_s_l_1_1_bad_cluster_exception.html#aca8857e07c88ed28af145e84b61a662d">openFSL::BadClusterException::what</a></div><div class="ttdeci">const char * what() const noexcept override</div><div class="ttdef"><b>Definition:</b> <a href="fs_2fat32_2include_2openfsl_2fat32_2exception_8h_source.html#l00038">exception.h:38</a></div></div>
-<div class="ttc" id="aclassopen_f_s_l_1_1_bad_cluster_exception_html"><div class="ttname"><a href="classopen_f_s_l_1_1_bad_cluster_exception.html">openFSL::BadClusterException</a></div><div class="ttdef"><b>Definition:</b> <a href="fs_2fat32_2include_2openfsl_2fat32_2exception_8h_source.html#l00035">exception.h:35</a></div></div>
-<div class="ttc" id="aclassopen_f_s_l_1_1_file_is_read_only_exception_html_ab09beeaf6cb5068a7b4a382703aba62d"><div class="ttname"><a href="classopen_f_s_l_1_1_file_is_read_only_exception.html#ab09beeaf6cb5068a7b4a382703aba62d">openFSL::FileIsReadOnlyException::what</a></div><div class="ttdeci">const char * what() const noexcept override</div><div class="ttdef"><b>Definition:</b> <a href="fs_2fat32_2include_2openfsl_2fat32_2exception_8h_source.html#l00047">exception.h:47</a></div></div>
+<div class="ttc" id="aclassopen_f_s_l_1_1_bad_cluster_exception_html_aca8857e07c88ed28af145e84b61a662d"><div class="ttname"><a href="classopen_f_s_l_1_1_bad_cluster_exception.html#aca8857e07c88ed28af145e84b61a662d">openFSL::BadClusterException::what</a></div><div class="ttdeci">const char * what() const noexcept override</div><div class="ttdef"><b>Definition:</b> <a href="fat32__exception_8h_source.html#l00038">fat32_exception.h:38</a></div></div>
+<div class="ttc" id="aexception_8h_html"><div class="ttname"><a href="exception_8h.html">exception.h</a></div></div>
+<div class="ttc" id="aclassopen_f_s_l_1_1_bad_cluster_exception_html"><div class="ttname"><a href="classopen_f_s_l_1_1_bad_cluster_exception.html">openFSL::BadClusterException</a></div><div class="ttdef"><b>Definition:</b> <a href="fat32__exception_8h_source.html#l00035">fat32_exception.h:35</a></div></div>
+<div class="ttc" id="aclassopen_f_s_l_1_1_file_is_read_only_exception_html_ab09beeaf6cb5068a7b4a382703aba62d"><div class="ttname"><a href="classopen_f_s_l_1_1_file_is_read_only_exception.html#ab09beeaf6cb5068a7b4a382703aba62d">openFSL::FileIsReadOnlyException::what</a></div><div class="ttdeci">const char * what() const noexcept override</div><div class="ttdef"><b>Definition:</b> <a href="fat32__exception_8h_source.html#l00047">fat32_exception.h:47</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_97b3d2b63ac216821c2d7a22ee0ab2b0.html">fs</a></li><li class="navelem"><a class="el" href="dir_5bb0d8727a6eaf81f8f318c34e708012.html">fat32</a></li><li class="navelem"><a class="el" href="dir_8693a69599711078826eba57daf6bd9b.html">include</a></li><li class="navelem"><a class="el" href="dir_df7bbba867fd9ebd6751e83d35a98a92.html">openfsl</a></li><li class="navelem"><a class="el" href="dir_a68dfbacda4050d78fe6a3edf681c9b7.html">fat32</a></li><li class="navelem"><a class="el" href="fs_2fat32_2include_2openfsl_2fat32_2exception_8h.html">exception.h</a></li>
+    <li class="navelem"><a class="el" href="dir_97b3d2b63ac216821c2d7a22ee0ab2b0.html">fs</a></li><li class="navelem"><a class="el" href="dir_5bb0d8727a6eaf81f8f318c34e708012.html">fat32</a></li><li class="navelem"><a class="el" href="dir_8693a69599711078826eba57daf6bd9b.html">include</a></li><li class="navelem"><a class="el" href="dir_df7bbba867fd9ebd6751e83d35a98a92.html">openfsl</a></li><li class="navelem"><a class="el" href="dir_a68dfbacda4050d78fe6a3edf681c9b7.html">fat32</a></li><li class="navelem"><a class="el" href="fat32__exception_8h.html">fat32_exception.h</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>

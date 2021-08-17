@@ -1,14 +1,14 @@
 <map id="include/openfsl/exception.h" name="include/openfsl/exception.h">
-<area shape="rect" id="node1" title=" " alt="" coords="3857,5,4059,32"/>
-<area shape="rect" id="node2" href="$diskdevice_8h.html" title=" " alt="" coords="4163,87,4369,114"/>
-<area shape="rect" id="node6" href="$mbr_8h.html" title=" " alt="" coords="4038,319,4201,345"/>
-<area shape="rect" id="node52" href="$fs_2fat32_2include_2openfsl_2fat32_2exception_8h.html" title=" " alt="" coords="3745,80,3920,121"/>
-<area shape="rect" id="node3" href="$diskdevice_8cpp.html" title=" " alt="" coords="3996,169,4139,196"/>
-<area shape="rect" id="node4" href="$detectstruct_8h.html" title=" " alt="" coords="4212,244,4427,271"/>
-<area shape="rect" id="node8" href="$openfsl_8h.html" title=" " alt="" coords="4321,393,4507,420"/>
-<area shape="rect" id="node50" href="$filesystem_8h.html" title=" " alt="" coords="4163,169,4369,196"/>
-<area shape="rect" id="node5" href="$detectstruct_8cpp.html" title=" " alt="" coords="4225,319,4376,345"/>
-<area shape="rect" id="node7" href="$mbr_8cpp.html" title=" " alt="" coords="4071,393,4168,420"/>
+<area shape="rect" id="node1" title=" " alt="" coords="3859,5,4060,32"/>
+<area shape="rect" id="node2" href="$diskdevice_8h.html" title=" " alt="" coords="4164,87,4371,114"/>
+<area shape="rect" id="node6" href="$mbr_8h.html" title=" " alt="" coords="4039,319,4202,345"/>
+<area shape="rect" id="node52" href="$fat32__exception_8h.html" title=" " alt="" coords="3741,80,3922,121"/>
+<area shape="rect" id="node3" href="$diskdevice_8cpp.html" title=" " alt="" coords="3997,169,4140,196"/>
+<area shape="rect" id="node4" href="$detectstruct_8h.html" title=" " alt="" coords="4213,244,4428,271"/>
+<area shape="rect" id="node8" href="$openfsl_8h.html" title=" " alt="" coords="4323,393,4508,420"/>
+<area shape="rect" id="node50" href="$filesystem_8h.html" title=" " alt="" coords="4165,169,4370,196"/>
+<area shape="rect" id="node5" href="$detectstruct_8cpp.html" title=" " alt="" coords="4227,319,4377,345"/>
+<area shape="rect" id="node7" href="$mbr_8cpp.html" title=" " alt="" coords="4072,393,4169,420"/>
 <area shape="rect" id="node9" href="$fs__fat32_8h.html" title=" " alt="" coords="4036,468,4211,509"/>
 <area shape="rect" id="node10" href="$bpb_8cpp.html" title=" " alt="" coords="5,565,156,591"/>
 <area shape="rect" id="node11" href="$charcoding_8cpp.html" title=" " alt="" coords="181,565,378,591"/>
@@ -50,5 +50,5 @@
 <area shape="rect" id="node47" href="$thread__entry_8cpp.html" title=" " alt="" coords="7578,557,7719,599"/>
 <area shape="rect" id="node48" href="$thread__file_8cpp.html" title=" " alt="" coords="7743,557,7885,599"/>
 <area shape="rect" id="node49" href="$thread__volume_8cpp.html" title=" " alt="" coords="7909,557,8050,599"/>
-<area shape="rect" id="node51" href="$filesystem_8cpp.html" title=" " alt="" coords="3996,244,4136,271"/>
+<area shape="rect" id="node51" href="$filesystem_8cpp.html" title=" " alt="" coords="3997,244,4137,271"/>
 </map>
