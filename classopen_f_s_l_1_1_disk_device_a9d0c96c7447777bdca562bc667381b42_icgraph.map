@@ -1,20 +1,22 @@
 <map id="openFSL::DiskDevice::readDisk" name="openFSL::DiskDevice::readDisk">
-<area shape="rect" id="node1" title=" " alt="" coords="1351,355,1509,396"/>
-<area shape="rect" id="node2" href="$namespaceopen_f_s_l.html#a6062bcbee7520af93a42dff7e430a429" title=" " alt="" coords="839,282,1052,309"/>
-<area shape="rect" id="node3" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a7250fcdce6f1c08f66d763c7e4c395d2" title=" " alt="" coords="1125,384,1277,425"/>
-<area shape="rect" id="node17" href="$classopen_f_s_l_1_1_t_b___m_b_r.html#ae327afc96fc836e6a1663f1a486cdb2d" title=" " alt="" coords="1100,333,1303,359"/>
-<area shape="rect" id="node18" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#af566a65b037158e7d8e881ac508b8a40" title="FS_FAT32 intializer." alt="" coords="1125,449,1277,491"/>
-<area shape="rect" id="node4" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a59434200d27499047e3d46df75ac0f6e" title=" " alt="" coords="869,333,1021,375"/>
-<area shape="rect" id="node13" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a4f8aced2c8c2da248fee528064a5e24e" title="Remove entry." alt="" coords="223,403,375,444"/>
-<area shape="rect" id="node16" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a58dbf6545f673324445c70a51ac18fd8" title=" " alt="" coords="439,392,591,433"/>
-<area shape="rect" id="node5" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#ab2a1c56a5fd6313f5fcaa47f46222e53" title="Directory lister." alt="" coords="639,283,791,324"/>
-<area shape="rect" id="node6" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#adbfb9ea42ab7d3fbcc68b5d7fe9ee5fe" title="Change directory." alt="" coords="439,221,591,263"/>
-<area shape="rect" id="node8" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#aec8bf206b058944ac5c59f29b2b31393" title="Create entry." alt="" coords="223,285,375,327"/>
-<area shape="rect" id="node10" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#ace77652809130392ed0d821d1deda36f" title="Get file information." alt="" coords="223,37,375,79"/>
-<area shape="rect" id="node14" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a71a80ab5ad06a1debcb1f8fda55870be" title="Remove directory." alt="" coords="7,360,159,401"/>
-<area shape="rect" id="node7" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_thread.html#ace995f3dffb28ce95a1c10fcbbb0ca9c" title=" " alt="" coords="208,220,391,261"/>
-<area shape="rect" id="node9" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#add4dd1bff27f171cf7db674122fa3e41" title="Create directory." alt="" coords="7,269,159,311"/>
-<area shape="rect" id="node15" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_thread.html#a99713826abd25342e7c25c49158b7668" title=" " alt="" coords="223,155,375,196"/>
-<area shape="rect" id="node11" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_thread.html#ac1923cf4d853606024ac788d55185754" title=" " alt="" coords="5,5,160,47"/>
-<area shape="rect" id="node12" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_i_l_e.html#a17c72a1c021aabc125b245da010b228a" title=" " alt="" coords="7,71,159,112"/>
+<area shape="rect" id="node1" title=" " alt="" coords="1551,449,1709,491"/>
+<area shape="rect" id="node2" href="$namespaceopen_f_s_l.html#a6062bcbee7520af93a42dff7e430a429" title=" " alt="" coords="1039,377,1252,403"/>
+<area shape="rect" id="node3" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#aacb457ea5d8202a670c99cf95c3f13de" title=" " alt="" coords="1325,479,1477,520"/>
+<area shape="rect" id="node19" href="$classopen_f_s_l_1_1_t_b___m_b_r.html#a1001101393d346b1c22c278accbca577" title=" " alt="" coords="1300,427,1503,454"/>
+<area shape="rect" id="node20" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#aca79ddbddb1c9c1ccde9d15bb7d11159" title="FS_FAT32 intializer." alt="" coords="1325,544,1477,585"/>
+<area shape="rect" id="node4" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a8059886547a26e1901667927a11f87dd" title=" " alt="" coords="1069,428,1221,469"/>
+<area shape="rect" id="node15" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a9ecaecf04ce55f0ba28e319df102ec0c" title="Remove entry." alt="" coords="207,428,359,469"/>
+<area shape="rect" id="node18" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#aa2bbdaae9b624bb021dec7972ba1d505" title=" " alt="" coords="423,487,575,528"/>
+<area shape="rect" id="node5" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a074c3927605d847ed25bcda7878d8f69" title=" " alt="" coords="839,272,991,313"/>
+<area shape="rect" id="node17" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_i_l_e.html#a9ed90fc07a85e71b64c8c51cab839c76" title="Read file." alt="" coords="839,428,991,469"/>
+<area shape="rect" id="node6" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#ad5dd6f60a83f74b45ba7d557023a5890" title="Change directory." alt="" coords="639,272,791,313"/>
+<area shape="rect" id="node10" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#ace77652809130392ed0d821d1deda36f" title="Get file information." alt="" coords="423,71,575,112"/>
+<area shape="rect" id="node13" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#ab2a1c56a5fd6313f5fcaa47f46222e53" title="Directory lister." alt="" coords="423,369,575,411"/>
+<area shape="rect" id="node7" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_thread.html#ace995f3dffb28ce95a1c10fcbbb0ca9c" title=" " alt="" coords="408,304,591,345"/>
+<area shape="rect" id="node8" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#ab528f2bb95e6c6aa9d45797fac128f28" title="Create entry." alt="" coords="207,295,359,336"/>
+<area shape="rect" id="node9" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#abd0df824bb8c72c3b9d22e8eacdb4f43" title="Create directory." alt="" coords="5,287,157,328"/>
+<area shape="rect" id="node16" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_thread.html#a99713826abd25342e7c25c49158b7668" title=" " alt="" coords="423,239,575,280"/>
+<area shape="rect" id="node11" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_thread.html#ac1923cf4d853606024ac788d55185754" title=" " alt="" coords="205,5,360,47"/>
+<area shape="rect" id="node12" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_i_l_e.html#a17c72a1c021aabc125b245da010b228a" title=" " alt="" coords="207,71,359,112"/>
+<area shape="rect" id="node14" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#af9d3dca363a376898362648d3b65e9a0" title="Remove directory." alt="" coords="5,377,157,419"/>
 </map>

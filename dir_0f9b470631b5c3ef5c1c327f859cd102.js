@@ -16,6 +16,7 @@ var dir_0f9b470631b5c3ef5c1c327f859cd102 =
     [ "file_tell.cpp", "file__tell_8cpp.html", null ],
     [ "file_write.cpp", "file__write_8cpp.html", null ],
     [ "fileinfo.cpp", "fileinfo_8cpp.html", null ],
+    [ "foreachentry.cpp", "foreachentry_8cpp.html", null ],
     [ "fsinfo.cpp", "fsinfo_8cpp.html", null ],
     [ "getter_setter.cpp", "getter__setter_8cpp.html", null ],
     [ "initialize.cpp", "initialize_8cpp.html", null ],
@@ -39,5 +40,6 @@ var dir_0f9b470631b5c3ef5c1c327f859cd102 =
     [ "thread_directory.cpp", "thread__directory_8cpp.html", null ],
     [ "thread_entry.cpp", "thread__entry_8cpp.html", null ],
     [ "thread_file.cpp", "thread__file_8cpp.html", null ],
-    [ "thread_volume.cpp", "thread__volume_8cpp.html", null ]
+    [ "thread_volume.cpp", "thread__volume_8cpp.html", null ],
+    [ "time.cpp", "time_8cpp.html", null ]
 ];

@@ -115,14 +115,16 @@ Collaboration diagram for openFSL::DiskDevice:</div>
 <div class="dyncontent">
 <div class="center"><img src="classopen_f_s_l_1_1_disk_device__coll__graph.png" border="0" usemap="#open_f_s_l_1_1_disk_device_coll__map" alt="Collaboration graph"/></div>
 <map name="open_f_s_l_1_1_disk_device_coll__map" id="open_f_s_l_1_1_disk_device_coll__map">
-<area shape="rect" title="Disk driver." alt="" coords="235,403,399,568"/>
+<area shape="rect" title="Disk driver." alt="" coords="397,373,561,539"/>
 <area shape="rect" href="classopen_f_s_l_1_1_scheduler.html" title=" " alt="" coords="243,189,391,296"/>
 <area shape="rect" title=" " alt="" coords="576,13,719,90"/>
 <area shape="rect" title=" " alt="" coords="261,13,325,90"/>
 <area shape="rect" title=" " alt="" coords="75,13,135,90"/>
 <area shape="rect" href="structopen_f_s_l_1_1_disk_device_1_1_disk_parameter.html" title="Disk Parameter." alt="" coords="5,197,164,289"/>
 <area shape="rect" title=" " alt="" coords="349,5,551,97"/>
-<area shape="rect" title=" " alt="" coords="415,204,453,281"/>
+<area shape="rect" title=" " alt="" coords="415,204,543,281"/>
+<area shape="rect" title=" " alt="" coords="568,189,735,296"/>
+<area shape="rect" title=" " alt="" coords="759,189,949,296"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -160,18 +162,18 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a239f95cf3d55506c45caf4aa3306295a"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopen_f_s_l_1_1_disk_device.html#a239f95cf3d55506c45caf4aa3306295a">open</a> )() = NULL</td></tr>
-<tr class="memdesc:a239f95cf3d55506c45caf4aa3306295a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disk open function.  <a href="classopen_f_s_l_1_1_disk_device.html#a239f95cf3d55506c45caf4aa3306295a">More...</a><br /></td></tr>
-<tr class="separator:a239f95cf3d55506c45caf4aa3306295a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7e9a3f86d91f699942a114ada11212c4"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopen_f_s_l_1_1_disk_device.html#a7e9a3f86d91f699942a114ada11212c4">read</a> )(<a class="el" href="classopen_f_s_l_1_1_disk_device.html">DiskDevice</a> *dd, uint8_t *dest, size_t lba, size_t size) = NULL</td></tr>
-<tr class="memdesc:a7e9a3f86d91f699942a114ada11212c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disk read function.  <a href="classopen_f_s_l_1_1_disk_device.html#a7e9a3f86d91f699942a114ada11212c4">More...</a><br /></td></tr>
-<tr class="separator:a7e9a3f86d91f699942a114ada11212c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a66c893145435415e77c48167169f7dc9"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopen_f_s_l_1_1_disk_device.html#a66c893145435415e77c48167169f7dc9">write</a> )(<a class="el" href="classopen_f_s_l_1_1_disk_device.html">DiskDevice</a> *dd, const uint8_t *src, size_t lba, size_t size) = NULL</td></tr>
-<tr class="memdesc:a66c893145435415e77c48167169f7dc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disk write function.  <a href="classopen_f_s_l_1_1_disk_device.html#a66c893145435415e77c48167169f7dc9">More...</a><br /></td></tr>
-<tr class="separator:a66c893145435415e77c48167169f7dc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad442994336ed6da38e713907ab4d7487"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopen_f_s_l_1_1_disk_device.html#ad442994336ed6da38e713907ab4d7487">close</a> )() = NULL</td></tr>
-<tr class="memdesc:ad442994336ed6da38e713907ab4d7487"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disk close function.  <a href="classopen_f_s_l_1_1_disk_device.html#ad442994336ed6da38e713907ab4d7487">More...</a><br /></td></tr>
-<tr class="separator:ad442994336ed6da38e713907ab4d7487"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f348828625240611c6f03d4c1006f9a"><td class="memItemLeft" align="right" valign="top">std::function&lt; int()&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopen_f_s_l_1_1_disk_device.html#a5f348828625240611c6f03d4c1006f9a">open</a></td></tr>
+<tr class="memdesc:a5f348828625240611c6f03d4c1006f9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disk open function.  <a href="classopen_f_s_l_1_1_disk_device.html#a5f348828625240611c6f03d4c1006f9a">More...</a><br /></td></tr>
+<tr class="separator:a5f348828625240611c6f03d4c1006f9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a385f5f07c681b706c2223ce68a1331a3"><td class="memItemLeft" align="right" valign="top">std::function&lt; int(<a class="el" href="classopen_f_s_l_1_1_disk_device.html">DiskDevice</a> *, uint8_t *, size_t, size_t)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopen_f_s_l_1_1_disk_device.html#a385f5f07c681b706c2223ce68a1331a3">read</a></td></tr>
+<tr class="memdesc:a385f5f07c681b706c2223ce68a1331a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disk read function.  <a href="classopen_f_s_l_1_1_disk_device.html#a385f5f07c681b706c2223ce68a1331a3">More...</a><br /></td></tr>
+<tr class="separator:a385f5f07c681b706c2223ce68a1331a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85c78fff218183980654cb5ca55143f4"><td class="memItemLeft" align="right" valign="top">std::function&lt; int(<a class="el" href="classopen_f_s_l_1_1_disk_device.html">DiskDevice</a> *, const uint8_t *, size_t, size_t)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopen_f_s_l_1_1_disk_device.html#a85c78fff218183980654cb5ca55143f4">write</a></td></tr>
+<tr class="memdesc:a85c78fff218183980654cb5ca55143f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disk write function.  <a href="classopen_f_s_l_1_1_disk_device.html#a85c78fff218183980654cb5ca55143f4">More...</a><br /></td></tr>
+<tr class="separator:a85c78fff218183980654cb5ca55143f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72fdaa4a3c6335a893ea985060d7346c"><td class="memItemLeft" align="right" valign="top">std::function&lt; int()&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopen_f_s_l_1_1_disk_device.html#a72fdaa4a3c6335a893ea985060d7346c">close</a></td></tr>
+<tr class="memdesc:a72fdaa4a3c6335a893ea985060d7346c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disk close function.  <a href="classopen_f_s_l_1_1_disk_device.html#a72fdaa4a3c6335a893ea985060d7346c">More...</a><br /></td></tr>
+<tr class="separator:a72fdaa4a3c6335a893ea985060d7346c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -185,7 +187,7 @@ Private Attributes</h2></td></tr>
 <p>Disk driver class with open, read, write, close function </p><dl class="section author"><dt>Author</dt><dd>kms1212 </dd></dl>
 <dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">Todo:</a></b></dt><dd>Write function wrapper</dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="diskdevice_8h_source.html#l00030">30</a> of file <a class="el" href="diskdevice_8h_source.html">diskdevice.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="diskdevice_8h_source.html#l00029">29</a> of file <a class="el" href="diskdevice_8h_source.html">diskdevice.h</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="ae8262f6cf1ec80875ca95cd3cd6b4fb6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae8262f6cf1ec80875ca95cd3cd6b4fb6">&#9670;&nbsp;</a></span>DiskParameter</h2>
@@ -278,26 +280,28 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classopen_f_s_l_1_1_disk_device_a6dde175530641e580e2059e61d7bc3fa_icgraph.png" border="0" usemap="#classopen_f_s_l_1_1_disk_device_a6dde175530641e580e2059e61d7bc3fa_icgraph" alt=""/></div>
 <map name="classopen_f_s_l_1_1_disk_device_a6dde175530641e580e2059e61d7bc3fa_icgraph" id="classopen_f_s_l_1_1_disk_device_a6dde175530641e580e2059e61d7bc3fa_icgraph">
-<area shape="rect" title=" " alt="" coords="1351,313,1509,355"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a80bfcad7b0650aa1248ec2026efa93ad" title=" " alt="" coords="851,120,1039,161"/>
-<area shape="rect" href="namespaceopen_f_s_l.html#a6062bcbee7520af93a42dff7e430a429" title=" " alt="" coords="839,514,1052,541"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#afb002c4a1e3c51776f8a6179772cd2a3" title="Convert FAT area index to sector." alt="" coords="1121,179,1282,220"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a35c253c8cdb74f8bad30a7dd5dca5a27" title=" " alt="" coords="842,200,1049,241"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a7250fcdce6f1c08f66d763c7e4c395d2" title=" " alt="" coords="1125,397,1277,439"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a59434200d27499047e3d46df75ac0f6e" title=" " alt="" coords="869,280,1021,321"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a58dbf6545f673324445c70a51ac18fd8" title=" " alt="" coords="639,365,791,407"/>
-<area shape="rect" href="classopen_f_s_l_1_1_t_b___m_b_r.html#ae327afc96fc836e6a1663f1a486cdb2d" title=" " alt="" coords="1100,514,1303,541"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#aec8bf206b058944ac5c59f29b2b31393" title="Create entry." alt="" coords="223,5,375,47"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#add4dd1bff27f171cf7db674122fa3e41" title="Create directory." alt="" coords="7,71,159,112"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a4f8aced2c8c2da248fee528064a5e24e" title="Remove entry." alt="" coords="223,371,375,412"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#ab2a1c56a5fd6313f5fcaa47f46222e53" title="Directory lister." alt="" coords="639,253,791,295"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#adbfb9ea42ab7d3fbcc68b5d7fe9ee5fe" title="Change directory." alt="" coords="439,195,591,236"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#ace77652809130392ed0d821d1deda36f" title="Get file information." alt="" coords="223,253,375,295"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a71a80ab5ad06a1debcb1f8fda55870be" title="Remove directory." alt="" coords="7,345,159,387"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_thread.html#ace995f3dffb28ce95a1c10fcbbb0ca9c" title=" " alt="" coords="208,136,391,177"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_thread.html#a99713826abd25342e7c25c49158b7668" title=" " alt="" coords="223,71,375,112"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_thread.html#ac1923cf4d853606024ac788d55185754" title=" " alt="" coords="5,201,160,243"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_i_l_e.html#a17c72a1c021aabc125b245da010b228a" title=" " alt="" coords="7,267,159,308"/>
+<area shape="rect" title=" " alt="" coords="1551,188,1709,230"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a2b4ce7f3fef365fb859ba6ce7c4a6663" title=" " alt="" coords="1051,6,1239,47"/>
+<area shape="rect" href="namespaceopen_f_s_l.html#a6062bcbee7520af93a42dff7e430a429" title=" " alt="" coords="1039,632,1252,658"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#afb002c4a1e3c51776f8a6179772cd2a3" title="Convert FAT area index to sector." alt="" coords="1321,56,1482,98"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a35c253c8cdb74f8bad30a7dd5dca5a27" title=" " alt="" coords="1042,88,1249,130"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#aacb457ea5d8202a670c99cf95c3f13de" title=" " alt="" coords="1325,280,1477,322"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a8059886547a26e1901667927a11f87dd" title=" " alt="" coords="1069,223,1221,264"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#aa2bbdaae9b624bb021dec7972ba1d505" title=" " alt="" coords="639,136,791,178"/>
+<area shape="rect" href="classopen_f_s_l_1_1_t_b___m_b_r.html#a1001101393d346b1c22c278accbca577" title=" " alt="" coords="1300,565,1503,592"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#ab528f2bb95e6c6aa9d45797fac128f28" title="Create entry." alt="" coords="207,150,359,191"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#abd0df824bb8c72c3b9d22e8eacdb4f43" title="Create directory." alt="" coords="5,192,157,234"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a9ecaecf04ce55f0ba28e319df102ec0c" title="Remove entry." alt="" coords="207,326,359,367"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a074c3927605d847ed25bcda7878d8f69" title=" " alt="" coords="839,340,991,382"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_i_l_e.html#a9ed90fc07a85e71b64c8c51cab839c76" title="Read file." alt="" coords="839,223,991,264"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#ad5dd6f60a83f74b45ba7d557023a5890" title="Change directory." alt="" coords="639,340,791,382"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#ace77652809130392ed0d821d1deda36f" title="Get file information." alt="" coords="423,515,575,556"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#ab2a1c56a5fd6313f5fcaa47f46222e53" title="Directory lister." alt="" coords="423,267,575,308"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_thread.html#ace995f3dffb28ce95a1c10fcbbb0ca9c" title=" " alt="" coords="408,398,591,439"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_thread.html#a99713826abd25342e7c25c49158b7668" title=" " alt="" coords="423,332,575,374"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_thread.html#ac1923cf4d853606024ac788d55185754" title=" " alt="" coords="205,547,360,588"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_i_l_e.html#a17c72a1c021aabc125b245da010b228a" title=" " alt="" coords="207,482,359,523"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#af9d3dca363a376898362648d3b65e9a0" title="Remove directory." alt="" coords="5,283,157,324"/>
 </map>
 </div>
 
@@ -320,10 +324,10 @@ Here is the caller graph for this function:</div>
 
 <p><a class="el" href="classopen_f_s_l_1_1_disk_device.html" title="Disk driver.">DiskDevice</a> initializer. </p>
 <p>Initializes Disk driver. Function checks function wrappers: </p><ul>
-<li><a class="el" href="classopen_f_s_l_1_1_disk_device.html#a239f95cf3d55506c45caf4aa3306295a" title="Disk open function.">open()</a> </li>
-<li><a class="el" href="classopen_f_s_l_1_1_disk_device.html#a7e9a3f86d91f699942a114ada11212c4" title="Disk read function.">read()</a> </li>
-<li><a class="el" href="classopen_f_s_l_1_1_disk_device.html#a66c893145435415e77c48167169f7dc9" title="Disk write function.">write()</a> </li>
-<li><a class="el" href="classopen_f_s_l_1_1_disk_device.html#ad442994336ed6da38e713907ab4d7487" title="Disk close function.">close()</a> </li>
+<li><a class="el" href="classopen_f_s_l_1_1_disk_device.html#a5f348828625240611c6f03d4c1006f9a" title="Disk open function.">open()</a> </li>
+<li><a class="el" href="classopen_f_s_l_1_1_disk_device.html#a385f5f07c681b706c2223ce68a1331a3" title="Disk read function.">read()</a> </li>
+<li><a class="el" href="classopen_f_s_l_1_1_disk_device.html#a85c78fff218183980654cb5ca55143f4" title="Disk write function.">write()</a> </li>
+<li><a class="el" href="classopen_f_s_l_1_1_disk_device.html#a72fdaa4a3c6335a893ea985060d7346c" title="Disk close function.">close()</a> </li>
 </ul>
 
 <p class="definition">Definition at line <a class="el" href="diskdevice_8cpp_source.html#l00018">18</a> of file <a class="el" href="diskdevice_8cpp_source.html">diskdevice.cpp</a>.</p>
@@ -386,24 +390,26 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classopen_f_s_l_1_1_disk_device_a9d0c96c7447777bdca562bc667381b42_icgraph.png" border="0" usemap="#classopen_f_s_l_1_1_disk_device_a9d0c96c7447777bdca562bc667381b42_icgraph" alt=""/></div>
 <map name="classopen_f_s_l_1_1_disk_device_a9d0c96c7447777bdca562bc667381b42_icgraph" id="classopen_f_s_l_1_1_disk_device_a9d0c96c7447777bdca562bc667381b42_icgraph">
-<area shape="rect" title=" " alt="" coords="1351,355,1509,396"/>
-<area shape="rect" href="namespaceopen_f_s_l.html#a6062bcbee7520af93a42dff7e430a429" title=" " alt="" coords="839,282,1052,309"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a7250fcdce6f1c08f66d763c7e4c395d2" title=" " alt="" coords="1125,384,1277,425"/>
-<area shape="rect" href="classopen_f_s_l_1_1_t_b___m_b_r.html#ae327afc96fc836e6a1663f1a486cdb2d" title=" " alt="" coords="1100,333,1303,359"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#af566a65b037158e7d8e881ac508b8a40" title="FS_FAT32 intializer." alt="" coords="1125,449,1277,491"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a59434200d27499047e3d46df75ac0f6e" title=" " alt="" coords="869,333,1021,375"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a4f8aced2c8c2da248fee528064a5e24e" title="Remove entry." alt="" coords="223,403,375,444"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a58dbf6545f673324445c70a51ac18fd8" title=" " alt="" coords="439,392,591,433"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#ab2a1c56a5fd6313f5fcaa47f46222e53" title="Directory lister." alt="" coords="639,283,791,324"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#adbfb9ea42ab7d3fbcc68b5d7fe9ee5fe" title="Change directory." alt="" coords="439,221,591,263"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#aec8bf206b058944ac5c59f29b2b31393" title="Create entry." alt="" coords="223,285,375,327"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#ace77652809130392ed0d821d1deda36f" title="Get file information." alt="" coords="223,37,375,79"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a71a80ab5ad06a1debcb1f8fda55870be" title="Remove directory." alt="" coords="7,360,159,401"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_thread.html#ace995f3dffb28ce95a1c10fcbbb0ca9c" title=" " alt="" coords="208,220,391,261"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#add4dd1bff27f171cf7db674122fa3e41" title="Create directory." alt="" coords="7,269,159,311"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_thread.html#a99713826abd25342e7c25c49158b7668" title=" " alt="" coords="223,155,375,196"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_thread.html#ac1923cf4d853606024ac788d55185754" title=" " alt="" coords="5,5,160,47"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_i_l_e.html#a17c72a1c021aabc125b245da010b228a" title=" " alt="" coords="7,71,159,112"/>
+<area shape="rect" title=" " alt="" coords="1551,449,1709,491"/>
+<area shape="rect" href="namespaceopen_f_s_l.html#a6062bcbee7520af93a42dff7e430a429" title=" " alt="" coords="1039,377,1252,403"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#aacb457ea5d8202a670c99cf95c3f13de" title=" " alt="" coords="1325,479,1477,520"/>
+<area shape="rect" href="classopen_f_s_l_1_1_t_b___m_b_r.html#a1001101393d346b1c22c278accbca577" title=" " alt="" coords="1300,427,1503,454"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#aca79ddbddb1c9c1ccde9d15bb7d11159" title="FS_FAT32 intializer." alt="" coords="1325,544,1477,585"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a8059886547a26e1901667927a11f87dd" title=" " alt="" coords="1069,428,1221,469"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a9ecaecf04ce55f0ba28e319df102ec0c" title="Remove entry." alt="" coords="207,428,359,469"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#aa2bbdaae9b624bb021dec7972ba1d505" title=" " alt="" coords="423,487,575,528"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a074c3927605d847ed25bcda7878d8f69" title=" " alt="" coords="839,272,991,313"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_i_l_e.html#a9ed90fc07a85e71b64c8c51cab839c76" title="Read file." alt="" coords="839,428,991,469"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#ad5dd6f60a83f74b45ba7d557023a5890" title="Change directory." alt="" coords="639,272,791,313"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#ace77652809130392ed0d821d1deda36f" title="Get file information." alt="" coords="423,71,575,112"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#ab2a1c56a5fd6313f5fcaa47f46222e53" title="Directory lister." alt="" coords="423,369,575,411"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_thread.html#ace995f3dffb28ce95a1c10fcbbb0ca9c" title=" " alt="" coords="408,304,591,345"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#ab528f2bb95e6c6aa9d45797fac128f28" title="Create entry." alt="" coords="207,295,359,336"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#abd0df824bb8c72c3b9d22e8eacdb4f43" title="Create directory." alt="" coords="5,287,157,328"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_thread.html#a99713826abd25342e7c25c49158b7668" title=" " alt="" coords="423,239,575,280"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_thread.html#ac1923cf4d853606024ac788d55185754" title=" " alt="" coords="205,5,360,47"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_i_l_e.html#a17c72a1c021aabc125b245da010b228a" title=" " alt="" coords="207,71,359,112"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#af9d3dca363a376898362648d3b65e9a0" title="Remove directory." alt="" coords="5,377,157,419"/>
 </map>
 </div>
 
@@ -477,29 +483,29 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="classopen_f_s_l_1_1_disk_device_a6a9797bb1b7252c5faea926b2a7f7040_icgraph.png" border="0" usemap="#classopen_f_s_l_1_1_disk_device_a6a9797bb1b7252c5faea926b2a7f7040_icgraph" alt=""/></div>
 <map name="classopen_f_s_l_1_1_disk_device_a6a9797bb1b7252c5faea926b2a7f7040_icgraph" id="classopen_f_s_l_1_1_disk_device_a6a9797bb1b7252c5faea926b2a7f7040_icgraph">
 <area shape="rect" title=" " alt="" coords="860,98,1019,139"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a80bfcad7b0650aa1248ec2026efa93ad" title=" " alt="" coords="415,32,603,74"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a2b4ce7f3fef365fb859ba6ce7c4a6663" title=" " alt="" coords="415,32,603,74"/>
 <area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a35c253c8cdb74f8bad30a7dd5dca5a27" title=" " alt="" coords="405,98,612,139"/>
 <area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#af0b1bef43817ba5818ff3fff51e7f919" title="Update BPB." alt="" coords="660,98,812,139"/>
 <area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a45ec1c0420c15a7b3e324abdac8c0bc6" title="Update FSINFO." alt="" coords="660,32,812,74"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a58dbf6545f673324445c70a51ac18fd8" title=" " alt="" coords="660,215,812,256"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#aec8bf206b058944ac5c59f29b2b31393" title="Create entry." alt="" coords="205,91,357,132"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#add4dd1bff27f171cf7db674122fa3e41" title="Create directory." alt="" coords="5,91,157,132"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a4f8aced2c8c2da248fee528064a5e24e" title="Remove entry." alt="" coords="433,215,585,256"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a71a80ab5ad06a1debcb1f8fda55870be" title="Remove directory." alt="" coords="205,215,357,256"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#aa2bbdaae9b624bb021dec7972ba1d505" title=" " alt="" coords="660,215,812,256"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#ab528f2bb95e6c6aa9d45797fac128f28" title="Create entry." alt="" coords="205,91,357,132"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#abd0df824bb8c72c3b9d22e8eacdb4f43" title="Create directory." alt="" coords="5,91,157,132"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a9ecaecf04ce55f0ba28e319df102ec0c" title="Remove entry." alt="" coords="433,215,585,256"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#af9d3dca363a376898362648d3b65e9a0" title="Remove directory." alt="" coords="205,215,357,256"/>
 </map>
 </div>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="ad442994336ed6da38e713907ab4d7487"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad442994336ed6da38e713907ab4d7487">&#9670;&nbsp;</a></span>close</h2>
+<a id="a72fdaa4a3c6335a893ea985060d7346c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72fdaa4a3c6335a893ea985060d7346c">&#9670;&nbsp;</a></span>close</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int(* openFSL::DiskDevice::close) () = NULL</td>
+          <td class="memname">std::function&lt;int()&gt; openFSL::DiskDevice::close</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -507,7 +513,7 @@ Here is the caller graph for this function:</div>
 <p>Disk close function. </p>
 <p>Closes disk. </p><dl class="section return"><dt>Returns</dt><dd>int: Error code </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="diskdevice_8h_source.html#l00122">122</a> of file <a class="el" href="diskdevice_8h_source.html">diskdevice.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="diskdevice_8h_source.html#l00121">121</a> of file <a class="el" href="diskdevice_8h_source.html">diskdevice.h</a>.</p>
 
 </div>
 </div>
@@ -531,18 +537,18 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="diskdevice_8h_source.html#l00042">42</a> of file <a class="el" href="diskdevice_8h_source.html">diskdevice.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="diskdevice_8h_source.html#l00041">41</a> of file <a class="el" href="diskdevice_8h_source.html">diskdevice.h</a>.</p>
 
 </div>
 </div>
-<a id="a239f95cf3d55506c45caf4aa3306295a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a239f95cf3d55506c45caf4aa3306295a">&#9670;&nbsp;</a></span>open</h2>
+<a id="a5f348828625240611c6f03d4c1006f9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f348828625240611c6f03d4c1006f9a">&#9670;&nbsp;</a></span>open</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int(* openFSL::DiskDevice::open) () = NULL</td>
+          <td class="memname">std::function&lt;int()&gt; openFSL::DiskDevice::open</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -550,18 +556,18 @@ Here is the caller graph for this function:</div>
 <p>Disk open function. </p>
 <p>Opens disk. </p><dl class="section return"><dt>Returns</dt><dd>int: Error code </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="diskdevice_8h_source.html#l00083">83</a> of file <a class="el" href="diskdevice_8h_source.html">diskdevice.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="diskdevice_8h_source.html#l00082">82</a> of file <a class="el" href="diskdevice_8h_source.html">diskdevice.h</a>.</p>
 
 </div>
 </div>
-<a id="a7e9a3f86d91f699942a114ada11212c4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7e9a3f86d91f699942a114ada11212c4">&#9670;&nbsp;</a></span>read</h2>
+<a id="a385f5f07c681b706c2223ce68a1331a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a385f5f07c681b706c2223ce68a1331a3">&#9670;&nbsp;</a></span>read</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int(* openFSL::DiskDevice::read) (<a class="el" href="classopen_f_s_l_1_1_disk_device.html">DiskDevice</a> *dd, uint8_t *dest, size_t lba, size_t size) = NULL</td>
+          <td class="memname">std::function&lt;int(<a class="el" href="classopen_f_s_l_1_1_disk_device.html">DiskDevice</a>*, uint8_t*, size_t, size_t)&gt; openFSL::DiskDevice::read</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -570,7 +576,7 @@ Here is the caller graph for this function:</div>
 <p>Reads disk and stores data by sector. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">DiskDevice*</td><td>dd: this </td></tr>
-    <tr><td class="paramname">Sector*</td><td>dest: buffer to read data </td></tr>
+    <tr><td class="paramname">uint8_t*</td><td>dest: buffer to read data </td></tr>
     <tr><td class="paramname">size_t</td><td>lba: Offset location </td></tr>
     <tr><td class="paramname">size_t</td><td>size: <a class="el" href="classopen_f_s_l_1_1_sector.html" title="Sector buffer.">Sector</a> count </td></tr>
   </table>
@@ -578,7 +584,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>int: Error code </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="diskdevice_8h_source.html#l00096">96</a> of file <a class="el" href="diskdevice_8h_source.html">diskdevice.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="diskdevice_8h_source.html#l00095">95</a> of file <a class="el" href="diskdevice_8h_source.html">diskdevice.h</a>.</p>
 
 </div>
 </div>
@@ -602,18 +608,18 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="diskdevice_8h_source.html#l00043">43</a> of file <a class="el" href="diskdevice_8h_source.html">diskdevice.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="diskdevice_8h_source.html#l00042">42</a> of file <a class="el" href="diskdevice_8h_source.html">diskdevice.h</a>.</p>
 
 </div>
 </div>
-<a id="a66c893145435415e77c48167169f7dc9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a66c893145435415e77c48167169f7dc9">&#9670;&nbsp;</a></span>write</h2>
+<a id="a85c78fff218183980654cb5ca55143f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85c78fff218183980654cb5ca55143f4">&#9670;&nbsp;</a></span>write</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int(* openFSL::DiskDevice::write) (<a class="el" href="classopen_f_s_l_1_1_disk_device.html">DiskDevice</a> *dd, const uint8_t *src, size_t lba, size_t size) = NULL</td>
+          <td class="memname">std::function&lt;int(<a class="el" href="classopen_f_s_l_1_1_disk_device.html">DiskDevice</a>*, const uint8_t*, size_t, size_t)&gt; openFSL::DiskDevice::write</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -622,7 +628,7 @@ Here is the caller graph for this function:</div>
 <p>Reads data and writes to disk by sector. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">DiskDevice*</td><td>dd: this </td></tr>
-    <tr><td class="paramname">Sector*</td><td>src: buffer to write from </td></tr>
+    <tr><td class="paramname">const</td><td>uint8_t* src: buffer to write from </td></tr>
     <tr><td class="paramname">size_t</td><td>lba: Location to write </td></tr>
     <tr><td class="paramname">size_t</td><td>size: Size to write </td></tr>
   </table>
@@ -630,7 +636,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>int: Error code </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="diskdevice_8h_source.html#l00111">111</a> of file <a class="el" href="diskdevice_8h_source.html">diskdevice.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="diskdevice_8h_source.html#l00110">110</a> of file <a class="el" href="diskdevice_8h_source.html">diskdevice.h</a>.</p>
 
 </div>
 </div>

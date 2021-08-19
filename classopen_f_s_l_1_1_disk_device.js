@@ -9,10 +9,10 @@ var classopen_f_s_l_1_1_disk_device =
     [ "readDisk", "classopen_f_s_l_1_1_disk_device.html#a9d0c96c7447777bdca562bc667381b42", null ],
     [ "setDiskParameter", "classopen_f_s_l_1_1_disk_device.html#a81fcafdb0646335376079db3bb8e9b9e", null ],
     [ "writeDisk", "classopen_f_s_l_1_1_disk_device.html#a6a9797bb1b7252c5faea926b2a7f7040", null ],
-    [ "close", "classopen_f_s_l_1_1_disk_device.html#ad442994336ed6da38e713907ab4d7487", null ],
+    [ "close", "classopen_f_s_l_1_1_disk_device.html#a72fdaa4a3c6335a893ea985060d7346c", null ],
     [ "diskParameter", "classopen_f_s_l_1_1_disk_device.html#a8b4d0b2ad6c8bd7884de561f0e8058a7", null ],
-    [ "open", "classopen_f_s_l_1_1_disk_device.html#a239f95cf3d55506c45caf4aa3306295a", null ],
-    [ "read", "classopen_f_s_l_1_1_disk_device.html#a7e9a3f86d91f699942a114ada11212c4", null ],
+    [ "open", "classopen_f_s_l_1_1_disk_device.html#a5f348828625240611c6f03d4c1006f9a", null ],
+    [ "read", "classopen_f_s_l_1_1_disk_device.html#a385f5f07c681b706c2223ce68a1331a3", null ],
     [ "scheduler", "classopen_f_s_l_1_1_disk_device.html#ab7f101ea75a796ac7e77210e90292a72", null ],
-    [ "write", "classopen_f_s_l_1_1_disk_device.html#a66c893145435415e77c48167169f7dc9", null ]
+    [ "write", "classopen_f_s_l_1_1_disk_device.html#a85c78fff218183980654cb5ca55143f4", null ]
 ];
