@@ -14,6 +14,5 @@ var file_8h =
       [ "SeekSet", "file_8h.html#a25f310b6ebac58b688fec8e6ff48af8fae8b6fa49d5969a5db38371ec2affd49d", null ],
       [ "SeekCur", "file_8h.html#a25f310b6ebac58b688fec8e6ff48af8fa08fed505341fb5e134152d2607da3c31", null ],
       [ "SeekEnd", "file_8h.html#a25f310b6ebac58b688fec8e6ff48af8fac81e065ca7d17ec1b162e30daf51e510", null ]
-    ] ],
-    [ "closeFile", "file_8h.html#a975c0df884acf7cf316d532e2109b9bb", null ]
+    ] ]
 ];
