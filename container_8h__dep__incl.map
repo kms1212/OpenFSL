@@ -1,9 +1,9 @@
 <map id="include/openfsl/container.h" name="include/openfsl/container.h">
-<area shape="rect" id="node1" title=" " alt="" coords="3987,5,4185,32"/>
-<area shape="rect" id="node2" href="$container_8cpp.html" title=" " alt="" coords="3916,80,4048,107"/>
-<area shape="rect" id="node3" href="$openfsl_8h.html" title=" " alt="" coords="4263,453,4448,480"/>
-<area shape="rect" id="node47" href="$sector_8h.html" title=" " alt="" coords="4123,80,4299,107"/>
-<area shape="rect" id="node4" href="$fs__fat32_8h.html" title=" " alt="" coords="4268,528,4443,569"/>
+<area shape="rect" id="node1" title=" " alt="" coords="4091,5,4289,32"/>
+<area shape="rect" id="node2" href="$container_8cpp.html" title=" " alt="" coords="4020,80,4152,107"/>
+<area shape="rect" id="node3" href="$openfsl_8h.html" title=" " alt="" coords="4367,453,4552,480"/>
+<area shape="rect" id="node48" href="$sector_8h.html" title=" " alt="" coords="4227,80,4403,107"/>
+<area shape="rect" id="node4" href="$fs__fat32_8h.html" title=" " alt="" coords="4372,528,4547,569"/>
 <area shape="rect" id="node5" href="$bpb_8cpp.html" title=" " alt="" coords="5,625,156,651"/>
 <area shape="rect" id="node6" href="$charcoding_8cpp.html" title=" " alt="" coords="181,625,378,651"/>
 <area shape="rect" id="node7" href="$chdir_8cpp.html" title=" " alt="" coords="402,625,559,651"/>
@@ -37,22 +37,23 @@
 <area shape="rect" id="node35" href="$makedir_8cpp.html" title=" " alt="" coords="6209,625,6387,651"/>
 <area shape="rect" id="node36" href="$nextcluster_8cpp.html" title=" " alt="" coords="6412,625,6611,651"/>
 <area shape="rect" id="node37" href="$operator_8cpp.html" title=" " alt="" coords="6635,625,6815,651"/>
-<area shape="rect" id="node38" href="$removedir_8cpp.html" title=" " alt="" coords="6839,625,7031,651"/>
-<area shape="rect" id="node39" href="$removeentry_8cpp.html" title=" " alt="" coords="7055,625,7263,651"/>
-<area shape="rect" id="node40" href="$thread_8cpp.html" title=" " alt="" coords="7287,625,7455,651"/>
-<area shape="rect" id="node41" href="$thread__classgeneral_8cpp.html" title=" " alt="" coords="7479,617,7621,659"/>
-<area shape="rect" id="node42" href="$thread__directory_8cpp.html" title=" " alt="" coords="7645,617,7786,659"/>
-<area shape="rect" id="node43" href="$thread__entry_8cpp.html" title=" " alt="" coords="7810,617,7951,659"/>
-<area shape="rect" id="node44" href="$thread__file_8cpp.html" title=" " alt="" coords="7975,617,8117,659"/>
-<area shape="rect" id="node45" href="$thread__volume_8cpp.html" title=" " alt="" coords="8141,617,8282,659"/>
-<area shape="rect" id="node46" href="$time_8cpp.html" title=" " alt="" coords="8307,625,8463,651"/>
-<area shape="rect" id="node48" href="$sector_8cpp.html" title=" " alt="" coords="4140,155,4251,181"/>
-<area shape="rect" id="node49" href="$diskdevice_8h.html" title=" " alt="" coords="4275,155,4481,181"/>
-<area shape="rect" id="node50" href="$diskdevice_8cpp.html" title=" " alt="" coords="4124,229,4267,256"/>
-<area shape="rect" id="node51" href="$detectstruct_8h.html" title=" " alt="" coords="4557,304,4772,331"/>
-<area shape="rect" id="node55" href="$filesystem_8h.html" title=" " alt="" coords="4361,229,4566,256"/>
-<area shape="rect" id="node52" href="$detectstruct_8cpp.html" title=" " alt="" coords="4444,379,4595,405"/>
-<area shape="rect" id="node53" href="$mbr_8h.html" title=" " alt="" coords="4619,379,4782,405"/>
-<area shape="rect" id="node54" href="$mbr_8cpp.html" title=" " alt="" coords="4652,453,4749,480"/>
-<area shape="rect" id="node56" href="$filesystem_8cpp.html" title=" " alt="" coords="4393,304,4533,331"/>
+<area shape="rect" id="node38" href="$path_8cpp.html" title=" " alt="" coords="6839,625,6994,651"/>
+<area shape="rect" id="node39" href="$removedir_8cpp.html" title=" " alt="" coords="7018,625,7210,651"/>
+<area shape="rect" id="node40" href="$removeentry_8cpp.html" title=" " alt="" coords="7234,625,7442,651"/>
+<area shape="rect" id="node41" href="$thread_8cpp.html" title=" " alt="" coords="7466,625,7634,651"/>
+<area shape="rect" id="node42" href="$thread__classgeneral_8cpp.html" title=" " alt="" coords="7658,617,7799,659"/>
+<area shape="rect" id="node43" href="$thread__directory_8cpp.html" title=" " alt="" coords="7823,617,7965,659"/>
+<area shape="rect" id="node44" href="$thread__entry_8cpp.html" title=" " alt="" coords="7989,617,8130,659"/>
+<area shape="rect" id="node45" href="$thread__file_8cpp.html" title=" " alt="" coords="8154,617,8295,659"/>
+<area shape="rect" id="node46" href="$thread__volume_8cpp.html" title=" " alt="" coords="8319,617,8461,659"/>
+<area shape="rect" id="node47" href="$time_8cpp.html" title=" " alt="" coords="8485,625,8641,651"/>
+<area shape="rect" id="node49" href="$sector_8cpp.html" title=" " alt="" coords="4244,155,4355,181"/>
+<area shape="rect" id="node50" href="$diskdevice_8h.html" title=" " alt="" coords="4379,155,4585,181"/>
+<area shape="rect" id="node51" href="$diskdevice_8cpp.html" title=" " alt="" coords="4228,229,4371,256"/>
+<area shape="rect" id="node52" href="$detectstruct_8h.html" title=" " alt="" coords="4661,304,4876,331"/>
+<area shape="rect" id="node56" href="$filesystem_8h.html" title=" " alt="" coords="4465,229,4670,256"/>
+<area shape="rect" id="node53" href="$detectstruct_8cpp.html" title=" " alt="" coords="4548,379,4699,405"/>
+<area shape="rect" id="node54" href="$mbr_8h.html" title=" " alt="" coords="4723,379,4886,405"/>
+<area shape="rect" id="node55" href="$mbr_8cpp.html" title=" " alt="" coords="4756,453,4853,480"/>
+<area shape="rect" id="node57" href="$filesystem_8cpp.html" title=" " alt="" coords="4497,304,4637,331"/>
 </map>

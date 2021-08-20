@@ -1,8 +1,8 @@
 <map id="include/openfsl/gpt.h" name="include/openfsl/gpt.h">
-<area shape="rect" id="node1" title=" " alt="" coords="4193,5,4352,32"/>
-<area shape="rect" id="node2" href="$gpt_8cpp.html" title=" " alt="" coords="4145,80,4238,107"/>
-<area shape="rect" id="node3" href="$openfsl_8h.html" title=" " alt="" coords="4263,80,4448,107"/>
-<area shape="rect" id="node4" href="$fs__fat32_8h.html" title=" " alt="" coords="4268,155,4443,196"/>
+<area shape="rect" id="node1" title=" " alt="" coords="4297,5,4456,32"/>
+<area shape="rect" id="node2" href="$gpt_8cpp.html" title=" " alt="" coords="4249,80,4342,107"/>
+<area shape="rect" id="node3" href="$openfsl_8h.html" title=" " alt="" coords="4367,80,4552,107"/>
+<area shape="rect" id="node4" href="$fs__fat32_8h.html" title=" " alt="" coords="4372,155,4547,196"/>
 <area shape="rect" id="node5" href="$bpb_8cpp.html" title=" " alt="" coords="5,251,156,278"/>
 <area shape="rect" id="node6" href="$charcoding_8cpp.html" title=" " alt="" coords="181,251,378,278"/>
 <area shape="rect" id="node7" href="$chdir_8cpp.html" title=" " alt="" coords="402,251,559,278"/>
@@ -36,13 +36,14 @@
 <area shape="rect" id="node35" href="$makedir_8cpp.html" title=" " alt="" coords="6209,251,6387,278"/>
 <area shape="rect" id="node36" href="$nextcluster_8cpp.html" title=" " alt="" coords="6412,251,6611,278"/>
 <area shape="rect" id="node37" href="$operator_8cpp.html" title=" " alt="" coords="6635,251,6815,278"/>
-<area shape="rect" id="node38" href="$removedir_8cpp.html" title=" " alt="" coords="6839,251,7031,278"/>
-<area shape="rect" id="node39" href="$removeentry_8cpp.html" title=" " alt="" coords="7055,251,7263,278"/>
-<area shape="rect" id="node40" href="$thread_8cpp.html" title=" " alt="" coords="7287,251,7455,278"/>
-<area shape="rect" id="node41" href="$thread__classgeneral_8cpp.html" title=" " alt="" coords="7479,244,7621,285"/>
-<area shape="rect" id="node42" href="$thread__directory_8cpp.html" title=" " alt="" coords="7645,244,7786,285"/>
-<area shape="rect" id="node43" href="$thread__entry_8cpp.html" title=" " alt="" coords="7810,244,7951,285"/>
-<area shape="rect" id="node44" href="$thread__file_8cpp.html" title=" " alt="" coords="7975,244,8117,285"/>
-<area shape="rect" id="node45" href="$thread__volume_8cpp.html" title=" " alt="" coords="8141,244,8282,285"/>
-<area shape="rect" id="node46" href="$time_8cpp.html" title=" " alt="" coords="8307,251,8463,278"/>
+<area shape="rect" id="node38" href="$path_8cpp.html" title=" " alt="" coords="6839,251,6994,278"/>
+<area shape="rect" id="node39" href="$removedir_8cpp.html" title=" " alt="" coords="7018,251,7210,278"/>
+<area shape="rect" id="node40" href="$removeentry_8cpp.html" title=" " alt="" coords="7234,251,7442,278"/>
+<area shape="rect" id="node41" href="$thread_8cpp.html" title=" " alt="" coords="7466,251,7634,278"/>
+<area shape="rect" id="node42" href="$thread__classgeneral_8cpp.html" title=" " alt="" coords="7658,244,7799,285"/>
+<area shape="rect" id="node43" href="$thread__directory_8cpp.html" title=" " alt="" coords="7823,244,7965,285"/>
+<area shape="rect" id="node44" href="$thread__entry_8cpp.html" title=" " alt="" coords="7989,244,8130,285"/>
+<area shape="rect" id="node45" href="$thread__file_8cpp.html" title=" " alt="" coords="8154,244,8295,285"/>
+<area shape="rect" id="node46" href="$thread__volume_8cpp.html" title=" " alt="" coords="8319,244,8461,285"/>
+<area shape="rect" id="node47" href="$time_8cpp.html" title=" " alt="" coords="8485,251,8641,278"/>
 </map>

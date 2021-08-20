@@ -50,6 +50,7 @@ var classopen_f_s_l_1_1_f_s___f_a_t32 =
     [ "removeDir", "classopen_f_s_l_1_1_f_s___f_a_t32.html#af9d3dca363a376898362648d3b65e9a0", null ],
     [ "removeEntry", "classopen_f_s_l_1_1_f_s___f_a_t32.html#a9ecaecf04ce55f0ba28e319df102ec0c", null ],
     [ "removeFilesystemThread", "classopen_f_s_l_1_1_f_s___f_a_t32.html#aeb8e0cc0ae5d7a67adb35f561fbd4e90", null ],
+    [ "separateFileName", "classopen_f_s_l_1_1_f_s___f_a_t32.html#a184bc705635cc9ed227b89da5efa0ce3", null ],
     [ "setCluster", "classopen_f_s_l_1_1_f_s___f_a_t32.html#ac0f8b6f580cce4e3a2056218e4693572", null ],
     [ "setLBAOffset", "classopen_f_s_l_1_1_f_s___f_a_t32.html#aa9b4a2be24ae7baa2dd6eb3cdb08112c", null ],
     [ "setPath", "classopen_f_s_l_1_1_f_s___f_a_t32.html#a656243a6c6d6cfd2fab98d34118acfd0", null ],

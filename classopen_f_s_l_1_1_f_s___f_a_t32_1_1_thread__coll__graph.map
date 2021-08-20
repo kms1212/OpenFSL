@@ -1,6 +1,6 @@
 <map id="openFSL::FS_FAT32::Thread" name="openFSL::FS_FAT32::Thread">
-<area shape="rect" id="node1" title=" " alt="" coords="884,1585,1060,1853"/>
-<area shape="rect" id="node2" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html" title="FAT32 imeplementation." alt="" coords="866,1005,1079,1523"/>
+<area shape="rect" id="node1" title=" " alt="" coords="884,1600,1060,1868"/>
+<area shape="rect" id="node2" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html" title="FAT32 imeplementation." alt="" coords="866,1005,1079,1537"/>
 <area shape="rect" id="node3" href="$classopen_f_s_l_1_1_file_system.html" title=" " alt="" coords="894,763,1050,899"/>
 <area shape="rect" id="node4" title=" " alt="" coords="1135,417,1338,495"/>
 <area shape="rect" id="node5" href="$classopen_f_s_l_1_1_disk_device.html" title="Disk driver." alt="" coords="945,373,1109,539"/>
