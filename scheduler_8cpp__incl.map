@@ -1,10 +1,11 @@
 <map id="src/scheduler.cpp" name="src/scheduler.cpp">
-<area shape="rect" id="node1" title=" " alt="" coords="202,5,337,32"/>
-<area shape="rect" id="node2" href="$scheduler_8h.html" title=" " alt="" coords="195,80,343,107"/>
+<area shape="rect" id="node1" title=" " alt="" coords="250,5,385,32"/>
+<area shape="rect" id="node2" href="$scheduler_8h.html" title=" " alt="" coords="243,80,391,107"/>
 <area shape="rect" id="node3" title=" " alt="" coords="5,155,69,181"/>
 <area shape="rect" id="node4" title=" " alt="" coords="94,155,157,181"/>
 <area shape="rect" id="node5" title=" " alt="" coords="181,155,261,181"/>
 <area shape="rect" id="node6" title=" " alt="" coords="285,155,349,181"/>
 <area shape="rect" id="node7" title=" " alt="" coords="374,155,517,181"/>
 <area shape="rect" id="node8" title=" " alt="" coords="541,155,627,181"/>
+<area shape="rect" id="node9" href="$error_8h.html" title=" " alt="" coords="651,155,767,181"/>
 </map>

@@ -1,7 +1,7 @@
 <map id="openFSL::Scheduler" name="openFSL::Scheduler">
-<area shape="rect" id="node1" title=" " alt="" coords="185,160,333,267"/>
+<area shape="rect" id="node1" title=" " alt="" coords="200,175,348,340"/>
 <area shape="rect" id="node2" title=" " alt="" coords="5,13,148,90"/>
 <area shape="rect" id="node3" title=" " alt="" coords="173,13,237,90"/>
-<area shape="rect" id="node4" title=" " alt="" coords="285,13,345,90"/>
-<area shape="rect" id="node5" title=" " alt="" coords="370,5,573,97"/>
+<area shape="rect" id="node4" title=" " alt="" coords="315,13,375,90"/>
+<area shape="rect" id="node5" title=" " alt="" coords="399,5,602,97"/>
 </map>

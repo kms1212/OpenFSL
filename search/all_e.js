@@ -16,7 +16,8 @@ var searchData=
   ['openfsl_5ferror_5fnomethod_285',['OPENFSL_ERROR_NOMETHOD',['../error_8h.html#a2320802b78acc635f6d1d83e849eea4f',1,'error.h']]],
   ['openfsl_5ferror_5fnoperm_286',['OPENFSL_ERROR_NOPERM',['../error_8h.html#a80c66b60815c860418b911b9e1ad9b6d',1,'error.h']]],
   ['openfsl_5ferror_5fnotexist_287',['OPENFSL_ERROR_NOTEXIST',['../error_8h.html#a50418bfba956f26454c53fc95859ca43',1,'error.h']]],
-  ['openmode_288',['openMode',['../classopen_f_s_l_1_1_f_s_l___file.html#a424e71c76fba6488a2fc30294d606ae7',1,'openFSL::FSL_File']]],
-  ['operator_2ecpp_289',['operator.cpp',['../operator_8cpp.html',1,'']]],
-  ['operator_5b_5d_290',['operator[]',['../classopen_f_s_l_1_1_container.html#a95c4bd7de462b7b6e50ffc684028d1b9',1,'openFSL::Container::operator[](size_t index)'],['../classopen_f_s_l_1_1_container.html#aab030d82e2e0243c7d7623721f2d8097',1,'openFSL::Container::operator[](int index)']]]
+  ['openfsl_5ferror_5fschabrt_288',['OPENFSL_ERROR_SCHABRT',['../error_8h.html#a58a59db5aad8fed38ffa1e392ba24ad1',1,'error.h']]],
+  ['openmode_289',['openMode',['../classopen_f_s_l_1_1_f_s_l___file.html#a424e71c76fba6488a2fc30294d606ae7',1,'openFSL::FSL_File']]],
+  ['operator_2ecpp_290',['operator.cpp',['../operator_8cpp.html',1,'']]],
+  ['operator_5b_5d_291',['operator[]',['../classopen_f_s_l_1_1_container.html#a95c4bd7de462b7b6e50ffc684028d1b9',1,'openFSL::Container::operator[](size_t index)'],['../classopen_f_s_l_1_1_container.html#aab030d82e2e0243c7d7623721f2d8097',1,'openFSL::Container::operator[](int index)']]]
 ];

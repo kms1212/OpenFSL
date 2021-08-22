@@ -10,5 +10,6 @@ var error_8h =
     [ "OPENFSL_ERROR_LARGELS", "error_8h.html#ae30f6320a40fcf22363281a59a310fae", null ],
     [ "OPENFSL_ERROR_NOMETHOD", "error_8h.html#a2320802b78acc635f6d1d83e849eea4f", null ],
     [ "OPENFSL_ERROR_NOPERM", "error_8h.html#a80c66b60815c860418b911b9e1ad9b6d", null ],
-    [ "OPENFSL_ERROR_NOTEXIST", "error_8h.html#a50418bfba956f26454c53fc95859ca43", null ]
+    [ "OPENFSL_ERROR_NOTEXIST", "error_8h.html#a50418bfba956f26454c53fc95859ca43", null ],
+    [ "OPENFSL_ERROR_SCHABRT", "error_8h.html#a58a59db5aad8fed38ffa1e392ba24ad1", null ]
 ];
