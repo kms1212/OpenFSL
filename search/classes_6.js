@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['partitionentry_416',['PartitionEntry',['../structopen_f_s_l_1_1_t_b___m_b_r_1_1_partition_entry.html',1,'openFSL::TB_MBR']]],
-  ['partitiontable_417',['PartitionTable',['../structopen_f_s_l_1_1_t_b___m_b_r_1_1_partition_table.html',1,'openFSL::TB_MBR']]]
+  ['ntfsbpb_419',['NTFSBPB',['../structopen_f_s_l_1_1fs_structure_1_1_n_t_f_s_b_p_b.html',1,'openFSL::fsStructure']]]
 ];

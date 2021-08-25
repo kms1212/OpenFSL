@@ -21,6 +21,7 @@ var hierarchy =
     [ "openFSL::FSL_File", "classopen_f_s_l_1_1_f_s_l___file.html", [
       [ "openFSL::FS_FAT32::FILE", "classopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_i_l_e.html", null ]
     ] ],
+    [ "openFSL::DiskDevice::IOFunctions", "structopen_f_s_l_1_1_disk_device_1_1_i_o_functions.html", null ],
     [ "openFSL::FS_FAT32::LFNEntry", "structopen_f_s_l_1_1_f_s___f_a_t32_1_1_l_f_n_entry.html", null ],
     [ "openFSL::FS_FAT32::LinkedCluster", "classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html", null ],
     [ "openFSL::fsStructure::NTFSBPB", "structopen_f_s_l_1_1fs_structure_1_1_n_t_f_s_b_p_b.html", null ],

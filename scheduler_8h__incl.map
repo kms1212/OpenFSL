@@ -1,10 +1,11 @@
 <map id="include/openfsl/scheduler.h" name="include/openfsl/scheduler.h">
-<area shape="rect" id="node1" title=" " alt="" coords="218,5,417,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="282,5,481,32"/>
 <area shape="rect" id="node2" title=" " alt="" coords="5,80,69,107"/>
 <area shape="rect" id="node3" title=" " alt="" coords="94,80,157,107"/>
 <area shape="rect" id="node4" title=" " alt="" coords="181,80,261,107"/>
 <area shape="rect" id="node5" title=" " alt="" coords="285,80,349,107"/>
 <area shape="rect" id="node6" title=" " alt="" coords="374,80,517,107"/>
 <area shape="rect" id="node7" title=" " alt="" coords="541,80,627,107"/>
-<area shape="rect" id="node8" href="$error_8h.html" title=" " alt="" coords="651,80,767,107"/>
+<area shape="rect" id="node8" title=" " alt="" coords="652,80,727,107"/>
+<area shape="rect" id="node9" href="$error_8h.html" title=" " alt="" coords="751,80,867,107"/>
 </map>

@@ -10,8 +10,7 @@ var classopen_f_s_l_1_1_scheduler =
     [ "runTask", "classopen_f_s_l_1_1_scheduler.html#a19fb939e7fc55138aac6f0cc35728371", null ],
     [ "runTask", "classopen_f_s_l_1_1_scheduler.html#a7aec33581daea5576d66f39b8a6ee84a", null ],
     [ "currentLastKey", "classopen_f_s_l_1_1_scheduler.html#a41a45b51d0723e725c2c848b53b62370", null ],
-    [ "queueExec", "classopen_f_s_l_1_1_scheduler.html#aeb1642024c2f4a7c489a38b27e772641", null ],
-    [ "queueLock", "classopen_f_s_l_1_1_scheduler.html#aea706d30813cd795e856a3db9ac2794f", null ],
     [ "taskQueue", "classopen_f_s_l_1_1_scheduler.html#a9f095b00c34428f050afcf0a18e73b9a", null ],
+    [ "taskQueueCondVar", "classopen_f_s_l_1_1_scheduler.html#a900b7d9dc51e9aef188b49d7dc53abb7", null ],
     [ "taskQueueLock", "classopen_f_s_l_1_1_scheduler.html#a138669f1cd96e876bfca0ed328f72177", null ]
 ];

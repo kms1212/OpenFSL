@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['ntfsbpb_415',['NTFSBPB',['../structopen_f_s_l_1_1fs_structure_1_1_n_t_f_s_b_p_b.html',1,'openFSL::fsStructure']]]
+  ['lfnentry_417',['LFNEntry',['../structopen_f_s_l_1_1_f_s___f_a_t32_1_1_l_f_n_entry.html',1,'openFSL::FS_FAT32']]],
+  ['linkedcluster_418',['LinkedCluster',['../classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html',1,'openFSL::FS_FAT32']]]
 ];

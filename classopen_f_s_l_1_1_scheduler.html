@@ -112,11 +112,11 @@ Collaboration diagram for openFSL::Scheduler:</div>
 <div class="dyncontent">
 <div class="center"><img src="classopen_f_s_l_1_1_scheduler__coll__graph.png" border="0" usemap="#open_f_s_l_1_1_scheduler_coll__map" alt="Collaboration graph"/></div>
 <map name="open_f_s_l_1_1_scheduler_coll__map" id="open_f_s_l_1_1_scheduler_coll__map">
-<area shape="rect" title=" " alt="" coords="200,175,348,340"/>
+<area shape="rect" title=" " alt="" coords="236,160,384,325"/>
 <area shape="rect" title=" " alt="" coords="5,13,148,90"/>
-<area shape="rect" title=" " alt="" coords="173,13,237,90"/>
-<area shape="rect" title=" " alt="" coords="315,13,375,90"/>
-<area shape="rect" title=" " alt="" coords="399,5,602,97"/>
+<area shape="rect" title=" " alt="" coords="209,13,273,90"/>
+<area shape="rect" title=" " alt="" coords="351,13,411,90"/>
+<area shape="rect" title=" " alt="" coords="435,5,638,97"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -156,16 +156,14 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a41a45b51d0723e725c2c848b53b62370"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f095b00c34428f050afcf0a18e73b9a"><td class="memItemLeft" align="right" valign="top">std::queue&lt; <a class="el" href="structopen_f_s_l_1_1_scheduler_1_1_task.html">Task</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopen_f_s_l_1_1_scheduler.html#a9f095b00c34428f050afcf0a18e73b9a">taskQueue</a></td></tr>
 <tr class="separator:a9f095b00c34428f050afcf0a18e73b9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aea706d30813cd795e856a3db9ac2794f"><td class="memItemLeft" align="right" valign="top">std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopen_f_s_l_1_1_scheduler.html#aea706d30813cd795e856a3db9ac2794f">queueLock</a></td></tr>
-<tr class="separator:aea706d30813cd795e856a3db9ac2794f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeb1642024c2f4a7c489a38b27e772641"><td class="memItemLeft" align="right" valign="top">std::condition_variable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopen_f_s_l_1_1_scheduler.html#aeb1642024c2f4a7c489a38b27e772641">queueExec</a></td></tr>
-<tr class="separator:aeb1642024c2f4a7c489a38b27e772641"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a138669f1cd96e876bfca0ed328f72177"><td class="memItemLeft" align="right" valign="top">std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopen_f_s_l_1_1_scheduler.html#a138669f1cd96e876bfca0ed328f72177">taskQueueLock</a></td></tr>
 <tr class="separator:a138669f1cd96e876bfca0ed328f72177"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a900b7d9dc51e9aef188b49d7dc53abb7"><td class="memItemLeft" align="right" valign="top">std::condition_variable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopen_f_s_l_1_1_scheduler.html#a900b7d9dc51e9aef188b49d7dc53abb7">taskQueueCondVar</a></td></tr>
+<tr class="separator:a900b7d9dc51e9aef188b49d7dc53abb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="scheduler_8h_source.html#l00024">24</a> of file <a class="el" href="scheduler_8h_source.html">scheduler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scheduler_8h_source.html#l00025">25</a> of file <a class="el" href="scheduler_8h_source.html">scheduler.h</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a5bc0c611334dfc5a8c3e5b13f04c978a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5bc0c611334dfc5a8c3e5b13f04c978a">&#9670;&nbsp;</a></span>Task</h2>
@@ -205,7 +203,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scheduler_8cpp_source.html#l00078">78</a> of file <a class="el" href="scheduler_8cpp_source.html">scheduler.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scheduler_8cpp_source.html#l00081">81</a> of file <a class="el" href="scheduler_8cpp_source.html">scheduler.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -233,7 +231,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scheduler_8cpp_source.html#l00074">74</a> of file <a class="el" href="scheduler_8cpp_source.html">scheduler.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scheduler_8cpp_source.html#l00077">77</a> of file <a class="el" href="scheduler_8cpp_source.html">scheduler.cpp</a>.</p>
 
 </div>
 </div>
@@ -253,7 +251,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scheduler_8cpp_source.html#l00058">58</a> of file <a class="el" href="scheduler_8cpp_source.html">scheduler.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scheduler_8cpp_source.html#l00061">61</a> of file <a class="el" href="scheduler_8cpp_source.html">scheduler.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -292,7 +290,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scheduler_8cpp_source.html#l00066">66</a> of file <a class="el" href="scheduler_8cpp_source.html">scheduler.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scheduler_8cpp_source.html#l00069">69</a> of file <a class="el" href="scheduler_8cpp_source.html">scheduler.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -331,7 +329,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scheduler_8cpp_source.html#l00062">62</a> of file <a class="el" href="scheduler_8cpp_source.html">scheduler.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scheduler_8cpp_source.html#l00065">65</a> of file <a class="el" href="scheduler_8cpp_source.html">scheduler.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -376,7 +374,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scheduler_8cpp_source.html#l00070">70</a> of file <a class="el" href="scheduler_8cpp_source.html">scheduler.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scheduler_8cpp_source.html#l00073">73</a> of file <a class="el" href="scheduler_8cpp_source.html">scheduler.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -454,11 +452,11 @@ Here is the caller graph for this function:</div>
 <area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a9ecaecf04ce55f0ba28e319df102ec0c" title="Remove entry." alt="" coords="207,380,359,422"/>
 <area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#aa2bbdaae9b624bb021dec7972ba1d505" title=" " alt="" coords="663,567,815,608"/>
 <area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a074c3927605d847ed25bcda7878d8f69" title=" " alt="" coords="866,247,1018,288"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#ad5dd6f60a83f74b45ba7d557023a5890" title="Change directory." alt="" coords="663,247,815,288"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a767d954fc4997cd09f2a99c0293fc5a8" title="Change directory." alt="" coords="663,247,815,288"/>
 <area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#ace77652809130392ed0d821d1deda36f" title="Get file information." alt="" coords="435,172,587,214"/>
 <area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#ab2a1c56a5fd6313f5fcaa47f46222e53" title="Directory lister." alt="" coords="435,340,587,382"/>
 <area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#ab528f2bb95e6c6aa9d45797fac128f28" title="Create entry." alt="" coords="207,446,359,487"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#abd0df824bb8c72c3b9d22e8eacdb4f43" title="Create directory." alt="" coords="5,250,157,291"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a35ea7160f74c25c87a292b207990c566" title="Create directory." alt="" coords="5,250,157,291"/>
 <area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#af9d3dca363a376898362648d3b65e9a0" title="Remove directory." alt="" coords="5,351,157,392"/>
 <area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a2b4ce7f3fef365fb859ba6ce7c4a6663" title=" " alt="" coords="417,750,605,791"/>
 <area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a35c253c8cdb74f8bad30a7dd5dca5a27" title=" " alt="" coords="408,680,615,722"/>
@@ -490,55 +488,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scheduler_8h_source.html#l00031">31</a> of file <a class="el" href="scheduler_8h_source.html">scheduler.h</a>.</p>
-
-</div>
-</div>
-<a id="aeb1642024c2f4a7c489a38b27e772641"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeb1642024c2f4a7c489a38b27e772641">&#9670;&nbsp;</a></span>queueExec</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::condition_variable openFSL::Scheduler::queueExec</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="scheduler_8h_source.html#l00035">35</a> of file <a class="el" href="scheduler_8h_source.html">scheduler.h</a>.</p>
-
-</div>
-</div>
-<a id="aea706d30813cd795e856a3db9ac2794f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aea706d30813cd795e856a3db9ac2794f">&#9670;&nbsp;</a></span>queueLock</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::mutex openFSL::Scheduler::queueLock</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="scheduler_8h_source.html#l00034">34</a> of file <a class="el" href="scheduler_8h_source.html">scheduler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scheduler_8h_source.html#l00032">32</a> of file <a class="el" href="scheduler_8h_source.html">scheduler.h</a>.</p>
 
 </div>
 </div>
@@ -562,7 +512,31 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scheduler_8h_source.html#l00032">32</a> of file <a class="el" href="scheduler_8h_source.html">scheduler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scheduler_8h_source.html#l00034">34</a> of file <a class="el" href="scheduler_8h_source.html">scheduler.h</a>.</p>
+
+</div>
+</div>
+<a id="a900b7d9dc51e9aef188b49d7dc53abb7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a900b7d9dc51e9aef188b49d7dc53abb7">&#9670;&nbsp;</a></span>taskQueueCondVar</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::condition_variable openFSL::Scheduler::taskQueueCondVar</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="scheduler_8h_source.html#l00036">36</a> of file <a class="el" href="scheduler_8h_source.html">scheduler.h</a>.</p>
 
 </div>
 </div>
@@ -586,7 +560,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scheduler_8h_source.html#l00037">37</a> of file <a class="el" href="scheduler_8h_source.html">scheduler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scheduler_8h_source.html#l00035">35</a> of file <a class="el" href="scheduler_8h_source.html">scheduler.h</a>.</p>
 
 </div>
 </div>
