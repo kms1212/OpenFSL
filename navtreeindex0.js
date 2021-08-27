@@ -232,6 +232,8 @@ var NAVTREEINDEX0 =
 "detectstruct_8cpp.html":[3,0,3,1],
 "detectstruct_8cpp_source.html":[3,0,3,1],
 "detectstruct_8h.html":[3,0,2,0,1],
+"detectstruct_8h.html#a2578a765cffb6d518e8faea9296177b0":[3,0,2,0,1,7],
+"detectstruct_8h.html#a5c1ea7fb6d768acc7c561ef266263d27":[3,0,2,0,1,8],
 "detectstruct_8h.html#a6062bcbee7520af93a42dff7e430a429":[3,0,2,0,1,6],
 "detectstruct_8h.html#ad647fe1f00371310eb17ec2ce5e78d12":[3,0,2,0,1,5],
 "detectstruct_8h.html#ad647fe1f00371310eb17ec2ce5e78d12a3a66f74d6b72789cfc74f0a027767b01":[3,0,2,0,1,5,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX0 =
 "dir_97b3d2b63ac216821c2d7a22ee0ab2b0.html":[3,0,1],
 "dir_a68dfbacda4050d78fe6a3edf681c9b7.html":[3,0,1,0,0,0,0],
 "dir_d44c64559bbebec7f509842c48db8b23.html":[3,0,2],
-"dir_df7bbba867fd9ebd6751e83d35a98a92.html":[3,0,1,0,0,0],
-"dir_e68e8157741866f444e17edd764ebbae.html":[3,0,0],
-"diskdevice_8cpp.html":[3,0,3,2]
+"dir_df7bbba867fd9ebd6751e83d35a98a92.html":[3,0,1,0,0,0]
 };

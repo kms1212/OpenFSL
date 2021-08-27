@@ -10,5 +10,7 @@ var detectstruct_8h =
       [ "pt_MBR", "detectstruct_8h.html#ad647fe1f00371310eb17ec2ce5e78d12a9bc8892c3d17aa83a359dc581af93463", null ],
       [ "pt_GPT", "detectstruct_8h.html#ad647fe1f00371310eb17ec2ce5e78d12afdf03b98e4cebcf48c0407be551c454c", null ]
     ] ],
-    [ "detectDiskStructure", "detectstruct_8h.html#a6062bcbee7520af93a42dff7e430a429", null ]
+    [ "detectDiskStructure", "detectstruct_8h.html#a6062bcbee7520af93a42dff7e430a429", null ],
+    [ "fileSystemTypeToString", "detectstruct_8h.html#a2578a765cffb6d518e8faea9296177b0", null ],
+    [ "partitionTableTypeToString", "detectstruct_8h.html#a5c1ea7fb6d768acc7c561ef266263d27", null ]
 ];
