@@ -9,7 +9,7 @@ var indexSectionsWithContent =
   6: "bcdfiltv",
   7: "fp",
   8: "abdefhlnprstvw",
-  9: "o",
+  9: "_o",
   10: "ot"
 };
 

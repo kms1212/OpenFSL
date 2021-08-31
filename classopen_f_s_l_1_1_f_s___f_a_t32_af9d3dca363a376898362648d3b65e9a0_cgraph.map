@@ -1,14 +1,14 @@
 <map id="openFSL::FS_FAT32::removeDir" name="openFSL::FS_FAT32::removeDir">
 <area shape="rect" id="node1" title="Remove directory." alt="" coords="5,238,157,280"/>
 <area shape="rect" id="node2" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a6d867ff7423c61e71921b209f8787f33" title=" " alt="" coords="1095,150,1288,192"/>
-<area shape="rect" id="node3" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#ab2a1c56a5fd6313f5fcaa47f46222e53" title="Directory lister." alt="" coords="468,318,620,360"/>
+<area shape="rect" id="node3" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#ab2a1c56a5fd6313f5fcaa47f46222e53" title="List directory contents." alt="" coords="468,318,620,360"/>
 <area shape="rect" id="node20" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a4a6a780067fabe82b35da691a3649df5" title=" " alt="" coords="205,326,420,368"/>
 <area shape="rect" id="node21" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a9ecaecf04ce55f0ba28e319df102ec0c" title="Remove entry." alt="" coords="237,209,389,250"/>
 <area shape="rect" id="node4" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a767d954fc4997cd09f2a99c0293fc5a8" title="Change directory." alt="" coords="668,270,820,312"/>
 <area shape="rect" id="node5" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a074c3927605d847ed25bcda7878d8f69" title=" " alt="" coords="881,329,1033,370"/>
 <area shape="rect" id="node19" href="$namespaceopen_f_s_l.html#a93d37096baa2dd91e4ae24d62ff7fbad" title="String tokenizer." alt="" coords="868,278,1047,304"/>
 <area shape="rect" id="node6" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a8059886547a26e1901667927a11f87dd" title=" " alt="" coords="1115,268,1267,309"/>
-<area shape="rect" id="node16" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a734d7cc4e6abf4c6c132fa8adf317f15" title="16bit string to 8bit" alt="" coords="1115,464,1267,505"/>
+<area shape="rect" id="node16" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a0ff44d3662e7738a0919fd816fc3e78e" title="UCS&#45;2 string to UTF&#45;8 string." alt="" coords="1115,464,1267,505"/>
 <area shape="rect" id="node17" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#abcceb2c1e1d53a07068b541faec8be09" title=" " alt="" coords="1115,333,1267,374"/>
 <area shape="rect" id="node18" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a694b422ef3ad41f17e00d7d8ec26a22f" title=" " alt="" coords="1115,398,1267,440"/>
 <area shape="rect" id="node7" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#aacb457ea5d8202a670c99cf95c3f13de" title=" " alt="" coords="1336,268,1488,309"/>

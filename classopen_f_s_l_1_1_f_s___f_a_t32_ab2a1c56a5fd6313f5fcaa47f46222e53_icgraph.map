@@ -1,5 +1,5 @@
 <map id="openFSL::FS_FAT32::listDir" name="openFSL::FS_FAT32::listDir">
-<area shape="rect" id="node1" title="Directory lister." alt="" coords="605,116,757,157"/>
+<area shape="rect" id="node1" title="List directory contents." alt="" coords="605,116,757,157"/>
 <area shape="rect" id="node2" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#ab528f2bb95e6c6aa9d45797fac128f28" title="Create entry." alt="" coords="405,57,557,99"/>
 <area shape="rect" id="node6" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#af9d3dca363a376898362648d3b65e9a0" title="Remove directory." alt="" coords="205,149,357,191"/>
 <area shape="rect" id="node7" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a9ecaecf04ce55f0ba28e319df102ec0c" title="Remove entry." alt="" coords="405,175,557,216"/>

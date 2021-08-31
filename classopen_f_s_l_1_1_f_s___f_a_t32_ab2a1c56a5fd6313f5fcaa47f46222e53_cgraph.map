@@ -1,11 +1,11 @@
 <map id="openFSL::FS_FAT32::listDir" name="openFSL::FS_FAT32::listDir">
-<area shape="rect" id="node1" title="Directory lister." alt="" coords="5,329,157,371"/>
+<area shape="rect" id="node1" title="List directory contents." alt="" coords="5,329,157,371"/>
 <area shape="rect" id="node2" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a767d954fc4997cd09f2a99c0293fc5a8" title="Change directory." alt="" coords="205,359,357,400"/>
 <area shape="rect" id="node3" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a074c3927605d847ed25bcda7878d8f69" title=" " alt="" coords="419,329,571,371"/>
 <area shape="rect" id="node18" href="$namespaceopen_f_s_l.html#a93d37096baa2dd91e4ae24d62ff7fbad" title="String tokenizer." alt="" coords="405,395,584,422"/>
 <area shape="rect" id="node4" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a6d867ff7423c61e71921b209f8787f33" title=" " alt="" coords="632,199,825,240"/>
 <area shape="rect" id="node5" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a8059886547a26e1901667927a11f87dd" title=" " alt="" coords="653,264,805,305"/>
-<area shape="rect" id="node15" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a734d7cc4e6abf4c6c132fa8adf317f15" title="16bit string to 8bit" alt="" coords="653,329,805,371"/>
+<area shape="rect" id="node15" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a0ff44d3662e7738a0919fd816fc3e78e" title="UCS&#45;2 string to UTF&#45;8 string." alt="" coords="653,329,805,371"/>
 <area shape="rect" id="node16" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#abcceb2c1e1d53a07068b541faec8be09" title=" " alt="" coords="653,395,805,436"/>
 <area shape="rect" id="node17" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a694b422ef3ad41f17e00d7d8ec26a22f" title=" " alt="" coords="653,460,805,501"/>
 <area shape="rect" id="node6" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#aacb457ea5d8202a670c99cf95c3f13de" title=" " alt="" coords="873,205,1025,247"/>

@@ -15,6 +15,7 @@ var dir_5cfc8f798c7a4c570457442210be7344 =
     [ "fsltime.h", "fsltime_8h.html", "fsltime_8h" ],
     [ "fslutils.h", "fslutils_8h.html", "fslutils_8h" ],
     [ "gpt.h", "gpt_8h.html", null ],
+    [ "macros.h", "macros_8h.html", "macros_8h" ],
     [ "mbr.h", "mbr_8h.html", [
       [ "TB_MBR", "classopen_f_s_l_1_1_t_b___m_b_r.html", "classopen_f_s_l_1_1_t_b___m_b_r" ],
       [ "PartitionEntry", "structopen_f_s_l_1_1_t_b___m_b_r_1_1_partition_entry.html", "structopen_f_s_l_1_1_t_b___m_b_r_1_1_partition_entry" ],
