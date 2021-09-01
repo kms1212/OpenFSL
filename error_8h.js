@@ -11,5 +11,8 @@ var error_8h =
     [ "OPENFSL_ERROR_NOMETHOD", "error_8h.html#a2320802b78acc635f6d1d83e849eea4f", null ],
     [ "OPENFSL_ERROR_NOPERM", "error_8h.html#a80c66b60815c860418b911b9e1ad9b6d", null ],
     [ "OPENFSL_ERROR_NOTEXIST", "error_8h.html#a50418bfba956f26454c53fc95859ca43", null ],
-    [ "OPENFSL_ERROR_SCHABRT", "error_8h.html#a58a59db5aad8fed38ffa1e392ba24ad1", null ]
+    [ "OPENFSL_ERROR_SCHABRT", "error_8h.html#a58a59db5aad8fed38ffa1e392ba24ad1", null ],
+    [ "geterrorlen", "error_8h.html#a5d77f0f6e9733071cffe83caed35ed14", null ],
+    [ "geterrorstr", "error_8h.html#a533e4fe1a3f2b0a38cdd1949cb781d36", null ],
+    [ "__maybe_unused", "error_8h.html#af22fc1bd1e188147c3a7642de50efd7f", null ]
 ];

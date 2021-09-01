@@ -98,7 +98,8 @@ $(document).ready(function(){initNavTree('namespaceopen_f_s_l.html',''); initRes
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#enum-members">Enumerations</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">openFSL Namespace Reference</div>  </div>
 </div><!--header-->
@@ -196,6 +197,10 @@ Functions</h2></td></tr>
 <tr class="separator:a5c1ea7fb6d768acc7c561ef266263d27"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2578a765cffb6d518e8faea9296177b0"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopen_f_s_l.html#a2578a765cffb6d518e8faea9296177b0">fileSystemTypeToString</a> (<a class="el" href="namespaceopen_f_s_l.html#acf2d397821f82da6760fd9adf7c8f618">FileSystemType</a> type)</td></tr>
 <tr class="separator:a2578a765cffb6d518e8faea9296177b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d77f0f6e9733071cffe83caed35ed14"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopen_f_s_l.html#a5d77f0f6e9733071cffe83caed35ed14">geterrorlen</a> (int errnum)</td></tr>
+<tr class="separator:a5d77f0f6e9733071cffe83caed35ed14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a533e4fe1a3f2b0a38cdd1949cb781d36"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopen_f_s_l.html#a533e4fe1a3f2b0a38cdd1949cb781d36">geterrorstr</a> (char *errstr, int errnum)</td></tr>
+<tr class="separator:a533e4fe1a3f2b0a38cdd1949cb781d36"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab8e56803f7a2a32d3612b28d5c80d795"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structopen_f_s_l_1_1_time.html">Time</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopen_f_s_l.html#ab8e56803f7a2a32d3612b28d5c80d795">convertToFSLTime</a> (const struct tm *time)</td></tr>
 <tr class="separator:ab8e56803f7a2a32d3612b28d5c80d795"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3338f42598b72d30ef873e51cb971a88"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopen_f_s_l.html#a3338f42598b72d30ef873e51cb971a88">compareDate</a> (const <a class="el" href="structopen_f_s_l_1_1_time.html">Time</a> a, const <a class="el" href="structopen_f_s_l_1_1_time.html">Time</a> b)</td></tr>
@@ -212,6 +217,11 @@ Functions</h2></td></tr>
 <tr class="separator:a593d21c029dcd556a9e549da0cf41019"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae8905e7eeb7b258c4bb9424ded762b39"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structopen_f_s_l_1_1_c_h_s.html">CHS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopen_f_s_l.html#ae8905e7eeb7b258c4bb9424ded762b39">convertLBAToCHS</a> (size_t lba, size_t sectPerTra, size_t headPerCyl)</td></tr>
 <tr class="separator:ae8905e7eeb7b258c4bb9424ded762b39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:af22fc1bd1e188147c3a7642de50efd7f"><td class="memItemLeft" align="right" valign="top">static const char *__error_str[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopen_f_s_l.html#af22fc1bd1e188147c3a7642de50efd7f">__maybe_unused</a></td></tr>
+<tr class="separator:af22fc1bd1e188147c3a7642de50efd7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
 <a id="acf2d397821f82da6760fd9adf7c8f618"></a>
@@ -675,7 +685,7 @@ Here is the caller graph for this function:</div>
 <area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a074c3927605d847ed25bcda7878d8f69" title=" " alt="" coords="823,299,975,340"/>
 <area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#ace77652809130392ed0d821d1deda36f" title="Get file information." alt="" coords="608,353,760,395"/>
 <area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a1eb6a8f88f53e9138244a95e814340ca" title=" " alt="" coords="407,436,559,477"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#ab2a1c56a5fd6313f5fcaa47f46222e53" title="List directory contents." alt="" coords="608,181,760,223"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a6359f844440d30016ac8cdfc2b22c0ac" title="List directory contents." alt="" coords="608,181,760,223"/>
 <area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a9ecaecf04ce55f0ba28e319df102ec0c" title="Remove entry." alt="" coords="407,240,559,281"/>
 <area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_thread.html#a99713826abd25342e7c25c49158b7668" title=" " alt="" coords="823,471,975,512"/>
 <area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a3b6179f3739890539da9adc3661eca94" title="Create file." alt="" coords="205,129,357,171"/>
@@ -683,6 +693,74 @@ Here is the caller graph for this function:</div>
 <area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_thread.html#ac1923cf4d853606024ac788d55185754" title=" " alt="" coords="405,371,560,412"/>
 <area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_i_l_e.html#a17c72a1c021aabc125b245da010b228a" title=" " alt="" coords="407,305,559,347"/>
 <area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#af9d3dca363a376898362648d3b65e9a0" title="Remove directory." alt="" coords="205,217,357,259"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5d77f0f6e9733071cffe83caed35ed14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d77f0f6e9733071cffe83caed35ed14">&#9670;&nbsp;</a></span>geterrorlen()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t openFSL::geterrorlen </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>errnum</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="error_8cpp_source.html#l00014">14</a> of file <a class="el" href="error_8cpp_source.html">error.cpp</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespaceopen_f_s_l_a5d77f0f6e9733071cffe83caed35ed14_icgraph.png" border="0" usemap="#namespaceopen_f_s_l_a5d77f0f6e9733071cffe83caed35ed14_icgraph" alt=""/></div>
+<map name="namespaceopen_f_s_l_a5d77f0f6e9733071cffe83caed35ed14_icgraph" id="namespaceopen_f_s_l_a5d77f0f6e9733071cffe83caed35ed14_icgraph">
+<area shape="rect" title=" " alt="" coords="207,5,363,32"/>
+<area shape="rect" href="namespaceopen_f_s_l.html#a533e4fe1a3f2b0a38cdd1949cb781d36" title=" " alt="" coords="5,5,159,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a533e4fe1a3f2b0a38cdd1949cb781d36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a533e4fe1a3f2b0a38cdd1949cb781d36">&#9670;&nbsp;</a></span>geterrorstr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * openFSL::geterrorstr </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>errstr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>errnum</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="error_8cpp_source.html#l00019">19</a> of file <a class="el" href="error_8cpp_source.html">error.cpp</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespaceopen_f_s_l_a533e4fe1a3f2b0a38cdd1949cb781d36_cgraph.png" border="0" usemap="#namespaceopen_f_s_l_a533e4fe1a3f2b0a38cdd1949cb781d36_cgraph" alt=""/></div>
+<map name="namespaceopen_f_s_l_a533e4fe1a3f2b0a38cdd1949cb781d36_cgraph" id="namespaceopen_f_s_l_a533e4fe1a3f2b0a38cdd1949cb781d36_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,159,32"/>
+<area shape="rect" href="namespaceopen_f_s_l.html#a5d77f0f6e9733071cffe83caed35ed14" title=" " alt="" coords="207,5,363,32"/>
 </map>
 </div>
 
@@ -727,6 +805,46 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="detectstruct_8cpp_source.html#l00064">64</a> of file <a class="el" href="detectstruct_8cpp_source.html">detectstruct.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="af22fc1bd1e188147c3a7642de50efd7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af22fc1bd1e188147c3a7642de50efd7f">&#9670;&nbsp;</a></span>__maybe_unused</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* __error_str [] openFSL::__maybe_unused</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">        <span class="stringliteral">&quot;Operation successfully finished.&quot;</span>,</div>
+<div class="line">        <span class="stringliteral">&quot;An error occured from disk.&quot;</span>,</div>
+<div class="line">        <span class="stringliteral">&quot;Method is not assigned.&quot;</span>, </div>
+<div class="line">        <span class="stringliteral">&quot;Invalid file system signature.&quot;</span>,</div>
+<div class="line">        <span class="stringliteral">&quot;No such file or directory.&quot;</span>,</div>
+<div class="line">        <span class="stringliteral">&quot;File or directory already exists.&quot;</span>,</div>
+<div class="line">        <span class="stringliteral">&quot;Invalid name of file or directory.&quot;</span>,</div>
+<div class="line">        <span class="stringliteral">&quot;Entry list size too large.&quot;</span>,</div>
+<div class="line">        <span class="stringliteral">&quot;Bad cluster has found.&quot;</span>,</div>
+<div class="line">        <span class="stringliteral">&quot;Operation not permitted.&quot;</span>,</div>
+<div class="line">        <span class="stringliteral">&quot;Cannot allocate cluster.&quot;</span>,</div>
+<div class="line">        <span class="stringliteral">&quot;Cannot access cluster.&quot;</span>,</div>
+<div class="line">        <span class="stringliteral">&quot;Scheduler task has aborted.&quot;</span></div>
+<div class="line">    }</div>
+</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="error_8h_source.html#l00043">43</a> of file <a class="el" href="error_8h_source.html">error.h</a>.</p>
 
 </div>
 </div>
