@@ -1,7 +1,7 @@
 <map id="openFSL::FS_FAT32::chdir" name="openFSL::FS_FAT32::chdir">
 <area shape="rect" id="node1" title="Change directory." alt="" coords="1039,269,1191,311"/>
 <area shape="rect" id="node2" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_thread.html#a89aa3b2cfdfabec43f57651aa932fc7d" title=" " alt="" coords="808,5,991,47"/>
-<area shape="rect" id="node3" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#ab528f2bb95e6c6aa9d45797fac128f28" title="Create entry." alt="" coords="407,123,559,164"/>
+<area shape="rect" id="node3" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a7c1736304d573a2149b61f538c0cf97d" title="Create entry." alt="" coords="407,123,559,164"/>
 <area shape="rect" id="node4" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a35ea7160f74c25c87a292b207990c566" title="Create directory." alt="" coords="205,64,357,105"/>
 <area shape="rect" id="node7" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a074c3927605d847ed25bcda7878d8f69" title=" " alt="" coords="823,299,975,340"/>
 <area shape="rect" id="node8" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#ace77652809130392ed0d821d1deda36f" title="Get file information." alt="" coords="608,353,760,395"/>

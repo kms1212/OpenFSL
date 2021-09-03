@@ -14,5 +14,6 @@ var error_8h =
     [ "OPENFSL_ERROR_SCHABRT", "error_8h.html#a58a59db5aad8fed38ffa1e392ba24ad1", null ],
     [ "geterrorlen", "error_8h.html#a5d77f0f6e9733071cffe83caed35ed14", null ],
     [ "geterrorstr", "error_8h.html#a533e4fe1a3f2b0a38cdd1949cb781d36", null ],
+    [ "geterrorstr", "error_8h.html#ac7f39300d30bbc5e40e37966bd43da03", null ],
     [ "__maybe_unused", "error_8h.html#af22fc1bd1e188147c3a7642de50efd7f", null ]
 ];

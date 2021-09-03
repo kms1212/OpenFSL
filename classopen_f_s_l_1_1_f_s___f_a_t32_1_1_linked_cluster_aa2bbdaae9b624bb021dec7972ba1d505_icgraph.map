@@ -1,6 +1,6 @@
 <map id="openFSL::FS_FAT32::LinkedCluster::write" name="openFSL::FS_FAT32::LinkedCluster::write">
 <area shape="rect" id="node1" title=" " alt="" coords="605,136,757,177"/>
-<area shape="rect" id="node2" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#ab528f2bb95e6c6aa9d45797fac128f28" title="Create entry." alt="" coords="405,71,557,112"/>
+<area shape="rect" id="node2" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a7c1736304d573a2149b61f538c0cf97d" title="Create entry." alt="" coords="405,71,557,112"/>
 <area shape="rect" id="node6" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a9ecaecf04ce55f0ba28e319df102ec0c" title="Remove entry." alt="" coords="405,136,557,177"/>
 <area shape="rect" id="node8" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_i_l_e.html#aa594da514e751724a9f89868061b660f" title="Write file." alt="" coords="405,201,557,243"/>
 <area shape="rect" id="node3" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a35ea7160f74c25c87a292b207990c566" title="Create directory." alt="" coords="205,5,357,47"/>

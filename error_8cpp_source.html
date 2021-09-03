@@ -121,6 +121,11 @@ $(document).ready(function(){initNavTree('error_8cpp_source.html',''); initResiz
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    std::memcpy(errstr, __error_str[errnum], <a class="code" href="namespaceopen_f_s_l.html#a5d77f0f6e9733071cffe83caed35ed14">geterrorlen</a>(errnum));</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordflow">return</span> errstr;</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="namespaceopen_f_s_l.html#ac7f39300d30bbc5e40e37966bd43da03">   25</a></span>&#160;std::string <a class="code" href="namespaceopen_f_s_l.html#a533e4fe1a3f2b0a38cdd1949cb781d36">openFSL::geterrorstr</a>(<span class="keywordtype">int</span> errnum)</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">return</span> std::string(__error_str[errnum]);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="anamespaceopen_f_s_l_html_a5d77f0f6e9733071cffe83caed35ed14"><div class="ttname"><a href="namespaceopen_f_s_l.html#a5d77f0f6e9733071cffe83caed35ed14">openFSL::geterrorlen</a></div><div class="ttdeci">size_t geterrorlen(int errnum)</div><div class="ttdef"><b>Definition:</b> <a href="error_8cpp_source.html#l00014">error.cpp:14</a></div></div>

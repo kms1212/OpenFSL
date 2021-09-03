@@ -1,25 +1,26 @@
 <map id="openFSL::FS_FAT32::Thread::makeFile" name="openFSL::FS_FAT32::Thread::makeFile">
 <area shape="rect" id="node1" title=" " alt="" coords="5,1265,157,1307"/>
-<area shape="rect" id="node2" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a40e860b250c845b2d7c1523b9253d71e" title=" " alt="" coords="205,993,357,1035"/>
-<area shape="rect" id="node3" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a3b6179f3739890539da9adc3661eca94" title="Create file." alt="" coords="205,1059,357,1100"/>
+<area shape="rect" id="node2" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a40e860b250c845b2d7c1523b9253d71e" title=" " alt="" coords="205,997,357,1039"/>
+<area shape="rect" id="node3" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a3b6179f3739890539da9adc3661eca94" title="Create file." alt="" coords="205,1063,357,1104"/>
 <area shape="rect" id="node21" href="$classopen_f_s_l_1_1_scheduler.html#a7aec33581daea5576d66f39b8a6ee84a" title=" " alt="" coords="2105,1016,2253,1057"/>
-<area shape="rect" id="node41" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a184bc705635cc9ed227b89da5efa0ce3" title="Separate file name." alt="" coords="205,1295,357,1336"/>
-<area shape="rect" id="node42" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#ac0f8b6f580cce4e3a2056218e4693572" title=" " alt="" coords="205,1360,357,1401"/>
-<area shape="rect" id="node43" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a656243a6c6d6cfd2fab98d34118acfd0" title=" " alt="" coords="205,1425,357,1467"/>
-<area shape="rect" id="node4" href="$namespaceopen_f_s_l.html#ab8e56803f7a2a32d3612b28d5c80d795" title=" " alt="" coords="409,889,610,915"/>
-<area shape="rect" id="node5" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#ab528f2bb95e6c6aa9d45797fac128f28" title="Create entry." alt="" coords="433,940,585,981"/>
+<area shape="rect" id="node42" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a184bc705635cc9ed227b89da5efa0ce3" title="Separate file name." alt="" coords="205,1295,357,1336"/>
+<area shape="rect" id="node43" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#ac0f8b6f580cce4e3a2056218e4693572" title=" " alt="" coords="205,1360,357,1401"/>
+<area shape="rect" id="node44" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a656243a6c6d6cfd2fab98d34118acfd0" title=" " alt="" coords="205,1425,357,1467"/>
+<area shape="rect" id="node4" href="$namespaceopen_f_s_l.html#ab8e56803f7a2a32d3612b28d5c80d795" title=" " alt="" coords="409,867,610,894"/>
+<area shape="rect" id="node5" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a7c1736304d573a2149b61f538c0cf97d" title="Create entry." alt="" coords="433,919,585,960"/>
 <area shape="rect" id="node18" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a58a9719bf310e867c3ab567e860ad5de" title="Get Next Free Cluster." alt="" coords="1579,1127,1731,1168"/>
-<area shape="rect" id="node40" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a0f8d34e99ccadcab8d0b5bb5c1cf1063" title=" " alt="" coords="405,823,613,864"/>
+<area shape="rect" id="node41" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a0f8d34e99ccadcab8d0b5bb5c1cf1063" title=" " alt="" coords="405,801,613,843"/>
 <area shape="rect" id="node6" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a2b4ce7f3fef365fb859ba6ce7c4a6663" title=" " alt="" coords="1291,617,1479,659"/>
-<area shape="rect" id="node22" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a767d954fc4997cd09f2a99c0293fc5a8" title="Change directory." alt="" coords="861,999,1013,1040"/>
-<area shape="rect" id="node24" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a6d867ff7423c61e71921b209f8787f33" title=" " alt="" coords="1288,833,1481,875"/>
-<area shape="rect" id="node32" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#ac8710c626da1b24c243310518797a511" title="Checksum." alt="" coords="661,875,813,916"/>
-<area shape="rect" id="node33" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a463b9722010a80e82e6a41fe0b497425" title=" " alt="" coords="661,940,813,981"/>
+<area shape="rect" id="node22" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a767d954fc4997cd09f2a99c0293fc5a8" title="Change directory." alt="" coords="861,979,1013,1020"/>
+<area shape="rect" id="node24" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a6d867ff7423c61e71921b209f8787f33" title=" " alt="" coords="1288,808,1481,849"/>
+<area shape="rect" id="node32" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#ac8710c626da1b24c243310518797a511" title="Checksum." alt="" coords="661,824,813,865"/>
+<area shape="rect" id="node33" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a463b9722010a80e82e6a41fe0b497425" title=" " alt="" coords="661,889,813,931"/>
 <area shape="rect" id="node34" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a2af605d7d75b3986492a91aa77d9654f" title=" " alt="" coords="1579,843,1731,884"/>
-<area shape="rect" id="node35" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a6359f844440d30016ac8cdfc2b22c0ac" title="List directory contents." alt="" coords="661,1057,813,1099"/>
-<area shape="rect" id="node36" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a4335be3d0dcee8313dbf503707e2da1e" title=" " alt="" coords="661,1123,813,1164"/>
-<area shape="rect" id="node37" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#afe29bdd8bfabb9e3cc0ab090d086a323" title="UTF&#45;8 string to UCS&#45;2 string." alt="" coords="661,605,813,647"/>
-<area shape="rect" id="node38" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#aa2bbdaae9b624bb021dec7972ba1d505" title=" " alt="" coords="1309,232,1461,273"/>
+<area shape="rect" id="node35" href="$createentry_8cpp.html#a8fb3a8fcf4f578e36ef6717f30c500c6" title=" " alt="" coords="683,1006,791,1033"/>
+<area shape="rect" id="node36" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a6359f844440d30016ac8cdfc2b22c0ac" title="List directory contents." alt="" coords="661,1057,813,1099"/>
+<area shape="rect" id="node37" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a4335be3d0dcee8313dbf503707e2da1e" title=" " alt="" coords="661,1123,813,1164"/>
+<area shape="rect" id="node38" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#afe29bdd8bfabb9e3cc0ab090d086a323" title="UTF&#45;8 string to UCS&#45;2 string." alt="" coords="661,555,813,596"/>
+<area shape="rect" id="node39" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#aa2bbdaae9b624bb021dec7972ba1d505" title=" " alt="" coords="1309,232,1461,273"/>
 <area shape="rect" id="node7" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#aa0bb9ca47f6694ec138628d3196cf32f" title=" " alt="" coords="1841,899,2042,940"/>
 <area shape="rect" id="node8" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a9f18028119fe31d20cc8a5f8479ccbcc" title=" " alt="" coords="2103,869,2255,911"/>
 <area shape="rect" id="node9" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#afb002c4a1e3c51776f8a6179772cd2a3" title="Convert FAT area index to sector." alt="" coords="1574,341,1735,383"/>
@@ -33,13 +34,13 @@
 <area shape="rect" id="node20" href="$classopen_f_s_l_1_1_disk_device.html#a6a9797bb1b7252c5faea926b2a7f7040" title=" " alt="" coords="1862,716,2021,757"/>
 <area shape="rect" id="node16" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a89e7e2eed12dffeeffac295df056ce2b" title=" " alt="" coords="1828,122,2055,178"/>
 <area shape="rect" id="node17" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a2f852396acdd66898788fdf1cf622de2" title=" " alt="" coords="1833,203,2049,244"/>
-<area shape="rect" id="node23" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a074c3927605d847ed25bcda7878d8f69" title=" " alt="" coords="1075,999,1227,1040"/>
-<area shape="rect" id="node31" href="$namespaceopen_f_s_l.html#a93d37096baa2dd91e4ae24d62ff7fbad" title="String tokenizer." alt="" coords="1061,947,1240,974"/>
+<area shape="rect" id="node23" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a074c3927605d847ed25bcda7878d8f69" title=" " alt="" coords="1075,979,1227,1020"/>
+<area shape="rect" id="node31" href="$namespaceopen_f_s_l.html#a93d37096baa2dd91e4ae24d62ff7fbad" title="String tokenizer." alt="" coords="1061,927,1240,954"/>
 <area shape="rect" id="node25" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a8059886547a26e1901667927a11f87dd" title=" " alt="" coords="1309,908,1461,949"/>
 <area shape="rect" id="node28" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a0ff44d3662e7738a0919fd816fc3e78e" title="UCS&#45;2 string to UTF&#45;8 string." alt="" coords="1309,973,1461,1015"/>
 <area shape="rect" id="node29" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#abcceb2c1e1d53a07068b541faec8be09" title=" " alt="" coords="1309,1039,1461,1080"/>
 <area shape="rect" id="node30" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a694b422ef3ad41f17e00d7d8ec26a22f" title=" " alt="" coords="1309,1104,1461,1145"/>
 <area shape="rect" id="node26" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#aacb457ea5d8202a670c99cf95c3f13de" title=" " alt="" coords="1579,908,1731,949"/>
 <area shape="rect" id="node27" href="$classopen_f_s_l_1_1_disk_device.html#a9d0c96c7447777bdca562bc667381b42" title=" " alt="" coords="1862,1016,2021,1057"/>
-<area shape="rect" id="node39" href="$classopen_f_s_l_1_1_container.html#a3e2d95c08c09ad8399aa4928ad9b77e0" title="Data buffer getter." alt="" coords="1581,5,1728,47"/>
+<area shape="rect" id="node40" href="$classopen_f_s_l_1_1_container.html#a3e2d95c08c09ad8399aa4928ad9b77e0" title="Data buffer getter." alt="" coords="1581,5,1728,47"/>
 </map>

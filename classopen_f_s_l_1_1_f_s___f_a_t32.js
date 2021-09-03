@@ -31,7 +31,7 @@ var classopen_f_s_l_1_1_f_s___f_a_t32 =
     [ "allocateFreeCluster", "classopen_f_s_l_1_1_f_s___f_a_t32.html#aa5cc996d161460d4f5c000de629939fa", null ],
     [ "chdir", "classopen_f_s_l_1_1_f_s___f_a_t32.html#a767d954fc4997cd09f2a99c0293fc5a8", null ],
     [ "chksumSFN", "classopen_f_s_l_1_1_f_s___f_a_t32.html#ac8710c626da1b24c243310518797a511", null ],
-    [ "createEntry", "classopen_f_s_l_1_1_f_s___f_a_t32.html#ab528f2bb95e6c6aa9d45797fac128f28", null ],
+    [ "createEntry", "classopen_f_s_l_1_1_f_s___f_a_t32.html#a7c1736304d573a2149b61f538c0cf97d", null ],
     [ "createFilesystemThread", "classopen_f_s_l_1_1_f_s___f_a_t32.html#a419dc42091b25694df59c2fdba9060fd", null ],
     [ "dateToWord", "classopen_f_s_l_1_1_f_s___f_a_t32.html#a463b9722010a80e82e6a41fe0b497425", null ],
     [ "fatAreaIndexToSector", "classopen_f_s_l_1_1_f_s___f_a_t32.html#afb002c4a1e3c51776f8a6179772cd2a3", null ],

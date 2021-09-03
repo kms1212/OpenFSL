@@ -139,77 +139,76 @@ $(document).ready(function(){initNavTree('chdir_8cpp_source.html',''); initResiz
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    </div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    std::string path_tmp = subdir-&gt;front(); </div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp; c: path_tmp) c = (char)toupper(c); <span class="comment">// Transform string to upper</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a275fe7152ab687964bf4ca6b449e2dac">currentCluster</a> == <a class="code" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a147ec282ca63d961325a8d2989319161">bpb</a>-&gt;<a class="code" href="structopen_f_s_l_1_1_f_s___f_a_t32_1_1_b_p_b_sector.html#a585089f4013debad763eea825bffd6db">ebpbRootDirectoryCluster</a>) { </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordflow">if</span> (path_tmp == <span class="stringliteral">&quot;.&quot;</span> || path_tmp == <span class="stringliteral">&quot;..&quot;</span>) { <span class="comment">// If current directory is root and chdir to special directory</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            subdir-&gt;erase(subdir-&gt;begin());</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a767d954fc4997cd09f2a99c0293fc5a8">FS_FAT32::chdir</a>(path, subdir);</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        }</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    }</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">bool</span> fileFound = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    std::string pathTemp = <a class="code" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#aa9d033b20a66827798d7f979e9c0e7a6">currentPath</a>;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    uint32_t clusterTemp = <a class="code" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a275fe7152ab687964bf4ca6b449e2dac">currentCluster</a>;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">int</span> errcode = <a class="code" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a074c3927605d847ed25bcda7878d8f69">forEachEntry</a>([=, &amp;subdir, &amp;fileFound, &amp;pathTemp, &amp;clusterTemp](<a class="code" href="structopen_f_s_l_1_1_f_s___f_a_t32_1_1_file_info.html">FileInfo</a> fileInfo) {</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordflow">if</span> (fileInfo.<a class="code" href="structopen_f_s_l_1_1_f_s___f_a_t32_1_1_file_info.html#ae1d1220db296a042651dcf498acb1801">fileAttr</a> &amp; FileAttribute::Directory)</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        {</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            std::string filename = fileInfo.fileName;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            for (auto&amp; c : filename) c = (char)toupper(c); <span class="comment">// Transform string to upper</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            if (filename == path_tmp)</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            {</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                if (path_tmp == <span class="stringliteral">&quot;.&quot;</span>);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                else if (path_tmp == <span class="stringliteral">&quot;..&quot;</span>)</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                    pathTemp = currentPath.substr(0, currentPath.find_last_of(pathSeparator)); <span class="comment">// Delete last subdir from path</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                else</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                    pathTemp += pathSeparator.at(0) + subdir-&gt;front(); <span class="comment">// Add selected subdir to path</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                subdir-&gt;erase(subdir-&gt;begin()); <span class="comment">// Delete first element from subdir list</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                clusterTemp = fileInfo.fileLocation; <span class="comment">// Set current cluster to subdir</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                if (clusterTemp == 0)</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                    clusterTemp = bpb-&gt;ebpbRootDirectoryCluster;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                fileFound = true;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                return true;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            }</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        }</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        });</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordflow">if</span> (errcode) {</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        currentPath = pathTemp;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        currentCluster = clusterTemp;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keywordflow">return</span> errcode;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    }</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordflow">if</span> (fileFound)</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    {</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        currentPath = pathTemp;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        currentCluster = clusterTemp;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a767d954fc4997cd09f2a99c0293fc5a8">FS_FAT32::chdir</a>(path, subdir);</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    }</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    {</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="error_8h.html#a50418bfba956f26454c53fc95859ca43">OPENFSL_ERROR_NOTEXIST</a>;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    }</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;}</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordflow">if</span> (path_tmp == <span class="stringliteral">&quot;.&quot;</span> || </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        (<a class="code" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a275fe7152ab687964bf4ca6b449e2dac">currentCluster</a> == <a class="code" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a147ec282ca63d961325a8d2989319161">bpb</a>-&gt;<a class="code" href="structopen_f_s_l_1_1_f_s___f_a_t32_1_1_b_p_b_sector.html#a585089f4013debad763eea825bffd6db">ebpbRootDirectoryCluster</a> &amp;&amp; path_tmp == <span class="stringliteral">&quot;..&quot;</span>)) {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        subdir-&gt;erase(subdir-&gt;begin());</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a767d954fc4997cd09f2a99c0293fc5a8">FS_FAT32::chdir</a>(path, subdir);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">bool</span> fileFound = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    std::string pathTemp = <a class="code" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#aa9d033b20a66827798d7f979e9c0e7a6">currentPath</a>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    uint32_t clusterTemp = <a class="code" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a275fe7152ab687964bf4ca6b449e2dac">currentCluster</a>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">int</span> errcode = <a class="code" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a074c3927605d847ed25bcda7878d8f69">forEachEntry</a>([=, &amp;subdir, &amp;fileFound, &amp;pathTemp, &amp;clusterTemp](<a class="code" href="structopen_f_s_l_1_1_f_s___f_a_t32_1_1_file_info.html">FileInfo</a> fileInfo) {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordflow">if</span> (fileInfo.<a class="code" href="structopen_f_s_l_1_1_f_s___f_a_t32_1_1_file_info.html#ae1d1220db296a042651dcf498acb1801">fileAttr</a> &amp; FileAttribute::Directory)</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            std::string filename = fileInfo.fileName;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            for (auto&amp; c : filename) c = (char)toupper(c); <span class="comment">// Transform string to upper</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            if (filename == path_tmp)</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                if (path_tmp == <span class="stringliteral">&quot;.&quot;</span>);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                else if (path_tmp == <span class="stringliteral">&quot;..&quot;</span>)</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                    pathTemp = currentPath.substr(0, currentPath.find_last_of(pathSeparator)); <span class="comment">// Delete last subdir from path</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                else</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                    pathTemp += pathSeparator.at(0) + subdir-&gt;front(); <span class="comment">// Add selected subdir to path</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                subdir-&gt;erase(subdir-&gt;begin()); <span class="comment">// Delete first element from subdir list</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                clusterTemp = fileInfo.fileLocation; <span class="comment">// Set current cluster to subdir</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                if (clusterTemp == 0)</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                    clusterTemp = bpb-&gt;ebpbRootDirectoryCluster;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                fileFound = true;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                return true;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        }</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        });</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordflow">if</span> (errcode) {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        currentPath = pathTemp;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        currentCluster = clusterTemp;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="keywordflow">return</span> errcode;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    }</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordflow">if</span> (fileFound)</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    {</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        currentPath = pathTemp;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        currentCluster = clusterTemp;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a767d954fc4997cd09f2a99c0293fc5a8">FS_FAT32::chdir</a>(path, subdir);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    }</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    {</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="error_8h.html#a50418bfba956f26454c53fc95859ca43">OPENFSL_ERROR_NOTEXIST</a>;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    }</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="afs__fat32_8h_html"><div class="ttname"><a href="fs__fat32_8h.html">fs_fat32.h</a></div></div>
-<div class="ttc" id="astructopen_f_s_l_1_1_f_s___f_a_t32_1_1_b_p_b_sector_html_a585089f4013debad763eea825bffd6db"><div class="ttname"><a href="structopen_f_s_l_1_1_f_s___f_a_t32_1_1_b_p_b_sector.html#a585089f4013debad763eea825bffd6db">openFSL::FS_FAT32::BPBSector::ebpbRootDirectoryCluster</a></div><div class="ttdeci">uint32_t ebpbRootDirectoryCluster</div><div class="ttdef"><b>Definition:</b> <a href="fs__fat32_8h_source.html#l00112">fs_fat32.h:112</a></div></div>
+<div class="ttc" id="astructopen_f_s_l_1_1_f_s___f_a_t32_1_1_b_p_b_sector_html_a585089f4013debad763eea825bffd6db"><div class="ttname"><a href="structopen_f_s_l_1_1_f_s___f_a_t32_1_1_b_p_b_sector.html#a585089f4013debad763eea825bffd6db">openFSL::FS_FAT32::BPBSector::ebpbRootDirectoryCluster</a></div><div class="ttdeci">uint32_t ebpbRootDirectoryCluster</div><div class="ttdef"><b>Definition:</b> <a href="fs__fat32_8h_source.html#l00113">fs_fat32.h:113</a></div></div>
 <div class="ttc" id="anamespaceopen_f_s_l_html_a93d37096baa2dd91e4ae24d62ff7fbad"><div class="ttname"><a href="namespaceopen_f_s_l.html#a93d37096baa2dd91e4ae24d62ff7fbad">openFSL::fsl_strtokenize</a></div><div class="ttdeci">void fsl_strtokenize(const std::string &amp;str, std::vector&lt; std::string &gt; &amp;tokens, const std::string &amp;delimiters)</div><div class="ttdoc">String tokenizer.</div><div class="ttdef"><b>Definition:</b> <a href="fslutils_8cpp_source.html#l00022">fslutils.cpp:22</a></div></div>
-<div class="ttc" id="aclassopen_f_s_l_1_1_f_s___f_a_t32_html_aa978661cb04050655c87a63e0ea91821"><div class="ttname"><a href="classopen_f_s_l_1_1_f_s___f_a_t32.html#aa978661cb04050655c87a63e0ea91821">openFSL::FS_FAT32::rootPath</a></div><div class="ttdeci">std::string rootPath</div><div class="ttdef"><b>Definition:</b> <a href="fs__fat32_8h_source.html#l00303">fs_fat32.h:303</a></div></div>
-<div class="ttc" id="astructopen_f_s_l_1_1_f_s___f_a_t32_1_1_file_info_html_ae1d1220db296a042651dcf498acb1801"><div class="ttname"><a href="structopen_f_s_l_1_1_f_s___f_a_t32_1_1_file_info.html#ae1d1220db296a042651dcf498acb1801">openFSL::FS_FAT32::FileInfo::fileAttr</a></div><div class="ttdeci">FileAttribute fileAttr</div><div class="ttdef"><b>Definition:</b> <a href="fs__fat32_8h_source.html#l00338">fs_fat32.h:338</a></div></div>
-<div class="ttc" id="aclassopen_f_s_l_1_1_f_s___f_a_t32_html_a147ec282ca63d961325a8d2989319161"><div class="ttname"><a href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a147ec282ca63d961325a8d2989319161">openFSL::FS_FAT32::bpb</a></div><div class="ttdeci">BPBSector * bpb</div><div class="ttdef"><b>Definition:</b> <a href="fs__fat32_8h_source.html#l00294">fs_fat32.h:294</a></div></div>
+<div class="ttc" id="aclassopen_f_s_l_1_1_f_s___f_a_t32_html_aa978661cb04050655c87a63e0ea91821"><div class="ttname"><a href="classopen_f_s_l_1_1_f_s___f_a_t32.html#aa978661cb04050655c87a63e0ea91821">openFSL::FS_FAT32::rootPath</a></div><div class="ttdeci">std::string rootPath</div><div class="ttdef"><b>Definition:</b> <a href="fs__fat32_8h_source.html#l00310">fs_fat32.h:310</a></div></div>
+<div class="ttc" id="astructopen_f_s_l_1_1_f_s___f_a_t32_1_1_file_info_html_ae1d1220db296a042651dcf498acb1801"><div class="ttname"><a href="structopen_f_s_l_1_1_f_s___f_a_t32_1_1_file_info.html#ae1d1220db296a042651dcf498acb1801">openFSL::FS_FAT32::FileInfo::fileAttr</a></div><div class="ttdeci">FileAttribute fileAttr</div><div class="ttdef"><b>Definition:</b> <a href="fs__fat32_8h_source.html#l00345">fs_fat32.h:345</a></div></div>
+<div class="ttc" id="aclassopen_f_s_l_1_1_f_s___f_a_t32_html_a147ec282ca63d961325a8d2989319161"><div class="ttname"><a href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a147ec282ca63d961325a8d2989319161">openFSL::FS_FAT32::bpb</a></div><div class="ttdeci">BPBSector * bpb</div><div class="ttdef"><b>Definition:</b> <a href="fs__fat32_8h_source.html#l00295">fs_fat32.h:295</a></div></div>
 <div class="ttc" id="aclassopen_f_s_l_1_1_f_s___f_a_t32_html_a767d954fc4997cd09f2a99c0293fc5a8"><div class="ttname"><a href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a767d954fc4997cd09f2a99c0293fc5a8">openFSL::FS_FAT32::chdir</a></div><div class="ttdeci">int __check_result chdir(std::string path, std::vector&lt; std::string &gt; *subdir=nullptr)</div><div class="ttdoc">Change directory.</div><div class="ttdef"><b>Definition:</b> <a href="chdir_8cpp_source.html#l00014">chdir.cpp:14</a></div></div>
 <div class="ttc" id="aclassopen_f_s_l_1_1_f_s___f_a_t32_html_a074c3927605d847ed25bcda7878d8f69"><div class="ttname"><a href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a074c3927605d847ed25bcda7878d8f69">openFSL::FS_FAT32::forEachEntry</a></div><div class="ttdeci">int __check_result forEachEntry(std::function&lt; bool(FileInfo)&gt; forEachFunction, std::string path=&quot;&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="foreachentry_8cpp_source.html#l00014">foreachentry.cpp:14</a></div></div>
-<div class="ttc" id="aclassopen_f_s_l_1_1_f_s___f_a_t32_html_aa9d033b20a66827798d7f979e9c0e7a6"><div class="ttname"><a href="classopen_f_s_l_1_1_f_s___f_a_t32.html#aa9d033b20a66827798d7f979e9c0e7a6">openFSL::FS_FAT32::currentPath</a></div><div class="ttdeci">std::string currentPath</div><div class="ttdef"><b>Definition:</b> <a href="fs__fat32_8h_source.html#l00304">fs_fat32.h:304</a></div></div>
+<div class="ttc" id="aclassopen_f_s_l_1_1_f_s___f_a_t32_html_aa9d033b20a66827798d7f979e9c0e7a6"><div class="ttname"><a href="classopen_f_s_l_1_1_f_s___f_a_t32.html#aa9d033b20a66827798d7f979e9c0e7a6">openFSL::FS_FAT32::currentPath</a></div><div class="ttdeci">std::string currentPath</div><div class="ttdef"><b>Definition:</b> <a href="fs__fat32_8h_source.html#l00311">fs_fat32.h:311</a></div></div>
 <div class="ttc" id="anamespaceopen_f_s_l_html"><div class="ttname"><a href="namespaceopen_f_s_l.html">openFSL</a></div><div class="ttdef"><b>Definition:</b> <a href="fslutils_8cpp_source.html#l00014">fslutils.cpp:14</a></div></div>
-<div class="ttc" id="aclassopen_f_s_l_1_1_f_s___f_a_t32_html_a7421632dee11923f5e196e14a0e6c2d8"><div class="ttname"><a href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a7421632dee11923f5e196e14a0e6c2d8">openFSL::FS_FAT32::pathSeparator</a></div><div class="ttdeci">std::string pathSeparator</div><div class="ttdef"><b>Definition:</b> <a href="fs__fat32_8h_source.html#l00302">fs_fat32.h:302</a></div></div>
-<div class="ttc" id="astructopen_f_s_l_1_1_f_s___f_a_t32_1_1_file_info_html"><div class="ttname"><a href="structopen_f_s_l_1_1_f_s___f_a_t32_1_1_file_info.html">openFSL::FS_FAT32::FileInfo</a></div><div class="ttdoc">FAT32 file information.</div><div class="ttdef"><b>Definition:</b> <a href="fs__fat32_8h_source.html#l00328">fs_fat32.h:328</a></div></div>
-<div class="ttc" id="aerror_8h_html_a50418bfba956f26454c53fc95859ca43"><div class="ttname"><a href="error_8h.html#a50418bfba956f26454c53fc95859ca43">OPENFSL_ERROR_NOTEXIST</a></div><div class="ttdeci">#define OPENFSL_ERROR_NOTEXIST</div><div class="ttdef"><b>Definition:</b> <a href="error_8h_source.html#l00024">error.h:24</a></div></div>
-<div class="ttc" id="aclassopen_f_s_l_1_1_f_s___f_a_t32_html_a275fe7152ab687964bf4ca6b449e2dac"><div class="ttname"><a href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a275fe7152ab687964bf4ca6b449e2dac">openFSL::FS_FAT32::currentCluster</a></div><div class="ttdeci">uint32_t currentCluster</div><div class="ttdef"><b>Definition:</b> <a href="fs__fat32_8h_source.html#l00306">fs_fat32.h:306</a></div></div>
+<div class="ttc" id="aclassopen_f_s_l_1_1_f_s___f_a_t32_html_a7421632dee11923f5e196e14a0e6c2d8"><div class="ttname"><a href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a7421632dee11923f5e196e14a0e6c2d8">openFSL::FS_FAT32::pathSeparator</a></div><div class="ttdeci">std::string pathSeparator</div><div class="ttdef"><b>Definition:</b> <a href="fs__fat32_8h_source.html#l00309">fs_fat32.h:309</a></div></div>
+<div class="ttc" id="astructopen_f_s_l_1_1_f_s___f_a_t32_1_1_file_info_html"><div class="ttname"><a href="structopen_f_s_l_1_1_f_s___f_a_t32_1_1_file_info.html">openFSL::FS_FAT32::FileInfo</a></div><div class="ttdoc">FAT32 file information.</div><div class="ttdef"><b>Definition:</b> <a href="fs__fat32_8h_source.html#l00335">fs_fat32.h:335</a></div></div>
+<div class="ttc" id="aerror_8h_html_a50418bfba956f26454c53fc95859ca43"><div class="ttname"><a href="error_8h.html#a50418bfba956f26454c53fc95859ca43">OPENFSL_ERROR_NOTEXIST</a></div><div class="ttdeci">#define OPENFSL_ERROR_NOTEXIST</div><div class="ttdef"><b>Definition:</b> <a href="error_8h_source.html#l00026">error.h:26</a></div></div>
+<div class="ttc" id="aclassopen_f_s_l_1_1_f_s___f_a_t32_html_a275fe7152ab687964bf4ca6b449e2dac"><div class="ttname"><a href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a275fe7152ab687964bf4ca6b449e2dac">openFSL::FS_FAT32::currentCluster</a></div><div class="ttdeci">uint32_t currentCluster</div><div class="ttdef"><b>Definition:</b> <a href="fs__fat32_8h_source.html#l00313">fs_fat32.h:313</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
