@@ -1,7 +1,11 @@
 <map id="include/openfsl/fslutils.h" name="include/openfsl/fslutils.h">
-<area shape="rect" id="node1" title=" " alt="" coords="87,5,268,32"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,80,72,107"/>
-<area shape="rect" id="node3" title=" " alt="" coords="97,80,167,107"/>
-<area shape="rect" id="node4" title=" " alt="" coords="191,80,254,107"/>
-<area shape="rect" id="node5" title=" " alt="" coords="279,80,337,107"/>
+<area shape="rect" id="node1" title=" " alt="" coords="118,5,300,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="94,155,161,181"/>
+<area shape="rect" id="node3" title=" " alt="" coords="24,80,95,107"/>
+<area shape="rect" id="node4" title=" " alt="" coords="119,80,182,107"/>
+<area shape="rect" id="node5" title=" " alt="" coords="340,155,398,181"/>
+<area shape="rect" id="node6" href="$types_8h.html" title=" " alt="" coords="206,80,329,107"/>
+<area shape="rect" id="node7" href="$error_8h.html" title=" " alt="" coords="404,80,520,107"/>
+<area shape="rect" id="node8" title=" " alt="" coords="426,155,493,181"/>
+<area shape="rect" id="node9" href="$macros_8h.html" title=" " alt="" coords="518,155,652,181"/>
 </map>

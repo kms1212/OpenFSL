@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['id_740',['id',['../classopen_f_s_l_1_1_file_system.html#a3c5ba73d07b2201b109d62c7166d6bb1',1,'openFSL::FileSystem']]],
-  ['iofunctions_741',['ioFunctions',['../classopen_f_s_l_1_1_disk_device.html#a241fe2e8ff02694af47868528d4742f4',1,'openFSL::DiskDevice']]],
-  ['isextendedpartitionexists_742',['isExtendedPartitionExists',['../classopen_f_s_l_1_1_t_b___m_b_r.html#ad08d0298fd100306d30d2abbb171b7e0',1,'openFSL::TB_MBR']]]
+  ['head_739',['head',['../structopen_f_s_l_1_1_c_h_s.html#aae33d69f7a155bb3a39e5405c920461b',1,'openFSL::CHS']]],
+  ['headpercylinder_740',['headPerCylinder',['../structopen_f_s_l_1_1_disk_device_1_1_disk_parameter.html#ac5e4797d1686d8619519751eb5741bce',1,'openFSL::DiskDevice::DiskParameter']]]
 ];

@@ -1,6 +1,8 @@
 var filesystem_8h =
 [
+    [ "FormatOptions", "structopen_f_s_l_1_1_format_options.html", "structopen_f_s_l_1_1_format_options" ],
     [ "FileSystem", "classopen_f_s_l_1_1_file_system.html", "classopen_f_s_l_1_1_file_system" ],
+    [ "FormatOptions", "filesystem_8h.html#ab51ff8a81f880daaed8351b4267585f8", null ],
     [ "FileSystemType", "filesystem_8h.html#acf2d397821f82da6760fd9adf7c8f618", [
       [ "fs_None", "filesystem_8h.html#acf2d397821f82da6760fd9adf7c8f618a46d5948717476b6e0b005fdddb635e86", null ],
       [ "fs_FAT12", "filesystem_8h.html#acf2d397821f82da6760fd9adf7c8f618a07bbef466e91de5a71960f3fab82a3fd", null ],

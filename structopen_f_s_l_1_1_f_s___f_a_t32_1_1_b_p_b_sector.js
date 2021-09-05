@@ -1,5 +1,6 @@
 var structopen_f_s_l_1_1_f_s___f_a_t32_1_1_b_p_b_sector =
 [
+    [ "__Reserved1", "structopen_f_s_l_1_1_f_s___f_a_t32_1_1_b_p_b_sector.html#a14950543442b7ddc898704402ca11a49", null ],
     [ "bpbBootCode", "structopen_f_s_l_1_1_f_s___f_a_t32_1_1_b_p_b_sector.html#ab08d461aafbe3291c6291945cf0ccb94", null ],
     [ "bpbBytesPerSector", "structopen_f_s_l_1_1_f_s___f_a_t32_1_1_b_p_b_sector.html#af78982738a42fd3637aa63b794387739", null ],
     [ "bpbDiskHeads", "structopen_f_s_l_1_1_f_s___f_a_t32_1_1_b_p_b_sector.html#ac51f3cc579285a0e647b02a10055f8f6", null ],
@@ -23,9 +24,8 @@ var structopen_f_s_l_1_1_f_s___f_a_t32_1_1_b_p_b_sector =
     [ "ebpbFSType", "structopen_f_s_l_1_1_f_s___f_a_t32_1_1_b_p_b_sector.html#a09bea369b31fb69ae3144636a7a40065", null ],
     [ "ebpbFSVersion", "structopen_f_s_l_1_1_f_s___f_a_t32_1_1_b_p_b_sector.html#a985b4f4b65366fc0e5ef1ab53cb7ee45", null ],
     [ "ebpbPhysicalDriveNum", "structopen_f_s_l_1_1_f_s___f_a_t32_1_1_b_p_b_sector.html#ae9cf277ddccd1239556b0eb2b54d2a3f", null ],
-    [ "ebpbReserved1", "structopen_f_s_l_1_1_f_s___f_a_t32_1_1_b_p_b_sector.html#ae3a8c4c6861064cce4578414d64f1081", null ],
     [ "ebpbReserved2", "structopen_f_s_l_1_1_f_s___f_a_t32_1_1_b_p_b_sector.html#a4fe00f5dbb1f50e4834a365a08abf47b", null ],
-    [ "ebpbRootDirectoryCluster", "structopen_f_s_l_1_1_f_s___f_a_t32_1_1_b_p_b_sector.html#a585089f4013debad763eea825bffd6db", null ],
+    [ "ebpbRootDirectoryCluster", "structopen_f_s_l_1_1_f_s___f_a_t32_1_1_b_p_b_sector.html#afeb073d8845b84c0139ced2d3c920203", null ],
     [ "ebpbSectorsPerFAT32", "structopen_f_s_l_1_1_f_s___f_a_t32_1_1_b_p_b_sector.html#a4ea88a074117d1994c67e205c08ea0fd", null ],
     [ "ebpbVolumeLabel", "structopen_f_s_l_1_1_f_s___f_a_t32_1_1_b_p_b_sector.html#aa7709ebbeec3f016f073a1dc7505d870", null ],
     [ "ebpbVolumeSerial", "structopen_f_s_l_1_1_f_s___f_a_t32_1_1_b_p_b_sector.html#a86741e023ca527dba3a089b73b763ecd", null ]

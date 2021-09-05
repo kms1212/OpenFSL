@@ -152,14 +152,14 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a01352b3b21a8b4eed60c73f453a19e0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a985b4f4b65366fc0e5ef1ab53cb7ee45"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structopen_f_s_l_1_1_f_s___f_a_t32_1_1_b_p_b_sector.html#a985b4f4b65366fc0e5ef1ab53cb7ee45">ebpbFSVersion</a></td></tr>
 <tr class="separator:a985b4f4b65366fc0e5ef1ab53cb7ee45"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a585089f4013debad763eea825bffd6db"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structopen_f_s_l_1_1_f_s___f_a_t32_1_1_b_p_b_sector.html#a585089f4013debad763eea825bffd6db">ebpbRootDirectoryCluster</a></td></tr>
-<tr class="separator:a585089f4013debad763eea825bffd6db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afeb073d8845b84c0139ced2d3c920203"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a3e8598b070a46d4228a5f0474b915022">cluster_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structopen_f_s_l_1_1_f_s___f_a_t32_1_1_b_p_b_sector.html#afeb073d8845b84c0139ced2d3c920203">ebpbRootDirectoryCluster</a></td></tr>
+<tr class="separator:afeb073d8845b84c0139ced2d3c920203"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf45f6fbc9fa86a0ea8dd8b803b3f79c"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structopen_f_s_l_1_1_f_s___f_a_t32_1_1_b_p_b_sector.html#acf45f6fbc9fa86a0ea8dd8b803b3f79c">ebpbFSInfoSector</a></td></tr>
 <tr class="separator:acf45f6fbc9fa86a0ea8dd8b803b3f79c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8141b92388bbdbf322ba1121d19e6aa4"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structopen_f_s_l_1_1_f_s___f_a_t32_1_1_b_p_b_sector.html#a8141b92388bbdbf322ba1121d19e6aa4">ebpbBSBackupSector</a></td></tr>
 <tr class="separator:a8141b92388bbdbf322ba1121d19e6aa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae3a8c4c6861064cce4578414d64f1081"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structopen_f_s_l_1_1_f_s___f_a_t32_1_1_b_p_b_sector.html#ae3a8c4c6861064cce4578414d64f1081">ebpbReserved1</a> [12]</td></tr>
-<tr class="separator:ae3a8c4c6861064cce4578414d64f1081"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14950543442b7ddc898704402ca11a49"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structopen_f_s_l_1_1_f_s___f_a_t32_1_1_b_p_b_sector.html#a14950543442b7ddc898704402ca11a49">__Reserved1</a> [12]</td></tr>
+<tr class="separator:a14950543442b7ddc898704402ca11a49"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae9cf277ddccd1239556b0eb2b54d2a3f"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structopen_f_s_l_1_1_f_s___f_a_t32_1_1_b_p_b_sector.html#ae9cf277ddccd1239556b0eb2b54d2a3f">ebpbPhysicalDriveNum</a></td></tr>
 <tr class="separator:ae9cf277ddccd1239556b0eb2b54d2a3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4fe00f5dbb1f50e4834a365a08abf47b"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structopen_f_s_l_1_1_f_s___f_a_t32_1_1_b_p_b_sector.html#a4fe00f5dbb1f50e4834a365a08abf47b">ebpbReserved2</a></td></tr>
@@ -217,13 +217,13 @@ Public Attributes</h2></td></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">uint16_t </td><td class="markdownTableBodyNone">ebpbFSVersion </td><td class="markdownTableBodyNone">0x002A  </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">uint32_t </td><td class="markdownTableBodyNone">ebpbRootDirectoryCluster </td><td class="markdownTableBodyNone">0x002C  </td></tr>
+<td class="markdownTableBodyNone">cluster_t </td><td class="markdownTableBodyNone">ebpbRootDirectoryCluster </td><td class="markdownTableBodyNone">0x002C  </td></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">uint16_t </td><td class="markdownTableBodyNone">ebpbFSInfoSector </td><td class="markdownTableBodyNone">0x0030  </td></tr>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">uint16_t </td><td class="markdownTableBodyNone">ebpbBSBackupSector </td><td class="markdownTableBodyNone">0x0032  </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">uint8_t </td><td class="markdownTableBodyNone">ebpbReserved1[12] </td><td class="markdownTableBodyNone">0x0034  </td></tr>
+<td class="markdownTableBodyNone">uint8_t </td><td class="markdownTableBodyNone">__Reserved1[12] </td><td class="markdownTableBodyNone">0x0034  </td></tr>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">uint8_t </td><td class="markdownTableBodyNone">ebpbPhysicalDriveNum </td><td class="markdownTableBodyNone">0x0040  </td></tr>
 <tr class="markdownTableRowOdd">
@@ -242,8 +242,24 @@ Public Attributes</h2></td></tr>
 <td class="markdownTableBodyNone">uint16_t </td><td class="markdownTableBodyNone">bpbVBRSignature </td><td class="markdownTableBodyNone">0x01FE  </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00094">94</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00095">95</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
 </div><h2 class="groupheader">Member Data Documentation</h2>
+<a id="a14950543442b7ddc898704402ca11a49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14950543442b7ddc898704402ca11a49">&#9670;&nbsp;</a></span>__Reserved1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t openFSL::FS_FAT32::BPBSector::__Reserved1[12]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00117">117</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
+
+</div>
+</div>
 <a id="ab08d461aafbe3291c6291945cf0ccb94"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab08d461aafbe3291c6291945cf0ccb94">&#9670;&nbsp;</a></span>bpbBootCode</h2>
 
@@ -256,7 +272,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00124">124</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00125">125</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
 
 </div>
 </div>
@@ -272,7 +288,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00097">97</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00098">98</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
 
 </div>
 </div>
@@ -288,7 +304,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00106">106</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00107">107</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
 
 </div>
 </div>
@@ -304,7 +320,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00100">100</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00101">101</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
 
 </div>
 </div>
@@ -320,7 +336,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00107">107</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00108">108</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
 
 </div>
 </div>
@@ -336,7 +352,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00095">95</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00096">96</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
 
 </div>
 </div>
@@ -352,7 +368,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00103">103</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00104">104</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
 
 </div>
 </div>
@@ -368,7 +384,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00096">96</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00097">97</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
 
 </div>
 </div>
@@ -384,7 +400,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00099">99</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00100">100</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
 
 </div>
 </div>
@@ -400,7 +416,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00101">101</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00102">102</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
 
 </div>
 </div>
@@ -416,7 +432,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00098">98</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00099">99</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
 
 </div>
 </div>
@@ -432,7 +448,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00104">104</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00105">105</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
 
 </div>
 </div>
@@ -448,7 +464,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00105">105</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00106">106</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
 
 </div>
 </div>
@@ -464,7 +480,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00108">108</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00109">109</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
 
 </div>
 </div>
@@ -480,7 +496,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00102">102</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00103">103</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
 
 </div>
 </div>
@@ -496,7 +512,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00125">125</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00126">126</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
 
 </div>
 </div>
@@ -512,7 +528,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00115">115</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00116">116</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
 
 </div>
 </div>
@@ -528,7 +544,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00119">119</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00120">120</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
 
 </div>
 </div>
@@ -544,7 +560,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00111">111</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00112">112</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
 
 </div>
 </div>
@@ -560,7 +576,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00114">114</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00115">115</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
 
 </div>
 </div>
@@ -576,7 +592,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00122">122</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00123">123</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
 
 </div>
 </div>
@@ -592,7 +608,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00112">112</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00113">113</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
 
 </div>
 </div>
@@ -608,23 +624,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00117">117</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
-
-</div>
-</div>
-<a id="ae3a8c4c6861064cce4578414d64f1081"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae3a8c4c6861064cce4578414d64f1081">&#9670;&nbsp;</a></span>ebpbReserved1</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint8_t openFSL::FS_FAT32::BPBSector::ebpbReserved1[12]</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00116">116</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00118">118</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
 
 </div>
 </div>
@@ -640,23 +640,23 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00118">118</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00119">119</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
 
 </div>
 </div>
-<a id="a585089f4013debad763eea825bffd6db"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a585089f4013debad763eea825bffd6db">&#9670;&nbsp;</a></span>ebpbRootDirectoryCluster</h2>
+<a id="afeb073d8845b84c0139ced2d3c920203"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afeb073d8845b84c0139ced2d3c920203">&#9670;&nbsp;</a></span>ebpbRootDirectoryCluster</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint32_t openFSL::FS_FAT32::BPBSector::ebpbRootDirectoryCluster</td>
+          <td class="memname"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a3e8598b070a46d4228a5f0474b915022">cluster_t</a> openFSL::FS_FAT32::BPBSector::ebpbRootDirectoryCluster</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00113">113</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00114">114</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
 
 </div>
 </div>
@@ -672,7 +672,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00110">110</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00111">111</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
 
 </div>
 </div>
@@ -688,7 +688,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00121">121</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00122">122</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
 
 </div>
 </div>
@@ -704,7 +704,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00120">120</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00121">121</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
 
 </div>
 </div>

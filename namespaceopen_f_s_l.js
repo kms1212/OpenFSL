@@ -6,6 +6,7 @@ var namespaceopen_f_s_l =
     [ "DiskDevice", "classopen_f_s_l_1_1_disk_device.html", "classopen_f_s_l_1_1_disk_device" ],
     [ "DiskStructure", "structopen_f_s_l_1_1_disk_structure.html", "structopen_f_s_l_1_1_disk_structure" ],
     [ "FileSystem", "classopen_f_s_l_1_1_file_system.html", "classopen_f_s_l_1_1_file_system" ],
+    [ "FormatOptions", "structopen_f_s_l_1_1_format_options.html", "structopen_f_s_l_1_1_format_options" ],
     [ "FS_FAT32", "classopen_f_s_l_1_1_f_s___f_a_t32.html", "classopen_f_s_l_1_1_f_s___f_a_t32" ],
     [ "FSL_File", "classopen_f_s_l_1_1_f_s_l___file.html", "classopen_f_s_l_1_1_f_s_l___file" ],
     [ "Scheduler", "classopen_f_s_l_1_1_scheduler.html", "classopen_f_s_l_1_1_scheduler" ],

@@ -117,56 +117,60 @@ $(document).ready(function(){initNavTree('error_8h_source.html',''); initResizab
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="macros_8h.html">openfsl/macros.h</a>&quot;</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">// Disk error</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="error_8h.html#a3737296bc24560c54e9716b165487543">   20</a></span>&#160;<span class="preprocessor">#define OPENFSL_ERROR_DISK 0x1</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">// No method is assigned error</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="error_8h.html#a2320802b78acc635f6d1d83e849eea4f">   22</a></span>&#160;<span class="preprocessor">#define OPENFSL_ERROR_NOMETHOD 0x2</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">// Invalid signature error</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="error_8h.html#ad55872ec165924f48fe2bfb56df3cc87">   24</a></span>&#160;<span class="preprocessor">#define OPENFSL_ERROR_INVSIGN 0x3</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">// File or directory not exist error</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="error_8h.html#a50418bfba956f26454c53fc95859ca43">   26</a></span>&#160;<span class="preprocessor">#define OPENFSL_ERROR_NOTEXIST 0x4</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">// File or directory already exists error</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="error_8h.html#a8fbf59bf5319547e6f27498d96a440c6">   28</a></span>&#160;<span class="preprocessor">#define OPENFSL_ERROR_EXIST 0x5</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">// File name is invalid error</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="error_8h.html#adb927dca48a08b8a84c184acd97ea4ff">   30</a></span>&#160;<span class="preprocessor">#define OPENFSL_ERROR_INVNAME 0x6</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">// Too large entry list error</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="error_8h.html#ae30f6320a40fcf22363281a59a310fae">   32</a></span>&#160;<span class="preprocessor">#define OPENFSL_ERROR_LARGELS 0x7</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">// Bad cluster error</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="error_8h.html#af9fd1a6b25f4b82af7078e3a269ccd2a">   34</a></span>&#160;<span class="preprocessor">#define OPENFSL_ERROR_BADCLUS 0x8</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">// No permission error</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="error_8h.html#a80c66b60815c860418b911b9e1ad9b6d">   36</a></span>&#160;<span class="preprocessor">#define OPENFSL_ERROR_NOPERM 0x9</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">// Cluster allocation error</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="error_8h.html#acc0b37dbf2da20ea083b1533e91628a6">   38</a></span>&#160;<span class="preprocessor">#define OPENFSL_ERROR_ALLOC 0xA</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">// Cluster access error</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="error_8h.html#a2c8464b24d3c7e1a2f3725c28be98804">   40</a></span>&#160;<span class="preprocessor">#define OPENFSL_ERROR_CACCESS 0xB</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">// Scheduler task aborted</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="error_8h.html#a58a59db5aad8fed38ffa1e392ba24ad1">   42</a></span>&#160;<span class="preprocessor">#define OPENFSL_ERROR_SCHABRT 0xC</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceopen_f_s_l.html">openFSL</a> {</div>
-<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="namespaceopen_f_s_l.html#af22fc1bd1e188147c3a7642de50efd7f">   45</a></span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> *__error_str[] <a class="code" href="namespaceopen_f_s_l.html#af22fc1bd1e188147c3a7642de50efd7f">__maybe_unused</a> = {</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="stringliteral">&quot;Operation successfully finished.&quot;</span>,</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="stringliteral">&quot;An error occured from disk.&quot;</span>,</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="stringliteral">&quot;Method is not assigned.&quot;</span>, </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="stringliteral">&quot;Invalid file system signature.&quot;</span>,</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="stringliteral">&quot;No such file or directory.&quot;</span>,</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="stringliteral">&quot;File already exists.&quot;</span>,</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="stringliteral">&quot;Invalid name of file.&quot;</span>,</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="stringliteral">&quot;Entry list size too large.&quot;</span>,</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="stringliteral">&quot;Bad cluster has found.&quot;</span>,</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="stringliteral">&quot;Operation not permitted.&quot;</span>,</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="stringliteral">&quot;Cannot allocate cluster.&quot;</span>,</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="stringliteral">&quot;Cannot access cluster.&quot;</span>,</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="stringliteral">&quot;Scheduler task has aborted.&quot;</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    };</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">size_t</span> <a class="code" href="namespaceopen_f_s_l.html#a5d77f0f6e9733071cffe83caed35ed14">geterrorlen</a>(<span class="keywordtype">int</span> errnum);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">char</span>* <a class="code" href="namespaceopen_f_s_l.html#a533e4fe1a3f2b0a38cdd1949cb781d36">geterrorstr</a>(<span class="keywordtype">char</span>* errstr, <span class="keywordtype">int</span> errnum);</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    std::string <a class="code" href="namespaceopen_f_s_l.html#a533e4fe1a3f2b0a38cdd1949cb781d36">geterrorstr</a>(<span class="keywordtype">int</span> errnum);</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;}</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="error_8h.html#a301c819148a27e7e57a093da26677ba9">   20</a></span>&#160;<span class="preprocessor">#define OPENFSL_SUCCESS 0x0</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">// Disk error</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="error_8h.html#a3737296bc24560c54e9716b165487543">   22</a></span>&#160;<span class="preprocessor">#define OPENFSL_ERROR_DISK 0x1</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">// No method is assigned error</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="error_8h.html#a2320802b78acc635f6d1d83e849eea4f">   24</a></span>&#160;<span class="preprocessor">#define OPENFSL_ERROR_NOMETHOD 0x2</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">// Invalid signature error</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="error_8h.html#ad55872ec165924f48fe2bfb56df3cc87">   26</a></span>&#160;<span class="preprocessor">#define OPENFSL_ERROR_INVSIGN 0x3</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">// File or directory not exist error</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="error_8h.html#a50418bfba956f26454c53fc95859ca43">   28</a></span>&#160;<span class="preprocessor">#define OPENFSL_ERROR_NOTEXIST 0x4</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">// File or directory already exists error</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="error_8h.html#a8fbf59bf5319547e6f27498d96a440c6">   30</a></span>&#160;<span class="preprocessor">#define OPENFSL_ERROR_EXIST 0x5</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">// File name is invalid error</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="error_8h.html#adb927dca48a08b8a84c184acd97ea4ff">   32</a></span>&#160;<span class="preprocessor">#define OPENFSL_ERROR_INVNAME 0x6</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">// Too large entry list error</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="error_8h.html#ae30f6320a40fcf22363281a59a310fae">   34</a></span>&#160;<span class="preprocessor">#define OPENFSL_ERROR_LARGELS 0x7</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">// Bad cluster error</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="error_8h.html#af9fd1a6b25f4b82af7078e3a269ccd2a">   36</a></span>&#160;<span class="preprocessor">#define OPENFSL_ERROR_BADCLUS 0x8</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">// No permission error</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="error_8h.html#a80c66b60815c860418b911b9e1ad9b6d">   38</a></span>&#160;<span class="preprocessor">#define OPENFSL_ERROR_NOPERM 0x9</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">// Cluster allocation error</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="error_8h.html#acc0b37dbf2da20ea083b1533e91628a6">   40</a></span>&#160;<span class="preprocessor">#define OPENFSL_ERROR_ALLOC 0xA</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">// Cluster access error</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="error_8h.html#a2c8464b24d3c7e1a2f3725c28be98804">   42</a></span>&#160;<span class="preprocessor">#define OPENFSL_ERROR_CACCESS 0xB</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">// Scheduler task aborted</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="error_8h.html#a58a59db5aad8fed38ffa1e392ba24ad1">   44</a></span>&#160;<span class="preprocessor">#define OPENFSL_ERROR_SCHABRT 0xC</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">// Too large LBA to convert to CHS.</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="error_8h.html#a7fbb631b81a9218d2a7b512b2ea742b4">   46</a></span>&#160;<span class="preprocessor">#define OPENFSL_ERROR_LARGELBA 0xD</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceopen_f_s_l.html">openFSL</a> {</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="namespaceopen_f_s_l.html#af22fc1bd1e188147c3a7642de50efd7f">   49</a></span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> *__error_str[] <a class="code" href="namespaceopen_f_s_l.html#af22fc1bd1e188147c3a7642de50efd7f">__maybe_unused</a> = {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="stringliteral">&quot;Operation successfully finished.&quot;</span>,</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="stringliteral">&quot;An error occured from disk.&quot;</span>,</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="stringliteral">&quot;Method is not assigned.&quot;</span>, </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="stringliteral">&quot;Invalid file system signature.&quot;</span>,</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="stringliteral">&quot;No such file or directory.&quot;</span>,</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="stringliteral">&quot;File already exists.&quot;</span>,</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="stringliteral">&quot;Invalid name of file.&quot;</span>,</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="stringliteral">&quot;Entry list size too large.&quot;</span>,</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="stringliteral">&quot;Bad cluster has found.&quot;</span>,</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="stringliteral">&quot;Operation not permitted.&quot;</span>,</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="stringliteral">&quot;Cannot allocate cluster.&quot;</span>,</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="stringliteral">&quot;Cannot access cluster.&quot;</span>,</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="stringliteral">&quot;Scheduler task has aborted.&quot;</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    };</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">size_t</span> <a class="code" href="namespaceopen_f_s_l.html#a5d77f0f6e9733071cffe83caed35ed14">geterrorlen</a>(<span class="keywordtype">int</span> errnum);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">char</span>* <a class="code" href="namespaceopen_f_s_l.html#a533e4fe1a3f2b0a38cdd1949cb781d36">geterrorstr</a>(<span class="keywordtype">char</span>* errstr, <span class="keywordtype">int</span> errnum);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    std::string <a class="code" href="namespaceopen_f_s_l.html#a533e4fe1a3f2b0a38cdd1949cb781d36">geterrorstr</a>(<span class="keywordtype">int</span> errnum);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;}</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="anamespaceopen_f_s_l_html_af22fc1bd1e188147c3a7642de50efd7f"><div class="ttname"><a href="namespaceopen_f_s_l.html#af22fc1bd1e188147c3a7642de50efd7f">openFSL::__maybe_unused</a></div><div class="ttdeci">static const char *__error_str[] __maybe_unused</div><div class="ttdef"><b>Definition:</b> <a href="error_8h_source.html#l00045">error.h:45</a></div></div>
+<div class="ttc" id="anamespaceopen_f_s_l_html_af22fc1bd1e188147c3a7642de50efd7f"><div class="ttname"><a href="namespaceopen_f_s_l.html#af22fc1bd1e188147c3a7642de50efd7f">openFSL::__maybe_unused</a></div><div class="ttdeci">static const char *__error_str[] __maybe_unused</div><div class="ttdef"><b>Definition:</b> <a href="error_8h_source.html#l00049">error.h:49</a></div></div>
 <div class="ttc" id="amacros_8h_html"><div class="ttname"><a href="macros_8h.html">macros.h</a></div></div>
 <div class="ttc" id="anamespaceopen_f_s_l_html_a5d77f0f6e9733071cffe83caed35ed14"><div class="ttname"><a href="namespaceopen_f_s_l.html#a5d77f0f6e9733071cffe83caed35ed14">openFSL::geterrorlen</a></div><div class="ttdeci">size_t geterrorlen(int errnum)</div><div class="ttdef"><b>Definition:</b> <a href="error_8cpp_source.html#l00014">error.cpp:14</a></div></div>
 <div class="ttc" id="anamespaceopen_f_s_l_html"><div class="ttname"><a href="namespaceopen_f_s_l.html">openFSL</a></div><div class="ttdef"><b>Definition:</b> <a href="fslutils_8cpp_source.html#l00014">fslutils.cpp:14</a></div></div>

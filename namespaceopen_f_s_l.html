@@ -97,6 +97,7 @@ $(document).ready(function(){initNavTree('namespaceopen_f_s_l.html',''); initRes
   <div class="summary">
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#nested-classes">Classes</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
@@ -124,6 +125,8 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopen_f_s_l_1_1_file_system.html">FileSystem</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structopen_f_s_l_1_1_format_options.html">FormatOptions</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html">FS_FAT32</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">FAT32 imeplementation.  <a href="classopen_f_s_l_1_1_f_s___f_a_t32.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -140,6 +143,15 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structopen_f_s_l_1_1_time.html">Time</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="namespaceopen_f_s_l.html">openFSL</a> time  <a href="structopen_f_s_l_1_1_time.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:ab51ff8a81f880daaed8351b4267585f8"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structopen_f_s_l_1_1_format_options.html">openFSL::FormatOptions</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopen_f_s_l.html#ab51ff8a81f880daaed8351b4267585f8">FormatOptions</a></td></tr>
+<tr class="separator:ab51ff8a81f880daaed8351b4267585f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f9e21337372bfed8df10df594b1e20d"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structopen_f_s_l_1_1_c_h_s.html">openFSL::CHS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopen_f_s_l.html#a9f9e21337372bfed8df10df594b1e20d">CHS</a></td></tr>
+<tr class="separator:a9f9e21337372bfed8df10df594b1e20d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c0972874fa49e5cc738daa60d45e58f"><td class="memItemLeft" align="right" valign="top">typedef uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopen_f_s_l.html#a1c0972874fa49e5cc738daa60d45e58f">lba48_t</a></td></tr>
+<tr class="separator:a1c0972874fa49e5cc738daa60d45e58f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -215,16 +227,61 @@ Functions</h2></td></tr>
 <tr class="memitem:a93d37096baa2dd91e4ae24d62ff7fbad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopen_f_s_l.html#a93d37096baa2dd91e4ae24d62ff7fbad">fsl_strtokenize</a> (const std::string &amp;str, std::vector&lt; std::string &gt; &amp;tokens, const std::string &amp;delimiters)</td></tr>
 <tr class="memdesc:a93d37096baa2dd91e4ae24d62ff7fbad"><td class="mdescLeft">&#160;</td><td class="mdescRight">String tokenizer.  <a href="namespaceopen_f_s_l.html#a93d37096baa2dd91e4ae24d62ff7fbad">More...</a><br /></td></tr>
 <tr class="separator:a93d37096baa2dd91e4ae24d62ff7fbad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a593d21c029dcd556a9e549da0cf41019"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopen_f_s_l.html#a593d21c029dcd556a9e549da0cf41019">convertCHSToLBA</a> (<a class="el" href="structopen_f_s_l_1_1_c_h_s.html">CHS</a> chs, size_t sectPerTra, size_t headPerCyl)</td></tr>
-<tr class="separator:a593d21c029dcd556a9e549da0cf41019"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae8905e7eeb7b258c4bb9424ded762b39"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structopen_f_s_l_1_1_c_h_s.html">CHS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopen_f_s_l.html#ae8905e7eeb7b258c4bb9424ded762b39">convertLBAToCHS</a> (size_t lba, size_t sectPerTra, size_t headPerCyl)</td></tr>
-<tr class="separator:ae8905e7eeb7b258c4bb9424ded762b39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54f4fd0607aa071243e1b5936e580199"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceopen_f_s_l.html#a1c0972874fa49e5cc738daa60d45e58f">lba48_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopen_f_s_l.html#a54f4fd0607aa071243e1b5936e580199">convertCHSToLBA</a> (<a class="el" href="structopen_f_s_l_1_1_c_h_s.html">CHS</a> chs, uint8_t sectPerTra, uint8_t headPerCyl)</td></tr>
+<tr class="separator:a54f4fd0607aa071243e1b5936e580199"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4698c1a040c46e74742722eef5356441"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopen_f_s_l.html#a4698c1a040c46e74742722eef5356441">convertLBAToCHS</a> (const <a class="el" href="namespaceopen_f_s_l.html#a1c0972874fa49e5cc738daa60d45e58f">lba48_t</a> lba, <a class="el" href="structopen_f_s_l_1_1_c_h_s.html">CHS</a> &amp;chs, const uint8_t sectPerTra, const uint8_t headPerCyl)</td></tr>
+<tr class="separator:a4698c1a040c46e74742722eef5356441"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
 <tr class="memitem:af22fc1bd1e188147c3a7642de50efd7f"><td class="memItemLeft" align="right" valign="top">static const char *__error_str[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopen_f_s_l.html#af22fc1bd1e188147c3a7642de50efd7f">__maybe_unused</a></td></tr>
 <tr class="separator:af22fc1bd1e188147c3a7642de50efd7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="a9f9e21337372bfed8df10df594b1e20d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f9e21337372bfed8df10df594b1e20d">&#9670;&nbsp;</a></span>CHS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structopen_f_s_l_1_1_c_h_s.html">openFSL::CHS</a> <a class="el" href="structopen_f_s_l_1_1_c_h_s.html">openFSL::CHS</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab51ff8a81f880daaed8351b4267585f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab51ff8a81f880daaed8351b4267585f8">&#9670;&nbsp;</a></span>FormatOptions</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structopen_f_s_l_1_1_format_options.html">openFSL::FormatOptions</a> <a class="el" href="structopen_f_s_l_1_1_format_options.html">openFSL::FormatOptions</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1c0972874fa49e5cc738daa60d45e58f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c0972874fa49e5cc738daa60d45e58f">&#9670;&nbsp;</a></span>lba48_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef uint32_t <a class="el" href="namespaceopen_f_s_l.html#a1c0972874fa49e5cc738daa60d45e58f">openFSL::lba48_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00025">25</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+
+</div>
+</div>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
 <a id="acf2d397821f82da6760fd9adf7c8f618"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acf2d397821f82da6760fd9adf7c8f618">&#9670;&nbsp;</a></span>FileSystemType</h2>
@@ -262,7 +319,7 @@ Variables</h2></td></tr>
 <tr><td class="fieldname"><a id="acf2d397821f82da6760fd9adf7c8f618a3ccf4810ac4fbfd4440a4911a103f629"></a>fs_UDF&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="filesystem_8h_source.html#l00018">18</a> of file <a class="el" href="filesystem_8h_source.html">filesystem.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="filesystem_8h_source.html#l00019">19</a> of file <a class="el" href="filesystem_8h_source.html">filesystem.h</a>.</p>
 
 </div>
 </div>
@@ -462,14 +519,14 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a593d21c029dcd556a9e549da0cf41019"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a593d21c029dcd556a9e549da0cf41019">&#9670;&nbsp;</a></span>convertCHSToLBA()</h2>
+<a id="a54f4fd0607aa071243e1b5936e580199"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54f4fd0607aa071243e1b5936e580199">&#9670;&nbsp;</a></span>convertCHSToLBA()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">size_t openFSL::convertCHSToLBA </td>
+          <td class="memname"><a class="el" href="namespaceopen_f_s_l.html#a1c0972874fa49e5cc738daa60d45e58f">lba48_t</a> openFSL::convertCHSToLBA </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structopen_f_s_l_1_1_c_h_s.html">CHS</a>&#160;</td>
           <td class="paramname"><em>chs</em>, </td>
@@ -477,13 +534,13 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t&#160;</td>
+          <td class="paramtype">uint8_t&#160;</td>
           <td class="paramname"><em>sectPerTra</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t&#160;</td>
+          <td class="paramtype">uint8_t&#160;</td>
           <td class="paramname"><em>headPerCyl</em>&#160;</td>
         </tr>
         <tr>
@@ -498,8 +555,8 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="namespaceopen_f_s_l_a593d21c029dcd556a9e549da0cf41019_icgraph.png" border="0" usemap="#namespaceopen_f_s_l_a593d21c029dcd556a9e549da0cf41019_icgraph" alt=""/></div>
-<map name="namespaceopen_f_s_l_a593d21c029dcd556a9e549da0cf41019_icgraph" id="namespaceopen_f_s_l_a593d21c029dcd556a9e549da0cf41019_icgraph">
+<div class="center"><img src="namespaceopen_f_s_l_a54f4fd0607aa071243e1b5936e580199_icgraph.png" border="0" usemap="#namespaceopen_f_s_l_a54f4fd0607aa071243e1b5936e580199_icgraph" alt=""/></div>
+<map name="namespaceopen_f_s_l_a54f4fd0607aa071243e1b5936e580199_icgraph" id="namespaceopen_f_s_l_a54f4fd0607aa071243e1b5936e580199_icgraph">
 <area shape="rect" title=" " alt="" coords="249,13,448,39"/>
 <area shape="rect" href="classopen_f_s_l_1_1_t_b___m_b_r.html#acc06401a46adeef24713eb31b447c36c" title=" " alt="" coords="5,5,201,47"/>
 </map>
@@ -507,28 +564,34 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="ae8905e7eeb7b258c4bb9424ded762b39"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae8905e7eeb7b258c4bb9424ded762b39">&#9670;&nbsp;</a></span>convertLBAToCHS()</h2>
+<a id="a4698c1a040c46e74742722eef5356441"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4698c1a040c46e74742722eef5356441">&#9670;&nbsp;</a></span>convertLBAToCHS()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structopen_f_s_l_1_1_c_h_s.html">CHS</a> openFSL::convertLBAToCHS </td>
+          <td class="memname">int openFSL::convertLBAToCHS </td>
           <td>(</td>
-          <td class="paramtype">size_t&#160;</td>
+          <td class="paramtype">const <a class="el" href="namespaceopen_f_s_l.html#a1c0972874fa49e5cc738daa60d45e58f">lba48_t</a>&#160;</td>
           <td class="paramname"><em>lba</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t&#160;</td>
+          <td class="paramtype"><a class="el" href="structopen_f_s_l_1_1_c_h_s.html">CHS</a> &amp;&#160;</td>
+          <td class="paramname"><em>chs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t&#160;</td>
           <td class="paramname"><em>sectPerTra</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t&#160;</td>
+          <td class="paramtype">const uint8_t&#160;</td>
           <td class="paramname"><em>headPerCyl</em>&#160;</td>
         </tr>
         <tr>
@@ -606,14 +669,14 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespaceopen_f_s_l_a6062bcbee7520af93a42dff7e430a429_cgraph.png" border="0" usemap="#namespaceopen_f_s_l_a6062bcbee7520af93a42dff7e430a429_cgraph" alt=""/></div>
 <map name="namespaceopen_f_s_l_a6062bcbee7520af93a42dff7e430a429_cgraph" id="namespaceopen_f_s_l_a6062bcbee7520af93a42dff7e430a429_cgraph">
-<area shape="rect" title=" " alt="" coords="5,115,219,141"/>
-<area shape="rect" href="classopen_f_s_l_1_1_sector.html#a4216b770df1b0b98eafa60e3c5d84ea0" title="Data buffer getter." alt="" coords="536,5,721,32"/>
-<area shape="rect" href="classopen_f_s_l_1_1_disk_device.html#a6dde175530641e580e2059e61d7bc3fa" title=" " alt="" coords="549,57,708,98"/>
-<area shape="rect" href="classopen_f_s_l_1_1_t_b___m_b_r.html#aaf1321d27222602f1b7a28443a7c93ee" title=" " alt="" coords="267,217,488,258"/>
-<area shape="rect" href="classopen_f_s_l_1_1_t_b___m_b_r.html#a1001101393d346b1c22c278accbca577" title=" " alt="" coords="276,115,479,141"/>
-<area shape="rect" href="classopen_f_s_l_1_1_disk_device.html#a9d0c96c7447777bdca562bc667381b42" title=" " alt="" coords="549,187,708,229"/>
-<area shape="rect" href="classopen_f_s_l_1_1_container.html#a3e2d95c08c09ad8399aa4928ad9b77e0" title="Data buffer getter." alt="" coords="555,122,702,163"/>
-<area shape="rect" href="classopen_f_s_l_1_1_scheduler.html#a7aec33581daea5576d66f39b8a6ee84a" title=" " alt="" coords="769,187,917,229"/>
+<area shape="rect" title=" " alt="" coords="5,101,219,127"/>
+<area shape="rect" href="classopen_f_s_l_1_1_disk_device.html#a4daf8e0487b2c9c48ae3768bf6c8351e" title=" " alt="" coords="549,5,708,47"/>
+<area shape="rect" href="classopen_f_s_l_1_1_t_b___m_b_r.html#aaf1321d27222602f1b7a28443a7c93ee" title=" " alt="" coords="267,64,488,105"/>
+<area shape="rect" href="classopen_f_s_l_1_1_t_b___m_b_r.html#a1001101393d346b1c22c278accbca577" title=" " alt="" coords="276,130,479,157"/>
+<area shape="rect" href="classopen_f_s_l_1_1_disk_device.html#aabed65fb673c0aa8a132c8b76c85db16" title=" " alt="" coords="549,188,708,229"/>
+<area shape="rect" href="classopen_f_s_l_1_1_sector.html#a4216b770df1b0b98eafa60e3c5d84ea0" title="Data buffer getter." alt="" coords="536,71,721,98"/>
+<area shape="rect" href="classopen_f_s_l_1_1_container.html#a3e2d95c08c09ad8399aa4928ad9b77e0" title="Data buffer getter." alt="" coords="555,123,702,164"/>
+<area shape="rect" href="classopen_f_s_l_1_1_scheduler.html#a7aec33581daea5576d66f39b8a6ee84a" title=" " alt="" coords="769,188,917,229"/>
 </map>
 </div>
 
@@ -635,7 +698,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="detectstruct_8cpp_source.html#l00074">74</a> of file <a class="el" href="detectstruct_8cpp_source.html">detectstruct.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="detectstruct_8cpp_source.html#l00075">75</a> of file <a class="el" href="detectstruct_8cpp_source.html">detectstruct.cpp</a>.</p>
 
 </div>
 </div>
@@ -687,7 +750,7 @@ Here is the caller graph for this function:</div>
 <area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a074c3927605d847ed25bcda7878d8f69" title=" " alt="" coords="823,299,975,340"/>
 <area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#ace77652809130392ed0d821d1deda36f" title="Get file information." alt="" coords="608,353,760,395"/>
 <area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a1eb6a8f88f53e9138244a95e814340ca" title=" " alt="" coords="407,436,559,477"/>
-<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a6359f844440d30016ac8cdfc2b22c0ac" title="List directory contents." alt="" coords="608,181,760,223"/>
+<area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a9d0c821591c2320b7d0efa84e27238fb" title="List directory contents." alt="" coords="608,181,760,223"/>
 <area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a9ecaecf04ce55f0ba28e319df102ec0c" title="Remove entry." alt="" coords="407,240,559,281"/>
 <area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_thread.html#a99713826abd25342e7c25c49158b7668" title=" " alt="" coords="823,471,975,512"/>
 <area shape="rect" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a3b6179f3739890539da9adc3661eca94" title="Create file." alt="" coords="205,129,357,171"/>
@@ -826,7 +889,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="detectstruct_8cpp_source.html#l00064">64</a> of file <a class="el" href="detectstruct_8cpp_source.html">detectstruct.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="detectstruct_8cpp_source.html#l00065">65</a> of file <a class="el" href="detectstruct_8cpp_source.html">detectstruct.cpp</a>.</p>
 
 </div>
 </div>
@@ -866,7 +929,7 @@ Here is the call graph for this function:</div>
 <div class="line">        <span class="stringliteral">&quot;Scheduler task has aborted.&quot;</span></div>
 <div class="line">    }</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="error_8h_source.html#l00045">45</a> of file <a class="el" href="error_8h_source.html">error.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="error_8h_source.html#l00049">49</a> of file <a class="el" href="error_8h_source.html">error.h</a>.</p>
 
 </div>
 </div>

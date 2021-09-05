@@ -1,0 +1,5 @@
+<map id="openFSL::FS_FAT32::fatAreaIndexToSector" name="openFSL::FS_FAT32::fatAreaIndexToSector">
+<area shape="rect" id="node1" title="Convert FAT area index to sector." alt="" coords="5,39,167,80"/>
+<area shape="rect" id="node2" href="$classopen_f_s_l_1_1_file_system.html#a67927109b0ccad0b054e268f0f908f37" title=" " alt="" coords="216,5,372,47"/>
+<area shape="rect" id="node3" href="$classopen_f_s_l_1_1_disk_device.html#a4daf8e0487b2c9c48ae3768bf6c8351e" title=" " alt="" coords="215,71,373,112"/>
+</map>
