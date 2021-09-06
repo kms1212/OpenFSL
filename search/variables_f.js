@@ -1,7 +1,10 @@
 var searchData=
 [
-  ['read_770',['read',['../structopen_f_s_l_1_1_disk_device_1_1_i_o_functions.html#a7c1131737366436d9e2db938923d7aed',1,'openFSL::DiskDevice::IOFunctions']]],
-  ['readpointer_771',['readPointer',['../classopen_f_s_l_1_1_f_s_l___file.html#a3f10214a9c77fd9bbd4e75c738193286',1,'openFSL::FSL_File']]],
-  ['reservedname_772',['reservedName',['../classopen_f_s_l_1_1_f_s___f_a_t32.html#a287df4efc8c7fd379aace3ad1fa8f961',1,'openFSL::FS_FAT32']]],
-  ['rootpath_773',['rootPath',['../classopen_f_s_l_1_1_f_s___f_a_t32.html#aa978661cb04050655c87a63e0ea91821',1,'openFSL::FS_FAT32']]]
+  ['scheduler_787',['scheduler',['../classopen_f_s_l_1_1_disk_device.html#ab7f101ea75a796ac7e77210e90292a72',1,'openFSL::DiskDevice::scheduler()'],['../classopen_f_s_l_1_1_file_system.html#ac887085e9f2fa2e57a826aeb0e9c72e6',1,'openFSL::FileSystem::scheduler()']]],
+  ['sect_788',['sect',['../structopen_f_s_l_1_1_c_h_s.html#a59a6fd764d11f4a583a9cc9eb3d631bc',1,'openFSL::CHS']]],
+  ['sector_5fcount_789',['sector_count',['../classopen_f_s_l_1_1_sector.html#a7dcd0297f5b57370e962319bcfad0f2b',1,'openFSL::Sector']]],
+  ['sectorpertrack_790',['sectorPerTrack',['../structopen_f_s_l_1_1_disk_device_1_1_disk_parameter.html#ad34b442d1c2bc369f0ca3d5f188886c4',1,'openFSL::DiskDevice::DiskParameter']]],
+  ['sectorspercluster_791',['sectorsPerCluster',['../structopen_f_s_l_1_1_format_options.html#ab22f5ca9e9e524a4c1a8796faf5f9a11',1,'openFSL::FormatOptions']]],
+  ['size_792',['size',['../classopen_f_s_l_1_1_container.html#a333ec18dc7818424ea90df1cfdb7aab1',1,'openFSL::Container']]],
+  ['startcluster_793',['startCluster',['../classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#ac11ec9ad7e81618aa11239cfd9d60c8e',1,'openFSL::FS_FAT32::LinkedCluster']]]
 ];

@@ -1,4 +1,4 @@
 var createentry_8cpp =
 [
-    [ "getdigitcount", "createentry_8cpp.html#a8fb3a8fcf4f578e36ef6717f30c500c6", null ]
+    [ "__getdigitcount", "createentry_8cpp.html#ad707323f8f1c2e0a4721281846d08f2b", null ]
 ];

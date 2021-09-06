@@ -15,6 +15,7 @@ var dir_0f9b470631b5c3ef5c1c327f859cd102 =
     [ "file_tell.cpp", "file__tell_8cpp.html", null ],
     [ "file_write.cpp", "file__write_8cpp.html", null ],
     [ "foreachentry.cpp", "foreachentry_8cpp.html", null ],
+    [ "format.cpp", "format_8cpp.html", null ],
     [ "fsinfo.cpp", "fsinfo_8cpp.html", null ],
     [ "getfileinfo.cpp", "getfileinfo_8cpp.html", null ],
     [ "initialize.cpp", "initialize_8cpp.html", null ],

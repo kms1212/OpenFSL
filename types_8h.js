@@ -4,5 +4,5 @@ var types_8h =
     [ "__error_t_defined", "types_8h.html#a20c77cac2614e27ab27eacd101f0e98a", null ],
     [ "CHS", "types_8h.html#a9f9e21337372bfed8df10df594b1e20d", null ],
     [ "error_t", "types_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3", null ],
-    [ "lba48_t", "types_8h.html#a1c0972874fa49e5cc738daa60d45e58f", null ]
+    [ "lba48_t", "types_8h.html#a8a1ea14e0393e7c826326befe2bca309", null ]
 ];

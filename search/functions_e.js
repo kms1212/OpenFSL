@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['wordtodate_637',['wordToDate',['../classopen_f_s_l_1_1_f_s___f_a_t32.html#abcceb2c1e1d53a07068b541faec8be09',1,'openFSL::FS_FAT32']]],
-  ['wordtotime_638',['wordToTime',['../classopen_f_s_l_1_1_f_s___f_a_t32.html#a694b422ef3ad41f17e00d7d8ec26a22f',1,'openFSL::FS_FAT32']]],
-  ['write_639',['write',['../classopen_f_s_l_1_1_f_s_l___file.html#a5ad131b701a1c695a78151f1602941af',1,'openFSL::FSL_File::write()'],['../classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#aa2bbdaae9b624bb021dec7972ba1d505',1,'openFSL::FS_FAT32::LinkedCluster::write()'],['../classopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_i_l_e.html#aa594da514e751724a9f89868061b660f',1,'openFSL::FS_FAT32::FILE::write()']]],
-  ['writedisk_640',['writeDisk',['../classopen_f_s_l_1_1_disk_device.html#a55d767567bd72088a73bb8b2c4ac5edb',1,'openFSL::DiskDevice']]]
+  ['u8toucs2_642',['u8ToUCS2',['../classopen_f_s_l_1_1_f_s___f_a_t32.html#afe29bdd8bfabb9e3cc0ab090d086a323',1,'openFSL::FS_FAT32']]],
+  ['ucs2tou8_643',['ucs2ToU8',['../classopen_f_s_l_1_1_f_s___f_a_t32.html#a0ff44d3662e7738a0919fd816fc3e78e',1,'openFSL::FS_FAT32']]],
+  ['updatebpb_644',['updateBpb',['../classopen_f_s_l_1_1_f_s___f_a_t32.html#afb4012f1a5c11d5b73bb291948a43581',1,'openFSL::FS_FAT32']]],
+  ['updateclusterlist_645',['updateClusterList',['../classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a562c8059b021bc01febdfdcb2d949179',1,'openFSL::FS_FAT32::LinkedCluster']]],
+  ['updatefsinfo_646',['updateFsInfo',['../classopen_f_s_l_1_1_f_s___f_a_t32.html#aa34931d808077fe8937a3e55c2134055',1,'openFSL::FS_FAT32']]]
 ];

@@ -118,49 +118,52 @@ $(document).ready(function(){initNavTree('removedir_8cpp_source.html',''); initR
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
 <div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#af9d3dca363a376898362648d3b65e9a0">   19</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#af9d3dca363a376898362648d3b65e9a0">FS_FAT32::removeDir</a>(std::string path, std::string dirname) {</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    std::vector&lt;FS_FAT32::FileInfo&gt; buf;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a9d0c821591c2320b7d0efa84e27238fb">listDir</a>(&amp;buf, FS_FAT32::FileAttribute::Directory, path);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    uint32_t deleteLocation = 0;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp; c: dirname) c = (char)toupper(c);</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; buf.size(); i++)</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    {</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        std::string filename = buf[i].fileName;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp; c: filename) c = (char)toupper(c);</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordflow">if</span> (dirname == filename)</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        {</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            deleteLocation = buf[i].fileLocation;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        }</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    }</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordflow">if</span> (deleteLocation == 0)</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    {</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="error_8h.html#a50418bfba956f26454c53fc95859ca43">OPENFSL_ERROR_NOTEXIST</a>;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    }</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html">LinkedCluster</a> lcluster(<span class="keyword">this</span>, deleteLocation);</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="types_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a> result = lcluster.<a class="code" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a741e70687b5b5471b4b1cfa04c64fc74">removeCluster</a>((<a class="code" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a3e8598b070a46d4228a5f0474b915022">cluster_t</a>)(lcluster.<a class="code" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a85dc31e31c351ca46f823621430a5752">getClusterList</a>()-&gt;size()));</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordflow">if</span> (result)</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordflow">return</span> result;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    result = <a class="code" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a9ecaecf04ce55f0ba28e319df102ec0c">removeEntry</a>(path, dirname, FileAttribute::Directory);</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">if</span> (result)</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordflow">return</span> result;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    uint32_t deleteLocation = 0;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="types_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a> result = <a class="code" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a9d0c821591c2320b7d0efa84e27238fb">listDir</a>(&amp;buf, FS_FAT32::FileAttribute::Directory, path);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordflow">if</span> (result)</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp; c: dirname) c = (char)toupper(c);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; buf.size(); i++)</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        std::string filename = buf[i].fileName;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp; c: filename) c = (char)toupper(c);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordflow">if</span> (dirname == filename)</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            deleteLocation = buf[i].fileLocation;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        }</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    }</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">if</span> (deleteLocation == 0)</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="error_8h.html#a50418bfba956f26454c53fc95859ca43">OPENFSL_ERROR_NOTEXIST</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    }</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html">LinkedCluster</a> lcluster(<span class="keyword">this</span>, deleteLocation);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    result = lcluster.<a class="code" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a741e70687b5b5471b4b1cfa04c64fc74">removeCluster</a>((<a class="code" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a3e8598b070a46d4228a5f0474b915022">cluster_t</a>)(lcluster.<a class="code" href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a85dc31e31c351ca46f823621430a5752">getClusterList</a>()-&gt;size()));</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordflow">if</span> (result)</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    result = <a class="code" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a9ecaecf04ce55f0ba28e319df102ec0c">removeEntry</a>(path, dirname, FileAttribute::Directory);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">if</span> (result)</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="afs__fat32_8h_html"><div class="ttname"><a href="fs__fat32_8h.html">fs_fat32.h</a></div></div>
-<div class="ttc" id="aclassopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster_html"><div class="ttname"><a href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html">openFSL::FS_FAT32::LinkedCluster</a></div><div class="ttdoc">FAT32 linked cluster.</div><div class="ttdef"><b>Definition:</b> <a href="fs__fat32_8h_source.html#l00226">fs_fat32.h:226</a></div></div>
-<div class="ttc" id="atypes_8h_html_a9ad6b2dc3cbff040775e79656fe8e1a3"><div class="ttname"><a href="types_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a></div><div class="ttdeci">int error_t</div><div class="ttdef"><b>Definition:</b> <a href="types_8h_source.html#l00018">types.h:18</a></div></div>
+<div class="ttc" id="aclassopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster_html"><div class="ttname"><a href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html">openFSL::FS_FAT32::LinkedCluster</a></div><div class="ttdoc">FAT32 linked cluster.</div><div class="ttdef"><b>Definition:</b> <a href="fs__fat32_8h_source.html#l00231">fs_fat32.h:231</a></div></div>
+<div class="ttc" id="atypes_8h_html_a9ad6b2dc3cbff040775e79656fe8e1a3"><div class="ttname"><a href="types_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a></div><div class="ttdeci">int error_t</div><div class="ttdef"><b>Definition:</b> <a href="types_8h_source.html#l00022">types.h:22</a></div></div>
 <div class="ttc" id="aclassopen_f_s_l_1_1_f_s___f_a_t32_html_a9d0c821591c2320b7d0efa84e27238fb"><div class="ttname"><a href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a9d0c821591c2320b7d0efa84e27238fb">openFSL::FS_FAT32::listDir</a></div><div class="ttdeci">error_t __check_result listDir(std::vector&lt; FileInfo &gt; *buf, FileAttribute searchAttr=(FileAttribute)(FileAttribute::Archive|FileAttribute::Directory), std::string path=&quot;&quot;, cluster_t cluster=0xFFFFFFFF)</div><div class="ttdoc">List directory contents.</div><div class="ttdef"><b>Definition:</b> <a href="listdir_8cpp_source.html#l00014">listdir.cpp:14</a></div></div>
-<div class="ttc" id="aclassopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster_html_a85dc31e31c351ca46f823621430a5752"><div class="ttname"><a href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a85dc31e31c351ca46f823621430a5752">openFSL::FS_FAT32::LinkedCluster::getClusterList</a></div><div class="ttdeci">std::vector&lt; cluster_t &gt; * getClusterList()</div><div class="ttdef"><b>Definition:</b> <a href="fs__fat32_8h_source.html#l00269">fs_fat32.h:269</a></div></div>
+<div class="ttc" id="aclassopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster_html_a85dc31e31c351ca46f823621430a5752"><div class="ttname"><a href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a85dc31e31c351ca46f823621430a5752">openFSL::FS_FAT32::LinkedCluster::getClusterList</a></div><div class="ttdeci">std::vector&lt; cluster_t &gt; * getClusterList()</div><div class="ttdef"><b>Definition:</b> <a href="fs__fat32_8h_source.html#l00274">fs_fat32.h:274</a></div></div>
 <div class="ttc" id="aclassopen_f_s_l_1_1_f_s___f_a_t32_html_af9d3dca363a376898362648d3b65e9a0"><div class="ttname"><a href="classopen_f_s_l_1_1_f_s___f_a_t32.html#af9d3dca363a376898362648d3b65e9a0">openFSL::FS_FAT32::removeDir</a></div><div class="ttdeci">int __check_result removeDir(std::string path, std::string dirname)</div><div class="ttdoc">Remove directory.</div><div class="ttdef"><b>Definition:</b> <a href="removedir_8cpp_source.html#l00019">removedir.cpp:19</a></div></div>
 <div class="ttc" id="aclassopen_f_s_l_1_1_f_s___f_a_t32_html_a9ecaecf04ce55f0ba28e319df102ec0c"><div class="ttname"><a href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a9ecaecf04ce55f0ba28e319df102ec0c">openFSL::FS_FAT32::removeEntry</a></div><div class="ttdeci">int __check_result removeEntry(std::string path, std::string deletename, FileAttribute filter)</div><div class="ttdoc">Remove entry.</div><div class="ttdef"><b>Definition:</b> <a href="removeentry_8cpp_source.html#l00014">removeentry.cpp:14</a></div></div>
 <div class="ttc" id="anamespaceopen_f_s_l_html"><div class="ttname"><a href="namespaceopen_f_s_l.html">openFSL</a></div><div class="ttdef"><b>Definition:</b> <a href="fslutils_8cpp_source.html#l00014">fslutils.cpp:14</a></div></div>
-<div class="ttc" id="aclassopen_f_s_l_1_1_f_s___f_a_t32_html_a3e8598b070a46d4228a5f0474b915022"><div class="ttname"><a href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a3e8598b070a46d4228a5f0474b915022">openFSL::FS_FAT32::cluster_t</a></div><div class="ttdeci">uint32_t cluster_t</div><div class="ttdef"><b>Definition:</b> <a href="fs__fat32_8h_source.html#l00041">fs_fat32.h:41</a></div></div>
-<div class="ttc" id="aerror_8h_html_a50418bfba956f26454c53fc95859ca43"><div class="ttname"><a href="error_8h.html#a50418bfba956f26454c53fc95859ca43">OPENFSL_ERROR_NOTEXIST</a></div><div class="ttdeci">#define OPENFSL_ERROR_NOTEXIST</div><div class="ttdef"><b>Definition:</b> <a href="error_8h_source.html#l00028">error.h:28</a></div></div>
+<div class="ttc" id="aclassopen_f_s_l_1_1_f_s___f_a_t32_html_a3e8598b070a46d4228a5f0474b915022"><div class="ttname"><a href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a3e8598b070a46d4228a5f0474b915022">openFSL::FS_FAT32::cluster_t</a></div><div class="ttdeci">uint32_t cluster_t</div><div class="ttdef"><b>Definition:</b> <a href="fs__fat32_8h_source.html#l00046">fs_fat32.h:46</a></div></div>
+<div class="ttc" id="aerror_8h_html_a50418bfba956f26454c53fc95859ca43"><div class="ttname"><a href="error_8h.html#a50418bfba956f26454c53fc95859ca43">OPENFSL_ERROR_NOTEXIST</a></div><div class="ttdeci">#define OPENFSL_ERROR_NOTEXIST</div><div class="ttdef"><b>Definition:</b> <a href="error_8h_source.html#l00032">error.h:32</a></div></div>
 <div class="ttc" id="aclassopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster_html_a741e70687b5b5471b4b1cfa04c64fc74"><div class="ttname"><a href="classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a741e70687b5b5471b4b1cfa04c64fc74">openFSL::FS_FAT32::LinkedCluster::removeCluster</a></div><div class="ttdeci">error_t __check_result removeCluster(cluster_t removeCount)</div><div class="ttdef"><b>Definition:</b> <a href="linkedcluster__cluster_8cpp_source.html#l00065">linkedcluster_cluster.cpp:65</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

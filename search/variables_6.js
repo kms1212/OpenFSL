@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['g_743',['g',['../structopen_f_s_l_1_1_format_options.html#a83d2fc91f2ee59f9747c9455061fa6f9',1,'openFSL::FormatOptions']]]
+  ['head_757',['head',['../structopen_f_s_l_1_1_c_h_s.html#aae33d69f7a155bb3a39e5405c920461b',1,'openFSL::CHS']]],
+  ['headpercylinder_758',['headPerCylinder',['../structopen_f_s_l_1_1_disk_device_1_1_disk_parameter.html#ac5e4797d1686d8619519751eb5741bce',1,'openFSL::DiskDevice::DiskParameter']]]
 ];
