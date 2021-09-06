@@ -13,7 +13,7 @@ var classopen_f_s_l_1_1_f_s___f_a_t32_1_1_thread =
     [ "makeFile", "classopen_f_s_l_1_1_f_s___f_a_t32_1_1_thread.html#ad2e444f5280e7a4f3749eef32aca70d9", null ],
     [ "removeDirectory", "classopen_f_s_l_1_1_f_s___f_a_t32_1_1_thread.html#ac298b732b0a7ca6829ea750ab4043974", null ],
     [ "removeFile", "classopen_f_s_l_1_1_f_s___f_a_t32_1_1_thread.html#aad6d82e0709d4fe5098e328ad7c06433", null ],
-    [ "setEntryInfo", "classopen_f_s_l_1_1_f_s___f_a_t32_1_1_thread.html#a15528786f78b53264a206de9203e8bb7", null ],
+    [ "setEntryInfo", "classopen_f_s_l_1_1_f_s___f_a_t32_1_1_thread.html#a471b040471013993ff9eab0fb7ed3b9a", null ],
     [ "setVolumeName", "classopen_f_s_l_1_1_f_s___f_a_t32_1_1_thread.html#adfb66bbb54bc10019132cca28ed71c31", null ],
     [ "currentCluster", "classopen_f_s_l_1_1_f_s___f_a_t32_1_1_thread.html#a80c00b010f62ff08d9a743a03ca65da5", null ],
     [ "currentPath", "classopen_f_s_l_1_1_f_s___f_a_t32_1_1_thread.html#a5edf4eb8d68bed8d7ff20c44b57fd191", null ],

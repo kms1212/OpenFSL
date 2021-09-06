@@ -140,8 +140,9 @@ var NAVTREEINDEX1 =
 "getfileinfo_8cpp.html":[3,0,1,0,1,16],
 "getfileinfo_8cpp_source.html":[3,0,1,0,1,16],
 "globals.html":[3,1,0],
-"globals_defs.html":[3,1,2],
+"globals_defs.html":[3,1,3],
 "globals_func.html":[3,1,1],
+"globals_type.html":[3,1,2],
 "gpt_8cpp.html":[3,0,3,8],
 "gpt_8cpp_source.html":[3,0,3,8],
 "gpt_8h.html":[3,0,2,0,8],
@@ -222,7 +223,7 @@ var NAVTREEINDEX1 =
 "structopen_f_s_l_1_1_c_h_s.html#a59a6fd764d11f4a583a9cc9eb3d631bc":[2,0,0,1,3],
 "structopen_f_s_l_1_1_c_h_s.html#a5b63a2209b29726b81fd69eee67aa26d":[2,0,0,1,1],
 "structopen_f_s_l_1_1_c_h_s.html#aae33d69f7a155bb3a39e5405c920461b":[2,0,0,1,2],
-"structopen_f_s_l_1_1_c_h_s.html#aeac8200f53046c4024014c7824e2ec25":[2,0,0,1,0],
+"structopen_f_s_l_1_1_c_h_s.html#add5e047de240883c9e67c278197ccd6a":[2,0,0,1,0],
 "structopen_f_s_l_1_1_disk_device_1_1_disk_parameter.html":[2,0,0,3,0],
 "structopen_f_s_l_1_1_disk_device_1_1_disk_parameter.html#ab6154c61f1dfa3e0cfa86fa647645ef1":[2,0,0,3,0,0],
 "structopen_f_s_l_1_1_disk_device_1_1_disk_parameter.html#ac5e4797d1686d8619519751eb5741bce":[2,0,0,3,0,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX1 =
 "structopen_f_s_l_1_1_f_s___f_a_t32_1_1_b_p_b_sector.html#a4ea88a074117d1994c67e205c08ea0fd":[2,0,0,7,0,26],
 "structopen_f_s_l_1_1_f_s___f_a_t32_1_1_b_p_b_sector.html#a4fe00f5dbb1f50e4834a365a08abf47b":[2,0,0,7,0,24],
 "structopen_f_s_l_1_1_f_s___f_a_t32_1_1_b_p_b_sector.html#a68e4396e598c2b010979598b1e0ee58a":[2,0,0,7,0,18],
-"structopen_f_s_l_1_1_f_s___f_a_t32_1_1_b_p_b_sector.html#a8141b92388bbdbf322ba1121d19e6aa4":[2,0,0,7,0,17],
-"structopen_f_s_l_1_1_f_s___f_a_t32_1_1_b_p_b_sector.html#a86741e023ca527dba3a089b73b763ecd":[2,0,0,7,0,28]
+"structopen_f_s_l_1_1_f_s___f_a_t32_1_1_b_p_b_sector.html#a8141b92388bbdbf322ba1121d19e6aa4":[2,0,0,7,0,17]
 };
