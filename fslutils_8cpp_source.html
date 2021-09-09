@@ -135,11 +135,11 @@ $(document).ready(function(){initNavTree('fslutils_8cpp_source.html',''); initRe
 <div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="namespaceopen_f_s_l.html#af348ee3bf475e6caab10d2c1af841ce8">   35</a></span>&#160;std::tm <a class="code" href="namespaceopen_f_s_l.html#af348ee3bf475e6caab10d2c1af841ce8">openFSL::fsl_localtime</a>(std::time_t time)</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    std::tm tmTime;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#if defined(__GNUC__) || defined (__clang__)</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    localtime_r(&amp;time, &amp;tmTime);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#elif defined(_MSC_VER)</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    __time64_t time64 = (__time64_t)time;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    _localtime64_s(&amp;tmTime, &amp;time64);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#ifdef _WIN32</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    __time64_t time64 = (__time64_t)time;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    _localtime64_s(&amp;tmTime, &amp;time64);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#elif defined(_MSC_VER)</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    localtime_r(&amp;time, &amp;tmTime);</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#else</span></div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    std::tm* temp = std::localtime(&amp;time);</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    memcpy(&amp;tmTime, temp, <span class="keyword">sizeof</span>(std::tm));</div>

@@ -29,5 +29,7 @@ var dir_5cfc8f798c7a4c570457442210be7344 =
     [ "sector.h", "sector_8h.html", [
       [ "Sector", "classopen_f_s_l_1_1_sector.html", "classopen_f_s_l_1_1_sector" ]
     ] ],
-    [ "types.h", "types_8h.html", "types_8h" ]
+    [ "symbols.h", "symbols_8h.html", "symbols_8h" ],
+    [ "types.h", "types_8h.html", "types_8h" ],
+    [ "version.h", "version_8h.html", "version_8h" ]
 ];
