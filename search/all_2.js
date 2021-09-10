@@ -1,7 +1,7 @@
 var searchData=
 [
   ['backupbslocation_23',['backupBSLocation',['../structopen_f_s_l_1_1_format_options.html#ace8996f1cbef70a4e1ded0eacd0e7f20',1,'openFSL::FormatOptions']]],
-  ['binary_24',['Binary',['../namespaceopen_f_s_l.html#a917e7536833981276b157cc38f88a577a2ca2646e0480fd5c62253801abf5c9cd',1,'openFSL']]],
+  ['binary_24',['Binary',['../namespaceopen_f_s_l.html#a917e7536833981276b157cc38f88a577a6ce976e8f061b2b5cfe4d0c50c3405dd',1,'openFSL']]],
   ['biosdrivenum_25',['biosDriveNum',['../structopen_f_s_l_1_1_format_options.html#afcc932f7980ceded87c60c22a10275cf',1,'openFSL::FormatOptions']]],
   ['bpb_26',['bpb',['../classopen_f_s_l_1_1_f_s___f_a_t32.html#a147ec282ca63d961325a8d2989319161',1,'openFSL::FS_FAT32']]],
   ['bpb_2ecpp_27',['bpb.cpp',['../fat32_2src_2bpb_8cpp.html',1,'(Global Namespace)'],['../ntfs_2src_2bpb_8cpp.html',1,'(Global Namespace)']]],

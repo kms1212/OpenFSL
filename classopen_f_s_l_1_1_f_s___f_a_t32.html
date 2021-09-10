@@ -188,17 +188,17 @@ Classes</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr class="memitem:adbb09877a5c254353089e03349416768"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#adbb09877a5c254353089e03349416768">FileAttribute</a> : uint8_t { <br />
-&#160;&#160;<a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#adbb09877a5c254353089e03349416768a7973b95ceef2daef9b644f922f545f76">ReadOnly</a> = 0x01, 
-<a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#adbb09877a5c254353089e03349416768a7df53e3be3d1899bbeb0c7c5c7151bdf">Hidden</a> = 0x02, 
-<a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#adbb09877a5c254353089e03349416768a62e37ebece356726dbaebbd658539183">System</a> = 0x04, 
-<a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#adbb09877a5c254353089e03349416768a2198a7c987bda0fed5a746a65f96d56b">VolumeID</a> = 0x08, 
+&#160;&#160;<a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#adbb09877a5c254353089e03349416768a131fb182a881796e7606ed6da27f1197">FileAttribute::ReadOnly</a> = 0x01, 
+<a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#adbb09877a5c254353089e03349416768a7acdf85c69cc3c5305456a293524386e">FileAttribute::Hidden</a> = 0x02, 
+<a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#adbb09877a5c254353089e03349416768aa45da96d0bf6575970f2d27af22be28a">FileAttribute::System</a> = 0x04, 
+<a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#adbb09877a5c254353089e03349416768a52350a2e36c93cdc5a6eb4ffb83fe482">FileAttribute::VolumeID</a> = 0x08, 
 <br />
-&#160;&#160;<a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#adbb09877a5c254353089e03349416768a193c491201f8e01764fd30360d51dc54">Directory</a> = 0x10, 
-<a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#adbb09877a5c254353089e03349416768aca881b0da231bf86a394f543a58fd873">Archive</a> = 0x20, 
-<a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#adbb09877a5c254353089e03349416768a71d5f5cefab99540d21c309dccbb51eb">LFN</a> = 0x0F, 
-<a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#adbb09877a5c254353089e03349416768ae566d0af108b9a7e363ed66a0fac7b24">Any</a> = Directory | Archive, 
+&#160;&#160;<a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#adbb09877a5c254353089e03349416768ae73cda510e8bb947f7e61089e5581494">FileAttribute::Directory</a> = 0x10, 
+<a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#adbb09877a5c254353089e03349416768ae727b00944f81e1d0a95c12886ac4641">FileAttribute::Archive</a> = 0x20, 
+<a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#adbb09877a5c254353089e03349416768aae78c9a97ad8cd841f555f2755863969">FileAttribute::LFN</a> = 0x0F, 
+<a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#adbb09877a5c254353089e03349416768aed36a1ef76a59ee3f15180e0441188ad">FileAttribute::Any</a> = Directory | Archive, 
 <br />
-&#160;&#160;<a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#adbb09877a5c254353089e03349416768a66ddf1b4f817ca8fa0e842714d8b748b">All</a> = Directory | Archive | VolumeID
+&#160;&#160;<a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#adbb09877a5c254353089e03349416768ab1c94ca2fbc3e78fc30069c8d0f01680">FileAttribute::All</a> = Directory | Archive | VolumeID
 <br />
  }</td></tr>
 <tr class="memdesc:adbb09877a5c254353089e03349416768"><td class="mdescLeft">&#160;</td><td class="mdescRight">FAT32 file attribute.  <a href="classopen_f_s_l_1_1_f_s___f_a_t32.html#adbb09877a5c254353089e03349416768">More...</a><br /></td></tr>
@@ -251,7 +251,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9ecaecf04ce55f0ba28e319df102ec0c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a> <a class="el" href="macros_8h.html#a73fa52cd4bbaa839980b3008201d09c0">__check_result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a9ecaecf04ce55f0ba28e319df102ec0c">removeEntry</a> (std::string path, std::string deletename, <a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#adbb09877a5c254353089e03349416768">FileAttribute</a> filter)</td></tr>
 <tr class="memdesc:a9ecaecf04ce55f0ba28e319df102ec0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove entry.  <a href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a9ecaecf04ce55f0ba28e319df102ec0c">More...</a><br /></td></tr>
 <tr class="separator:a9ecaecf04ce55f0ba28e319df102ec0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d0c821591c2320b7d0efa84e27238fb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a> <a class="el" href="macros_8h.html#a73fa52cd4bbaa839980b3008201d09c0">__check_result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a9d0c821591c2320b7d0efa84e27238fb">listDir</a> (std::vector&lt; <a class="el" href="structopen_f_s_l_1_1_f_s___f_a_t32_1_1_file_info.html">FileInfo</a> &gt; *buf, <a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#adbb09877a5c254353089e03349416768">FileAttribute</a> searchAttr=(<a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#adbb09877a5c254353089e03349416768">FileAttribute</a>)(FileAttribute::Archive|FileAttribute::Directory), std::string path=&quot;&quot;, <a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a3e8598b070a46d4228a5f0474b915022">cluster_t</a> cluster=0xFFFFFFFF)</td></tr>
+<tr class="memitem:a9d0c821591c2320b7d0efa84e27238fb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a> <a class="el" href="macros_8h.html#a73fa52cd4bbaa839980b3008201d09c0">__check_result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a9d0c821591c2320b7d0efa84e27238fb">listDir</a> (std::vector&lt; <a class="el" href="structopen_f_s_l_1_1_f_s___f_a_t32_1_1_file_info.html">FileInfo</a> &gt; *buf, <a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#adbb09877a5c254353089e03349416768">FileAttribute</a> searchAttr=(<a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#adbb09877a5c254353089e03349416768">FileAttribute</a>)(<a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#adbb09877a5c254353089e03349416768ae727b00944f81e1d0a95c12886ac4641">FileAttribute::Archive</a>|<a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#adbb09877a5c254353089e03349416768ae73cda510e8bb947f7e61089e5581494">FileAttribute::Directory</a>), std::string path=&quot;&quot;, <a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a3e8598b070a46d4228a5f0474b915022">cluster_t</a> cluster=0xFFFFFFFF)</td></tr>
 <tr class="memdesc:a9d0c821591c2320b7d0efa84e27238fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">List directory contents.  <a href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a9d0c821591c2320b7d0efa84e27238fb">More...</a><br /></td></tr>
 <tr class="separator:a9d0c821591c2320b7d0efa84e27238fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a767d954fc4997cd09f2a99c0293fc5a8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a> <a class="el" href="macros_8h.html#a73fa52cd4bbaa839980b3008201d09c0">__check_result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a767d954fc4997cd09f2a99c0293fc5a8">chdir</a> (std::string path, std::vector&lt; std::string &gt; *subdir=nullptr)</td></tr>
@@ -379,12 +379,14 @@ Private Attributes</h2></td></tr>
 Friends</h2></td></tr>
 <tr class="memitem:a7d74b75d8d6aac4507be71f5061168bd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#adbb09877a5c254353089e03349416768">FS_FAT32::FileAttribute</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a7d74b75d8d6aac4507be71f5061168bd">operator|</a> (<a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#adbb09877a5c254353089e03349416768">FS_FAT32::FileAttribute</a> a, <a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#adbb09877a5c254353089e03349416768">FS_FAT32::FileAttribute</a> b)</td></tr>
 <tr class="separator:a7d74b75d8d6aac4507be71f5061168bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bc920e6ed661e12435e6159f54093d5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#adbb09877a5c254353089e03349416768">FS_FAT32::FileAttribute</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a3bc920e6ed661e12435e6159f54093d5">operator&amp;</a> (<a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#adbb09877a5c254353089e03349416768">FS_FAT32::FileAttribute</a> a, <a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#adbb09877a5c254353089e03349416768">FS_FAT32::FileAttribute</a> b)</td></tr>
+<tr class="separator:a3bc920e6ed661e12435e6159f54093d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>FAT32 imeplementation. </p>
-<p>Implements FAT32 </p><dl class="todo"><dt><b><a class="el" href="todo.html#_todo000002">Todo:</a></b></dt><dd>Reduce disk io count, File write, File/directory modify, File/directory delete, FS format, UCS-2 Unicode Codepage</dd></dl>
+<p>Implements FAT32 </p><dl class="todo"><dt><b><a class="el" href="todo.html#_todo000002">Todo:</a></b></dt><dd>Reduce disk io count, File write, File/directory modify, File/directory delete, FS format </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00044">44</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00043">43</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="adf676068687cffbe0ac1334a6743a4ee"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adf676068687cffbe0ac1334a6743a4ee">&#9670;&nbsp;</a></span>BPBSector</h2>
@@ -520,7 +522,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00046">46</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00045">45</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
 
 </div>
 </div>
@@ -711,27 +713,35 @@ Friends</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">enum <a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#adbb09877a5c254353089e03349416768">openFSL::FS_FAT32::FileAttribute</a> : uint8_t</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>FAT32 file attribute. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="adbb09877a5c254353089e03349416768a7973b95ceef2daef9b644f922f545f76"></a>ReadOnly&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adbb09877a5c254353089e03349416768a7df53e3be3d1899bbeb0c7c5c7151bdf"></a>Hidden&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adbb09877a5c254353089e03349416768a62e37ebece356726dbaebbd658539183"></a>System&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adbb09877a5c254353089e03349416768a2198a7c987bda0fed5a746a65f96d56b"></a>VolumeID&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adbb09877a5c254353089e03349416768a193c491201f8e01764fd30360d51dc54"></a>Directory&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adbb09877a5c254353089e03349416768aca881b0da231bf86a394f543a58fd873"></a>Archive&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adbb09877a5c254353089e03349416768a71d5f5cefab99540d21c309dccbb51eb"></a>LFN&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adbb09877a5c254353089e03349416768ae566d0af108b9a7e363ed66a0fac7b24"></a>Any&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adbb09877a5c254353089e03349416768a66ddf1b4f817ca8fa0e842714d8b748b"></a>All&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="adbb09877a5c254353089e03349416768a131fb182a881796e7606ed6da27f1197"></a>ReadOnly&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="adbb09877a5c254353089e03349416768a7acdf85c69cc3c5305456a293524386e"></a>Hidden&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="adbb09877a5c254353089e03349416768aa45da96d0bf6575970f2d27af22be28a"></a>System&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="adbb09877a5c254353089e03349416768a52350a2e36c93cdc5a6eb4ffb83fe482"></a>VolumeID&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="adbb09877a5c254353089e03349416768ae73cda510e8bb947f7e61089e5581494"></a>Directory&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="adbb09877a5c254353089e03349416768ae727b00944f81e1d0a95c12886ac4641"></a>Archive&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="adbb09877a5c254353089e03349416768aae78c9a97ad8cd841f555f2755863969"></a>LFN&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="adbb09877a5c254353089e03349416768aed36a1ef76a59ee3f15180e0441188ad"></a>Any&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="adbb09877a5c254353089e03349416768ab1c94ca2fbc3e78fc30069c8d0f01680"></a>All&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00051">51</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00050">50</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
 
 </div>
 </div>
@@ -1306,7 +1316,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00525">525</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00527">527</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1366,7 +1376,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00531">531</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00533">533</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1440,7 +1450,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00527">527</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00529">529</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1629,7 +1639,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00529">529</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00531">531</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1666,7 +1676,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00523">523</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00525">525</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1734,7 +1744,7 @@ Here is the call graph for this function:</div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#adbb09877a5c254353089e03349416768">FileAttribute</a>&#160;</td>
-          <td class="paramname"><em>searchAttr</em> = <code>(<a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#adbb09877a5c254353089e03349416768">FileAttribute</a>)(FileAttribute::Archive&#160;|&#160;FileAttribute::Directory)</code>, </td>
+          <td class="paramname"><em>searchAttr</em> = <code>(<a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#adbb09877a5c254353089e03349416768">FileAttribute</a>)(<a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#adbb09877a5c254353089e03349416768ae727b00944f81e1d0a95c12886ac4641">FileAttribute::Archive</a>&#160;|&#160;<a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#adbb09877a5c254353089e03349416768ae73cda510e8bb947f7e61089e5581494">FileAttribute::Directory</a>)</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -2241,7 +2251,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00521">521</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00523">523</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -2346,7 +2356,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00519">519</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00521">521</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -2675,6 +2685,44 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <h2 class="groupheader">Friends And Related Function Documentation</h2>
+<a id="a3bc920e6ed661e12435e6159f54093d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bc920e6ed661e12435e6159f54093d5">&#9670;&nbsp;</a></span>operator&amp;</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#adbb09877a5c254353089e03349416768">FS_FAT32::FileAttribute</a> operator&amp; </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#adbb09877a5c254353089e03349416768">FS_FAT32::FileAttribute</a>&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#adbb09877a5c254353089e03349416768">FS_FAT32::FileAttribute</a>&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00065">65</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
+
+</div>
+</div>
 <a id="a7d74b75d8d6aac4507be71f5061168bd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7d74b75d8d6aac4507be71f5061168bd">&#9670;&nbsp;</a></span>operator|</h2>
 
@@ -2709,7 +2757,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00063">63</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00062">62</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
 
 </div>
 </div>
@@ -2734,7 +2782,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00303">303</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00305">305</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
 
 </div>
 </div>
@@ -2758,7 +2806,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00320">320</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00322">322</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
 
 </div>
 </div>
@@ -2782,7 +2830,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00318">318</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00320">320</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
 
 </div>
 </div>
@@ -2806,7 +2854,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00305">305</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00307">307</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
 
 </div>
 </div>
@@ -2830,7 +2878,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00304">304</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00306">306</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
 
 </div>
 </div>
@@ -2854,7 +2902,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00322">322</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00324">324</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
 
 </div>
 </div>
@@ -2878,7 +2926,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00316">316</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00318">318</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
 
 </div>
 </div>
@@ -2910,7 +2958,7 @@ Here is the caller graph for this function:</div>
 <div class="line">                                               <span class="stringliteral">&quot;^(?!COM[1-9]$).*$&quot;</span>, </div>
 <div class="line">                                               <span class="stringliteral">&quot;^(?!LPT[1-9]$).*$&quot;</span> }</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00307">307</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00309">309</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
 
 </div>
 </div>
@@ -2934,7 +2982,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00317">317</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00319">319</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
 
 </div>
 </div>

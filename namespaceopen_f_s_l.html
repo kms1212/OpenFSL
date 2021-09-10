@@ -164,14 +164,14 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="separator:ad647fe1f00371310eb17ec2ce5e78d12"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a917e7536833981276b157cc38f88a577"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopen_f_s_l.html#a917e7536833981276b157cc38f88a577">FSL_OpenMode</a> : uint16_t { <br />
-&#160;&#160;<a class="el" href="namespaceopen_f_s_l.html#a917e7536833981276b157cc38f88a577a6e4d5fa5405b13e275958d949f1fa9fd">Read</a> = 0x0001, 
-<a class="el" href="namespaceopen_f_s_l.html#a917e7536833981276b157cc38f88a577a2db7ab5674808cb7cbc07ac7a0902128">Write</a> = 0x0002, 
-<a class="el" href="namespaceopen_f_s_l.html#a917e7536833981276b157cc38f88a577a5288be3ed5841ecef23be66fe6d0900b">Append</a> = 0x0006, 
-<a class="el" href="namespaceopen_f_s_l.html#a917e7536833981276b157cc38f88a577a22300a123a7ec48c1715def0009ba192">Trunc</a> = 0x0000A, 
+&#160;&#160;<a class="el" href="namespaceopen_f_s_l.html#a917e7536833981276b157cc38f88a577a7a1a5f3e79fdc91edf2f5ead9d66abb4">FSL_OpenMode::Read</a> = 0x0001, 
+<a class="el" href="namespaceopen_f_s_l.html#a917e7536833981276b157cc38f88a577a1129c0e4d43f2d121652a7302712cff6">FSL_OpenMode::Write</a> = 0x0002, 
+<a class="el" href="namespaceopen_f_s_l.html#a917e7536833981276b157cc38f88a577a3ac4692f3935a49a0b243eecf529faa9">FSL_OpenMode::Append</a> = 0x0006, 
+<a class="el" href="namespaceopen_f_s_l.html#a917e7536833981276b157cc38f88a577ae062834253c7b0c888979454095d0af2">FSL_OpenMode::Trunc</a> = 0x0000A, 
 <br />
-&#160;&#160;<a class="el" href="namespaceopen_f_s_l.html#a917e7536833981276b157cc38f88a577af53f9c4e987b23861bf4a9e8d41c6968">Nocreate</a> = 0x0012, 
-<a class="el" href="namespaceopen_f_s_l.html#a917e7536833981276b157cc38f88a577a45d0fd06f8e80299773fd9d1575996cf">Noreplace</a> = 0x0022, 
-<a class="el" href="namespaceopen_f_s_l.html#a917e7536833981276b157cc38f88a577a2ca2646e0480fd5c62253801abf5c9cd">Binary</a> = 0x0040
+&#160;&#160;<a class="el" href="namespaceopen_f_s_l.html#a917e7536833981276b157cc38f88a577a7f2332ceb2123f8fd3f7644318eb6b82">FSL_OpenMode::Nocreate</a> = 0x0012, 
+<a class="el" href="namespaceopen_f_s_l.html#a917e7536833981276b157cc38f88a577a89fa43a56d8292bad0d2dfc0897d396c">FSL_OpenMode::Noreplace</a> = 0x0022, 
+<a class="el" href="namespaceopen_f_s_l.html#a917e7536833981276b157cc38f88a577a6ce976e8f061b2b5cfe4d0c50c3405dd">FSL_OpenMode::Binary</a> = 0x0040
 <br />
  }</td></tr>
 <tr class="memdesc:a917e7536833981276b157cc38f88a577"><td class="mdescLeft">&#160;</td><td class="mdescRight">File open mode.  <a href="namespaceopen_f_s_l.html#a917e7536833981276b157cc38f88a577">More...</a><br /></td></tr>
@@ -220,6 +220,8 @@ Functions</h2></td></tr>
 <tr class="separator:ac7f39300d30bbc5e40e37966bd43da03"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a522922930d0c337d7b5704b50bac825f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceopen_f_s_l.html#a917e7536833981276b157cc38f88a577">FSL_OpenMode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopen_f_s_l.html#a522922930d0c337d7b5704b50bac825f">operator|</a> (<a class="el" href="namespaceopen_f_s_l.html#a917e7536833981276b157cc38f88a577">FSL_OpenMode</a> a, <a class="el" href="namespaceopen_f_s_l.html#a917e7536833981276b157cc38f88a577">FSL_OpenMode</a> b)</td></tr>
 <tr class="separator:a522922930d0c337d7b5704b50bac825f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abae212999f45bf2da29f98a0f7fe9e67"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceopen_f_s_l.html#a917e7536833981276b157cc38f88a577">FSL_OpenMode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopen_f_s_l.html#abae212999f45bf2da29f98a0f7fe9e67">operator&amp;</a> (<a class="el" href="namespaceopen_f_s_l.html#a917e7536833981276b157cc38f88a577">FSL_OpenMode</a> a, <a class="el" href="namespaceopen_f_s_l.html#a917e7536833981276b157cc38f88a577">FSL_OpenMode</a> b)</td></tr>
+<tr class="separator:abae212999f45bf2da29f98a0f7fe9e67"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab8e56803f7a2a32d3612b28d5c80d795"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structopen_f_s_l_1_1_time.html">Time</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopen_f_s_l.html#ab8e56803f7a2a32d3612b28d5c80d795">convertToFSLTime</a> (const struct tm *time)</td></tr>
 <tr class="separator:ab8e56803f7a2a32d3612b28d5c80d795"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3338f42598b72d30ef873e51cb971a88"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopen_f_s_l.html#a3338f42598b72d30ef873e51cb971a88">compareDate</a> (const <a class="el" href="structopen_f_s_l_1_1_time.html">Time</a> a, const <a class="el" href="structopen_f_s_l_1_1_time.html">Time</a> b)</td></tr>
@@ -335,11 +337,19 @@ Variables</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">enum <a class="el" href="namespaceopen_f_s_l.html#a917e7536833981276b157cc38f88a577">openFSL::FSL_OpenMode</a> : uint16_t</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>File open mode. </p>
@@ -363,13 +373,13 @@ Variables</h2></td></tr>
 <td class="markdownTableBodyNone">Binary </td><td class="markdownTableBodyNone">Binary mode  </td></tr>
 </table>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a917e7536833981276b157cc38f88a577a6e4d5fa5405b13e275958d949f1fa9fd"></a>Read&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a917e7536833981276b157cc38f88a577a2db7ab5674808cb7cbc07ac7a0902128"></a>Write&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a917e7536833981276b157cc38f88a577a5288be3ed5841ecef23be66fe6d0900b"></a>Append&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a917e7536833981276b157cc38f88a577a22300a123a7ec48c1715def0009ba192"></a>Trunc&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a917e7536833981276b157cc38f88a577af53f9c4e987b23861bf4a9e8d41c6968"></a>Nocreate&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a917e7536833981276b157cc38f88a577a45d0fd06f8e80299773fd9d1575996cf"></a>Noreplace&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a917e7536833981276b157cc38f88a577a2ca2646e0480fd5c62253801abf5c9cd"></a>Binary&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a917e7536833981276b157cc38f88a577a7a1a5f3e79fdc91edf2f5ead9d66abb4"></a>Read&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a917e7536833981276b157cc38f88a577a1129c0e4d43f2d121652a7302712cff6"></a>Write&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a917e7536833981276b157cc38f88a577a3ac4692f3935a49a0b243eecf529faa9"></a>Append&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a917e7536833981276b157cc38f88a577ae062834253c7b0c888979454095d0af2"></a>Trunc&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a917e7536833981276b157cc38f88a577a7f2332ceb2123f8fd3f7644318eb6b82"></a>Nocreate&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a917e7536833981276b157cc38f88a577a89fa43a56d8292bad0d2dfc0897d396c"></a>Noreplace&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a917e7536833981276b157cc38f88a577a6ce976e8f061b2b5cfe4d0c50c3405dd"></a>Binary&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 <p class="definition">Definition at line <a class="el" href="file_8h_source.html#l00035">35</a> of file <a class="el" href="file_8h_source.html">file.h</a>.</p>
@@ -414,7 +424,7 @@ Variables</h2></td></tr>
 <tr><td class="fieldname"><a id="a25f310b6ebac58b688fec8e6ff48af8fac81e065ca7d17ec1b162e30daf51e510"></a>SeekEnd&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="file_8h_source.html#l00058">58</a> of file <a class="el" href="file_8h_source.html">file.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="file_8h_source.html#l00061">61</a> of file <a class="el" href="file_8h_source.html">file.h</a>.</p>
 
 </div>
 </div>
@@ -906,6 +916,44 @@ Here is the call graph for this function:</div>
 <dl class="section return"><dt>Returns</dt><dd>int: Error code </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="fslutils_8cpp_source.html#l00018">18</a> of file <a class="el" href="fslutils_8cpp_source.html">fslutils.cpp</a>.</p>
+
+</div>
+</div>
+<a id="abae212999f45bf2da29f98a0f7fe9e67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abae212999f45bf2da29f98a0f7fe9e67">&#9670;&nbsp;</a></span>operator&amp;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceopen_f_s_l.html#a917e7536833981276b157cc38f88a577">FSL_OpenMode</a> openFSL::operator&amp; </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespaceopen_f_s_l.html#a917e7536833981276b157cc38f88a577">FSL_OpenMode</a>&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceopen_f_s_l.html#a917e7536833981276b157cc38f88a577">FSL_OpenMode</a>&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="file_8h_source.html#l00048">48</a> of file <a class="el" href="file_8h_source.html">file.h</a>.</p>
 
 </div>
 </div>
