@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>OpenFSL: fs/fat32/src/bpb.cpp Source File</title>
+<title>OpenFSL: fs/ntfs/src/bpb.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -75,7 +75,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('bpb_8cpp_source.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('ntfs_2src_2bpb_8cpp_source.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -98,7 +98,7 @@ $(document).ready(function(){initNavTree('bpb_8cpp_source.html',''); initResizab
 <div class="title">bpb.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="bpb_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* Copyright (c) 2021. kms1212(Min Su Kwon)</span></div>
+<a href="ntfs_2src_2bpb_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* Copyright (c) 2021. kms1212(Min Su Kwon)</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">This file is part of OpenFSL.</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">OpenFSL and its source code is published over BSD 3-Clause License.</span></div>
@@ -107,26 +107,17 @@ $(document).ready(function(){initNavTree('bpb_8cpp_source.html',''); initResizab
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">*/</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="fs__fat32_8h.html">openfsl/fat32/fs_fat32.h</a>&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="fs__ntfs_8h.html">openfsl/ntfs/fs_ntfs.h</a>&quot;</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespaceopen_f_s_l.html">openFSL</a>;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#afb4012f1a5c11d5b73bb291948a43581">   14</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#afb4012f1a5c11d5b73bb291948a43581">FS_FAT32::updateBpb</a>() {</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classopen_f_s_l_1_1_file_system.html#a67927109b0ccad0b054e268f0f908f37">getDiskDevice</a>()-&gt;<a class="code" href="classopen_f_s_l_1_1_disk_device.html#a55d767567bd72088a73bb8b2c4ac5edb">writeDisk</a>(<a class="code" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a147ec282ca63d961325a8d2989319161">bpb</a>, <a class="code" href="classopen_f_s_l_1_1_file_system.html#abba241402f3e12b58a0abaa242a4490b">getActualLBA</a>(0), 1);</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="afs__fat32_8h_html"><div class="ttname"><a href="fs__fat32_8h.html">fs_fat32.h</a></div></div>
-<div class="ttc" id="aclassopen_f_s_l_1_1_f_s___f_a_t32_html_a147ec282ca63d961325a8d2989319161"><div class="ttname"><a href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a147ec282ca63d961325a8d2989319161">openFSL::FS_FAT32::bpb</a></div><div class="ttdeci">BPBSector * bpb</div><div class="ttdef"><b>Definition:</b> <a href="fs__fat32_8h_source.html#l00303">fs_fat32.h:303</a></div></div>
-<div class="ttc" id="aclassopen_f_s_l_1_1_f_s___f_a_t32_html_afb4012f1a5c11d5b73bb291948a43581"><div class="ttname"><a href="classopen_f_s_l_1_1_f_s___f_a_t32.html#afb4012f1a5c11d5b73bb291948a43581">openFSL::FS_FAT32::updateBpb</a></div><div class="ttdeci">int __check_result updateBpb()</div><div class="ttdoc">Update BPB.</div><div class="ttdef"><b>Definition:</b> <a href="bpb_8cpp_source.html#l00014">bpb.cpp:14</a></div></div>
-<div class="ttc" id="aclassopen_f_s_l_1_1_disk_device_html_a55d767567bd72088a73bb8b2c4ac5edb"><div class="ttname"><a href="classopen_f_s_l_1_1_disk_device.html#a55d767567bd72088a73bb8b2c4ac5edb">openFSL::DiskDevice::writeDisk</a></div><div class="ttdeci">int writeDisk(const void *src, lba48_t lba, lba48_t size)</div><div class="ttdef"><b>Definition:</b> <a href="diskdevice_8cpp_source.html#l00059">diskdevice.cpp:59</a></div></div>
-<div class="ttc" id="aclassopen_f_s_l_1_1_file_system_html_abba241402f3e12b58a0abaa242a4490b"><div class="ttname"><a href="classopen_f_s_l_1_1_file_system.html#abba241402f3e12b58a0abaa242a4490b">openFSL::FileSystem::getActualLBA</a></div><div class="ttdeci">lba48_t getActualLBA(lba48_t lba)</div><div class="ttdef"><b>Definition:</b> <a href="filesystem_8h_source.html#l00076">filesystem.h:76</a></div></div>
 <div class="ttc" id="anamespaceopen_f_s_l_html"><div class="ttname"><a href="namespaceopen_f_s_l.html">openFSL</a></div><div class="ttdef"><b>Definition:</b> <a href="fslutils_8cpp_source.html#l00014">fslutils.cpp:14</a></div></div>
-<div class="ttc" id="aclassopen_f_s_l_1_1_file_system_html_a67927109b0ccad0b054e268f0f908f37"><div class="ttname"><a href="classopen_f_s_l_1_1_file_system.html#a67927109b0ccad0b054e268f0f908f37">openFSL::FileSystem::getDiskDevice</a></div><div class="ttdeci">DiskDevice * getDiskDevice()</div><div class="ttdef"><b>Definition:</b> <a href="filesystem_8h_source.html#l00077">filesystem.h:77</a></div></div>
+<div class="ttc" id="afs__ntfs_8h_html"><div class="ttname"><a href="fs__ntfs_8h.html">fs_ntfs.h</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_97b3d2b63ac216821c2d7a22ee0ab2b0.html">fs</a></li><li class="navelem"><a class="el" href="dir_5bb0d8727a6eaf81f8f318c34e708012.html">fat32</a></li><li class="navelem"><a class="el" href="dir_0f9b470631b5c3ef5c1c327f859cd102.html">src</a></li><li class="navelem"><a class="el" href="bpb_8cpp.html">bpb.cpp</a></li>
+    <li class="navelem"><a class="el" href="dir_97b3d2b63ac216821c2d7a22ee0ab2b0.html">fs</a></li><li class="navelem"><a class="el" href="dir_30e7b8096ec7285397422f80488878d2.html">ntfs</a></li><li class="navelem"><a class="el" href="dir_b47f27b0fd1ace80dc511ec6a6d5e23b.html">src</a></li><li class="navelem"><a class="el" href="ntfs_2src_2bpb_8cpp.html">bpb.cpp</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>

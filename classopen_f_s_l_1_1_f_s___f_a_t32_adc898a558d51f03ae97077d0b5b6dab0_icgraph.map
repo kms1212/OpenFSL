@@ -1,5 +1,5 @@
 <map id="openFSL::FS_FAT32::fatAreaIndexToSector" name="openFSL::FS_FAT32::fatAreaIndexToSector">
-<area shape="rect" id="node1" title="Convert FAT area index to sector." alt="" coords="860,72,1021,113"/>
+<area shape="rect" id="node1" title="Convert FAT area index to LBA." alt="" coords="860,72,1021,113"/>
 <area shape="rect" id="node2" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a4014bba5c40c4b9a8bcfa82bc052581c" title=" " alt="" coords="615,39,803,80"/>
 <area shape="rect" id="node7" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a19a4a69ae0b1db981e85be4c17ae8252" title=" " alt="" coords="605,104,812,145"/>
 <area shape="rect" id="node3" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#a7c1736304d573a2149b61f538c0cf97d" title="Create entry." alt="" coords="405,39,557,80"/>

@@ -1,11 +1,12 @@
 <map id="include/openfsl/detectstruct.h" name="include/openfsl/detectstruct.h">
-<area shape="rect" id="node1" title=" " alt="" coords="4407,5,4621,32"/>
-<area shape="rect" id="node2" href="$detectstruct_8cpp.html" title=" " alt="" coords="4257,80,4408,107"/>
-<area shape="rect" id="node3" href="$mbr_8h.html" title=" " alt="" coords="4433,80,4595,107"/>
-<area shape="rect" id="node5" href="$openfsl_8h.html" title=" " alt="" coords="4540,155,4725,181"/>
-<area shape="rect" id="node4" href="$mbr_8cpp.html" title=" " alt="" coords="4419,155,4516,181"/>
-<area shape="rect" id="node6" href="$fs__fat32_8h.html" title=" " alt="" coords="4545,229,4720,271"/>
-<area shape="rect" id="node7" href="$bpb_8cpp.html" title=" " alt="" coords="5,326,156,353"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5631,5,5845,32"/>
+<area shape="rect" id="node2" href="$detectstruct_8cpp.html" title=" " alt="" coords="5481,80,5632,107"/>
+<area shape="rect" id="node3" href="$mbr_8h.html" title=" " alt="" coords="5657,80,5819,107"/>
+<area shape="rect" id="node5" href="$openfsl_8h.html" title=" " alt="" coords="5764,155,5949,181"/>
+<area shape="rect" id="node4" href="$mbr_8cpp.html" title=" " alt="" coords="5643,155,5740,181"/>
+<area shape="rect" id="node6" href="$fs__fat32_8h.html" title=" " alt="" coords="4649,229,4824,271"/>
+<area shape="rect" id="node51" href="$fs__ntfs_8h.html" title=" " alt="" coords="6893,229,7060,271"/>
+<area shape="rect" id="node7" href="$fat32_2src_2bpb_8cpp.html" title=" " alt="" coords="5,326,156,353"/>
 <area shape="rect" id="node8" href="$charcoding_8cpp.html" title=" " alt="" coords="181,326,378,353"/>
 <area shape="rect" id="node9" href="$chdir_8cpp.html" title=" " alt="" coords="402,326,559,353"/>
 <area shape="rect" id="node10" href="$checksum_8cpp.html" title=" " alt="" coords="583,326,775,353"/>
@@ -49,4 +50,5 @@
 <area shape="rect" id="node48" href="$thread__file_8cpp.html" title=" " alt="" coords="8441,319,8582,360"/>
 <area shape="rect" id="node49" href="$thread__volume_8cpp.html" title=" " alt="" coords="8606,319,8747,360"/>
 <area shape="rect" id="node50" href="$time_8cpp.html" title=" " alt="" coords="8772,326,8928,353"/>
+<area shape="rect" id="node52" href="$ntfs_2src_2bpb_8cpp.html" title=" " alt="" coords="8953,326,9094,353"/>
 </map>

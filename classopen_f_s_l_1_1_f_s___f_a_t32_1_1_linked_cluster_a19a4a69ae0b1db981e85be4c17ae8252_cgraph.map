@@ -2,7 +2,7 @@
 <area shape="rect" id="node1" title=" " alt="" coords="5,308,212,349"/>
 <area shape="rect" id="node2" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a16216bb2f0be6ea0c29d7d21fa32844f" title=" " alt="" coords="275,52,477,93"/>
 <area shape="rect" id="node3" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#ab70b17bc644e487b0eb93f747575d414" title=" " alt="" coords="572,45,724,87"/>
-<area shape="rect" id="node4" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#adc898a558d51f03ae97077d0b5b6dab0" title="Convert FAT area index to sector." alt="" coords="295,337,457,379"/>
+<area shape="rect" id="node4" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#adc898a558d51f03ae97077d0b5b6dab0" title="Convert FAT area index to LBA." alt="" coords="295,337,457,379"/>
 <area shape="rect" id="node5" href="$classopen_f_s_l_1_1_file_system.html#a67927109b0ccad0b054e268f0f908f37" title=" " alt="" coords="570,279,726,320"/>
 <area shape="rect" id="node6" href="$classopen_f_s_l_1_1_disk_device.html#a4daf8e0487b2c9c48ae3768bf6c8351e" title=" " alt="" coords="569,371,727,412"/>
 <area shape="rect" id="node7" href="$classopen_f_s_l_1_1_file_system.html#abba241402f3e12b58a0abaa242a4490b" title=" " alt="" coords="570,119,726,160"/>

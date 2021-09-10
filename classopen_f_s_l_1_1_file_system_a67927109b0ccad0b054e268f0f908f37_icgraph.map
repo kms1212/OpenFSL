@@ -1,7 +1,7 @@
 <map id="openFSL::FileSystem::getDiskDevice" name="openFSL::FileSystem::getDiskDevice">
 <area shape="rect" id="node1" title=" " alt="" coords="1703,591,1859,632"/>
 <area shape="rect" id="node2" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a4014bba5c40c4b9a8bcfa82bc052581c" title=" " alt="" coords="1248,681,1436,723"/>
-<area shape="rect" id="node7" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#adc898a558d51f03ae97077d0b5b6dab0" title="Convert FAT area index to sector." alt="" coords="1493,591,1655,632"/>
+<area shape="rect" id="node7" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html#adc898a558d51f03ae97077d0b5b6dab0" title="Convert FAT area index to LBA." alt="" coords="1493,591,1655,632"/>
 <area shape="rect" id="node8" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a19a4a69ae0b1db981e85be4c17ae8252" title=" " alt="" coords="1239,591,1445,632"/>
 <area shape="rect" id="node9" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a2287056d60d916b5ba75dede3b0d8f44" title=" " alt="" coords="1498,423,1650,464"/>
 <area shape="rect" id="node10" href="$classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#a8059886547a26e1901667927a11f87dd" title=" " alt="" coords="1266,365,1418,407"/>
