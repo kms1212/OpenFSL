@@ -15,10 +15,12 @@ var error_8h =
     [ "OPENFSL_ERROR_NOPERM", "error_8h.html#a80c66b60815c860418b911b9e1ad9b6d", null ],
     [ "OPENFSL_ERROR_NOTEXIST", "error_8h.html#a50418bfba956f26454c53fc95859ca43", null ],
     [ "OPENFSL_ERROR_SCHABRT", "error_8h.html#a58a59db5aad8fed38ffa1e392ba24ad1", null ],
+    [ "OPENFSL_ERROR_SZTOOBIG", "error_8h.html#ae535d99b2aed73de8e800fd2543a47d3", null ],
     [ "OPENFSL_ERROR_VLABLONG", "error_8h.html#a8b7ce3ea8216fc157434b9ec96c1f79d", null ],
     [ "OPENFSL_SUCCESS", "error_8h.html#a301c819148a27e7e57a093da26677ba9", null ],
-    [ "geterrorlen", "error_8h.html#a5d77f0f6e9733071cffe83caed35ed14", null ],
-    [ "geterrorstr", "error_8h.html#a533e4fe1a3f2b0a38cdd1949cb781d36", null ],
-    [ "geterrorstr", "error_8h.html#ac7f39300d30bbc5e40e37966bd43da03", null ],
+    [ "error_t", "error_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3", null ],
+    [ "geterrorlen", "error_8h.html#a3e924e1029f0f713afc5f77eda772de9", null ],
+    [ "geterrorstr", "error_8h.html#a508870d0d0d0de011effae845236c3a3", null ],
+    [ "geterrorstr", "error_8h.html#ae1d05605aa7a06a2c8e2ebdfbdeefb20", null ],
     [ "__maybe_unused", "error_8h.html#af22fc1bd1e188147c3a7642de50efd7f", null ]
 ];

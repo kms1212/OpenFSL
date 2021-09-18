@@ -109,9 +109,10 @@ Collaboration diagram for openFSL::FS_FAT32::FSINFOSector:</div>
 <div class="dyncontent">
 <div class="center"><img src="structopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_s_i_n_f_o_sector__coll__graph.png" border="0" usemap="#open_f_s_l_1_1_f_s___f_a_t32_1_1_f_s_i_n_f_o_sector_coll__map" alt="Collaboration graph"/></div>
 <map name="open_f_s_l_1_1_f_s___f_a_t32_1_1_f_s_i_n_f_o_sector_coll__map" id="open_f_s_l_1_1_f_s___f_a_t32_1_1_f_s_i_n_f_o_sector_coll__map">
-<area shape="rect" title="FAT32 FSINFO structure." alt="" coords="43,204,195,296"/>
+<area shape="rect" title="FAT32 FSINFO structure." alt="" coords="120,189,272,281"/>
 <area shape="rect" title=" " alt="" coords="5,5,80,83"/>
-<area shape="rect" title=" " alt="" coords="163,5,229,83"/>
+<area shape="rect" title=" " alt="" coords="159,5,233,83"/>
+<area shape="rect" title=" " alt="" coords="316,5,383,83"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -127,10 +128,10 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a4053d1c17737c93944416b8c0395e7f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b4d79bf4f9f65cd5f2ac531fe4d0201"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classopen_f_s_l_1_1_f_s___f_a_t32.html#a3e8598b070a46d4228a5f0474b915022">cluster_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_s_i_n_f_o_sector.html#a7b4d79bf4f9f65cd5f2ac531fe4d0201">fsinfoNextFree</a></td></tr>
 <tr class="separator:a7b4d79bf4f9f65cd5f2ac531fe4d0201"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a971861ecdf48161222e611458264a1"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_s_i_n_f_o_sector.html#a4a971861ecdf48161222e611458264a1">fsinfoReserved2</a> [12]</td></tr>
-<tr class="separator:a4a971861ecdf48161222e611458264a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a615cb83241a7726c904c0001f4bcd478"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_s_i_n_f_o_sector.html#a615cb83241a7726c904c0001f4bcd478">fsinfoSignature3</a></td></tr>
-<tr class="separator:a615cb83241a7726c904c0001f4bcd478"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae99d966ee689b03badd0c809caf50919"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_s_i_n_f_o_sector.html#ae99d966ee689b03badd0c809caf50919">fsinfoReserved2</a> [14]</td></tr>
+<tr class="separator:ae99d966ee689b03badd0c809caf50919"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10254b4ef80276416233ccbefa5fabe7"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_s_i_n_f_o_sector.html#a10254b4ef80276416233ccbefa5fabe7">fsinfoSignature3</a></td></tr>
+<tr class="separator:a10254b4ef80276416233ccbefa5fabe7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>FAT32 FSINFO structure. </p>
@@ -153,7 +154,7 @@ Public Attributes</h2></td></tr>
 <td class="markdownTableBodyNone">uint32_t </td><td class="markdownTableBodyNone">fsinfoSignature3 </td><td class="markdownTableBodyNone">0x01FE  </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00162">162</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00159">159</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
 </div><h2 class="groupheader">Member Data Documentation</h2>
 <a id="a4053d1c17737c93944416b8c0395e7f4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4053d1c17737c93944416b8c0395e7f4">&#9670;&nbsp;</a></span>fsinfoFreeCluster</h2>
@@ -167,7 +168,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00166">166</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00163">163</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
 
 </div>
 </div>
@@ -183,7 +184,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00167">167</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00164">164</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
 
 </div>
 </div>
@@ -199,23 +200,23 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00164">164</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00161">161</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
 
 </div>
 </div>
-<a id="a4a971861ecdf48161222e611458264a1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4a971861ecdf48161222e611458264a1">&#9670;&nbsp;</a></span>fsinfoReserved2</h2>
+<a id="ae99d966ee689b03badd0c809caf50919"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae99d966ee689b03badd0c809caf50919">&#9670;&nbsp;</a></span>fsinfoReserved2</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint8_t openFSL::FS_FAT32::FSINFOSector::fsinfoReserved2[12]</td>
+          <td class="memname">uint8_t openFSL::FS_FAT32::FSINFOSector::fsinfoReserved2[14]</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00168">168</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00165">165</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
 
 </div>
 </div>
@@ -231,7 +232,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00163">163</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00160">160</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
 
 </div>
 </div>
@@ -247,23 +248,23 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00165">165</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00162">162</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
 
 </div>
 </div>
-<a id="a615cb83241a7726c904c0001f4bcd478"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a615cb83241a7726c904c0001f4bcd478">&#9670;&nbsp;</a></span>fsinfoSignature3</h2>
+<a id="a10254b4ef80276416233ccbefa5fabe7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10254b4ef80276416233ccbefa5fabe7">&#9670;&nbsp;</a></span>fsinfoSignature3</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint32_t openFSL::FS_FAT32::FSINFOSector::fsinfoSignature3</td>
+          <td class="memname">uint16_t openFSL::FS_FAT32::FSINFOSector::fsinfoSignature3</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00169">169</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fs__fat32_8h_source.html#l00166">166</a> of file <a class="el" href="fs__fat32_8h_source.html">fs_fat32.h</a>.</p>
 
 </div>
 </div>

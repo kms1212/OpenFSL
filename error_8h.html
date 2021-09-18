@@ -97,6 +97,7 @@ $(document).ready(function(){initNavTree('error_8h.html',''); initResizable(); }
   <div class="summary">
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
@@ -106,15 +107,17 @@ $(document).ready(function(){initNavTree('error_8h.html',''); initResizable(); }
 <div class="textblock"><code>#include &lt;cstring&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
 <code>#include &quot;<a class="el" href="macros_8h_source.html">openfsl/macros.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="symbols_8h_source.html">openfsl/symbols.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for error.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="error_8h__incl.png" border="0" usemap="#include_2openfsl_2error_8h" alt=""/></div>
 <map name="include_2openfsl_2error_8h" id="include_2openfsl_2error_8h">
-<area shape="rect" title=" " alt="" coords="42,5,209,32"/>
+<area shape="rect" title=" " alt="" coords="102,5,269,32"/>
 <area shape="rect" title=" " alt="" coords="5,80,72,107"/>
 <area shape="rect" title=" " alt="" coords="96,80,155,107"/>
 <area shape="rect" href="macros_8h.html" title=" " alt="" coords="179,80,314,107"/>
+<area shape="rect" href="symbols_8h.html" title=" " alt="" coords="339,80,480,107"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -122,68 +125,68 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="error_8h__dep__incl.png" border="0" usemap="#include_2openfsl_2error_8hdep" alt=""/></div>
 <map name="include_2openfsl_2error_8hdep" id="include_2openfsl_2error_8hdep">
-<area shape="rect" title=" " alt="" coords="144,5,311,32"/>
-<area shape="rect" href="error_8cpp.html" title=" " alt="" coords="36,80,139,107"/>
-<area shape="rect" href="fslutils_8h.html" title=" " alt="" coords="9,229,190,256"/>
-<area shape="rect" href="mbr_8h.html" title=" " alt="" coords="247,311,410,338"/>
-<area shape="rect" href="openfsl_8h.html" title=" " alt="" coords="363,483,548,509"/>
-<area shape="rect" href="scheduler_8h.html" title=" " alt="" coords="9624,80,9823,107"/>
-<area shape="rect" href="fslutils_8cpp.html" title=" " alt="" coords="5,311,121,338"/>
-<area shape="rect" href="fs__fat32_8h.html" title=" " alt="" coords="4863,304,5037,345"/>
-<area shape="rect" href="mbr_8cpp.html" title=" " alt="" coords="248,401,345,427"/>
-<area shape="rect" href="detectstruct_8h.html" title=" " alt="" coords="421,401,636,427"/>
-<area shape="rect" href="detectstruct_8cpp.html" title=" " alt="" coords="572,483,723,509"/>
-<area shape="rect" href="fs__ntfs_8h.html" title=" " alt="" coords="372,557,539,599"/>
-<area shape="rect" href="ntfs_2src_2bpb_8cpp.html" title=" " alt="" coords="385,647,526,673"/>
-<area shape="rect" href="fat32_2src_2bpb_8cpp.html" title=" " alt="" coords="5225,401,5376,427"/>
-<area shape="rect" href="charcoding_8cpp.html" title=" " alt="" coords="5401,401,5598,427"/>
-<area shape="rect" href="chdir_8cpp.html" title=" " alt="" coords="5622,401,5779,427"/>
-<area shape="rect" href="checksum_8cpp.html" title=" " alt="" coords="5803,401,5995,427"/>
-<area shape="rect" href="classgeneral_8cpp.html" title=" " alt="" coords="6019,401,6227,427"/>
-<area shape="rect" href="createentry_8cpp.html" title=" " alt="" coords="6252,401,6451,427"/>
-<area shape="rect" href="fatarea_8cpp.html" title=" " alt="" coords="6475,401,6649,427"/>
-<area shape="rect" href="file__classgeneral_8cpp.html" title=" " alt="" coords="6673,401,6907,427"/>
-<area shape="rect" href="file__flush_8cpp.html" title=" " alt="" coords="6931,401,7115,427"/>
-<area shape="rect" href="file__openclose_8cpp.html" title=" " alt="" coords="7139,401,7358,427"/>
-<area shape="rect" href="file__read_8cpp.html" title=" " alt="" coords="7383,401,7565,427"/>
-<area shape="rect" href="file__seek_8cpp.html" title=" " alt="" coords="7590,401,7774,427"/>
-<area shape="rect" href="file__tell_8cpp.html" title=" " alt="" coords="7799,401,7973,427"/>
-<area shape="rect" href="file__write_8cpp.html" title=" " alt="" coords="7998,401,8185,427"/>
-<area shape="rect" href="foreachentry_8cpp.html" title=" " alt="" coords="8209,401,8416,427"/>
-<area shape="rect" href="format_8cpp.html" title=" " alt="" coords="8441,401,8611,427"/>
-<area shape="rect" href="fsinfo_8cpp.html" title=" " alt="" coords="8635,401,8798,427"/>
-<area shape="rect" href="getfileinfo_8cpp.html" title=" " alt="" coords="8822,401,9014,427"/>
-<area shape="rect" href="initialize_8cpp.html" title=" " alt="" coords="9039,401,9221,427"/>
-<area shape="rect" href="linkedcluster__cache_8cpp.html" title=" " alt="" coords="9245,393,9428,435"/>
-<area shape="rect" href="linkedcluster__classgeneral_8cpp.html" title=" " alt="" coords="9452,393,9635,435"/>
-<area shape="rect" href="linkedcluster__cluster_8cpp.html" title=" " alt="" coords="712,393,895,435"/>
-<area shape="rect" href="linkedcluster__fetch_8cpp.html" title=" " alt="" coords="919,393,1101,435"/>
-<area shape="rect" href="linkedcluster__flush_8cpp.html" title=" " alt="" coords="1125,393,1308,435"/>
-<area shape="rect" href="linkedcluster__internal_8cpp.html" title=" " alt="" coords="1332,393,1515,435"/>
-<area shape="rect" href="linkedcluster__read_8cpp.html" title=" " alt="" coords="1539,393,1721,435"/>
-<area shape="rect" href="linkedcluster__util_8cpp.html" title=" " alt="" coords="1745,393,1928,435"/>
-<area shape="rect" href="linkedcluster__write_8cpp.html" title=" " alt="" coords="1952,393,2135,435"/>
-<area shape="rect" href="listdir_8cpp.html" title=" " alt="" coords="2159,401,2322,427"/>
-<area shape="rect" href="makedir_8cpp.html" title=" " alt="" coords="2346,401,2525,427"/>
-<area shape="rect" href="makefile_8cpp.html" title=" " alt="" coords="2549,401,2732,427"/>
-<area shape="rect" href="nextcluster_8cpp.html" title=" " alt="" coords="2756,401,2955,427"/>
-<area shape="rect" href="operator_8cpp.html" title=" " alt="" coords="2979,401,3159,427"/>
-<area shape="rect" href="path_8cpp.html" title=" " alt="" coords="3183,401,3338,427"/>
-<area shape="rect" href="removedir_8cpp.html" title=" " alt="" coords="3362,401,3554,427"/>
-<area shape="rect" href="removeentry_8cpp.html" title=" " alt="" coords="3578,401,3786,427"/>
-<area shape="rect" href="setfileinfo_8cpp.html" title=" " alt="" coords="3811,401,4001,427"/>
-<area shape="rect" href="thread_8cpp.html" title=" " alt="" coords="4026,401,4194,427"/>
-<area shape="rect" href="thread__classgeneral_8cpp.html" title=" " alt="" coords="4218,393,4359,435"/>
-<area shape="rect" href="thread__directory_8cpp.html" title=" " alt="" coords="4383,393,4525,435"/>
-<area shape="rect" href="thread__entry_8cpp.html" title=" " alt="" coords="4549,393,4690,435"/>
-<area shape="rect" href="thread__file_8cpp.html" title=" " alt="" coords="4714,393,4855,435"/>
-<area shape="rect" href="thread__volume_8cpp.html" title=" " alt="" coords="4879,393,5021,435"/>
-<area shape="rect" href="time_8cpp.html" title=" " alt="" coords="5045,401,5201,427"/>
-<area shape="rect" href="scheduler_8cpp.html" title=" " alt="" coords="9761,155,9896,181"/>
-<area shape="rect" href="diskdevice_8h.html" title=" " alt="" coords="5109,155,5316,181"/>
-<area shape="rect" href="diskdevice_8cpp.html" title=" " alt="" coords="5141,229,5284,256"/>
-<area shape="rect" href="filesystem_8h.html" title=" " alt="" coords="586,229,791,256"/>
-<area shape="rect" href="filesystem_8cpp.html" title=" " alt="" coords="485,311,625,338"/>
+<area shape="rect" title=" " alt="" coords="5635,5,5802,32"/>
+<area shape="rect" href="error_8cpp.html" title=" " alt="" coords="5405,80,5507,107"/>
+<area shape="rect" href="fslutils_8h.html" title=" " alt="" coords="272,229,453,256"/>
+<area shape="rect" href="mbr_8h.html" title=" " alt="" coords="9143,311,9305,338"/>
+<area shape="rect" href="openfsl_8h.html" title=" " alt="" coords="9013,483,9198,509"/>
+<area shape="rect" href="scheduler_8h.html" title=" " alt="" coords="5619,80,5818,107"/>
+<area shape="rect" href="fslutils_8cpp.html" title=" " alt="" coords="94,311,210,338"/>
+<area shape="rect" href="chdir_8cpp.html" title=" " alt="" coords="144,401,301,427"/>
+<area shape="rect" href="format_8cpp.html" title=" " alt="" coords="325,401,496,427"/>
+<area shape="rect" href="mbr_8cpp.html" title=" " alt="" coords="9194,401,9291,427"/>
+<area shape="rect" href="detectstruct_8h.html" title=" " alt="" coords="9315,401,9530,427"/>
+<area shape="rect" href="detectstruct_8cpp.html" title=" " alt="" coords="9347,483,9498,509"/>
+<area shape="rect" href="fs__ntfs_8h.html" title=" " alt="" coords="9022,557,9189,599"/>
+<area shape="rect" href="ntfs_2src_2bpb_8cpp.html" title=" " alt="" coords="9035,647,9176,673"/>
+<area shape="rect" href="scheduler_8cpp.html" title=" " alt="" coords="5583,155,5718,181"/>
+<area shape="rect" href="diskdevice_8h.html" title=" " alt="" coords="7763,155,7970,181"/>
+<area shape="rect" href="fs__fat32_8h.html" title=" " alt="" coords="4518,304,4693,345"/>
+<area shape="rect" href="diskdevice_8cpp.html" title=" " alt="" coords="7795,229,7938,256"/>
+<area shape="rect" href="filesystem_8h.html" title=" " alt="" coords="8948,229,9153,256"/>
+<area shape="rect" href="filesystem_8cpp.html" title=" " alt="" coords="8927,311,9067,338"/>
+<area shape="rect" href="fat32_2src_2bpb_8cpp.html" title=" " alt="" coords="4001,401,4151,427"/>
+<area shape="rect" href="charcoding_8cpp.html" title=" " alt="" coords="4176,401,4373,427"/>
+<area shape="rect" href="checksum_8cpp.html" title=" " alt="" coords="4397,401,4589,427"/>
+<area shape="rect" href="classgeneral_8cpp.html" title=" " alt="" coords="4613,401,4821,427"/>
+<area shape="rect" href="createentry_8cpp.html" title=" " alt="" coords="4846,401,5045,427"/>
+<area shape="rect" href="fatarea_8cpp.html" title=" " alt="" coords="5069,401,5243,427"/>
+<area shape="rect" href="file__classgeneral_8cpp.html" title=" " alt="" coords="5267,401,5501,427"/>
+<area shape="rect" href="file__flush_8cpp.html" title=" " alt="" coords="5525,401,5709,427"/>
+<area shape="rect" href="file__openclose_8cpp.html" title=" " alt="" coords="5733,401,5952,427"/>
+<area shape="rect" href="file__read_8cpp.html" title=" " alt="" coords="5977,401,6159,427"/>
+<area shape="rect" href="file__seek_8cpp.html" title=" " alt="" coords="6184,401,6368,427"/>
+<area shape="rect" href="file__tell_8cpp.html" title=" " alt="" coords="6393,401,6567,427"/>
+<area shape="rect" href="file__write_8cpp.html" title=" " alt="" coords="6592,401,6779,427"/>
+<area shape="rect" href="foreachentry_8cpp.html" title=" " alt="" coords="6803,401,7010,427"/>
+<area shape="rect" href="fsinfo_8cpp.html" title=" " alt="" coords="7035,401,7197,427"/>
+<area shape="rect" href="getfileinfo_8cpp.html" title=" " alt="" coords="7221,401,7413,427"/>
+<area shape="rect" href="initialize_8cpp.html" title=" " alt="" coords="7438,401,7621,427"/>
+<area shape="rect" href="linkedcluster__cache_8cpp.html" title=" " alt="" coords="7645,393,7827,435"/>
+<area shape="rect" href="linkedcluster__classgeneral_8cpp.html" title=" " alt="" coords="7851,393,8034,435"/>
+<area shape="rect" href="linkedcluster__cluster_8cpp.html" title=" " alt="" coords="8058,393,8241,435"/>
+<area shape="rect" href="linkedcluster__fetch_8cpp.html" title=" " alt="" coords="8265,393,8447,435"/>
+<area shape="rect" href="linkedcluster__flush_8cpp.html" title=" " alt="" coords="8471,393,8654,435"/>
+<area shape="rect" href="linkedcluster__internal_8cpp.html" title=" " alt="" coords="8678,393,8861,435"/>
+<area shape="rect" href="linkedcluster__read_8cpp.html" title=" " alt="" coords="8885,393,9067,435"/>
+<area shape="rect" href="linkedcluster__util_8cpp.html" title=" " alt="" coords="521,393,703,435"/>
+<area shape="rect" href="linkedcluster__write_8cpp.html" title=" " alt="" coords="727,393,910,435"/>
+<area shape="rect" href="listdir_8cpp.html" title=" " alt="" coords="935,401,1097,427"/>
+<area shape="rect" href="makedir_8cpp.html" title=" " alt="" coords="1121,401,1300,427"/>
+<area shape="rect" href="makefile_8cpp.html" title=" " alt="" coords="1325,401,1507,427"/>
+<area shape="rect" href="nextcluster_8cpp.html" title=" " alt="" coords="1531,401,1730,427"/>
+<area shape="rect" href="operator_8cpp.html" title=" " alt="" coords="1754,401,1934,427"/>
+<area shape="rect" href="path_8cpp.html" title=" " alt="" coords="1959,401,2113,427"/>
+<area shape="rect" href="removedir_8cpp.html" title=" " alt="" coords="2137,401,2329,427"/>
+<area shape="rect" href="removeentry_8cpp.html" title=" " alt="" coords="2353,401,2561,427"/>
+<area shape="rect" href="setfileinfo_8cpp.html" title=" " alt="" coords="2586,401,2777,427"/>
+<area shape="rect" href="thread_8cpp.html" title=" " alt="" coords="2801,401,2969,427"/>
+<area shape="rect" href="thread__classgeneral_8cpp.html" title=" " alt="" coords="2993,393,3135,435"/>
+<area shape="rect" href="thread__directory_8cpp.html" title=" " alt="" coords="3159,393,3300,435"/>
+<area shape="rect" href="thread__entry_8cpp.html" title=" " alt="" coords="3324,393,3465,435"/>
+<area shape="rect" href="thread__file_8cpp.html" title=" " alt="" coords="3489,393,3631,435"/>
+<area shape="rect" href="thread__volume_8cpp.html" title=" " alt="" coords="3655,393,3796,435"/>
+<area shape="rect" href="time_8cpp.html" title=" " alt="" coords="3821,401,3977,427"/>
 </map>
 </div>
 </div>
@@ -196,49 +199,56 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a301c819148a27e7e57a093da26677ba9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="error_8h.html#a301c819148a27e7e57a093da26677ba9">OPENFSL_SUCCESS</a>&#160;&#160;&#160;0x0</td></tr>
+<tr class="memitem:a301c819148a27e7e57a093da26677ba9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="error_8h.html#a301c819148a27e7e57a093da26677ba9">OPENFSL_SUCCESS</a>&#160;&#160;&#160;0</td></tr>
 <tr class="separator:a301c819148a27e7e57a093da26677ba9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3737296bc24560c54e9716b165487543"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="error_8h.html#a3737296bc24560c54e9716b165487543">OPENFSL_ERROR_DISK</a>&#160;&#160;&#160;0x1</td></tr>
+<tr class="memitem:a3737296bc24560c54e9716b165487543"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="error_8h.html#a3737296bc24560c54e9716b165487543">OPENFSL_ERROR_DISK</a>&#160;&#160;&#160;1</td></tr>
 <tr class="separator:a3737296bc24560c54e9716b165487543"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2320802b78acc635f6d1d83e849eea4f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="error_8h.html#a2320802b78acc635f6d1d83e849eea4f">OPENFSL_ERROR_NOMETHOD</a>&#160;&#160;&#160;0x2</td></tr>
+<tr class="memitem:a2320802b78acc635f6d1d83e849eea4f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="error_8h.html#a2320802b78acc635f6d1d83e849eea4f">OPENFSL_ERROR_NOMETHOD</a>&#160;&#160;&#160;2</td></tr>
 <tr class="separator:a2320802b78acc635f6d1d83e849eea4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad55872ec165924f48fe2bfb56df3cc87"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="error_8h.html#ad55872ec165924f48fe2bfb56df3cc87">OPENFSL_ERROR_INVSIGN</a>&#160;&#160;&#160;0x3</td></tr>
+<tr class="memitem:ad55872ec165924f48fe2bfb56df3cc87"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="error_8h.html#ad55872ec165924f48fe2bfb56df3cc87">OPENFSL_ERROR_INVSIGN</a>&#160;&#160;&#160;3</td></tr>
 <tr class="separator:ad55872ec165924f48fe2bfb56df3cc87"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a50418bfba956f26454c53fc95859ca43"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="error_8h.html#a50418bfba956f26454c53fc95859ca43">OPENFSL_ERROR_NOTEXIST</a>&#160;&#160;&#160;0x4</td></tr>
+<tr class="memitem:a50418bfba956f26454c53fc95859ca43"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="error_8h.html#a50418bfba956f26454c53fc95859ca43">OPENFSL_ERROR_NOTEXIST</a>&#160;&#160;&#160;4</td></tr>
 <tr class="separator:a50418bfba956f26454c53fc95859ca43"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8fbf59bf5319547e6f27498d96a440c6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="error_8h.html#a8fbf59bf5319547e6f27498d96a440c6">OPENFSL_ERROR_EXIST</a>&#160;&#160;&#160;0x5</td></tr>
+<tr class="memitem:a8fbf59bf5319547e6f27498d96a440c6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="error_8h.html#a8fbf59bf5319547e6f27498d96a440c6">OPENFSL_ERROR_EXIST</a>&#160;&#160;&#160;5</td></tr>
 <tr class="separator:a8fbf59bf5319547e6f27498d96a440c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adb927dca48a08b8a84c184acd97ea4ff"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="error_8h.html#adb927dca48a08b8a84c184acd97ea4ff">OPENFSL_ERROR_INVNAME</a>&#160;&#160;&#160;0x6</td></tr>
+<tr class="memitem:adb927dca48a08b8a84c184acd97ea4ff"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="error_8h.html#adb927dca48a08b8a84c184acd97ea4ff">OPENFSL_ERROR_INVNAME</a>&#160;&#160;&#160;6</td></tr>
 <tr class="separator:adb927dca48a08b8a84c184acd97ea4ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae30f6320a40fcf22363281a59a310fae"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="error_8h.html#ae30f6320a40fcf22363281a59a310fae">OPENFSL_ERROR_LARGELS</a>&#160;&#160;&#160;0x7</td></tr>
+<tr class="memitem:ae30f6320a40fcf22363281a59a310fae"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="error_8h.html#ae30f6320a40fcf22363281a59a310fae">OPENFSL_ERROR_LARGELS</a>&#160;&#160;&#160;7</td></tr>
 <tr class="separator:ae30f6320a40fcf22363281a59a310fae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af9fd1a6b25f4b82af7078e3a269ccd2a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="error_8h.html#af9fd1a6b25f4b82af7078e3a269ccd2a">OPENFSL_ERROR_BADCLUS</a>&#160;&#160;&#160;0x8</td></tr>
+<tr class="memitem:af9fd1a6b25f4b82af7078e3a269ccd2a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="error_8h.html#af9fd1a6b25f4b82af7078e3a269ccd2a">OPENFSL_ERROR_BADCLUS</a>&#160;&#160;&#160;8</td></tr>
 <tr class="separator:af9fd1a6b25f4b82af7078e3a269ccd2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a80c66b60815c860418b911b9e1ad9b6d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="error_8h.html#a80c66b60815c860418b911b9e1ad9b6d">OPENFSL_ERROR_NOPERM</a>&#160;&#160;&#160;0x9</td></tr>
+<tr class="memitem:a80c66b60815c860418b911b9e1ad9b6d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="error_8h.html#a80c66b60815c860418b911b9e1ad9b6d">OPENFSL_ERROR_NOPERM</a>&#160;&#160;&#160;9</td></tr>
 <tr class="separator:a80c66b60815c860418b911b9e1ad9b6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acc0b37dbf2da20ea083b1533e91628a6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="error_8h.html#acc0b37dbf2da20ea083b1533e91628a6">OPENFSL_ERROR_ALLOC</a>&#160;&#160;&#160;0xA</td></tr>
+<tr class="memitem:acc0b37dbf2da20ea083b1533e91628a6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="error_8h.html#acc0b37dbf2da20ea083b1533e91628a6">OPENFSL_ERROR_ALLOC</a>&#160;&#160;&#160;10</td></tr>
 <tr class="separator:acc0b37dbf2da20ea083b1533e91628a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2c8464b24d3c7e1a2f3725c28be98804"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="error_8h.html#a2c8464b24d3c7e1a2f3725c28be98804">OPENFSL_ERROR_CACCESS</a>&#160;&#160;&#160;0xB</td></tr>
+<tr class="memitem:a2c8464b24d3c7e1a2f3725c28be98804"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="error_8h.html#a2c8464b24d3c7e1a2f3725c28be98804">OPENFSL_ERROR_CACCESS</a>&#160;&#160;&#160;11</td></tr>
 <tr class="separator:a2c8464b24d3c7e1a2f3725c28be98804"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a58a59db5aad8fed38ffa1e392ba24ad1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="error_8h.html#a58a59db5aad8fed38ffa1e392ba24ad1">OPENFSL_ERROR_SCHABRT</a>&#160;&#160;&#160;0xC</td></tr>
+<tr class="memitem:a58a59db5aad8fed38ffa1e392ba24ad1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="error_8h.html#a58a59db5aad8fed38ffa1e392ba24ad1">OPENFSL_ERROR_SCHABRT</a>&#160;&#160;&#160;12</td></tr>
 <tr class="separator:a58a59db5aad8fed38ffa1e392ba24ad1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7fbb631b81a9218d2a7b512b2ea742b4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="error_8h.html#a7fbb631b81a9218d2a7b512b2ea742b4">OPENFSL_ERROR_LARGELBA</a>&#160;&#160;&#160;0xD</td></tr>
+<tr class="memitem:a7fbb631b81a9218d2a7b512b2ea742b4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="error_8h.html#a7fbb631b81a9218d2a7b512b2ea742b4">OPENFSL_ERROR_LARGELBA</a>&#160;&#160;&#160;13</td></tr>
 <tr class="separator:a7fbb631b81a9218d2a7b512b2ea742b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8b7ce3ea8216fc157434b9ec96c1f79d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="error_8h.html#a8b7ce3ea8216fc157434b9ec96c1f79d">OPENFSL_ERROR_VLABLONG</a>&#160;&#160;&#160;0xE</td></tr>
+<tr class="memitem:a8b7ce3ea8216fc157434b9ec96c1f79d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="error_8h.html#a8b7ce3ea8216fc157434b9ec96c1f79d">OPENFSL_ERROR_VLABLONG</a>&#160;&#160;&#160;14</td></tr>
 <tr class="separator:a8b7ce3ea8216fc157434b9ec96c1f79d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aade0302730616f7e41078344c19bd49c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="error_8h.html#aade0302730616f7e41078344c19bd49c">OPENFSL_ERROR_NOFLOPPY</a>&#160;&#160;&#160;0xE</td></tr>
+<tr class="memitem:aade0302730616f7e41078344c19bd49c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="error_8h.html#aade0302730616f7e41078344c19bd49c">OPENFSL_ERROR_NOFLOPPY</a>&#160;&#160;&#160;15</td></tr>
 <tr class="separator:aade0302730616f7e41078344c19bd49c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a720a4c4d02e3960766a8ddd7942392c2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="error_8h.html#a720a4c4d02e3960766a8ddd7942392c2">OPENFSL_ERROR_INVFMTOPT</a>&#160;&#160;&#160;0xF</td></tr>
+<tr class="memitem:a720a4c4d02e3960766a8ddd7942392c2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="error_8h.html#a720a4c4d02e3960766a8ddd7942392c2">OPENFSL_ERROR_INVFMTOPT</a>&#160;&#160;&#160;16</td></tr>
 <tr class="separator:a720a4c4d02e3960766a8ddd7942392c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae535d99b2aed73de8e800fd2543a47d3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="error_8h.html#ae535d99b2aed73de8e800fd2543a47d3">OPENFSL_ERROR_SZTOOBIG</a>&#160;&#160;&#160;17</td></tr>
+<tr class="separator:ae535d99b2aed73de8e800fd2543a47d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a9ad6b2dc3cbff040775e79656fe8e1a3"><td class="memItemLeft" align="right" valign="top">typedef int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="error_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a></td></tr>
+<tr class="separator:a9ad6b2dc3cbff040775e79656fe8e1a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a5d77f0f6e9733071cffe83caed35ed14"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopen_f_s_l.html#a5d77f0f6e9733071cffe83caed35ed14">openFSL::geterrorlen</a> (int errnum)</td></tr>
-<tr class="separator:a5d77f0f6e9733071cffe83caed35ed14"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a533e4fe1a3f2b0a38cdd1949cb781d36"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopen_f_s_l.html#a533e4fe1a3f2b0a38cdd1949cb781d36">openFSL::geterrorstr</a> (char *errstr, int errnum)</td></tr>
-<tr class="separator:a533e4fe1a3f2b0a38cdd1949cb781d36"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac7f39300d30bbc5e40e37966bd43da03"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopen_f_s_l.html#ac7f39300d30bbc5e40e37966bd43da03">openFSL::geterrorstr</a> (int errnum)</td></tr>
-<tr class="separator:ac7f39300d30bbc5e40e37966bd43da03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e924e1029f0f713afc5f77eda772de9"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopen_f_s_l.html#a3e924e1029f0f713afc5f77eda772de9">openFSL::geterrorlen</a> (<a class="el" href="error_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a> errnum)</td></tr>
+<tr class="separator:a3e924e1029f0f713afc5f77eda772de9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a508870d0d0d0de011effae845236c3a3"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopen_f_s_l.html#a508870d0d0d0de011effae845236c3a3">openFSL::geterrorstr</a> (char *errstr, <a class="el" href="error_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a> errnum)</td></tr>
+<tr class="separator:a508870d0d0d0de011effae845236c3a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1d05605aa7a06a2c8e2ebdfbdeefb20"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopen_f_s_l.html#ae1d05605aa7a06a2c8e2ebdfbdeefb20">openFSL::geterrorstr</a> (<a class="el" href="error_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a> errnum)</td></tr>
+<tr class="separator:ae1d05605aa7a06a2c8e2ebdfbdeefb20"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -253,12 +263,12 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define OPENFSL_ERROR_ALLOC&#160;&#160;&#160;0xA</td>
+          <td class="memname">#define OPENFSL_ERROR_ALLOC&#160;&#160;&#160;10</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="error_8h_source.html#l00044">44</a> of file <a class="el" href="error_8h_source.html">error.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="error_8h_source.html#l00049">49</a> of file <a class="el" href="error_8h_source.html">error.h</a>.</p>
 
 </div>
 </div>
@@ -269,12 +279,12 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define OPENFSL_ERROR_BADCLUS&#160;&#160;&#160;0x8</td>
+          <td class="memname">#define OPENFSL_ERROR_BADCLUS&#160;&#160;&#160;8</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="error_8h_source.html#l00040">40</a> of file <a class="el" href="error_8h_source.html">error.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="error_8h_source.html#l00045">45</a> of file <a class="el" href="error_8h_source.html">error.h</a>.</p>
 
 </div>
 </div>
@@ -285,12 +295,12 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define OPENFSL_ERROR_CACCESS&#160;&#160;&#160;0xB</td>
+          <td class="memname">#define OPENFSL_ERROR_CACCESS&#160;&#160;&#160;11</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="error_8h_source.html#l00046">46</a> of file <a class="el" href="error_8h_source.html">error.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="error_8h_source.html#l00051">51</a> of file <a class="el" href="error_8h_source.html">error.h</a>.</p>
 
 </div>
 </div>
@@ -301,12 +311,12 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define OPENFSL_ERROR_DISK&#160;&#160;&#160;0x1</td>
+          <td class="memname">#define OPENFSL_ERROR_DISK&#160;&#160;&#160;1</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="error_8h_source.html#l00026">26</a> of file <a class="el" href="error_8h_source.html">error.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="error_8h_source.html#l00031">31</a> of file <a class="el" href="error_8h_source.html">error.h</a>.</p>
 
 </div>
 </div>
@@ -317,12 +327,12 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define OPENFSL_ERROR_EXIST&#160;&#160;&#160;0x5</td>
+          <td class="memname">#define OPENFSL_ERROR_EXIST&#160;&#160;&#160;5</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="error_8h_source.html#l00034">34</a> of file <a class="el" href="error_8h_source.html">error.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="error_8h_source.html#l00039">39</a> of file <a class="el" href="error_8h_source.html">error.h</a>.</p>
 
 </div>
 </div>
@@ -333,12 +343,12 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define OPENFSL_ERROR_INVFMTOPT&#160;&#160;&#160;0xF</td>
+          <td class="memname">#define OPENFSL_ERROR_INVFMTOPT&#160;&#160;&#160;16</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="error_8h_source.html#l00056">56</a> of file <a class="el" href="error_8h_source.html">error.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="error_8h_source.html#l00061">61</a> of file <a class="el" href="error_8h_source.html">error.h</a>.</p>
 
 </div>
 </div>
@@ -349,12 +359,12 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define OPENFSL_ERROR_INVNAME&#160;&#160;&#160;0x6</td>
+          <td class="memname">#define OPENFSL_ERROR_INVNAME&#160;&#160;&#160;6</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="error_8h_source.html#l00036">36</a> of file <a class="el" href="error_8h_source.html">error.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="error_8h_source.html#l00041">41</a> of file <a class="el" href="error_8h_source.html">error.h</a>.</p>
 
 </div>
 </div>
@@ -365,12 +375,12 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define OPENFSL_ERROR_INVSIGN&#160;&#160;&#160;0x3</td>
+          <td class="memname">#define OPENFSL_ERROR_INVSIGN&#160;&#160;&#160;3</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="error_8h_source.html#l00030">30</a> of file <a class="el" href="error_8h_source.html">error.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="error_8h_source.html#l00035">35</a> of file <a class="el" href="error_8h_source.html">error.h</a>.</p>
 
 </div>
 </div>
@@ -381,12 +391,12 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define OPENFSL_ERROR_LARGELBA&#160;&#160;&#160;0xD</td>
+          <td class="memname">#define OPENFSL_ERROR_LARGELBA&#160;&#160;&#160;13</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="error_8h_source.html#l00050">50</a> of file <a class="el" href="error_8h_source.html">error.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="error_8h_source.html#l00055">55</a> of file <a class="el" href="error_8h_source.html">error.h</a>.</p>
 
 </div>
 </div>
@@ -397,12 +407,12 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define OPENFSL_ERROR_LARGELS&#160;&#160;&#160;0x7</td>
+          <td class="memname">#define OPENFSL_ERROR_LARGELS&#160;&#160;&#160;7</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="error_8h_source.html#l00038">38</a> of file <a class="el" href="error_8h_source.html">error.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="error_8h_source.html#l00043">43</a> of file <a class="el" href="error_8h_source.html">error.h</a>.</p>
 
 </div>
 </div>
@@ -413,12 +423,12 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define OPENFSL_ERROR_NOFLOPPY&#160;&#160;&#160;0xE</td>
+          <td class="memname">#define OPENFSL_ERROR_NOFLOPPY&#160;&#160;&#160;15</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="error_8h_source.html#l00054">54</a> of file <a class="el" href="error_8h_source.html">error.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="error_8h_source.html#l00059">59</a> of file <a class="el" href="error_8h_source.html">error.h</a>.</p>
 
 </div>
 </div>
@@ -429,12 +439,12 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define OPENFSL_ERROR_NOMETHOD&#160;&#160;&#160;0x2</td>
+          <td class="memname">#define OPENFSL_ERROR_NOMETHOD&#160;&#160;&#160;2</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="error_8h_source.html#l00028">28</a> of file <a class="el" href="error_8h_source.html">error.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="error_8h_source.html#l00033">33</a> of file <a class="el" href="error_8h_source.html">error.h</a>.</p>
 
 </div>
 </div>
@@ -445,12 +455,12 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define OPENFSL_ERROR_NOPERM&#160;&#160;&#160;0x9</td>
+          <td class="memname">#define OPENFSL_ERROR_NOPERM&#160;&#160;&#160;9</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="error_8h_source.html#l00042">42</a> of file <a class="el" href="error_8h_source.html">error.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="error_8h_source.html#l00047">47</a> of file <a class="el" href="error_8h_source.html">error.h</a>.</p>
 
 </div>
 </div>
@@ -461,12 +471,12 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define OPENFSL_ERROR_NOTEXIST&#160;&#160;&#160;0x4</td>
+          <td class="memname">#define OPENFSL_ERROR_NOTEXIST&#160;&#160;&#160;4</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="error_8h_source.html#l00032">32</a> of file <a class="el" href="error_8h_source.html">error.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="error_8h_source.html#l00037">37</a> of file <a class="el" href="error_8h_source.html">error.h</a>.</p>
 
 </div>
 </div>
@@ -477,12 +487,28 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define OPENFSL_ERROR_SCHABRT&#160;&#160;&#160;0xC</td>
+          <td class="memname">#define OPENFSL_ERROR_SCHABRT&#160;&#160;&#160;12</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="error_8h_source.html#l00048">48</a> of file <a class="el" href="error_8h_source.html">error.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="error_8h_source.html#l00053">53</a> of file <a class="el" href="error_8h_source.html">error.h</a>.</p>
+
+</div>
+</div>
+<a id="ae535d99b2aed73de8e800fd2543a47d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae535d99b2aed73de8e800fd2543a47d3">&#9670;&nbsp;</a></span>OPENFSL_ERROR_SZTOOBIG</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OPENFSL_ERROR_SZTOOBIG&#160;&#160;&#160;17</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="error_8h_source.html#l00063">63</a> of file <a class="el" href="error_8h_source.html">error.h</a>.</p>
 
 </div>
 </div>
@@ -493,12 +519,12 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define OPENFSL_ERROR_VLABLONG&#160;&#160;&#160;0xE</td>
+          <td class="memname">#define OPENFSL_ERROR_VLABLONG&#160;&#160;&#160;14</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="error_8h_source.html#l00052">52</a> of file <a class="el" href="error_8h_source.html">error.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="error_8h_source.html#l00057">57</a> of file <a class="el" href="error_8h_source.html">error.h</a>.</p>
 
 </div>
 </div>
@@ -509,12 +535,29 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define OPENFSL_SUCCESS&#160;&#160;&#160;0x0</td>
+          <td class="memname">#define OPENFSL_SUCCESS&#160;&#160;&#160;0</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="error_8h_source.html#l00024">24</a> of file <a class="el" href="error_8h_source.html">error.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="error_8h_source.html#l00029">29</a> of file <a class="el" href="error_8h_source.html">error.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="a9ad6b2dc3cbff040775e79656fe8e1a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ad6b2dc3cbff040775e79656fe8e1a3">&#9670;&nbsp;</a></span>error_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef int <a class="el" href="error_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="error_8h_source.html#l00025">25</a> of file <a class="el" href="error_8h_source.html">error.h</a>.</p>
 
 </div>
 </div>

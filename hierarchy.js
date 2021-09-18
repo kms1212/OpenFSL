@@ -18,7 +18,9 @@ var hierarchy =
       [ "openFSL::FS_FAT32", "classopen_f_s_l_1_1_f_s___f_a_t32.html", null ],
       [ "openFSL::FS_NTFS", "classopen_f_s_l_1_1_f_s___n_t_f_s.html", null ]
     ] ],
-    [ "openFSL::FormatOptions", "structopen_f_s_l_1_1_format_options.html", null ],
+    [ "openFSL::FormatOptions", "structopen_f_s_l_1_1_format_options.html", [
+      [ "openFSL::FS_FAT32::FormatOptions", "structopen_f_s_l_1_1_f_s___f_a_t32_1_1_format_options.html", null ]
+    ] ],
     [ "openFSL::FS_FAT32::FSINFOSector", "structopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_s_i_n_f_o_sector.html", null ],
     [ "openFSL::FSL_File", "classopen_f_s_l_1_1_f_s_l___file.html", [
       [ "openFSL::FS_FAT32::FILE", "classopen_f_s_l_1_1_f_s___f_a_t32_1_1_f_i_l_e.html", null ]

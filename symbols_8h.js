@@ -3,6 +3,7 @@ var symbols_8h =
     [ "__TIME64_T_EXIST", "symbols_8h.html#a39559bc069223c77e31e5396c7b29fef", null ],
     [ "_LOCALTIME64_S_EXIST", "symbols_8h.html#a3361a8be4bd9a91de9378e81697b242f", null ],
     [ "DOUBLE_EXIST", "symbols_8h.html#adba081bf844f4015339e6a149429b66e", null ],
+    [ "ERROR_T_EXIST", "symbols_8h.html#a93bdd33da60a0bc867c759d70c0b53ca", null ],
     [ "INT_EXIST", "symbols_8h.html#a99f54a05fe97eb2cc9027a80ef3f2ba5", null ],
     [ "LOCALTIME_R_EXIST", "symbols_8h.html#a87521478df6e081d549742a23ec75e6b", null ],
     [ "LONG_EXIST", "symbols_8h.html#a1026d2829c8f1ae9b74a41bbe3159102", null ],
