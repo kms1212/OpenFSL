@@ -1,0 +1,9 @@
+<map id="openFSL::FAT32::initialize" name="openFSL::FAT32::initialize">
+<area shape="rect" id="node1" title="FS_FAT32 intializer." alt="" coords="5,143,192,170"/>
+<area shape="rect" id="node2" href="$classopen_f_s_l_1_1_file_system.html#abba241402f3e12b58a0abaa242a4490b" title=" " alt="" coords="241,5,397,47"/>
+<area shape="rect" id="node3" href="$classopen_f_s_l_1_1_container.html#a3e2d95c08c09ad8399aa4928ad9b77e0" title="Data buffer getter." alt="" coords="246,71,393,112"/>
+<area shape="rect" id="node4" href="$classopen_f_s_l_1_1_file_system.html#a67927109b0ccad0b054e268f0f908f37" title=" " alt="" coords="241,136,397,177"/>
+<area shape="rect" id="node5" href="$classopen_f_s_l_1_1_file_system.html#a0f85bd46fecdd2a86958f95e2ed5c3a5" title=" " alt="" coords="241,201,397,243"/>
+<area shape="rect" id="node6" href="$classopen_f_s_l_1_1_disk_device.html#aabed65fb673c0aa8a132c8b76c85db16" title=" " alt="" coords="240,267,399,308"/>
+<area shape="rect" id="node7" href="$classopen_f_s_l_1_1_scheduler.html#a7aec33581daea5576d66f39b8a6ee84a" title=" " alt="" coords="447,267,595,308"/>
+</map>

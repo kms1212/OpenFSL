@@ -18,9 +18,9 @@ var dir_5cfc8f798c7a4c570457442210be7344 =
     [ "gpt.h", "gpt_8h.html", null ],
     [ "macros.h", "macros_8h.html", "macros_8h" ],
     [ "mbr.h", "mbr_8h.html", [
-      [ "TB_MBR", "classopen_f_s_l_1_1_t_b___m_b_r.html", "classopen_f_s_l_1_1_t_b___m_b_r" ],
-      [ "PartitionEntry", "structopen_f_s_l_1_1_t_b___m_b_r_1_1_partition_entry.html", "structopen_f_s_l_1_1_t_b___m_b_r_1_1_partition_entry" ],
-      [ "PartitionTable", "structopen_f_s_l_1_1_t_b___m_b_r_1_1_partition_table.html", "structopen_f_s_l_1_1_t_b___m_b_r_1_1_partition_table" ]
+      [ "MBR", "classopen_f_s_l_1_1_m_b_r.html", "classopen_f_s_l_1_1_m_b_r" ],
+      [ "PartitionEntry", "structopen_f_s_l_1_1_m_b_r_1_1_partition_entry.html", "structopen_f_s_l_1_1_m_b_r_1_1_partition_entry" ],
+      [ "PartitionTable", "structopen_f_s_l_1_1_m_b_r_1_1_partition_table.html", "structopen_f_s_l_1_1_m_b_r_1_1_partition_table" ]
     ] ],
     [ "openfsl.h", "openfsl_8h.html", null ],
     [ "scheduler.h", "scheduler_8h.html", [

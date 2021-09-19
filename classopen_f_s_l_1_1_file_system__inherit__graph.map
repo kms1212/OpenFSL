@@ -1,5 +1,5 @@
 <map id="openFSL::FileSystem" name="openFSL::FileSystem">
-<area shape="rect" id="node1" title=" " alt="" coords="134,5,290,259"/>
-<area shape="rect" id="node2" href="$classopen_f_s_l_1_1_f_s___f_a_t32.html" title="FAT32 imeplementation." alt="" coords="5,307,219,1073"/>
-<area shape="rect" id="node3" href="$classopen_f_s_l_1_1_f_s___n_t_f_s.html" title="NTFS imeplementation." alt="" coords="243,651,381,729"/>
+<area shape="rect" id="node1" title=" " alt="" coords="127,5,283,259"/>
+<area shape="rect" id="node2" href="$classopen_f_s_l_1_1_f_a_t32.html" title="FAT32 imeplementation." alt="" coords="5,307,217,1044"/>
+<area shape="rect" id="node3" href="$classopen_f_s_l_1_1_n_t_f_s.html" title="NTFS imeplementation." alt="" coords="241,637,358,714"/>
 </map>

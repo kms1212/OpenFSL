@@ -1,0 +1,10 @@
+<map id="openFSL::detectDiskStructure" name="openFSL::detectDiskStructure">
+<area shape="rect" id="node1" title=" " alt="" coords="5,115,219,141"/>
+<area shape="rect" id="node2" href="$classopen_f_s_l_1_1_sector.html#a4216b770df1b0b98eafa60e3c5d84ea0" title="Data buffer getter." alt="" coords="512,5,697,32"/>
+<area shape="rect" id="node3" href="$classopen_f_s_l_1_1_disk_device.html#a4daf8e0487b2c9c48ae3768bf6c8351e" title=" " alt="" coords="525,57,684,98"/>
+<area shape="rect" id="node4" href="$classopen_f_s_l_1_1_m_b_r.html#a505d6b50d7454d225a59c057f526d8bb" title=" " alt="" coords="267,217,464,258"/>
+<area shape="rect" id="node5" href="$classopen_f_s_l_1_1_m_b_r.html#a41a47f6d277d7c9ebf63ed8b41827205" title=" " alt="" coords="276,115,455,141"/>
+<area shape="rect" id="node7" href="$classopen_f_s_l_1_1_disk_device.html#aabed65fb673c0aa8a132c8b76c85db16" title=" " alt="" coords="525,187,684,229"/>
+<area shape="rect" id="node6" href="$classopen_f_s_l_1_1_container.html#a3e2d95c08c09ad8399aa4928ad9b77e0" title="Data buffer getter." alt="" coords="531,122,678,163"/>
+<area shape="rect" id="node8" href="$classopen_f_s_l_1_1_scheduler.html#a7aec33581daea5576d66f39b8a6ee84a" title=" " alt="" coords="745,187,893,229"/>
+</map>

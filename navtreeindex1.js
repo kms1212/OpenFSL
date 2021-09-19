@@ -1,11 +1,9 @@
 var NAVTREEINDEX1 =
 {
-"detectstruct_8cpp.html":[3,0,3,1],
-"detectstruct_8cpp_source.html":[3,0,3,1],
 "detectstruct_8h.html":[3,0,2,0,2],
+"detectstruct_8h.html#a0e945e9d64f63279daa760f0ac20bf03":[3,0,2,0,2,6],
 "detectstruct_8h.html#a2578a765cffb6d518e8faea9296177b0":[3,0,2,0,2,7],
 "detectstruct_8h.html#a5c1ea7fb6d768acc7c561ef266263d27":[3,0,2,0,2,8],
-"detectstruct_8h.html#a6062bcbee7520af93a42dff7e430a429":[3,0,2,0,2,6],
 "detectstruct_8h.html#ad647fe1f00371310eb17ec2ce5e78d12":[3,0,2,0,2,5],
 "detectstruct_8h.html#ad647fe1f00371310eb17ec2ce5e78d12a3a66f74d6b72789cfc74f0a027767b01":[3,0,2,0,2,5,0],
 "detectstruct_8h.html#ad647fe1f00371310eb17ec2ce5e78d12a9bc8892c3d17aa83a359dc581af93463":[3,0,2,0,2,5,1],
@@ -249,5 +247,7 @@ var NAVTREEINDEX1 =
 "scheduler_8cpp.html":[3,0,3,10],
 "scheduler_8cpp_source.html":[3,0,3,10],
 "scheduler_8h.html":[3,0,2,0,13],
-"scheduler_8h_source.html":[3,0,2,0,13]
+"scheduler_8h_source.html":[3,0,2,0,13],
+"sector_8cpp.html":[3,0,3,11],
+"sector_8cpp_source.html":[3,0,3,11]
 };

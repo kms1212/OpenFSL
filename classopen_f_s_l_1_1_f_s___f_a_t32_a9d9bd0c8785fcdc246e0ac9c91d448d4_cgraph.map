@@ -1,7 +1,0 @@
-<map id="openFSL::FS_FAT32::updateBpb" name="openFSL::FS_FAT32::updateBpb">
-<area shape="rect" id="node1" title="Update BPB." alt="" coords="5,71,157,112"/>
-<area shape="rect" id="node2" href="$classopen_f_s_l_1_1_file_system.html#abba241402f3e12b58a0abaa242a4490b" title=" " alt="" coords="207,5,363,47"/>
-<area shape="rect" id="node3" href="$classopen_f_s_l_1_1_file_system.html#a67927109b0ccad0b054e268f0f908f37" title=" " alt="" coords="207,71,363,112"/>
-<area shape="rect" id="node4" href="$classopen_f_s_l_1_1_disk_device.html#a55d767567bd72088a73bb8b2c4ac5edb" title=" " alt="" coords="205,136,364,177"/>
-<area shape="rect" id="node5" href="$classopen_f_s_l_1_1_scheduler.html#a7aec33581daea5576d66f39b8a6ee84a" title=" " alt="" coords="412,136,560,177"/>
-</map>

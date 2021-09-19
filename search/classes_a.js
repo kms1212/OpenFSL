@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['vbrsector_519',['VBRSector',['../structopen_f_s_l_1_1_f_s___n_t_f_s_1_1_v_b_r_sector.html',1,'openFSL::FS_NTFS']]],
-  ['volumeinfo_520',['VolumeInfo',['../structopen_f_s_l_1_1_f_s___f_a_t32_1_1_thread_1_1_volume_info.html',1,'openFSL::FS_FAT32::Thread']]]
+  ['task_513',['Task',['../structopen_f_s_l_1_1_scheduler_1_1_task.html',1,'openFSL::Scheduler']]],
+  ['thread_514',['Thread',['../classopen_f_s_l_1_1_f_a_t32_1_1_thread.html',1,'openFSL::FAT32']]],
+  ['time_515',['Time',['../structopen_f_s_l_1_1_time.html',1,'openFSL']]]
 ];

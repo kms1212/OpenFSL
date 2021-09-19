@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['scheduler_513',['Scheduler',['../classopen_f_s_l_1_1_scheduler.html',1,'openFSL']]],
-  ['sector_514',['Sector',['../classopen_f_s_l_1_1_sector.html',1,'openFSL']]]
+  ['partitionentry_509',['PartitionEntry',['../structopen_f_s_l_1_1_m_b_r_1_1_partition_entry.html',1,'openFSL::MBR']]],
+  ['partitiontable_510',['PartitionTable',['../structopen_f_s_l_1_1_m_b_r_1_1_partition_table.html',1,'openFSL::MBR']]]
 ];

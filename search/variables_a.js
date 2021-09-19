@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['mbrbootcode_845',['mbrBootCode',['../structopen_f_s_l_1_1_t_b___m_b_r_1_1_partition_table.html#ae1e25d9b6eeeac90e146c70a6f33b5c6',1,'openFSL::TB_MBR::PartitionTable']]],
-  ['mbrpartitionentry_846',['mbrPartitionEntry',['../structopen_f_s_l_1_1_t_b___m_b_r_1_1_partition_table.html#a0f56e5cd0237b5d70fb57f95a0d2f5d8',1,'openFSL::TB_MBR::PartitionTable']]],
-  ['mbrsignature_847',['mbrSignature',['../structopen_f_s_l_1_1_t_b___m_b_r_1_1_partition_table.html#a890d4ec28c28ea6db83405c0a7299721',1,'openFSL::TB_MBR::PartitionTable']]],
-  ['modifiedclusters_848',['modifiedClusters',['../classopen_f_s_l_1_1_f_s___f_a_t32_1_1_linked_cluster.html#aac3432ac8ce75b3afe4ad8d201e82a23',1,'openFSL::FS_FAT32::LinkedCluster']]]
+  ['mbrbootcode_839',['mbrBootCode',['../structopen_f_s_l_1_1_m_b_r_1_1_partition_table.html#a0983d2d4fef5c6a60f863f736dca8ee7',1,'openFSL::MBR::PartitionTable']]],
+  ['mbrpartitionentry_840',['mbrPartitionEntry',['../structopen_f_s_l_1_1_m_b_r_1_1_partition_table.html#afcc0f4014c68bae418f986305a943ccf',1,'openFSL::MBR::PartitionTable']]],
+  ['mbrsignature_841',['mbrSignature',['../structopen_f_s_l_1_1_m_b_r_1_1_partition_table.html#a7cf6bbccec25eb45a5996241c2792558',1,'openFSL::MBR::PartitionTable']]],
+  ['modifiedclusters_842',['modifiedClusters',['../classopen_f_s_l_1_1_f_a_t32_1_1_linked_cluster.html#a9224ddff25d9fc5e42a782f571d09dbe',1,'openFSL::FAT32::LinkedCluster']]]
 ];
