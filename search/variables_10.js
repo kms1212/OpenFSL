@@ -1,16 +1,19 @@
 var searchData=
 [
-  ['table_871',['table',['../classopenfsl_1_1_m_b_r.html#afe4c3964cafd595949415d021e9d5a1d',1,'openfsl::MBR']]],
-  ['tailsig_872',['tailSig',['../structopenfsl_1_1fs_structure_1_1_c_o_m_m_a_a55h.html#af76977d79c4dc80f8702c9324db91a12',1,'openfsl::fsStructure::COMMAA55h']]],
-  ['task_873',['task',['../structopenfsl_1_1_scheduler_1_1_task.html#ab5b8eda7e95ff49c4d7d2e41f2ce7775',1,'openfsl::Scheduler::Task']]],
-  ['taskqueue_874',['taskQueue',['../classopenfsl_1_1_scheduler.html#a0235b0e0c9c41e68e1274ca465fdf0e1',1,'openfsl::Scheduler']]],
-  ['taskqueuecondvar_875',['taskQueueCondVar',['../classopenfsl_1_1_scheduler.html#a255b4ea1c61ab1aa7421bd307595580a',1,'openfsl::Scheduler']]],
-  ['taskqueuelock_876',['taskQueueLock',['../classopenfsl_1_1_scheduler.html#a78f382dc3af2c5137aa3d89ccb425e9a',1,'openfsl::Scheduler']]],
-  ['time_5fday_877',['time_day',['../structopenfsl_1_1_time.html#a724d00f57e2e4825d96f5a6d4fd3efb9',1,'openfsl::Time']]],
-  ['time_5fhour_878',['time_hour',['../structopenfsl_1_1_time.html#a19a2bc620255813a7ded8fce02f64fb5',1,'openfsl::Time']]],
-  ['time_5fmillis_879',['time_millis',['../structopenfsl_1_1_time.html#a61d8bd57dbb75d3039fe2a0810d08017',1,'openfsl::Time']]],
-  ['time_5fmin_880',['time_min',['../structopenfsl_1_1_time.html#abf43c5e13dac73a76eae851eba775d3a',1,'openfsl::Time']]],
-  ['time_5fmonth_881',['time_month',['../structopenfsl_1_1_time.html#ab751ff80c5c04e2fca0ab0a9492ecdfa',1,'openfsl::Time']]],
-  ['time_5fsec_882',['time_sec',['../structopenfsl_1_1_time.html#a3d107c996c665060cf058a2cb219e463',1,'openfsl::Time']]],
-  ['time_5fyear_883',['time_year',['../structopenfsl_1_1_time.html#a85f18a8eb83028bbc7264bebfb0d8a2f',1,'openfsl::Time']]]
+  ['vbrbootcode_862',['vbrBootCode',['../structopenfsl_1_1_n_t_f_s_1_1_v_b_r_sector.html#ac801b703e6710e692061ee45dfa49db8',1,'openfsl::NTFS::VBRSector']]],
+  ['vbrbytespersector_863',['vbrBytesPerSector',['../structopenfsl_1_1_n_t_f_s_1_1_v_b_r_sector.html#a294efe06be68b9ec8d388b5a5354cfa3',1,'openfsl::NTFS::VBRSector']]],
+  ['vbrclustersperindex_864',['vbrClustersPerIndex',['../structopenfsl_1_1_n_t_f_s_1_1_v_b_r_sector.html#a0a3f7264472c621ce0326e3b05bb7d45',1,'openfsl::NTFS::VBRSector']]],
+  ['vbrclustersperrecord_865',['vbrClustersPerRecord',['../structopenfsl_1_1_n_t_f_s_1_1_v_b_r_sector.html#a3720ac2cb04d1827c7d893e23c5b3091',1,'openfsl::NTFS::VBRSector']]],
+  ['vbrjumpcode_866',['vbrJumpCode',['../structopenfsl_1_1_n_t_f_s_1_1_v_b_r_sector.html#acfd916707654e3484f9ab71c6a6533f7',1,'openfsl::NTFS::VBRSector']]],
+  ['vbrmediatype_867',['vbrMediaType',['../structopenfsl_1_1_n_t_f_s_1_1_v_b_r_sector.html#acc05786933bedaa917ff5212037434fb',1,'openfsl::NTFS::VBRSector']]],
+  ['vbrmftmirrorstartcluster_868',['vbrMFTMirrorStartCluster',['../structopenfsl_1_1_n_t_f_s_1_1_v_b_r_sector.html#a2b3bef399af8eaa8f4acfe4389ac2370',1,'openfsl::NTFS::VBRSector']]],
+  ['vbrmftstartcluster_869',['vbrMFTStartCluster',['../structopenfsl_1_1_n_t_f_s_1_1_v_b_r_sector.html#a152d71636d46b8f0095ae316e27b4e81',1,'openfsl::NTFS::VBRSector']]],
+  ['vbroemname_870',['vbrOEMName',['../structopenfsl_1_1_n_t_f_s_1_1_v_b_r_sector.html#ab38f067f89f926c16d3586047c1ddd4a',1,'openfsl::NTFS::VBRSector']]],
+  ['vbrreservedsectorcount_871',['vbrReservedSectorCount',['../structopenfsl_1_1_n_t_f_s_1_1_v_b_r_sector.html#ae2d5aaa9506f77348c520fa9ff5cc398',1,'openfsl::NTFS::VBRSector']]],
+  ['vbrsectorspercluster_872',['vbrSectorsPerCluster',['../structopenfsl_1_1_n_t_f_s_1_1_v_b_r_sector.html#a96df96981ead2c037cab6b829272b5c5',1,'openfsl::NTFS::VBRSector']]],
+  ['vbrsignature_873',['vbrSignature',['../structopenfsl_1_1_n_t_f_s_1_1_v_b_r_sector.html#a4330828660bab4084a2f6d7f5774046b',1,'openfsl::NTFS::VBRSector']]],
+  ['vbrtotalsectors_874',['vbrTotalSectors',['../structopenfsl_1_1_n_t_f_s_1_1_v_b_r_sector.html#a9933a4fe554c2cfb6643c441f0259039',1,'openfsl::NTFS::VBRSector']]],
+  ['vbrvolumeserial_875',['vbrVolumeSerial',['../structopenfsl_1_1_n_t_f_s_1_1_v_b_r_sector.html#a614ef5f32809679f95a2413cb821b446',1,'openfsl::NTFS::VBRSector']]],
+  ['volumelabel_876',['volumeLabel',['../structopenfsl_1_1_f_a_t32_1_1_format_options.html#a82cacbb7d89e86ccd6db561185d9feb9',1,'openfsl::FAT32::FormatOptions::volumeLabel()'],['../structopenfsl_1_1_f_a_t32_1_1_thread_1_1_volume_info.html#a1257ff4cc2b98a33e7a0b99b493cb45b',1,'openfsl::FAT32::Thread::VolumeInfo::volumeLabel()']]],
+  ['volumeserial_877',['volumeSerial',['../structopenfsl_1_1_f_a_t32_1_1_format_options.html#a7b3bb763c97c83932dd1ff55895ad88d',1,'openfsl::FAT32::FormatOptions::volumeSerial()'],['../structopenfsl_1_1_f_a_t32_1_1_thread_1_1_volume_info.html#aa39a37fa5d6e6f59067ca54b0bda4cd3',1,'openfsl::FAT32::Thread::VolumeInfo::volumeSerial()']]]
 ];

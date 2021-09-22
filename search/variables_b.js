@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['nextfreecluster_851',['nextFreeCluster',['../structopenfsl_1_1_f_a_t32_1_1_thread_1_1_volume_info.html#a3463d45b1f5ee5692451d8632478e45d',1,'openfsl::FAT32::Thread::VolumeInfo']]]
+  ['open_835',['open',['../structopenfsl_1_1_disk_device_1_1_i_o_functions.html#a74d0758c1f4fa9edbed6ce96f8a65c31',1,'openfsl::DiskDevice::IOFunctions']]],
+  ['openmode_836',['openMode',['../classopenfsl_1_1_f_s_l___file.html#aa58ef17aa2d23fd67968f7baa3e78d3e',1,'openfsl::FSL_File']]]
 ];

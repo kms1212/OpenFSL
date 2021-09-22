@@ -15,6 +15,6 @@ var classopenfsl_1_1_f_a_t32_1_1_f_i_l_e =
     [ "write", "classopenfsl_1_1_f_a_t32_1_1_f_i_l_e.html#a5f1c693e719a54ea05efc4a745dde467", null ],
     [ "currentFileInfo", "classopenfsl_1_1_f_a_t32_1_1_f_i_l_e.html#ab42ec543e38e71c4c2348ddf050b44fd", null ],
     [ "fileCluster", "classopenfsl_1_1_f_a_t32_1_1_f_i_l_e.html#acdc1bf8999a7bf87b55b781197675e09", null ],
-    [ "fileScheduler", "classopenfsl_1_1_f_a_t32_1_1_f_i_l_e.html#a0103fb0700fda863b9b2887b102e4dcd", null ],
+    [ "fileOperationMutex", "classopenfsl_1_1_f_a_t32_1_1_f_i_l_e.html#a78266994570d30e37efcbf0363243271", null ],
     [ "fileSystem", "classopenfsl_1_1_f_a_t32_1_1_f_i_l_e.html#ae0eb4e30eaf28967c6604fe116d8acb4", null ]
 ];

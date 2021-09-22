@@ -10,6 +10,5 @@ var dir_68267d1309a1af8e8297ef4c3efbcdba =
     [ "fslutils.cpp", "fslutils_8cpp.html", null ],
     [ "gpt.cpp", "gpt_8cpp.html", null ],
     [ "mbr.cpp", "mbr_8cpp.html", null ],
-    [ "scheduler.cpp", "scheduler_8cpp.html", null ],
     [ "sector.cpp", "sector_8cpp.html", null ]
 ];

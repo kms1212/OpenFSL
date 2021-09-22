@@ -1,11 +1,7 @@
 var searchData=
 [
-  ['lfnattr_839',['lfnAttr',['../structopenfsl_1_1_f_a_t32_1_1_l_f_n_entry.html#adb125289c4a357e6217c944beee131ed',1,'openfsl::FAT32::LFNEntry']]],
-  ['lfnchecksum_840',['lfnCheckSum',['../structopenfsl_1_1_f_a_t32_1_1_l_f_n_entry.html#aec9177f454706cdff2c1e97e646ac1f7',1,'openfsl::FAT32::LFNEntry']]],
-  ['lfnfilename1_841',['lfnFileName1',['../structopenfsl_1_1_f_a_t32_1_1_l_f_n_entry.html#a1defb69079a019bc1f3ee3d9c137d6f4',1,'openfsl::FAT32::LFNEntry']]],
-  ['lfnfilename2_842',['lfnFileName2',['../structopenfsl_1_1_f_a_t32_1_1_l_f_n_entry.html#a445f0f63fc39bef6020e287daf8ee880',1,'openfsl::FAT32::LFNEntry']]],
-  ['lfnfilename3_843',['lfnFileName3',['../structopenfsl_1_1_f_a_t32_1_1_l_f_n_entry.html#ac4ff1bb2241048f8e797d0d00649ddad',1,'openfsl::FAT32::LFNEntry']]],
-  ['lfnlocationlow_844',['lfnLocationLow',['../structopenfsl_1_1_f_a_t32_1_1_l_f_n_entry.html#a58a6d6b18f6c1a1f729c39ec292f1c8f',1,'openfsl::FAT32::LFNEntry']]],
-  ['lfnreserved1_845',['lfnReserved1',['../structopenfsl_1_1_f_a_t32_1_1_l_f_n_entry.html#a3e8bf61eded72aaa20934392237ccff6',1,'openfsl::FAT32::LFNEntry']]],
-  ['lfnseqnum_846',['lfnSeqNum',['../structopenfsl_1_1_f_a_t32_1_1_l_f_n_entry.html#a86d1b45a4156af42b1e9c02572ca541d',1,'openfsl::FAT32::LFNEntry']]]
+  ['mbrbootcode_830',['mbrBootCode',['../structopenfsl_1_1_m_b_r_1_1_partition_table.html#a6998625796b515a2c7403e672b580a1e',1,'openfsl::MBR::PartitionTable']]],
+  ['mbrpartitionentry_831',['mbrPartitionEntry',['../structopenfsl_1_1_m_b_r_1_1_partition_table.html#a338a046fb926706090dd4ca06e51c1ff',1,'openfsl::MBR::PartitionTable']]],
+  ['mbrsignature_832',['mbrSignature',['../structopenfsl_1_1_m_b_r_1_1_partition_table.html#af676b5a22cb186ae0a82a63e47ab7ed4',1,'openfsl::MBR::PartitionTable']]],
+  ['modifiedclusters_833',['modifiedClusters',['../classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a7a29bff2bdcca06f144d6a5074649c4a',1,'openfsl::FAT32::LinkedCluster']]]
 ];

@@ -1,7 +1,9 @@
 var searchData=
 [
-  ['partitionlist_854',['partitionList',['../classopenfsl_1_1_m_b_r.html#a79ee8d412d5fa4581d82a92585d81c24',1,'openfsl::MBR']]],
-  ['partlist_855',['partList',['../structopenfsl_1_1_disk_structure.html#ac02f39125484897fed35c987198a2df4',1,'openfsl::DiskStructure']]],
-  ['parttable_856',['partTable',['../structopenfsl_1_1_disk_structure.html#a6f24f5230029bb610c378da45d6010c2',1,'openfsl::DiskStructure']]],
-  ['pathseparator_857',['pathSeparator',['../classopenfsl_1_1_f_a_t32.html#a6c4b661c5695dacbee841a3b1ecda3d5',1,'openfsl::FAT32']]]
+  ['read_841',['read',['../structopenfsl_1_1_disk_device_1_1_i_o_functions.html#a5a7b3990dab865dd6ec0c01535e3094a',1,'openfsl::DiskDevice::IOFunctions']]],
+  ['readpointer_842',['readPointer',['../classopenfsl_1_1_f_s_l___file.html#aed50fd7dda6287da7200a0783da62406',1,'openfsl::FSL_File']]],
+  ['reservedname_843',['reservedName',['../classopenfsl_1_1_f_a_t32.html#aff09cdf748e47f54fbbc1de1a9b42d18',1,'openfsl::FAT32']]],
+  ['reservedsectorcount_844',['reservedSectorCount',['../structopenfsl_1_1_f_a_t32_1_1_format_options.html#ab94ba40f07e6f958c4c34cd7cad8eb2e',1,'openfsl::FAT32::FormatOptions']]],
+  ['rootdirectorycluster_845',['rootDirectoryCluster',['../structopenfsl_1_1_f_a_t32_1_1_format_options.html#a9d18666c108db6d18db9c999e6c25c54',1,'openfsl::FAT32::FormatOptions']]],
+  ['rootpath_846',['rootPath',['../classopenfsl_1_1_f_a_t32.html#a515a4909ed26d999e95d6920398a7636',1,'openfsl::FAT32']]]
 ];

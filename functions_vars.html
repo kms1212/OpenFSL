@@ -229,9 +229,6 @@ $(document).ready(function(){initNavTree('functions_vars.html',''); initResizabl
 <li>currentFileInfo
 : <a class="el" href="classopenfsl_1_1_f_a_t32_1_1_f_i_l_e.html#ab42ec543e38e71c4c2348ddf050b44fd">openfsl::FAT32::FILE</a>
 </li>
-<li>currentLastKey
-: <a class="el" href="classopenfsl_1_1_scheduler.html#a8a22b82e6e07c54e5a4708ed90aa39a8">openfsl::Scheduler</a>
-</li>
 <li>currentPath
 : <a class="el" href="classopenfsl_1_1_f_a_t32.html#a4b2abbe8d776920661b65c9c73ae1dc5">openfsl::FAT32</a>
 , <a class="el" href="classopenfsl_1_1_f_a_t32_1_1_thread.html#ac7ccef90efab6a1acc9e7153644fc096">openfsl::FAT32::Thread</a>
@@ -249,6 +246,9 @@ $(document).ready(function(){initNavTree('functions_vars.html',''); initResizabl
 <li>dd
 : <a class="el" href="classopenfsl_1_1_file_system.html#a09a92d2e81ba491f12f7e8737ee3cd8b">openfsl::FileSystem</a>
 , <a class="el" href="classopenfsl_1_1_m_b_r.html#a519e5fdfbd27423bddccdda8303e11e5">openfsl::MBR</a>
+</li>
+<li>diskOperationMutex
+: <a class="el" href="classopenfsl_1_1_disk_device.html#ac4d75217324aa00b84477029f0ae7212">openfsl::DiskDevice</a>
 </li>
 <li>diskParameter
 : <a class="el" href="classopenfsl_1_1_disk_device.html#a8fdacd7369241bb24717cde85ad0f511">openfsl::DiskDevice</a>
@@ -383,11 +383,11 @@ $(document).ready(function(){initNavTree('functions_vars.html',''); initResizabl
 : <a class="el" href="structopenfsl_1_1_f_a_t32_1_1_file_entry.html#a50dbdf8b998a11cb1c23a80854b7e499">openfsl::FAT32::FileEntry</a>
 , <a class="el" href="structopenfsl_1_1_f_a_t32_1_1_file_info.html#a8042347f388f6893aa9c6f76eb151818">openfsl::FAT32::FileInfo</a>
 </li>
+<li>fileOperationMutex
+: <a class="el" href="classopenfsl_1_1_f_a_t32_1_1_f_i_l_e.html#a78266994570d30e37efcbf0363243271">openfsl::FAT32::FILE</a>
+</li>
 <li>fileReserved1
 : <a class="el" href="structopenfsl_1_1_f_a_t32_1_1_file_entry.html#a0838d844d5e0873c57dbf09600d49452">openfsl::FAT32::FileEntry</a>
-</li>
-<li>fileScheduler
-: <a class="el" href="classopenfsl_1_1_f_a_t32_1_1_f_i_l_e.html#a0103fb0700fda863b9b2887b102e4dcd">openfsl::FAT32::FILE</a>
 </li>
 <li>fileSFNName
 : <a class="el" href="structopenfsl_1_1_f_a_t32_1_1_file_info.html#aa7b1cdd761ebec2156915e0804902c49">openfsl::FAT32::FileInfo</a>
@@ -434,6 +434,9 @@ $(document).ready(function(){initNavTree('functions_vars.html',''); initResizabl
 <li>fsLBAOffset
 : <a class="el" href="classopenfsl_1_1_file_system.html#a9a033de44a162aca39759c6bf57b1cfe">openfsl::FileSystem</a>
 </li>
+<li>fsOperationMutex
+: <a class="el" href="classopenfsl_1_1_f_a_t32.html#a878f4cbc9a910280b21e4e6c9c98a400">openfsl::FAT32</a>
+</li>
 <li>fsType
 : <a class="el" href="classopenfsl_1_1_f_a_t32.html#a3605a452e13f2b8404aaefaf8988a782">openfsl::FAT32</a>
 , <a class="el" href="classopenfsl_1_1_file_system.html#adfc0d0469797a07e006e14310207775b">openfsl::FileSystem</a>
@@ -461,13 +464,6 @@ $(document).ready(function(){initNavTree('functions_vars.html',''); initResizabl
 </li>
 <li>isExtendedPartitionExists
 : <a class="el" href="classopenfsl_1_1_m_b_r.html#a3273c94a0ef0e900f0afd5de0113210b">openfsl::MBR</a>
-</li>
-</ul>
-
-
-<h3><a id="index_k"></a>- k -</h3><ul>
-<li>key
-: <a class="el" href="structopenfsl_1_1_scheduler_1_1_task.html#a6e8bc32e3410c389f397548e5106058d">openfsl::Scheduler::Task</a>
 </li>
 </ul>
 
@@ -572,10 +568,6 @@ $(document).ready(function(){initNavTree('functions_vars.html',''); initResizabl
 
 
 <h3><a id="index_s"></a>- s -</h3><ul>
-<li>scheduler
-: <a class="el" href="classopenfsl_1_1_disk_device.html#a494c446f2dc6a75272f266f53eb6879e">openfsl::DiskDevice</a>
-, <a class="el" href="classopenfsl_1_1_file_system.html#a9cf90b29dc9c312c08f893b49e2a7ea3">openfsl::FileSystem</a>
-</li>
 <li>sect
 : <a class="el" href="structopenfsl_1_1_c_h_s.html#a3eed5a454069d89dacd2ebf1065f0b73">openfsl::CHS</a>
 </li>
@@ -603,18 +595,6 @@ $(document).ready(function(){initNavTree('functions_vars.html',''); initResizabl
 </li>
 <li>tailSig
 : <a class="el" href="structopenfsl_1_1fs_structure_1_1_c_o_m_m_a_a55h.html#af76977d79c4dc80f8702c9324db91a12">openfsl::fsStructure::COMMAA55h</a>
-</li>
-<li>task
-: <a class="el" href="structopenfsl_1_1_scheduler_1_1_task.html#ab5b8eda7e95ff49c4d7d2e41f2ce7775">openfsl::Scheduler::Task</a>
-</li>
-<li>taskQueue
-: <a class="el" href="classopenfsl_1_1_scheduler.html#a0235b0e0c9c41e68e1274ca465fdf0e1">openfsl::Scheduler</a>
-</li>
-<li>taskQueueCondVar
-: <a class="el" href="classopenfsl_1_1_scheduler.html#a255b4ea1c61ab1aa7421bd307595580a">openfsl::Scheduler</a>
-</li>
-<li>taskQueueLock
-: <a class="el" href="classopenfsl_1_1_scheduler.html#a78f382dc3af2c5137aa3d89ccb425e9a">openfsl::Scheduler</a>
 </li>
 <li>time_day
 : <a class="el" href="structopenfsl_1_1_time.html#a724d00f57e2e4825d96f5a6d4fd3efb9">openfsl::Time</a>

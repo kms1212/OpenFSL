@@ -13,7 +13,7 @@ var classopenfsl_1_1_disk_device =
     [ "setDiskParameter", "classopenfsl_1_1_disk_device.html#aa952ccd30e2055a5c3c3d83fad810082", null ],
     [ "setIoFunctions", "classopenfsl_1_1_disk_device.html#ad22dba7343f5203c2a34a0467e1226ec", null ],
     [ "writeDisk", "classopenfsl_1_1_disk_device.html#a55d767567bd72088a73bb8b2c4ac5edb", null ],
+    [ "diskOperationMutex", "classopenfsl_1_1_disk_device.html#ac4d75217324aa00b84477029f0ae7212", null ],
     [ "diskParameter", "classopenfsl_1_1_disk_device.html#a8fdacd7369241bb24717cde85ad0f511", null ],
-    [ "ioFunctions", "classopenfsl_1_1_disk_device.html#aff41434a6d07781f32867fb865684bab", null ],
-    [ "scheduler", "classopenfsl_1_1_disk_device.html#a494c446f2dc6a75272f266f53eb6879e", null ]
+    [ "ioFunctions", "classopenfsl_1_1_disk_device.html#aff41434a6d07781f32867fb865684bab", null ]
 ];

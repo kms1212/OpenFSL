@@ -1,25 +1,24 @@
 <map id="openfsl::FAT32::removeEntry" name="openfsl::FAT32::removeEntry">
-<area shape="rect" id="node1" title="Remove entry." alt="" coords="5,428,213,455"/>
-<area shape="rect" id="node2" href="$classopenfsl_1_1_f_a_t32.html#af3df0c01da6335fbcc67e17b9b2c2efe" title="Change directory." alt="" coords="265,327,421,354"/>
-<area shape="rect" id="node19" href="$classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a1c2a71cbccd0cd0d2bad07fffea837fe" title=" " alt="" coords="987,396,1199,437"/>
-<area shape="rect" id="node21" href="$classopenfsl_1_1_f_a_t32.html#a45a02c27ff6a625319afbb5ee080cb6a" title="List directory contents as path." alt="" coords="261,504,424,531"/>
-<area shape="rect" id="node22" href="$classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#af5294265acfc6c19b1b77641962d8a2f" title=" " alt="" coords="727,484,939,525"/>
-<area shape="rect" id="node3" href="$classopenfsl_1_1_f_a_t32.html#aa38de2ae9bf942c6ed44a59ddaab8484" title=" " alt="" coords="472,302,679,328"/>
-<area shape="rect" id="node18" href="$namespaceopenfsl.html#aece9191ac1393466e0ede51c792e7244" title="String tokenizer." alt="" coords="489,352,662,379"/>
-<area shape="rect" id="node4" href="$classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#ac2e7fe5cbcc1a42946d5c341e0723be2" title=" " alt="" coords="727,170,939,212"/>
-<area shape="rect" id="node5" href="$classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a8eb65dae2161b917df3000e90f1bbfbf" title=" " alt="" coords="727,236,939,277"/>
-<area shape="rect" id="node15" href="$classopenfsl_1_1_f_a_t32.html#a1dc8ea20b28d5418024f5335bd53bfda" title="UCS&#45;2 string to UTF&#45;8 string." alt="" coords="739,302,926,328"/>
-<area shape="rect" id="node16" href="$classopenfsl_1_1_f_a_t32.html#a1fb684ebe4fdb0c7bbf4468421c7d7be" title=" " alt="" coords="732,352,933,379"/>
-<area shape="rect" id="node17" href="$classopenfsl_1_1_f_a_t32.html#a0ca7f182497cb1a5eaccffd2d918fe05" title=" " alt="" coords="731,119,934,146"/>
-<area shape="rect" id="node6" href="$classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a8d8bef53ed1e0b628417f27333afa368" title=" " alt="" coords="987,270,1199,312"/>
-<area shape="rect" id="node8" href="$classopenfsl_1_1_f_a_t32.html#a68ad9ea509479c36026980f35c3648f0" title=" " alt="" coords="1507,336,1677,363"/>
-<area shape="rect" id="node10" href="$classopenfsl_1_1_sector.html#a4216b770df1b0b98eafa60e3c5d84ea0" title="Data buffer getter." alt="" coords="1263,95,1442,122"/>
-<area shape="rect" id="node11" href="$classopenfsl_1_1_file_system.html#abccaf76bc9304a037d3fbbf93fa87040" title=" " alt="" coords="1277,577,1428,618"/>
-<area shape="rect" id="node12" href="$classopenfsl_1_1_disk_device.html#af52e7ef0c7f16b41456cb38348078fa7" title=" " alt="" coords="1277,146,1429,188"/>
-<area shape="rect" id="node7" href="$classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a59a5d6f4d90b04eafa816c71cb470b61" title=" " alt="" coords="1247,329,1459,370"/>
-<area shape="rect" id="node9" href="$classopenfsl_1_1_file_system.html#a35aa764499ba36c8c678d5790d86decf" title=" " alt="" coords="1277,394,1428,436"/>
-<area shape="rect" id="node13" href="$classopenfsl_1_1_disk_device.html#aabed65fb673c0aa8a132c8b76c85db16" title=" " alt="" coords="1277,212,1429,253"/>
-<area shape="rect" id="node14" href="$classopenfsl_1_1_scheduler.html#a7aec33581daea5576d66f39b8a6ee84a" title=" " alt="" coords="1521,241,1663,282"/>
-<area shape="rect" id="node20" href="$classopenfsl_1_1_disk_device.html#a55d767567bd72088a73bb8b2c4ac5edb" title=" " alt="" coords="1277,460,1429,501"/>
-<area shape="rect" id="node23" href="$classopenfsl_1_1_container.html#ad0fa530d91da46276e19b08f9e468b62" title="Data buffer getter." alt="" coords="1022,513,1163,554"/>
+<area shape="rect" id="node1" title="Remove entry." alt="" coords="5,388,213,415"/>
+<area shape="rect" id="node2" href="$classopenfsl_1_1_f_a_t32.html#af3df0c01da6335fbcc67e17b9b2c2efe" title="Change directory." alt="" coords="265,180,421,207"/>
+<area shape="rect" id="node18" href="$classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a1c2a71cbccd0cd0d2bad07fffea837fe" title=" " alt="" coords="987,472,1199,513"/>
+<area shape="rect" id="node20" href="$classopenfsl_1_1_f_a_t32.html#a45a02c27ff6a625319afbb5ee080cb6a" title="List directory contents as path." alt="" coords="261,464,424,491"/>
+<area shape="rect" id="node21" href="$classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#af5294265acfc6c19b1b77641962d8a2f" title=" " alt="" coords="727,348,939,389"/>
+<area shape="rect" id="node3" href="$classopenfsl_1_1_f_a_t32.html#aa38de2ae9bf942c6ed44a59ddaab8484" title=" " alt="" coords="472,155,679,182"/>
+<area shape="rect" id="node17" href="$namespaceopenfsl.html#aece9191ac1393466e0ede51c792e7244" title="String tokenizer." alt="" coords="489,206,662,232"/>
+<area shape="rect" id="node4" href="$classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#ac2e7fe5cbcc1a42946d5c341e0723be2" title=" " alt="" coords="727,114,939,156"/>
+<area shape="rect" id="node5" href="$classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a8eb65dae2161b917df3000e90f1bbfbf" title=" " alt="" coords="727,180,939,221"/>
+<area shape="rect" id="node14" href="$classopenfsl_1_1_f_a_t32.html#a1dc8ea20b28d5418024f5335bd53bfda" title="UCS&#45;2 string to UTF&#45;8 string." alt="" coords="739,246,926,272"/>
+<area shape="rect" id="node15" href="$classopenfsl_1_1_f_a_t32.html#a1fb684ebe4fdb0c7bbf4468421c7d7be" title=" " alt="" coords="732,12,933,39"/>
+<area shape="rect" id="node16" href="$classopenfsl_1_1_f_a_t32.html#a0ca7f182497cb1a5eaccffd2d918fe05" title=" " alt="" coords="731,63,934,90"/>
+<area shape="rect" id="node6" href="$classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a8d8bef53ed1e0b628417f27333afa368" title=" " alt="" coords="987,238,1199,280"/>
+<area shape="rect" id="node8" href="$classopenfsl_1_1_f_a_t32.html#a68ad9ea509479c36026980f35c3648f0" title=" " alt="" coords="1507,386,1677,412"/>
+<area shape="rect" id="node10" href="$classopenfsl_1_1_sector.html#a4216b770df1b0b98eafa60e3c5d84ea0" title="Data buffer getter." alt="" coords="1263,144,1442,171"/>
+<area shape="rect" id="node11" href="$classopenfsl_1_1_file_system.html#abccaf76bc9304a037d3fbbf93fa87040" title=" " alt="" coords="1277,313,1428,354"/>
+<area shape="rect" id="node12" href="$classopenfsl_1_1_disk_device.html#af52e7ef0c7f16b41456cb38348078fa7" title=" " alt="" coords="1277,78,1429,120"/>
+<area shape="rect" id="node7" href="$classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a59a5d6f4d90b04eafa816c71cb470b61" title=" " alt="" coords="1247,378,1459,420"/>
+<area shape="rect" id="node9" href="$classopenfsl_1_1_file_system.html#a35aa764499ba36c8c678d5790d86decf" title=" " alt="" coords="1277,444,1428,485"/>
+<area shape="rect" id="node13" href="$classopenfsl_1_1_disk_device.html#aabed65fb673c0aa8a132c8b76c85db16" title=" " alt="" coords="1277,196,1429,237"/>
+<area shape="rect" id="node19" href="$classopenfsl_1_1_disk_device.html#a55d767567bd72088a73bb8b2c4ac5edb" title=" " alt="" coords="1277,561,1429,602"/>
+<area shape="rect" id="node22" href="$classopenfsl_1_1_container.html#ad0fa530d91da46276e19b08f9e468b62" title="Data buffer getter." alt="" coords="1022,406,1163,448"/>
 </map>
