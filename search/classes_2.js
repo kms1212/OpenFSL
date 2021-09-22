@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['diskdevice_490',['DiskDevice',['../classopen_f_s_l_1_1_disk_device.html',1,'openFSL']]],
-  ['diskparameter_491',['DiskParameter',['../structopen_f_s_l_1_1_disk_device_1_1_disk_parameter.html',1,'openFSL::DiskDevice']]],
-  ['diskstructure_492',['DiskStructure',['../structopen_f_s_l_1_1_disk_structure.html',1,'openFSL']]]
+  ['diskdevice_495',['DiskDevice',['../classopenfsl_1_1_disk_device.html',1,'openfsl']]],
+  ['diskparameter_496',['DiskParameter',['../structopenfsl_1_1_disk_device_1_1_disk_parameter.html',1,'openfsl::DiskDevice']]],
+  ['diskstructure_497',['DiskStructure',['../structopenfsl_1_1_disk_structure.html',1,'openfsl']]]
 ];

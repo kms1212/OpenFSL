@@ -1,0 +1,8 @@
+<map id="openfsl::MBR::PartitionTable" name="openfsl::MBR::PartitionTable">
+<area shape="rect" id="node1" title="MBR Partition Table." alt="" coords="65,315,269,392"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,175,80,252"/>
+<area shape="rect" id="node3" title=" " alt="" coords="157,5,224,83"/>
+<area shape="rect" id="node4" href="$structopenfsl_1_1_m_b_r_1_1_partition_entry.html" title="MBR Partition Entry." alt="" coords="297,175,501,252"/>
+<area shape="rect" id="node5" title=" " alt="" coords="344,5,451,83"/>
+<area shape="rect" id="node6" title=" " alt="" coords="524,5,599,83"/>
+</map>

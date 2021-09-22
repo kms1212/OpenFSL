@@ -1,9 +1,0 @@
-<map id="openFSL::FAT32::FileInfo" name="openFSL::FAT32::FileInfo">
-<area shape="rect" id="node1" title="FAT32 file information." alt="" coords="251,403,429,480"/>
-<area shape="rect" id="node2" href="$structopen_f_s_l_1_1_time.html" title="openFSL time" alt="" coords="5,233,123,311"/>
-<area shape="rect" id="node3" title=" " alt="" coords="45,5,83,83"/>
-<area shape="rect" id="node4" title=" " alt="" coords="174,233,234,311"/>
-<area shape="rect" id="node5" title=" " alt="" coords="303,233,377,311"/>
-<area shape="rect" id="node6" title=" " alt="" coords="428,233,487,311"/>
-<area shape="rect" id="node7" title=" " alt="" coords="538,233,641,311"/>
-</map>

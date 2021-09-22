@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['extpart_5fl_922',['ExtPart_L',['../classopen_f_s_l_1_1_m_b_r.html#aa294ceddaaafb2bf7d7c3d72dece0437aa13ace633c6f64c1550a4d5613aab6bc',1,'openFSL::MBR']]],
-  ['extpart_5fs_923',['ExtPart_S',['../classopen_f_s_l_1_1_m_b_r.html#aa294ceddaaafb2bf7d7c3d72dece0437a2932588d4c9514a734a07152e6dd5844',1,'openFSL::MBR']]]
+  ['extpart_5fl_930',['ExtPart_L',['../classopenfsl_1_1_m_b_r.html#a0b96adf72dee2df1ac1012dafd5036f1ac9961b64cad2bd2d51abbf506cf22fe2',1,'openfsl::MBR']]],
+  ['extpart_5fs_931',['ExtPart_S',['../classopenfsl_1_1_m_b_r.html#a0b96adf72dee2df1ac1012dafd5036f1a12ef190322ea6dca92c53fa9f645734a',1,'openfsl::MBR']]]
 ];

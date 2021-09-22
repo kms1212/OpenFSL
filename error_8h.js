@@ -19,8 +19,8 @@ var error_8h =
     [ "OPENFSL_ERROR_VLABLONG", "error_8h.html#a8b7ce3ea8216fc157434b9ec96c1f79d", null ],
     [ "OPENFSL_SUCCESS", "error_8h.html#a301c819148a27e7e57a093da26677ba9", null ],
     [ "error_t", "error_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3", null ],
-    [ "geterrorlen", "error_8h.html#a3e924e1029f0f713afc5f77eda772de9", null ],
-    [ "geterrorstr", "error_8h.html#a508870d0d0d0de011effae845236c3a3", null ],
-    [ "geterrorstr", "error_8h.html#ae1d05605aa7a06a2c8e2ebdfbdeefb20", null ],
-    [ "__maybe_unused", "error_8h.html#af22fc1bd1e188147c3a7642de50efd7f", null ]
+    [ "geterrorlen", "error_8h.html#a7df838c2bc0d3f1caf3d3e7d48e619fe", null ],
+    [ "geterrorstr", "error_8h.html#a585a72eb315bd340aeff0e3b040e2b03", null ],
+    [ "geterrorstr", "error_8h.html#a437d8dd509663a5865b9e2262818d3da", null ],
+    [ "__maybe_unused", "error_8h.html#a55f847765fc25784558ca6f505a4582b", null ]
 ];

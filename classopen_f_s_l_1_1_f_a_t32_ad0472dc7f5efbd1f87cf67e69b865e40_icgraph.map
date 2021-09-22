@@ -1,9 +1,0 @@
-<map id="openFSL::FAT32::listDir" name="openFSL::FAT32::listDir">
-<area shape="rect" id="node1" title="List directory contents as path." alt="" coords="737,81,907,108"/>
-<area shape="rect" id="node2" href="$classopen_f_s_l_1_1_f_a_t32.html#ae3c825b0e502bad95b802144865e979b" title="Create entry." alt="" coords="479,31,685,57"/>
-<area shape="rect" id="node6" href="$classopen_f_s_l_1_1_f_a_t32.html#a26e309fd9ea1a299379961048d328c09" title="Remove directory." alt="" coords="228,119,427,145"/>
-<area shape="rect" id="node7" href="$classopen_f_s_l_1_1_f_a_t32.html#ab040df33ca570d348b9625d4e6ace603" title="Remove entry." alt="" coords="475,132,689,159"/>
-<area shape="rect" id="node3" href="$classopen_f_s_l_1_1_f_a_t32.html#afd00ff45f2ad73d1011365c8ca4c539e" title="Create directory." alt="" coords="235,5,420,32"/>
-<area shape="rect" id="node4" href="$classopen_f_s_l_1_1_f_a_t32.html#ac60cea078d38d9f57a6969bbd8cff213" title="Create file." alt="" coords="233,56,422,83"/>
-<area shape="rect" id="node5" href="$classopen_f_s_l_1_1_f_a_t32_1_1_thread.html#a59f5e30d00ec46e681afef28060a6fa7" title=" " alt="" coords="5,49,180,90"/>
-</map>

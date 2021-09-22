@@ -112,9 +112,9 @@ $(document).ready(function(){initNavTree('charcoding_8cpp_source.html',''); init
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="fs__fat32_8h.html">openfsl/fat32/fs_fat32.h</a>&quot;</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespaceopen_f_s_l.html">openFSL</a>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespaceopenfsl.html">openfsl</a>;</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classopen_f_s_l_1_1_f_a_t32.html#a4f3f7ba39f2ec8f3267efd1194a136bc">   17</a></span>&#160;std::u16string <a class="code" href="classopen_f_s_l_1_1_f_a_t32.html#a4f3f7ba39f2ec8f3267efd1194a136bc">FAT32::u8ToUCS2</a>(<span class="keyword">const</span> std::string src)</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classopenfsl_1_1_f_a_t32.html#a4f3f7ba39f2ec8f3267efd1194a136bc">   17</a></span>&#160;std::u16string <a class="code" href="classopenfsl_1_1_f_a_t32.html#a4f3f7ba39f2ec8f3267efd1194a136bc">FAT32::u8ToUCS2</a>(<span class="keyword">const</span> std::string src)</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    std::wstring_convert&lt;std::codecvt_utf8&lt;char16_t&gt;, char16_t&gt; convert;</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
@@ -127,7 +127,7 @@ $(document).ready(function(){initNavTree('charcoding_8cpp_source.html',''); init
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classopen_f_s_l_1_1_f_a_t32.html#a1dc8ea20b28d5418024f5335bd53bfda">   30</a></span>&#160;std::string <a class="code" href="classopen_f_s_l_1_1_f_a_t32.html#a1dc8ea20b28d5418024f5335bd53bfda">FAT32::ucs2ToU8</a>(<span class="keyword">const</span> std::u16string src)</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classopenfsl_1_1_f_a_t32.html#a1dc8ea20b28d5418024f5335bd53bfda">   30</a></span>&#160;std::string <a class="code" href="classopenfsl_1_1_f_a_t32.html#a1dc8ea20b28d5418024f5335bd53bfda">FAT32::ucs2ToU8</a>(<span class="keyword">const</span> std::u16string src)</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    std::wstring_convert&lt;std::codecvt_utf8&lt;char16_t&gt;, char16_t&gt; convert;</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
@@ -142,9 +142,9 @@ $(document).ready(function(){initNavTree('charcoding_8cpp_source.html',''); init
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="afs__fat32_8h_html"><div class="ttname"><a href="fs__fat32_8h.html">fs_fat32.h</a></div></div>
-<div class="ttc" id="anamespaceopen_f_s_l_html"><div class="ttname"><a href="namespaceopen_f_s_l.html">openFSL</a></div><div class="ttdef"><b>Definition:</b> <a href="fslutils_8cpp_source.html#l00014">fslutils.cpp:14</a></div></div>
-<div class="ttc" id="aclassopen_f_s_l_1_1_f_a_t32_html_a4f3f7ba39f2ec8f3267efd1194a136bc"><div class="ttname"><a href="classopen_f_s_l_1_1_f_a_t32.html#a4f3f7ba39f2ec8f3267efd1194a136bc">openFSL::FAT32::u8ToUCS2</a></div><div class="ttdeci">std::u16string u8ToUCS2(const std::string src)</div><div class="ttdoc">UTF-8 string to UCS-2 string.</div><div class="ttdef"><b>Definition:</b> <a href="charcoding_8cpp_source.html#l00017">charcoding.cpp:17</a></div></div>
-<div class="ttc" id="aclassopen_f_s_l_1_1_f_a_t32_html_a1dc8ea20b28d5418024f5335bd53bfda"><div class="ttname"><a href="classopen_f_s_l_1_1_f_a_t32.html#a1dc8ea20b28d5418024f5335bd53bfda">openFSL::FAT32::ucs2ToU8</a></div><div class="ttdeci">std::string ucs2ToU8(const std::u16string src)</div><div class="ttdoc">UCS-2 string to UTF-8 string.</div><div class="ttdef"><b>Definition:</b> <a href="charcoding_8cpp_source.html#l00030">charcoding.cpp:30</a></div></div>
+<div class="ttc" id="anamespaceopenfsl_html"><div class="ttname"><a href="namespaceopenfsl.html">openfsl</a></div><div class="ttdef"><b>Definition:</b> <a href="fslutils_8cpp_source.html#l00014">fslutils.cpp:14</a></div></div>
+<div class="ttc" id="aclassopenfsl_1_1_f_a_t32_html_a4f3f7ba39f2ec8f3267efd1194a136bc"><div class="ttname"><a href="classopenfsl_1_1_f_a_t32.html#a4f3f7ba39f2ec8f3267efd1194a136bc">openfsl::FAT32::u8ToUCS2</a></div><div class="ttdeci">std::u16string u8ToUCS2(const std::string src)</div><div class="ttdoc">UTF-8 string to UCS-2 string.</div><div class="ttdef"><b>Definition:</b> <a href="charcoding_8cpp_source.html#l00017">charcoding.cpp:17</a></div></div>
+<div class="ttc" id="aclassopenfsl_1_1_f_a_t32_html_a1dc8ea20b28d5418024f5335bd53bfda"><div class="ttname"><a href="classopenfsl_1_1_f_a_t32.html#a1dc8ea20b28d5418024f5335bd53bfda">openfsl::FAT32::ucs2ToU8</a></div><div class="ttdeci">std::string ucs2ToU8(const std::u16string src)</div><div class="ttdoc">UCS-2 string to UTF-8 string.</div><div class="ttdef"><b>Definition:</b> <a href="charcoding_8cpp_source.html#l00030">charcoding.cpp:30</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
