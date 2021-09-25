@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['trunc_942',['Trunc',['../namespaceopenfsl.html#ab69edb30c6ca3a1228d3d32e61931c72ae062834253c7b0c888979454095d0af2',1,'openfsl']]]
+  ['pathclustercache_952',['PathClusterCache',['../classopenfsl_1_1_f_a_t32.html#aea18cd86a828b29f3531e03e11f9a388a57bcd622e269c9a2ea906f496146d731',1,'openfsl::FAT32']]]
 ];

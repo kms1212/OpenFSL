@@ -1,16 +1,18 @@
 <map id="openfsl::NTFS" name="openfsl::NTFS">
-<area shape="rect" id="node1" title="NTFS imeplementation." alt="" coords="281,831,391,908"/>
-<area shape="rect" id="node2" href="$classopenfsl_1_1_file_system.html" title=" " alt="" coords="261,601,411,781"/>
-<area shape="rect" id="node3" title=" " alt="" coords="5,403,208,480"/>
-<area shape="rect" id="node4" title=" " alt="" coords="232,403,307,480"/>
-<area shape="rect" id="node5" href="$classopenfsl_1_1_disk_device.html" title="Disk driver." alt="" coords="331,344,495,539"/>
-<area shape="rect" id="node6" href="$structopenfsl_1_1_disk_device_1_1_disk_parameter.html" title="Disk Parameter." alt="" coords="149,189,301,281"/>
-<area shape="rect" id="node7" title=" " alt="" coords="44,20,119,97"/>
-<area shape="rect" id="node8" title=" " alt="" coords="192,20,259,97"/>
-<area shape="rect" id="node9" title=" " alt="" coords="381,197,445,274"/>
-<area shape="rect" id="node10" href="$structopenfsl_1_1_disk_device_1_1_i_o_functions.html" title="IO functions." alt="" coords="523,189,675,281"/>
-<area shape="rect" id="node11" title=" " alt="" coords="283,5,493,112"/>
-<area shape="rect" id="node12" title=" " alt="" coords="517,5,691,112"/>
-<area shape="rect" id="node13" title=" " alt="" coords="715,13,875,105"/>
-<area shape="rect" id="node14" title=" " alt="" coords="520,403,571,480"/>
+<area shape="rect" id="node1" title="NTFS imeplementation." alt="" coords="525,873,635,980"/>
+<area shape="rect" id="node2" href="$classopenfsl_1_1_file_system.html" title=" " alt="" coords="405,631,555,811"/>
+<area shape="rect" id="node3" title=" " alt="" coords="193,403,268,480"/>
+<area shape="rect" id="node4" href="$classopenfsl_1_1_disk_device.html" title="Disk driver." alt="" coords="293,344,457,539"/>
+<area shape="rect" id="node5" href="$structopenfsl_1_1_disk_device_1_1_disk_parameter.html" title="Disk Parameter." alt="" coords="111,189,263,281"/>
+<area shape="rect" id="node6" title=" " alt="" coords="5,20,80,97"/>
+<area shape="rect" id="node7" title=" " alt="" coords="153,20,220,97"/>
+<area shape="rect" id="node8" title=" " alt="" coords="343,197,407,274"/>
+<area shape="rect" id="node9" href="$structopenfsl_1_1_disk_device_1_1_i_o_functions.html" title="IO functions." alt="" coords="484,189,636,281"/>
+<area shape="rect" id="node10" title=" " alt="" coords="244,5,455,112"/>
+<area shape="rect" id="node11" title=" " alt="" coords="479,5,652,112"/>
+<area shape="rect" id="node12" title=" " alt="" coords="676,13,836,105"/>
+<area shape="rect" id="node13" title=" " alt="" coords="481,403,540,480"/>
+<area shape="rect" id="node14" title=" " alt="" coords="593,403,644,480"/>
+<area shape="rect" id="node15" title=" " alt="" coords="668,403,900,480"/>
+<area shape="rect" id="node16" title=" " alt="" coords="580,682,783,759"/>
 </map>

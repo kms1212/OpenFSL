@@ -1,7 +1,11 @@
 var searchData=
 [
-  ['tellg_688',['tellg',['../classopenfsl_1_1_f_s_l___file.html#a330294fb8355a1709e5595429dea00ac',1,'openfsl::FSL_File::tellg()'],['../classopenfsl_1_1_f_a_t32_1_1_f_i_l_e.html#a8792369d18776eeab9c274044fc95cc6',1,'openfsl::FAT32::FILE::tellg()']]],
-  ['tellp_689',['tellp',['../classopenfsl_1_1_f_s_l___file.html#ada4573755d9457475f58768d0be27c5c',1,'openfsl::FSL_File::tellp()'],['../classopenfsl_1_1_f_a_t32_1_1_f_i_l_e.html#a037869a3307f750106bec90b86472139',1,'openfsl::FAT32::FILE::tellp()']]],
-  ['thread_690',['Thread',['../classopenfsl_1_1_f_a_t32_1_1_thread.html#a971617d2a676f03e7089e6af030a7370',1,'openfsl::FAT32::Thread']]],
-  ['timetoword_691',['timeToWord',['../classopenfsl_1_1_f_a_t32.html#a8bdf4074a465af2240b760fa812a8a9a',1,'openfsl::FAT32']]]
+  ['read_679',['read',['../classopenfsl_1_1_f_s_l___file.html#a9e1321efa0cb0284ead1c70a59f23001',1,'openfsl::FSL_File::read()'],['../classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#ac422a88cd8010748762d7cb82aeb8b09',1,'openfsl::FAT32::LinkedCluster::read()'],['../classopenfsl_1_1_f_a_t32_1_1_f_i_l_e.html#a5069f375d5b9c6d251765f63f048c227',1,'openfsl::FAT32::FILE::read()']]],
+  ['readdisk_680',['readDisk',['../classopenfsl_1_1_disk_device.html#a2367a28654de6f8892e9768206b4c462',1,'openfsl::DiskDevice']]],
+  ['removecluster_681',['removeCluster',['../classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#ad22e8e186a2dc1659c71620db3a9d5bb',1,'openfsl::FAT32::LinkedCluster']]],
+  ['removedir_682',['removeDir',['../classopenfsl_1_1_f_a_t32.html#a6300e357f9d00a93124a991efd010ecb',1,'openfsl::FAT32']]],
+  ['removedirectory_683',['removeDirectory',['../classopenfsl_1_1_f_a_t32.html#a99439040957aba5ea0c5b6194ef095ca',1,'openfsl::FAT32']]],
+  ['removeentry_684',['removeEntry',['../classopenfsl_1_1_f_a_t32.html#aed9bdd1c977a200c643b76d401d7255c',1,'openfsl::FAT32']]],
+  ['removefile_685',['removeFile',['../classopenfsl_1_1_f_a_t32.html#a609e3d596213485bd94c3ebcbb838ed1',1,'openfsl::FAT32']]],
+  ['reopen_686',['reopen',['../classopenfsl_1_1_f_a_t32_1_1_f_i_l_e.html#a48c6593f0fe97684243ae22d86891b05',1,'openfsl::FAT32::FILE']]]
 ];

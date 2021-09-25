@@ -1,11 +1,7 @@
 var searchData=
 [
-  ['read_667',['read',['../classopenfsl_1_1_f_s_l___file.html#a9e1321efa0cb0284ead1c70a59f23001',1,'openfsl::FSL_File::read()'],['../classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a8eb65dae2161b917df3000e90f1bbfbf',1,'openfsl::FAT32::LinkedCluster::read()'],['../classopenfsl_1_1_f_a_t32_1_1_f_i_l_e.html#ae1ae37f0bdd8f564c0b0fcdf50b25bc6',1,'openfsl::FAT32::FILE::read()']]],
-  ['readdisk_668',['readDisk',['../classopenfsl_1_1_disk_device.html#aabed65fb673c0aa8a132c8b76c85db16',1,'openfsl::DiskDevice']]],
-  ['removecluster_669',['removeCluster',['../classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a777b5b187f167d85692e54aa60aec985',1,'openfsl::FAT32::LinkedCluster']]],
-  ['removedir_670',['removeDir',['../classopenfsl_1_1_f_a_t32.html#a26e309fd9ea1a299379961048d328c09',1,'openfsl::FAT32']]],
-  ['removedirectory_671',['removeDirectory',['../classopenfsl_1_1_f_a_t32_1_1_thread.html#a35fdff54392002d27bc37ad15a4ff65d',1,'openfsl::FAT32::Thread']]],
-  ['removeentry_672',['removeEntry',['../classopenfsl_1_1_f_a_t32.html#ab040df33ca570d348b9625d4e6ace603',1,'openfsl::FAT32']]],
-  ['removefile_673',['removeFile',['../classopenfsl_1_1_f_a_t32_1_1_thread.html#ac4010c65e2def506389d931869a167a9',1,'openfsl::FAT32::Thread']]],
-  ['reopen_674',['reopen',['../classopenfsl_1_1_f_a_t32_1_1_f_i_l_e.html#ae767d4a60c3672db56b745c2dbacdcbf',1,'openfsl::FAT32::FILE']]]
+  ['open_674',['open',['../classopenfsl_1_1_f_a_t32_1_1_f_i_l_e.html#a24f5a45726c1bffa42bfc19cbeb00c0b',1,'openfsl::FAT32::FILE']]],
+  ['operator_26_675',['operator&amp;',['../namespaceopenfsl.html#a64465327289f41060d1d58732122fba4',1,'openfsl']]],
+  ['operator_5b_5d_676',['operator[]',['../classopenfsl_1_1_container.html#a42a902c5f1624538d41885f96ff890ac',1,'openfsl::Container::operator[](size_t index)'],['../classopenfsl_1_1_container.html#a9bcdbff005dfb11c818b1df915a7e3af',1,'openfsl::Container::operator[](int index)']]],
+  ['operator_7c_677',['operator|',['../namespaceopenfsl.html#a3f320aac36e2641cab8a87af0a35f2f0',1,'openfsl']]]
 ];

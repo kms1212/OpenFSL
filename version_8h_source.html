@@ -107,8 +107,8 @@ $(document).ready(function(){initNavTree('version_8h_source.html',''); initResiz
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">*/</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#ifndef __OPENFSL_VERSION_H__</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#define __OPENFSL_VERSION_H__</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#ifndef OPENFSL_VERSION_H_</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#define OPENFSL_VERSION_H_</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#ifndef __cplusplus</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#error C++ compiler required.</span></div>
@@ -123,17 +123,17 @@ $(document).ready(function(){initNavTree('version_8h_source.html',''); initResiz
 <div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="version_8h.html#acb1d3653e65bf49af3f8c9299204ab1d">   23</a></span>&#160;<span class="preprocessor">#define OPENFSL_VERSION_MAJOR 0</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="version_8h.html#a7b3b5696069fa694a96cdbacf956f4cd">   24</a></span>&#160;<span class="preprocessor">#define OPENFSL_VERSION_MINOR 0</span></div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#if OPENFSL_VERSION_TYPE==OPENFSL_VERSION_TYPE_RELEASE // Release build</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#if OPENFSL_VERSION_TYPE == OPENFSL_VERSION_TYPE_RELEASE // Release build</span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
 <div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="version_8h.html#a0a88d9a2c269bd8e899a53212f89ec24">   28</a></span>&#160;<span class="preprocessor">#define OPENFSL_VERSION_PATCH </span></div>
 <div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="version_8h.html#aa0724a55e6486048625d4789e7e176c8">   29</a></span>&#160;<span class="preprocessor">#define OPENFSL_VERSION_STRING &quot;&quot;</span></div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#elif OPENFSL_VERSION_TYPE==OPENFSL_VERSION_TYPE_BETA // Beta build</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#elif OPENFSL_VERSION_TYPE == OPENFSL_VERSION_TYPE_BETA // Beta build</span></div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#define OPENFSL_VERSION_BUILD </span></div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#define OPENFSL_VERSION_STRING &quot;&quot;</span></div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#elif OPENFSL_VERSION_TYPE==OPENFSL_VERSION_TYPE_NIGHTLY // Nightly build</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#elif OPENFSL_VERSION_TYPE == OPENFSL_VERSION_TYPE_NIGHTLY // Nightly build</span></div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#define OPENFSL_VERSION_DATE </span></div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#define OPENFSL_VERSION_BUILD </span></div>

@@ -1,0 +1,10 @@
+<map id="openfsl::FAT32::getNextFreeCluster" name="openfsl::FAT32::getNextFreeCluster">
+<area shape="rect" id="node1" title="Get Next Free Cluster." alt="" coords="973,111,1177,153"/>
+<area shape="rect" id="node2" href="$classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#acf3ee03c7160ccda84647ea6c75a7dba" title=" " alt="" coords="713,82,925,123"/>
+<area shape="rect" id="node4" href="$classopenfsl_1_1_f_a_t32.html#a47cefaa971d7f5ccbc52859fb7f3a399" title="Create directory." alt="" coords="238,72,417,99"/>
+<area shape="rect" id="node5" href="$classopenfsl_1_1_f_a_t32.html#abd66a3502afc57536cd9d741d8da17ed" title="Create file." alt="" coords="236,123,419,149"/>
+<area shape="rect" id="node8" href="$classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#aea890db47d58e6a322fae45322815e45" title=" " alt="" coords="713,199,925,241"/>
+<area shape="rect" id="node3" href="$classopenfsl_1_1_f_a_t32.html#a10a3e36c5458721cc0b06af5b62d045d" title="Create entry." alt="" coords="467,97,665,124"/>
+<area shape="rect" id="node7" href="$classopenfsl_1_1_f_a_t32_1_1_f_i_l_e.html#a86c12f039b27f769fdf3fc04a726738b" title="Write file." alt="" coords="491,31,641,73"/>
+<area shape="rect" id="node6" href="$classopenfsl_1_1_f_a_t32.html#a987037c4264e0e4b2d23ca415795d023" title=" " alt="" coords="5,123,188,149"/>
+</map>

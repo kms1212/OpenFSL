@@ -1,8 +1,4 @@
 <map id="openfsl::FAT32::getFsOperationMutex" name="openfsl::FAT32::getFsOperationMutex">
-<area shape="rect" id="node1" title=" " alt="" coords="223,136,447,177"/>
-<area shape="rect" id="node2" href="$classopenfsl_1_1_f_a_t32_1_1_thread.html#a014d056b53e8676de43154843844d878" title=" " alt="" coords="5,5,175,47"/>
-<area shape="rect" id="node3" href="$classopenfsl_1_1_f_a_t32_1_1_thread.html#acecd54a4621083e4779ece34104aadc1" title=" " alt="" coords="5,71,175,112"/>
-<area shape="rect" id="node4" href="$classopenfsl_1_1_f_a_t32_1_1_thread.html#a59f5e30d00ec46e681afef28060a6fa7" title=" " alt="" coords="5,136,175,177"/>
-<area shape="rect" id="node5" href="$classopenfsl_1_1_f_a_t32_1_1_f_i_l_e.html#af5f0a1c32600d6235522dba7d6e87b3a" title=" " alt="" coords="15,201,165,243"/>
-<area shape="rect" id="node6" href="$classopenfsl_1_1_f_a_t32_1_1_thread.html#a971617d2a676f03e7089e6af030a7370" title=" " alt="" coords="5,267,175,308"/>
+<area shape="rect" id="node1" title=" " alt="" coords="204,5,428,47"/>
+<area shape="rect" id="node2" href="$classopenfsl_1_1_f_a_t32_1_1_f_i_l_e.html#a24f5a45726c1bffa42bfc19cbeb00c0b" title=" " alt="" coords="5,5,156,47"/>
 </map>

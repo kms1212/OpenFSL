@@ -30,8 +30,7 @@ var hierarchy =
     [ "openfsl::fsStructure::NTFSBPB", "structopenfsl_1_1fs_structure_1_1_n_t_f_s_b_p_b.html", null ],
     [ "openfsl::MBR::PartitionEntry", "structopenfsl_1_1_m_b_r_1_1_partition_entry.html", null ],
     [ "openfsl::MBR::PartitionTable", "structopenfsl_1_1_m_b_r_1_1_partition_table.html", null ],
-    [ "openfsl::FAT32::Thread", "classopenfsl_1_1_f_a_t32_1_1_thread.html", null ],
     [ "openfsl::Time", "structopenfsl_1_1_time.html", null ],
     [ "openfsl::NTFS::VBRSector", "structopenfsl_1_1_n_t_f_s_1_1_v_b_r_sector.html", null ],
-    [ "openfsl::FAT32::Thread::VolumeInfo", "structopenfsl_1_1_f_a_t32_1_1_thread_1_1_volume_info.html", null ]
+    [ "openfsl::FAT32::VolumeInfo", "structopenfsl_1_1_f_a_t32_1_1_volume_info.html", null ]
 ];

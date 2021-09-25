@@ -109,72 +109,63 @@ $(document).ready(function(){initNavTree('fslutils_8cpp_source.html',''); initRe
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="fslutils_8h.html">openfsl/fslutils.h</a>&quot;</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespaceopenfsl.html">openfsl</a>;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="namespaceopenfsl.html">   14</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceopenfsl.html">openfsl</a> {</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;}</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="namespaceopenfsl.html#a0707283c9cfc634d0bba8497dc3b812d">   18</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="namespaceopenfsl.html#a0707283c9cfc634d0bba8497dc3b812d">openfsl::initializeLibrary</a>() {</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;}</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="namespaceopenfsl.html#aece9191ac1393466e0ede51c792e7244">   22</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespaceopenfsl.html#aece9191ac1393466e0ede51c792e7244">openfsl::fsl_strtokenize</a>(<span class="keyword">const</span> std::string&amp; str, std::vector&lt;std::string&gt;&amp; tokens, <span class="keyword">const</span> std::string&amp; delimiters)</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    std::string::size_type lastPos = str.find_first_not_of(delimiters, 0);</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    std::string::size_type pos     = str.find_first_of(delimiters, lastPos);</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">while</span> (std::string::npos != pos || std::string::npos != lastPos)</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    {</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        tokens.push_back(str.substr(lastPos, pos - lastPos));</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        lastPos = str.find_first_not_of(delimiters, pos);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        pos = str.find_first_of(delimiters, lastPos);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    }</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="namespaceopenfsl.html#a71941d4707cc678364f2194d98e29174">   35</a></span>&#160;std::tm <a class="code" href="namespaceopenfsl.html#a71941d4707cc678364f2194d98e29174">openfsl::fsl_localtime</a>(std::time_t time)</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    std::tm tmTime;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#if _LOCALTIME64_S_EXIST == 1</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    __time64_t time64 = (__time64_t)time;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    _localtime64_s(&amp;tmTime, &amp;time64);</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#elif LOCALTIME_R_EXIST == 1</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    localtime_r(&amp;time, &amp;tmTime);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    std::tm* temp = std::localtime(&amp;time);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    memcpy(&amp;tmTime, temp, <span class="keyword">sizeof</span>(std::tm));</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">return</span> tmTime;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;}</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="namespaceopenfsl.html#ad9cb5ea7645ca5b1a291e5a8054d4c94">   50</a></span>&#160;<a class="code" href="namespaceopenfsl.html#ac82097377896cd83a32c893edb39f391">lba48_t</a> <a class="code" href="namespaceopenfsl.html#ad9cb5ea7645ca5b1a291e5a8054d4c94">openfsl::convertCHSToLBA</a>(<span class="keyword">const</span> <a class="code" href="structopenfsl_1_1_c_h_s.html">CHS</a> chs, <span class="keyword">const</span> uint8_t sectPerTra, <span class="keyword">const</span> uint8_t headPerCyl)</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;{</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">return</span> (chs.<a class="code" href="structopenfsl_1_1_c_h_s.html#a299b43518d3a4cfecb94be6a28956459">cyl</a> * headPerCyl + chs.<a class="code" href="structopenfsl_1_1_c_h_s.html#a282f884f13f7759ab152259737d5b521">head</a>) * sectPerTra + (chs.<a class="code" href="structopenfsl_1_1_c_h_s.html#a3eed5a454069d89dacd2ebf1065f0b73">sect</a> - 1);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="namespaceopenfsl.html#a64109c8a5704ad14dc5e48eb867bae66">   55</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="namespaceopenfsl.html#a64109c8a5704ad14dc5e48eb867bae66">openfsl::convertLBAToCHS</a>(<span class="keyword">const</span> <a class="code" href="namespaceopenfsl.html#ac82097377896cd83a32c893edb39f391">lba48_t</a> lba, <a class="code" href="structopenfsl_1_1_c_h_s.html">CHS</a>&amp; chs, <span class="keyword">const</span> uint8_t sectPerTra, <span class="keyword">const</span> uint8_t headPerCyl)</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;{</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordflow">if</span> (lba &gt; 16515135)</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="error_8h.html#a7fbb631b81a9218d2a7b512b2ea742b4">OPENFSL_ERROR_LARGELBA</a>;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    chs.<a class="code" href="structopenfsl_1_1_c_h_s.html#a299b43518d3a4cfecb94be6a28956459">cyl</a> = lba / (headPerCyl * sectPerTra);</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    chs.<a class="code" href="structopenfsl_1_1_c_h_s.html#a282f884f13f7759ab152259737d5b521">head</a> = (lba / sectPerTra) % headPerCyl;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    chs.<a class="code" href="structopenfsl_1_1_c_h_s.html#a3eed5a454069d89dacd2ebf1065f0b73">sect</a> = (lba % sectPerTra) + 1;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="namespaceopenfsl.html#a0707283c9cfc634d0bba8497dc3b812d">   12</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="namespaceopenfsl.html#a0707283c9cfc634d0bba8497dc3b812d">openfsl::initializeLibrary</a>() {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;}</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="namespaceopenfsl.html#af5d84bfd77cfffcf6eca548c58646865">   16</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespaceopenfsl.html#af5d84bfd77cfffcf6eca548c58646865">openfsl::fsl_strtokenize</a>(<span class="keyword">const</span> std::string&amp; str,</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    std::vector&lt;std::string&gt;* tokens, <span class="keyword">const</span> std::string&amp; delimiters) {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    std::string::size_type lastPos = str.find_first_not_of(delimiters, 0);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    std::string::size_type pos     = str.find_first_of(delimiters, lastPos);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordflow">while</span> (std::string::npos != pos || std::string::npos != lastPos) {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        tokens-&gt;push_back(str.substr(lastPos, pos - lastPos));</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        lastPos = str.find_first_not_of(delimiters, pos);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        pos = str.find_first_of(delimiters, lastPos);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    }</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="namespaceopenfsl.html#a71941d4707cc678364f2194d98e29174">   28</a></span>&#160;std::tm <a class="code" href="namespaceopenfsl.html#a71941d4707cc678364f2194d98e29174">openfsl::fsl_localtime</a>(std::time_t time) {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    std::tm tmTime;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#if _LOCALTIME64_S_EXIST == 1</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    __time64_t time64 = (__time64_t)time;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    _localtime64_s(&amp;tmTime, &amp;time64);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#elif LOCALTIME_R_EXIST == 1</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    localtime_r(&amp;time, &amp;tmTime);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    std::tm* temp = std::localtime(&amp;time);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    memcpy(&amp;tmTime, temp, <span class="keyword">sizeof</span>(std::tm));</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">return</span> tmTime;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="namespaceopenfsl.html#a6a27df48edb0824793188f4c807d8a5f">   42</a></span>&#160;<a class="code" href="namespaceopenfsl.html#ac82097377896cd83a32c893edb39f391">openfsl::lba48_t</a> <a class="code" href="namespaceopenfsl.html#a6a27df48edb0824793188f4c807d8a5f">openfsl::convertCHSToLBA</a>(<span class="keyword">const</span> <a class="code" href="structopenfsl_1_1_c_h_s.html">CHS</a> chs,</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keyword">const</span> uint8_t sectPerTra, <span class="keyword">const</span> uint8_t headPerCyl) {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordflow">return</span> (chs.<a class="code" href="structopenfsl_1_1_c_h_s.html#a299b43518d3a4cfecb94be6a28956459">cyl</a> * headPerCyl + chs.<a class="code" href="structopenfsl_1_1_c_h_s.html#a282f884f13f7759ab152259737d5b521">head</a>) * sectPerTra + (chs.<a class="code" href="structopenfsl_1_1_c_h_s.html#a3eed5a454069d89dacd2ebf1065f0b73">sect</a> - 1);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="namespaceopenfsl.html#a78bbeba7546b7a5be59e5f835e64e767">   47</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="namespaceopenfsl.html#a78bbeba7546b7a5be59e5f835e64e767">openfsl::convertLBAToCHS</a>(<span class="keyword">const</span> <a class="code" href="namespaceopenfsl.html#ac82097377896cd83a32c893edb39f391">lba48_t</a> lba, <a class="code" href="structopenfsl_1_1_c_h_s.html">CHS</a>* chs,</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">const</span> uint8_t sectPerTra, <span class="keyword">const</span> uint8_t headPerCyl) {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">if</span> (lba &gt; 16515135)</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="error_8h.html#a7fbb631b81a9218d2a7b512b2ea742b4">OPENFSL_ERROR_LARGELBA</a>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    chs-&gt;<a class="code" href="structopenfsl_1_1_c_h_s.html#a299b43518d3a4cfecb94be6a28956459">cyl</a> = lba / (headPerCyl * sectPerTra);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    chs-&gt;<a class="code" href="structopenfsl_1_1_c_h_s.html#a282f884f13f7759ab152259737d5b521">head</a> = (lba / sectPerTra) % headPerCyl;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    chs-&gt;<a class="code" href="structopenfsl_1_1_c_h_s.html#a3eed5a454069d89dacd2ebf1065f0b73">sect</a> = (lba % sectPerTra) + 1;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="astructopenfsl_1_1_c_h_s_html_a299b43518d3a4cfecb94be6a28956459"><div class="ttname"><a href="structopenfsl_1_1_c_h_s.html#a299b43518d3a4cfecb94be6a28956459">openfsl::CHS::cyl</a></div><div class="ttdeci">uint32_t cyl</div><div class="ttdef"><b>Definition:</b> <a href="types_8h_source.html#l00024">types.h:24</a></div></div>
+<div class="ttc" id="anamespaceopenfsl_html_a78bbeba7546b7a5be59e5f835e64e767"><div class="ttname"><a href="namespaceopenfsl.html#a78bbeba7546b7a5be59e5f835e64e767">openfsl::convertLBAToCHS</a></div><div class="ttdeci">int convertLBAToCHS(const lba48_t lba, CHS *chs, const uint8_t sectPerTra, const uint8_t headPerCyl)</div><div class="ttdef"><b>Definition:</b> <a href="fslutils_8cpp_source.html#l00047">fslutils.cpp:47</a></div></div>
 <div class="ttc" id="astructopenfsl_1_1_c_h_s_html"><div class="ttname"><a href="structopenfsl_1_1_c_h_s.html">openfsl::CHS</a></div><div class="ttdef"><b>Definition:</b> <a href="types_8h_source.html#l00021">types.h:21</a></div></div>
-<div class="ttc" id="anamespaceopenfsl_html"><div class="ttname"><a href="namespaceopenfsl.html">openfsl</a></div><div class="ttdef"><b>Definition:</b> <a href="fslutils_8cpp_source.html#l00014">fslutils.cpp:14</a></div></div>
-<div class="ttc" id="anamespaceopenfsl_html_aece9191ac1393466e0ede51c792e7244"><div class="ttname"><a href="namespaceopenfsl.html#aece9191ac1393466e0ede51c792e7244">openfsl::fsl_strtokenize</a></div><div class="ttdeci">void fsl_strtokenize(const std::string &amp;str, std::vector&lt; std::string &gt; &amp;tokens, const std::string &amp;delimiters)</div><div class="ttdoc">String tokenizer.</div><div class="ttdef"><b>Definition:</b> <a href="fslutils_8cpp_source.html#l00022">fslutils.cpp:22</a></div></div>
+<div class="ttc" id="anamespaceopenfsl_html_a6a27df48edb0824793188f4c807d8a5f"><div class="ttname"><a href="namespaceopenfsl.html#a6a27df48edb0824793188f4c807d8a5f">openfsl::convertCHSToLBA</a></div><div class="ttdeci">lba48_t convertCHSToLBA(CHS chs, uint8_t sectPerTra, uint8_t headPerCyl)</div><div class="ttdef"><b>Definition:</b> <a href="fslutils_8cpp_source.html#l00042">fslutils.cpp:42</a></div></div>
+<div class="ttc" id="anamespaceopenfsl_html_af5d84bfd77cfffcf6eca548c58646865"><div class="ttname"><a href="namespaceopenfsl.html#af5d84bfd77cfffcf6eca548c58646865">openfsl::fsl_strtokenize</a></div><div class="ttdeci">void fsl_strtokenize(const std::string &amp;str, std::vector&lt; std::string &gt; *tokens, const std::string &amp;delimiters)</div><div class="ttdoc">String tokenizer.</div><div class="ttdef"><b>Definition:</b> <a href="fslutils_8cpp_source.html#l00016">fslutils.cpp:16</a></div></div>
 <div class="ttc" id="astructopenfsl_1_1_c_h_s_html_a282f884f13f7759ab152259737d5b521"><div class="ttname"><a href="structopenfsl_1_1_c_h_s.html#a282f884f13f7759ab152259737d5b521">openfsl::CHS::head</a></div><div class="ttdeci">uint32_t head</div><div class="ttdef"><b>Definition:</b> <a href="types_8h_source.html#l00022">types.h:22</a></div></div>
-<div class="ttc" id="anamespaceopenfsl_html_a0707283c9cfc634d0bba8497dc3b812d"><div class="ttname"><a href="namespaceopenfsl.html#a0707283c9cfc634d0bba8497dc3b812d">openfsl::initializeLibrary</a></div><div class="ttdeci">int initializeLibrary()</div><div class="ttdoc">Library initializer.</div><div class="ttdef"><b>Definition:</b> <a href="fslutils_8cpp_source.html#l00018">fslutils.cpp:18</a></div></div>
+<div class="ttc" id="anamespaceopenfsl_html_a0707283c9cfc634d0bba8497dc3b812d"><div class="ttname"><a href="namespaceopenfsl.html#a0707283c9cfc634d0bba8497dc3b812d">openfsl::initializeLibrary</a></div><div class="ttdeci">int initializeLibrary()</div><div class="ttdoc">Library initializer.</div><div class="ttdef"><b>Definition:</b> <a href="fslutils_8cpp_source.html#l00012">fslutils.cpp:12</a></div></div>
 <div class="ttc" id="astructopenfsl_1_1_c_h_s_html_a3eed5a454069d89dacd2ebf1065f0b73"><div class="ttname"><a href="structopenfsl_1_1_c_h_s.html#a3eed5a454069d89dacd2ebf1065f0b73">openfsl::CHS::sect</a></div><div class="ttdeci">uint32_t sect</div><div class="ttdef"><b>Definition:</b> <a href="types_8h_source.html#l00023">types.h:23</a></div></div>
 <div class="ttc" id="anamespaceopenfsl_html_ac82097377896cd83a32c893edb39f391"><div class="ttname"><a href="namespaceopenfsl.html#ac82097377896cd83a32c893edb39f391">openfsl::lba48_t</a></div><div class="ttdeci">uint64_t lba48_t</div><div class="ttdef"><b>Definition:</b> <a href="types_8h_source.html#l00029">types.h:29</a></div></div>
-<div class="ttc" id="anamespaceopenfsl_html_a64109c8a5704ad14dc5e48eb867bae66"><div class="ttname"><a href="namespaceopenfsl.html#a64109c8a5704ad14dc5e48eb867bae66">openfsl::convertLBAToCHS</a></div><div class="ttdeci">int convertLBAToCHS(const lba48_t lba, CHS &amp;chs, const uint8_t sectPerTra, const uint8_t headPerCyl)</div><div class="ttdef"><b>Definition:</b> <a href="fslutils_8cpp_source.html#l00055">fslutils.cpp:55</a></div></div>
 <div class="ttc" id="aerror_8h_html_a7fbb631b81a9218d2a7b512b2ea742b4"><div class="ttname"><a href="error_8h.html#a7fbb631b81a9218d2a7b512b2ea742b4">OPENFSL_ERROR_LARGELBA</a></div><div class="ttdeci">#define OPENFSL_ERROR_LARGELBA</div><div class="ttdef"><b>Definition:</b> <a href="error_8h_source.html#l00055">error.h:55</a></div></div>
-<div class="ttc" id="anamespaceopenfsl_html_a71941d4707cc678364f2194d98e29174"><div class="ttname"><a href="namespaceopenfsl.html#a71941d4707cc678364f2194d98e29174">openfsl::fsl_localtime</a></div><div class="ttdeci">std::tm fsl_localtime(std::time_t time)</div><div class="ttdef"><b>Definition:</b> <a href="fslutils_8cpp_source.html#l00035">fslutils.cpp:35</a></div></div>
-<div class="ttc" id="anamespaceopenfsl_html_ad9cb5ea7645ca5b1a291e5a8054d4c94"><div class="ttname"><a href="namespaceopenfsl.html#ad9cb5ea7645ca5b1a291e5a8054d4c94">openfsl::convertCHSToLBA</a></div><div class="ttdeci">lba48_t convertCHSToLBA(CHS chs, uint8_t sectPerTra, uint8_t headPerCyl)</div><div class="ttdef"><b>Definition:</b> <a href="fslutils_8cpp_source.html#l00050">fslutils.cpp:50</a></div></div>
+<div class="ttc" id="anamespaceopenfsl_html_a71941d4707cc678364f2194d98e29174"><div class="ttname"><a href="namespaceopenfsl.html#a71941d4707cc678364f2194d98e29174">openfsl::fsl_localtime</a></div><div class="ttdeci">std::tm fsl_localtime(std::time_t time)</div><div class="ttdef"><b>Definition:</b> <a href="fslutils_8cpp_source.html#l00028">fslutils.cpp:28</a></div></div>
 <div class="ttc" id="afslutils_8h_html"><div class="ttname"><a href="fslutils_8h.html">fslutils.h</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

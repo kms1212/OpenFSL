@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['open_662',['open',['../classopenfsl_1_1_f_a_t32_1_1_f_i_l_e.html#af5f0a1c32600d6235522dba7d6e87b3a',1,'openfsl::FAT32::FILE']]],
-  ['operator_26_663',['operator&amp;',['../namespaceopenfsl.html#a64465327289f41060d1d58732122fba4',1,'openfsl']]],
-  ['operator_5b_5d_664',['operator[]',['../classopenfsl_1_1_container.html#a95c4bd7de462b7b6e50ffc684028d1b9',1,'openfsl::Container::operator[](size_t index)'],['../classopenfsl_1_1_container.html#aab030d82e2e0243c7d7623721f2d8097',1,'openfsl::Container::operator[](int index)']]],
-  ['operator_7c_665',['operator|',['../namespaceopenfsl.html#a3f320aac36e2641cab8a87af0a35f2f0',1,'openfsl']]]
+  ['makedir_669',['makeDir',['../classopenfsl_1_1_f_a_t32.html#a47cefaa971d7f5ccbc52859fb7f3a399',1,'openfsl::FAT32']]],
+  ['makedirectory_670',['makeDirectory',['../classopenfsl_1_1_f_a_t32.html#aa9b15e6e32b89830a432419bcc715a23',1,'openfsl::FAT32']]],
+  ['makefile_671',['makeFile',['../classopenfsl_1_1_f_a_t32.html#abd66a3502afc57536cd9d741d8da17ed',1,'openfsl::FAT32::makeFile(std::string path, std::string dirname, const Time *createTime=nullptr)'],['../classopenfsl_1_1_f_a_t32.html#a987037c4264e0e4b2d23ca415795d023',1,'openfsl::FAT32::makeFile(std::string filename)']]],
+  ['mbr_672',['MBR',['../classopenfsl_1_1_m_b_r.html#a78d86f012516a3f53a5bbba77f439dd3',1,'openfsl::MBR']]]
 ];
