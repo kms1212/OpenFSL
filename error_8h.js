@@ -5,6 +5,7 @@ var error_8h =
     [ "OPENFSL_ERROR_CACCESS", "error_8h.html#a2c8464b24d3c7e1a2f3725c28be98804", null ],
     [ "OPENFSL_ERROR_DISK", "error_8h.html#a3737296bc24560c54e9716b165487543", null ],
     [ "OPENFSL_ERROR_EXIST", "error_8h.html#a8fbf59bf5319547e6f27498d96a440c6", null ],
+    [ "OPENFSL_ERROR_INVCACHE", "error_8h.html#a0c1e4602becdab1580e8c7be349280fb", null ],
     [ "OPENFSL_ERROR_INVFMTOPT", "error_8h.html#a720a4c4d02e3960766a8ddd7942392c2", null ],
     [ "OPENFSL_ERROR_INVNAME", "error_8h.html#adb927dca48a08b8a84c184acd97ea4ff", null ],
     [ "OPENFSL_ERROR_INVSIGN", "error_8h.html#ad55872ec165924f48fe2bfb56df3cc87", null ],
