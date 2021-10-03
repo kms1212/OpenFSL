@@ -1,0 +1,5 @@
+<map id="openfsl::IODevice::initialize" name="openfsl::IODevice::initialize">
+<area shape="rect" id="node1" title="IODevice initializer." alt="" coords="236,39,381,80"/>
+<area shape="rect" id="node2" href="$classopenfsl_1_1_file_block_device.html#a53e52feafbd2e724d98d7b0ffe24caa3" title="FileBlockDevice initializer." alt="" coords="5,5,188,47"/>
+<area shape="rect" id="node3" href="$classopenfsl_1_1_block_device.html#a40399ea1ad42304dfc80ddef4918a9cc" title="BlockDevice initializer." alt="" coords="17,71,176,112"/>
+</map>

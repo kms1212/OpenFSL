@@ -1,21 +1,27 @@
 var dir_5cfc8f798c7a4c570457442210be7344 =
 [
+    [ "blockdevice.h", "blockdevice_8h.html", [
+      [ "BlockDevice", "classopenfsl_1_1_block_device.html", "classopenfsl_1_1_block_device" ],
+      [ "IOFunctions", "structopenfsl_1_1_block_device_1_1_i_o_functions.html", "structopenfsl_1_1_block_device_1_1_i_o_functions" ],
+      [ "DiskParameter", "structopenfsl_1_1_block_device_1_1_disk_parameter.html", "structopenfsl_1_1_block_device_1_1_disk_parameter" ]
+    ] ],
     [ "bootcode.h", "bootcode_8h.html", "bootcode_8h" ],
     [ "container.h", "container_8h.html", [
       [ "Container", "classopenfsl_1_1_container.html", "classopenfsl_1_1_container" ]
     ] ],
     [ "detectstruct.h", "detectstruct_8h.html", "detectstruct_8h" ],
-    [ "diskdevice.h", "diskdevice_8h.html", [
-      [ "DiskDevice", "classopenfsl_1_1_disk_device.html", "classopenfsl_1_1_disk_device" ],
-      [ "DiskParameter", "structopenfsl_1_1_disk_device_1_1_disk_parameter.html", "structopenfsl_1_1_disk_device_1_1_disk_parameter" ],
-      [ "IOFunctions", "structopenfsl_1_1_disk_device_1_1_i_o_functions.html", "structopenfsl_1_1_disk_device_1_1_i_o_functions" ]
-    ] ],
     [ "error.h", "error_8h.html", "error_8h" ],
     [ "file.h", "file_8h.html", "file_8h" ],
+    [ "fileblockdevice.h", "fileblockdevice_8h.html", [
+      [ "FileBlockDevice", "classopenfsl_1_1_file_block_device.html", "classopenfsl_1_1_file_block_device" ]
+    ] ],
     [ "filesystem.h", "filesystem_8h.html", "filesystem_8h" ],
     [ "fsltime.h", "fsltime_8h.html", "fsltime_8h" ],
     [ "fslutils.h", "fslutils_8h.html", "fslutils_8h" ],
     [ "gpt.h", "gpt_8h.html", null ],
+    [ "iodevice.h", "iodevice_8h.html", [
+      [ "IODevice", "classopenfsl_1_1_i_o_device.html", "classopenfsl_1_1_i_o_device" ]
+    ] ],
     [ "macros.h", "macros_8h.html", "macros_8h" ],
     [ "mbr.h", "mbr_8h.html", [
       [ "MBR", "classopenfsl_1_1_m_b_r.html", "classopenfsl_1_1_m_b_r" ],

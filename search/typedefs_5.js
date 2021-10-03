@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['iofunctions_914',['IOFunctions',['../classopenfsl_1_1_disk_device.html#afaca2b7f2ec1e59990478728b9240804',1,'openfsl::DiskDevice']]]
+  ['iofunctions_942',['IOFunctions',['../classopenfsl_1_1_block_device.html#a4856f8db93f99db170a939b6889da9f2',1,'openfsl::BlockDevice']]]
 ];

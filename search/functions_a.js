@@ -1,4 +1,7 @@
 var searchData=
 [
-  ['ntfs_675',['NTFS',['../classopenfsl_1_1_n_t_f_s.html#a5cbc9dac472ffc3099a9bc3d607b163f',1,'openfsl::NTFS']]]
+  ['makedir_696',['makeDir',['../classopenfsl_1_1_f_a_t32.html#a47cefaa971d7f5ccbc52859fb7f3a399',1,'openfsl::FAT32']]],
+  ['makedirectory_697',['makeDirectory',['../classopenfsl_1_1_f_a_t32.html#aa9b15e6e32b89830a432419bcc715a23',1,'openfsl::FAT32']]],
+  ['makefile_698',['makeFile',['../classopenfsl_1_1_f_a_t32.html#abd66a3502afc57536cd9d741d8da17ed',1,'openfsl::FAT32::makeFile(std::string path, std::string dirname, const Time *createTime=nullptr)'],['../classopenfsl_1_1_f_a_t32.html#a987037c4264e0e4b2d23ca415795d023',1,'openfsl::FAT32::makeFile(std::string filename)']]],
+  ['mbr_699',['MBR',['../classopenfsl_1_1_m_b_r.html#ae53c75af083a387737fc64d8bab77c51',1,'openfsl::MBR']]]
 ];
