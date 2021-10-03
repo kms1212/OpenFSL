@@ -128,129 +128,133 @@ $(document).ready(function(){initNavTree('cache_8cpp_source.html',''); initResiz
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="error_8h.html#a0c1e4602becdab1580e8c7be349280fb">OPENFSL_ERROR_INVCACHE</a>;</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        memcpy(cache.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_cache_entry.html#a25854f2ed2db2d3b5b2e26a9c2eb3f92">cacheData</a>, data, dataSize);</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    }</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="classopenfsl_1_1_f_a_t32.html#a3ff50bd17ae0b7743b531d4b768115c9">cacheMutex</a>.lock();</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="classopenfsl_1_1_f_a_t32.html#a213d0c5ab978474bdfed219fba9ac592">fsCache</a>.insert(std::make_pair(key, cache));</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="classopenfsl_1_1_f_a_t32.html#a3ff50bd17ae0b7743b531d4b768115c9">cacheMutex</a>.unlock();</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="classopenfsl_1_1_f_a_t32.html#aa1560efd0d03a9038f5033cc64151fcb">cacheCvMutex</a>.lock();</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="classopenfsl_1_1_f_a_t32.html#ab6257cc47e04bebe7603bff4eccd82f5">cacheCv</a>.notify_all();</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="classopenfsl_1_1_f_a_t32.html#aa1560efd0d03a9038f5033cc64151fcb">cacheCvMutex</a>.unlock();</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;Cache &quot;</span> &lt;&lt; key &lt;&lt; <span class="stringliteral">&quot; inserted.\n&quot;</span>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="error_8h.html#a0c1e4602becdab1580e8c7be349280fb">OPENFSL_ERROR_INVCACHE</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    }</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="classopenfsl_1_1_f_a_t32.html#a3ff50bd17ae0b7743b531d4b768115c9">cacheMutex</a>.lock();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="classopenfsl_1_1_f_a_t32.html#a213d0c5ab978474bdfed219fba9ac592">fsCache</a>.insert(std::make_pair(key, cache));</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="classopenfsl_1_1_f_a_t32.html#a3ff50bd17ae0b7743b531d4b768115c9">cacheMutex</a>.unlock();</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="classopenfsl_1_1_f_a_t32.html#aa1560efd0d03a9038f5033cc64151fcb">cacheCvMutex</a>.lock();</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="classopenfsl_1_1_f_a_t32.html#ab6257cc47e04bebe7603bff4eccd82f5">cacheCv</a>.notify_all();</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="classopenfsl_1_1_f_a_t32.html#aa1560efd0d03a9038f5033cc64151fcb">cacheCvMutex</a>.unlock();</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="error_8h.html#a301c819148a27e7e57a093da26677ba9">OPENFSL_SUCCESS</a>;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;std::pair&lt;openfsl::FAT32::CacheType, void*&gt;</div>
-<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="classopenfsl_1_1_f_a_t32.html#a6a652465478a1d97792c527a14837779">   47</a></span>&#160;    <a class="code" href="classopenfsl_1_1_f_a_t32.html#a6a652465478a1d97792c527a14837779">openfsl::FAT32::getCacheValue</a>(std::string key, <a class="code" href="classopenfsl_1_1_f_a_t32.html#aea18cd86a828b29f3531e03e11f9a388">CacheType</a> cacheType) {</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    cacheOpCountMutex.lock();</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">size_t</span> opcnt = cacheOpCount++;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    cacheOpCountMutex.unlock();</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">if</span> (fsCache.find(key) != fsCache.end()) {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;Cache &quot;</span> &lt;&lt; key &lt;&lt; <span class="stringliteral">&quot; inserted.\n&quot;</span>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="error_8h.html#a301c819148a27e7e57a093da26677ba9">OPENFSL_SUCCESS</a>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;}</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;std::pair&lt;openfsl::FAT32::CacheType, void*&gt;</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classopenfsl_1_1_f_a_t32.html#a6a652465478a1d97792c527a14837779">   49</a></span>&#160;    <a class="code" href="classopenfsl_1_1_f_a_t32.html#a6a652465478a1d97792c527a14837779">openfsl::FAT32::getCacheValue</a>(std::string key, <a class="code" href="classopenfsl_1_1_f_a_t32.html#aea18cd86a828b29f3531e03e11f9a388">CacheType</a> cacheType) {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    cacheOpCountMutex.lock();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">size_t</span> opcnt = cacheOpCount++;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    cacheOpCountMutex.unlock();</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        fsCache[key].cacheLastUsed = opcnt;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        fsCache[key].cacheReadCount++;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        std::pair&lt;FAT32::CacheType, void*&gt; ret =</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            std::make_pair(fsCache[key].cacheType, fsCache[key].cacheData);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordflow">if</span> (fsCache[key].cacheType != CacheType::PathClusterCache) {</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <span class="keywordflow">goto</span> cacheTypeNotMatch;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        }</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordflow">return</span> ret;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;cacheTypeNotMatch:</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keywordflow">return</span> std::make_pair(CacheType::None, <span class="keyword">nullptr</span>);</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    }</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;}</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
-<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="classopenfsl_1_1_f_a_t32.html#a578cc427716513caee6c9b7315ea625c">   70</a></span>&#160;<a class="code" href="error_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a> <a class="code" href="classopenfsl_1_1_f_a_t32.html#a578cc427716513caee6c9b7315ea625c">openfsl::FAT32::deleteCache</a>(std::string key) {</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    cacheOpCountMutex.lock();</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    cacheOpCount++;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    cacheOpCountMutex.unlock();</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    cacheMutex.lock();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">if</span> (fsCache.find(key) != fsCache.end()) {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        fsCache[key].cacheLastUsed = opcnt;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        fsCache[key].cacheReadCount++;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        std::pair&lt;FAT32::CacheType, void*&gt; ret =</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            std::make_pair(fsCache[key].cacheType, fsCache[key].cacheData);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordflow">if</span> (fsCache[key].cacheType != CacheType::PathClusterCache) {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            <span class="keywordflow">goto</span> cacheTypeNotMatch;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        }</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordflow">return</span> ret;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;cacheTypeNotMatch:</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keywordflow">return</span> std::make_pair(CacheType::None, <span class="keyword">nullptr</span>);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="classopenfsl_1_1_f_a_t32.html#a578cc427716513caee6c9b7315ea625c">   72</a></span>&#160;<a class="code" href="error_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a> <a class="code" href="classopenfsl_1_1_f_a_t32.html#a578cc427716513caee6c9b7315ea625c">openfsl::FAT32::deleteCache</a>(std::string key) {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    cacheOpCountMutex.lock();</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    cacheOpCount++;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    cacheOpCountMutex.unlock();</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordflow">switch</span> (fsCache[key].cacheType) {</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordflow">case</span> CacheType::PathClusterCache:</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keyword">delete</span> <span class="keyword">reinterpret_cast&lt;</span><a class="code" href="classopenfsl_1_1_f_a_t32.html#abc3a9899a34a113a605666126791a40d">cluster_t</a>*<span class="keyword">&gt;</span>(fsCache[key].cacheData);</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    }</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    fsCache.erase(key);</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    cacheMutex.unlock();</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;Cache &quot;</span> &lt;&lt; key &lt;&lt; <span class="stringliteral">&quot; deleted.\n&quot;</span>;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="error_8h.html#a301c819148a27e7e57a093da26677ba9">OPENFSL_SUCCESS</a>;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;}</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
-<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="classopenfsl_1_1_f_a_t32.html#a1d13a08ef01635bd9487af0742781ffc">   91</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classopenfsl_1_1_f_a_t32.html#a1d13a08ef01635bd9487af0742781ffc">openfsl::FAT32::cacheMgrThreadRunner</a>() {</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordflow">while</span> (cacheEnabled) {</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        std::unique_lock&lt;std::mutex&gt; lock(cacheCvMutex);</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        cacheCv.wait(lock);</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        lock.unlock();</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        cacheMutex.lock();</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="comment">// If cache size is bigger than given maximum entry size</span></div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="keywordflow">if</span> (fsCache.size() &gt; cacheMaxEntry) {</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            <span class="comment">/*</span></div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="comment">            for (std::map&lt;std::string, CacheEntry&gt;::iterator i = fsCache.begin();</span></div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="comment">                 i != fsCache.end(); ++i)</span></div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="comment">            {</span></div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="comment">                cacheUseIndexMutex.lock();</span></div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="comment">                if (i-&gt;second.cacheLastUsed &lt; cacheUseIndex - 10)</span></div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="comment">                {</span></div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="comment">                }</span></div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="comment">                cacheUseIndexMutex.unlock();</span></div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="comment">            }</span></div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="comment">            */</span></div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        }</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        cacheMutex.unlock();</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    }</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;}</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
-<div class="line"><a name="l00118"></a><span class="lineno"><a class="line" href="classopenfsl_1_1_f_a_t32.html#af70674a3bb7037e5b5e36f8bb7408629">  118</a></span>&#160;<a class="code" href="error_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a> <a class="code" href="classopenfsl_1_1_f_a_t32.html#af70674a3bb7037e5b5e36f8bb7408629">openfsl::FAT32::enableCache</a>(<span class="keywordtype">size_t</span> cacheMaxEntry_) {</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keywordflow">if</span> (!cacheEnabled) {</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        cacheEnabled = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    cacheMutex.lock();</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordflow">switch</span> (fsCache[key].cacheType) {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordflow">case</span> CacheType::PathClusterCache:</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="keyword">delete</span> <span class="keyword">reinterpret_cast&lt;</span><a class="code" href="classopenfsl_1_1_f_a_t32.html#abc3a9899a34a113a605666126791a40d">cluster_t</a>*<span class="keyword">&gt;</span>(fsCache[key].cacheData);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="error_8h.html#a0c1e4602becdab1580e8c7be349280fb">OPENFSL_ERROR_INVCACHE</a>;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    }</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    fsCache.erase(key);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    cacheMutex.unlock();</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;Cache &quot;</span> &lt;&lt; key &lt;&lt; <span class="stringliteral">&quot; deleted.\n&quot;</span>;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="error_8h.html#a301c819148a27e7e57a093da26677ba9">OPENFSL_SUCCESS</a>;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;}</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="classopenfsl_1_1_f_a_t32.html#a1d13a08ef01635bd9487af0742781ffc">   95</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classopenfsl_1_1_f_a_t32.html#a1d13a08ef01635bd9487af0742781ffc">openfsl::FAT32::cacheMgrThreadRunner</a>() {</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordflow">while</span> (cacheEnabled) {</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        std::unique_lock&lt;std::mutex&gt; lock(cacheCvMutex);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        cacheCv.wait(lock);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        lock.unlock();</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        cacheMutex.lock();</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="comment">// If cache size is bigger than given maximum entry size</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="keywordflow">if</span> (fsCache.size() &gt; cacheMaxEntry) {</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            <span class="comment">/*</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="comment">            for (std::map&lt;std::string, CacheEntry&gt;::iterator i = fsCache.begin();</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="comment">                 i != fsCache.end(); ++i)</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="comment">            {</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="comment">                cacheUseIndexMutex.lock();</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="comment">                if (i-&gt;second.cacheLastUsed &lt; cacheUseIndex - 10)</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="comment">                {</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="comment">                }</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="comment">                cacheUseIndexMutex.unlock();</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="comment">            }</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="comment">            */</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        }</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        cacheMutex.unlock();</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    }</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;}</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        cacheMgrThread =</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;            std::thread(&amp;<a class="code" href="classopenfsl_1_1_f_a_t32.html#a1d13a08ef01635bd9487af0742781ffc">openfsl::FAT32::cacheMgrThreadRunner</a>, <span class="keyword">this</span>);</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        cacheMaxEntry = cacheMaxEntry_;</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        cacheOpCount = 0;</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    }</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="error_8h.html#a301c819148a27e7e57a093da26677ba9">OPENFSL_SUCCESS</a>;</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;}</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
-<div class="line"><a name="l00131"></a><span class="lineno"><a class="line" href="classopenfsl_1_1_f_a_t32.html#a2eaaf5200fefd9390d155853b827369a">  131</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classopenfsl_1_1_f_a_t32.html#a2eaaf5200fefd9390d155853b827369a">openfsl::FAT32::disableCache</a>() {</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keywordflow">if</span> (cacheEnabled) {</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        cacheEnabled = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        cacheMaxEntry = 0;</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160; </div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        <span class="comment">// Stop cache manager thread</span></div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        <span class="keywordflow">if</span> (cacheMgrThread.joinable()) {</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;            cacheCvMutex.lock();</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;            cacheCv.notify_all();</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;            cacheCvMutex.unlock();</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160; </div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;            cacheMgrThread.join();</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        }</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160; </div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        <span class="comment">// Unalloc all cache data</span></div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        <span class="keywordflow">for</span> (std::map&lt;std::string, CacheEntry&gt;::iterator i = fsCache.begin();</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;                    i != fsCache.end();)</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;            deleteCache((i++)-&gt;first);</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        cacheMutex.lock();</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        fsCache.clear();</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        cacheMutex.unlock();</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    }</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;}</div>
+<div class="line"><a name="l00122"></a><span class="lineno"><a class="line" href="classopenfsl_1_1_f_a_t32.html#af70674a3bb7037e5b5e36f8bb7408629">  122</a></span>&#160;<a class="code" href="error_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a> <a class="code" href="classopenfsl_1_1_f_a_t32.html#af70674a3bb7037e5b5e36f8bb7408629">openfsl::FAT32::enableCache</a>(<span class="keywordtype">size_t</span> cacheMaxEntry_) {</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keywordflow">if</span> (!cacheEnabled) {</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        cacheEnabled = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        cacheMgrThread =</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;            std::thread(&amp;<a class="code" href="classopenfsl_1_1_f_a_t32.html#a1d13a08ef01635bd9487af0742781ffc">openfsl::FAT32::cacheMgrThreadRunner</a>, <span class="keyword">this</span>);</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        cacheMaxEntry = cacheMaxEntry_;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        cacheOpCount = 0;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    }</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="error_8h.html#a301c819148a27e7e57a093da26677ba9">OPENFSL_SUCCESS</a>;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;}</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; </div>
+<div class="line"><a name="l00135"></a><span class="lineno"><a class="line" href="classopenfsl_1_1_f_a_t32.html#a2eaaf5200fefd9390d155853b827369a">  135</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classopenfsl_1_1_f_a_t32.html#a2eaaf5200fefd9390d155853b827369a">openfsl::FAT32::disableCache</a>() {</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="keywordflow">if</span> (cacheEnabled) {</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        cacheEnabled = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        cacheMaxEntry = 0;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160; </div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        <span class="comment">// Stop cache manager thread</span></div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        <span class="keywordflow">if</span> (cacheMgrThread.joinable()) {</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;            cacheCvMutex.lock();</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;            cacheCv.notify_all();</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;            cacheCvMutex.unlock();</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160; </div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;            cacheMgrThread.join();</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        }</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160; </div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        <span class="comment">// Unalloc all cache data</span></div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        <span class="keywordflow">for</span> (std::map&lt;std::string, CacheEntry&gt;::iterator i = fsCache.begin();</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;                    i != fsCache.end();)</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;            deleteCache((i++)-&gt;first);</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        cacheMutex.lock();</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        fsCache.clear();</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        cacheMutex.unlock();</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    }</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aclassopenfsl_1_1_f_a_t32_html_ab6257cc47e04bebe7603bff4eccd82f5"><div class="ttname"><a href="classopenfsl_1_1_f_a_t32.html#ab6257cc47e04bebe7603bff4eccd82f5">openfsl::FAT32::cacheCv</a></div><div class="ttdeci">std::condition_variable cacheCv</div><div class="ttdef"><b>Definition:</b> <a href="fs__fat32_8h_source.html#l00341">fs_fat32.h:341</a></div></div>
@@ -261,19 +265,19 @@ $(document).ready(function(){initNavTree('cache_8cpp_source.html',''); initResiz
 <div class="ttc" id="astructopenfsl_1_1_f_a_t32_1_1_cache_entry_html"><div class="ttname"><a href="structopenfsl_1_1_f_a_t32_1_1_cache_entry.html">openfsl::FAT32::CacheEntry</a></div><div class="ttdoc">FAT32 cache entry.</div><div class="ttdef"><b>Definition:</b> <a href="fs__fat32_8h_source.html#l00322">fs_fat32.h:322</a></div></div>
 <div class="ttc" id="astructopenfsl_1_1_f_a_t32_1_1_cache_entry_html_abc50c1e32dc2a926d4349d25c7855314"><div class="ttname"><a href="structopenfsl_1_1_f_a_t32_1_1_cache_entry.html#abc50c1e32dc2a926d4349d25c7855314">openfsl::FAT32::CacheEntry::cacheType</a></div><div class="ttdeci">CacheType cacheType</div><div class="ttdef"><b>Definition:</b> <a href="fs__fat32_8h_source.html#l00327">fs_fat32.h:327</a></div></div>
 <div class="ttc" id="aclassopenfsl_1_1_f_a_t32_html_aea18cd86a828b29f3531e03e11f9a388"><div class="ttname"><a href="classopenfsl_1_1_f_a_t32.html#aea18cd86a828b29f3531e03e11f9a388">openfsl::FAT32::CacheType</a></div><div class="ttdeci">CacheType</div><div class="ttdoc">FAT32 cache type.</div><div class="ttdef"><b>Definition:</b> <a href="fs__fat32_8h_source.html#l00307">fs_fat32.h:307</a></div></div>
-<div class="ttc" id="aclassopenfsl_1_1_f_a_t32_html_a578cc427716513caee6c9b7315ea625c"><div class="ttname"><a href="classopenfsl_1_1_f_a_t32.html#a578cc427716513caee6c9b7315ea625c">openfsl::FAT32::deleteCache</a></div><div class="ttdeci">error_t __check_result deleteCache(std::string key)</div><div class="ttdoc">Delete cache.</div><div class="ttdef"><b>Definition:</b> <a href="cache_8cpp_source.html#l00070">cache.cpp:70</a></div></div>
+<div class="ttc" id="aclassopenfsl_1_1_f_a_t32_html_a578cc427716513caee6c9b7315ea625c"><div class="ttname"><a href="classopenfsl_1_1_f_a_t32.html#a578cc427716513caee6c9b7315ea625c">openfsl::FAT32::deleteCache</a></div><div class="ttdeci">error_t deleteCache(std::string key)</div><div class="ttdoc">Delete cache.</div><div class="ttdef"><b>Definition:</b> <a href="cache_8cpp_source.html#l00072">cache.cpp:72</a></div></div>
 <div class="ttc" id="aclassopenfsl_1_1_f_a_t32_html_abc3a9899a34a113a605666126791a40d"><div class="ttname"><a href="classopenfsl_1_1_f_a_t32.html#abc3a9899a34a113a605666126791a40d">openfsl::FAT32::cluster_t</a></div><div class="ttdeci">uint32_t cluster_t</div><div class="ttdef"><b>Definition:</b> <a href="fs__fat32_8h_source.html#l00042">fs_fat32.h:42</a></div></div>
 <div class="ttc" id="aclassopenfsl_1_1_f_a_t32_html_a22424dd1b9f449d685e0cc9fbc331266"><div class="ttname"><a href="classopenfsl_1_1_f_a_t32.html#a22424dd1b9f449d685e0cc9fbc331266">openfsl::FAT32::cacheOpCountMutex</a></div><div class="ttdeci">std::mutex cacheOpCountMutex</div><div class="ttdef"><b>Definition:</b> <a href="fs__fat32_8h_source.html#l00349">fs_fat32.h:349</a></div></div>
-<div class="ttc" id="aclassopenfsl_1_1_f_a_t32_html_af70674a3bb7037e5b5e36f8bb7408629"><div class="ttname"><a href="classopenfsl_1_1_f_a_t32.html#af70674a3bb7037e5b5e36f8bb7408629">openfsl::FAT32::enableCache</a></div><div class="ttdeci">error_t __check_result enableCache(size_t cacheMaxEntry_)</div><div class="ttdoc">Enable cache.</div><div class="ttdef"><b>Definition:</b> <a href="cache_8cpp_source.html#l00118">cache.cpp:118</a></div></div>
+<div class="ttc" id="aclassopenfsl_1_1_f_a_t32_html_af70674a3bb7037e5b5e36f8bb7408629"><div class="ttname"><a href="classopenfsl_1_1_f_a_t32.html#af70674a3bb7037e5b5e36f8bb7408629">openfsl::FAT32::enableCache</a></div><div class="ttdeci">error_t enableCache(size_t cacheMaxEntry_)</div><div class="ttdoc">Enable cache.</div><div class="ttdef"><b>Definition:</b> <a href="cache_8cpp_source.html#l00122">cache.cpp:122</a></div></div>
 <div class="ttc" id="aerror_8h_html_a9ad6b2dc3cbff040775e79656fe8e1a3"><div class="ttname"><a href="error_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a></div><div class="ttdeci">int error_t</div><div class="ttdef"><b>Definition:</b> <a href="error_8h_source.html#l00025">error.h:25</a></div></div>
 <div class="ttc" id="aerror_8h_html_a301c819148a27e7e57a093da26677ba9"><div class="ttname"><a href="error_8h.html#a301c819148a27e7e57a093da26677ba9">OPENFSL_SUCCESS</a></div><div class="ttdeci">#define OPENFSL_SUCCESS</div><div class="ttdef"><b>Definition:</b> <a href="error_8h_source.html#l00029">error.h:29</a></div></div>
-<div class="ttc" id="aclassopenfsl_1_1_f_a_t32_html_ae40e28031f26b9c9717870dcf632f38b"><div class="ttname"><a href="classopenfsl_1_1_f_a_t32.html#ae40e28031f26b9c9717870dcf632f38b">openfsl::FAT32::insertCache</a></div><div class="ttdeci">error_t __check_result insertCache(std::string key, CacheType type, const void *data, size_t dataSize)</div><div class="ttdoc">Insert cache.</div><div class="ttdef"><b>Definition:</b> <a href="cache_8cpp_source.html#l00014">cache.cpp:14</a></div></div>
-<div class="ttc" id="aclassopenfsl_1_1_f_a_t32_html_a6a652465478a1d97792c527a14837779"><div class="ttname"><a href="classopenfsl_1_1_f_a_t32.html#a6a652465478a1d97792c527a14837779">openfsl::FAT32::getCacheValue</a></div><div class="ttdeci">std::pair&lt; FAT32::CacheType, void * &gt; getCacheValue(std::string key, CacheType cacheType)</div><div class="ttdoc">Get cache value.</div><div class="ttdef"><b>Definition:</b> <a href="cache_8cpp_source.html#l00047">cache.cpp:47</a></div></div>
+<div class="ttc" id="aclassopenfsl_1_1_f_a_t32_html_ae40e28031f26b9c9717870dcf632f38b"><div class="ttname"><a href="classopenfsl_1_1_f_a_t32.html#ae40e28031f26b9c9717870dcf632f38b">openfsl::FAT32::insertCache</a></div><div class="ttdeci">error_t insertCache(std::string key, CacheType type, const void *data, size_t dataSize)</div><div class="ttdoc">Insert cache.</div><div class="ttdef"><b>Definition:</b> <a href="cache_8cpp_source.html#l00014">cache.cpp:14</a></div></div>
+<div class="ttc" id="aclassopenfsl_1_1_f_a_t32_html_a6a652465478a1d97792c527a14837779"><div class="ttname"><a href="classopenfsl_1_1_f_a_t32.html#a6a652465478a1d97792c527a14837779">openfsl::FAT32::getCacheValue</a></div><div class="ttdeci">std::pair&lt; FAT32::CacheType, void * &gt; getCacheValue(std::string key, CacheType cacheType)</div><div class="ttdoc">Get cache value.</div><div class="ttdef"><b>Definition:</b> <a href="cache_8cpp_source.html#l00049">cache.cpp:49</a></div></div>
 <div class="ttc" id="astructopenfsl_1_1_f_a_t32_1_1_cache_entry_html_a25854f2ed2db2d3b5b2e26a9c2eb3f92"><div class="ttname"><a href="structopenfsl_1_1_f_a_t32_1_1_cache_entry.html#a25854f2ed2db2d3b5b2e26a9c2eb3f92">openfsl::FAT32::CacheEntry::cacheData</a></div><div class="ttdeci">void * cacheData</div><div class="ttdef"><b>Definition:</b> <a href="fs__fat32_8h_source.html#l00323">fs_fat32.h:323</a></div></div>
 <div class="ttc" id="aclassopenfsl_1_1_f_a_t32_html_a3ff50bd17ae0b7743b531d4b768115c9"><div class="ttname"><a href="classopenfsl_1_1_f_a_t32.html#a3ff50bd17ae0b7743b531d4b768115c9">openfsl::FAT32::cacheMutex</a></div><div class="ttdeci">std::mutex cacheMutex</div><div class="ttdef"><b>Definition:</b> <a href="fs__fat32_8h_source.html#l00339">fs_fat32.h:339</a></div></div>
-<div class="ttc" id="aclassopenfsl_1_1_f_a_t32_html_a1d13a08ef01635bd9487af0742781ffc"><div class="ttname"><a href="classopenfsl_1_1_f_a_t32.html#a1d13a08ef01635bd9487af0742781ffc">openfsl::FAT32::cacheMgrThreadRunner</a></div><div class="ttdeci">void cacheMgrThreadRunner()</div><div class="ttdoc">Cache manager thread.</div><div class="ttdef"><b>Definition:</b> <a href="cache_8cpp_source.html#l00091">cache.cpp:91</a></div></div>
+<div class="ttc" id="aclassopenfsl_1_1_f_a_t32_html_a1d13a08ef01635bd9487af0742781ffc"><div class="ttname"><a href="classopenfsl_1_1_f_a_t32.html#a1d13a08ef01635bd9487af0742781ffc">openfsl::FAT32::cacheMgrThreadRunner</a></div><div class="ttdeci">void cacheMgrThreadRunner()</div><div class="ttdoc">Cache manager thread.</div><div class="ttdef"><b>Definition:</b> <a href="cache_8cpp_source.html#l00095">cache.cpp:95</a></div></div>
 <div class="ttc" id="aclassopenfsl_1_1_f_a_t32_html_a4e18450490e23537b6b0e93170ee4ad6"><div class="ttname"><a href="classopenfsl_1_1_f_a_t32.html#a4e18450490e23537b6b0e93170ee4ad6">openfsl::FAT32::cacheOpCount</a></div><div class="ttdeci">size_t cacheOpCount</div><div class="ttdef"><b>Definition:</b> <a href="fs__fat32_8h_source.html#l00348">fs_fat32.h:348</a></div></div>
-<div class="ttc" id="aclassopenfsl_1_1_f_a_t32_html_a2eaaf5200fefd9390d155853b827369a"><div class="ttname"><a href="classopenfsl_1_1_f_a_t32.html#a2eaaf5200fefd9390d155853b827369a">openfsl::FAT32::disableCache</a></div><div class="ttdeci">void disableCache()</div><div class="ttdoc">Disable cache.</div><div class="ttdef"><b>Definition:</b> <a href="cache_8cpp_source.html#l00131">cache.cpp:131</a></div></div>
+<div class="ttc" id="aclassopenfsl_1_1_f_a_t32_html_a2eaaf5200fefd9390d155853b827369a"><div class="ttname"><a href="classopenfsl_1_1_f_a_t32.html#a2eaaf5200fefd9390d155853b827369a">openfsl::FAT32::disableCache</a></div><div class="ttdeci">void disableCache()</div><div class="ttdoc">Disable cache.</div><div class="ttdef"><b>Definition:</b> <a href="cache_8cpp_source.html#l00135">cache.cpp:135</a></div></div>
 <div class="ttc" id="aclassopenfsl_1_1_f_a_t32_html_a213d0c5ab978474bdfed219fba9ac592"><div class="ttname"><a href="classopenfsl_1_1_f_a_t32.html#a213d0c5ab978474bdfed219fba9ac592">openfsl::FAT32::fsCache</a></div><div class="ttdeci">std::map&lt; std::string, CacheEntry &gt; fsCache</div><div class="ttdef"><b>Definition:</b> <a href="fs__fat32_8h_source.html#l00338">fs_fat32.h:338</a></div></div>
 <div class="ttc" id="aclassopenfsl_1_1_f_a_t32_html_aa1560efd0d03a9038f5033cc64151fcb"><div class="ttname"><a href="classopenfsl_1_1_f_a_t32.html#aa1560efd0d03a9038f5033cc64151fcb">openfsl::FAT32::cacheCvMutex</a></div><div class="ttdeci">std::mutex cacheCvMutex</div><div class="ttdef"><b>Definition:</b> <a href="fs__fat32_8h_source.html#l00342">fs_fat32.h:342</a></div></div>
 <!-- start footer part -->
