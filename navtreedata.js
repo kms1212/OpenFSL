@@ -23,6 +23,19 @@ for the JavaScript code in this file
 var NAVTREE =
 [
   [ "OpenFSL", "index.html", [
+    [ "OpenFSL README", "index.html", [
+      [ "Progress", "index.html#autotoc_md1", null ],
+      [ "Downloads", "index.html#autotoc_md2", [
+        [ "Shared Library", "index.html#autotoc_md3", null ],
+        [ "Static Library", "index.html#autotoc_md4", null ]
+      ] ],
+      [ "Description", "index.html#autotoc_md5", null ],
+      [ "Other", "index.html#autotoc_md6", [
+        [ "Documents", "index.html#autotoc_md7", null ],
+        [ "Discord", "index.html#autotoc_md8", null ],
+        [ "License", "index.html#autotoc_md9", null ]
+      ] ]
+    ] ],
     [ "Todo List", "todo.html", null ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
@@ -65,7 +78,8 @@ var NAVTREEINDEX =
 [
 "annotated.html",
 "classopenfsl_1_1_m_b_r.html#a0b96adf72dee2df1ac1012dafd5036f1aeac4cc318521661babf914951a3bb23c",
-"makedir_8cpp.html"
+"linkedcluster__write_8cpp.html",
+"wrapper__entry_8cpp.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
