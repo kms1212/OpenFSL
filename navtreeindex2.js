@@ -1,5 +1,6 @@
 var NAVTREEINDEX2 =
 {
+"linkedcluster__util_8cpp_source.html":[4,0,0,0,1,27],
 "linkedcluster__write_8cpp.html":[4,0,0,0,1,28],
 "linkedcluster__write_8cpp_source.html":[4,0,0,0,1,28],
 "listdir_8cpp.html":[4,0,0,0,1,29],
@@ -47,8 +48,8 @@ var NAVTREEINDEX2 =
 "sector_8cpp_source.html":[4,0,2,11],
 "sector_8h.html":[4,0,1,0,16],
 "sector_8h_source.html":[4,0,1,0,16],
-"setfileinfo_8cpp.html":[4,0,0,0,1,37],
-"setfileinfo_8cpp_source.html":[4,0,0,0,1,37],
+"setentryinfo_8cpp.html":[4,0,0,0,1,37],
+"setentryinfo_8cpp_source.html":[4,0,0,0,1,37],
 "structopenfsl_1_1_block_device_1_1_disk_parameter.html":[3,0,0,1,0],
 "structopenfsl_1_1_block_device_1_1_disk_parameter.html#a1721a0a58d937fba966043e7c39a0726":[3,0,0,1,0,2],
 "structopenfsl_1_1_block_device_1_1_disk_parameter.html#a4ab9bafbe33d78086586ea8b452c0788":[3,0,0,1,0,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX2 =
 "version_8h.html#abcde3a802e58a984c9155fe392b00079":[4,0,1,0,19,4],
 "version_8h.html#acb1d3653e65bf49af3f8c9299204ab1d":[4,0,1,0,19,0],
 "version_8h_source.html":[4,0,1,0,19],
-"wrapper__directory_8cpp.html":[4,0,0,0,1,39],
-"wrapper__directory_8cpp_source.html":[4,0,0,0,1,39]
+"wrapper__directory_8cpp.html":[4,0,0,0,1,39]
 };

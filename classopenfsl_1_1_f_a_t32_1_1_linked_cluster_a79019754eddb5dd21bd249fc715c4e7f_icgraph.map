@@ -1,10 +1,11 @@
 <map id="openfsl::FAT32::LinkedCluster::write" name="openfsl::FAT32::LinkedCluster::write">
-<area shape="rect" id="node1" title=" " alt="" coords="733,99,945,141"/>
-<area shape="rect" id="node2" href="$classopenfsl_1_1_f_a_t32.html#a10a3e36c5458721cc0b06af5b62d045d" title="Create entry." alt="" coords="482,56,681,83"/>
-<area shape="rect" id="node6" href="$classopenfsl_1_1_f_a_t32.html#aed9bdd1c977a200c643b76d401d7255c" title="Remove entry." alt="" coords="477,107,685,133"/>
-<area shape="rect" id="node8" href="$classopenfsl_1_1_f_a_t32_1_1_f_i_l_e.html#a86c12f039b27f769fdf3fc04a726738b" title="Write file." alt="" coords="506,158,657,199"/>
+<area shape="rect" id="node1" title=" " alt="" coords="733,107,945,149"/>
+<area shape="rect" id="node2" href="$classopenfsl_1_1_f_a_t32.html#a10a3e36c5458721cc0b06af5b62d045d" title="Create entry." alt="" coords="482,60,681,87"/>
+<area shape="rect" id="node7" href="$classopenfsl_1_1_f_a_t32.html#aed9bdd1c977a200c643b76d401d7255c" title="Remove entry." alt="" coords="477,115,685,141"/>
+<area shape="rect" id="node9" href="$classopenfsl_1_1_f_a_t32_1_1_f_i_l_e.html#a86c12f039b27f769fdf3fc04a726738b" title="Write file." alt="" coords="506,166,657,207"/>
 <area shape="rect" id="node3" href="$classopenfsl_1_1_f_a_t32.html#a47cefaa971d7f5ccbc52859fb7f3a399" title="Create directory." alt="" coords="243,5,422,32"/>
 <area shape="rect" id="node4" href="$classopenfsl_1_1_f_a_t32.html#abd66a3502afc57536cd9d741d8da17ed" title="Create file." alt="" coords="241,56,424,83"/>
-<area shape="rect" id="node5" href="$classopenfsl_1_1_f_a_t32.html#a987037c4264e0e4b2d23ca415795d023" title=" " alt="" coords="5,56,188,83"/>
-<area shape="rect" id="node7" href="$classopenfsl_1_1_f_a_t32.html#a6300e357f9d00a93124a991efd010ecb" title="Remove directory." alt="" coords="236,107,429,133"/>
+<area shape="rect" id="node6" href="$classopenfsl_1_1_f_a_t32.html#aa22510b5cbcb1922e569ab5024e2d432" title=" " alt="" coords="243,107,422,149"/>
+<area shape="rect" id="node5" href="$classopenfsl_1_1_f_a_t32.html#a8070a0cbd9d7ab31bd60d8d7947219e3" title=" " alt="" coords="5,56,188,83"/>
+<area shape="rect" id="node8" href="$classopenfsl_1_1_f_a_t32.html#a6300e357f9d00a93124a991efd010ecb" title="Remove directory." alt="" coords="236,173,429,200"/>
 </map>

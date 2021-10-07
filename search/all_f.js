@@ -10,7 +10,7 @@ var searchData=
   ['removecluster_395',['removeCluster',['../classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#ad22e8e186a2dc1659c71620db3a9d5bb',1,'openfsl::FAT32::LinkedCluster']]],
   ['removedir_396',['removeDir',['../classopenfsl_1_1_f_a_t32.html#a6300e357f9d00a93124a991efd010ecb',1,'openfsl::FAT32']]],
   ['removedir_2ecpp_397',['removedir.cpp',['../removedir_8cpp.html',1,'']]],
-  ['removedirectory_398',['removeDirectory',['../classopenfsl_1_1_f_a_t32.html#a99439040957aba5ea0c5b6194ef095ca',1,'openfsl::FAT32']]],
+  ['removedirectory_398',['removeDirectory',['../classopenfsl_1_1_f_a_t32.html#aa99097bd3845c181ade9bd0b509aea78',1,'openfsl::FAT32']]],
   ['removeentry_399',['removeEntry',['../classopenfsl_1_1_f_a_t32.html#aed9bdd1c977a200c643b76d401d7255c',1,'openfsl::FAT32']]],
   ['removeentry_2ecpp_400',['removeentry.cpp',['../removeentry_8cpp.html',1,'']]],
   ['removefile_401',['removeFile',['../classopenfsl_1_1_f_a_t32.html#a609e3d596213485bd94c3ebcbb838ed1',1,'openfsl::FAT32']]],

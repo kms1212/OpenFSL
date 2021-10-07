@@ -4,7 +4,7 @@ var searchData=
   ['tailsig_438',['tailSig',['../structopenfsl_1_1fs_structure_1_1_c_o_m_m_a_a55h.html#af76977d79c4dc80f8702c9324db91a12',1,'openfsl::fsStructure::COMMAA55h']]],
   ['tellg_439',['tellg',['../classopenfsl_1_1_f_s_l___file.html#a330294fb8355a1709e5595429dea00ac',1,'openfsl::FSL_File::tellg()'],['../classopenfsl_1_1_f_a_t32_1_1_f_i_l_e.html#a084d778b3de691e698ffc8bac5562ee3',1,'openfsl::FAT32::FILE::tellg()']]],
   ['tellp_440',['tellp',['../classopenfsl_1_1_f_s_l___file.html#ada4573755d9457475f58768d0be27c5c',1,'openfsl::FSL_File::tellp()'],['../classopenfsl_1_1_f_a_t32_1_1_f_i_l_e.html#aeda3ec0970ca121ad4c8de60542ef2ad',1,'openfsl::FAT32::FILE::tellp()']]],
-  ['time_441',['Time',['../structopenfsl_1_1_time.html',1,'openfsl']]],
+  ['time_441',['Time',['../structopenfsl_1_1_time.html',1,'openfsl::Time'],['../namespaceopenfsl.html#a4bbc5deab07347e75134a72720b15506',1,'openfsl::Time()']]],
   ['time_2ecpp_442',['time.cpp',['../time_8cpp.html',1,'']]],
   ['time_5fday_443',['time_day',['../structopenfsl_1_1_time.html#a724d00f57e2e4825d96f5a6d4fd3efb9',1,'openfsl::Time']]],
   ['time_5fhour_444',['time_hour',['../structopenfsl_1_1_time.html#a19a2bc620255813a7ded8fce02f64fb5',1,'openfsl::Time']]],

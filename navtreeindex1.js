@@ -165,9 +165,10 @@ var NAVTREEINDEX1 =
 "fsltime_8cpp.html":[4,0,2,6],
 "fsltime_8cpp_source.html":[4,0,2,6],
 "fsltime_8h.html":[4,0,1,0,9],
-"fsltime_8h.html#a0de5b95f3d563da64cb54b94487af576":[4,0,1,0,9,2],
-"fsltime_8h.html#a2c9f28e2ca425950c3cdf70d71847049":[4,0,1,0,9,3],
-"fsltime_8h.html#ac2d0c204711fc057fd1a759491f715ce":[4,0,1,0,9,1],
+"fsltime_8h.html#a2c9f28e2ca425950c3cdf70d71847049":[4,0,1,0,9,2],
+"fsltime_8h.html#a4bbc5deab07347e75134a72720b15506":[4,0,1,0,9,1],
+"fsltime_8h.html#a537977f75d32f3190d091d102d0325c4":[4,0,1,0,9,3],
+"fsltime_8h.html#af4ef5fb6f5a83933df8fc29b10cf47c9":[4,0,1,0,9,4],
 "fsltime_8h_source.html":[4,0,1,0,9],
 "fslutils_8cpp.html":[4,0,2,7],
 "fslutils_8cpp_source.html":[4,0,2,7],
@@ -207,8 +208,8 @@ var NAVTREEINDEX1 =
 "functions_vars.html":[3,3,2],
 "functions_w.html":[3,3,0,20],
 "functions_~.html":[3,3,0,21],
-"getfileinfo_8cpp.html":[4,0,0,0,1,19],
-"getfileinfo_8cpp_source.html":[4,0,0,0,1,19],
+"getentryinfo_8cpp.html":[4,0,0,0,1,19],
+"getentryinfo_8cpp_source.html":[4,0,0,0,1,19],
 "globals.html":[4,1,0],
 "globals_defs.html":[4,1,4],
 "globals_func.html":[4,1,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX1 =
 "linkedcluster__internal_8cpp_source.html":[4,0,0,0,1,25],
 "linkedcluster__read_8cpp.html":[4,0,0,0,1,26],
 "linkedcluster__read_8cpp_source.html":[4,0,0,0,1,26],
-"linkedcluster__util_8cpp.html":[4,0,0,0,1,27],
-"linkedcluster__util_8cpp_source.html":[4,0,0,0,1,27]
+"linkedcluster__util_8cpp.html":[4,0,0,0,1,27]
 };
