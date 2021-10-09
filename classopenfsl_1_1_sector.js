@@ -1,6 +1,6 @@
 var classopenfsl_1_1_sector =
 [
-    [ "Sector", "classopenfsl_1_1_sector.html#a28ab13da87e535a1f01a9777d4e5e91a", null ],
+    [ "Sector", "classopenfsl_1_1_sector.html#a9adaa0307c671a3c29b66ea9bf1cd492", null ],
     [ "~Sector", "classopenfsl_1_1_sector.html#ab70d59794760b95ba0d11a578cf2f338", null ],
     [ "getBytespersector", "classopenfsl_1_1_sector.html#a3955a395e05e92c03de4724c55492ae3", null ],
     [ "getData", "classopenfsl_1_1_sector.html#af9128b9d68ff6b96d70336a6e51d23e4", null ],

@@ -1,0 +1,16 @@
+<map id="openfsl::FAT32::LinkedCluster::LinkedCluster" name="openfsl::FAT32::LinkedCluster::LinkedCluster">
+<area shape="rect" id="node1" title=" " alt="" coords="5,317,217,358"/>
+<area shape="rect" id="node2" href="$classopenfsl_1_1_f_a_t32.html#a28a245a89387aec1673edc510a485279" title="Convert FAT area index to LBA." alt="" coords="278,61,465,102"/>
+<area shape="rect" id="node3" href="$classopenfsl_1_1_block_device.html#a47f31aa57ca6e82567148f7875a81162" title=" " alt="" coords="560,16,719,57"/>
+<area shape="rect" id="node4" href="$classopenfsl_1_1_file_system.html#a665ece3593447d10c8d56d1605f05784" title=" " alt="" coords="529,106,750,148"/>
+<area shape="rect" id="node5" href="$classopenfsl_1_1_f_a_t32.html#a879b401e9118b7ee603079d4c7ad294d" title="Get Next Free Cluster." alt="" coords="276,178,467,220"/>
+<area shape="rect" id="node6" href="$classopenfsl_1_1_container.html#ad0fa530d91da46276e19b08f9e468b62" title="Data buffer getter." alt="" coords="569,221,710,262"/>
+<area shape="rect" id="node7" href="$classopenfsl_1_1_f_a_t32.html#af802839a7004450da93b8dbcd6f5e222" title="Update FSINFO." alt="" coords="280,346,463,388"/>
+<area shape="rect" id="node8" href="$classopenfsl_1_1_file_system.html#ac66d2dd1349a54c08d816e466042cf5b" title=" " alt="" coords="525,305,753,346"/>
+<area shape="rect" id="node9" href="$classopenfsl_1_1_block_device.html#a6f344509ac727d84dfaa6aafa516cde4" title=" " alt="" coords="560,388,719,429"/>
+<area shape="rect" id="node10" href="$classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a68c4914e5a1eeb33c44b0e31e9a5b4ff" title=" " alt="" coords="265,464,477,505"/>
+<area shape="rect" id="node11" href="$classopenfsl_1_1_f_a_t32.html#a68ad9ea509479c36026980f35c3648f0" title=" " alt="" coords="554,500,725,527"/>
+<area shape="rect" id="node12" href="$classopenfsl_1_1_f_a_t32.html#adf6fb22c5ab89773c0c6e885cf174c41" title=" " alt="" coords="274,580,469,607"/>
+<area shape="rect" id="node13" href="$classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a2b967692b67583b3ac9ef80350eec46e" title=" " alt="" coords="265,632,477,673"/>
+<area shape="rect" id="node14" href="$classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#ad05834b7f84560d96c449347c6cfd4f7" title=" " alt="" coords="533,632,745,673"/>
+</map>

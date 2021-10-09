@@ -119,7 +119,7 @@ $(document).ready(function(){initNavTree('fileblockdevice_8cpp_source.html','');
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;}</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<a class="code" href="error_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a> <a class="code" href="classopenfsl_1_1_i_o_device.html#af173fab3fef210969a047c5bc5fde8f6">openfsl::FileBlockDevice::initialize</a></div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classopenfsl_1_1_file_block_device.html#a53e52feafbd2e724d98d7b0ffe24caa3">   22</a></span>&#160;    (std::string filename, <a class="code" href="classopenfsl_1_1_file_block_device.html#a63e5a978f31dbac481a6a2e27b363584">OpenMode</a> openMode) {</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classopenfsl_1_1_file_block_device.html#ad2b01d5f6f73322182f07c2cf3bbbabc">   22</a></span>&#160;    (<span class="keyword">const</span> std::string filename, <span class="keyword">const</span> <a class="code" href="classopenfsl_1_1_file_block_device.html#a63e5a978f31dbac481a6a2e27b363584">OpenMode</a> openMode) {</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="classopenfsl_1_1_i_o_device.html#af173fab3fef210969a047c5bc5fde8f6">IODevice::initialize</a>();</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    std::ios_base::openmode fileflag = std::ios::in | std::ios::binary;</div>
@@ -127,78 +127,68 @@ $(document).ready(function(){initNavTree('fileblockdevice_8cpp_source.html','');
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        fileflag |= std::ios::out;</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    file.open(filename, fileflag);</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordflow">if</span> (file.fail())</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="error_8h.html#a3737296bc24560c54e9716b165487543">OPENFSL_ERROR_DISK</a>;</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classopenfsl_1_1_file_block_device.html#a370a5c80751152d150e1743322c82107">   33</a></span>&#160;<a class="code" href="error_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a> <a class="code" href="classopenfsl_1_1_file_block_device.html#a370a5c80751152d150e1743322c82107">openfsl::FileBlockDevice::deinitialize</a>() {</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="classopenfsl_1_1_i_o_device.html#ae032b765ab0ad3d8cd6ef88cb098ae8c">IODevice::deinitialize</a>();</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;}</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    file.close();</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classopenfsl_1_1_file_block_device.html#a370a5c80751152d150e1743322c82107">   36</a></span>&#160;<a class="code" href="error_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a> <a class="code" href="classopenfsl_1_1_file_block_device.html#a370a5c80751152d150e1743322c82107">openfsl::FileBlockDevice::deinitialize</a>() {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="classopenfsl_1_1_i_o_device.html#ae032b765ab0ad3d8cd6ef88cb098ae8c">IODevice::deinitialize</a>();</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    file.close();</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<a class="code" href="error_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a> <a class="code" href="classopenfsl_1_1_file_block_device.html#ace19d5eddf37b1519c3058bf34e709c7">openfsl::FileBlockDevice::readSector</a></div>
-<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classopenfsl_1_1_file_block_device.html#ace19d5eddf37b1519c3058bf34e709c7">   42</a></span>&#160;    (<span class="keywordtype">void</span>* dest, <a class="code" href="classuint64__t.html">lba48_t</a> lba, <a class="code" href="classuint64__t.html">lba48_t</a> size) {</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    diskOperationMutex.lock();</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    file.seekg(lba * diskParameter.bytesPerSector, std::ios::beg);</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">bool</span> fail = file.read(<span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(dest),</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        size * diskParameter.bytesPerSector).fail();</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordflow">if</span> (!fail)</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        fail = file.tellg() == -1;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    diskOperationMutex.unlock();</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">if</span> (fail)</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="error_8h.html#a3737296bc24560c54e9716b165487543">OPENFSL_ERROR_DISK</a>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<a class="code" href="error_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a> <a class="code" href="classopenfsl_1_1_file_block_device.html#aec7479ec1140708ebcba6b4c5d1c0535">openfsl::FileBlockDevice::readSector</a></div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classopenfsl_1_1_file_block_device.html#aec7479ec1140708ebcba6b4c5d1c0535">   45</a></span>&#160;    (<span class="keywordtype">void</span>* dest, <span class="keyword">const</span> <a class="code" href="classuint64__t.html">lba48_t</a> lba, <span class="keyword">const</span> <a class="code" href="classuint64__t.html">lba48_t</a> size) {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    diskOperationMutex.lock();</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    file.seekg(lba * diskParameter.bytesPerSector, std::ios::beg);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">bool</span> fail = file.read(<span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(dest),</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        size * diskParameter.bytesPerSector).fail();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordflow">if</span> (!fail)</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        fail = file.tellg() == -1;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    diskOperationMutex.unlock();</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordflow">if</span> (fail)</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="error_8h.html#a3737296bc24560c54e9716b165487543">OPENFSL_ERROR_DISK</a>;</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="classopenfsl_1_1_file_block_device.html#a9b8eaf6a7c991f7a30e06772fdcbe012">   58</a></span>&#160;<a class="code" href="error_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a> <a class="code" href="classopenfsl_1_1_file_block_device.html#a9b8eaf6a7c991f7a30e06772fdcbe012">openfsl::FileBlockDevice::writeSector</a>(</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">void</span>* src, <a class="code" href="classuint64__t.html">lba48_t</a> lba, <a class="code" href="classuint64__t.html">lba48_t</a> size) {</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    diskOperationMutex.lock();</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    file.seekp(lba * diskParameter.bytesPerSector, std::ios::beg);</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">bool</span> fail = file.write(<span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(src),</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        size * diskParameter.bytesPerSector).fail();</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordflow">if</span> (!fail)</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        fail = file.tellp() == -1;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    file.flush();</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    diskOperationMutex.unlock();</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordflow">if</span> (fail)</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="error_8h.html#a3737296bc24560c54e9716b165487543">OPENFSL_ERROR_DISK</a>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="classopenfsl_1_1_file_block_device.html#a85d32d5f39a8dd94a929207e946d2181">   61</a></span>&#160;<a class="code" href="error_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a> <a class="code" href="classopenfsl_1_1_file_block_device.html#a85d32d5f39a8dd94a929207e946d2181">openfsl::FileBlockDevice::writeSector</a>(</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">void</span>* src, <span class="keyword">const</span> <a class="code" href="classuint64__t.html">lba48_t</a> lba, <span class="keyword">const</span> <a class="code" href="classuint64__t.html">lba48_t</a> size) {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    diskOperationMutex.lock();</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    file.seekp(lba * diskParameter.bytesPerSector, std::ios::beg);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">bool</span> fail = file.write(<span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(src),</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        size * diskParameter.bytesPerSector).fail();</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordflow">if</span> (!fail)</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        fail = file.tellp() == -1;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    file.flush();</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    diskOperationMutex.unlock();</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;}</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordflow">if</span> (fail)</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="error_8h.html#a3737296bc24560c54e9716b165487543">OPENFSL_ERROR_DISK</a>;</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<a class="code" href="error_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a> <a class="code" href="classopenfsl_1_1_file_block_device.html#a2736b324e8de39c0759994d363cb93ac">openfsl::FileBlockDevice::readByte</a></div>
-<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="classopenfsl_1_1_file_block_device.html#a2736b324e8de39c0759994d363cb93ac">   77</a></span>&#160;    (<span class="keywordtype">void</span>* src, <span class="keywordtype">size_t</span> offset, <span class="keywordtype">size_t</span> size) {</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="error_8h.html#ae5556e905c3d9e1982ef27863b8dfd20">OPENFSL_ERROR_DISABLED</a>;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;}</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<a class="code" href="error_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a> <a class="code" href="classopenfsl_1_1_file_block_device.html#a9f956b45f21e2f56074d13a821d03943">openfsl::FileBlockDevice::writeByte</a></div>
-<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="classopenfsl_1_1_file_block_device.html#a9f956b45f21e2f56074d13a821d03943">   82</a></span>&#160;    (<span class="keyword">const</span> <span class="keywordtype">void</span>* src, <span class="keywordtype">size_t</span> offset, <span class="keywordtype">size_t</span> size) {</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="error_8h.html#ae5556e905c3d9e1982ef27863b8dfd20">OPENFSL_ERROR_DISABLED</a>;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;}</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclassopenfsl_1_1_file_block_device_html_ace19d5eddf37b1519c3058bf34e709c7"><div class="ttname"><a href="classopenfsl_1_1_file_block_device.html#ace19d5eddf37b1519c3058bf34e709c7">openfsl::FileBlockDevice::readSector</a></div><div class="ttdeci">error_t __check_result readSector(void *dest, lba48_t lba, lba48_t size)</div><div class="ttdef"><b>Definition:</b> <a href="fileblockdevice_8cpp_source.html#l00042">fileblockdevice.cpp:42</a></div></div>
 <div class="ttc" id="aerror_8h_html_a3737296bc24560c54e9716b165487543"><div class="ttname"><a href="error_8h.html#a3737296bc24560c54e9716b165487543">OPENFSL_ERROR_DISK</a></div><div class="ttdeci">#define OPENFSL_ERROR_DISK</div><div class="ttdef"><b>Definition:</b> <a href="error_8h_source.html#l00031">error.h:31</a></div></div>
 <div class="ttc" id="aclassopenfsl_1_1_file_block_device_html_afdb2af577f99b08656b96b6349a1bd0c"><div class="ttname"><a href="classopenfsl_1_1_file_block_device.html#afdb2af577f99b08656b96b6349a1bd0c">openfsl::FileBlockDevice::FileBlockDevice</a></div><div class="ttdeci">FileBlockDevice()</div><div class="ttdoc">FileBlockDevice constructor.</div><div class="ttdef"><b>Definition:</b> <a href="fileblockdevice_8cpp_source.html#l00014">fileblockdevice.cpp:14</a></div></div>
-<div class="ttc" id="aclassopenfsl_1_1_file_block_device_html_a9b8eaf6a7c991f7a30e06772fdcbe012"><div class="ttname"><a href="classopenfsl_1_1_file_block_device.html#a9b8eaf6a7c991f7a30e06772fdcbe012">openfsl::FileBlockDevice::writeSector</a></div><div class="ttdeci">error_t __check_result writeSector(const void *src, lba48_t lba, lba48_t size)</div><div class="ttdef"><b>Definition:</b> <a href="fileblockdevice_8cpp_source.html#l00058">fileblockdevice.cpp:58</a></div></div>
-<div class="ttc" id="aclassopenfsl_1_1_file_block_device_html_a370a5c80751152d150e1743322c82107"><div class="ttname"><a href="classopenfsl_1_1_file_block_device.html#a370a5c80751152d150e1743322c82107">openfsl::FileBlockDevice::deinitialize</a></div><div class="ttdeci">error_t deinitialize()</div><div class="ttdoc">FileBlockDevice deinitializer.</div><div class="ttdef"><b>Definition:</b> <a href="fileblockdevice_8cpp_source.html#l00033">fileblockdevice.cpp:33</a></div></div>
+<div class="ttc" id="aclassopenfsl_1_1_file_block_device_html_aec7479ec1140708ebcba6b4c5d1c0535"><div class="ttname"><a href="classopenfsl_1_1_file_block_device.html#aec7479ec1140708ebcba6b4c5d1c0535">openfsl::FileBlockDevice::readSector</a></div><div class="ttdeci">error_t __check_result readSector(void *dest, const lba48_t lba, const lba48_t size) override</div><div class="ttdef"><b>Definition:</b> <a href="fileblockdevice_8cpp_source.html#l00045">fileblockdevice.cpp:45</a></div></div>
+<div class="ttc" id="aclassopenfsl_1_1_file_block_device_html_a85d32d5f39a8dd94a929207e946d2181"><div class="ttname"><a href="classopenfsl_1_1_file_block_device.html#a85d32d5f39a8dd94a929207e946d2181">openfsl::FileBlockDevice::writeSector</a></div><div class="ttdeci">error_t __check_result writeSector(const void *src, const lba48_t lba, const lba48_t size) override</div><div class="ttdef"><b>Definition:</b> <a href="fileblockdevice_8cpp_source.html#l00061">fileblockdevice.cpp:61</a></div></div>
+<div class="ttc" id="aclassopenfsl_1_1_file_block_device_html_a370a5c80751152d150e1743322c82107"><div class="ttname"><a href="classopenfsl_1_1_file_block_device.html#a370a5c80751152d150e1743322c82107">openfsl::FileBlockDevice::deinitialize</a></div><div class="ttdeci">error_t deinitialize()</div><div class="ttdoc">FileBlockDevice deinitializer.</div><div class="ttdef"><b>Definition:</b> <a href="fileblockdevice_8cpp_source.html#l00036">fileblockdevice.cpp:36</a></div></div>
 <div class="ttc" id="aerror_8h_html_a9ad6b2dc3cbff040775e79656fe8e1a3"><div class="ttname"><a href="error_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a></div><div class="ttdeci">int error_t</div><div class="ttdef"><b>Definition:</b> <a href="error_8h_source.html#l00025">error.h:25</a></div></div>
-<div class="ttc" id="aclassopenfsl_1_1_file_block_device_html_a9f956b45f21e2f56074d13a821d03943"><div class="ttname"><a href="classopenfsl_1_1_file_block_device.html#a9f956b45f21e2f56074d13a821d03943">openfsl::FileBlockDevice::writeByte</a></div><div class="ttdeci">error_t __check_result writeByte(const void *src, size_t offset, size_t size)</div><div class="ttdef"><b>Definition:</b> <a href="fileblockdevice_8cpp_source.html#l00082">fileblockdevice.cpp:82</a></div></div>
 <div class="ttc" id="afileblockdevice_8h_html"><div class="ttname"><a href="fileblockdevice_8h.html">fileblockdevice.h</a></div></div>
 <div class="ttc" id="aclassopenfsl_1_1_file_block_device_html_aee0e5f1c0fd6ddadb87b3679bce9b01c"><div class="ttname"><a href="classopenfsl_1_1_file_block_device.html#aee0e5f1c0fd6ddadb87b3679bce9b01c">openfsl::FileBlockDevice::~FileBlockDevice</a></div><div class="ttdeci">~FileBlockDevice()</div><div class="ttdoc">FileBlockDevice destructor.</div><div class="ttdef"><b>Definition:</b> <a href="fileblockdevice_8cpp_source.html#l00016">fileblockdevice.cpp:16</a></div></div>
 <div class="ttc" id="aclassuint64__t_html"><div class="ttname"><a href="classuint64__t.html">uint64_t</a></div></div>
 <div class="ttc" id="aclassopenfsl_1_1_i_o_device_html_ae032b765ab0ad3d8cd6ef88cb098ae8c"><div class="ttname"><a href="classopenfsl_1_1_i_o_device.html#ae032b765ab0ad3d8cd6ef88cb098ae8c">openfsl::IODevice::deinitialize</a></div><div class="ttdeci">error_t deinitialize()</div><div class="ttdoc">IODevice deinitializer.</div><div class="ttdef"><b>Definition:</b> <a href="iodevice_8cpp_source.html#l00020">iodevice.cpp:20</a></div></div>
 <div class="ttc" id="aclassopenfsl_1_1_i_o_device_html_af173fab3fef210969a047c5bc5fde8f6"><div class="ttname"><a href="classopenfsl_1_1_i_o_device.html#af173fab3fef210969a047c5bc5fde8f6">openfsl::IODevice::initialize</a></div><div class="ttdeci">error_t initialize()</div><div class="ttdoc">IODevice initializer.</div><div class="ttdef"><b>Definition:</b> <a href="iodevice_8cpp_source.html#l00014">iodevice.cpp:14</a></div></div>
 <div class="ttc" id="aclassopenfsl_1_1_file_block_device_html_a63e5a978f31dbac481a6a2e27b363584"><div class="ttname"><a href="classopenfsl_1_1_file_block_device.html#a63e5a978f31dbac481a6a2e27b363584">openfsl::FileBlockDevice::OpenMode</a></div><div class="ttdeci">OpenMode</div><div class="ttdef"><b>Definition:</b> <a href="fileblockdevice_8h_source.html#l00039">fileblockdevice.h:39</a></div></div>
-<div class="ttc" id="aclassopenfsl_1_1_file_block_device_html_a2736b324e8de39c0759994d363cb93ac"><div class="ttname"><a href="classopenfsl_1_1_file_block_device.html#a2736b324e8de39c0759994d363cb93ac">openfsl::FileBlockDevice::readByte</a></div><div class="ttdeci">error_t __check_result readByte(void *dest, size_t offset, size_t size)</div><div class="ttdef"><b>Definition:</b> <a href="fileblockdevice_8cpp_source.html#l00077">fileblockdevice.cpp:77</a></div></div>
-<div class="ttc" id="aerror_8h_html_ae5556e905c3d9e1982ef27863b8dfd20"><div class="ttname"><a href="error_8h.html#ae5556e905c3d9e1982ef27863b8dfd20">OPENFSL_ERROR_DISABLED</a></div><div class="ttdeci">#define OPENFSL_ERROR_DISABLED</div><div class="ttdef"><b>Definition:</b> <a href="error_8h_source.html#l00069">error.h:69</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

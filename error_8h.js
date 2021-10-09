@@ -3,6 +3,7 @@ var error_8h =
     [ "OPENFSL_ERROR_ALLOC", "error_8h.html#acc0b37dbf2da20ea083b1533e91628a6", null ],
     [ "OPENFSL_ERROR_BADCLUS", "error_8h.html#af9fd1a6b25f4b82af7078e3a269ccd2a", null ],
     [ "OPENFSL_ERROR_CACCESS", "error_8h.html#a2c8464b24d3c7e1a2f3725c28be98804", null ],
+    [ "OPENFSL_ERROR_DIRNEMPT", "error_8h.html#a3bd98111ead415806e11187d1e5b0432", null ],
     [ "OPENFSL_ERROR_DISABLED", "error_8h.html#ae5556e905c3d9e1982ef27863b8dfd20", null ],
     [ "OPENFSL_ERROR_DISK", "error_8h.html#a3737296bc24560c54e9716b165487543", null ],
     [ "OPENFSL_ERROR_EXIST", "error_8h.html#a8fbf59bf5319547e6f27498d96a440c6", null ],
@@ -22,8 +23,8 @@ var error_8h =
     [ "OPENFSL_ERROR_VLABLONG", "error_8h.html#a8b7ce3ea8216fc157434b9ec96c1f79d", null ],
     [ "OPENFSL_SUCCESS", "error_8h.html#a301c819148a27e7e57a093da26677ba9", null ],
     [ "error_t", "error_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3", null ],
-    [ "geterrorlen", "error_8h.html#a7df838c2bc0d3f1caf3d3e7d48e619fe", null ],
-    [ "geterrorstr", "error_8h.html#a585a72eb315bd340aeff0e3b040e2b03", null ],
-    [ "geterrorstr", "error_8h.html#a437d8dd509663a5865b9e2262818d3da", null ],
+    [ "geterrorlen", "error_8h.html#a1a73ffefa6ed95caf89943d6278114b2", null ],
+    [ "geterrorstr", "error_8h.html#a89ff8c581cdd44588ec7f651431e75c3", null ],
+    [ "geterrorstr", "error_8h.html#a458f9a9d691fca7cb65b433805faa936", null ],
     [ "__error_str", "error_8h.html#ad93b844fd4b92c6c0a417cc0895f317f", null ]
 ];

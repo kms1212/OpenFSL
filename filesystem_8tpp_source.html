@@ -117,8 +117,8 @@ $(document).ready(function(){initNavTree('filesystem_8tpp_source.html',''); init
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;#endif</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;template &lt;class IOD&gt; openfsl::FileSystem&lt;IOD&gt;::FileSystem</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    (IOD* iodev_, std::string startPath_,</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    std::string pathSeparator_, std::string rootSymbol_) {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    (IOD* iodev_, const std::string startPath_,</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    const std::string pathSeparator_, const std::string rootSymbol_) {</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    iod = iodev_;</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    currentPath = startPath_;</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    pathSeparator = pathSeparator_;</div>

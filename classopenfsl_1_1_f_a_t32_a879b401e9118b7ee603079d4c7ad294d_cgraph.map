@@ -1,0 +1,4 @@
+<map id="openfsl::FAT32::__getNextFreeCluster" name="openfsl::FAT32::__getNextFreeCluster">
+<area shape="rect" id="node1" title="Get Next Free Cluster." alt="" coords="5,5,196,47"/>
+<area shape="rect" id="node2" href="$classopenfsl_1_1_container.html#ad0fa530d91da46276e19b08f9e468b62" title="Data buffer getter." alt="" coords="244,5,385,47"/>
+</map>

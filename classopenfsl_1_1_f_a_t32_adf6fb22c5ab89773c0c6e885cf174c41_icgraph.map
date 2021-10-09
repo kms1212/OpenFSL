@@ -1,11 +1,11 @@
 <map id="openfsl::FAT32::getFatArea" name="openfsl::FAT32::getFatArea">
-<area shape="rect" id="node1" title=" " alt="" coords="973,119,1168,145"/>
-<area shape="rect" id="node2" href="$classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#acf3ee03c7160ccda84647ea6c75a7dba" title=" " alt="" coords="713,78,925,119"/>
-<area shape="rect" id="node9" href="$classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#aea890db47d58e6a322fae45322815e45" title=" " alt="" coords="713,143,925,185"/>
-<area shape="rect" id="node3" href="$classopenfsl_1_1_f_a_t32.html#a10a3e36c5458721cc0b06af5b62d045d" title="Create entry." alt="" coords="467,56,665,83"/>
-<area shape="rect" id="node8" href="$classopenfsl_1_1_f_a_t32_1_1_f_i_l_e.html#a86c12f039b27f769fdf3fc04a726738b" title="Write file." alt="" coords="491,107,641,149"/>
-<area shape="rect" id="node4" href="$classopenfsl_1_1_f_a_t32.html#a47cefaa971d7f5ccbc52859fb7f3a399" title="Create directory." alt="" coords="238,5,417,32"/>
-<area shape="rect" id="node5" href="$classopenfsl_1_1_f_a_t32.html#abd66a3502afc57536cd9d741d8da17ed" title="Create file." alt="" coords="236,56,419,83"/>
-<area shape="rect" id="node7" href="$classopenfsl_1_1_f_a_t32.html#aa22510b5cbcb1922e569ab5024e2d432" title=" " alt="" coords="238,107,417,149"/>
-<area shape="rect" id="node6" href="$classopenfsl_1_1_f_a_t32.html#a8070a0cbd9d7ab31bd60d8d7947219e3" title=" " alt="" coords="5,56,188,83"/>
+<area shape="rect" id="node1" title=" " alt="" coords="968,121,1163,148"/>
+<area shape="rect" id="node2" href="$classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a4f075b67b497efc5f561b8e9ab849986" title=" " alt="" coords="708,81,920,122"/>
+<area shape="rect" id="node9" href="$classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a9792c4764310d1037ac0633014bbe7c3" title=" " alt="" coords="708,146,920,187"/>
+<area shape="rect" id="node3" href="$classopenfsl_1_1_f_a_t32.html#a4474f7143bbd15c8cd6d30d527bf7a7e" title="Create entry." alt="" coords="481,49,660,90"/>
+<area shape="rect" id="node8" href="$classopenfsl_1_1_f_a_t32_1_1_f_i_l_e.html#aae800cf33c9931ec924676567121f0b3" title="Write file." alt="" coords="495,114,646,155"/>
+<area shape="rect" id="node4" href="$classopenfsl_1_1_f_a_t32.html#ad57d2efce5f6bb3f3266b52ec7262f05" title="Create directory." alt="" coords="238,5,431,32"/>
+<area shape="rect" id="node5" href="$classopenfsl_1_1_f_a_t32.html#a03bfaefead11ea43b31614841cfb12ff" title="Create file." alt="" coords="236,56,433,83"/>
+<area shape="rect" id="node7" href="$classopenfsl_1_1_f_a_t32.html#a8c4fd9c81051e976e0557610b3ccee27" title=" " alt="" coords="239,107,431,149"/>
+<area shape="rect" id="node6" href="$classopenfsl_1_1_f_a_t32.html#a322bde9dfda6dbb287fc39cc8828d801" title=" " alt="" coords="5,56,188,83"/>
 </map>

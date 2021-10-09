@@ -8,12 +8,10 @@ var classopenfsl_1_1_file_block_device =
     [ "~FileBlockDevice", "classopenfsl_1_1_file_block_device.html#aee0e5f1c0fd6ddadb87b3679bce9b01c", null ],
     [ "deinitialize", "classopenfsl_1_1_file_block_device.html#a370a5c80751152d150e1743322c82107", null ],
     [ "getFileStream", "classopenfsl_1_1_file_block_device.html#a7f323fde2dc4e82e16047a234baa6469", null ],
-    [ "initialize", "classopenfsl_1_1_file_block_device.html#a40399ea1ad42304dfc80ddef4918a9cc", null ],
-    [ "initialize", "classopenfsl_1_1_file_block_device.html#a53e52feafbd2e724d98d7b0ffe24caa3", null ],
-    [ "readByte", "classopenfsl_1_1_file_block_device.html#a2736b324e8de39c0759994d363cb93ac", null ],
-    [ "readSector", "classopenfsl_1_1_file_block_device.html#ace19d5eddf37b1519c3058bf34e709c7", null ],
-    [ "writeByte", "classopenfsl_1_1_file_block_device.html#a9f956b45f21e2f56074d13a821d03943", null ],
-    [ "writeSector", "classopenfsl_1_1_file_block_device.html#a9b8eaf6a7c991f7a30e06772fdcbe012", null ],
+    [ "initialize", "classopenfsl_1_1_file_block_device.html#af7b6f89bcd777f0dbbb374ab6258e082", null ],
+    [ "initialize", "classopenfsl_1_1_file_block_device.html#ad2b01d5f6f73322182f07c2cf3bbbabc", null ],
+    [ "readSector", "classopenfsl_1_1_file_block_device.html#aec7479ec1140708ebcba6b4c5d1c0535", null ],
+    [ "writeSector", "classopenfsl_1_1_file_block_device.html#a85d32d5f39a8dd94a929207e946d2181", null ],
     [ "diskParameter", "classopenfsl_1_1_file_block_device.html#a01006f457c174e5b0d3df88c30a3b05c", null ],
     [ "file", "classopenfsl_1_1_file_block_device.html#ab2e403acdc7798065acedf1a805b42b4", null ]
 ];

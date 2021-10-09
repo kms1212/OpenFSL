@@ -11,6 +11,6 @@ var detectstruct_8h =
       [ "GPT", "detectstruct_8h.html#aaeee298c14e04bb116e0f85588036dd4a1703f91c5c4c0ce169e1713fe58318a9", null ]
     ] ],
     [ "detectDiskStructure", "detectstruct_8h.html#a9a948ca8eb7bfffc8f0e678fb816030f", null ],
-    [ "fileSystemTypeToString", "detectstruct_8h.html#abdfe89dd8f384f209dd10b118c43b18a", null ],
-    [ "partitionTableTypeToString", "detectstruct_8h.html#ab1d97e5d2759b97e6f234762cf3d9219", null ]
+    [ "fileSystemTypeToString", "detectstruct_8h.html#af0c653bca3fe7d5fe083c0225e7f25ea", null ],
+    [ "partitionTableTypeToString", "detectstruct_8h.html#a504a1b9126c87c62a51837b9388abf86", null ]
 ];
