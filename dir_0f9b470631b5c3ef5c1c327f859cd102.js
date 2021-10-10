@@ -7,7 +7,6 @@ var dir_0f9b470631b5c3ef5c1c327f859cd102 =
     [ "checkempty.cpp", "checkempty_8cpp.html", null ],
     [ "checksum.cpp", "checksum_8cpp.html", null ],
     [ "classgeneral.cpp", "classgeneral_8cpp.html", null ],
-    [ "copy.cpp", "copy_8cpp.html", null ],
     [ "createentry.cpp", "createentry_8cpp.html", "createentry_8cpp" ],
     [ "fatarea.cpp", "fatarea_8cpp.html", null ],
     [ "file_classgeneral.cpp", "file__classgeneral_8cpp.html", null ],
