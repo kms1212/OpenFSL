@@ -123,13 +123,38 @@ $(document).ready(function(){initNavTree('wrapper__file_8cpp_source.html',''); i
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordflow">return</span> result;</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;}</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classopenfsl_1_1_f_a_t32.html#a4f38bf5def602b98a9fb738d03521a9d">   27</a></span>&#160;<a class="code" href="error_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a> <a class="code" href="classopenfsl_1_1_f_a_t32.html#a4f38bf5def602b98a9fb738d03521a9d">openfsl::FAT32::move</a>(<span class="keyword">const</span> std::string from, <span class="keyword">const</span> std::string to) {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="comment">// Separate path and file name</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    std::pair&lt;std::string, std::string&gt; filepath = __separateFileName(from);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    std::string fromPath = filepath.first;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    std::string fromName = filepath.second;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    filepath = __separateFileName(to);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    std::string toPath = filepath.first;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    std::string toName = filepath.second;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    fsOperationMutex.lock();</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="error_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a> result = __move(fromPath, fromName, toPath, toName);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    fsOperationMutex.unlock();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classopenfsl_1_1_f_a_t32.html#a8ee480d797567cdfc162a4a75d8ca053">   46</a></span>&#160;<a class="code" href="error_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a> <a class="code" href="classopenfsl_1_1_f_a_t32.html#a8ee480d797567cdfc162a4a75d8ca053">openfsl::FAT32::copy</a>(<span class="keyword">const</span> std::string from, <span class="keyword">const</span> std::string to) {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="afs__fat32_8h_html"><div class="ttname"><a href="fs__fat32_8h.html">fs_fat32.h</a></div></div>
 <div class="ttc" id="aclassopenfsl_1_1_f_a_t32_html_ab0d40b804e1ff21de7ccf2509c93da5b"><div class="ttname"><a href="classopenfsl_1_1_f_a_t32.html#ab0d40b804e1ff21de7ccf2509c93da5b">openfsl::FAT32::__separateFileName</a></div><div class="ttdeci">std::pair&lt; std::string, std::string &gt; __separateFileName(const std::string filepath)</div><div class="ttdoc">Separate file name.</div><div class="ttdef"><b>Definition:</b> <a href="path_8cpp_source.html#l00015">path.cpp:15</a></div></div>
 <div class="ttc" id="aclassopenfsl_1_1_f_a_t32_html_a03bfaefead11ea43b31614841cfb12ff"><div class="ttname"><a href="classopenfsl_1_1_f_a_t32.html#a03bfaefead11ea43b31614841cfb12ff">openfsl::FAT32::__makeFile</a></div><div class="ttdeci">error_t __check_result __makeFile(const std::string path, const std::string dirname, const Time *createTime=nullptr)</div><div class="ttdoc">Create file.</div><div class="ttdef"><b>Definition:</b> <a href="makefile_8cpp_source.html#l00014">makefile.cpp:14</a></div></div>
 <div class="ttc" id="aerror_8h_html_a9ad6b2dc3cbff040775e79656fe8e1a3"><div class="ttname"><a href="error_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a></div><div class="ttdeci">int error_t</div><div class="ttdef"><b>Definition:</b> <a href="error_8h_source.html#l00025">error.h:25</a></div></div>
+<div class="ttc" id="aclassopenfsl_1_1_f_a_t32_html_a8ee480d797567cdfc162a4a75d8ca053"><div class="ttname"><a href="classopenfsl_1_1_f_a_t32.html#a8ee480d797567cdfc162a4a75d8ca053">openfsl::FAT32::copy</a></div><div class="ttdeci">error_t copy(const std::string from, const std::string to)</div><div class="ttdef"><b>Definition:</b> <a href="wrapper__file_8cpp_source.html#l00046">wrapper_file.cpp:46</a></div></div>
 <div class="ttc" id="aclassopenfsl_1_1_f_a_t32_html_a878f4cbc9a910280b21e4e6c9c98a400"><div class="ttname"><a href="classopenfsl_1_1_f_a_t32.html#a878f4cbc9a910280b21e4e6c9c98a400">openfsl::FAT32::fsOperationMutex</a></div><div class="ttdeci">std::mutex fsOperationMutex</div><div class="ttdef"><b>Definition:</b> <a href="fs__fat32_8h_source.html#l00337">fs_fat32.h:337</a></div></div>
+<div class="ttc" id="aclassopenfsl_1_1_f_a_t32_html_a4f38bf5def602b98a9fb738d03521a9d"><div class="ttname"><a href="classopenfsl_1_1_f_a_t32.html#a4f38bf5def602b98a9fb738d03521a9d">openfsl::FAT32::move</a></div><div class="ttdeci">error_t move(const std::string from, const std::string to)</div><div class="ttdef"><b>Definition:</b> <a href="wrapper__file_8cpp_source.html#l00027">wrapper_file.cpp:27</a></div></div>
 <div class="ttc" id="aclassopenfsl_1_1_f_a_t32_html_a322bde9dfda6dbb287fc39cc8828d801"><div class="ttname"><a href="classopenfsl_1_1_f_a_t32.html#a322bde9dfda6dbb287fc39cc8828d801">openfsl::FAT32::makeFile</a></div><div class="ttdeci">error_t makeFile(const std::string path)</div><div class="ttdef"><b>Definition:</b> <a href="wrapper__file_8cpp_source.html#l00012">wrapper_file.cpp:12</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

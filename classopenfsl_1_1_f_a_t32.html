@@ -119,7 +119,7 @@ Inheritance diagram for openfsl::FAT32:</div>
 <div class="dyncontent">
 <div class="center"><img src="classopenfsl_1_1_f_a_t32__inherit__graph.png" border="0" usemap="#openfsl_1_1_f_a_t32_inherit__map" alt="Inheritance graph"/></div>
 <map name="openfsl_1_1_f_a_t32_inherit__map" id="openfsl_1_1_f_a_t32_inherit__map">
-<area shape="rect" title="FAT32 imeplementation." alt="" coords="5,683,217,1801"/>
+<area shape="rect" title="FAT32 imeplementation." alt="" coords="5,683,217,1904"/>
 <area shape="rect" href="classopenfsl_1_1_file_system.html" title=" " alt="" coords="36,351,187,633"/>
 <area shape="rect" href="classopenfsl_1_1_file_system.html" title=" " alt="" coords="36,5,187,288"/>
 </map>
@@ -129,7 +129,7 @@ Collaboration diagram for openfsl::FAT32:</div>
 <div class="dyncontent">
 <div class="center"><img src="classopenfsl_1_1_f_a_t32__coll__graph.png" border="0" usemap="#openfsl_1_1_f_a_t32_coll__map" alt="Collaboration graph"/></div>
 <map name="openfsl_1_1_f_a_t32_coll__map" id="openfsl_1_1_f_a_t32_coll__map">
-<area shape="rect" title="FAT32 imeplementation." alt="" coords="1708,1093,1920,2007"/>
+<area shape="rect" title="FAT32 imeplementation." alt="" coords="1708,1093,1920,2109"/>
 <area shape="rect" href="classopenfsl_1_1_file_system.html" title=" " alt="" coords="422,836,572,1031"/>
 <area shape="rect" href="classuint64__t.html" title=" " alt="" coords="426,365,501,443"/>
 <area shape="rect" href="classopenfsl_1_1_file_system.html" title=" " alt="" coords="254,564,404,759"/>
@@ -270,6 +270,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a322bde9dfda6dbb287fc39cc8828d801"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48f054beba410db8a9a0d9230b323e74"><td class="memItemLeft" align="right" valign="top"><a class="el" href="error_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenfsl_1_1_f_a_t32.html#a48f054beba410db8a9a0d9230b323e74">remove</a> (const std::string path, <a class="el" href="classopenfsl_1_1_f_a_t32.html#a1eee0ba4714aec27fd8eefe9a17dfb4b">FileAttribute</a> attribute)</td></tr>
 <tr class="separator:a48f054beba410db8a9a0d9230b323e74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ee480d797567cdfc162a4a75d8ca053"><td class="memItemLeft" align="right" valign="top"><a class="el" href="error_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenfsl_1_1_f_a_t32.html#a8ee480d797567cdfc162a4a75d8ca053">copy</a> (const std::string from, const std::string to)</td></tr>
+<tr class="separator:a8ee480d797567cdfc162a4a75d8ca053"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f38bf5def602b98a9fb738d03521a9d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="error_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenfsl_1_1_f_a_t32.html#a4f38bf5def602b98a9fb738d03521a9d">move</a> (const std::string from, const std::string to)</td></tr>
+<tr class="separator:a4f38bf5def602b98a9fb738d03521a9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5564e536d7325a94b66859b3f6e76a2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structopenfsl_1_1_f_a_t32_1_1_file_info.html">FAT32::FileInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenfsl_1_1_f_a_t32.html#ac5564e536d7325a94b66859b3f6e76a2">getEntryInfo</a> (const std::string path)</td></tr>
 <tr class="separator:ac5564e536d7325a94b66859b3f6e76a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a08d703f813c75b40c67114b496566cf3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="error_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenfsl_1_1_f_a_t32.html#a08d703f813c75b40c67114b496566cf3">setEntryInfo</a> (const std::string path, <a class="el" href="structopenfsl_1_1_f_a_t32_1_1_file_info.html">FAT32::FileInfo</a> fileInfo)</td></tr>
@@ -374,6 +378,16 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:aac72f94554b8a89f49861a9d7d23a32a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="error_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a> <a class="el" href="macros_8h.html#a73fa52cd4bbaa839980b3008201d09c0">__check_result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenfsl_1_1_f_a_t32.html#aac72f94554b8a89f49861a9d7d23a32a">__remove</a> (const std::string path, const std::string name, const <a class="el" href="classopenfsl_1_1_f_a_t32.html#a1eee0ba4714aec27fd8eefe9a17dfb4b">FileAttribute</a> attribute)</td></tr>
 <tr class="memdesc:aac72f94554b8a89f49861a9d7d23a32a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove directory or file.  <a href="classopenfsl_1_1_f_a_t32.html#aac72f94554b8a89f49861a9d7d23a32a">More...</a><br /></td></tr>
 <tr class="separator:aac72f94554b8a89f49861a9d7d23a32a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf7caa7c823fd162205ddf1d56561a16"><td class="memItemLeft" align="right" valign="top"><a class="el" href="error_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenfsl_1_1_f_a_t32.html#adf7caa7c823fd162205ddf1d56561a16">__copy</a> (const std::string fromPath, const std::string fromName, const std::string toPath, const std::string toName)</td></tr>
+<tr class="separator:adf7caa7c823fd162205ddf1d56561a16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12296dd6f92142d705f0762b1bbdc2db"><td class="memItemLeft" align="right" valign="top"><a class="el" href="error_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenfsl_1_1_f_a_t32.html#a12296dd6f92142d705f0762b1bbdc2db">__move</a> (const std::string fromPath, const std::string fromName, const std::string toPath, const std::string toName)</td></tr>
+<tr class="separator:a12296dd6f92142d705f0762b1bbdc2db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3249452c19a26522e2b0bed6877ebb6f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="error_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenfsl_1_1_f_a_t32.html#a3249452c19a26522e2b0bed6877ebb6f">__search</a> (std::vector&lt; std::pair&lt; std::string, <a class="el" href="structopenfsl_1_1_f_a_t32_1_1_file_info.html">FileInfo</a> &gt;&gt; *buf, const std::string path, const std::string regex, const <a class="el" href="classopenfsl_1_1_f_a_t32.html#a1eee0ba4714aec27fd8eefe9a17dfb4b">FileAttribute</a> attr, const <a class="el" href="classbool.html">bool</a> recurse)</td></tr>
+<tr class="separator:a3249452c19a26522e2b0bed6877ebb6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a813903f67c87bf899d356f3f69bbb909"><td class="memItemLeft" align="right" valign="top"><a class="el" href="error_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenfsl_1_1_f_a_t32.html#a813903f67c87bf899d356f3f69bbb909">__search</a> (std::vector&lt; <a class="el" href="structopenfsl_1_1_f_a_t32_1_1_file_info.html">FileInfo</a> &gt; *buf, const std::string path, const std::string regex, const <a class="el" href="classopenfsl_1_1_f_a_t32.html#a1eee0ba4714aec27fd8eefe9a17dfb4b">FileAttribute</a> attr)</td></tr>
+<tr class="separator:a813903f67c87bf899d356f3f69bbb909"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a036d4922b5cdf1d1a60aaf44e9b031df"><td class="memItemLeft" align="right" valign="top"><a class="el" href="error_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenfsl_1_1_f_a_t32.html#a036d4922b5cdf1d1a60aaf44e9b031df">__search</a> (std::vector&lt; <a class="el" href="structopenfsl_1_1_f_a_t32_1_1_file_info.html">FileInfo</a> &gt; *buf, const <a class="el" href="classopenfsl_1_1_f_a_t32.html#abc3a9899a34a113a605666126791a40d">cluster_t</a> cluster, const std::string regex, const <a class="el" href="classopenfsl_1_1_f_a_t32.html#a1eee0ba4714aec27fd8eefe9a17dfb4b">FileAttribute</a> attr)</td></tr>
+<tr class="separator:a036d4922b5cdf1d1a60aaf44e9b031df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3da2b2b19faebfbb10cffe698a648f96"><td class="memItemLeft" align="right" valign="top">std::pair&lt; <a class="el" href="error_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a>, <a class="el" href="classbool.html">bool</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenfsl_1_1_f_a_t32.html#a3da2b2b19faebfbb10cffe698a648f96">__checkEmpty</a> (const std::string path, const std::string dirname)</td></tr>
 <tr class="separator:a3da2b2b19faebfbb10cffe698a648f96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e476495cfc95e988d5581f3a74bd9db"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classopenfsl_1_1_f_a_t32.html#abc3a9899a34a113a605666126791a40d">cluster_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenfsl_1_1_f_a_t32.html#a6e476495cfc95e988d5581f3a74bd9db">__getLastCluster</a> (const <a class="el" href="classopenfsl_1_1_f_a_t32.html#abc3a9899a34a113a605666126791a40d">cluster_t</a> cluster)</td></tr>
@@ -1040,7 +1054,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Cache manager thread. </p>
 <p>Manages cache and keeps the number of caches </p>
 
-<p class="definition">Definition at line <a class="el" href="cache_8cpp_source.html#l00099">99</a> of file <a class="el" href="cache_8cpp_source.html">cache.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cache_8cpp_source.html#l00096">96</a> of file <a class="el" href="cache_8cpp_source.html">cache.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1091,7 +1105,7 @@ Here is the caller graph for this function:</div>
 <p>Changes working directory. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">path</td><td>working directory </td></tr>
-    <tr><td class="paramname">subdir</td><td>Parameter for recursive search. DO NOT SET THIS ARGUMENT ARBITRARILY (Default: NULL) </td></tr>
+    <tr><td class="paramname">subdir</td><td>Parameter for recursive search. (Default: null) </td></tr>
   </table>
   </dd>
 </dl>
@@ -1128,20 +1142,21 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classopenfsl_1_1_f_a_t32_a7a3ec9435f37a905a9e41358c94a98aa_icgraph.png" border="0" usemap="#classopenfsl_1_1_f_a_t32_a7a3ec9435f37a905a9e41358c94a98aa_icgraph" alt=""/></div>
 <map name="classopenfsl_1_1_f_a_t32_a7a3ec9435f37a905a9e41358c94a98aa_icgraph" id="classopenfsl_1_1_f_a_t32_a7a3ec9435f37a905a9e41358c94a98aa_icgraph">
-<area shape="rect" title="Change directory." alt="" coords="803,220,973,247"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a4474f7143bbd15c8cd6d30d527bf7a7e" title="Create entry." alt="" coords="550,62,729,103"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ad57d2efce5f6bb3f3266b52ec7262f05" title="Create directory." alt="" coords="270,15,463,41"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a8c4fd9c81051e976e0557610b3ccee27" title=" " alt="" coords="271,121,463,162"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a3ed1aabf1c80fca2be4ab1463cffa460" title=" " alt="" coords="546,245,733,286"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ad00a1d5dae97b6ec2b680b9f2f75b483" title="Get file information." alt="" coords="270,302,463,343"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a72b276ca60f268ce9f648a39df0d5eca" title="Remove entry." alt="" coords="545,179,733,221"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ae0e5f57f13f4f41934a7ee310dc4ef4c" title=" " alt="" coords="524,361,755,388"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a03bfaefead11ea43b31614841cfb12ff" title="Create file." alt="" coords="268,69,465,96"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a322bde9dfda6dbb287fc39cc8828d801" title=" " alt="" coords="16,69,199,96"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a3da2b2b19faebfbb10cffe698a648f96" title=" " alt="" coords="257,244,476,271"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#aac72f94554b8a89f49861a9d7d23a32a" title="Remove directory or file." alt="" coords="13,191,201,217"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ac5564e536d7325a94b66859b3f6e76a2" title=" " alt="" coords="5,313,209,340"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_f_i_l_e.html#a1f2af6cb988dae83ea50a97a7c1dc477" title=" " alt="" coords="32,247,183,289"/>
+<area shape="rect" title="Change directory." alt="" coords="803,247,973,274"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a4474f7143bbd15c8cd6d30d527bf7a7e" title="Create entry." alt="" coords="550,64,729,105"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ad57d2efce5f6bb3f3266b52ec7262f05" title="Create directory." alt="" coords="270,17,463,43"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a12296dd6f92142d705f0762b1bbdc2db" title=" " alt="" coords="279,242,454,269"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a8c4fd9c81051e976e0557610b3ccee27" title=" " alt="" coords="271,123,463,164"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a3ed1aabf1c80fca2be4ab1463cffa460" title=" " alt="" coords="546,299,733,340"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ad00a1d5dae97b6ec2b680b9f2f75b483" title="Get file information." alt="" coords="270,356,463,397"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a72b276ca60f268ce9f648a39df0d5eca" title="Remove entry." alt="" coords="545,181,733,223"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ae0e5f57f13f4f41934a7ee310dc4ef4c" title=" " alt="" coords="524,415,755,442"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a03bfaefead11ea43b31614841cfb12ff" title="Create file." alt="" coords="268,71,465,98"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a322bde9dfda6dbb287fc39cc8828d801" title=" " alt="" coords="16,71,199,98"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a3da2b2b19faebfbb10cffe698a648f96" title=" " alt="" coords="257,297,476,323"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#aac72f94554b8a89f49861a9d7d23a32a" title="Remove directory or file." alt="" coords="13,230,201,257"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ac5564e536d7325a94b66859b3f6e76a2" title=" " alt="" coords="5,334,209,361"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_f_i_l_e.html#a1f2af6cb988dae83ea50a97a7c1dc477" title=" " alt="" coords="32,385,183,427"/>
 </map>
 </div>
 
@@ -1259,14 +1274,65 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classopenfsl_1_1_f_a_t32_a0e9eedc9ddbc97f049c039f608f57089_icgraph.png" border="0" usemap="#classopenfsl_1_1_f_a_t32_a0e9eedc9ddbc97f049c039f608f57089_icgraph" alt=""/></div>
 <map name="classopenfsl_1_1_f_a_t32_a0e9eedc9ddbc97f049c039f608f57089_icgraph" id="classopenfsl_1_1_f_a_t32_a0e9eedc9ddbc97f049c039f608f57089_icgraph">
-<area shape="rect" title="Checksum." alt="" coords="708,56,923,83"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a4474f7143bbd15c8cd6d30d527bf7a7e" title="Create entry." alt="" coords="481,49,660,90"/>
+<area shape="rect" title="Checksum." alt="" coords="708,81,923,108"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a4474f7143bbd15c8cd6d30d527bf7a7e" title="Create entry." alt="" coords="481,74,660,115"/>
 <area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ad57d2efce5f6bb3f3266b52ec7262f05" title="Create directory." alt="" coords="238,5,431,32"/>
 <area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a03bfaefead11ea43b31614841cfb12ff" title="Create file." alt="" coords="236,56,433,83"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a8c4fd9c81051e976e0557610b3ccee27" title=" " alt="" coords="239,107,431,149"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a12296dd6f92142d705f0762b1bbdc2db" title=" " alt="" coords="247,107,422,133"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a8c4fd9c81051e976e0557610b3ccee27" title=" " alt="" coords="239,158,431,199"/>
 <area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a322bde9dfda6dbb287fc39cc8828d801" title=" " alt="" coords="5,56,188,83"/>
 </map>
 </div>
+
+</div>
+</div>
+<a id="adf7caa7c823fd162205ddf1d56561a16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf7caa7c823fd162205ddf1d56561a16">&#9670;&nbsp;</a></span>__copy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="error_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a> openfsl::FAT32::__copy </td>
+          <td>(</td>
+          <td class="paramtype">const std::string&#160;</td>
+          <td class="paramname"><em>fromPath</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string&#160;</td>
+          <td class="paramname"><em>fromName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string&#160;</td>
+          <td class="paramname"><em>toPath</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string&#160;</td>
+          <td class="paramname"><em>toName</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="copy_8cpp_source.html#l00012">12</a> of file <a class="el" href="copy_8cpp_source.html">copy.cpp</a>.</p>
 
 </div>
 </div>
@@ -1321,42 +1387,42 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classopenfsl_1_1_f_a_t32_a4474f7143bbd15c8cd6d30d527bf7a7e_cgraph.png" border="0" usemap="#classopenfsl_1_1_f_a_t32_a4474f7143bbd15c8cd6d30d527bf7a7e_cgraph" alt=""/></div>
 <map name="classopenfsl_1_1_f_a_t32_a4474f7143bbd15c8cd6d30d527bf7a7e_cgraph" id="classopenfsl_1_1_f_a_t32_a4474f7143bbd15c8cd6d30d527bf7a7e_cgraph">
-<area shape="rect" title="Create entry." alt="" coords="5,584,184,625"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a7a3ec9435f37a905a9e41358c94a98aa" title="Change directory." alt="" coords="254,231,425,258"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#ac2e7fe5cbcc1a42946d5c341e0723be2" title=" " alt="" coords="744,358,956,400"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a0e9eedc9ddbc97f049c039f608f57089" title="Checksum." alt="" coords="232,591,447,618"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a550cbd04ddbd057c5938cea9780b2bfb" title=" " alt="" coords="232,642,447,668"/>
-<area shape="rect" href="createentry_8cpp.html#ad707323f8f1c2e0a4721281846d08f2b" title=" " alt="" coords="278,692,401,719"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ad431a07239e2a1b663caf451cae14b08" title="List directory contents as path." alt="" coords="251,743,428,770"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a1106ff51e59165f4712520051890ec51" title=" " alt="" coords="232,794,447,820"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a7faa067fdc4ed800aa0a5dcd0d9572e4" title="UTF&#45;8 string to UCS&#45;2 string." alt="" coords="238,844,441,871"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a4f075b67b497efc5f561b8e9ab849986" title=" " alt="" coords="744,822,956,864"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a4848493e0f5d9c52ea1f101d2ded5b81" title=" " alt="" coords="1007,705,1219,746"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a36b307a4e0888e00daf9c0d9a4854f35" title=" " alt="" coords="744,424,956,465"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a3ed1aabf1c80fca2be4ab1463cffa460" title=" " alt="" coords="501,256,687,297"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#af885a8d4ff467f6fff87876ebb526805" title="Get cache value." alt="" coords="495,190,693,232"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a97fcec9162808ca5ab0ea5af049c46b1" title=" " alt="" coords="501,73,687,114"/>
-<area shape="rect" href="namespaceopenfsl.html#af5d84bfd77cfffcf6eca548c58646865" title="String tokenizer." alt="" coords="763,82,937,108"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a7c50adb782f3181c23412bf2cb2e3b9c" title="UCS&#45;2 string to UTF&#45;8 string." alt="" coords="750,307,950,334"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a93f6e6cfc1dd779cd1fb11fece3587e2" title=" " alt="" coords="743,206,957,232"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a9899388cca12b6641d797a67f2bbbf44" title=" " alt="" coords="741,256,959,283"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a047e0ac2afa1b920d216a17320ee62a5" title=" " alt="" coords="744,137,956,178"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a36669702f58485e2d745e616736d630b" title=" " alt="" coords="1007,166,1219,208"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a68ad9ea509479c36026980f35c3648f0" title=" " alt="" coords="1527,476,1697,503"/>
-<area shape="rect" href="classopenfsl_1_1_sector.html#af9128b9d68ff6b96d70336a6e51d23e4" title="Data buffer getter." alt="" coords="1283,90,1462,116"/>
-<area shape="rect" href="classopenfsl_1_1_block_device.html#a47f31aa57ca6e82567148f7875a81162" title=" " alt="" coords="1293,280,1452,321"/>
-<area shape="rect" href="classopenfsl_1_1_file_system.html#a665ece3593447d10c8d56d1605f05784" title=" " alt="" coords="1297,465,1448,506"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a68c4914e5a1eeb33c44b0e31e9a5b4ff" title=" " alt="" coords="1267,604,1479,645"/>
-<area shape="rect" href="classopenfsl_1_1_file_system.html#ac66d2dd1349a54c08d816e466042cf5b" title=" " alt="" coords="1297,906,1448,948"/>
-<area shape="rect" href="classopenfsl_1_1_block_device.html#abb336a5c13d81a7587ad19da73097f43" title=" " alt="" coords="1293,162,1452,204"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a28a245a89387aec1673edc510a485279" title="Convert FAT area index to LBA." alt="" coords="1019,436,1206,477"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a879b401e9118b7ee603079d4c7ad294d" title="Get Next Free Cluster." alt="" coords="1017,822,1208,864"/>
-<area shape="rect" href="classopenfsl_1_1_container.html#ad0fa530d91da46276e19b08f9e468b62" title="Data buffer getter." alt="" coords="1302,822,1443,864"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#af802839a7004450da93b8dbcd6f5e222" title="Update FSINFO." alt="" coords="1021,990,1204,1032"/>
-<area shape="rect" href="classopenfsl_1_1_block_device.html#a6f344509ac727d84dfaa6aafa516cde4" title=" " alt="" coords="1293,990,1452,1032"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#adf6fb22c5ab89773c0c6e885cf174c41" title=" " alt="" coords="1015,771,1210,798"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a2b967692b67583b3ac9ef80350eec46e" title=" " alt="" coords="1007,1158,1219,1200"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#ad05834b7f84560d96c449347c6cfd4f7" title=" " alt="" coords="1267,1158,1479,1200"/>
+<area shape="rect" title="Create entry." alt="" coords="5,390,184,431"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a7a3ec9435f37a905a9e41358c94a98aa" title="Change directory." alt="" coords="254,220,425,247"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#ac2e7fe5cbcc1a42946d5c341e0723be2" title=" " alt="" coords="744,77,956,118"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a047e0ac2afa1b920d216a17320ee62a5" title=" " alt="" coords="744,142,956,183"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a0e9eedc9ddbc97f049c039f608f57089" title="Checksum." alt="" coords="232,271,447,297"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a550cbd04ddbd057c5938cea9780b2bfb" title=" " alt="" coords="232,321,447,348"/>
+<area shape="rect" href="createentry_8cpp.html#ad707323f8f1c2e0a4721281846d08f2b" title=" " alt="" coords="278,372,401,399"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ad431a07239e2a1b663caf451cae14b08" title="List directory contents as path." alt="" coords="251,423,428,449"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a1106ff51e59165f4712520051890ec51" title=" " alt="" coords="232,473,447,500"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a7faa067fdc4ed800aa0a5dcd0d9572e4" title="UTF&#45;8 string to UCS&#45;2 string." alt="" coords="238,524,441,551"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a4f075b67b497efc5f561b8e9ab849986" title=" " alt="" coords="744,769,956,810"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a4848493e0f5d9c52ea1f101d2ded5b81" title=" " alt="" coords="1007,659,1219,701"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a36b307a4e0888e00daf9c0d9a4854f35" title=" " alt="" coords="744,465,956,506"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a3ed1aabf1c80fca2be4ab1463cffa460" title=" " alt="" coords="501,201,687,242"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#af885a8d4ff467f6fff87876ebb526805" title="Get cache value." alt="" coords="495,331,693,373"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a97fcec9162808ca5ab0ea5af049c46b1" title=" " alt="" coords="501,266,687,307"/>
+<area shape="rect" href="namespaceopenfsl.html#af5d84bfd77cfffcf6eca548c58646865" title="String tokenizer." alt="" coords="763,379,937,405"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a7c50adb782f3181c23412bf2cb2e3b9c" title="UCS&#45;2 string to UTF&#45;8 string." alt="" coords="750,309,950,336"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a93f6e6cfc1dd779cd1fb11fece3587e2" title=" " alt="" coords="743,208,957,235"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a9899388cca12b6641d797a67f2bbbf44" title=" " alt="" coords="741,259,959,285"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a36669702f58485e2d745e616736d630b" title=" " alt="" coords="1007,171,1219,213"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a68ad9ea509479c36026980f35c3648f0" title=" " alt="" coords="1527,536,1697,563"/>
+<area shape="rect" href="classopenfsl_1_1_sector.html#af9128b9d68ff6b96d70336a6e51d23e4" title="Data buffer getter." alt="" coords="1283,91,1462,117"/>
+<area shape="rect" href="classopenfsl_1_1_block_device.html#a47f31aa57ca6e82567148f7875a81162" title=" " alt="" coords="1293,270,1452,311"/>
+<area shape="rect" href="classopenfsl_1_1_file_system.html#a665ece3593447d10c8d56d1605f05784" title=" " alt="" coords="1297,411,1448,453"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a68c4914e5a1eeb33c44b0e31e9a5b4ff" title=" " alt="" coords="1267,569,1479,610"/>
+<area shape="rect" href="classopenfsl_1_1_file_system.html#ac66d2dd1349a54c08d816e466042cf5b" title=" " alt="" coords="1297,707,1448,749"/>
+<area shape="rect" href="classopenfsl_1_1_block_device.html#abb336a5c13d81a7587ad19da73097f43" title=" " alt="" coords="1293,153,1452,194"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a28a245a89387aec1673edc510a485279" title="Convert FAT area index to LBA." alt="" coords="1019,441,1206,482"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a879b401e9118b7ee603079d4c7ad294d" title="Get Next Free Cluster." alt="" coords="1017,1046,1208,1087"/>
+<area shape="rect" href="classopenfsl_1_1_container.html#ad0fa530d91da46276e19b08f9e468b62" title="Data buffer getter." alt="" coords="1302,1046,1443,1087"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#af802839a7004450da93b8dbcd6f5e222" title="Update FSINFO." alt="" coords="1021,827,1204,869"/>
+<area shape="rect" href="classopenfsl_1_1_block_device.html#a6f344509ac727d84dfaa6aafa516cde4" title=" " alt="" coords="1293,827,1452,869"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#adf6fb22c5ab89773c0c6e885cf174c41" title=" " alt="" coords="1015,776,1210,803"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a2b967692b67583b3ac9ef80350eec46e" title=" " alt="" coords="1007,1163,1219,1205"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#ad05834b7f84560d96c449347c6cfd4f7" title=" " alt="" coords="1267,1163,1479,1205"/>
 </map>
 </div>
 <div class="dynheader">
@@ -1364,10 +1430,11 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classopenfsl_1_1_f_a_t32_a4474f7143bbd15c8cd6d30d527bf7a7e_icgraph.png" border="0" usemap="#classopenfsl_1_1_f_a_t32_a4474f7143bbd15c8cd6d30d527bf7a7e_icgraph" alt=""/></div>
 <map name="classopenfsl_1_1_f_a_t32_a4474f7143bbd15c8cd6d30d527bf7a7e_icgraph" id="classopenfsl_1_1_f_a_t32_a4474f7143bbd15c8cd6d30d527bf7a7e_icgraph">
-<area shape="rect" title="Create entry." alt="" coords="481,49,660,90"/>
+<area shape="rect" title="Create entry." alt="" coords="481,74,660,115"/>
 <area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ad57d2efce5f6bb3f3266b52ec7262f05" title="Create directory." alt="" coords="238,5,431,32"/>
 <area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a03bfaefead11ea43b31614841cfb12ff" title="Create file." alt="" coords="236,56,433,83"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a8c4fd9c81051e976e0557610b3ccee27" title=" " alt="" coords="239,107,431,149"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a12296dd6f92142d705f0762b1bbdc2db" title=" " alt="" coords="247,107,422,133"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a8c4fd9c81051e976e0557610b3ccee27" title=" " alt="" coords="239,158,431,199"/>
 <area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a322bde9dfda6dbb287fc39cc8828d801" title=" " alt="" coords="5,56,188,83"/>
 </map>
 </div>
@@ -1404,11 +1471,12 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classopenfsl_1_1_f_a_t32_a550cbd04ddbd057c5938cea9780b2bfb_icgraph.png" border="0" usemap="#classopenfsl_1_1_f_a_t32_a550cbd04ddbd057c5938cea9780b2bfb_icgraph" alt=""/></div>
 <map name="classopenfsl_1_1_f_a_t32_a550cbd04ddbd057c5938cea9780b2bfb_icgraph" id="classopenfsl_1_1_f_a_t32_a550cbd04ddbd057c5938cea9780b2bfb_icgraph">
-<area shape="rect" title=" " alt="" coords="708,56,923,83"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a4474f7143bbd15c8cd6d30d527bf7a7e" title="Create entry." alt="" coords="481,49,660,90"/>
+<area shape="rect" title=" " alt="" coords="708,81,923,108"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a4474f7143bbd15c8cd6d30d527bf7a7e" title="Create entry." alt="" coords="481,74,660,115"/>
 <area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ad57d2efce5f6bb3f3266b52ec7262f05" title="Create directory." alt="" coords="238,5,431,32"/>
 <area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a03bfaefead11ea43b31614841cfb12ff" title="Create file." alt="" coords="236,56,433,83"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a8c4fd9c81051e976e0557610b3ccee27" title=" " alt="" coords="239,107,431,149"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a12296dd6f92142d705f0762b1bbdc2db" title=" " alt="" coords="247,107,422,133"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a8c4fd9c81051e976e0557610b3ccee27" title=" " alt="" coords="239,158,431,199"/>
 <area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a322bde9dfda6dbb287fc39cc8828d801" title=" " alt="" coords="5,56,188,83"/>
 </map>
 </div>
@@ -1442,7 +1510,7 @@ Here is the caller graph for this function:</div>
 <p>Delete cache. </p>
 <p>Deletes cache </p>
 
-<p class="definition">Definition at line <a class="el" href="cache_8cpp_source.html#l00075">75</a> of file <a class="el" href="cache_8cpp_source.html">cache.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cache_8cpp_source.html#l00073">73</a> of file <a class="el" href="cache_8cpp_source.html">cache.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1504,14 +1572,15 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classopenfsl_1_1_f_a_t32_a28a245a89387aec1673edc510a485279_icgraph.png" border="0" usemap="#classopenfsl_1_1_f_a_t32_a28a245a89387aec1673edc510a485279_icgraph" alt=""/></div>
 <map name="classopenfsl_1_1_f_a_t32_a28a245a89387aec1673edc510a485279_icgraph" id="classopenfsl_1_1_f_a_t32_a28a245a89387aec1673edc510a485279_icgraph">
-<area shape="rect" title="Convert FAT area index to LBA." alt="" coords="968,114,1155,155"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a4f075b67b497efc5f561b8e9ab849986" title=" " alt="" coords="708,81,920,122"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a9792c4764310d1037ac0633014bbe7c3" title=" " alt="" coords="708,146,920,187"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a4474f7143bbd15c8cd6d30d527bf7a7e" title="Create entry." alt="" coords="481,49,660,90"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_f_i_l_e.html#aae800cf33c9931ec924676567121f0b3" title="Write file." alt="" coords="495,114,646,155"/>
+<area shape="rect" title="Convert FAT area index to LBA." alt="" coords="968,139,1155,181"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a4f075b67b497efc5f561b8e9ab849986" title=" " alt="" coords="708,106,920,147"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a9792c4764310d1037ac0633014bbe7c3" title=" " alt="" coords="708,171,920,213"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a4474f7143bbd15c8cd6d30d527bf7a7e" title="Create entry." alt="" coords="481,74,660,115"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_f_i_l_e.html#aae800cf33c9931ec924676567121f0b3" title="Write file." alt="" coords="495,139,646,181"/>
 <area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ad57d2efce5f6bb3f3266b52ec7262f05" title="Create directory." alt="" coords="238,5,431,32"/>
 <area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a03bfaefead11ea43b31614841cfb12ff" title="Create file." alt="" coords="236,56,433,83"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a8c4fd9c81051e976e0557610b3ccee27" title=" " alt="" coords="239,107,431,149"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a12296dd6f92142d705f0762b1bbdc2db" title=" " alt="" coords="247,107,422,133"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a8c4fd9c81051e976e0557610b3ccee27" title=" " alt="" coords="239,158,431,199"/>
 <area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a322bde9dfda6dbb287fc39cc8828d801" title=" " alt="" coords="5,56,188,83"/>
 </map>
 </div>
@@ -1583,20 +1652,21 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classopenfsl_1_1_f_a_t32_a3ed1aabf1c80fca2be4ab1463cffa460_icgraph.png" border="0" usemap="#classopenfsl_1_1_f_a_t32_a3ed1aabf1c80fca2be4ab1463cffa460_icgraph" alt=""/></div>
 <map name="classopenfsl_1_1_f_a_t32_a3ed1aabf1c80fca2be4ab1463cffa460_icgraph" id="classopenfsl_1_1_f_a_t32_a3ed1aabf1c80fca2be4ab1463cffa460_icgraph">
-<area shape="rect" title=" " alt="" coords="1033,250,1220,291"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a7a3ec9435f37a905a9e41358c94a98aa" title="Change directory." alt="" coords="791,203,961,229"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ad00a1d5dae97b6ec2b680b9f2f75b483" title="Get file information." alt="" coords="507,342,700,383"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a3da2b2b19faebfbb10cffe698a648f96" title=" " alt="" coords="767,287,985,313"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a4474f7143bbd15c8cd6d30d527bf7a7e" title="Create entry." alt="" coords="514,107,693,149"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ad57d2efce5f6bb3f3266b52ec7262f05" title="Create directory." alt="" coords="241,60,435,87"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a8c4fd9c81051e976e0557610b3ccee27" title=" " alt="" coords="242,166,434,207"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a72b276ca60f268ce9f648a39df0d5eca" title="Remove entry." alt="" coords="509,225,697,266"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ae0e5f57f13f4f41934a7ee310dc4ef4c" title=" " alt="" coords="488,5,719,32"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a03bfaefead11ea43b31614841cfb12ff" title="Create file." alt="" coords="239,115,437,141"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a322bde9dfda6dbb287fc39cc8828d801" title=" " alt="" coords="5,115,188,141"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ac5564e536d7325a94b66859b3f6e76a2" title=" " alt="" coords="236,320,440,347"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_f_i_l_e.html#a1f2af6cb988dae83ea50a97a7c1dc477" title=" " alt="" coords="263,371,413,413"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#aac72f94554b8a89f49861a9d7d23a32a" title="Remove directory or file." alt="" coords="244,251,432,277"/>
+<area shape="rect" title=" " alt="" coords="1033,196,1220,238"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a7a3ec9435f37a905a9e41358c94a98aa" title="Change directory." alt="" coords="791,204,961,230"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a12296dd6f92142d705f0762b1bbdc2db" title=" " alt="" coords="251,38,425,65"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ad00a1d5dae97b6ec2b680b9f2f75b483" title="Get file information." alt="" coords="507,396,700,438"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a3da2b2b19faebfbb10cffe698a648f96" title=" " alt="" coords="767,270,985,297"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a4474f7143bbd15c8cd6d30d527bf7a7e" title="Create entry." alt="" coords="514,163,693,204"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ad57d2efce5f6bb3f3266b52ec7262f05" title="Create directory." alt="" coords="241,116,435,142"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a8c4fd9c81051e976e0557610b3ccee27" title=" " alt="" coords="242,228,434,270"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a72b276ca60f268ce9f648a39df0d5eca" title="Remove entry." alt="" coords="509,228,697,270"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ae0e5f57f13f4f41934a7ee310dc4ef4c" title=" " alt="" coords="488,61,719,88"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a03bfaefead11ea43b31614841cfb12ff" title="Create file." alt="" coords="239,170,437,197"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a322bde9dfda6dbb287fc39cc8828d801" title=" " alt="" coords="5,170,188,197"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ac5564e536d7325a94b66859b3f6e76a2" title=" " alt="" coords="236,389,440,416"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_f_i_l_e.html#a1f2af6cb988dae83ea50a97a7c1dc477" title=" " alt="" coords="263,440,413,482"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#aac72f94554b8a89f49861a9d7d23a32a" title="Remove directory or file." alt="" coords="244,309,432,336"/>
 </map>
 </div>
 
@@ -1639,27 +1709,28 @@ Here is the caller graph for this function:</div>
 <p>Get cache value. </p>
 <p>Get cache type and cache value pointer </p>
 
-<p class="definition">Definition at line <a class="el" href="cache_8cpp_source.html#l00049">49</a> of file <a class="el" href="cache_8cpp_source.html">cache.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cache_8cpp_source.html#l00047">47</a> of file <a class="el" href="cache_8cpp_source.html">cache.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classopenfsl_1_1_f_a_t32_af885a8d4ff467f6fff87876ebb526805_icgraph.png" border="0" usemap="#classopenfsl_1_1_f_a_t32_af885a8d4ff467f6fff87876ebb526805_icgraph" alt=""/></div>
 <map name="classopenfsl_1_1_f_a_t32_af885a8d4ff467f6fff87876ebb526805_icgraph" id="classopenfsl_1_1_f_a_t32_af885a8d4ff467f6fff87876ebb526805_icgraph">
-<area shape="rect" title="Get cache value." alt="" coords="1021,213,1220,254"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a7a3ec9435f37a905a9e41358c94a98aa" title="Change directory." alt="" coords="803,220,973,247"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a4474f7143bbd15c8cd6d30d527bf7a7e" title="Create entry." alt="" coords="550,62,729,103"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ad57d2efce5f6bb3f3266b52ec7262f05" title="Create directory." alt="" coords="270,15,463,41"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a8c4fd9c81051e976e0557610b3ccee27" title=" " alt="" coords="271,121,463,162"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a3ed1aabf1c80fca2be4ab1463cffa460" title=" " alt="" coords="546,245,733,286"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ad00a1d5dae97b6ec2b680b9f2f75b483" title="Get file information." alt="" coords="270,302,463,343"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a72b276ca60f268ce9f648a39df0d5eca" title="Remove entry." alt="" coords="545,179,733,221"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ae0e5f57f13f4f41934a7ee310dc4ef4c" title=" " alt="" coords="524,361,755,388"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a03bfaefead11ea43b31614841cfb12ff" title="Create file." alt="" coords="268,69,465,96"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a322bde9dfda6dbb287fc39cc8828d801" title=" " alt="" coords="16,69,199,96"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a3da2b2b19faebfbb10cffe698a648f96" title=" " alt="" coords="257,244,476,271"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#aac72f94554b8a89f49861a9d7d23a32a" title="Remove directory or file." alt="" coords="13,191,201,217"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ac5564e536d7325a94b66859b3f6e76a2" title=" " alt="" coords="5,313,209,340"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_f_i_l_e.html#a1f2af6cb988dae83ea50a97a7c1dc477" title=" " alt="" coords="32,247,183,289"/>
+<area shape="rect" title="Get cache value." alt="" coords="1021,240,1220,281"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a7a3ec9435f37a905a9e41358c94a98aa" title="Change directory." alt="" coords="803,247,973,274"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a4474f7143bbd15c8cd6d30d527bf7a7e" title="Create entry." alt="" coords="550,64,729,105"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ad57d2efce5f6bb3f3266b52ec7262f05" title="Create directory." alt="" coords="270,17,463,43"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a12296dd6f92142d705f0762b1bbdc2db" title=" " alt="" coords="279,242,454,269"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a8c4fd9c81051e976e0557610b3ccee27" title=" " alt="" coords="271,123,463,164"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a3ed1aabf1c80fca2be4ab1463cffa460" title=" " alt="" coords="546,299,733,340"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ad00a1d5dae97b6ec2b680b9f2f75b483" title="Get file information." alt="" coords="270,356,463,397"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a72b276ca60f268ce9f648a39df0d5eca" title="Remove entry." alt="" coords="545,181,733,223"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ae0e5f57f13f4f41934a7ee310dc4ef4c" title=" " alt="" coords="524,415,755,442"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a03bfaefead11ea43b31614841cfb12ff" title="Create file." alt="" coords="268,71,465,98"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a322bde9dfda6dbb287fc39cc8828d801" title=" " alt="" coords="16,71,199,98"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a3da2b2b19faebfbb10cffe698a648f96" title=" " alt="" coords="257,297,476,323"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#aac72f94554b8a89f49861a9d7d23a32a" title="Remove directory or file." alt="" coords="13,230,201,257"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ac5564e536d7325a94b66859b3f6e76a2" title=" " alt="" coords="5,334,209,361"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_f_i_l_e.html#a1f2af6cb988dae83ea50a97a7c1dc477" title=" " alt="" coords="32,385,183,427"/>
 </map>
 </div>
 
@@ -1825,15 +1896,16 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classopenfsl_1_1_f_a_t32_a879b401e9118b7ee603079d4c7ad294d_icgraph.png" border="0" usemap="#classopenfsl_1_1_f_a_t32_a879b401e9118b7ee603079d4c7ad294d_icgraph" alt=""/></div>
 <map name="classopenfsl_1_1_f_a_t32_a879b401e9118b7ee603079d4c7ad294d_icgraph" id="classopenfsl_1_1_f_a_t32_a879b401e9118b7ee603079d4c7ad294d_icgraph">
-<area shape="rect" title="Get Next Free Cluster." alt="" coords="968,151,1159,193"/>
+<area shape="rect" title="Get Next Free Cluster." alt="" coords="968,149,1159,190"/>
 <area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ad57d2efce5f6bb3f3266b52ec7262f05" title="Create directory." alt="" coords="238,5,431,32"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a03bfaefead11ea43b31614841cfb12ff" title="Create file." alt="" coords="236,155,433,181"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a4f075b67b497efc5f561b8e9ab849986" title=" " alt="" coords="708,122,920,163"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a9792c4764310d1037ac0633014bbe7c3" title=" " alt="" coords="708,239,920,281"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a322bde9dfda6dbb287fc39cc8828d801" title=" " alt="" coords="5,155,188,181"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a4474f7143bbd15c8cd6d30d527bf7a7e" title="Create entry." alt="" coords="481,57,660,98"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_f_i_l_e.html#aae800cf33c9931ec924676567121f0b3" title="Write file." alt="" coords="495,122,646,163"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a8c4fd9c81051e976e0557610b3ccee27" title=" " alt="" coords="239,57,431,98"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a03bfaefead11ea43b31614841cfb12ff" title="Create file." alt="" coords="236,180,433,207"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a4f075b67b497efc5f561b8e9ab849986" title=" " alt="" coords="708,119,920,161"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a9792c4764310d1037ac0633014bbe7c3" title=" " alt="" coords="708,237,920,278"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a322bde9dfda6dbb287fc39cc8828d801" title=" " alt="" coords="5,180,188,207"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a4474f7143bbd15c8cd6d30d527bf7a7e" title="Create entry." alt="" coords="481,54,660,95"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_f_i_l_e.html#aae800cf33c9931ec924676567121f0b3" title="Write file." alt="" coords="495,119,646,161"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a12296dd6f92142d705f0762b1bbdc2db" title=" " alt="" coords="247,60,422,87"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a8c4fd9c81051e976e0557610b3ccee27" title=" " alt="" coords="239,111,431,153"/>
 </map>
 </div>
 
@@ -1894,8 +1966,10 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classopenfsl_1_1_f_a_t32_a6a92358aeab835341528e27034619d3a_icgraph.png" border="0" usemap="#classopenfsl_1_1_f_a_t32_a6a92358aeab835341528e27034619d3a_icgraph" alt=""/></div>
 <map name="classopenfsl_1_1_f_a_t32_a6a92358aeab835341528e27034619d3a_icgraph" id="classopenfsl_1_1_f_a_t32_a6a92358aeab835341528e27034619d3a_icgraph">
-<area shape="rect" title="Insert cache." alt="" coords="247,5,421,47"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ad57d2efce5f6bb3f3266b52ec7262f05" title="Create directory." alt="" coords="5,13,199,39"/>
+<area shape="rect" title="Insert cache." alt="" coords="481,23,656,65"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ad57d2efce5f6bb3f3266b52ec7262f05" title="Create directory." alt="" coords="238,5,431,32"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a03bfaefead11ea43b31614841cfb12ff" title="Create file." alt="" coords="236,56,433,83"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a322bde9dfda6dbb287fc39cc8828d801" title=" " alt="" coords="5,56,188,83"/>
 </map>
 </div>
 
@@ -2055,14 +2129,16 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classopenfsl_1_1_f_a_t32_ad431a07239e2a1b663caf451cae14b08_icgraph.png" border="0" usemap="#classopenfsl_1_1_f_a_t32_ad431a07239e2a1b663caf451cae14b08_icgraph" alt=""/></div>
 <map name="classopenfsl_1_1_f_a_t32_ad431a07239e2a1b663caf451cae14b08_icgraph" id="classopenfsl_1_1_f_a_t32_ad431a07239e2a1b663caf451cae14b08_icgraph">
-<area shape="rect" title="List directory contents as path." alt="" coords="717,120,895,147"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a4474f7143bbd15c8cd6d30d527bf7a7e" title="Create entry." alt="" coords="486,47,665,89"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#aac72f94554b8a89f49861a9d7d23a32a" title="Remove directory or file." alt="" coords="241,176,429,203"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a72b276ca60f268ce9f648a39df0d5eca" title="Remove entry." alt="" coords="481,113,669,154"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ad57d2efce5f6bb3f3266b52ec7262f05" title="Create directory." alt="" coords="238,5,431,32"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a03bfaefead11ea43b31614841cfb12ff" title="Create file." alt="" coords="236,56,433,83"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a8c4fd9c81051e976e0557610b3ccee27" title=" " alt="" coords="239,109,431,150"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a322bde9dfda6dbb287fc39cc8828d801" title=" " alt="" coords="5,56,188,83"/>
+<area shape="rect" title="List directory contents as path." alt="" coords="717,200,895,227"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a4474f7143bbd15c8cd6d30d527bf7a7e" title="Create entry." alt="" coords="486,98,665,139"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#aac72f94554b8a89f49861a9d7d23a32a" title="Remove directory or file." alt="" coords="241,225,429,252"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a72b276ca60f268ce9f648a39df0d5eca" title="Remove entry." alt="" coords="481,163,669,205"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a3249452c19a26522e2b0bed6877ebb6f" title=" " alt="" coords="485,280,666,307"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ad57d2efce5f6bb3f3266b52ec7262f05" title="Create directory." alt="" coords="238,56,431,83"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a03bfaefead11ea43b31614841cfb12ff" title="Create file." alt="" coords="236,5,433,32"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a12296dd6f92142d705f0762b1bbdc2db" title=" " alt="" coords="247,173,422,200"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a8c4fd9c81051e976e0557610b3ccee27" title=" " alt="" coords="239,107,431,149"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a322bde9dfda6dbb287fc39cc8828d801" title=" " alt="" coords="5,5,188,32"/>
 </map>
 </div>
 
@@ -2125,47 +2201,47 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classopenfsl_1_1_f_a_t32_ad57d2efce5f6bb3f3266b52ec7262f05_cgraph.png" border="0" usemap="#classopenfsl_1_1_f_a_t32_ad57d2efce5f6bb3f3266b52ec7262f05_cgraph" alt=""/></div>
 <map name="classopenfsl_1_1_f_a_t32_ad57d2efce5f6bb3f3266b52ec7262f05_cgraph" id="classopenfsl_1_1_f_a_t32_ad57d2efce5f6bb3f3266b52ec7262f05_cgraph">
-<area shape="rect" title="Create directory." alt="" coords="5,850,199,876"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a7a3ec9435f37a905a9e41358c94a98aa" title="Change directory." alt="" coords="546,215,717,242"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a97fcec9162808ca5ab0ea5af049c46b1" title=" " alt="" coords="793,25,979,66"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a4474f7143bbd15c8cd6d30d527bf7a7e" title="Create entry." alt="" coords="272,534,451,576"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a879b401e9118b7ee603079d4c7ad294d" title="Get Next Free Cluster." alt="" coords="1309,1065,1500,1106"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a6a92358aeab835341528e27034619d3a" title="Insert cache." alt="" coords="274,872,449,913"/>
-<area shape="rect" href="namespaceopenfsl.html#a2c9f28e2ca425950c3cdf70d71847049" title=" " alt="" coords="264,938,459,964"/>
-<area shape="rect" href="namespaceopenfsl.html#a4a4e8692613060f54fd0b4f035db8df3" title=" " alt="" coords="280,988,443,1015"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a9ae40bd9e708e6c5a4075a5d9efa3008" title=" " alt="" coords="247,1039,476,1066"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a3ed1aabf1c80fca2be4ab1463cffa460" title=" " alt="" coords="793,208,979,249"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#af885a8d4ff467f6fff87876ebb526805" title="Get cache value." alt="" coords="787,142,985,184"/>
-<area shape="rect" href="namespaceopenfsl.html#af5d84bfd77cfffcf6eca548c58646865" title="String tokenizer." alt="" coords="1055,14,1229,40"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a7c50adb782f3181c23412bf2cb2e3b9c" title="UCS&#45;2 string to UTF&#45;8 string." alt="" coords="1042,131,1242,158"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a93f6e6cfc1dd779cd1fb11fece3587e2" title=" " alt="" coords="1035,182,1249,208"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a9899388cca12b6641d797a67f2bbbf44" title=" " alt="" coords="1033,232,1251,259"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#ac2e7fe5cbcc1a42946d5c341e0723be2" title=" " alt="" coords="1036,284,1248,325"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a047e0ac2afa1b920d216a17320ee62a5" title=" " alt="" coords="1036,65,1248,106"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a36669702f58485e2d745e616736d630b" title=" " alt="" coords="1299,174,1511,216"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a68ad9ea509479c36026980f35c3648f0" title=" " alt="" coords="1819,391,1989,418"/>
-<area shape="rect" href="classopenfsl_1_1_sector.html#af9128b9d68ff6b96d70336a6e51d23e4" title="Data buffer getter." alt="" coords="1575,174,1754,200"/>
-<area shape="rect" href="classopenfsl_1_1_block_device.html#a47f31aa57ca6e82567148f7875a81162" title=" " alt="" coords="1585,342,1744,384"/>
-<area shape="rect" href="classopenfsl_1_1_file_system.html#a665ece3593447d10c8d56d1605f05784" title=" " alt="" coords="1589,426,1740,468"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a68c4914e5a1eeb33c44b0e31e9a5b4ff" title=" " alt="" coords="1559,514,1771,556"/>
-<area shape="rect" href="classopenfsl_1_1_file_system.html#ac66d2dd1349a54c08d816e466042cf5b" title=" " alt="" coords="1589,645,1740,686"/>
-<area shape="rect" href="classopenfsl_1_1_block_device.html#abb336a5c13d81a7587ad19da73097f43" title=" " alt="" coords="1585,225,1744,266"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a0e9eedc9ddbc97f049c039f608f57089" title="Checksum." alt="" coords="524,516,739,543"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a550cbd04ddbd057c5938cea9780b2bfb" title=" " alt="" coords="524,567,739,594"/>
-<area shape="rect" href="createentry_8cpp.html#ad707323f8f1c2e0a4721281846d08f2b" title=" " alt="" coords="570,618,693,644"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ad431a07239e2a1b663caf451cae14b08" title="List directory contents as path." alt="" coords="543,668,720,695"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a1106ff51e59165f4712520051890ec51" title=" " alt="" coords="524,719,739,746"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a7faa067fdc4ed800aa0a5dcd0d9572e4" title="UTF&#45;8 string to UCS&#45;2 string." alt="" coords="530,770,733,796"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a4f075b67b497efc5f561b8e9ab849986" title=" " alt="" coords="1036,729,1248,770"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a4848493e0f5d9c52ea1f101d2ded5b81" title=" " alt="" coords="1299,612,1511,653"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a36b307a4e0888e00daf9c0d9a4854f35" title=" " alt="" coords="1036,349,1248,390"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a28a245a89387aec1673edc510a485279" title="Convert FAT area index to LBA." alt="" coords="1311,444,1498,485"/>
-<area shape="rect" href="classopenfsl_1_1_container.html#ad0fa530d91da46276e19b08f9e468b62" title="Data buffer getter." alt="" coords="1594,1010,1735,1052"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#af802839a7004450da93b8dbcd6f5e222" title="Update FSINFO." alt="" coords="1313,729,1496,770"/>
-<area shape="rect" href="classopenfsl_1_1_block_device.html#a6f344509ac727d84dfaa6aafa516cde4" title=" " alt="" coords="1585,729,1744,770"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#adf6fb22c5ab89773c0c6e885cf174c41" title=" " alt="" coords="1307,846,1502,872"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a2b967692b67583b3ac9ef80350eec46e" title=" " alt="" coords="1299,948,1511,989"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#ad05834b7f84560d96c449347c6cfd4f7" title=" " alt="" coords="1559,945,1771,986"/>
+<area shape="rect" title="Create directory." alt="" coords="5,871,199,897"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a7a3ec9435f37a905a9e41358c94a98aa" title="Change directory." alt="" coords="546,152,717,179"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a97fcec9162808ca5ab0ea5af049c46b1" title=" " alt="" coords="793,27,979,69"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a4474f7143bbd15c8cd6d30d527bf7a7e" title="Create entry." alt="" coords="272,522,451,563"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a879b401e9118b7ee603079d4c7ad294d" title="Get Next Free Cluster." alt="" coords="1309,1215,1500,1257"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a6a92358aeab835341528e27034619d3a" title="Insert cache." alt="" coords="274,893,449,934"/>
+<area shape="rect" href="namespaceopenfsl.html#a2c9f28e2ca425950c3cdf70d71847049" title=" " alt="" coords="264,959,459,985"/>
+<area shape="rect" href="namespaceopenfsl.html#a4a4e8692613060f54fd0b4f035db8df3" title=" " alt="" coords="280,1009,443,1036"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a9ae40bd9e708e6c5a4075a5d9efa3008" title=" " alt="" coords="247,1060,476,1087"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a3ed1aabf1c80fca2be4ab1463cffa460" title=" " alt="" coords="793,145,979,186"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#af885a8d4ff467f6fff87876ebb526805" title="Get cache value." alt="" coords="787,210,985,251"/>
+<area shape="rect" href="namespaceopenfsl.html#af5d84bfd77cfffcf6eca548c58646865" title="String tokenizer." alt="" coords="1055,5,1229,32"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a7c50adb782f3181c23412bf2cb2e3b9c" title="UCS&#45;2 string to UTF&#45;8 string." alt="" coords="1042,157,1242,184"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a93f6e6cfc1dd779cd1fb11fece3587e2" title=" " alt="" coords="1035,56,1249,83"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a9899388cca12b6641d797a67f2bbbf44" title=" " alt="" coords="1033,107,1251,133"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#ac2e7fe5cbcc1a42946d5c341e0723be2" title=" " alt="" coords="1036,209,1248,250"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a047e0ac2afa1b920d216a17320ee62a5" title=" " alt="" coords="1036,274,1248,315"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a36669702f58485e2d745e616736d630b" title=" " alt="" coords="1299,225,1511,266"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a68ad9ea509479c36026980f35c3648f0" title=" " alt="" coords="1819,589,1989,616"/>
+<area shape="rect" href="classopenfsl_1_1_sector.html#af9128b9d68ff6b96d70336a6e51d23e4" title="Data buffer getter." alt="" coords="1575,144,1754,171"/>
+<area shape="rect" href="classopenfsl_1_1_block_device.html#a47f31aa57ca6e82567148f7875a81162" title=" " alt="" coords="1585,338,1744,379"/>
+<area shape="rect" href="classopenfsl_1_1_file_system.html#a665ece3593447d10c8d56d1605f05784" title=" " alt="" coords="1589,469,1740,510"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a68c4914e5a1eeb33c44b0e31e9a5b4ff" title=" " alt="" coords="1559,622,1771,663"/>
+<area shape="rect" href="classopenfsl_1_1_file_system.html#ac66d2dd1349a54c08d816e466042cf5b" title=" " alt="" coords="1589,782,1740,823"/>
+<area shape="rect" href="classopenfsl_1_1_block_device.html#abb336a5c13d81a7587ad19da73097f43" title=" " alt="" coords="1585,221,1744,262"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a0e9eedc9ddbc97f049c039f608f57089" title="Checksum." alt="" coords="524,631,739,657"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a550cbd04ddbd057c5938cea9780b2bfb" title=" " alt="" coords="524,681,739,708"/>
+<area shape="rect" href="createentry_8cpp.html#ad707323f8f1c2e0a4721281846d08f2b" title=" " alt="" coords="570,732,693,759"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ad431a07239e2a1b663caf451cae14b08" title="List directory contents as path." alt="" coords="543,377,720,404"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a1106ff51e59165f4712520051890ec51" title=" " alt="" coords="524,428,739,455"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a7faa067fdc4ed800aa0a5dcd0d9572e4" title="UTF&#45;8 string to UCS&#45;2 string." alt="" coords="530,479,733,505"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a4f075b67b497efc5f561b8e9ab849986" title=" " alt="" coords="1036,775,1248,817"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a4848493e0f5d9c52ea1f101d2ded5b81" title=" " alt="" coords="1299,713,1511,754"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a36b307a4e0888e00daf9c0d9a4854f35" title=" " alt="" coords="1036,507,1248,549"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a28a245a89387aec1673edc510a485279" title="Convert FAT area index to LBA." alt="" coords="1311,443,1498,485"/>
+<area shape="rect" href="classopenfsl_1_1_container.html#ad0fa530d91da46276e19b08f9e468b62" title="Data buffer getter." alt="" coords="1594,1165,1735,1206"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#af802839a7004450da93b8dbcd6f5e222" title="Update FSINFO." alt="" coords="1313,946,1496,987"/>
+<area shape="rect" href="classopenfsl_1_1_block_device.html#a6f344509ac727d84dfaa6aafa516cde4" title=" " alt="" coords="1585,946,1744,987"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#adf6fb22c5ab89773c0c6e885cf174c41" title=" " alt="" coords="1307,779,1502,805"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a2b967692b67583b3ac9ef80350eec46e" title=" " alt="" coords="1299,881,1511,922"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#ad05834b7f84560d96c449347c6cfd4f7" title=" " alt="" coords="1559,881,1771,922"/>
 </map>
 </div>
 
@@ -2227,46 +2303,47 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classopenfsl_1_1_f_a_t32_a03bfaefead11ea43b31614841cfb12ff_cgraph.png" border="0" usemap="#classopenfsl_1_1_f_a_t32_a03bfaefead11ea43b31614841cfb12ff_cgraph" alt=""/></div>
 <map name="classopenfsl_1_1_f_a_t32_a03bfaefead11ea43b31614841cfb12ff_cgraph" id="classopenfsl_1_1_f_a_t32_a03bfaefead11ea43b31614841cfb12ff_cgraph">
-<area shape="rect" title="Create file." alt="" coords="5,1161,203,1188"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a4474f7143bbd15c8cd6d30d527bf7a7e" title="Create entry." alt="" coords="276,799,455,841"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#ac2e7fe5cbcc1a42946d5c341e0723be2" title=" " alt="" coords="1040,705,1252,746"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a879b401e9118b7ee603079d4c7ad294d" title="Get Next Free Cluster." alt="" coords="1313,1178,1504,1219"/>
-<area shape="rect" href="namespaceopenfsl.html#a2c9f28e2ca425950c3cdf70d71847049" title=" " alt="" coords="268,1187,463,1213"/>
-<area shape="rect" href="namespaceopenfsl.html#a4a4e8692613060f54fd0b4f035db8df3" title=" " alt="" coords="284,1237,447,1264"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a9ae40bd9e708e6c5a4075a5d9efa3008" title=" " alt="" coords="251,1288,480,1315"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a7a3ec9435f37a905a9e41358c94a98aa" title="Change directory." alt="" coords="550,568,721,595"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a0e9eedc9ddbc97f049c039f608f57089" title="Checksum." alt="" coords="528,731,743,757"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a550cbd04ddbd057c5938cea9780b2bfb" title=" " alt="" coords="528,781,743,808"/>
-<area shape="rect" href="createentry_8cpp.html#ad707323f8f1c2e0a4721281846d08f2b" title=" " alt="" coords="574,832,697,859"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ad431a07239e2a1b663caf451cae14b08" title="List directory contents as path." alt="" coords="547,883,724,909"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a1106ff51e59165f4712520051890ec51" title=" " alt="" coords="528,933,743,960"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a7faa067fdc4ed800aa0a5dcd0d9572e4" title="UTF&#45;8 string to UCS&#45;2 string." alt="" coords="534,984,737,1011"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a4f075b67b497efc5f561b8e9ab849986" title=" " alt="" coords="1040,835,1252,877"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a4848493e0f5d9c52ea1f101d2ded5b81" title=" " alt="" coords="1303,675,1515,717"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a36b307a4e0888e00daf9c0d9a4854f35" title=" " alt="" coords="1040,347,1252,389"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a3ed1aabf1c80fca2be4ab1463cffa460" title=" " alt="" coords="797,465,983,506"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#af885a8d4ff467f6fff87876ebb526805" title="Get cache value." alt="" coords="791,530,989,571"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a97fcec9162808ca5ab0ea5af049c46b1" title=" " alt="" coords="797,595,983,637"/>
-<area shape="rect" href="namespaceopenfsl.html#af5d84bfd77cfffcf6eca548c58646865" title="String tokenizer." alt="" coords="1059,635,1233,661"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a7c50adb782f3181c23412bf2cb2e3b9c" title="UCS&#45;2 string to UTF&#45;8 string." alt="" coords="1046,464,1246,491"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a93f6e6cfc1dd779cd1fb11fece3587e2" title=" " alt="" coords="1039,515,1253,541"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a9899388cca12b6641d797a67f2bbbf44" title=" " alt="" coords="1037,565,1255,592"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a047e0ac2afa1b920d216a17320ee62a5" title=" " alt="" coords="1040,209,1252,250"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a36669702f58485e2d745e616736d630b" title=" " alt="" coords="1303,238,1515,279"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a68ad9ea509479c36026980f35c3648f0" title=" " alt="" coords="1823,423,1993,449"/>
-<area shape="rect" href="classopenfsl_1_1_sector.html#af9128b9d68ff6b96d70336a6e51d23e4" title="Data buffer getter." alt="" coords="1579,85,1758,112"/>
-<area shape="rect" href="classopenfsl_1_1_block_device.html#a47f31aa57ca6e82567148f7875a81162" title=" " alt="" coords="1589,457,1748,498"/>
-<area shape="rect" href="classopenfsl_1_1_file_system.html#a665ece3593447d10c8d56d1605f05784" title=" " alt="" coords="1593,382,1744,423"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a68c4914e5a1eeb33c44b0e31e9a5b4ff" title=" " alt="" coords="1563,534,1775,575"/>
-<area shape="rect" href="classopenfsl_1_1_file_system.html#ac66d2dd1349a54c08d816e466042cf5b" title=" " alt="" coords="1593,705,1744,746"/>
-<area shape="rect" href="classopenfsl_1_1_block_device.html#abb336a5c13d81a7587ad19da73097f43" title=" " alt="" coords="1589,238,1748,279"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a28a245a89387aec1673edc510a485279" title="Convert FAT area index to LBA." alt="" coords="1315,457,1502,498"/>
-<area shape="rect" href="classopenfsl_1_1_container.html#ad0fa530d91da46276e19b08f9e468b62" title="Data buffer getter." alt="" coords="1598,1050,1739,1091"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#af802839a7004450da93b8dbcd6f5e222" title="Update FSINFO." alt="" coords="1317,894,1500,935"/>
-<area shape="rect" href="classopenfsl_1_1_block_device.html#a6f344509ac727d84dfaa6aafa516cde4" title=" " alt="" coords="1589,894,1748,935"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#adf6fb22c5ab89773c0c6e885cf174c41" title=" " alt="" coords="1311,843,1506,869"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a2b967692b67583b3ac9ef80350eec46e" title=" " alt="" coords="1303,1113,1515,1154"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#ad05834b7f84560d96c449347c6cfd4f7" title=" " alt="" coords="1563,1115,1775,1157"/>
+<area shape="rect" title="Create file." alt="" coords="5,1093,203,1119"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a4474f7143bbd15c8cd6d30d527bf7a7e" title="Create entry." alt="" coords="276,745,455,787"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#ac2e7fe5cbcc1a42946d5c341e0723be2" title=" " alt="" coords="1040,695,1252,736"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a97fcec9162808ca5ab0ea5af049c46b1" title=" " alt="" coords="797,1115,983,1156"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a879b401e9118b7ee603079d4c7ad294d" title="Get Next Free Cluster." alt="" coords="1313,5,1504,47"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a6a92358aeab835341528e27034619d3a" title="Insert cache." alt="" coords="278,1115,453,1156"/>
+<area shape="rect" href="namespaceopenfsl.html#a2c9f28e2ca425950c3cdf70d71847049" title=" " alt="" coords="268,1181,463,1207"/>
+<area shape="rect" href="namespaceopenfsl.html#a4a4e8692613060f54fd0b4f035db8df3" title=" " alt="" coords="284,1231,447,1258"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a9ae40bd9e708e6c5a4075a5d9efa3008" title=" " alt="" coords="251,1282,480,1309"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a7a3ec9435f37a905a9e41358c94a98aa" title="Change directory." alt="" coords="550,955,721,982"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a047e0ac2afa1b920d216a17320ee62a5" title=" " alt="" coords="1040,1005,1252,1047"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a0e9eedc9ddbc97f049c039f608f57089" title="Checksum." alt="" coords="528,550,743,577"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a550cbd04ddbd057c5938cea9780b2bfb" title=" " alt="" coords="528,601,743,627"/>
+<area shape="rect" href="createentry_8cpp.html#ad707323f8f1c2e0a4721281846d08f2b" title=" " alt="" coords="574,651,697,678"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ad431a07239e2a1b663caf451cae14b08" title="List directory contents as path." alt="" coords="547,753,724,779"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a1106ff51e59165f4712520051890ec51" title=" " alt="" coords="528,803,743,830"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a7faa067fdc4ed800aa0a5dcd0d9572e4" title="UTF&#45;8 string to UCS&#45;2 string." alt="" coords="534,905,737,931"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a4f075b67b497efc5f561b8e9ab849986" title=" " alt="" coords="1040,391,1252,432"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a4848493e0f5d9c52ea1f101d2ded5b81" title=" " alt="" coords="1303,509,1515,551"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a36b307a4e0888e00daf9c0d9a4854f35" title=" " alt="" coords="1040,787,1252,828"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a3ed1aabf1c80fca2be4ab1463cffa460" title=" " alt="" coords="797,881,983,923"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#af885a8d4ff467f6fff87876ebb526805" title="Get cache value." alt="" coords="791,947,989,988"/>
+<area shape="rect" href="namespaceopenfsl.html#af5d84bfd77cfffcf6eca548c58646865" title="String tokenizer." alt="" coords="1059,1097,1233,1123"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a7c50adb782f3181c23412bf2cb2e3b9c" title="UCS&#45;2 string to UTF&#45;8 string." alt="" coords="1046,954,1246,981"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a93f6e6cfc1dd779cd1fb11fece3587e2" title=" " alt="" coords="1039,853,1253,879"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a9899388cca12b6641d797a67f2bbbf44" title=" " alt="" coords="1037,903,1255,930"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a36669702f58485e2d745e616736d630b" title=" " alt="" coords="1303,947,1515,988"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a68ad9ea509479c36026980f35c3648f0" title=" " alt="" coords="1823,819,1993,846"/>
+<area shape="rect" href="classopenfsl_1_1_sector.html#af9128b9d68ff6b96d70336a6e51d23e4" title="Data buffer getter." alt="" coords="1579,1114,1758,1141"/>
+<area shape="rect" href="classopenfsl_1_1_block_device.html#a47f31aa57ca6e82567148f7875a81162" title=" " alt="" coords="1589,867,1748,908"/>
+<area shape="rect" href="classopenfsl_1_1_file_system.html#a665ece3593447d10c8d56d1605f05784" title=" " alt="" coords="1593,763,1744,804"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a68c4914e5a1eeb33c44b0e31e9a5b4ff" title=" " alt="" coords="1563,672,1775,713"/>
+<area shape="rect" href="classopenfsl_1_1_file_system.html#ac66d2dd1349a54c08d816e466042cf5b" title=" " alt="" coords="1593,484,1744,525"/>
+<area shape="rect" href="classopenfsl_1_1_block_device.html#abb336a5c13d81a7587ad19da73097f43" title=" " alt="" coords="1589,984,1748,1025"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a28a245a89387aec1673edc510a485279" title="Convert FAT area index to LBA." alt="" coords="1315,677,1502,719"/>
+<area shape="rect" href="classopenfsl_1_1_container.html#ad0fa530d91da46276e19b08f9e468b62" title="Data buffer getter." alt="" coords="1598,108,1739,149"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#af802839a7004450da93b8dbcd6f5e222" title="Update FSINFO." alt="" coords="1317,392,1500,433"/>
+<area shape="rect" href="classopenfsl_1_1_block_device.html#a6f344509ac727d84dfaa6aafa516cde4" title=" " alt="" coords="1589,392,1748,433"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#adf6fb22c5ab89773c0c6e885cf174c41" title=" " alt="" coords="1311,71,1506,98"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a2b967692b67583b3ac9ef80350eec46e" title=" " alt="" coords="1303,173,1515,215"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#ad05834b7f84560d96c449347c6cfd4f7" title=" " alt="" coords="1563,173,1775,215"/>
 </map>
 </div>
 <div class="dynheader">
@@ -2276,6 +2353,101 @@ Here is the caller graph for this function:</div>
 <map name="classopenfsl_1_1_f_a_t32_a03bfaefead11ea43b31614841cfb12ff_icgraph" id="classopenfsl_1_1_f_a_t32_a03bfaefead11ea43b31614841cfb12ff_icgraph">
 <area shape="rect" title="Create file." alt="" coords="236,5,433,32"/>
 <area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a322bde9dfda6dbb287fc39cc8828d801" title=" " alt="" coords="5,5,188,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a12296dd6f92142d705f0762b1bbdc2db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12296dd6f92142d705f0762b1bbdc2db">&#9670;&nbsp;</a></span>__move()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="error_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a> openfsl::FAT32::__move </td>
+          <td>(</td>
+          <td class="paramtype">const std::string&#160;</td>
+          <td class="paramname"><em>fromPath</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string&#160;</td>
+          <td class="paramname"><em>fromName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string&#160;</td>
+          <td class="paramname"><em>toPath</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string&#160;</td>
+          <td class="paramname"><em>toName</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="move_8cpp_source.html#l00012">12</a> of file <a class="el" href="move_8cpp_source.html">move.cpp</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classopenfsl_1_1_f_a_t32_a12296dd6f92142d705f0762b1bbdc2db_cgraph.png" border="0" usemap="#classopenfsl_1_1_f_a_t32_a12296dd6f92142d705f0762b1bbdc2db_cgraph" alt=""/></div>
+<map name="classopenfsl_1_1_f_a_t32_a12296dd6f92142d705f0762b1bbdc2db_cgraph" id="classopenfsl_1_1_f_a_t32_a12296dd6f92142d705f0762b1bbdc2db_cgraph">
+<area shape="rect" title=" " alt="" coords="5,244,180,271"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a7a3ec9435f37a905a9e41358c94a98aa" title="Change directory." alt="" coords="486,215,657,241"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a3ed1aabf1c80fca2be4ab1463cffa460" title=" " alt="" coords="733,77,919,118"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a4474f7143bbd15c8cd6d30d527bf7a7e" title="Create entry." alt="" coords="233,570,411,611"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a72b276ca60f268ce9f648a39df0d5eca" title="Remove entry." alt="" coords="228,266,416,307"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#af885a8d4ff467f6fff87876ebb526805" title="Get cache value." alt="" coords="727,142,925,183"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a97fcec9162808ca5ab0ea5af049c46b1" title=" " alt="" coords="733,207,919,249"/>
+<area shape="rect" href="namespaceopenfsl.html#af5d84bfd77cfffcf6eca548c58646865" title="String tokenizer." alt="" coords="995,224,1169,251"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a7c50adb782f3181c23412bf2cb2e3b9c" title="UCS&#45;2 string to UTF&#45;8 string." alt="" coords="982,107,1182,133"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a93f6e6cfc1dd779cd1fb11fece3587e2" title=" " alt="" coords="975,5,1189,32"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a9899388cca12b6641d797a67f2bbbf44" title=" " alt="" coords="973,56,1191,83"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#ac2e7fe5cbcc1a42946d5c341e0723be2" title=" " alt="" coords="976,158,1188,199"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a047e0ac2afa1b920d216a17320ee62a5" title=" " alt="" coords="976,275,1188,317"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a36669702f58485e2d745e616736d630b" title=" " alt="" coords="1239,279,1451,321"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a68ad9ea509479c36026980f35c3648f0" title=" " alt="" coords="1759,431,1929,457"/>
+<area shape="rect" href="classopenfsl_1_1_sector.html#af9128b9d68ff6b96d70336a6e51d23e4" title="Data buffer getter." alt="" coords="1515,199,1694,225"/>
+<area shape="rect" href="classopenfsl_1_1_block_device.html#a47f31aa57ca6e82567148f7875a81162" title=" " alt="" coords="1525,393,1684,434"/>
+<area shape="rect" href="classopenfsl_1_1_file_system.html#a665ece3593447d10c8d56d1605f05784" title=" " alt="" coords="1529,510,1680,551"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a68c4914e5a1eeb33c44b0e31e9a5b4ff" title=" " alt="" coords="1499,587,1711,629"/>
+<area shape="rect" href="classopenfsl_1_1_file_system.html#ac66d2dd1349a54c08d816e466042cf5b" title=" " alt="" coords="1529,965,1680,1006"/>
+<area shape="rect" href="classopenfsl_1_1_block_device.html#abb336a5c13d81a7587ad19da73097f43" title=" " alt="" coords="1525,275,1684,317"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a0e9eedc9ddbc97f049c039f608f57089" title="Checksum." alt="" coords="464,831,679,857"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a550cbd04ddbd057c5938cea9780b2bfb" title=" " alt="" coords="464,881,679,908"/>
+<area shape="rect" href="createentry_8cpp.html#ad707323f8f1c2e0a4721281846d08f2b" title=" " alt="" coords="510,577,633,604"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ad431a07239e2a1b663caf451cae14b08" title="List directory contents as path." alt="" coords="483,375,660,401"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a1106ff51e59165f4712520051890ec51" title=" " alt="" coords="464,628,679,655"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a7faa067fdc4ed800aa0a5dcd0d9572e4" title="UTF&#45;8 string to UCS&#45;2 string." alt="" coords="470,679,673,705"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a4f075b67b497efc5f561b8e9ab849986" title=" " alt="" coords="976,877,1188,918"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a4848493e0f5d9c52ea1f101d2ded5b81" title=" " alt="" coords="1239,717,1451,758"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a36b307a4e0888e00daf9c0d9a4854f35" title=" " alt="" coords="976,389,1188,430"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a28a245a89387aec1673edc510a485279" title="Convert FAT area index to LBA." alt="" coords="1251,498,1438,539"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a879b401e9118b7ee603079d4c7ad294d" title="Get Next Free Cluster." alt="" coords="1249,935,1440,977"/>
+<area shape="rect" href="classopenfsl_1_1_container.html#ad0fa530d91da46276e19b08f9e468b62" title="Data buffer getter." alt="" coords="1534,877,1675,918"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#af802839a7004450da93b8dbcd6f5e222" title="Update FSINFO." alt="" coords="1253,1053,1436,1094"/>
+<area shape="rect" href="classopenfsl_1_1_block_device.html#a6f344509ac727d84dfaa6aafa516cde4" title=" " alt="" coords="1525,1053,1684,1094"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#adf6fb22c5ab89773c0c6e885cf174c41" title=" " alt="" coords="1247,783,1442,809"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a2b967692b67583b3ac9ef80350eec46e" title=" " alt="" coords="1239,1170,1451,1211"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#ad05834b7f84560d96c449347c6cfd4f7" title=" " alt="" coords="1499,1170,1711,1211"/>
 </map>
 </div>
 
@@ -2457,9 +2629,175 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classopenfsl_1_1_f_a_t32_a72b276ca60f268ce9f648a39df0d5eca_icgraph.png" border="0" usemap="#classopenfsl_1_1_f_a_t32_a72b276ca60f268ce9f648a39df0d5eca_icgraph" alt=""/></div>
 <map name="classopenfsl_1_1_f_a_t32_a72b276ca60f268ce9f648a39df0d5eca_icgraph" id="classopenfsl_1_1_f_a_t32_a72b276ca60f268ce9f648a39df0d5eca_icgraph">
-<area shape="rect" title="Remove entry." alt="" coords="245,27,433,69"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#aac72f94554b8a89f49861a9d7d23a32a" title="Remove directory or file." alt="" coords="7,5,195,32"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a8c4fd9c81051e976e0557610b3ccee27" title=" " alt="" coords="5,57,197,98"/>
+<area shape="rect" title="Remove entry." alt="" coords="245,49,433,90"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a12296dd6f92142d705f0762b1bbdc2db" title=" " alt="" coords="14,5,189,32"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#aac72f94554b8a89f49861a9d7d23a32a" title="Remove directory or file." alt="" coords="7,56,195,83"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a8c4fd9c81051e976e0557610b3ccee27" title=" " alt="" coords="5,107,197,149"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a036d4922b5cdf1d1a60aaf44e9b031df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a036d4922b5cdf1d1a60aaf44e9b031df">&#9670;&nbsp;</a></span>__search() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="error_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a> openfsl::FAT32::__search </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="structopenfsl_1_1_f_a_t32_1_1_file_info.html">FileInfo</a> &gt; *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classopenfsl_1_1_f_a_t32.html#abc3a9899a34a113a605666126791a40d">cluster_t</a>&#160;</td>
+          <td class="paramname"><em>cluster</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string&#160;</td>
+          <td class="paramname"><em>regex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classopenfsl_1_1_f_a_t32.html#a1eee0ba4714aec27fd8eefe9a17dfb4b">FileAttribute</a>&#160;</td>
+          <td class="paramname"><em>attr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="search_8cpp_source.html#l00048">48</a> of file <a class="el" href="search_8cpp_source.html">search.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a813903f67c87bf899d356f3f69bbb909"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a813903f67c87bf899d356f3f69bbb909">&#9670;&nbsp;</a></span>__search() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="error_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a> openfsl::FAT32::__search </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="structopenfsl_1_1_f_a_t32_1_1_file_info.html">FileInfo</a> &gt; *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string&#160;</td>
+          <td class="paramname"><em>regex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classopenfsl_1_1_f_a_t32.html#a1eee0ba4714aec27fd8eefe9a17dfb4b">FileAttribute</a>&#160;</td>
+          <td class="paramname"><em>attr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="search_8cpp_source.html#l00042">42</a> of file <a class="el" href="search_8cpp_source.html">search.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a3249452c19a26522e2b0bed6877ebb6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3249452c19a26522e2b0bed6877ebb6f">&#9670;&nbsp;</a></span>__search() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="error_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a> openfsl::FAT32::__search </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; std::pair&lt; std::string, <a class="el" href="structopenfsl_1_1_f_a_t32_1_1_file_info.html">FileInfo</a> &gt;&gt; *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string&#160;</td>
+          <td class="paramname"><em>regex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classopenfsl_1_1_f_a_t32.html#a1eee0ba4714aec27fd8eefe9a17dfb4b">FileAttribute</a>&#160;</td>
+          <td class="paramname"><em>attr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classbool.html">bool</a>&#160;</td>
+          <td class="paramname"><em>recurse</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="search_8cpp_source.html#l00014">14</a> of file <a class="el" href="search_8cpp_source.html">search.cpp</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classopenfsl_1_1_f_a_t32_a3249452c19a26522e2b0bed6877ebb6f_cgraph.png" border="0" usemap="#classopenfsl_1_1_f_a_t32_a3249452c19a26522e2b0bed6877ebb6f_cgraph" alt=""/></div>
+<map name="classopenfsl_1_1_f_a_t32_a3249452c19a26522e2b0bed6877ebb6f_cgraph" id="classopenfsl_1_1_f_a_t32_a3249452c19a26522e2b0bed6877ebb6f_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,187,32"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ad431a07239e2a1b663caf451cae14b08" title="List directory contents as path." alt="" coords="235,5,412,32"/>
 </map>
 </div>
 
@@ -2558,44 +2896,44 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classopenfsl_1_1_f_a_t32_a8c4fd9c81051e976e0557610b3ccee27_cgraph.png" border="0" usemap="#classopenfsl_1_1_f_a_t32_a8c4fd9c81051e976e0557610b3ccee27_cgraph" alt=""/></div>
 <map name="classopenfsl_1_1_f_a_t32_a8c4fd9c81051e976e0557610b3ccee27_cgraph" id="classopenfsl_1_1_f_a_t32_a8c4fd9c81051e976e0557610b3ccee27_cgraph">
-<area shape="rect" title=" " alt="" coords="5,836,197,878"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a7a3ec9435f37a905a9e41358c94a98aa" title="Change directory." alt="" coords="503,898,674,925"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a4474f7143bbd15c8cd6d30d527bf7a7e" title="Create entry." alt="" coords="250,612,429,654"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a72b276ca60f268ce9f648a39df0d5eca" title="Remove entry." alt="" coords="245,836,433,878"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a3ed1aabf1c80fca2be4ab1463cffa460" title=" " alt="" coords="750,708,937,750"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#af885a8d4ff467f6fff87876ebb526805" title="Get cache value." alt="" coords="744,826,943,867"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a97fcec9162808ca5ab0ea5af049c46b1" title=" " alt="" coords="750,891,937,932"/>
-<area shape="rect" href="namespaceopenfsl.html#af5d84bfd77cfffcf6eca548c58646865" title="String tokenizer." alt="" coords="1013,1008,1186,1034"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a7c50adb782f3181c23412bf2cb2e3b9c" title="UCS&#45;2 string to UTF&#45;8 string." alt="" coords="999,716,1199,742"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a93f6e6cfc1dd779cd1fb11fece3587e2" title=" " alt="" coords="992,766,1207,793"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a9899388cca12b6641d797a67f2bbbf44" title=" " alt="" coords="991,817,1208,844"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#ac2e7fe5cbcc1a42946d5c341e0723be2" title=" " alt="" coords="993,650,1205,691"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a047e0ac2afa1b920d216a17320ee62a5" title=" " alt="" coords="993,942,1205,983"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a36669702f58485e2d745e616736d630b" title=" " alt="" coords="1256,942,1468,983"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a68ad9ea509479c36026980f35c3648f0" title=" " alt="" coords="1776,776,1947,802"/>
-<area shape="rect" href="classopenfsl_1_1_sector.html#af9128b9d68ff6b96d70336a6e51d23e4" title="Data buffer getter." alt="" coords="1533,1084,1711,1110"/>
-<area shape="rect" href="classopenfsl_1_1_block_device.html#a47f31aa57ca6e82567148f7875a81162" title=" " alt="" coords="1543,824,1701,866"/>
-<area shape="rect" href="classopenfsl_1_1_file_system.html#a665ece3593447d10c8d56d1605f05784" title=" " alt="" coords="1547,724,1697,766"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a68c4914e5a1eeb33c44b0e31e9a5b4ff" title=" " alt="" coords="1516,652,1728,694"/>
-<area shape="rect" href="classopenfsl_1_1_file_system.html#ac66d2dd1349a54c08d816e466042cf5b" title=" " alt="" coords="1547,487,1697,528"/>
-<area shape="rect" href="classopenfsl_1_1_block_device.html#abb336a5c13d81a7587ad19da73097f43" title=" " alt="" coords="1543,942,1701,983"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a0e9eedc9ddbc97f049c039f608f57089" title="Checksum." alt="" coords="481,696,696,722"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a550cbd04ddbd057c5938cea9780b2bfb" title=" " alt="" coords="481,341,696,368"/>
-<area shape="rect" href="createentry_8cpp.html#ad707323f8f1c2e0a4721281846d08f2b" title=" " alt="" coords="527,392,650,418"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ad431a07239e2a1b663caf451cae14b08" title="List directory contents as path." alt="" coords="500,797,677,824"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a1106ff51e59165f4712520051890ec51" title=" " alt="" coords="481,594,696,621"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a7faa067fdc4ed800aa0a5dcd0d9572e4" title="UTF&#45;8 string to UCS&#45;2 string." alt="" coords="487,645,690,672"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a4f075b67b497efc5f561b8e9ab849986" title=" " alt="" coords="993,387,1205,428"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a4848493e0f5d9c52ea1f101d2ded5b81" title=" " alt="" coords="1256,555,1468,596"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a36b307a4e0888e00daf9c0d9a4854f35" title=" " alt="" coords="993,868,1205,910"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a28a245a89387aec1673edc510a485279" title="Convert FAT area index to LBA." alt="" coords="1269,672,1455,714"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a879b401e9118b7ee603079d4c7ad294d" title="Get Next Free Cluster." alt="" coords="1267,51,1457,92"/>
-<area shape="rect" href="classopenfsl_1_1_container.html#ad0fa530d91da46276e19b08f9e468b62" title="Data buffer getter." alt="" coords="1551,51,1693,92"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#af802839a7004450da93b8dbcd6f5e222" title="Update FSINFO." alt="" coords="1271,387,1453,428"/>
-<area shape="rect" href="classopenfsl_1_1_block_device.html#a6f344509ac727d84dfaa6aafa516cde4" title=" " alt="" coords="1543,387,1701,428"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#adf6fb22c5ab89773c0c6e885cf174c41" title=" " alt="" coords="1265,117,1459,144"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a2b967692b67583b3ac9ef80350eec46e" title=" " alt="" coords="1256,168,1468,210"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#ad05834b7f84560d96c449347c6cfd4f7" title=" " alt="" coords="1516,168,1728,210"/>
+<area shape="rect" title=" " alt="" coords="5,311,197,353"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a7a3ec9435f37a905a9e41358c94a98aa" title="Change directory." alt="" coords="503,224,674,251"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a4474f7143bbd15c8cd6d30d527bf7a7e" title="Create entry." alt="" coords="250,575,429,617"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a72b276ca60f268ce9f648a39df0d5eca" title="Remove entry." alt="" coords="245,311,433,353"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a3ed1aabf1c80fca2be4ab1463cffa460" title=" " alt="" coords="750,82,937,123"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#af885a8d4ff467f6fff87876ebb526805" title="Get cache value." alt="" coords="744,213,943,254"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a97fcec9162808ca5ab0ea5af049c46b1" title=" " alt="" coords="750,147,937,189"/>
+<area shape="rect" href="namespaceopenfsl.html#af5d84bfd77cfffcf6eca548c58646865" title="String tokenizer." alt="" coords="1013,157,1186,184"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a7c50adb782f3181c23412bf2cb2e3b9c" title="UCS&#45;2 string to UTF&#45;8 string." alt="" coords="999,5,1199,32"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a93f6e6cfc1dd779cd1fb11fece3587e2" title=" " alt="" coords="992,56,1207,83"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a9899388cca12b6641d797a67f2bbbf44" title=" " alt="" coords="991,107,1208,133"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#ac2e7fe5cbcc1a42946d5c341e0723be2" title=" " alt="" coords="993,314,1205,355"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a047e0ac2afa1b920d216a17320ee62a5" title=" " alt="" coords="993,209,1205,250"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a36669702f58485e2d745e616736d630b" title=" " alt="" coords="1256,210,1468,251"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a68ad9ea509479c36026980f35c3648f0" title=" " alt="" coords="1776,387,1947,413"/>
+<area shape="rect" href="classopenfsl_1_1_sector.html#af9128b9d68ff6b96d70336a6e51d23e4" title="Data buffer getter." alt="" coords="1533,119,1711,145"/>
+<area shape="rect" href="classopenfsl_1_1_block_device.html#a47f31aa57ca6e82567148f7875a81162" title=" " alt="" coords="1543,309,1701,350"/>
+<area shape="rect" href="classopenfsl_1_1_file_system.html#a665ece3593447d10c8d56d1605f05784" title=" " alt="" coords="1547,447,1697,489"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a68c4914e5a1eeb33c44b0e31e9a5b4ff" title=" " alt="" coords="1516,634,1728,675"/>
+<area shape="rect" href="classopenfsl_1_1_file_system.html#ac66d2dd1349a54c08d816e466042cf5b" title=" " alt="" coords="1547,925,1697,966"/>
+<area shape="rect" href="classopenfsl_1_1_block_device.html#abb336a5c13d81a7587ad19da73097f43" title=" " alt="" coords="1543,191,1701,233"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a0e9eedc9ddbc97f049c039f608f57089" title="Checksum." alt="" coords="481,887,696,913"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a550cbd04ddbd057c5938cea9780b2bfb" title=" " alt="" coords="481,532,696,559"/>
+<area shape="rect" href="createentry_8cpp.html#ad707323f8f1c2e0a4721281846d08f2b" title=" " alt="" coords="527,684,650,711"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ad431a07239e2a1b663caf451cae14b08" title="List directory contents as path." alt="" coords="500,380,677,407"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a1106ff51e59165f4712520051890ec51" title=" " alt="" coords="481,785,696,812"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a7faa067fdc4ed800aa0a5dcd0d9572e4" title="UTF&#45;8 string to UCS&#45;2 string." alt="" coords="487,836,690,863"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a4f075b67b497efc5f561b8e9ab849986" title=" " alt="" coords="993,807,1205,849"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a4848493e0f5d9c52ea1f101d2ded5b81" title=" " alt="" coords="1256,647,1468,689"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a36b307a4e0888e00daf9c0d9a4854f35" title=" " alt="" coords="993,421,1205,462"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a28a245a89387aec1673edc510a485279" title="Convert FAT area index to LBA." alt="" coords="1269,479,1455,521"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a879b401e9118b7ee603079d4c7ad294d" title="Get Next Free Cluster." alt="" coords="1267,917,1457,958"/>
+<area shape="rect" href="classopenfsl_1_1_container.html#ad0fa530d91da46276e19b08f9e468b62" title="Data buffer getter." alt="" coords="1551,815,1693,857"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#af802839a7004450da93b8dbcd6f5e222" title="Update FSINFO." alt="" coords="1271,1034,1453,1075"/>
+<area shape="rect" href="classopenfsl_1_1_block_device.html#a6f344509ac727d84dfaa6aafa516cde4" title=" " alt="" coords="1543,1034,1701,1075"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#adf6fb22c5ab89773c0c6e885cf174c41" title=" " alt="" coords="1265,865,1459,892"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a2b967692b67583b3ac9ef80350eec46e" title=" " alt="" coords="1256,1151,1468,1193"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#ad05834b7f84560d96c449347c6cfd4f7" title=" " alt="" coords="1516,1151,1728,1193"/>
 </map>
 </div>
 
@@ -2631,11 +2969,12 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classopenfsl_1_1_f_a_t32_a1106ff51e59165f4712520051890ec51_icgraph.png" border="0" usemap="#classopenfsl_1_1_f_a_t32_a1106ff51e59165f4712520051890ec51_icgraph" alt=""/></div>
 <map name="classopenfsl_1_1_f_a_t32_a1106ff51e59165f4712520051890ec51_icgraph" id="classopenfsl_1_1_f_a_t32_a1106ff51e59165f4712520051890ec51_icgraph">
-<area shape="rect" title=" " alt="" coords="708,56,923,83"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a4474f7143bbd15c8cd6d30d527bf7a7e" title="Create entry." alt="" coords="481,49,660,90"/>
+<area shape="rect" title=" " alt="" coords="708,81,923,108"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a4474f7143bbd15c8cd6d30d527bf7a7e" title="Create entry." alt="" coords="481,74,660,115"/>
 <area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ad57d2efce5f6bb3f3266b52ec7262f05" title="Create directory." alt="" coords="238,5,431,32"/>
 <area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a03bfaefead11ea43b31614841cfb12ff" title="Create file." alt="" coords="236,56,433,83"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a8c4fd9c81051e976e0557610b3ccee27" title=" " alt="" coords="239,107,431,149"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a12296dd6f92142d705f0762b1bbdc2db" title=" " alt="" coords="247,107,422,133"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a8c4fd9c81051e976e0557610b3ccee27" title=" " alt="" coords="239,158,431,199"/>
 <area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a322bde9dfda6dbb287fc39cc8828d801" title=" " alt="" coords="5,56,188,83"/>
 </map>
 </div>
@@ -2681,11 +3020,12 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classopenfsl_1_1_f_a_t32_a7faa067fdc4ed800aa0a5dcd0d9572e4_icgraph.png" border="0" usemap="#classopenfsl_1_1_f_a_t32_a7faa067fdc4ed800aa0a5dcd0d9572e4_icgraph" alt=""/></div>
 <map name="classopenfsl_1_1_f_a_t32_a7faa067fdc4ed800aa0a5dcd0d9572e4_icgraph" id="classopenfsl_1_1_f_a_t32_a7faa067fdc4ed800aa0a5dcd0d9572e4_icgraph">
-<area shape="rect" title="UTF&#45;8 string to UCS&#45;2 string." alt="" coords="708,56,911,83"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a4474f7143bbd15c8cd6d30d527bf7a7e" title="Create entry." alt="" coords="481,49,660,90"/>
+<area shape="rect" title="UTF&#45;8 string to UCS&#45;2 string." alt="" coords="708,81,911,108"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a4474f7143bbd15c8cd6d30d527bf7a7e" title="Create entry." alt="" coords="481,74,660,115"/>
 <area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ad57d2efce5f6bb3f3266b52ec7262f05" title="Create directory." alt="" coords="238,5,431,32"/>
 <area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a03bfaefead11ea43b31614841cfb12ff" title="Create file." alt="" coords="236,56,433,83"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a8c4fd9c81051e976e0557610b3ccee27" title=" " alt="" coords="239,107,431,149"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a12296dd6f92142d705f0762b1bbdc2db" title=" " alt="" coords="247,107,422,133"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a8c4fd9c81051e976e0557610b3ccee27" title=" " alt="" coords="239,158,431,199"/>
 <area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a322bde9dfda6dbb287fc39cc8828d801" title=" " alt="" coords="5,56,188,83"/>
 </map>
 </div>
@@ -2731,21 +3071,22 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classopenfsl_1_1_f_a_t32_a7c50adb782f3181c23412bf2cb2e3b9c_icgraph.png" border="0" usemap="#classopenfsl_1_1_f_a_t32_a7c50adb782f3181c23412bf2cb2e3b9c_icgraph" alt=""/></div>
 <map name="classopenfsl_1_1_f_a_t32_a7c50adb782f3181c23412bf2cb2e3b9c_icgraph" id="classopenfsl_1_1_f_a_t32_a7c50adb782f3181c23412bf2cb2e3b9c_icgraph">
-<area shape="rect" title="UCS&#45;2 string to UTF&#45;8 string." alt="" coords="1268,257,1468,284"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a3ed1aabf1c80fca2be4ab1463cffa460" title=" " alt="" coords="1033,250,1220,291"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a7a3ec9435f37a905a9e41358c94a98aa" title="Change directory." alt="" coords="791,203,961,229"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ad00a1d5dae97b6ec2b680b9f2f75b483" title="Get file information." alt="" coords="507,342,700,383"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a3da2b2b19faebfbb10cffe698a648f96" title=" " alt="" coords="767,287,985,313"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a4474f7143bbd15c8cd6d30d527bf7a7e" title="Create entry." alt="" coords="514,107,693,149"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ad57d2efce5f6bb3f3266b52ec7262f05" title="Create directory." alt="" coords="241,60,435,87"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a8c4fd9c81051e976e0557610b3ccee27" title=" " alt="" coords="242,166,434,207"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a72b276ca60f268ce9f648a39df0d5eca" title="Remove entry." alt="" coords="509,225,697,266"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ae0e5f57f13f4f41934a7ee310dc4ef4c" title=" " alt="" coords="488,5,719,32"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a03bfaefead11ea43b31614841cfb12ff" title="Create file." alt="" coords="239,115,437,141"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a322bde9dfda6dbb287fc39cc8828d801" title=" " alt="" coords="5,115,188,141"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ac5564e536d7325a94b66859b3f6e76a2" title=" " alt="" coords="236,320,440,347"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_f_i_l_e.html#a1f2af6cb988dae83ea50a97a7c1dc477" title=" " alt="" coords="263,371,413,413"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#aac72f94554b8a89f49861a9d7d23a32a" title="Remove directory or file." alt="" coords="244,251,432,277"/>
+<area shape="rect" title="UCS&#45;2 string to UTF&#45;8 string." alt="" coords="1268,204,1468,230"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a3ed1aabf1c80fca2be4ab1463cffa460" title=" " alt="" coords="1033,196,1220,238"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a7a3ec9435f37a905a9e41358c94a98aa" title="Change directory." alt="" coords="791,204,961,230"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a12296dd6f92142d705f0762b1bbdc2db" title=" " alt="" coords="251,38,425,65"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ad00a1d5dae97b6ec2b680b9f2f75b483" title="Get file information." alt="" coords="507,396,700,438"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a3da2b2b19faebfbb10cffe698a648f96" title=" " alt="" coords="767,270,985,297"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a4474f7143bbd15c8cd6d30d527bf7a7e" title="Create entry." alt="" coords="514,163,693,204"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ad57d2efce5f6bb3f3266b52ec7262f05" title="Create directory." alt="" coords="241,116,435,142"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a8c4fd9c81051e976e0557610b3ccee27" title=" " alt="" coords="242,228,434,270"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a72b276ca60f268ce9f648a39df0d5eca" title="Remove entry." alt="" coords="509,228,697,270"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ae0e5f57f13f4f41934a7ee310dc4ef4c" title=" " alt="" coords="488,61,719,88"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a03bfaefead11ea43b31614841cfb12ff" title="Create file." alt="" coords="239,170,437,197"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a322bde9dfda6dbb287fc39cc8828d801" title=" " alt="" coords="5,170,188,197"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ac5564e536d7325a94b66859b3f6e76a2" title=" " alt="" coords="236,389,440,416"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_f_i_l_e.html#a1f2af6cb988dae83ea50a97a7c1dc477" title=" " alt="" coords="263,440,413,482"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#aac72f94554b8a89f49861a9d7d23a32a" title="Remove directory or file." alt="" coords="244,309,432,336"/>
 </map>
 </div>
 
@@ -2833,14 +3174,15 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classopenfsl_1_1_f_a_t32_af802839a7004450da93b8dbcd6f5e222_icgraph.png" border="0" usemap="#classopenfsl_1_1_f_a_t32_af802839a7004450da93b8dbcd6f5e222_icgraph" alt=""/></div>
 <map name="classopenfsl_1_1_f_a_t32_af802839a7004450da93b8dbcd6f5e222_icgraph" id="classopenfsl_1_1_f_a_t32_af802839a7004450da93b8dbcd6f5e222_icgraph">
-<area shape="rect" title="Update FSINFO." alt="" coords="968,114,1151,155"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a4f075b67b497efc5f561b8e9ab849986" title=" " alt="" coords="708,81,920,122"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a9792c4764310d1037ac0633014bbe7c3" title=" " alt="" coords="708,146,920,187"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a4474f7143bbd15c8cd6d30d527bf7a7e" title="Create entry." alt="" coords="481,49,660,90"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_f_i_l_e.html#aae800cf33c9931ec924676567121f0b3" title="Write file." alt="" coords="495,114,646,155"/>
+<area shape="rect" title="Update FSINFO." alt="" coords="968,139,1151,181"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a4f075b67b497efc5f561b8e9ab849986" title=" " alt="" coords="708,106,920,147"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a9792c4764310d1037ac0633014bbe7c3" title=" " alt="" coords="708,171,920,213"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a4474f7143bbd15c8cd6d30d527bf7a7e" title="Create entry." alt="" coords="481,74,660,115"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_f_i_l_e.html#aae800cf33c9931ec924676567121f0b3" title="Write file." alt="" coords="495,139,646,181"/>
 <area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ad57d2efce5f6bb3f3266b52ec7262f05" title="Create directory." alt="" coords="238,5,431,32"/>
 <area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a03bfaefead11ea43b31614841cfb12ff" title="Create file." alt="" coords="236,56,433,83"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a8c4fd9c81051e976e0557610b3ccee27" title=" " alt="" coords="239,107,431,149"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a12296dd6f92142d705f0762b1bbdc2db" title=" " alt="" coords="247,107,422,133"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a8c4fd9c81051e976e0557610b3ccee27" title=" " alt="" coords="239,158,431,199"/>
 <area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a322bde9dfda6dbb287fc39cc8828d801" title=" " alt="" coords="5,56,188,83"/>
 </map>
 </div>
@@ -2887,21 +3229,22 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classopenfsl_1_1_f_a_t32_a93f6e6cfc1dd779cd1fb11fece3587e2_icgraph.png" border="0" usemap="#classopenfsl_1_1_f_a_t32_a93f6e6cfc1dd779cd1fb11fece3587e2_icgraph" alt=""/></div>
 <map name="classopenfsl_1_1_f_a_t32_a93f6e6cfc1dd779cd1fb11fece3587e2_icgraph" id="classopenfsl_1_1_f_a_t32_a93f6e6cfc1dd779cd1fb11fece3587e2_icgraph">
-<area shape="rect" title=" " alt="" coords="1268,257,1483,284"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a3ed1aabf1c80fca2be4ab1463cffa460" title=" " alt="" coords="1033,250,1220,291"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a7a3ec9435f37a905a9e41358c94a98aa" title="Change directory." alt="" coords="791,203,961,229"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ad00a1d5dae97b6ec2b680b9f2f75b483" title="Get file information." alt="" coords="507,342,700,383"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a3da2b2b19faebfbb10cffe698a648f96" title=" " alt="" coords="767,287,985,313"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a4474f7143bbd15c8cd6d30d527bf7a7e" title="Create entry." alt="" coords="514,107,693,149"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ad57d2efce5f6bb3f3266b52ec7262f05" title="Create directory." alt="" coords="241,60,435,87"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a8c4fd9c81051e976e0557610b3ccee27" title=" " alt="" coords="242,166,434,207"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a72b276ca60f268ce9f648a39df0d5eca" title="Remove entry." alt="" coords="509,225,697,266"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ae0e5f57f13f4f41934a7ee310dc4ef4c" title=" " alt="" coords="488,5,719,32"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a03bfaefead11ea43b31614841cfb12ff" title="Create file." alt="" coords="239,115,437,141"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a322bde9dfda6dbb287fc39cc8828d801" title=" " alt="" coords="5,115,188,141"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ac5564e536d7325a94b66859b3f6e76a2" title=" " alt="" coords="236,320,440,347"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_f_i_l_e.html#a1f2af6cb988dae83ea50a97a7c1dc477" title=" " alt="" coords="263,371,413,413"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#aac72f94554b8a89f49861a9d7d23a32a" title="Remove directory or file." alt="" coords="244,251,432,277"/>
+<area shape="rect" title=" " alt="" coords="1268,204,1483,230"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a3ed1aabf1c80fca2be4ab1463cffa460" title=" " alt="" coords="1033,196,1220,238"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a7a3ec9435f37a905a9e41358c94a98aa" title="Change directory." alt="" coords="791,204,961,230"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a12296dd6f92142d705f0762b1bbdc2db" title=" " alt="" coords="251,38,425,65"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ad00a1d5dae97b6ec2b680b9f2f75b483" title="Get file information." alt="" coords="507,396,700,438"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a3da2b2b19faebfbb10cffe698a648f96" title=" " alt="" coords="767,270,985,297"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a4474f7143bbd15c8cd6d30d527bf7a7e" title="Create entry." alt="" coords="514,163,693,204"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ad57d2efce5f6bb3f3266b52ec7262f05" title="Create directory." alt="" coords="241,116,435,142"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a8c4fd9c81051e976e0557610b3ccee27" title=" " alt="" coords="242,228,434,270"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a72b276ca60f268ce9f648a39df0d5eca" title="Remove entry." alt="" coords="509,228,697,270"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ae0e5f57f13f4f41934a7ee310dc4ef4c" title=" " alt="" coords="488,61,719,88"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a03bfaefead11ea43b31614841cfb12ff" title="Create file." alt="" coords="239,170,437,197"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a322bde9dfda6dbb287fc39cc8828d801" title=" " alt="" coords="5,170,188,197"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ac5564e536d7325a94b66859b3f6e76a2" title=" " alt="" coords="236,389,440,416"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_f_i_l_e.html#a1f2af6cb988dae83ea50a97a7c1dc477" title=" " alt="" coords="263,440,413,482"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#aac72f94554b8a89f49861a9d7d23a32a" title="Remove directory or file." alt="" coords="244,309,432,336"/>
 </map>
 </div>
 
@@ -2947,21 +3290,22 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classopenfsl_1_1_f_a_t32_a9899388cca12b6641d797a67f2bbbf44_icgraph.png" border="0" usemap="#classopenfsl_1_1_f_a_t32_a9899388cca12b6641d797a67f2bbbf44_icgraph" alt=""/></div>
 <map name="classopenfsl_1_1_f_a_t32_a9899388cca12b6641d797a67f2bbbf44_icgraph" id="classopenfsl_1_1_f_a_t32_a9899388cca12b6641d797a67f2bbbf44_icgraph">
-<area shape="rect" title=" " alt="" coords="1268,257,1485,284"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a3ed1aabf1c80fca2be4ab1463cffa460" title=" " alt="" coords="1033,250,1220,291"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a7a3ec9435f37a905a9e41358c94a98aa" title="Change directory." alt="" coords="791,203,961,229"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ad00a1d5dae97b6ec2b680b9f2f75b483" title="Get file information." alt="" coords="507,342,700,383"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a3da2b2b19faebfbb10cffe698a648f96" title=" " alt="" coords="767,287,985,313"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a4474f7143bbd15c8cd6d30d527bf7a7e" title="Create entry." alt="" coords="514,107,693,149"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ad57d2efce5f6bb3f3266b52ec7262f05" title="Create directory." alt="" coords="241,60,435,87"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a8c4fd9c81051e976e0557610b3ccee27" title=" " alt="" coords="242,166,434,207"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a72b276ca60f268ce9f648a39df0d5eca" title="Remove entry." alt="" coords="509,225,697,266"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ae0e5f57f13f4f41934a7ee310dc4ef4c" title=" " alt="" coords="488,5,719,32"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a03bfaefead11ea43b31614841cfb12ff" title="Create file." alt="" coords="239,115,437,141"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a322bde9dfda6dbb287fc39cc8828d801" title=" " alt="" coords="5,115,188,141"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ac5564e536d7325a94b66859b3f6e76a2" title=" " alt="" coords="236,320,440,347"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_f_i_l_e.html#a1f2af6cb988dae83ea50a97a7c1dc477" title=" " alt="" coords="263,371,413,413"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#aac72f94554b8a89f49861a9d7d23a32a" title="Remove directory or file." alt="" coords="244,251,432,277"/>
+<area shape="rect" title=" " alt="" coords="1268,204,1485,230"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a3ed1aabf1c80fca2be4ab1463cffa460" title=" " alt="" coords="1033,196,1220,238"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a7a3ec9435f37a905a9e41358c94a98aa" title="Change directory." alt="" coords="791,204,961,230"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a12296dd6f92142d705f0762b1bbdc2db" title=" " alt="" coords="251,38,425,65"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ad00a1d5dae97b6ec2b680b9f2f75b483" title="Get file information." alt="" coords="507,396,700,438"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a3da2b2b19faebfbb10cffe698a648f96" title=" " alt="" coords="767,270,985,297"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a4474f7143bbd15c8cd6d30d527bf7a7e" title="Create entry." alt="" coords="514,163,693,204"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ad57d2efce5f6bb3f3266b52ec7262f05" title="Create directory." alt="" coords="241,116,435,142"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a8c4fd9c81051e976e0557610b3ccee27" title=" " alt="" coords="242,228,434,270"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a72b276ca60f268ce9f648a39df0d5eca" title="Remove entry." alt="" coords="509,228,697,270"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ae0e5f57f13f4f41934a7ee310dc4ef4c" title=" " alt="" coords="488,61,719,88"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a03bfaefead11ea43b31614841cfb12ff" title="Create file." alt="" coords="239,170,437,197"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a322bde9dfda6dbb287fc39cc8828d801" title=" " alt="" coords="5,170,188,197"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ac5564e536d7325a94b66859b3f6e76a2" title=" " alt="" coords="236,389,440,416"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_f_i_l_e.html#a1f2af6cb988dae83ea50a97a7c1dc477" title=" " alt="" coords="263,440,413,482"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#aac72f94554b8a89f49861a9d7d23a32a" title="Remove directory or file." alt="" coords="244,309,432,336"/>
 </map>
 </div>
 
@@ -3044,23 +3388,54 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classopenfsl_1_1_f_a_t32_a97fcec9162808ca5ab0ea5af049c46b1_icgraph.png" border="0" usemap="#classopenfsl_1_1_f_a_t32_a97fcec9162808ca5ab0ea5af049c46b1_icgraph" alt=""/></div>
 <map name="classopenfsl_1_1_f_a_t32_a97fcec9162808ca5ab0ea5af049c46b1_icgraph" id="classopenfsl_1_1_f_a_t32_a97fcec9162808ca5ab0ea5af049c46b1_icgraph">
-<area shape="rect" title=" " alt="" coords="1021,210,1208,251"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a7a3ec9435f37a905a9e41358c94a98aa" title="Change directory." alt="" coords="803,217,973,244"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ad57d2efce5f6bb3f3266b52ec7262f05" title="Create directory." alt="" coords="270,24,463,50"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#aac72f94554b8a89f49861a9d7d23a32a" title="Remove directory or file." alt="" coords="13,366,201,393"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a4474f7143bbd15c8cd6d30d527bf7a7e" title="Create entry." alt="" coords="550,75,729,116"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a8c4fd9c81051e976e0557610b3ccee27" title=" " alt="" coords="271,134,463,175"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a3ed1aabf1c80fca2be4ab1463cffa460" title=" " alt="" coords="546,359,733,400"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ad00a1d5dae97b6ec2b680b9f2f75b483" title="Get file information." alt="" coords="270,235,463,276"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a72b276ca60f268ce9f648a39df0d5eca" title="Remove entry." alt="" coords="545,294,733,335"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ae0e5f57f13f4f41934a7ee310dc4ef4c" title=" " alt="" coords="524,192,755,218"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a03bfaefead11ea43b31614841cfb12ff" title="Create file." alt="" coords="268,82,465,109"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a322bde9dfda6dbb287fc39cc8828d801" title=" " alt="" coords="16,82,199,109"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a3da2b2b19faebfbb10cffe698a648f96" title=" " alt="" coords="257,366,476,393"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ac5564e536d7325a94b66859b3f6e76a2" title=" " alt="" coords="5,213,209,240"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_f_i_l_e.html#a1f2af6cb988dae83ea50a97a7c1dc477" title=" " alt="" coords="32,264,183,306"/>
+<area shape="rect" title=" " alt="" coords="1021,57,1208,98"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a7a3ec9435f37a905a9e41358c94a98aa" title="Change directory." alt="" coords="803,199,973,225"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ad57d2efce5f6bb3f3266b52ec7262f05" title="Create directory." alt="" coords="270,5,463,32"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a03bfaefead11ea43b31614841cfb12ff" title="Create file." alt="" coords="268,67,465,93"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#aac72f94554b8a89f49861a9d7d23a32a" title="Remove directory or file." alt="" coords="13,384,201,411"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a4474f7143bbd15c8cd6d30d527bf7a7e" title="Create entry." alt="" coords="550,107,729,149"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a12296dd6f92142d705f0762b1bbdc2db" title=" " alt="" coords="279,333,454,360"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a8c4fd9c81051e976e0557610b3ccee27" title=" " alt="" coords="271,217,463,258"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a3ed1aabf1c80fca2be4ab1463cffa460" title=" " alt="" coords="546,275,733,317"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ad00a1d5dae97b6ec2b680b9f2f75b483" title="Get file information." alt="" coords="270,139,463,181"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a72b276ca60f268ce9f648a39df0d5eca" title="Remove entry." alt="" coords="545,341,733,382"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ae0e5f57f13f4f41934a7ee310dc4ef4c" title=" " alt="" coords="524,173,755,200"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a322bde9dfda6dbb287fc39cc8828d801" title=" " alt="" coords="16,67,199,93"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a3da2b2b19faebfbb10cffe698a648f96" title=" " alt="" coords="257,283,476,309"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ac5564e536d7325a94b66859b3f6e76a2" title=" " alt="" coords="5,132,209,159"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_f_i_l_e.html#a1f2af6cb988dae83ea50a97a7c1dc477" title=" " alt="" coords="32,183,183,225"/>
 </map>
 </div>
+
+</div>
+</div>
+<a id="a8ee480d797567cdfc162a4a75d8ca053"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ee480d797567cdfc162a4a75d8ca053">&#9670;&nbsp;</a></span>copy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="error_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a> openfsl::FAT32::copy </td>
+          <td>(</td>
+          <td class="paramtype">const std::string&#160;</td>
+          <td class="paramname"><em>from</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string&#160;</td>
+          <td class="paramname"><em>to</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="wrapper__file_8cpp_source.html#l00046">46</a> of file <a class="el" href="wrapper__file_8cpp_source.html">wrapper_file.cpp</a>.</p>
 
 </div>
 </div>
@@ -3081,7 +3456,7 @@ Here is the caller graph for this function:</div>
 
 <p>Disable cache. </p>
 
-<p class="definition">Definition at line <a class="el" href="cache_8cpp_source.html#l00139">139</a> of file <a class="el" href="cache_8cpp_source.html">cache.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cache_8cpp_source.html#l00136">136</a> of file <a class="el" href="cache_8cpp_source.html">cache.cpp</a>.</p>
 
 </div>
 </div>
@@ -3103,7 +3478,7 @@ Here is the caller graph for this function:</div>
 
 <p>Enable cache. </p>
 
-<p class="definition">Definition at line <a class="el" href="cache_8cpp_source.html#l00126">126</a> of file <a class="el" href="cache_8cpp_source.html">cache.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cache_8cpp_source.html#l00123">123</a> of file <a class="el" href="cache_8cpp_source.html">cache.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -3199,31 +3574,32 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classopenfsl_1_1_f_a_t32_a68ad9ea509479c36026980f35c3648f0_icgraph.png" border="0" usemap="#classopenfsl_1_1_f_a_t32_a68ad9ea509479c36026980f35c3648f0_icgraph" alt=""/></div>
 <map name="classopenfsl_1_1_f_a_t32_a68ad9ea509479c36026980f35c3648f0_icgraph" id="classopenfsl_1_1_f_a_t32_a68ad9ea509479c36026980f35c3648f0_icgraph">
-<area shape="rect" title=" " alt="" coords="2048,275,2219,301"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a4f075b67b497efc5f561b8e9ab849986" title=" " alt="" coords="1268,301,1480,342"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_f_i_l_e.html#aae800cf33c9931ec924676567121f0b3" title="Write file." alt="" coords="1051,297,1202,338"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a68c4914e5a1eeb33c44b0e31e9a5b4ff" title=" " alt="" coords="1788,351,2000,393"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a36669702f58485e2d745e616736d630b" title=" " alt="" coords="1528,133,1740,174"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a047e0ac2afa1b920d216a17320ee62a5" title=" " alt="" coords="1268,82,1480,123"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a36b307a4e0888e00daf9c0d9a4854f35" title=" " alt="" coords="1268,183,1480,225"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a4848493e0f5d9c52ea1f101d2ded5b81" title=" " alt="" coords="1528,467,1740,509"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a9792c4764310d1037ac0633014bbe7c3" title=" " alt="" coords="1528,402,1740,443"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a4474f7143bbd15c8cd6d30d527bf7a7e" title="Create entry." alt="" coords="514,362,693,403"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ad57d2efce5f6bb3f3266b52ec7262f05" title="Create directory." alt="" coords="241,205,435,232"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a03bfaefead11ea43b31614841cfb12ff" title="Create file." alt="" coords="239,369,437,396"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a8c4fd9c81051e976e0557610b3ccee27" title=" " alt="" coords="242,297,434,338"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a322bde9dfda6dbb287fc39cc8828d801" title=" " alt="" coords="5,369,188,396"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a3ed1aabf1c80fca2be4ab1463cffa460" title=" " alt="" coords="1033,107,1220,149"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_f_i_l_e.html#a0cf7a8eea8db46a575e429f1bfe3c4e6" title="Read file." alt="" coords="1051,42,1202,83"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a7a3ec9435f37a905a9e41358c94a98aa" title="Change directory." alt="" coords="791,144,961,171"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ad00a1d5dae97b6ec2b680b9f2f75b483" title="Get file information." alt="" coords="507,27,700,69"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a3da2b2b19faebfbb10cffe698a648f96" title=" " alt="" coords="767,93,985,120"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a72b276ca60f268ce9f648a39df0d5eca" title="Remove entry." alt="" coords="509,297,697,338"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ae0e5f57f13f4f41934a7ee310dc4ef4c" title=" " alt="" coords="488,195,719,221"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ac5564e536d7325a94b66859b3f6e76a2" title=" " alt="" coords="236,5,440,32"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_f_i_l_e.html#a1f2af6cb988dae83ea50a97a7c1dc477" title=" " alt="" coords="263,57,413,98"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#aac72f94554b8a89f49861a9d7d23a32a" title="Remove directory or file." alt="" coords="244,133,432,160"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_f_i_l_e.html#a35652a2114d00479302d77858f98ca34" title=" " alt="" coords="1299,515,1449,557"/>
+<area shape="rect" title=" " alt="" coords="2048,399,2219,426"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a4f075b67b497efc5f561b8e9ab849986" title=" " alt="" coords="1268,589,1480,631"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_f_i_l_e.html#aae800cf33c9931ec924676567121f0b3" title="Write file." alt="" coords="1051,531,1202,572"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a68c4914e5a1eeb33c44b0e31e9a5b4ff" title=" " alt="" coords="1788,363,2000,404"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a36669702f58485e2d745e616736d630b" title=" " alt="" coords="1528,304,1740,345"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a047e0ac2afa1b920d216a17320ee62a5" title=" " alt="" coords="1268,180,1480,221"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a36b307a4e0888e00daf9c0d9a4854f35" title=" " alt="" coords="1268,472,1480,513"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a4848493e0f5d9c52ea1f101d2ded5b81" title=" " alt="" coords="1528,239,1740,280"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a9792c4764310d1037ac0633014bbe7c3" title=" " alt="" coords="1528,421,1740,463"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a4474f7143bbd15c8cd6d30d527bf7a7e" title="Create entry." alt="" coords="514,472,693,513"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ad57d2efce5f6bb3f3266b52ec7262f05" title="Create directory." alt="" coords="241,429,435,455"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a03bfaefead11ea43b31614841cfb12ff" title="Create file." alt="" coords="239,479,437,506"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a12296dd6f92142d705f0762b1bbdc2db" title=" " alt="" coords="251,265,425,291"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a8c4fd9c81051e976e0557610b3ccee27" title=" " alt="" coords="242,363,434,404"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a322bde9dfda6dbb287fc39cc8828d801" title=" " alt="" coords="5,479,188,506"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a3ed1aabf1c80fca2be4ab1463cffa460" title=" " alt="" coords="1033,104,1220,145"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_f_i_l_e.html#a0cf7a8eea8db46a575e429f1bfe3c4e6" title="Read file." alt="" coords="1051,169,1202,211"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a7a3ec9435f37a905a9e41358c94a98aa" title="Change directory." alt="" coords="791,269,961,295"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ad00a1d5dae97b6ec2b680b9f2f75b483" title="Get file information." alt="" coords="507,35,700,76"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a3da2b2b19faebfbb10cffe698a648f96" title=" " alt="" coords="767,101,985,127"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a72b276ca60f268ce9f648a39df0d5eca" title="Remove entry." alt="" coords="509,203,697,244"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ae0e5f57f13f4f41934a7ee310dc4ef4c" title=" " alt="" coords="488,319,719,346"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ac5564e536d7325a94b66859b3f6e76a2" title=" " alt="" coords="236,71,440,98"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_f_i_l_e.html#a1f2af6cb988dae83ea50a97a7c1dc477" title=" " alt="" coords="263,5,413,47"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#aac72f94554b8a89f49861a9d7d23a32a" title="Remove directory or file." alt="" coords="244,166,432,193"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_f_i_l_e.html#a35652a2114d00479302d77858f98ca34" title=" " alt="" coords="1299,407,1449,448"/>
 </map>
 </div>
 
@@ -3370,14 +3746,15 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classopenfsl_1_1_f_a_t32_adf6fb22c5ab89773c0c6e885cf174c41_icgraph.png" border="0" usemap="#classopenfsl_1_1_f_a_t32_adf6fb22c5ab89773c0c6e885cf174c41_icgraph" alt=""/></div>
 <map name="classopenfsl_1_1_f_a_t32_adf6fb22c5ab89773c0c6e885cf174c41_icgraph" id="classopenfsl_1_1_f_a_t32_adf6fb22c5ab89773c0c6e885cf174c41_icgraph">
-<area shape="rect" title=" " alt="" coords="968,121,1163,148"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a4f075b67b497efc5f561b8e9ab849986" title=" " alt="" coords="708,81,920,122"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a9792c4764310d1037ac0633014bbe7c3" title=" " alt="" coords="708,146,920,187"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a4474f7143bbd15c8cd6d30d527bf7a7e" title="Create entry." alt="" coords="481,49,660,90"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_f_i_l_e.html#aae800cf33c9931ec924676567121f0b3" title="Write file." alt="" coords="495,114,646,155"/>
+<area shape="rect" title=" " alt="" coords="968,147,1163,173"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a4f075b67b497efc5f561b8e9ab849986" title=" " alt="" coords="708,106,920,147"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a9792c4764310d1037ac0633014bbe7c3" title=" " alt="" coords="708,171,920,213"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a4474f7143bbd15c8cd6d30d527bf7a7e" title="Create entry." alt="" coords="481,74,660,115"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_f_i_l_e.html#aae800cf33c9931ec924676567121f0b3" title="Write file." alt="" coords="495,139,646,181"/>
 <area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ad57d2efce5f6bb3f3266b52ec7262f05" title="Create directory." alt="" coords="238,5,431,32"/>
 <area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a03bfaefead11ea43b31614841cfb12ff" title="Create file." alt="" coords="236,56,433,83"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a8c4fd9c81051e976e0557610b3ccee27" title=" " alt="" coords="239,107,431,149"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a12296dd6f92142d705f0762b1bbdc2db" title=" " alt="" coords="247,107,422,133"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a8c4fd9c81051e976e0557610b3ccee27" title=" " alt="" coords="239,158,431,199"/>
 <area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a322bde9dfda6dbb287fc39cc8828d801" title=" " alt="" coords="5,56,188,83"/>
 </map>
 </div>
@@ -3683,50 +4060,81 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classopenfsl_1_1_f_a_t32_a322bde9dfda6dbb287fc39cc8828d801_cgraph.png" border="0" usemap="#classopenfsl_1_1_f_a_t32_a322bde9dfda6dbb287fc39cc8828d801_cgraph" alt=""/></div>
 <map name="classopenfsl_1_1_f_a_t32_a322bde9dfda6dbb287fc39cc8828d801_cgraph" id="classopenfsl_1_1_f_a_t32_a322bde9dfda6dbb287fc39cc8828d801_cgraph">
-<area shape="rect" title=" " alt="" coords="5,1191,188,1217"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a03bfaefead11ea43b31614841cfb12ff" title="Create file." alt="" coords="236,1161,433,1188"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ab0d40b804e1ff21de7ccf2509c93da5b" title="Separate file name." alt="" coords="237,1213,432,1254"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a4474f7143bbd15c8cd6d30d527bf7a7e" title="Create entry." alt="" coords="507,799,685,841"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#ac2e7fe5cbcc1a42946d5c341e0723be2" title=" " alt="" coords="1271,705,1483,746"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a879b401e9118b7ee603079d4c7ad294d" title="Get Next Free Cluster." alt="" coords="1544,1178,1735,1219"/>
-<area shape="rect" href="namespaceopenfsl.html#a2c9f28e2ca425950c3cdf70d71847049" title=" " alt="" coords="499,1187,693,1213"/>
-<area shape="rect" href="namespaceopenfsl.html#a4a4e8692613060f54fd0b4f035db8df3" title=" " alt="" coords="515,1237,677,1264"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a9ae40bd9e708e6c5a4075a5d9efa3008" title=" " alt="" coords="481,1288,711,1315"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a7a3ec9435f37a905a9e41358c94a98aa" title="Change directory." alt="" coords="781,568,951,595"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a0e9eedc9ddbc97f049c039f608f57089" title="Checksum." alt="" coords="759,731,973,757"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a550cbd04ddbd057c5938cea9780b2bfb" title=" " alt="" coords="759,781,973,808"/>
-<area shape="rect" href="createentry_8cpp.html#ad707323f8f1c2e0a4721281846d08f2b" title=" " alt="" coords="805,832,927,859"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ad431a07239e2a1b663caf451cae14b08" title="List directory contents as path." alt="" coords="777,883,955,909"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a1106ff51e59165f4712520051890ec51" title=" " alt="" coords="759,933,973,960"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a7faa067fdc4ed800aa0a5dcd0d9572e4" title="UTF&#45;8 string to UCS&#45;2 string." alt="" coords="765,984,967,1011"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a4f075b67b497efc5f561b8e9ab849986" title=" " alt="" coords="1271,835,1483,877"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a4848493e0f5d9c52ea1f101d2ded5b81" title=" " alt="" coords="1533,675,1745,717"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a36b307a4e0888e00daf9c0d9a4854f35" title=" " alt="" coords="1271,347,1483,389"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a3ed1aabf1c80fca2be4ab1463cffa460" title=" " alt="" coords="1027,465,1214,506"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#af885a8d4ff467f6fff87876ebb526805" title="Get cache value." alt="" coords="1021,530,1220,571"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a97fcec9162808ca5ab0ea5af049c46b1" title=" " alt="" coords="1027,595,1214,637"/>
-<area shape="rect" href="namespaceopenfsl.html#af5d84bfd77cfffcf6eca548c58646865" title="String tokenizer." alt="" coords="1290,635,1463,661"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a7c50adb782f3181c23412bf2cb2e3b9c" title="UCS&#45;2 string to UTF&#45;8 string." alt="" coords="1277,464,1477,491"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a93f6e6cfc1dd779cd1fb11fece3587e2" title=" " alt="" coords="1269,515,1484,541"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a9899388cca12b6641d797a67f2bbbf44" title=" " alt="" coords="1268,565,1485,592"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a047e0ac2afa1b920d216a17320ee62a5" title=" " alt="" coords="1271,209,1483,250"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a36669702f58485e2d745e616736d630b" title=" " alt="" coords="1533,238,1745,279"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a68ad9ea509479c36026980f35c3648f0" title=" " alt="" coords="2053,423,2224,449"/>
-<area shape="rect" href="classopenfsl_1_1_sector.html#af9128b9d68ff6b96d70336a6e51d23e4" title="Data buffer getter." alt="" coords="1810,85,1989,112"/>
-<area shape="rect" href="classopenfsl_1_1_block_device.html#a47f31aa57ca6e82567148f7875a81162" title=" " alt="" coords="1820,457,1979,498"/>
-<area shape="rect" href="classopenfsl_1_1_file_system.html#a665ece3593447d10c8d56d1605f05784" title=" " alt="" coords="1824,382,1975,423"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a68c4914e5a1eeb33c44b0e31e9a5b4ff" title=" " alt="" coords="1793,534,2005,575"/>
-<area shape="rect" href="classopenfsl_1_1_file_system.html#ac66d2dd1349a54c08d816e466042cf5b" title=" " alt="" coords="1824,705,1975,746"/>
-<area shape="rect" href="classopenfsl_1_1_block_device.html#abb336a5c13d81a7587ad19da73097f43" title=" " alt="" coords="1820,238,1979,279"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a28a245a89387aec1673edc510a485279" title="Convert FAT area index to LBA." alt="" coords="1546,457,1733,498"/>
-<area shape="rect" href="classopenfsl_1_1_container.html#ad0fa530d91da46276e19b08f9e468b62" title="Data buffer getter." alt="" coords="1829,1050,1970,1091"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#af802839a7004450da93b8dbcd6f5e222" title="Update FSINFO." alt="" coords="1548,894,1731,935"/>
-<area shape="rect" href="classopenfsl_1_1_block_device.html#a6f344509ac727d84dfaa6aafa516cde4" title=" " alt="" coords="1820,894,1979,935"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#adf6fb22c5ab89773c0c6e885cf174c41" title=" " alt="" coords="1542,843,1737,869"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a2b967692b67583b3ac9ef80350eec46e" title=" " alt="" coords="1533,1113,1745,1154"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#ad05834b7f84560d96c449347c6cfd4f7" title=" " alt="" coords="1793,1115,2005,1157"/>
+<area shape="rect" title=" " alt="" coords="5,1122,188,1149"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a03bfaefead11ea43b31614841cfb12ff" title="Create file." alt="" coords="236,1093,433,1119"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ab0d40b804e1ff21de7ccf2509c93da5b" title="Separate file name." alt="" coords="237,1144,432,1185"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a4474f7143bbd15c8cd6d30d527bf7a7e" title="Create entry." alt="" coords="507,745,685,787"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#ac2e7fe5cbcc1a42946d5c341e0723be2" title=" " alt="" coords="1271,695,1483,736"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a97fcec9162808ca5ab0ea5af049c46b1" title=" " alt="" coords="1027,1115,1214,1156"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a879b401e9118b7ee603079d4c7ad294d" title="Get Next Free Cluster." alt="" coords="1544,5,1735,47"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a6a92358aeab835341528e27034619d3a" title="Insert cache." alt="" coords="509,1115,683,1156"/>
+<area shape="rect" href="namespaceopenfsl.html#a2c9f28e2ca425950c3cdf70d71847049" title=" " alt="" coords="499,1181,693,1207"/>
+<area shape="rect" href="namespaceopenfsl.html#a4a4e8692613060f54fd0b4f035db8df3" title=" " alt="" coords="515,1231,677,1258"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a9ae40bd9e708e6c5a4075a5d9efa3008" title=" " alt="" coords="481,1282,711,1309"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a7a3ec9435f37a905a9e41358c94a98aa" title="Change directory." alt="" coords="781,955,951,982"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a047e0ac2afa1b920d216a17320ee62a5" title=" " alt="" coords="1271,1005,1483,1047"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a0e9eedc9ddbc97f049c039f608f57089" title="Checksum." alt="" coords="759,550,973,577"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a550cbd04ddbd057c5938cea9780b2bfb" title=" " alt="" coords="759,601,973,627"/>
+<area shape="rect" href="createentry_8cpp.html#ad707323f8f1c2e0a4721281846d08f2b" title=" " alt="" coords="805,651,927,678"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ad431a07239e2a1b663caf451cae14b08" title="List directory contents as path." alt="" coords="777,753,955,779"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a1106ff51e59165f4712520051890ec51" title=" " alt="" coords="759,803,973,830"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a7faa067fdc4ed800aa0a5dcd0d9572e4" title="UTF&#45;8 string to UCS&#45;2 string." alt="" coords="765,905,967,931"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a4f075b67b497efc5f561b8e9ab849986" title=" " alt="" coords="1271,391,1483,432"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a4848493e0f5d9c52ea1f101d2ded5b81" title=" " alt="" coords="1533,509,1745,551"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a36b307a4e0888e00daf9c0d9a4854f35" title=" " alt="" coords="1271,787,1483,828"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a3ed1aabf1c80fca2be4ab1463cffa460" title=" " alt="" coords="1027,881,1214,923"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#af885a8d4ff467f6fff87876ebb526805" title="Get cache value." alt="" coords="1021,947,1220,988"/>
+<area shape="rect" href="namespaceopenfsl.html#af5d84bfd77cfffcf6eca548c58646865" title="String tokenizer." alt="" coords="1290,1097,1463,1123"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a7c50adb782f3181c23412bf2cb2e3b9c" title="UCS&#45;2 string to UTF&#45;8 string." alt="" coords="1277,954,1477,981"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a93f6e6cfc1dd779cd1fb11fece3587e2" title=" " alt="" coords="1269,853,1484,879"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a9899388cca12b6641d797a67f2bbbf44" title=" " alt="" coords="1268,903,1485,930"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a36669702f58485e2d745e616736d630b" title=" " alt="" coords="1533,947,1745,988"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a68ad9ea509479c36026980f35c3648f0" title=" " alt="" coords="2053,819,2224,846"/>
+<area shape="rect" href="classopenfsl_1_1_sector.html#af9128b9d68ff6b96d70336a6e51d23e4" title="Data buffer getter." alt="" coords="1810,1114,1989,1141"/>
+<area shape="rect" href="classopenfsl_1_1_block_device.html#a47f31aa57ca6e82567148f7875a81162" title=" " alt="" coords="1820,867,1979,908"/>
+<area shape="rect" href="classopenfsl_1_1_file_system.html#a665ece3593447d10c8d56d1605f05784" title=" " alt="" coords="1824,763,1975,804"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a68c4914e5a1eeb33c44b0e31e9a5b4ff" title=" " alt="" coords="1793,672,2005,713"/>
+<area shape="rect" href="classopenfsl_1_1_file_system.html#ac66d2dd1349a54c08d816e466042cf5b" title=" " alt="" coords="1824,484,1975,525"/>
+<area shape="rect" href="classopenfsl_1_1_block_device.html#abb336a5c13d81a7587ad19da73097f43" title=" " alt="" coords="1820,984,1979,1025"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a28a245a89387aec1673edc510a485279" title="Convert FAT area index to LBA." alt="" coords="1546,677,1733,719"/>
+<area shape="rect" href="classopenfsl_1_1_container.html#ad0fa530d91da46276e19b08f9e468b62" title="Data buffer getter." alt="" coords="1829,108,1970,149"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#af802839a7004450da93b8dbcd6f5e222" title="Update FSINFO." alt="" coords="1548,392,1731,433"/>
+<area shape="rect" href="classopenfsl_1_1_block_device.html#a6f344509ac727d84dfaa6aafa516cde4" title=" " alt="" coords="1820,392,1979,433"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#adf6fb22c5ab89773c0c6e885cf174c41" title=" " alt="" coords="1542,71,1737,98"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a2b967692b67583b3ac9ef80350eec46e" title=" " alt="" coords="1533,173,1745,215"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#ad05834b7f84560d96c449347c6cfd4f7" title=" " alt="" coords="1793,173,2005,215"/>
 </map>
 </div>
+
+</div>
+</div>
+<a id="a4f38bf5def602b98a9fb738d03521a9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f38bf5def602b98a9fb738d03521a9d">&#9670;&nbsp;</a></span>move()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="error_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a> openfsl::FAT32::move </td>
+          <td>(</td>
+          <td class="paramtype">const std::string&#160;</td>
+          <td class="paramname"><em>from</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string&#160;</td>
+          <td class="paramname"><em>to</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="wrapper__file_8cpp_source.html#l00027">27</a> of file <a class="el" href="wrapper__file_8cpp_source.html">wrapper_file.cpp</a>.</p>
 
 </div>
 </div>
@@ -4313,6 +4721,7 @@ Here is the call graph for this function:</div>
 <li>fs/fat32/src/<a class="el" href="checkempty_8cpp_source.html">checkempty.cpp</a></li>
 <li>fs/fat32/src/<a class="el" href="checksum_8cpp_source.html">checksum.cpp</a></li>
 <li>fs/fat32/src/<a class="el" href="classgeneral_8cpp_source.html">classgeneral.cpp</a></li>
+<li>fs/fat32/src/<a class="el" href="copy_8cpp_source.html">copy.cpp</a></li>
 <li>fs/fat32/src/<a class="el" href="createentry_8cpp_source.html">createentry.cpp</a></li>
 <li>fs/fat32/src/<a class="el" href="fatarea_8cpp_source.html">fatarea.cpp</a></li>
 <li>fs/fat32/src/<a class="el" href="filename_8cpp_source.html">filename.cpp</a></li>
@@ -4323,10 +4732,12 @@ Here is the call graph for this function:</div>
 <li>fs/fat32/src/<a class="el" href="initialize_8cpp_source.html">initialize.cpp</a></li>
 <li>fs/fat32/src/<a class="el" href="makedir_8cpp_source.html">makedir.cpp</a></li>
 <li>fs/fat32/src/<a class="el" href="makefile_8cpp_source.html">makefile.cpp</a></li>
+<li>fs/fat32/src/<a class="el" href="move_8cpp_source.html">move.cpp</a></li>
 <li>fs/fat32/src/<a class="el" href="nextcluster_8cpp_source.html">nextcluster.cpp</a></li>
 <li>fs/fat32/src/<a class="el" href="path_8cpp_source.html">path.cpp</a></li>
 <li>fs/fat32/src/<a class="el" href="remove_8cpp_source.html">remove.cpp</a></li>
 <li>fs/fat32/src/<a class="el" href="removeentry_8cpp_source.html">removeentry.cpp</a></li>
+<li>fs/fat32/src/<a class="el" href="search_8cpp_source.html">search.cpp</a></li>
 <li>fs/fat32/src/<a class="el" href="setentryinfo_8cpp_source.html">setentryinfo.cpp</a></li>
 <li>fs/fat32/src/<a class="el" href="time_8cpp_source.html">time.cpp</a></li>
 <li>fs/fat32/src/<a class="el" href="wrapper__directory_8cpp_source.html">wrapper_directory.cpp</a></li>

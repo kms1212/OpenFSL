@@ -1,5 +1,6 @@
 <map id="openfsl::FAT32::__removeEntry" name="openfsl::FAT32::__removeEntry">
-<area shape="rect" id="node1" title="Remove entry." alt="" coords="245,27,433,69"/>
-<area shape="rect" id="node2" href="$classopenfsl_1_1_f_a_t32.html#aac72f94554b8a89f49861a9d7d23a32a" title="Remove directory or file." alt="" coords="7,5,195,32"/>
-<area shape="rect" id="node3" href="$classopenfsl_1_1_f_a_t32.html#a8c4fd9c81051e976e0557610b3ccee27" title=" " alt="" coords="5,57,197,98"/>
+<area shape="rect" id="node1" title="Remove entry." alt="" coords="245,49,433,90"/>
+<area shape="rect" id="node2" href="$classopenfsl_1_1_f_a_t32.html#a12296dd6f92142d705f0762b1bbdc2db" title=" " alt="" coords="14,5,189,32"/>
+<area shape="rect" id="node3" href="$classopenfsl_1_1_f_a_t32.html#aac72f94554b8a89f49861a9d7d23a32a" title="Remove directory or file." alt="" coords="7,56,195,83"/>
+<area shape="rect" id="node4" href="$classopenfsl_1_1_f_a_t32.html#a8c4fd9c81051e976e0557610b3ccee27" title=" " alt="" coords="5,107,197,149"/>
 </map>

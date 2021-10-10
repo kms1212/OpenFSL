@@ -1,11 +1,12 @@
 <map id="openfsl::FAT32::__fatAreaIndexToSector" name="openfsl::FAT32::__fatAreaIndexToSector">
-<area shape="rect" id="node1" title="Convert FAT area index to LBA." alt="" coords="968,114,1155,155"/>
-<area shape="rect" id="node2" href="$classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a4f075b67b497efc5f561b8e9ab849986" title=" " alt="" coords="708,81,920,122"/>
-<area shape="rect" id="node9" href="$classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a9792c4764310d1037ac0633014bbe7c3" title=" " alt="" coords="708,146,920,187"/>
-<area shape="rect" id="node3" href="$classopenfsl_1_1_f_a_t32.html#a4474f7143bbd15c8cd6d30d527bf7a7e" title="Create entry." alt="" coords="481,49,660,90"/>
-<area shape="rect" id="node8" href="$classopenfsl_1_1_f_a_t32_1_1_f_i_l_e.html#aae800cf33c9931ec924676567121f0b3" title="Write file." alt="" coords="495,114,646,155"/>
+<area shape="rect" id="node1" title="Convert FAT area index to LBA." alt="" coords="968,139,1155,181"/>
+<area shape="rect" id="node2" href="$classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a4f075b67b497efc5f561b8e9ab849986" title=" " alt="" coords="708,106,920,147"/>
+<area shape="rect" id="node10" href="$classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a9792c4764310d1037ac0633014bbe7c3" title=" " alt="" coords="708,171,920,213"/>
+<area shape="rect" id="node3" href="$classopenfsl_1_1_f_a_t32.html#a4474f7143bbd15c8cd6d30d527bf7a7e" title="Create entry." alt="" coords="481,74,660,115"/>
+<area shape="rect" id="node9" href="$classopenfsl_1_1_f_a_t32_1_1_f_i_l_e.html#aae800cf33c9931ec924676567121f0b3" title="Write file." alt="" coords="495,139,646,181"/>
 <area shape="rect" id="node4" href="$classopenfsl_1_1_f_a_t32.html#ad57d2efce5f6bb3f3266b52ec7262f05" title="Create directory." alt="" coords="238,5,431,32"/>
 <area shape="rect" id="node5" href="$classopenfsl_1_1_f_a_t32.html#a03bfaefead11ea43b31614841cfb12ff" title="Create file." alt="" coords="236,56,433,83"/>
-<area shape="rect" id="node7" href="$classopenfsl_1_1_f_a_t32.html#a8c4fd9c81051e976e0557610b3ccee27" title=" " alt="" coords="239,107,431,149"/>
+<area shape="rect" id="node7" href="$classopenfsl_1_1_f_a_t32.html#a12296dd6f92142d705f0762b1bbdc2db" title=" " alt="" coords="247,107,422,133"/>
+<area shape="rect" id="node8" href="$classopenfsl_1_1_f_a_t32.html#a8c4fd9c81051e976e0557610b3ccee27" title=" " alt="" coords="239,158,431,199"/>
 <area shape="rect" id="node6" href="$classopenfsl_1_1_f_a_t32.html#a322bde9dfda6dbb287fc39cc8828d801" title=" " alt="" coords="5,56,188,83"/>
 </map>
