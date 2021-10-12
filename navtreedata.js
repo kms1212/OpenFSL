@@ -30,10 +30,11 @@ var NAVTREE =
         [ "Static Library", "index.html#autotoc_md4", null ]
       ] ],
       [ "Description", "index.html#autotoc_md5", null ],
-      [ "Other", "index.html#autotoc_md6", [
-        [ "Documents", "index.html#autotoc_md7", null ],
-        [ "Discord", "index.html#autotoc_md8", null ],
-        [ "License", "index.html#autotoc_md9", null ]
+      [ "Arch/platforms[^note]", "index.html#autotoc_md6", null ],
+      [ "Other", "index.html#autotoc_md7", [
+        [ "Documents", "index.html#autotoc_md8", null ],
+        [ "Discord", "index.html#autotoc_md9", null ],
+        [ "License", "index.html#autotoc_md10", null ]
       ] ]
     ] ],
     [ "Todo List", "todo.html", null ],
@@ -78,8 +79,8 @@ var NAVTREEINDEX =
 [
 "annotated.html",
 "classopenfsl_1_1_m_b_r.html#a0b96adf72dee2df1ac1012dafd5036f1aeac4cc318521661babf914951a3bb23c",
-"linkedcluster__read_8cpp_source.html",
-"version_8h.html#a426d1ef396085a769b9ce00d237b4edd"
+"linkedcluster__cluster_8cpp.html",
+"symbols_8h_source.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -145,20 +145,39 @@ Static Library</h2>
 Description</h1>
 <p>Sometimes you may want to modify the file system image. And sometimes you may want to mount and read or write unsupported filesystem. I created this project to do these things without installing and mounting with <a href="https://github.com/libfuse/libfuse">libfuse</a>. <br  />
 </p>
-<p>It is currently tested on Windows Server 2019, Ubuntu 18.04/20.04, macOS 10.15, FreeBSD 13-RELEASE. Cross-compiling is not possible at this time because there are so many OS-specific build tasks. This library provides only file system control, so you have to implement the abstraction layer for the library. However, in this regard, it can have the advantage of being able to integrate into the operating system.</p>
+<p>Cross-compiling is not possible at this time because there are so many OS-specific build tasks. This library provides only file system control, so you have to implement the abstraction layer for the library. However, in this regard, it can have the advantage of being able to integrate into the operating system.</p>
 <p><img src="./doc/images/OpenFSLtoApplicationCodeStructure.png" alt="image1" width="50%" height="50%" class="inline"/></p>
 <p>In this image, the disk device abstraction layer is in user application block. But if I transform this image a little bit...</p>
 <p><img src="./doc/images/OpenFSLtoOSCodeStructure.png" alt="image1" width="35%" height="35%" class="inline"/></p>
 <p>You can integrate the library to your operating system!</p>
 <h1><a class="anchor" id="autotoc_md6"></a>
+Arch/platforms[^note]</h1>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Platform </th><th class="markdownTableHeadNone">Windows </th><th class="markdownTableHeadNone">Linux(Ubuntu) </th><th class="markdownTableHeadNone">FreeBSD </th><th class="markdownTableHeadNone">macOS  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">x86(i686) </td><td class="markdownTableBodyNone">O </td><td class="markdownTableBodyNone">O </td><td class="markdownTableBodyNone">O </td><td class="markdownTableBodyNone">X  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">x86-64 </td><td class="markdownTableBodyNone">O </td><td class="markdownTableBodyNone">O </td><td class="markdownTableBodyNone">O </td><td class="markdownTableBodyNone">O  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">aarch64 </td><td class="markdownTableBodyNone">X </td><td class="markdownTableBodyNone">O </td><td class="markdownTableBodyNone">X </td><td class="markdownTableBodyNone">X  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">armel (ARM 32-bit LE[^1]) </td><td class="markdownTableBodyNone">X </td><td class="markdownTableBodyNone">X </td><td class="markdownTableBodyNone">X </td><td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">ppc64el (PowerPC 64-bit LE[^1]) </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">X </td><td class="markdownTableBodyNone">X </td><td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">s390x </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">X </td><td class="markdownTableBodyNone">X </td><td class="markdownTableBodyNone"></td></tr>
+</table>
+<p>[^note]: 'O' means supporting, 'X' means not tested and not supported, blank means unable to build. [^1]: Little-Endian system.</p>
+<h1><a class="anchor" id="autotoc_md7"></a>
 Other</h1>
-<h2><a class="anchor" id="autotoc_md7"></a>
+<h2><a class="anchor" id="autotoc_md8"></a>
 Documents</h2>
 <p>Go to <a href="https://kms1212.github.io/OpenFSL">OpenFSL Mainpage</a> to see Documents.</p>
-<h2><a class="anchor" id="autotoc_md8"></a>
+<h2><a class="anchor" id="autotoc_md9"></a>
 Discord</h2>
 <p><a href="https://discord.gg/BvwV4U3Skr"><img src="https://img.shields.io/badge/Discord-go-blue" alt="Discord" class="inline"/></a></p>
-<h2><a class="anchor" id="autotoc_md9"></a>
+<h2><a class="anchor" id="autotoc_md10"></a>
 License</h2>
 <p>OpenFSL and its documents are licensed under the BSD-3-Clause.</p>
 <p>See the LICENSE file for more details.</p>

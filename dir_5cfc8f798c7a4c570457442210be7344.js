@@ -20,6 +20,7 @@ var dir_5cfc8f798c7a4c570457442210be7344 =
     [ "fsltime.h", "fsltime_8h.html", "fsltime_8h" ],
     [ "fslutils.h", "fslutils_8h.html", "fslutils_8h" ],
     [ "gpt.h", "gpt_8h.html", null ],
+    [ "initialize.h", "initialize_8h.html", "initialize_8h" ],
     [ "iodevice.h", "iodevice_8h.html", [
       [ "IODevice", "classopenfsl_1_1_i_o_device.html", "classopenfsl_1_1_i_o_device" ]
     ] ],
