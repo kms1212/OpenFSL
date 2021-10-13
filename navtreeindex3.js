@@ -1,10 +1,5 @@
 var NAVTREEINDEX3 =
 {
-"symbols_8h_source.html":[4,0,1,0,18],
-"time_8cpp.html":[4,0,0,0,1,41],
-"time_8cpp_source.html":[4,0,0,0,1,41],
-"todo.html":[1],
-"types_8h.html":[4,0,1,0,19],
 "types_8h.html#a025ee9c4ef443042cc67cec2acc4a394":[4,0,1,0,19,1],
 "types_8h.html#ac82097377896cd83a32c893edb39f391":[4,0,1,0,19,2],
 "types_8h_source.html":[4,0,1,0,19],
