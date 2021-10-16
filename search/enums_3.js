@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['partitiontabletype_984',['PartitionTableType',['../namespaceopenfsl.html#aaeee298c14e04bb116e0f85588036dd4',1,'openfsl']]],
-  ['partitiontype_985',['PartitionType',['../classopenfsl_1_1_m_b_r.html#a0b96adf72dee2df1ac1012dafd5036f1',1,'openfsl::MBR']]]
+  ['partitiontabletype_985',['PartitionTableType',['../namespaceopenfsl.html#aaeee298c14e04bb116e0f85588036dd4',1,'openfsl']]],
+  ['partitiontype_986',['PartitionType',['../classopenfsl_1_1_m_b_r.html#a0b96adf72dee2df1ac1012dafd5036f1',1,'openfsl::MBR']]]
 ];

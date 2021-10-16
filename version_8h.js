@@ -2,6 +2,7 @@ var version_8h =
 [
     [ "OPENFSL_VERSION_TYPE_BETA", "version_8h.html#a0dee0ecd27a2db6d38c35ba2b692605b", null ],
     [ "OPENFSL_VERSION_TYPE_NIGHTLY", "version_8h.html#abcde3a802e58a984c9155fe392b00079", null ],
+    [ "OPENFSL_VERSION_TYPE_NONE", "version_8h.html#aaed62219b926b7af56225cf4eacb3b34", null ],
     [ "OPENFSL_VERSION_TYPE_RELEASE", "version_8h.html#a426d1ef396085a769b9ce00d237b4edd", null ],
     [ "build_date", "version_8h.html#a2c5b2e0bf17053ad8009c23f65b7835e", null ],
     [ "build_type", "version_8h.html#abec36482575bb49866efbb024d86e1cf", null ],

@@ -30,12 +30,13 @@ var searchData=
   ['openfsl_5fsuccess_385',['OPENFSL_SUCCESS',['../error_8h.html#a301c819148a27e7e57a093da26677ba9',1,'error.h']]],
   ['openfsl_5fversion_5ftype_5fbeta_386',['OPENFSL_VERSION_TYPE_BETA',['../version_8h.html#a0dee0ecd27a2db6d38c35ba2b692605b',1,'version.h']]],
   ['openfsl_5fversion_5ftype_5fnightly_387',['OPENFSL_VERSION_TYPE_NIGHTLY',['../version_8h.html#abcde3a802e58a984c9155fe392b00079',1,'version.h']]],
-  ['openfsl_5fversion_5ftype_5frelease_388',['OPENFSL_VERSION_TYPE_RELEASE',['../version_8h.html#a426d1ef396085a769b9ce00d237b4edd',1,'version.h']]],
-  ['openmode_389',['openMode',['../classopenfsl_1_1_f_s_l___file.html#aa58ef17aa2d23fd67968f7baa3e78d3e',1,'openfsl::FSL_File::openMode()'],['../classopenfsl_1_1_file_block_device.html#a63e5a978f31dbac481a6a2e27b363584',1,'openfsl::FileBlockDevice::OpenMode()']]],
-  ['operator_21_3d_390',['operator!=',['../namespaceopenfsl.html#a537977f75d32f3190d091d102d0325c4',1,'openfsl']]],
-  ['operator_26_391',['operator&amp;',['../classopenfsl_1_1_f_a_t32.html#a998ed2b0841d3c673d20a6c13ba05877',1,'openfsl::FAT32::operator&amp;()'],['../namespaceopenfsl.html#a64465327289f41060d1d58732122fba4',1,'openfsl::operator&amp;()']]],
-  ['operator_2ecpp_392',['operator.cpp',['../operator_8cpp.html',1,'']]],
-  ['operator_3d_3d_393',['operator==',['../namespaceopenfsl.html#af4ef5fb6f5a83933df8fc29b10cf47c9',1,'openfsl']]],
-  ['operator_5b_5d_394',['operator[]',['../classopenfsl_1_1_container.html#a980c234cabc9e3f789dcaed7236a4eec',1,'openfsl::Container::operator[](const size_t index)'],['../classopenfsl_1_1_container.html#a78446a075844062d6581d58b76c40669',1,'openfsl::Container::operator[](const int index)']]],
-  ['operator_7c_395',['operator|',['../classopenfsl_1_1_f_a_t32.html#ac6e05d84757b1428fd4f9327bc8a02f5',1,'openfsl::FAT32::operator|()'],['../namespaceopenfsl.html#a3f320aac36e2641cab8a87af0a35f2f0',1,'openfsl::operator|()']]]
+  ['openfsl_5fversion_5ftype_5fnone_388',['OPENFSL_VERSION_TYPE_NONE',['../version_8h.html#aaed62219b926b7af56225cf4eacb3b34',1,'version.h']]],
+  ['openfsl_5fversion_5ftype_5frelease_389',['OPENFSL_VERSION_TYPE_RELEASE',['../version_8h.html#a426d1ef396085a769b9ce00d237b4edd',1,'version.h']]],
+  ['openmode_390',['openMode',['../classopenfsl_1_1_f_s_l___file.html#aa58ef17aa2d23fd67968f7baa3e78d3e',1,'openfsl::FSL_File::openMode()'],['../classopenfsl_1_1_file_block_device.html#a63e5a978f31dbac481a6a2e27b363584',1,'openfsl::FileBlockDevice::OpenMode()']]],
+  ['operator_21_3d_391',['operator!=',['../namespaceopenfsl.html#a537977f75d32f3190d091d102d0325c4',1,'openfsl']]],
+  ['operator_26_392',['operator&amp;',['../classopenfsl_1_1_f_a_t32.html#a998ed2b0841d3c673d20a6c13ba05877',1,'openfsl::FAT32::operator&amp;()'],['../namespaceopenfsl.html#a64465327289f41060d1d58732122fba4',1,'openfsl::operator&amp;()']]],
+  ['operator_2ecpp_393',['operator.cpp',['../operator_8cpp.html',1,'']]],
+  ['operator_3d_3d_394',['operator==',['../namespaceopenfsl.html#af4ef5fb6f5a83933df8fc29b10cf47c9',1,'openfsl']]],
+  ['operator_5b_5d_395',['operator[]',['../classopenfsl_1_1_container.html#a980c234cabc9e3f789dcaed7236a4eec',1,'openfsl::Container::operator[](const size_t index)'],['../classopenfsl_1_1_container.html#a78446a075844062d6581d58b76c40669',1,'openfsl::Container::operator[](const int index)']]],
+  ['operator_7c_396',['operator|',['../classopenfsl_1_1_f_a_t32.html#ac6e05d84757b1428fd4f9327bc8a02f5',1,'openfsl::FAT32::operator|()'],['../namespaceopenfsl.html#a3f320aac36e2641cab8a87af0a35f2f0',1,'openfsl::operator|()']]]
 ];
