@@ -1,6 +1,6 @@
 <map id="openfsl::FAT32::getEntryInfo" name="openfsl::FAT32::getEntryInfo">
 <area shape="rect" id="node1" title=" " alt="" coords="5,333,209,360"/>
-<area shape="rect" id="node2" href="$classopenfsl_1_1_f_a_t32.html#ad00a1d5dae97b6ec2b680b9f2f75b483" title="Get file information." alt="" coords="258,292,451,334"/>
+<area shape="rect" id="node2" href="$classopenfsl_1_1_f_a_t32.html#a4cf9286bcf9004e3258ec747bb1c1904" title="Get file information." alt="" coords="258,292,451,334"/>
 <area shape="rect" id="node21" href="$classopenfsl_1_1_f_a_t32.html#ab0d40b804e1ff21de7ccf2509c93da5b" title="Separate file name." alt="" coords="257,358,452,399"/>
 <area shape="rect" id="node3" href="$classopenfsl_1_1_f_a_t32.html#a7a3ec9435f37a905a9e41358c94a98aa" title="Change directory." alt="" coords="500,328,671,354"/>
 <area shape="rect" id="node4" href="$classopenfsl_1_1_f_a_t32.html#a3ed1aabf1c80fca2be4ab1463cffa460" title=" " alt="" coords="725,262,911,303"/>

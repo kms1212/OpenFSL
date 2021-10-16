@@ -12,5 +12,6 @@ var dir_68267d1309a1af8e8297ef4c3efbcdba =
     [ "initialize.cpp", "src_2initialize_8cpp.html", null ],
     [ "iodevice.cpp", "iodevice_8cpp.html", null ],
     [ "mbr.cpp", "mbr_8cpp.html", null ],
-    [ "sector.cpp", "sector_8cpp.html", null ]
+    [ "sector.cpp", "sector_8cpp.html", null ],
+    [ "version.cpp", "version_8cpp.html", null ]
 ];

@@ -110,40 +110,37 @@ $(document).ready(function(){initNavTree('version_8h_source.html',''); initResiz
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#ifndef OPENFSL_VERSION_H_</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#define OPENFSL_VERSION_H_</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#ifndef __cplusplus</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#error C++ compiler required.</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="version_8h.html#a426d1ef396085a769b9ce00d237b4edd">   17</a></span>&#160;<span class="preprocessor">#define OPENFSL_VERSION_TYPE_RELEASE 0</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="version_8h.html#a0dee0ecd27a2db6d38c35ba2b692605b">   18</a></span>&#160;<span class="preprocessor">#define OPENFSL_VERSION_TYPE_BETA 1</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="version_8h.html#abcde3a802e58a984c9155fe392b00079">   19</a></span>&#160;<span class="preprocessor">#define OPENFSL_VERSION_TYPE_NIGHTLY 2</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="version_8h.html#a09c141948b05289adb9de57784fbf983">   21</a></span>&#160;<span class="preprocessor">#define OPENFSL_VERSION_TYPE OPENFSL_VERSION_TYPE_NIGHTLY</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#ifndef __cplusplus</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#error C++ compiler required.</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="version_8h.html#a426d1ef396085a769b9ce00d237b4edd">   19</a></span>&#160;<span class="preprocessor">#define OPENFSL_VERSION_TYPE_RELEASE 0</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="version_8h.html#a0dee0ecd27a2db6d38c35ba2b692605b">   20</a></span>&#160;<span class="preprocessor">#define OPENFSL_VERSION_TYPE_BETA 1</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="version_8h.html#abcde3a802e58a984c9155fe392b00079">   21</a></span>&#160;<span class="preprocessor">#define OPENFSL_VERSION_TYPE_NIGHTLY 2</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="version_8h.html#acb1d3653e65bf49af3f8c9299204ab1d">   23</a></span>&#160;<span class="preprocessor">#define OPENFSL_VERSION_MAJOR 0</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="version_8h.html#a7b3b5696069fa694a96cdbacf956f4cd">   24</a></span>&#160;<span class="preprocessor">#define OPENFSL_VERSION_MINOR 0</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#if OPENFSL_VERSION_TYPE == OPENFSL_VERSION_TYPE_RELEASE // Release build</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#define OPENFSL_VERSION_PATCH </span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#define OPENFSL_VERSION_STRING &quot;&quot;</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#elif OPENFSL_VERSION_TYPE == OPENFSL_VERSION_TYPE_BETA // Beta build</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceopenfsl.html">openfsl</a> {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">extern</span> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="namespaceopenfsl.html#abec36482575bb49866efbb024d86e1cf">build_type</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">extern</span> <span class="keyword">const</span> uint32_t <a class="code" href="namespaceopenfsl.html#a05ab55e556cd2ff4c5f4275dd6318aa8">version_major</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">extern</span> <span class="keyword">const</span> uint32_t <a class="code" href="namespaceopenfsl.html#ae35ad9c94f8035d357e576dd0126c917">version_minor</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">extern</span> <span class="keyword">const</span> uint32_t <a class="code" href="namespaceopenfsl.html#ab183e1d17ce99d35972ae472f3ff9b0e">version_patch</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">extern</span> <span class="keyword">const</span> uint32_t <a class="code" href="namespaceopenfsl.html#a6269ae4e7617141061705cde957f5edc">version_build</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">extern</span> <span class="keyword">const</span> uint32_t <a class="code" href="namespaceopenfsl.html#a2c5b2e0bf17053ad8009c23f65b7835e">build_date</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keyword">extern</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="namespaceopenfsl.html#a99c1bcf47990042e077fada891e054aa">version_str</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#define OPENFSL_VERSION_BUILD </span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#define OPENFSL_VERSION_STRING &quot;&quot;</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#elif OPENFSL_VERSION_TYPE == OPENFSL_VERSION_TYPE_NIGHTLY // Nightly build</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#define OPENFSL_VERSION_DATE 20211014</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#define OPENFSL_VERSION_BUILD 3</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#define OPENFSL_VERSION_STRING &quot;0.0.20211014NR.3&quot;</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#endif  // OPENFSL_VERSION_H_</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="anamespaceopenfsl_html_abec36482575bb49866efbb024d86e1cf"><div class="ttname"><a href="namespaceopenfsl.html#abec36482575bb49866efbb024d86e1cf">openfsl::build_type</a></div><div class="ttdeci">const int build_type</div><div class="ttdef"><b>Definition:</b> <a href="version_8cpp_source.html#l00012">version.cpp:12</a></div></div>
+<div class="ttc" id="anamespaceopenfsl_html"><div class="ttname"><a href="namespaceopenfsl.html">openfsl</a></div><div class="ttdef"><b>Definition:</b> <a href="blockdevice_8h_source.html#l00028">blockdevice.h:28</a></div></div>
+<div class="ttc" id="anamespaceopenfsl_html_ab183e1d17ce99d35972ae472f3ff9b0e"><div class="ttname"><a href="namespaceopenfsl.html#ab183e1d17ce99d35972ae472f3ff9b0e">openfsl::version_patch</a></div><div class="ttdeci">const uint32_t version_patch</div><div class="ttdef"><b>Definition:</b> <a href="version_8cpp_source.html#l00015">version.cpp:15</a></div></div>
+<div class="ttc" id="anamespaceopenfsl_html_ae35ad9c94f8035d357e576dd0126c917"><div class="ttname"><a href="namespaceopenfsl.html#ae35ad9c94f8035d357e576dd0126c917">openfsl::version_minor</a></div><div class="ttdeci">const uint32_t version_minor</div><div class="ttdef"><b>Definition:</b> <a href="version_8cpp_source.html#l00014">version.cpp:14</a></div></div>
+<div class="ttc" id="anamespaceopenfsl_html_a05ab55e556cd2ff4c5f4275dd6318aa8"><div class="ttname"><a href="namespaceopenfsl.html#a05ab55e556cd2ff4c5f4275dd6318aa8">openfsl::version_major</a></div><div class="ttdeci">const uint32_t version_major</div><div class="ttdef"><b>Definition:</b> <a href="version_8cpp_source.html#l00013">version.cpp:13</a></div></div>
+<div class="ttc" id="anamespaceopenfsl_html_a99c1bcf47990042e077fada891e054aa"><div class="ttname"><a href="namespaceopenfsl.html#a99c1bcf47990042e077fada891e054aa">openfsl::version_str</a></div><div class="ttdeci">const char * version_str</div><div class="ttdef"><b>Definition:</b> <a href="version_8cpp_source.html#l00018">version.cpp:18</a></div></div>
+<div class="ttc" id="anamespaceopenfsl_html_a2c5b2e0bf17053ad8009c23f65b7835e"><div class="ttname"><a href="namespaceopenfsl.html#a2c5b2e0bf17053ad8009c23f65b7835e">openfsl::build_date</a></div><div class="ttdeci">const uint32_t build_date</div><div class="ttdef"><b>Definition:</b> <a href="version_8cpp_source.html#l00017">version.cpp:17</a></div></div>
+<div class="ttc" id="anamespaceopenfsl_html_a6269ae4e7617141061705cde957f5edc"><div class="ttname"><a href="namespaceopenfsl.html#a6269ae4e7617141061705cde957f5edc">openfsl::version_build</a></div><div class="ttdeci">const uint32_t version_build</div><div class="ttdef"><b>Definition:</b> <a href="version_8cpp_source.html#l00016">version.cpp:16</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
