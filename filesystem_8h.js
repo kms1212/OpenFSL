@@ -11,7 +11,7 @@ var filesystem_8h =
       [ "Ext2", "filesystem_8h.html#a43add8221d9aa3cd7285f47e4e04e72ea236cf69d0059c35c14ee8f611edf0a92", null ],
       [ "Ext3", "filesystem_8h.html#a43add8221d9aa3cd7285f47e4e04e72ea42d4c7c07e0c47d1972690705167ace4", null ],
       [ "Ext4", "filesystem_8h.html#a43add8221d9aa3cd7285f47e4e04e72eabbcd9ab672e711a4d0e8900674c1ab1c", null ],
-      [ "BtrFs", "filesystem_8h.html#a43add8221d9aa3cd7285f47e4e04e72ead328257a247d3765b7f2853b29fef513", null ],
+      [ "BtrFS", "filesystem_8h.html#a43add8221d9aa3cd7285f47e4e04e72eaf790a39e740a5bbbda65bfd1c58dc7f2", null ],
       [ "HFSPlus", "filesystem_8h.html#a43add8221d9aa3cd7285f47e4e04e72ea568f795f7cf79887e1d10034c76dab29", null ],
       [ "APFS", "filesystem_8h.html#a43add8221d9aa3cd7285f47e4e04e72eac07bdd06813e0ac5fa2555c26bca2cbc", null ],
       [ "ISO9660", "filesystem_8h.html#a43add8221d9aa3cd7285f47e4e04e72eaa4767d59f487d28f9234ab74542a6069", null ],

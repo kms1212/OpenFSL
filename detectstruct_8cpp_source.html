@@ -170,16 +170,34 @@ $(document).ready(function(){initNavTree('detectstruct_8cpp_source.html',''); in
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
 <div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="namespaceopenfsl.html#af0c653bca3fe7d5fe083c0225e7f25ea">   72</a></span>&#160;std::string <a class="code" href="namespaceopenfsl.html#af0c653bca3fe7d5fe083c0225e7f25ea">openfsl::fileSystemTypeToString</a>(<span class="keyword">const</span> <a class="code" href="namespaceopenfsl.html#a43add8221d9aa3cd7285f47e4e04e72e">FileSystemType</a> type) {</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordflow">if</span> (type == FileSystemType::FAT12)</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;FAT12&quot;</span>;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (type == FileSystemType::FAT16)</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;FAT16&quot;</span>;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (type == FileSystemType::FAT32)</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;FAT32&quot;</span>;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (type == FileSystemType::NTFS)</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;NTFS&quot;</span>;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;ERR&quot;</span>;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;}</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordflow">if</span> (type == FileSystemType::APFS)</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;APFS&quot;</span>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (type == FileSystemType::BtrFS)</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;Btrfs&quot;</span>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (type == FileSystemType::ExFAT)</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;exFAT&quot;</span>;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (type == FileSystemType::Ext2)</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;ext2&quot;</span>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (type == FileSystemType::Ext3)</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;ext3&quot;</span>;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (type == FileSystemType::Ext4)</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;ext2&quot;</span>;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (type == FileSystemType::FAT12)</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;FAT12&quot;</span>;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (type == FileSystemType::FAT16)</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;FAT16&quot;</span>;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (type == FileSystemType::FAT32)</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;FAT32&quot;</span>;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (type == FileSystemType::HFSPlus)</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;HFS+&quot;</span>;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (type == FileSystemType::ISO9660)</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;ISO9660&quot;</span>;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (type == FileSystemType::NTFS)</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;NTFS&quot;</span>;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (type == FileSystemType::UDF)</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;UDF&quot;</span>;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;ERR&quot;</span>;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aclassopenfsl_1_1_block_device_html_a47f31aa57ca6e82567148f7875a81162"><div class="ttname"><a href="classopenfsl_1_1_block_device.html#a47f31aa57ca6e82567148f7875a81162">openfsl::BlockDevice::getDiskParameter</a></div><div class="ttdeci">DiskParameter getDiskParameter()</div><div class="ttdef"><b>Definition:</b> <a href="blockdevice_8h_source.html#l00105">blockdevice.h:105</a></div></div>

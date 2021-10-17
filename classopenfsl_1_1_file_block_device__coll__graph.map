@@ -1,5 +1,5 @@
 <map id="openfsl::FileBlockDevice" name="openfsl::FileBlockDevice">
-<area shape="rect" id="node1" title=" " alt="" coords="531,631,714,811"/>
+<area shape="rect" id="node1" title=" " alt="" coords="598,631,781,825"/>
 <area shape="rect" id="node2" href="$classopenfsl_1_1_block_device.html" title="Disk driver." alt="" coords="375,403,539,568"/>
 <area shape="rect" id="node3" href="$classopenfsl_1_1_i_o_device.html" title=" " alt="" coords="147,204,285,340"/>
 <area shape="rect" id="node4" title=" " alt="" coords="5,27,69,105"/>
@@ -12,4 +12,5 @@
 <area shape="rect" id="node11" title=" " alt="" coords="821,27,888,105"/>
 <area shape="rect" id="node12" title=" " alt="" coords="563,447,682,524"/>
 <area shape="rect" id="node13" title=" " alt="" coords="721,447,794,524"/>
+<area shape="rect" id="node14" title=" " alt="" coords="819,447,877,524"/>
 </map>
