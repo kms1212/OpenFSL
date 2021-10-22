@@ -96,9 +96,11 @@ $(document).ready(function(){initNavTree('classopenfsl_1_1_n_t_f_s.html',''); in
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="#pri-types">Private Types</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classopenfsl_1_1_n_t_f_s-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">openfsl::NTFS Class Reference</div>  </div>
@@ -114,7 +116,7 @@ Inheritance diagram for openfsl::NTFS:</div>
 <div class="dyncontent">
 <div class="center"><img src="classopenfsl_1_1_n_t_f_s__inherit__graph.png" border="0" usemap="#openfsl_1_1_n_t_f_s_inherit__map" alt="Inheritance graph"/></div>
 <map name="openfsl_1_1_n_t_f_s_inherit__map" id="openfsl_1_1_n_t_f_s_inherit__map">
-<area shape="rect" title="NTFS imeplementation." alt="" coords="25,683,136,789"/>
+<area shape="rect" title="NTFS imeplementation." alt="" coords="25,683,136,819"/>
 <area shape="rect" href="classopenfsl_1_1_file_system.html" title=" " alt="" coords="5,351,156,633"/>
 <area shape="rect" href="classopenfsl_1_1_file_system.html" title=" " alt="" coords="5,5,156,288"/>
 </map>
@@ -124,24 +126,26 @@ Collaboration diagram for openfsl::NTFS:</div>
 <div class="dyncontent">
 <div class="center"><img src="classopenfsl_1_1_n_t_f_s__coll__graph.png" border="0" usemap="#openfsl_1_1_n_t_f_s_coll__map" alt="Collaboration graph"/></div>
 <map name="openfsl_1_1_n_t_f_s_coll__map" id="openfsl_1_1_n_t_f_s_coll__map">
-<area shape="rect" title="NTFS imeplementation." alt="" coords="939,947,1050,1053"/>
-<area shape="rect" href="classopenfsl_1_1_file_system.html" title=" " alt="" coords="819,689,970,884"/>
-<area shape="rect" href="classuint64__t.html" title=" " alt="" coords="721,233,796,311"/>
-<area shape="rect" href="classopenfsl_1_1_file_system.html" title=" " alt="" coords="965,432,1115,627"/>
-<area shape="rect" href="classopenfsl_1_1_block_device.html" title="Disk driver." alt="" coords="430,447,594,612"/>
-<area shape="rect" href="classopenfsl_1_1_i_o_device.html" title=" " alt="" coords="559,204,697,340"/>
-<area shape="rect" title=" " alt="" coords="657,27,721,105"/>
-<area shape="rect" href="classbool.html" title=" " alt="" coords="1045,27,1096,105"/>
-<area shape="rect" href="structopenfsl_1_1_block_device_1_1_i_o_functions.html" title="IO functions." alt="" coords="377,226,535,318"/>
-<area shape="rect" title=" " alt="" coords="463,5,633,127"/>
-<area shape="rect" title=" " alt="" coords="250,5,438,127"/>
-<area shape="rect" href="structopenfsl_1_1_block_device_1_1_disk_parameter.html" title="Disk Parameter." alt="" coords="109,226,267,318"/>
-<area shape="rect" title=" " alt="" coords="151,27,225,105"/>
-<area shape="rect" title=" " alt="" coords="5,27,72,105"/>
-<area shape="rect" title=" " alt="" coords="825,233,884,311"/>
-<area shape="rect" title=" " alt="" coords="1175,233,1407,311"/>
-<area shape="rect" title=" " alt="" coords="965,233,1022,311"/>
-<area shape="rect" title=" " alt="" coords="995,748,1197,825"/>
+<area shape="rect" title="NTFS imeplementation." alt="" coords="1302,987,1413,1093"/>
+<area shape="rect" href="classopenfsl_1_1_file_system.html" title=" " alt="" coords="1182,729,1333,924"/>
+<area shape="rect" href="classuint64__t.html" title=" " alt="" coords="1220,246,1295,323"/>
+<area shape="rect" href="classopenfsl_1_1_file_system.html" title=" " alt="" coords="1546,472,1697,667"/>
+<area shape="rect" href="structopenfsl_1_1_n_t_f_s_1_1_v_b_r_sector.html" title="NTFS VBR." alt="" coords="812,523,999,615"/>
+<area shape="rect" href="classopenfsl_1_1_block_device.html" title="Disk driver." alt="" coords="607,487,771,652"/>
+<area shape="rect" href="classopenfsl_1_1_i_o_device.html" title=" " alt="" coords="995,217,1133,353"/>
+<area shape="rect" title=" " alt="" coords="860,27,924,105"/>
+<area shape="rect" href="classbool.html" title=" " alt="" coords="1145,27,1196,105"/>
+<area shape="rect" href="structopenfsl_1_1_block_device_1_1_i_o_functions.html" title="IO functions." alt="" coords="203,239,362,331"/>
+<area shape="rect" title=" " alt="" coords="5,5,176,127"/>
+<area shape="rect" title=" " alt="" coords="201,5,389,127"/>
+<area shape="rect" href="structopenfsl_1_1_block_device_1_1_disk_parameter.html" title="Disk Parameter." alt="" coords="587,239,746,331"/>
+<area shape="rect" title=" " alt="" coords="693,27,768,105"/>
+<area shape="rect" title=" " alt="" coords="440,27,507,105"/>
+<area shape="rect" title=" " alt="" coords="1405,246,1464,323"/>
+<area shape="rect" title=" " alt="" coords="1756,246,1988,323"/>
+<area shape="rect" title=" " alt="" coords="1546,246,1603,323"/>
+<area shape="rect" title=" " alt="" coords="1357,788,1560,865"/>
+<area shape="rect" title=" " alt="" coords="1585,788,1655,865"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -151,16 +155,29 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classopenfsl_1_1_n_t_f_s.html" title="NTFS imeplementation.">NTFS</a> VBR.  <a href="structopenfsl_1_1_n_t_f_s_1_1_v_b_r_sector.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a90fc5270013fd8a0ad96d9d3fb14522b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenfsl_1_1_n_t_f_s.html#a90fc5270013fd8a0ad96d9d3fb14522b">Version</a> { <br />
+&#160;&#160;<a class="el" href="classopenfsl_1_1_n_t_f_s.html#a90fc5270013fd8a0ad96d9d3fb14522ba09d7da9ea375f1827517b45b61cfc6b8">Version::v1_0</a>, 
+<a class="el" href="classopenfsl_1_1_n_t_f_s.html#a90fc5270013fd8a0ad96d9d3fb14522ba4f397565e46919bce9d36b3c6a9cafc0">Version::v1_1</a>, 
+<a class="el" href="classopenfsl_1_1_n_t_f_s.html#a90fc5270013fd8a0ad96d9d3fb14522ba0fdcfe7bc01aadbcbb7ff8c0e1024336">Version::v1_2</a>, 
+<a class="el" href="classopenfsl_1_1_n_t_f_s.html#a90fc5270013fd8a0ad96d9d3fb14522bada8ffdf326df347037c852657770d4e0">Version::v3_0</a>, 
+<br />
+&#160;&#160;<a class="el" href="classopenfsl_1_1_n_t_f_s.html#a90fc5270013fd8a0ad96d9d3fb14522ba3fce96fee06d49ae6172f00121123837">Version::v3_1</a>
+<br />
+ }</td></tr>
+<tr class="separator:a90fc5270013fd8a0ad96d9d3fb14522b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aa1e106e75531638372e47dff55e064bc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenfsl_1_1_n_t_f_s.html#aa1e106e75531638372e47dff55e064bc">NTFS</a> (<a class="el" href="classopenfsl_1_1_block_device.html">BlockDevice</a> *bdev_, std::string startPath_=&quot;&quot;, std::string pathSeparator_=&quot;\\&quot;, std::string rootSymbol_=&quot;::&quot;)</td></tr>
-<tr class="memdesc:aa1e106e75531638372e47dff55e064bc"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classopenfsl_1_1_n_t_f_s.html" title="NTFS imeplementation.">NTFS</a> constructor.  <a href="classopenfsl_1_1_n_t_f_s.html#aa1e106e75531638372e47dff55e064bc">More...</a><br /></td></tr>
-<tr class="separator:aa1e106e75531638372e47dff55e064bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7205808ef7d7764af643c2d7427126f0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenfsl_1_1_n_t_f_s.html#a7205808ef7d7764af643c2d7427126f0">NTFS</a> (<a class="el" href="classopenfsl_1_1_block_device.html">BlockDevice</a> *bd_, const std::string startPath_=&quot;&quot;, const std::string pathSeparator_=&quot;/&quot;, const std::string rootSymbol_=&quot;::&quot;, const <a class="el" href="classopenfsl_1_1_n_t_f_s.html#a90fc5270013fd8a0ad96d9d3fb14522b">Version</a> <a class="el" href="classopenfsl_1_1_n_t_f_s.html#a44d4dd09f98cc20b891a7c6a17fe7945">version</a>=<a class="el" href="classopenfsl_1_1_n_t_f_s.html#a90fc5270013fd8a0ad96d9d3fb14522ba3fce96fee06d49ae6172f00121123837">Version::v3_1</a>)</td></tr>
+<tr class="memdesc:a7205808ef7d7764af643c2d7427126f0"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classopenfsl_1_1_n_t_f_s.html" title="NTFS imeplementation.">NTFS</a> constructor.  <a href="classopenfsl_1_1_n_t_f_s.html#a7205808ef7d7764af643c2d7427126f0">More...</a><br /></td></tr>
+<tr class="separator:a7205808ef7d7764af643c2d7427126f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a828689d4d1cda6e9fc6ddd7991d5c799"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenfsl_1_1_n_t_f_s.html#a828689d4d1cda6e9fc6ddd7991d5c799">~NTFS</a> ()</td></tr>
 <tr class="separator:a828689d4d1cda6e9fc6ddd7991d5c799"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3b3e23b139d8b2f5fa8dbb2df3e11b79"><td class="memItemLeft" align="right" valign="top"><a class="el" href="error_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a> <a class="el" href="macros_8h.html#a73fa52cd4bbaa839980b3008201d09c0">__check_result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenfsl_1_1_n_t_f_s.html#a3b3e23b139d8b2f5fa8dbb2df3e11b79">initialize</a> ()</td></tr>
-<tr class="memdesc:a3b3e23b139d8b2f5fa8dbb2df3e11b79"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classopenfsl_1_1_n_t_f_s.html" title="NTFS imeplementation.">NTFS</a> intializer.  <a href="classopenfsl_1_1_n_t_f_s.html#a3b3e23b139d8b2f5fa8dbb2df3e11b79">More...</a><br /></td></tr>
-<tr class="separator:a3b3e23b139d8b2f5fa8dbb2df3e11b79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0d2ba1c034e427115fe0809fccb4526"><td class="memItemLeft" align="right" valign="top"><a class="el" href="error_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a> <a class="el" href="macros_8h.html#a73fa52cd4bbaa839980b3008201d09c0">__check_result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenfsl_1_1_n_t_f_s.html#ab0d2ba1c034e427115fe0809fccb4526">initialize</a> ()</td></tr>
+<tr class="memdesc:ab0d2ba1c034e427115fe0809fccb4526"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classopenfsl_1_1_n_t_f_s.html" title="NTFS imeplementation.">NTFS</a> intializer.  <a href="classopenfsl_1_1_n_t_f_s.html#ab0d2ba1c034e427115fe0809fccb4526">More...</a><br /></td></tr>
+<tr class="separator:ab0d2ba1c034e427115fe0809fccb4526"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classopenfsl_1_1_file_system"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classopenfsl_1_1_file_system')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classopenfsl_1_1_file_system.html">openfsl::FileSystem&lt; BlockDevice &gt;</a></td></tr>
 <tr class="memitem:a7d2f8f81589b060930d3dd4221af772f inherit pub_methods_classopenfsl_1_1_file_system"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenfsl_1_1_file_system.html#a7d2f8f81589b060930d3dd4221af772f">FileSystem</a> (<a class="el" href="classopenfsl_1_1_block_device.html">BlockDevice</a> *iodev_, const std::string startPath_=&quot;&quot;, const std::string pathSeparator_=&quot;/&quot;, const std::string rootSymbol_=&quot;::&quot;)</td></tr>
 <tr class="separator:a7d2f8f81589b060930d3dd4221af772f inherit pub_methods_classopenfsl_1_1_file_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -192,6 +209,13 @@ Private Types</h2></td></tr>
 <tr class="memitem:a18aea91a56785790cf6cfc69c8636f2d"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structopenfsl_1_1_n_t_f_s_1_1_v_b_r_sector.html">openfsl::NTFS::VBRSector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenfsl_1_1_n_t_f_s.html#a18aea91a56785790cf6cfc69c8636f2d">VBRSector</a></td></tr>
 <tr class="memdesc:a18aea91a56785790cf6cfc69c8636f2d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classopenfsl_1_1_n_t_f_s.html" title="NTFS imeplementation.">NTFS</a> VBR.  <a href="classopenfsl_1_1_n_t_f_s.html#a18aea91a56785790cf6cfc69c8636f2d">More...</a><br /></td></tr>
 <tr class="separator:a18aea91a56785790cf6cfc69c8636f2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a44d4dd09f98cc20b891a7c6a17fe7945"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classopenfsl_1_1_n_t_f_s.html#a90fc5270013fd8a0ad96d9d3fb14522b">Version</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenfsl_1_1_n_t_f_s.html#a44d4dd09f98cc20b891a7c6a17fe7945">version</a></td></tr>
+<tr class="separator:a44d4dd09f98cc20b891a7c6a17fe7945"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0eae9505f989923eb56782b3afcc6d06"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structopenfsl_1_1_n_t_f_s_1_1_v_b_r_sector.html">VBRSector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenfsl_1_1_n_t_f_s.html#a0eae9505f989923eb56782b3afcc6d06">vbr</a></td></tr>
+<tr class="separator:a0eae9505f989923eb56782b3afcc6d06"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -282,9 +306,41 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<h2 class="groupheader">Member Enumeration Documentation</h2>
+<a id="a90fc5270013fd8a0ad96d9d3fb14522b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90fc5270013fd8a0ad96d9d3fb14522b">&#9670;&nbsp;</a></span>Version</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classopenfsl_1_1_n_t_f_s.html#a90fc5270013fd8a0ad96d9d3fb14522b">openfsl::NTFS::Version</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a90fc5270013fd8a0ad96d9d3fb14522ba09d7da9ea375f1827517b45b61cfc6b8"></a>v1_0&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a90fc5270013fd8a0ad96d9d3fb14522ba4f397565e46919bce9d36b3c6a9cafc0"></a>v1_1&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a90fc5270013fd8a0ad96d9d3fb14522ba0fdcfe7bc01aadbcbb7ff8c0e1024336"></a>v1_2&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a90fc5270013fd8a0ad96d9d3fb14522bada8ffdf326df347037c852657770d4e0"></a>v3_0&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a90fc5270013fd8a0ad96d9d3fb14522ba3fce96fee06d49ae6172f00121123837"></a>v3_1&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">Definition at line <a class="el" href="fs__ntfs_8h_source.html#l00043">43</a> of file <a class="el" href="fs__ntfs_8h_source.html">fs_ntfs.h</a>.</p>
+
+</div>
+</div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="aa1e106e75531638372e47dff55e064bc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa1e106e75531638372e47dff55e064bc">&#9670;&nbsp;</a></span>NTFS()</h2>
+<a id="a7205808ef7d7764af643c2d7427126f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7205808ef7d7764af643c2d7427126f0">&#9670;&nbsp;</a></span>NTFS()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -292,26 +348,32 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">openfsl::NTFS::NTFS </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classopenfsl_1_1_block_device.html">BlockDevice</a> *&#160;</td>
-          <td class="paramname"><em>bdev_</em>, </td>
+          <td class="paramtype"><a class="el" href="classopenfsl_1_1_block_device.html">openfsl::BlockDevice</a> *&#160;</td>
+          <td class="paramname"><em>bd_</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::string&#160;</td>
+          <td class="paramtype">const std::string&#160;</td>
           <td class="paramname"><em>startPath_</em> = <code>&quot;&quot;</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>pathSeparator_</em> = <code>&quot;\\&quot;</code>, </td>
+          <td class="paramtype">const std::string&#160;</td>
+          <td class="paramname"><em>pathSeparator_</em> = <code>&quot;/&quot;</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>rootSymbol_</em> = <code>&quot;::&quot;</code>&#160;</td>
+          <td class="paramtype">const std::string&#160;</td>
+          <td class="paramname"><em>rootSymbol_</em> = <code>&quot;::&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classopenfsl_1_1_n_t_f_s.html#a90fc5270013fd8a0ad96d9d3fb14522b">Version</a>&#160;</td>
+          <td class="paramname"><em>version</em> = <code><a class="el" href="classopenfsl_1_1_n_t_f_s.html#a90fc5270013fd8a0ad96d9d3fb14522ba3fce96fee06d49ae6172f00121123837">Version::v3_1</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -324,12 +386,14 @@ Additional Inherited Members</h2></td></tr>
 <p><a class="el" href="classopenfsl_1_1_n_t_f_s.html" title="NTFS imeplementation.">NTFS</a> constructor. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">bdev_</td><td>Block device driver class pointer </td></tr>
-    <tr><td class="paramname">pathSeparator_</td><td>File system path separator (Default: '\') </td></tr>
+    <tr><td class="paramname">bd_</td><td>Block device driver class pointer </td></tr>
+    <tr><td class="paramname">pathSeparator_</td><td>File system path separator (Default: '/') </td></tr>
     <tr><td class="paramname">rootPath_</td><td>File system root keyword (Default: "::") </td></tr>
   </table>
   </dd>
 </dl>
+
+<p class="definition">Definition at line <a class="el" href="ntfs_2src_2classgeneral_8cpp_source.html#l00012">12</a> of file <a class="el" href="ntfs_2src_2classgeneral_8cpp_source.html">classgeneral.cpp</a>.</p>
 
 </div>
 </div>
@@ -348,17 +412,19 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="ntfs_2src_2classgeneral_8cpp_source.html#l00023">23</a> of file <a class="el" href="ntfs_2src_2classgeneral_8cpp_source.html">classgeneral.cpp</a>.</p>
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a3b3e23b139d8b2f5fa8dbb2df3e11b79"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3b3e23b139d8b2f5fa8dbb2df3e11b79">&#9670;&nbsp;</a></span>initialize()</h2>
+<a id="ab0d2ba1c034e427115fe0809fccb4526"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0d2ba1c034e427115fe0809fccb4526">&#9670;&nbsp;</a></span>initialize()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="error_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a> <a class="el" href="macros_8h.html#a73fa52cd4bbaa839980b3008201d09c0">__check_result</a> openfsl::NTFS::initialize </td>
+          <td class="memname"><a class="el" href="error_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a> openfsl::NTFS::initialize </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -368,6 +434,19 @@ Additional Inherited Members</h2></td></tr>
 
 <p><a class="el" href="classopenfsl_1_1_n_t_f_s.html" title="NTFS imeplementation.">NTFS</a> intializer. </p>
 <p>Initializes <a class="el" href="classopenfsl_1_1_n_t_f_s.html" title="NTFS imeplementation.">NTFS</a> filesystem. </p>
+
+<p class="definition">Definition at line <a class="el" href="fs_2ntfs_2src_2initialize_8cpp_source.html#l00012">12</a> of file <a class="el" href="fs_2ntfs_2src_2initialize_8cpp_source.html">initialize.cpp</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classopenfsl_1_1_n_t_f_s_ab0d2ba1c034e427115fe0809fccb4526_cgraph.png" border="0" usemap="#classopenfsl_1_1_n_t_f_s_ab0d2ba1c034e427115fe0809fccb4526_cgraph" alt=""/></div>
+<map name="classopenfsl_1_1_n_t_f_s_ab0d2ba1c034e427115fe0809fccb4526_cgraph" id="classopenfsl_1_1_n_t_f_s_ab0d2ba1c034e427115fe0809fccb4526_cgraph">
+<area shape="rect" title="NTFS intializer." alt="" coords="5,78,180,105"/>
+<area shape="rect" href="classopenfsl_1_1_file_system.html#ac66d2dd1349a54c08d816e466042cf5b" title=" " alt="" coords="228,5,456,47"/>
+<area shape="rect" href="classopenfsl_1_1_file_system.html#a422eae7c59512ffea50ae831729da461" title=" " alt="" coords="267,71,417,112"/>
+<area shape="rect" href="classopenfsl_1_1_block_device.html#abb336a5c13d81a7587ad19da73097f43" title=" " alt="" coords="263,136,421,177"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -392,12 +471,62 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fs__ntfs_8h_source.html#l00093">93</a> of file <a class="el" href="fs__ntfs_8h_source.html">fs_ntfs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fs__ntfs_8h_source.html#l00106">106</a> of file <a class="el" href="fs__ntfs_8h_source.html">fs_ntfs.h</a>.</p>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<a id="a0eae9505f989923eb56782b3afcc6d06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0eae9505f989923eb56782b3afcc6d06">&#9670;&nbsp;</a></span>vbr</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structopenfsl_1_1_n_t_f_s_1_1_v_b_r_sector.html">VBRSector</a> openfsl::NTFS::vbr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="fs__ntfs_8h_source.html#l00103">103</a> of file <a class="el" href="fs__ntfs_8h_source.html">fs_ntfs.h</a>.</p>
+
+</div>
+</div>
+<a id="a44d4dd09f98cc20b891a7c6a17fe7945"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44d4dd09f98cc20b891a7c6a17fe7945">&#9670;&nbsp;</a></span>version</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classopenfsl_1_1_n_t_f_s.html#a90fc5270013fd8a0ad96d9d3fb14522b">Version</a> openfsl::NTFS::version</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="fs__ntfs_8h_source.html#l00101">101</a> of file <a class="el" href="fs__ntfs_8h_source.html">fs_ntfs.h</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>fs/ntfs/include/openfsl/ntfs/<a class="el" href="fs__ntfs_8h_source.html">fs_ntfs.h</a></li>
+<li>fs/ntfs/src/<a class="el" href="ntfs_2src_2classgeneral_8cpp_source.html">classgeneral.cpp</a></li>
+<li>fs/ntfs/src/<a class="el" href="fs_2ntfs_2src_2initialize_8cpp_source.html">initialize.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

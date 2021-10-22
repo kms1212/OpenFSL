@@ -1,4 +1,5 @@
 <map id="openfsl::FileSystem::initialize" name="openfsl::FileSystem::initialize">
-<area shape="rect" id="node1" title=" " alt="" coords="233,5,384,47"/>
-<area shape="rect" id="node2" href="$classopenfsl_1_1_f_a_t32.html#a759fb7aba2bc3101ef9534ec728f030a" title="FS_FAT32 intializer." alt="" coords="5,13,185,39"/>
+<area shape="rect" id="node1" title=" " alt="" coords="233,23,384,65"/>
+<area shape="rect" id="node2" href="$classopenfsl_1_1_n_t_f_s.html#ab0d2ba1c034e427115fe0809fccb4526" title="NTFS intializer." alt="" coords="8,5,183,32"/>
+<area shape="rect" id="node3" href="$classopenfsl_1_1_f_a_t32.html#a759fb7aba2bc3101ef9534ec728f030a" title="FS_FAT32 intializer." alt="" coords="5,56,185,83"/>
 </map>

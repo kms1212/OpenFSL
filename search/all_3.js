@@ -22,7 +22,7 @@ var searchData=
   ['checkempty_2ecpp_109',['checkempty.cpp',['../checkempty_8cpp.html',1,'']]],
   ['checksum_2ecpp_110',['checksum.cpp',['../checksum_8cpp.html',1,'']]],
   ['chs_111',['CHS',['../structopenfsl_1_1_c_h_s.html',1,'openfsl::CHS'],['../namespaceopenfsl.html#a025ee9c4ef443042cc67cec2acc4a394',1,'openfsl::CHS()']]],
-  ['classgeneral_2ecpp_112',['classgeneral.cpp',['../classgeneral_8cpp.html',1,'']]],
+  ['classgeneral_2ecpp_112',['classgeneral.cpp',['../fat32_2src_2classgeneral_8cpp.html',1,'(Global Namespace)'],['../ntfs_2src_2classgeneral_8cpp.html',1,'(Global Namespace)']]],
   ['close_113',['close',['../classopenfsl_1_1_f_a_t32_1_1_f_i_l_e.html#a77a87778abcba37a3094eddfc18753be',1,'openfsl::FAT32::FILE']]],
   ['cluster_5ft_114',['cluster_t',['../classopenfsl_1_1_f_a_t32.html#abc3a9899a34a113a605666126791a40d',1,'openfsl::FAT32']]],
   ['clusterlist_115',['clusterList',['../classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#afe87cb56b5ce5a7fef3ecb25acac8e20',1,'openfsl::FAT32::LinkedCluster']]],
