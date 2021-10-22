@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>OpenFSL: include/openfsl/bootcode.h File Reference</title>
+<title>OpenFSL: src/bootcode.c File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -75,7 +75,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('bootcode_8h.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('bootcode_8c.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -95,65 +95,61 @@ $(document).ready(function(){initNavTree('bootcode_8h.html',''); initResizable()
 
 <div class="header">
   <div class="summary">
+<a href="#define-members">Macros</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
-<div class="title">bootcode.h File Reference</div>  </div>
+<div class="title">bootcode.c File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><div class="dynheader">
-This graph shows which files directly or indirectly include this file:</div>
-<div class="dyncontent">
-<div class="center"><img src="bootcode_8h__dep__incl.png" border="0" usemap="#include_2openfsl_2bootcode_8hdep" alt=""/></div>
-<map name="include_2openfsl_2bootcode_8hdep" id="include_2openfsl_2bootcode_8hdep">
-<area shape="rect" title=" " alt="" coords="101,5,298,32"/>
-<area shape="rect" href="openfsl_8h.html" title=" " alt="" coords="5,80,191,107"/>
-<area shape="rect" href="format_8cpp.html" title=" " alt="" coords="215,80,386,107"/>
-</map>
-</div>
-</div>
-<p><a href="bootcode_8h_source.html">Go to the source code of this file.</a></p>
+
+<p><a href="bootcode_8c_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a380572116898bf102f9a4658fc7fe777"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bootcode_8c.html#a380572116898bf102f9a4658fc7fe777">_BOOTCODE_C</a></td></tr>
+<tr class="separator:a380572116898bf102f9a4658fc7fe777"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:ac9b1bc80147e6b33e5835c30ff237a64"><td class="memItemLeft" align="right" valign="top">const unsigned long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bootcode_8h.html#ac9b1bc80147e6b33e5835c30ff237a64">_blob_mbrboot_bin_len</a> = 128</td></tr>
+<tr class="memitem:ac9b1bc80147e6b33e5835c30ff237a64"><td class="memItemLeft" align="right" valign="top">const unsigned long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bootcode_8c.html#ac9b1bc80147e6b33e5835c30ff237a64">_blob_mbrboot_bin_len</a></td></tr>
 <tr class="separator:ac9b1bc80147e6b33e5835c30ff237a64"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afef14f8b42ea428cae2d741ee581d44d"><td class="memItemLeft" align="right" valign="top">const unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bootcode_8h.html#afef14f8b42ea428cae2d741ee581d44d">_blob_mbrboot_bin_data</a> []</td></tr>
-<tr class="separator:afef14f8b42ea428cae2d741ee581d44d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4be133b5407bd8991afb560eea88296f"><td class="memItemLeft" align="right" valign="top">const unsigned long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bootcode_8h.html#a4be133b5407bd8991afb560eea88296f">_blob_vbrboot_bin_len</a> = 128</td></tr>
+<tr class="memitem:ae519428843ca312c7eb01e5dd226ab0f"><td class="memItemLeft" align="right" valign="top">const unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bootcode_8c.html#ae519428843ca312c7eb01e5dd226ab0f">_blob_mbrboot_bin_data</a> [128]</td></tr>
+<tr class="separator:ae519428843ca312c7eb01e5dd226ab0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4be133b5407bd8991afb560eea88296f"><td class="memItemLeft" align="right" valign="top">const unsigned long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bootcode_8c.html#a4be133b5407bd8991afb560eea88296f">_blob_vbrboot_bin_len</a></td></tr>
 <tr class="separator:a4be133b5407bd8991afb560eea88296f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec475c6e6a11758cdb5ee76f9a468ad9"><td class="memItemLeft" align="right" valign="top">const unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bootcode_8h.html#aec475c6e6a11758cdb5ee76f9a468ad9">_blob_vbrboot_bin_data</a> []</td></tr>
-<tr class="separator:aec475c6e6a11758cdb5ee76f9a468ad9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2c4766ff907a3fb0e3d337fd318f3fe"><td class="memItemLeft" align="right" valign="top">const unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bootcode_8c.html#af2c4766ff907a3fb0e3d337fd318f3fe">_blob_vbrboot_bin_data</a> [128]</td></tr>
+<tr class="separator:af2c4766ff907a3fb0e3d337fd318f3fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Variable Documentation</h2>
-<a id="afef14f8b42ea428cae2d741ee581d44d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afef14f8b42ea428cae2d741ee581d44d">&#9670;&nbsp;</a></span>_blob_mbrboot_bin_data</h2>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a380572116898bf102f9a4658fc7fe777"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a380572116898bf102f9a4658fc7fe777">&#9670;&nbsp;</a></span>_BOOTCODE_C</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const unsigned char _blob_mbrboot_bin_data[]</td>
+          <td class="memname">#define _BOOTCODE_C</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">0xfa, 0x31, 0xc0, 0x8e, 0xd8, 0xfc, 0xbe, 0x31, </div>
-<div class="line">0x00, 0xe8, 0x13, 0x00, 0xb4, 0x00, 0xcd, 0x16, </div>
-<div class="line">0x3c, 0x1b, 0x74, 0x04, 0xcd, 0x18, 0xeb, 0x04, </div>
-<div class="line">0xcd, 0x19, 0xeb, 0x00, 0xf4, 0xeb, 0xfd, 0x60, </div>
-<div class="line">0xac, 0x08, 0xc0, 0x74, 0x0a, 0xb4, 0x0e, 0xb7, </div>
-<div class="line">0x00, 0xb3, 0x07, 0xcd, 0x10, 0xeb, 0xf1, 0x61, </div>
-<div class="line">0xc3, 0x0d, 0x0a, 0x20, 0x31, 0x2e, 0x20, 0x50, </div>
-<div class="line">0x72, 0x65, 0x73, 0x73, 0x20, 0x45, 0x73, 0x63, </div>
-<div class="line">0x20, 0x74, 0x6f, 0x20, 0x72, 0x65, 0x62, 0x6f, </div>
-<div class="line">0x6f, 0x74, 0x2e, 0x0d, 0x0a, 0x20, 0x32, 0x2e, </div>
-<div class="line">0x20, 0x50, 0x72, 0x65, 0x73, 0x73, 0x20, 0x61, </div>
-<div class="line">0x6e, 0x79, 0x20, 0x6f, 0x74, 0x68, 0x65, 0x72, </div>
-<div class="line">0x20, 0x6b, 0x65, 0x79, 0x20, 0x74, 0x6f, 0x20, </div>
-<div class="line">0x62, 0x6f, 0x6f, 0x74, 0x20, 0x66, 0x72, 0x6f, </div>
-<div class="line">0x6d, 0x20, 0x6f, 0x74, 0x68, 0x65, 0x72, 0x20, </div>
-<div class="line">0x64, 0x69, 0x73, 0x6b, 0x2e, 0x0d, 0x0a, 0x00, }</div>
-</div><!-- fragment -->
+
+<p class="definition">Definition at line <a class="el" href="bootcode_8c_source.html#l00013">13</a> of file <a class="el" href="bootcode_8c_source.html">bootcode.c</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="ae519428843ca312c7eb01e5dd226ab0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae519428843ca312c7eb01e5dd226ab0f">&#9670;&nbsp;</a></span>_blob_mbrboot_bin_data</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const unsigned char _blob_mbrboot_bin_data[128]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
 <p class="definition">Definition at line <a class="el" href="bootcode_8h_source.html#l00004">4</a> of file <a class="el" href="bootcode_8h_source.html">bootcode.h</a>.</p>
 
 </div>
@@ -165,7 +161,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const unsigned long long _blob_mbrboot_bin_len = 128</td>
+          <td class="memname">const unsigned long long _blob_mbrboot_bin_len</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -174,35 +170,18 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="aec475c6e6a11758cdb5ee76f9a468ad9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aec475c6e6a11758cdb5ee76f9a468ad9">&#9670;&nbsp;</a></span>_blob_vbrboot_bin_data</h2>
+<a id="af2c4766ff907a3fb0e3d337fd318f3fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2c4766ff907a3fb0e3d337fd318f3fe">&#9670;&nbsp;</a></span>_blob_vbrboot_bin_data</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const unsigned char _blob_vbrboot_bin_data[]</td>
+          <td class="memname">const unsigned char _blob_vbrboot_bin_data[128]</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">0xfa, 0x31, 0xc0, 0x8e, 0xd8, 0xfc, 0xbe, 0x31, </div>
-<div class="line">0x7c, 0xe8, 0x13, 0x00, 0xb4, 0x00, 0xcd, 0x16, </div>
-<div class="line">0x3c, 0x1b, 0x74, 0x04, 0xcd, 0x18, 0xeb, 0x04, </div>
-<div class="line">0xcd, 0x19, 0xeb, 0x00, 0xf4, 0xeb, 0xfd, 0x60, </div>
-<div class="line">0xac, 0x08, 0xc0, 0x74, 0x0a, 0xb4, 0x0e, 0xb7, </div>
-<div class="line">0x00, 0xb3, 0x07, 0xcd, 0x10, 0xeb, 0xf1, 0x61, </div>
-<div class="line">0xc3, 0x0d, 0x0a, 0x20, 0x31, 0x2e, 0x20, 0x50, </div>
-<div class="line">0x72, 0x65, 0x73, 0x73, 0x20, 0x45, 0x73, 0x63, </div>
-<div class="line">0x20, 0x74, 0x6f, 0x20, 0x72, 0x65, 0x62, 0x6f, </div>
-<div class="line">0x6f, 0x74, 0x2e, 0x0d, 0x0a, 0x20, 0x32, 0x2e, </div>
-<div class="line">0x20, 0x50, 0x72, 0x65, 0x73, 0x73, 0x20, 0x61, </div>
-<div class="line">0x6e, 0x79, 0x20, 0x6f, 0x74, 0x68, 0x65, 0x72, </div>
-<div class="line">0x20, 0x6b, 0x65, 0x79, 0x20, 0x74, 0x6f, 0x20, </div>
-<div class="line">0x62, 0x6f, 0x6f, 0x74, 0x20, 0x66, 0x72, 0x6f, </div>
-<div class="line">0x6d, 0x20, 0x6f, 0x74, 0x68, 0x65, 0x72, 0x20, </div>
-<div class="line">0x64, 0x69, 0x73, 0x6b, 0x2e, 0x0d, 0x0a, 0x00, }</div>
-</div><!-- fragment -->
+
 <p class="definition">Definition at line <a class="el" href="bootcode_8h_source.html#l00023">23</a> of file <a class="el" href="bootcode_8h_source.html">bootcode.h</a>.</p>
 
 </div>
@@ -214,7 +193,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const unsigned long long _blob_vbrboot_bin_len = 128</td>
+          <td class="memname">const unsigned long long _blob_vbrboot_bin_len</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -228,7 +207,7 @@ Variables</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_5cfc8f798c7a4c570457442210be7344.html">openfsl</a></li><li class="navelem"><a class="el" href="bootcode_8h.html">bootcode.h</a></li>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="bootcode_8c.html">bootcode.c</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
