@@ -204,156 +204,159 @@ $(document).ready(function(){initNavTree('format_8cpp_source.html',''); initResi
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
 <div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="classopenfsl_1_1_f_a_t32.html#acc784ddbf42cc9ccf15abfd00bb61c33">  105</a></span>&#160;<a class="code" href="error_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a> <a class="code" href="classopenfsl_1_1_f_a_t32.html#acc784ddbf42cc9ccf15abfd00bb61c33">openfsl::FAT32::format</a>(<span class="keyword">const</span> <a class="code" href="classuint64__t.html">lba48_t</a> offset, <span class="keyword">const</span> <a class="code" href="classuint64__t.html">lba48_t</a> size,</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keyword">const</span> <a class="code" href="structopenfsl_1_1_f_a_t32_1_1_format_options.html">FAT32::FormatOptions</a> formatOptions, <span class="keyword">const</span> <span class="keywordtype">bool</span> fastFormat) {</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <a class="code" href="structopenfsl_1_1_f_a_t32_1_1_b_p_b_sector.html">BPBSector</a> bpb = { 0 };</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <a class="code" href="structopenfsl_1_1_f_a_t32_1_1_f_s_i_n_f_o_sector.html">FSINFOSector</a> fsinfo = { 0 };</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <a class="code" href="structopenfsl_1_1_f_a_t32_1_1_b_p_b_sector.html">BPBSector</a> bpb;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <a class="code" href="structopenfsl_1_1_f_a_t32_1_1_f_s_i_n_f_o_sector.html">FSINFOSector</a> fsinfo;</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="comment">// Set signatures</span></div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    bpb.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_b_p_b_sector.html#ad61107d2742536156d511ce5cd2e5795">bpbVBRSignature</a> = 0xAA55;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    bpb.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_b_p_b_sector.html#aea986287c2a2bb7a15d9149e773a5049">ebpbExtendedBootSign</a> = 0x29;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    fsinfo.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_f_s_i_n_f_o_sector.html#abee89fb45ada3badccc262dd6e16a46a">fsinfoSignature1</a> = 0x41615252;</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    fsinfo.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_f_s_i_n_f_o_sector.html#a3ea1e7650a9eb92660db92eb10bb1b60">fsinfoSignature2</a> = 0x61417272;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    fsinfo.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_f_s_i_n_f_o_sector.html#a6e749e58a0349e3ce088d955424b131d">fsinfoSignature3</a> = 0xAA55;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="comment">// Copy VBR boot codes</span></div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    bpb.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_b_p_b_sector.html#a96b161fa65c3d7d9b1bae3026b77648a">bpbJumpCode</a>[0] = 0xEB;</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    bpb.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_b_p_b_sector.html#a96b161fa65c3d7d9b1bae3026b77648a">bpbJumpCode</a>[1] = 0x58;</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    bpb.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_b_p_b_sector.html#a96b161fa65c3d7d9b1bae3026b77648a">bpbJumpCode</a>[2] = 0x90;</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    memcpy(bpb.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_b_p_b_sector.html#a309fad060d2722244a84386605a5ba10">bpbBootCode</a>, <a class="code" href="bootcode_8c.html#af2c4766ff907a3fb0e3d337fd318f3fe">_blob_vbrboot_bin_data</a>, <a class="code" href="bootcode_8c.html#a4be133b5407bd8991afb560eea88296f">_blob_vbrboot_bin_len</a>);</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="comment">// Copy volume OEM ID, Label, Volume ID, FS Type</span></div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keywordflow">if</span> (formatOptions.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_format_options.html#a82cacbb7d89e86ccd6db561185d9feb9">volumeLabel</a>.length() &gt; 11) {</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="error_8h.html#a8b7ce3ea8216fc157434b9ec96c1f79d">OPENFSL_ERROR_VLABLONG</a>;  <span class="comment">// Volume label is too long</span></div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    }</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    memcpy(bpb.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_b_p_b_sector.html#ae67d9121c0dc0cdaec4e1fb92a0f43f1">bpbOEMName</a>, <span class="stringliteral">&quot;OPENFSL &quot;</span>, 8);</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    memset(bpb.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_b_p_b_sector.html#aa127f050dd72bc91863e919a2cf72f8a">ebpbVolumeLabel</a>, <span class="charliteral">&#39; &#39;</span>, 11);</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    memcpy(bpb.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_b_p_b_sector.html#aa127f050dd72bc91863e919a2cf72f8a">ebpbVolumeLabel</a>,</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        formatOptions.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_format_options.html#a82cacbb7d89e86ccd6db561185d9feb9">volumeLabel</a>.c_str(),</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        formatOptions.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_format_options.html#a82cacbb7d89e86ccd6db561185d9feb9">volumeLabel</a>.length());</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    bpb.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_b_p_b_sector.html#ab932ca22f3c58648edbced7a6a40a211">ebpbVolumeSerial</a> = (uint16_t)formatOptions.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_format_options.html#a7b3bb763c97c83932dd1ff55895ad88d">volumeSerial</a>;</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    memcpy(bpb.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_b_p_b_sector.html#aa4680085b6a60cc40c52070dfbc16364">ebpbFSType</a>, <span class="stringliteral">&quot;FAT32   &quot;</span>, 8);</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160; </div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <span class="comment">// Disk informations</span></div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <span class="keywordflow">if</span> (formatOptions.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_format_options.html#a62507aeb929cfc7ec26a035a5db5d49b">biosDriveNum</a> &lt; 80) {</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="error_8h.html#aade0302730616f7e41078344c19bd49c">OPENFSL_ERROR_NOFLOPPY</a>;</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    }</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160; </div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    bpb.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_b_p_b_sector.html#a49364350e31ee5024515795827f0ed8d">bpbMedia</a> = 0xF8;</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    bpb.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_b_p_b_sector.html#a0e8b0c493dfd6e7da4393b845b6c017b">ebpbPhysicalDriveNum</a> = formatOptions.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_format_options.html#a62507aeb929cfc7ec26a035a5db5d49b">biosDriveNum</a>;</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    bpb.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_b_p_b_sector.html#a62d7fbbdb387a75878a42de450ef6dc6">bpbBytesPerSector</a> = iod-&gt;getDiskParameter().bytesPerSector;</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    bpb.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_b_p_b_sector.html#aeece764c1412d2ff1b6e78dbd6c8a465">bpbSectorsPerTrack</a> = iod-&gt;getDiskParameter().sectorPerTrack;</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    bpb.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_b_p_b_sector.html#a6d3430b9ed8ab4dc45d48b94df415e21">bpbDiskHeads</a> = iod-&gt;getDiskParameter().headPerCylinder;</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160; </div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="comment">// Cluster, sector informations</span></div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    bpb.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_b_p_b_sector.html#ac4ac10226246703c81e1ebe9efa1fc7f">bpbHiddenSectors</a> = (uint32_t)offset;</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    bpb.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_b_p_b_sector.html#a4acb04e3e8c8ba41b3b7ba9c22ebada2">bpbTotalSector32</a> = (uint32_t)size;</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160; </div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    bpb.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_b_p_b_sector.html#a916b768f5607375a086e78d7af14b38f">bpbSectorPerCluster</a> = formatOptions.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_format_options.html#a186a9311941238b1e5f35b3a299ccea5">sectorsPerCluster</a>;</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    bpb.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_b_p_b_sector.html#a33a6e8a29be23c944fe998ed0f924a05">bpbReservedSectors</a> = (uint16_t)formatOptions.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_format_options.html#ab94ba40f07e6f958c4c34cd7cad8eb2e">reservedSectorCount</a>;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    memset(&amp;bpb, 0, <span class="keyword">sizeof</span>(<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_b_p_b_sector.html">BPBSector</a>));</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    memset(&amp;fsinfo, 0, <span class="keyword">sizeof</span>(<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_f_s_i_n_f_o_sector.html">FSINFOSector</a>));</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="comment">// Set signatures</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    bpb.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_b_p_b_sector.html#ad61107d2742536156d511ce5cd2e5795">bpbVBRSignature</a> = 0xAA55;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    bpb.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_b_p_b_sector.html#aea986287c2a2bb7a15d9149e773a5049">ebpbExtendedBootSign</a> = 0x29;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    fsinfo.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_f_s_i_n_f_o_sector.html#abee89fb45ada3badccc262dd6e16a46a">fsinfoSignature1</a> = 0x41615252;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    fsinfo.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_f_s_i_n_f_o_sector.html#a3ea1e7650a9eb92660db92eb10bb1b60">fsinfoSignature2</a> = 0x61417272;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    fsinfo.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_f_s_i_n_f_o_sector.html#a6e749e58a0349e3ce088d955424b131d">fsinfoSignature3</a> = 0xAA55;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="comment">// Copy VBR boot codes</span></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    bpb.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_b_p_b_sector.html#a96b161fa65c3d7d9b1bae3026b77648a">bpbJumpCode</a>[0] = 0xEB;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    bpb.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_b_p_b_sector.html#a96b161fa65c3d7d9b1bae3026b77648a">bpbJumpCode</a>[1] = 0x58;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    bpb.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_b_p_b_sector.html#a96b161fa65c3d7d9b1bae3026b77648a">bpbJumpCode</a>[2] = 0x90;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    memcpy(bpb.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_b_p_b_sector.html#a309fad060d2722244a84386605a5ba10">bpbBootCode</a>, <a class="code" href="bootcode_8c.html#af2c4766ff907a3fb0e3d337fd318f3fe">_blob_vbrboot_bin_data</a>, <a class="code" href="bootcode_8c.html#a4be133b5407bd8991afb560eea88296f">_blob_vbrboot_bin_len</a>);</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="comment">// Copy volume OEM ID, Label, Volume ID, FS Type</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="keywordflow">if</span> (formatOptions.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_format_options.html#a82cacbb7d89e86ccd6db561185d9feb9">volumeLabel</a>.length() &gt; 11) {</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="error_8h.html#a8b7ce3ea8216fc157434b9ec96c1f79d">OPENFSL_ERROR_VLABLONG</a>;  <span class="comment">// Volume label is too long</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    }</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    memcpy(bpb.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_b_p_b_sector.html#ae67d9121c0dc0cdaec4e1fb92a0f43f1">bpbOEMName</a>, <span class="stringliteral">&quot;OPENFSL &quot;</span>, 8);</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; </div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    memset(bpb.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_b_p_b_sector.html#aa127f050dd72bc91863e919a2cf72f8a">ebpbVolumeLabel</a>, <span class="charliteral">&#39; &#39;</span>, 11);</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    memcpy(bpb.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_b_p_b_sector.html#aa127f050dd72bc91863e919a2cf72f8a">ebpbVolumeLabel</a>,</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        formatOptions.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_format_options.html#a82cacbb7d89e86ccd6db561185d9feb9">volumeLabel</a>.c_str(),</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        formatOptions.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_format_options.html#a82cacbb7d89e86ccd6db561185d9feb9">volumeLabel</a>.length());</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160; </div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    bpb.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_b_p_b_sector.html#ab932ca22f3c58648edbced7a6a40a211">ebpbVolumeSerial</a> = (uint16_t)formatOptions.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_format_options.html#a7b3bb763c97c83932dd1ff55895ad88d">volumeSerial</a>;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160; </div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    memcpy(bpb.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_b_p_b_sector.html#aa4680085b6a60cc40c52070dfbc16364">ebpbFSType</a>, <span class="stringliteral">&quot;FAT32   &quot;</span>, 8);</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160; </div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <span class="comment">// Disk informations</span></div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <span class="keywordflow">if</span> (formatOptions.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_format_options.html#a62507aeb929cfc7ec26a035a5db5d49b">biosDriveNum</a> &lt; 80) {</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="error_8h.html#aade0302730616f7e41078344c19bd49c">OPENFSL_ERROR_NOFLOPPY</a>;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    }</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160; </div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    bpb.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_b_p_b_sector.html#a49364350e31ee5024515795827f0ed8d">bpbMedia</a> = 0xF8;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    bpb.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_b_p_b_sector.html#a0e8b0c493dfd6e7da4393b845b6c017b">ebpbPhysicalDriveNum</a> = formatOptions.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_format_options.html#a62507aeb929cfc7ec26a035a5db5d49b">biosDriveNum</a>;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    bpb.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_b_p_b_sector.html#a62d7fbbdb387a75878a42de450ef6dc6">bpbBytesPerSector</a> = iod-&gt;getDiskParameter().bytesPerSector;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    bpb.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_b_p_b_sector.html#aeece764c1412d2ff1b6e78dbd6c8a465">bpbSectorsPerTrack</a> = iod-&gt;getDiskParameter().sectorPerTrack;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    bpb.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_b_p_b_sector.html#a6d3430b9ed8ab4dc45d48b94df415e21">bpbDiskHeads</a> = iod-&gt;getDiskParameter().headPerCylinder;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160; </div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="comment">// Cluster, sector informations</span></div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    bpb.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_b_p_b_sector.html#ac4ac10226246703c81e1ebe9efa1fc7f">bpbHiddenSectors</a> = (uint32_t)offset;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    bpb.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_b_p_b_sector.html#a4acb04e3e8c8ba41b3b7ba9c22ebada2">bpbTotalSector32</a> = (uint32_t)size;</div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160; </div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    if ((formatOptions.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_format_options.html#aeec1769ab5be6c96a41a1398d1793518">backupBSLocation</a> &gt;= formatOptions.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_format_options.html#ab94ba40f07e6f958c4c34cd7cad8eb2e">reservedSectorCount</a>) ||</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        (formatOptions.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_format_options.html#a805e6d48f97e77fed46f7c1d19698ca7">fsinfoLocation</a> &gt;= formatOptions.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_format_options.html#ab94ba40f07e6f958c4c34cd7cad8eb2e">reservedSectorCount</a>)) {</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="error_8h.html#a3ef1954038cba03384832ba309fd55a0">OPENFSL_ERROR_FRMATOPT</a>;</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    }</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160; </div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    bpb.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_b_p_b_sector.html#a308393b29e8e864c494f98255f534e61">ebpbBSBackupSector</a> = (uint16_t)formatOptions.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_format_options.html#aeec1769ab5be6c96a41a1398d1793518">backupBSLocation</a>;</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    bpb.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_b_p_b_sector.html#a541ed8b5eadf2b39f998b077d3ca7501">ebpbFSInfoSector</a> = (uint16_t)formatOptions.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_format_options.html#a805e6d48f97e77fed46f7c1d19698ca7">fsinfoLocation</a>;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    bpb.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_b_p_b_sector.html#a916b768f5607375a086e78d7af14b38f">bpbSectorPerCluster</a> = formatOptions.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_format_options.html#a186a9311941238b1e5f35b3a299ccea5">sectorsPerCluster</a>;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    bpb.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_b_p_b_sector.html#a33a6e8a29be23c944fe998ed0f924a05">bpbReservedSectors</a> = (uint16_t)formatOptions.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_format_options.html#ab94ba40f07e6f958c4c34cd7cad8eb2e">reservedSectorCount</a>;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160; </div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    if ((formatOptions.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_format_options.html#aeec1769ab5be6c96a41a1398d1793518">backupBSLocation</a> &gt;= formatOptions.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_format_options.html#ab94ba40f07e6f958c4c34cd7cad8eb2e">reservedSectorCount</a>) ||</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        (formatOptions.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_format_options.html#a805e6d48f97e77fed46f7c1d19698ca7">fsinfoLocation</a> &gt;= formatOptions.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_format_options.html#ab94ba40f07e6f958c4c34cd7cad8eb2e">reservedSectorCount</a>)) {</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="error_8h.html#a3ef1954038cba03384832ba309fd55a0">OPENFSL_ERROR_FRMATOPT</a>;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    }</div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160; </div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <span class="comment">// FAT Informations</span></div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <a class="code" href="classuint64__t.html">lba48_t</a> tmpval1 = size - formatOptions.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_format_options.html#ab94ba40f07e6f958c4c34cd7cad8eb2e">reservedSectorCount</a>;</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <a class="code" href="classuint64__t.html">lba48_t</a> tmpval2 =</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        128 * formatOptions.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_format_options.html#a186a9311941238b1e5f35b3a299ccea5">sectorsPerCluster</a> + formatOptions.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_format_options.html#abb6d3b6ae4881461589b9182b7d5947a">fatAreaCount</a>;</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160; </div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    bpb.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_b_p_b_sector.html#a3b5501391ac0b1f4e52679d7cd08b1da">bpbFATCount</a> = formatOptions.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_format_options.html#abb6d3b6ae4881461589b9182b7d5947a">fatAreaCount</a>;</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    bpb.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_b_p_b_sector.html#aba22d1da7af07853a49ebb363bab1c49">ebpbSectorsPerFAT32</a> = (uint32_t)((tmpval1 + tmpval2 - 1) / tmpval2);</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    bpb.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_b_p_b_sector.html#af383a44b5932265f374d6265f3bc4d15">ebpbRootDirectoryCluster</a> = formatOptions.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_format_options.html#a9d18666c108db6d18db9c999e6c25c54">rootDirectoryCluster</a>;</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160; </div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <a class="code" href="classopenfsl_1_1_f_a_t32.html#abc3a9899a34a113a605666126791a40d">cluster_t</a> clusterCount = <span class="keyword">static_cast&lt;</span><a class="code" href="classopenfsl_1_1_f_a_t32.html#abc3a9899a34a113a605666126791a40d">cluster_t</a><span class="keyword">&gt;</span></div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        ((size - (formatOptions.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_format_options.html#ab94ba40f07e6f958c4c34cd7cad8eb2e">reservedSectorCount</a> +</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        bpb.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_b_p_b_sector.html#aba22d1da7af07853a49ebb363bab1c49">ebpbSectorsPerFAT32</a> * formatOptions.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_format_options.html#abb6d3b6ae4881461589b9182b7d5947a">fatAreaCount</a>))</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        / formatOptions.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_format_options.html#a186a9311941238b1e5f35b3a299ccea5">sectorsPerCluster</a>);</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160; </div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="keywordflow">if</span> (bpb.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_b_p_b_sector.html#af383a44b5932265f374d6265f3bc4d15">ebpbRootDirectoryCluster</a> &gt;= clusterCount)</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="error_8h.html#a3ef1954038cba03384832ba309fd55a0">OPENFSL_ERROR_FRMATOPT</a>;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    bpb.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_b_p_b_sector.html#a308393b29e8e864c494f98255f534e61">ebpbBSBackupSector</a> = (uint16_t)formatOptions.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_format_options.html#aeec1769ab5be6c96a41a1398d1793518">backupBSLocation</a>;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    bpb.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_b_p_b_sector.html#a541ed8b5eadf2b39f998b077d3ca7501">ebpbFSInfoSector</a> = (uint16_t)formatOptions.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_format_options.html#a805e6d48f97e77fed46f7c1d19698ca7">fsinfoLocation</a>;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160; </div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="comment">// FAT Informations</span></div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <a class="code" href="classuint64__t.html">lba48_t</a> tmpval1 = size - formatOptions.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_format_options.html#ab94ba40f07e6f958c4c34cd7cad8eb2e">reservedSectorCount</a>;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <a class="code" href="classuint64__t.html">lba48_t</a> tmpval2 =</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        128 * formatOptions.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_format_options.html#a186a9311941238b1e5f35b3a299ccea5">sectorsPerCluster</a> + formatOptions.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_format_options.html#abb6d3b6ae4881461589b9182b7d5947a">fatAreaCount</a>;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160; </div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    bpb.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_b_p_b_sector.html#a3b5501391ac0b1f4e52679d7cd08b1da">bpbFATCount</a> = formatOptions.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_format_options.html#abb6d3b6ae4881461589b9182b7d5947a">fatAreaCount</a>;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    bpb.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_b_p_b_sector.html#aba22d1da7af07853a49ebb363bab1c49">ebpbSectorsPerFAT32</a> = (uint32_t)((tmpval1 + tmpval2 - 1) / tmpval2);</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    bpb.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_b_p_b_sector.html#af383a44b5932265f374d6265f3bc4d15">ebpbRootDirectoryCluster</a> = formatOptions.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_format_options.html#a9d18666c108db6d18db9c999e6c25c54">rootDirectoryCluster</a>;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160; </div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <a class="code" href="classopenfsl_1_1_f_a_t32.html#abc3a9899a34a113a605666126791a40d">cluster_t</a> clusterCount = <span class="keyword">static_cast&lt;</span><a class="code" href="classopenfsl_1_1_f_a_t32.html#abc3a9899a34a113a605666126791a40d">cluster_t</a><span class="keyword">&gt;</span></div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        ((size - (formatOptions.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_format_options.html#ab94ba40f07e6f958c4c34cd7cad8eb2e">reservedSectorCount</a> +</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        bpb.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_b_p_b_sector.html#aba22d1da7af07853a49ebb363bab1c49">ebpbSectorsPerFAT32</a> * formatOptions.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_format_options.html#abb6d3b6ae4881461589b9182b7d5947a">fatAreaCount</a>))</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        / formatOptions.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_format_options.html#a186a9311941238b1e5f35b3a299ccea5">sectorsPerCluster</a>);</div>
 <div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160; </div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    fsinfo.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_f_s_i_n_f_o_sector.html#a8c75da3d86f193c3cb9d933bc2f81538">fsinfoFreeCluster</a> = clusterCount - 1;</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    <span class="keywordflow">if</span> (bpb.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_b_p_b_sector.html#af383a44b5932265f374d6265f3bc4d15">ebpbRootDirectoryCluster</a> == 1)</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        fsinfo.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_f_s_i_n_f_o_sector.html#a64078a361520e919b35cf86117121990">fsinfoNextFree</a> = 2;</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        fsinfo.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_f_s_i_n_f_o_sector.html#a64078a361520e919b35cf86117121990">fsinfoNextFree</a> = 0;</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160; </div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <a class="code" href="format_8cpp.html#acaecdaabacb07822bc7e3ca867269414">__hexdump</a>(<span class="keyword">reinterpret_cast&lt;</span>uint8_t*<span class="keyword">&gt;</span>(&amp;bpb), 0, 512);</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    <a class="code" href="format_8cpp.html#acaecdaabacb07822bc7e3ca867269414">__hexdump</a>(<span class="keyword">reinterpret_cast&lt;</span>uint8_t*<span class="keyword">&gt;</span>(&amp;fsinfo), 0, 512);</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    <span class="keywordflow">if</span> (bpb.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_b_p_b_sector.html#af383a44b5932265f374d6265f3bc4d15">ebpbRootDirectoryCluster</a> &gt;= clusterCount)</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="error_8h.html#a3ef1954038cba03384832ba309fd55a0">OPENFSL_ERROR_FRMATOPT</a>;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160; </div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    fsinfo.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_f_s_i_n_f_o_sector.html#a8c75da3d86f193c3cb9d933bc2f81538">fsinfoFreeCluster</a> = clusterCount - 1;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <span class="keywordflow">if</span> (bpb.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_b_p_b_sector.html#af383a44b5932265f374d6265f3bc4d15">ebpbRootDirectoryCluster</a> == 1)</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        fsinfo.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_f_s_i_n_f_o_sector.html#a64078a361520e919b35cf86117121990">fsinfoNextFree</a> = 2;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        fsinfo.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_f_s_i_n_f_o_sector.html#a64078a361520e919b35cf86117121990">fsinfoNextFree</a> = 0;</div>
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160; </div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    <a class="code" href="error_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a> result;</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160; </div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <span class="comment">// Zerofill disk</span></div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    <span class="keywordflow">if</span> (!fastFormat) {</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        <span class="keywordtype">char</span>* emptySector = <span class="keyword">new</span> <span class="keywordtype">char</span>[iod-&gt;getDiskParameter().bytesPerSector];</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        memset(emptySector, 0, iod-&gt;getDiskParameter().bytesPerSector);</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160; </div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="classuint64__t.html">lba48_t</a> i = offset + formatOptions.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_format_options.html#ab94ba40f07e6f958c4c34cd7cad8eb2e">reservedSectorCount</a> +</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;            bpb.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_b_p_b_sector.html#aba22d1da7af07853a49ebb363bab1c49">ebpbSectorsPerFAT32</a> * formatOptions.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_format_options.html#abb6d3b6ae4881461589b9182b7d5947a">fatAreaCount</a>;</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;            i &lt; offset + size;</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;            i++) {</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;            result = iod-&gt;writeSector(emptySector, i, 1);</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;            <span class="keywordflow">if</span> (result)</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;                <span class="keywordflow">return</span> result;</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        }</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160; </div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;        <span class="keyword">delete</span>[] emptySector;</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    }</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    <a class="code" href="format_8cpp.html#acaecdaabacb07822bc7e3ca867269414">__hexdump</a>(<span class="keyword">reinterpret_cast&lt;</span>uint8_t*<span class="keyword">&gt;</span>(&amp;bpb), 0, 512);</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    <a class="code" href="format_8cpp.html#acaecdaabacb07822bc7e3ca867269414">__hexdump</a>(<span class="keyword">reinterpret_cast&lt;</span>uint8_t*<span class="keyword">&gt;</span>(&amp;fsinfo), 0, 512);</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160; </div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    <a class="code" href="error_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a> result;</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160; </div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <span class="comment">// Zerofill disk</span></div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <span class="keywordflow">if</span> (!fastFormat) {</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        <span class="keywordtype">char</span>* emptySector = <span class="keyword">new</span> <span class="keywordtype">char</span>[iod-&gt;getDiskParameter().bytesPerSector];</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        memset(emptySector, 0, iod-&gt;getDiskParameter().bytesPerSector);</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160; </div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="classuint64__t.html">lba48_t</a> i = offset + formatOptions.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_format_options.html#ab94ba40f07e6f958c4c34cd7cad8eb2e">reservedSectorCount</a> +</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;            bpb.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_b_p_b_sector.html#aba22d1da7af07853a49ebb363bab1c49">ebpbSectorsPerFAT32</a> * formatOptions.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_format_options.html#abb6d3b6ae4881461589b9182b7d5947a">fatAreaCount</a>;</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;            i &lt; offset + size;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;            i++) {</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;            result = iod-&gt;writeSector(emptySector, i, 1);</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;            <span class="keywordflow">if</span> (result)</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;                <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;        }</div>
 <div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160; </div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    <span class="comment">// Disk operations</span></div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    result = iod-&gt;writeSector(&amp;bpb, offset, 1);</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    <span class="keywordflow">if</span> (result)</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        <span class="keywordflow">return</span> result;</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    result = iod-&gt;writeSector(&amp;fsinfo,</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;        offset + formatOptions.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_format_options.html#a805e6d48f97e77fed46f7c1d19698ca7">fsinfoLocation</a>, 1);</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    <span class="keywordflow">if</span> (result)</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        <span class="keywordflow">return</span> result;</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160; </div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    <span class="comment">// FAT Area initialization</span></div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    <a class="code" href="classopenfsl_1_1_sector.html">Sector</a> fatArea(bpb.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_b_p_b_sector.html#aba22d1da7af07853a49ebb363bab1c49">ebpbSectorsPerFAT32</a>,</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        iod-&gt;getDiskParameter().bytesPerSector);</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    memset(fatArea.<a class="code" href="classopenfsl_1_1_sector.html#af9128b9d68ff6b96d70336a6e51d23e4">getData</a>(), 0, fatArea.<a class="code" href="classopenfsl_1_1_container.html#a3f8b1be526794b1ba38b835b191c955f">getSize</a>());</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    fatArea.<a class="code" href="classopenfsl_1_1_container.html#ad0fa530d91da46276e19b08f9e468b62">getDataCast</a>&lt;uint32_t*&gt;()[0] =</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        0x0FFFFF00 + formatOptions.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_format_options.html#a5ea5096aae4c34930d7b8683e9579c33">fatMediaType</a>;</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    fatArea.<a class="code" href="classopenfsl_1_1_container.html#ad0fa530d91da46276e19b08f9e468b62">getDataCast</a>&lt;uint32_t*&gt;()[1] = 0x0FFFFFFF;</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    fatArea.<a class="code" href="classopenfsl_1_1_container.html#ad0fa530d91da46276e19b08f9e468b62">getDataCast</a>&lt;uint32_t*&gt;()[formatOptions.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_format_options.html#a9d18666c108db6d18db9c999e6c25c54">rootDirectoryCluster</a>] =</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        0x0FFFFFFF;</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160; </div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    for (<span class="keywordtype">int</span> i = 0; i &lt; formatOptions.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_format_options.html#abb6d3b6ae4881461589b9182b7d5947a">fatAreaCount</a>; i++) {</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        result = iod-&gt;writeSector(fatArea.<a class="code" href="classopenfsl_1_1_container.html#ad0fa530d91da46276e19b08f9e468b62">getDataCast</a>&lt;uint8_t*&gt;(),</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;            offset + formatOptions.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_format_options.html#ab94ba40f07e6f958c4c34cd7cad8eb2e">reservedSectorCount</a> +</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;            bpb.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_b_p_b_sector.html#aba22d1da7af07853a49ebb363bab1c49">ebpbSectorsPerFAT32</a> * i,</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;            bpb.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_b_p_b_sector.html#aba22d1da7af07853a49ebb363bab1c49">ebpbSectorsPerFAT32</a>);</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;        <span class="keywordflow">if</span> (result)</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;            <span class="keywordflow">return</span> result;</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    }</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160; </div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    uint8_t* emptycluster =</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        <span class="keyword">new</span> uint8_t[iod-&gt;getDiskParameter().bytesPerSector *</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;            formatOptions.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_format_options.html#a186a9311941238b1e5f35b3a299ccea5">sectorsPerCluster</a>];</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    memset(emptycluster, 0, iod-&gt;getDiskParameter().bytesPerSector *</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;        formatOptions.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_format_options.html#a186a9311941238b1e5f35b3a299ccea5">sectorsPerCluster</a>);</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160; </div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    result = iod-&gt;writeSector(emptycluster,</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        offset + formatOptions.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_format_options.html#ab94ba40f07e6f958c4c34cd7cad8eb2e">reservedSectorCount</a> +</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;        bpb.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_b_p_b_sector.html#aba22d1da7af07853a49ebb363bab1c49">ebpbSectorsPerFAT32</a> * formatOptions.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_format_options.html#abb6d3b6ae4881461589b9182b7d5947a">fatAreaCount</a> +</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        formatOptions.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_format_options.html#a186a9311941238b1e5f35b3a299ccea5">sectorsPerCluster</a> *</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        (formatOptions.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_format_options.html#a9d18666c108db6d18db9c999e6c25c54">rootDirectoryCluster</a> - 2),</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        formatOptions.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_format_options.html#a186a9311941238b1e5f35b3a299ccea5">sectorsPerCluster</a>);</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160; </div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    <span class="keyword">delete</span>[] emptycluster;</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160; </div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="error_8h.html#a301c819148a27e7e57a093da26677ba9">OPENFSL_SUCCESS</a>;</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;}</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        <span class="keyword">delete</span>[] emptySector;</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    }</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160; </div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    <span class="comment">// Disk operations</span></div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    result = iod-&gt;writeSector(&amp;bpb, offset, 1);</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    <span class="keywordflow">if</span> (result)</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    result = iod-&gt;writeSector(&amp;fsinfo,</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        offset + formatOptions.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_format_options.html#a805e6d48f97e77fed46f7c1d19698ca7">fsinfoLocation</a>, 1);</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    <span class="keywordflow">if</span> (result)</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160; </div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    <span class="comment">// FAT Area initialization</span></div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <a class="code" href="classopenfsl_1_1_sector.html">Sector</a> fatArea(bpb.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_b_p_b_sector.html#aba22d1da7af07853a49ebb363bab1c49">ebpbSectorsPerFAT32</a>,</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        iod-&gt;getDiskParameter().bytesPerSector);</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    memset(fatArea.<a class="code" href="classopenfsl_1_1_sector.html#af9128b9d68ff6b96d70336a6e51d23e4">getData</a>(), 0, fatArea.<a class="code" href="classopenfsl_1_1_container.html#a3f8b1be526794b1ba38b835b191c955f">getSize</a>());</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    fatArea.<a class="code" href="classopenfsl_1_1_container.html#ad0fa530d91da46276e19b08f9e468b62">getDataCast</a>&lt;uint32_t*&gt;()[0] =</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        0x0FFFFF00 + formatOptions.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_format_options.html#a5ea5096aae4c34930d7b8683e9579c33">fatMediaType</a>;</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    fatArea.<a class="code" href="classopenfsl_1_1_container.html#ad0fa530d91da46276e19b08f9e468b62">getDataCast</a>&lt;uint32_t*&gt;()[1] = 0x0FFFFFFF;</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    fatArea.<a class="code" href="classopenfsl_1_1_container.html#ad0fa530d91da46276e19b08f9e468b62">getDataCast</a>&lt;uint32_t*&gt;()[formatOptions.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_format_options.html#a9d18666c108db6d18db9c999e6c25c54">rootDirectoryCluster</a>] =</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        0x0FFFFFFF;</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160; </div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    for (<span class="keywordtype">int</span> i = 0; i &lt; formatOptions.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_format_options.html#abb6d3b6ae4881461589b9182b7d5947a">fatAreaCount</a>; i++) {</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        result = iod-&gt;writeSector(fatArea.<a class="code" href="classopenfsl_1_1_container.html#ad0fa530d91da46276e19b08f9e468b62">getDataCast</a>&lt;uint8_t*&gt;(),</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;            offset + formatOptions.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_format_options.html#ab94ba40f07e6f958c4c34cd7cad8eb2e">reservedSectorCount</a> +</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;            bpb.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_b_p_b_sector.html#aba22d1da7af07853a49ebb363bab1c49">ebpbSectorsPerFAT32</a> * i,</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;            bpb.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_b_p_b_sector.html#aba22d1da7af07853a49ebb363bab1c49">ebpbSectorsPerFAT32</a>);</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;        <span class="keywordflow">if</span> (result)</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;            <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    }</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160; </div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    uint8_t* emptycluster =</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;        <span class="keyword">new</span> uint8_t[iod-&gt;getDiskParameter().bytesPerSector *</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;            formatOptions.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_format_options.html#a186a9311941238b1e5f35b3a299ccea5">sectorsPerCluster</a>];</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    memset(emptycluster, 0, iod-&gt;getDiskParameter().bytesPerSector *</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        formatOptions.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_format_options.html#a186a9311941238b1e5f35b3a299ccea5">sectorsPerCluster</a>);</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160; </div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    result = iod-&gt;writeSector(emptycluster,</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        offset + formatOptions.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_format_options.html#ab94ba40f07e6f958c4c34cd7cad8eb2e">reservedSectorCount</a> +</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        bpb.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_b_p_b_sector.html#aba22d1da7af07853a49ebb363bab1c49">ebpbSectorsPerFAT32</a> * formatOptions.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_format_options.html#abb6d3b6ae4881461589b9182b7d5947a">fatAreaCount</a> +</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        formatOptions.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_format_options.html#a186a9311941238b1e5f35b3a299ccea5">sectorsPerCluster</a> *</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        (formatOptions.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_format_options.html#a9d18666c108db6d18db9c999e6c25c54">rootDirectoryCluster</a> - 2),</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;        formatOptions.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_format_options.html#a186a9311941238b1e5f35b3a299ccea5">sectorsPerCluster</a>);</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160; </div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    <span class="keyword">delete</span>[] emptycluster;</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160; </div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="error_8h.html#a301c819148a27e7e57a093da26677ba9">OPENFSL_SUCCESS</a>;</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="abootcode_8c_html_af2c4766ff907a3fb0e3d337fd318f3fe"><div class="ttname"><a href="bootcode_8c.html#af2c4766ff907a3fb0e3d337fd318f3fe">_blob_vbrboot_bin_data</a></div><div class="ttdeci">const unsigned char _blob_vbrboot_bin_data[128]</div><div class="ttdef"><b>Definition:</b> <a href="bootcode_8h_source.html#l00023">bootcode.h:23</a></div></div>
