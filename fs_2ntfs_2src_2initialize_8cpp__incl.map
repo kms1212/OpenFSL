@@ -1,6 +1,6 @@
 <map id="fs/ntfs/src/initialize.cpp" name="fs/ntfs/src/initialize.cpp">
-<area shape="rect" id="node1" title=" " alt="" coords="643,5,816,32"/>
-<area shape="rect" id="node2" href="$fs__ntfs_8h.html" title=" " alt="" coords="650,80,809,107"/>
+<area shape="rect" id="node1" title=" " alt="" coords="695,5,868,32"/>
+<area shape="rect" id="node2" href="$fs__ntfs_8h.html" title=" " alt="" coords="702,80,861,107"/>
 <area shape="rect" id="node3" title=" " alt="" coords="419,528,485,555"/>
 <area shape="rect" id="node4" title=" " alt="" coords="419,453,485,480"/>
 <area shape="rect" id="node5" title=" " alt="" coords="103,528,174,555"/>
@@ -17,6 +17,7 @@
 <area shape="rect" id="node16" title=" " alt="" coords="1179,155,1237,181"/>
 <area shape="rect" id="node17" href="$blockdevice_8h.html" title=" " alt="" coords="354,229,518,256"/>
 <area shape="rect" id="node27" href="$filesystem_8h.html" title=" " alt="" coords="359,155,513,181"/>
+<area shape="rect" id="node28" href="$ntfs__structures_8h.html" title=" " alt="" coords="1362,155,1574,181"/>
 <area shape="rect" id="node18" title=" " alt="" coords="398,379,485,405"/>
 <area shape="rect" id="node19" href="$error_8h.html" title=" " alt="" coords="750,379,866,405"/>
 <area shape="rect" id="node20" href="$macros_8h.html" title=" " alt="" coords="587,453,722,480"/>

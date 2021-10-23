@@ -55,11 +55,10 @@ var NAVTREE =
       [ "Class Members", "functions.html", [
         [ "All", "functions.html", "functions_dup" ],
         [ "Functions", "functions_func.html", null ],
-        [ "Variables", "functions_vars.html", null ],
+        [ "Variables", "functions_vars.html", "functions_vars" ],
         [ "Typedefs", "functions_type.html", null ],
         [ "Enumerations", "functions_enum.html", null ],
-        [ "Enumerator", "functions_eval.html", null ],
-        [ "Related Functions", "functions_rela.html", null ]
+        [ "Enumerator", "functions_eval.html", null ]
       ] ]
     ] ],
     [ "Files", "files.html", [
@@ -69,6 +68,7 @@ var NAVTREE =
         [ "Functions", "globals_func.html", null ],
         [ "Variables", "globals_vars.html", null ],
         [ "Typedefs", "globals_type.html", null ],
+        [ "Enumerations", "globals_enum.html", null ],
         [ "Macros", "globals_defs.html", null ]
       ] ]
     ] ]
@@ -78,9 +78,9 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"classopenfsl_1_1_m_b_r.html#a0b96adf72dee2df1ac1012dafd5036f1af47440b63b1777103d0b403b0fe65f72",
-"iodevice_8h.html",
-"symbols_8h.html#a93bdd33da60a0bc867c759d70c0b53ca"
+"classopenfsl_1_1_n_t_f_s.html#a7205808ef7d7764af643c2d7427126f0",
+"globals.html",
+"struct_m_f_t_entry_header.html#aa0c75d20e735743ac4031b998f4fcde5"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

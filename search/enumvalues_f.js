@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['udf_1037',['UDF',['../namespaceopenfsl.html#a43add8221d9aa3cd7285f47e4e04e72ea70f4ffb2922543597e5471e5cda23632',1,'openfsl']]]
+  ['trunc_1265',['Trunc',['../namespaceopenfsl.html#ab69edb30c6ca3a1228d3d32e61931c72ae062834253c7b0c888979454095d0af2',1,'openfsl']]]
 ];

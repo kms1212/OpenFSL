@@ -1,6 +1,11 @@
 <map id="openfsl::NTFS::initialize" name="openfsl::NTFS::initialize">
-<area shape="rect" id="node1" title="NTFS intializer." alt="" coords="5,78,180,105"/>
-<area shape="rect" id="node2" href="$classopenfsl_1_1_file_system.html#ac66d2dd1349a54c08d816e466042cf5b" title=" " alt="" coords="228,5,456,47"/>
-<area shape="rect" id="node3" href="$classopenfsl_1_1_file_system.html#a422eae7c59512ffea50ae831729da461" title=" " alt="" coords="267,71,417,112"/>
-<area shape="rect" id="node4" href="$classopenfsl_1_1_block_device.html#abb336a5c13d81a7587ad19da73097f43" title=" " alt="" coords="263,136,421,177"/>
+<area shape="rect" id="node1" title="NTFS intializer." alt="" coords="5,203,180,229"/>
+<area shape="rect" id="node2" href="$fs_2ntfs_2src_2initialize_8cpp.html#acaecdaabacb07822bc7e3ca867269414" title=" " alt="" coords="293,5,391,32"/>
+<area shape="rect" id="node3" href="$classopenfsl_1_1_n_t_f_s.html#aa08393991ef651b801479ea4f96c835e" title="UCS&#45;2 string to UTF&#45;8 string." alt="" coords="245,56,439,83"/>
+<area shape="rect" id="node4" href="$classopenfsl_1_1_file_system.html#ac66d2dd1349a54c08d816e466042cf5b" title=" " alt="" coords="228,107,456,149"/>
+<area shape="rect" id="node5" href="$classopenfsl_1_1_sector.html#af9128b9d68ff6b96d70336a6e51d23e4" title="Data buffer getter." alt="" coords="253,173,431,200"/>
+<area shape="rect" id="node6" href="$classopenfsl_1_1_container.html#ae32318eaf5dd949eb740f9ed2d05f5d9" title="Data buffer getter." alt="" coords="271,225,413,266"/>
+<area shape="rect" id="node7" href="$classopenfsl_1_1_block_device.html#a47f31aa57ca6e82567148f7875a81162" title=" " alt="" coords="263,290,421,331"/>
+<area shape="rect" id="node8" href="$classopenfsl_1_1_file_system.html#a422eae7c59512ffea50ae831729da461" title=" " alt="" coords="267,355,417,397"/>
+<area shape="rect" id="node9" href="$classopenfsl_1_1_block_device.html#abb336a5c13d81a7587ad19da73097f43" title=" " alt="" coords="263,421,421,462"/>
 </map>
