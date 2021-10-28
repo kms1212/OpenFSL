@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['time_678',['Time',['../structopenfsl_1_1_time.html',1,'openfsl']]]
+  ['sector_719',['Sector',['../classopenfsl_1_1_sector.html',1,'openfsl']]]
 ];

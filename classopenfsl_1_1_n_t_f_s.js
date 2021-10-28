@@ -11,6 +11,7 @@ var classopenfsl_1_1_n_t_f_s =
     ] ],
     [ "NTFS", "classopenfsl_1_1_n_t_f_s.html#a7205808ef7d7764af643c2d7427126f0", null ],
     [ "~NTFS", "classopenfsl_1_1_n_t_f_s.html#a828689d4d1cda6e9fc6ddd7991d5c799", null ],
+    [ "__parseClusterRun", "classopenfsl_1_1_n_t_f_s.html#afefaad22c49738d473a1b7e97da6c779", null ],
     [ "__u8ToUCS2", "classopenfsl_1_1_n_t_f_s.html#a5c4baef77428c66941e893e52572dd16", null ],
     [ "__ucs2ToU8", "classopenfsl_1_1_n_t_f_s.html#aa08393991ef651b801479ea4f96c835e", null ],
     [ "initialize", "classopenfsl_1_1_n_t_f_s.html#ab0d2ba1c034e427115fe0809fccb4526", null ],

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['stdinfoflags_1178',['StdInfoFlags',['../ntfs__structures_8h.html#ad03a9b0939cf8df877a6b748fd887741',1,'ntfs_structures.h']]]
+  ['partitiontabletype_1262',['PartitionTableType',['../namespaceopenfsl.html#aaeee298c14e04bb116e0f85588036dd4',1,'openfsl']]],
+  ['partitiontype_1263',['PartitionType',['../classopenfsl_1_1_m_b_r.html#a0b96adf72dee2df1ac1012dafd5036f1',1,'openfsl::MBR']]]
 ];

@@ -108,9 +108,66 @@ $(document).ready(function(){initNavTree('gpt_8cpp_source.html',''); initResizab
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">*/</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="gpt_8h.html">openfsl/gpt.h</a>&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="classopenfsl_1_1_g_p_t.html#a58a48297d09e2d018344df8c41a1e561">   12</a></span>&#160;<a class="code" href="classopenfsl_1_1_g_p_t.html#a58a48297d09e2d018344df8c41a1e561">openfsl::GPT::GPT</a>(<a class="code" href="classopenfsl_1_1_block_device.html">BlockDevice</a>* bd_, <a class="code" href="classopenfsl_1_1_m_b_r.html">MBR</a>* mbr_) {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="classopenfsl_1_1_g_p_t.html#a5bc7e4f873fd9b20c6fdc39676758d15">bd</a> = bd_;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="classopenfsl_1_1_g_p_t.html#a3ea6d2991ac9100a9aef8665bfc0e13d">protMbr</a> = mbr_;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;}</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classopenfsl_1_1_g_p_t.html#a18d6648bcb013436d57378720407142d">   17</a></span>&#160;<a class="code" href="classopenfsl_1_1_g_p_t.html#a18d6648bcb013436d57378720407142d">openfsl::GPT::~GPT</a>() { }</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classopenfsl_1_1_g_p_t.html#aa96658209115a6c9bf0df02425a2cbe1">   19</a></span>&#160;<a class="code" href="error_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a> <a class="code" href="classopenfsl_1_1_g_p_t.html#aa96658209115a6c9bf0df02425a2cbe1">openfsl::GPT::initialize</a>() {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="error_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a> result = protMbr-&gt;initialize();</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    std::vector&lt;MBR::PartitionInfo&gt; fsList = protMbr-&gt;getPartitionInfo();</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordflow">if</span> (result)</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classopenfsl_1_1_g_p_t.html#a019b1e1275d89938a09782c87092a93b">   30</a></span>&#160;std::vector&lt;openfsl::FileSystemType&gt; <a class="code" href="classopenfsl_1_1_g_p_t.html#a019b1e1275d89938a09782c87092a93b">openfsl::GPT::getPartitionTypes</a>() {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    std::vector&lt;FileSystemType&gt; ret;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    ret.push_back(<a class="code" href="namespaceopenfsl.html#a43add8221d9aa3cd7285f47e4e04e72ea0598abbdfe3d375d8f5476da924f0782">FileSystemType::ExFAT</a>);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">    for (size_t i = 0; i &lt; partitionList.size(); i++) {</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">        FileSystemType fs;</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">        if (partitionList[i].entryPartitionType == PartitionType::FAT12)</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">            fs = FileSystemType::FAT12;</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">        else if (partitionList[i].entryPartitionType ==</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">            PartitionType::FAT16_LBA)</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">            fs = FileSystemType::FAT16;</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">        else if ((partitionList[i].entryPartitionType ==</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">                    PartitionType::FAT32) ||</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">                (partitionList[i].entryPartitionType ==</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">                    PartitionType::FAT32_LBA))</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">            fs = FileSystemType::FAT32;</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">        else if (partitionList[i].entryPartitionType == PartitionType::NTFS)</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment">            fs = FileSystemType::NTFS;</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment">        else if (partitionList[i].entryPartitionType == PartitionType::GPT)</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment">            fs = FileSystemType::GPT;</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">        ret.push_back(fs);</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">    } */</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">return</span> ret;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="aclassopenfsl_1_1_g_p_t_html_aa96658209115a6c9bf0df02425a2cbe1"><div class="ttname"><a href="classopenfsl_1_1_g_p_t.html#aa96658209115a6c9bf0df02425a2cbe1">openfsl::GPT::initialize</a></div><div class="ttdeci">error_t __check_result initialize()</div><div class="ttdef"><b>Definition:</b> <a href="gpt_8cpp_source.html#l00019">gpt.cpp:19</a></div></div>
+<div class="ttc" id="aerror_8h_html_a9ad6b2dc3cbff040775e79656fe8e1a3"><div class="ttname"><a href="error_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a></div><div class="ttdeci">int error_t</div><div class="ttdef"><b>Definition:</b> <a href="error_8h_source.html#l00025">error.h:25</a></div></div>
 <div class="ttc" id="agpt_8h_html"><div class="ttname"><a href="gpt_8h.html">gpt.h</a></div></div>
+<div class="ttc" id="aclassopenfsl_1_1_m_b_r_html"><div class="ttname"><a href="classopenfsl_1_1_m_b_r.html">openfsl::MBR</a></div><div class="ttdef"><b>Definition:</b> <a href="mbr_8h_source.html#l00029">mbr.h:29</a></div></div>
+<div class="ttc" id="aclassopenfsl_1_1_g_p_t_html_a019b1e1275d89938a09782c87092a93b"><div class="ttname"><a href="classopenfsl_1_1_g_p_t.html#a019b1e1275d89938a09782c87092a93b">openfsl::GPT::getPartitionTypes</a></div><div class="ttdeci">std::vector&lt; FileSystemType &gt; getPartitionTypes()</div><div class="ttdef"><b>Definition:</b> <a href="gpt_8cpp_source.html#l00030">gpt.cpp:30</a></div></div>
+<div class="ttc" id="aclassopenfsl_1_1_g_p_t_html_a5bc7e4f873fd9b20c6fdc39676758d15"><div class="ttname"><a href="classopenfsl_1_1_g_p_t.html#a5bc7e4f873fd9b20c6fdc39676758d15">openfsl::GPT::bd</a></div><div class="ttdeci">BlockDevice * bd</div><div class="ttdef"><b>Definition:</b> <a href="gpt_8h_source.html#l00113">gpt.h:113</a></div></div>
+<div class="ttc" id="aclassopenfsl_1_1_g_p_t_html_a3ea6d2991ac9100a9aef8665bfc0e13d"><div class="ttname"><a href="classopenfsl_1_1_g_p_t.html#a3ea6d2991ac9100a9aef8665bfc0e13d">openfsl::GPT::protMbr</a></div><div class="ttdeci">MBR * protMbr</div><div class="ttdef"><b>Definition:</b> <a href="gpt_8h_source.html#l00114">gpt.h:114</a></div></div>
+<div class="ttc" id="aclassopenfsl_1_1_block_device_html"><div class="ttname"><a href="classopenfsl_1_1_block_device.html">openfsl::BlockDevice</a></div><div class="ttdoc">Disk driver.</div><div class="ttdef"><b>Definition:</b> <a href="blockdevice_8h_source.html#l00037">blockdevice.h:37</a></div></div>
+<div class="ttc" id="anamespaceopenfsl_html_a43add8221d9aa3cd7285f47e4e04e72ea0598abbdfe3d375d8f5476da924f0782"><div class="ttname"><a href="namespaceopenfsl.html#a43add8221d9aa3cd7285f47e4e04e72ea0598abbdfe3d375d8f5476da924f0782">openfsl::FileSystemType::ExFAT</a></div><div class="ttdeci">@ ExFAT</div></div>
+<div class="ttc" id="aclassopenfsl_1_1_g_p_t_html_a18d6648bcb013436d57378720407142d"><div class="ttname"><a href="classopenfsl_1_1_g_p_t.html#a18d6648bcb013436d57378720407142d">openfsl::GPT::~GPT</a></div><div class="ttdeci">~GPT()</div><div class="ttdef"><b>Definition:</b> <a href="gpt_8cpp_source.html#l00017">gpt.cpp:17</a></div></div>
+<div class="ttc" id="aclassopenfsl_1_1_g_p_t_html_a58a48297d09e2d018344df8c41a1e561"><div class="ttname"><a href="classopenfsl_1_1_g_p_t.html#a58a48297d09e2d018344df8c41a1e561">openfsl::GPT::GPT</a></div><div class="ttdeci">GPT(BlockDevice *bd_, MBR *mbr)</div><div class="ttdef"><b>Definition:</b> <a href="gpt_8cpp_source.html#l00012">gpt.cpp:12</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

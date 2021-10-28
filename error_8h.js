@@ -19,6 +19,7 @@ var error_8h =
     [ "OPENFSL_ERROR_NOTIMPL", "error_8h.html#adb3b3aef4d5832a4d8a525525d6b1235", null ],
     [ "OPENFSL_ERROR_REGEX", "error_8h.html#a6617ad1dffe95ae9c569b53797f805a9", null ],
     [ "OPENFSL_ERROR_SCHABRT", "error_8h.html#a58a59db5aad8fed38ffa1e392ba24ad1", null ],
+    [ "OPENFSL_ERROR_SECTSIZE", "error_8h.html#aba99948988ddad5d2d907b8430821d1b", null ],
     [ "OPENFSL_ERROR_SIGN", "error_8h.html#a71c6bb4e32dd6ae212abd2a7b15ef216", null ],
     [ "OPENFSL_ERROR_SZTOOBIG", "error_8h.html#ae535d99b2aed73de8e800fd2543a47d3", null ],
     [ "OPENFSL_ERROR_VLABLONG", "error_8h.html#a8b7ce3ea8216fc157434b9ec96c1f79d", null ],

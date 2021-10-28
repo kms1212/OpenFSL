@@ -13,7 +13,6 @@ var classopenfsl_1_1_file_block_device =
     [ "initialize", "classopenfsl_1_1_file_block_device.html#ad2b01d5f6f73322182f07c2cf3bbbabc", null ],
     [ "readSector", "classopenfsl_1_1_file_block_device.html#aec7479ec1140708ebcba6b4c5d1c0535", null ],
     [ "writeSector", "classopenfsl_1_1_file_block_device.html#a85d32d5f39a8dd94a929207e946d2181", null ],
-    [ "diskParameter", "classopenfsl_1_1_file_block_device.html#a01006f457c174e5b0d3df88c30a3b05c", null ],
     [ "file", "classopenfsl_1_1_file_block_device.html#ab2e403acdc7798065acedf1a805b42b4", null ],
     [ "filename", "classopenfsl_1_1_file_block_device.html#a69eeae1f50cfbb995d5a4a2a09ca8777", null ]
 ];

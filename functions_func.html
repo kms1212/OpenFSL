@@ -154,6 +154,9 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 <li>__move()
 : <a class="el" href="classopenfsl_1_1_f_a_t32.html#a12296dd6f92142d705f0762b1bbdc2db">openfsl::FAT32</a>
 </li>
+<li>__parseClusterRun()
+: <a class="el" href="classopenfsl_1_1_n_t_f_s.html#afefaad22c49738d473a1b7e97da6c779">openfsl::NTFS</a>
+</li>
 <li>__remove()
 : <a class="el" href="classopenfsl_1_1_f_a_t32.html#aac72f94554b8a89f49861a9d7d23a32a">openfsl::FAT32</a>
 </li>
@@ -228,9 +231,6 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 <li>convertToAbsolutePath()
 : <a class="el" href="classopenfsl_1_1_f_a_t32.html#a97fcec9162808ca5ab0ea5af049c46b1">openfsl::FAT32</a>
 </li>
-<li>createEntry()
-: <a class="el" href="classopenfsl_1_1_m_b_r.html#a857a11270470d0fc30f4254c946e0f1c">openfsl::MBR</a>
-</li>
 </ul>
 
 
@@ -275,7 +275,6 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 </li>
 <li>format()
 : <a class="el" href="classopenfsl_1_1_f_a_t32.html#acc784ddbf42cc9ccf15abfd00bb61c33">openfsl::FAT32</a>
-, <a class="el" href="classopenfsl_1_1_m_b_r.html#ac0bc317bd152ee291dff5e5a160e79ab">openfsl::MBR</a>
 </li>
 <li>FSL_File()
 : <a class="el" href="classopenfsl_1_1_f_s_l___file.html#ad8ae8721946e33049c015318234db7c3">openfsl::FSL_File</a>
@@ -342,8 +341,11 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 <li>getNextCluster()
 : <a class="el" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#ad05834b7f84560d96c449347c6cfd4f7">openfsl::FAT32::LinkedCluster</a>
 </li>
+<li>getPartitionInfo()
+: <a class="el" href="classopenfsl_1_1_m_b_r.html#a52f0f7f30aa15a6a0714253bd4a119ac">openfsl::MBR</a>
+</li>
 <li>getPartitionTypes()
-: <a class="el" href="classopenfsl_1_1_m_b_r.html#aa0ae0fbc10901fa313e61a43d1da6a83">openfsl::MBR</a>
+: <a class="el" href="classopenfsl_1_1_g_p_t.html#a019b1e1275d89938a09782c87092a93b">openfsl::GPT</a>
 </li>
 <li>getPath()
 : <a class="el" href="classopenfsl_1_1_f_a_t32.html#a674e197bc5b7ed86fcca232efbd8cecf">openfsl::FAT32</a>
@@ -361,7 +363,10 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 : <a class="el" href="classopenfsl_1_1_f_a_t32.html#a5e9c9580611a3438155a22002124293d">openfsl::FAT32</a>
 </li>
 <li>getVolumeOffset()
-: <a class="el" href="classopenfsl_1_1_m_b_r.html#abb62a6faea5bff67db22aa1d5ca0f999">openfsl::MBR</a>
+: <a class="el" href="classopenfsl_1_1_g_p_t.html#a7dac7e68f1b4fc733123fa48217492d1">openfsl::GPT</a>
+</li>
+<li>GPT()
+: <a class="el" href="classopenfsl_1_1_g_p_t.html#a58a48297d09e2d018344df8c41a1e561">openfsl::GPT</a>
 </li>
 </ul>
 
@@ -372,6 +377,7 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 , <a class="el" href="classopenfsl_1_1_f_a_t32.html#a759fb7aba2bc3101ef9534ec728f030a">openfsl::FAT32</a>
 , <a class="el" href="classopenfsl_1_1_file_block_device.html#ad2b01d5f6f73322182f07c2cf3bbbabc">openfsl::FileBlockDevice</a>
 , <a class="el" href="classopenfsl_1_1_file_system.html#a422eae7c59512ffea50ae831729da461">openfsl::FileSystem&lt; IOD &gt;</a>
+, <a class="el" href="classopenfsl_1_1_g_p_t.html#aa96658209115a6c9bf0df02425a2cbe1">openfsl::GPT</a>
 , <a class="el" href="classopenfsl_1_1_i_o_device.html#af173fab3fef210969a047c5bc5fde8f6">openfsl::IODevice</a>
 , <a class="el" href="classopenfsl_1_1_m_b_r.html#a92009da835b93c83686b36f5e2a30ae8">openfsl::MBR</a>
 , <a class="el" href="classopenfsl_1_1_n_t_f_s.html#ab0d2ba1c034e427115fe0809fccb4526">openfsl::NTFS</a>
@@ -546,6 +552,9 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 </li>
 <li>~FSL_File()
 : <a class="el" href="classopenfsl_1_1_f_s_l___file.html#afb12c2d9517be220228beb19c467bbba">openfsl::FSL_File</a>
+</li>
+<li>~GPT()
+: <a class="el" href="classopenfsl_1_1_g_p_t.html#a18d6648bcb013436d57378720407142d">openfsl::GPT</a>
 </li>
 <li>~IODevice()
 : <a class="el" href="classopenfsl_1_1_i_o_device.html#abfbc2abea3147b9b87e25256f459d666">openfsl::IODevice</a>

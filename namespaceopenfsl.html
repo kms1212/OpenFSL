@@ -133,6 +133,8 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenfsl_1_1_f_s_l___file.html">FSL_File</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">OpenFSL file.  <a href="classopenfsl_1_1_f_s_l___file.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenfsl_1_1_g_p_t.html">GPT</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenfsl_1_1_i_o_device.html">IODevice</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenfsl_1_1_m_b_r.html">MBR</a></td></tr>
@@ -200,15 +202,16 @@ Enumerations</h2></td></tr>
 <a class="el" href="namespaceopenfsl.html#a43add8221d9aa3cd7285f47e4e04e72eac07bdd06813e0ac5fa2555c26bca2cbc">FileSystemType::APFS</a>, 
 <br />
 &#160;&#160;<a class="el" href="namespaceopenfsl.html#a43add8221d9aa3cd7285f47e4e04e72eaa4767d59f487d28f9234ab74542a6069">FileSystemType::ISO9660</a>, 
-<a class="el" href="namespaceopenfsl.html#a43add8221d9aa3cd7285f47e4e04e72ea70f4ffb2922543597e5471e5cda23632">FileSystemType::UDF</a>
+<a class="el" href="namespaceopenfsl.html#a43add8221d9aa3cd7285f47e4e04e72ea70f4ffb2922543597e5471e5cda23632">FileSystemType::UDF</a>, 
+<a class="el" href="namespaceopenfsl.html#a43add8221d9aa3cd7285f47e4e04e72ea1703f91c5c4c0ce169e1713fe58318a9">FileSystemType::GPT</a>
 <br />
  }</td></tr>
 <tr class="separator:a43add8221d9aa3cd7285f47e4e04e72e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a9a948ca8eb7bfffc8f0e678fb816030f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="error_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenfsl.html#a9a948ca8eb7bfffc8f0e678fb816030f">detectDiskStructure</a> (<a class="el" href="structopenfsl_1_1_disk_structure.html">DiskStructure</a> *buf, <a class="el" href="classopenfsl_1_1_block_device.html">BlockDevice</a> *dd)</td></tr>
-<tr class="separator:a9a948ca8eb7bfffc8f0e678fb816030f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a72fba5307f9f6a3bc92d782d714226"><td class="memItemLeft" align="right" valign="top"><a class="el" href="error_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a> <a class="el" href="macros_8h.html#a73fa52cd4bbaa839980b3008201d09c0">__check_result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenfsl.html#a6a72fba5307f9f6a3bc92d782d714226">detectDiskStructure</a> (<a class="el" href="structopenfsl_1_1_disk_structure.html">DiskStructure</a> *buf, <a class="el" href="classopenfsl_1_1_block_device.html">BlockDevice</a> *dd)</td></tr>
+<tr class="separator:a6a72fba5307f9f6a3bc92d782d714226"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a504a1b9126c87c62a51837b9388abf86"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenfsl.html#a504a1b9126c87c62a51837b9388abf86">partitionTableTypeToString</a> (const <a class="el" href="namespaceopenfsl.html#aaeee298c14e04bb116e0f85588036dd4">PartitionTableType</a> type)</td></tr>
 <tr class="separator:a504a1b9126c87c62a51837b9388abf86"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af0c653bca3fe7d5fe083c0225e7f25ea"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenfsl.html#af0c653bca3fe7d5fe083c0225e7f25ea">fileSystemTypeToString</a> (const <a class="el" href="namespaceopenfsl.html#a43add8221d9aa3cd7285f47e4e04e72e">FileSystemType</a> type)</td></tr>
@@ -234,8 +237,8 @@ Functions</h2></td></tr>
 <tr class="separator:af5d84bfd77cfffcf6eca548c58646865"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a4e8692613060f54fd0b4f035db8df3"><td class="memItemLeft" align="right" valign="top">std::tm&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenfsl.html#a4a4e8692613060f54fd0b4f035db8df3">fsl_localtime</a> (const std::time_t time)</td></tr>
 <tr class="separator:a4a4e8692613060f54fd0b4f035db8df3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e066c97b39560249c6816b39c1508b3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceopenfsl.html#ac82097377896cd83a32c893edb39f391">lba48_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenfsl.html#a1e066c97b39560249c6816b39c1508b3">convertCHSToLBA</a> (const <a class="el" href="structopenfsl_1_1_c_h_s.html">CHS</a> chs, const uint8_t sectPerTra, const uint8_t headPerCyl)</td></tr>
-<tr class="separator:a1e066c97b39560249c6816b39c1508b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e842313f02239c1497b018b5f9e4161"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceopenfsl.html#ac82097377896cd83a32c893edb39f391">lba48_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenfsl.html#a2e842313f02239c1497b018b5f9e4161">convertCHSToLBA</a> (const <a class="el" href="structopenfsl_1_1_c_h_s.html">CHS</a> chs, const size_t sectPerTra, const size_t headPerCyl)</td></tr>
+<tr class="separator:a2e842313f02239c1497b018b5f9e4161"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a78bbeba7546b7a5be59e5f835e64e767"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenfsl.html#a78bbeba7546b7a5be59e5f835e64e767">convertLBAToCHS</a> (const <a class="el" href="namespaceopenfsl.html#ac82097377896cd83a32c893edb39f391">lba48_t</a> lba, <a class="el" href="structopenfsl_1_1_c_h_s.html">CHS</a> *chs, const uint8_t sectPerTra, const uint8_t headPerCyl)</td></tr>
 <tr class="separator:a78bbeba7546b7a5be59e5f835e64e767"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6efcd4b4fa32cf91a83e6ebbd33637e5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="error_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenfsl.html#a6efcd4b4fa32cf91a83e6ebbd33637e5">initialize</a> ()</td></tr>
@@ -256,9 +259,9 @@ Variables</h2></td></tr>
 <tr class="separator:ae35ad9c94f8035d357e576dd0126c917"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab183e1d17ce99d35972ae472f3ff9b0e"><td class="memItemLeft" align="right" valign="top">const uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenfsl.html#ab183e1d17ce99d35972ae472f3ff9b0e">version_patch</a> = 0</td></tr>
 <tr class="separator:ab183e1d17ce99d35972ae472f3ff9b0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6269ae4e7617141061705cde957f5edc"><td class="memItemLeft" align="right" valign="top">const uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenfsl.html#a6269ae4e7617141061705cde957f5edc">version_build</a> = 1150</td></tr>
+<tr class="memitem:a6269ae4e7617141061705cde957f5edc"><td class="memItemLeft" align="right" valign="top">const uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenfsl.html#a6269ae4e7617141061705cde957f5edc">version_build</a> = 1157</td></tr>
 <tr class="separator:a6269ae4e7617141061705cde957f5edc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2c5b2e0bf17053ad8009c23f65b7835e"><td class="memItemLeft" align="right" valign="top">const uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenfsl.html#a2c5b2e0bf17053ad8009c23f65b7835e">build_date</a> = 20211023</td></tr>
+<tr class="memitem:a2c5b2e0bf17053ad8009c23f65b7835e"><td class="memItemLeft" align="right" valign="top">const uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenfsl.html#a2c5b2e0bf17053ad8009c23f65b7835e">build_date</a> = 20211026</td></tr>
 <tr class="separator:a2c5b2e0bf17053ad8009c23f65b7835e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a99c1bcf47990042e077fada891e054aa"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenfsl.html#a99c1bcf47990042e077fada891e054aa">version_str</a> = &quot;0.0.0&quot;</td></tr>
 <tr class="separator:a99c1bcf47990042e077fada891e054aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -364,6 +367,7 @@ Variables</h2></td></tr>
 <tr><td class="fieldname"><a id="a43add8221d9aa3cd7285f47e4e04e72eac07bdd06813e0ac5fa2555c26bca2cbc"></a>APFS&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a43add8221d9aa3cd7285f47e4e04e72eaa4767d59f487d28f9234ab74542a6069"></a>ISO9660&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a43add8221d9aa3cd7285f47e4e04e72ea70f4ffb2922543597e5471e5cda23632"></a>UDF&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a43add8221d9aa3cd7285f47e4e04e72ea1703f91c5c4c0ce169e1713fe58318a9"></a>GPT&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 <p class="definition">Definition at line <a class="el" href="filesystem_8h_source.html#l00023">23</a> of file <a class="el" href="filesystem_8h_source.html">filesystem.h</a>.</p>
@@ -496,8 +500,8 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a1e066c97b39560249c6816b39c1508b3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1e066c97b39560249c6816b39c1508b3">&#9670;&nbsp;</a></span>convertCHSToLBA()</h2>
+<a id="a2e842313f02239c1497b018b5f9e4161"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e842313f02239c1497b018b5f9e4161">&#9670;&nbsp;</a></span>convertCHSToLBA()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -511,13 +515,13 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const uint8_t&#160;</td>
+          <td class="paramtype">const size_t&#160;</td>
           <td class="paramname"><em>sectPerTra</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const uint8_t&#160;</td>
+          <td class="paramtype">const size_t&#160;</td>
           <td class="paramname"><em>headPerCyl</em>&#160;</td>
         </tr>
         <tr>
@@ -532,10 +536,11 @@ Variables</h2></td></tr>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="namespaceopenfsl_a1e066c97b39560249c6816b39c1508b3_icgraph.png" border="0" usemap="#namespaceopenfsl_a1e066c97b39560249c6816b39c1508b3_icgraph" alt=""/></div>
-<map name="namespaceopenfsl_a1e066c97b39560249c6816b39c1508b3_icgraph" id="namespaceopenfsl_a1e066c97b39560249c6816b39c1508b3_icgraph">
-<area shape="rect" title=" " alt="" coords="279,5,472,32"/>
-<area shape="rect" href="classopenfsl_1_1_m_b_r.html#abb62a6faea5bff67db22aa1d5ca0f999" title=" " alt="" coords="5,5,231,32"/>
+<div class="center"><img src="namespaceopenfsl_a2e842313f02239c1497b018b5f9e4161_icgraph.png" border="0" usemap="#namespaceopenfsl_a2e842313f02239c1497b018b5f9e4161_icgraph" alt=""/></div>
+<map name="namespaceopenfsl_a2e842313f02239c1497b018b5f9e4161_icgraph" id="namespaceopenfsl_a2e842313f02239c1497b018b5f9e4161_icgraph">
+<area shape="rect" title=" " alt="" coords="524,5,717,32"/>
+<area shape="rect" href="classopenfsl_1_1_m_b_r.html#a52f0f7f30aa15a6a0714253bd4a119ac" title=" " alt="" coords="260,5,476,32"/>
+<area shape="rect" href="namespaceopenfsl.html#a6a72fba5307f9f6a3bc92d782d714226" title=" " alt="" coords="5,5,212,32"/>
 </map>
 </div>
 
@@ -614,14 +619,14 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a9a948ca8eb7bfffc8f0e678fb816030f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9a948ca8eb7bfffc8f0e678fb816030f">&#9670;&nbsp;</a></span>detectDiskStructure()</h2>
+<a id="a6a72fba5307f9f6a3bc92d782d714226"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a72fba5307f9f6a3bc92d782d714226">&#9670;&nbsp;</a></span>detectDiskStructure()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int openfsl::detectDiskStructure </td>
+          <td class="memname"><a class="el" href="error_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a> openfsl::detectDiskStructure </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structopenfsl_1_1_disk_structure.html">DiskStructure</a> *&#160;</td>
           <td class="paramname"><em>buf</em>, </td>
@@ -640,19 +645,21 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="detectstruct_8cpp_source.html#l00012">12</a> of file <a class="el" href="detectstruct_8cpp_source.html">detectstruct.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="detectstruct_8cpp_source.html#l00015">15</a> of file <a class="el" href="detectstruct_8cpp_source.html">detectstruct.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="namespaceopenfsl_a9a948ca8eb7bfffc8f0e678fb816030f_cgraph.png" border="0" usemap="#namespaceopenfsl_a9a948ca8eb7bfffc8f0e678fb816030f_cgraph" alt=""/></div>
-<map name="namespaceopenfsl_a9a948ca8eb7bfffc8f0e678fb816030f_cgraph" id="namespaceopenfsl_a9a948ca8eb7bfffc8f0e678fb816030f_cgraph">
-<area shape="rect" title=" " alt="" coords="5,104,212,130"/>
-<area shape="rect" href="classopenfsl_1_1_sector.html#af9128b9d68ff6b96d70336a6e51d23e4" title="Data buffer getter." alt="" coords="499,42,677,69"/>
-<area shape="rect" href="classopenfsl_1_1_block_device.html#a47f31aa57ca6e82567148f7875a81162" title=" " alt="" coords="276,31,435,72"/>
-<area shape="rect" href="classopenfsl_1_1_m_b_r.html#aa0ae0fbc10901fa313e61a43d1da6a83" title=" " alt="" coords="260,96,451,138"/>
-<area shape="rect" href="classopenfsl_1_1_m_b_r.html#a92009da835b93c83686b36f5e2a30ae8" title=" " alt="" coords="269,162,441,189"/>
-<area shape="rect" href="classopenfsl_1_1_block_device.html#abb336a5c13d81a7587ad19da73097f43" title=" " alt="" coords="276,214,435,255"/>
-<area shape="rect" href="classopenfsl_1_1_container.html#ae32318eaf5dd949eb740f9ed2d05f5d9" title="Data buffer getter." alt="" coords="517,155,659,196"/>
+<div class="center"><img src="namespaceopenfsl_a6a72fba5307f9f6a3bc92d782d714226_cgraph.png" border="0" usemap="#namespaceopenfsl_a6a72fba5307f9f6a3bc92d782d714226_cgraph" alt=""/></div>
+<map name="namespaceopenfsl_a6a72fba5307f9f6a3bc92d782d714226_cgraph" id="namespaceopenfsl_a6a72fba5307f9f6a3bc92d782d714226_cgraph">
+<area shape="rect" title=" " alt="" coords="5,161,212,188"/>
+<area shape="rect" href="classopenfsl_1_1_sector.html#af9128b9d68ff6b96d70336a6e51d23e4" title="Data buffer getter." alt="" coords="531,19,710,45"/>
+<area shape="rect" href="classopenfsl_1_1_container.html#ae32318eaf5dd949eb740f9ed2d05f5d9" title="Data buffer getter." alt="" coords="550,95,691,137"/>
+<area shape="rect" href="classopenfsl_1_1_block_device.html#a47f31aa57ca6e82567148f7875a81162" title=" " alt="" coords="289,95,447,137"/>
+<area shape="rect" href="classopenfsl_1_1_m_b_r.html#a52f0f7f30aa15a6a0714253bd4a119ac" title=" " alt="" coords="260,212,476,239"/>
+<area shape="rect" href="classopenfsl_1_1_m_b_r.html#a92009da835b93c83686b36f5e2a30ae8" title=" " alt="" coords="282,44,454,71"/>
+<area shape="rect" href="classopenfsl_1_1_g_p_t.html#aa96658209115a6c9bf0df02425a2cbe1" title=" " alt="" coords="285,263,451,289"/>
+<area shape="rect" href="classopenfsl_1_1_block_device.html#abb336a5c13d81a7587ad19da73097f43" title=" " alt="" coords="289,314,447,355"/>
+<area shape="rect" href="namespaceopenfsl.html#a2e842313f02239c1497b018b5f9e4161" title=" " alt="" coords="524,212,717,239"/>
 </map>
 </div>
 
@@ -674,7 +681,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="detectstruct_8cpp_source.html#l00072">72</a> of file <a class="el" href="detectstruct_8cpp_source.html">detectstruct.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="detectstruct_8cpp_source.html#l00093">93</a> of file <a class="el" href="detectstruct_8cpp_source.html">detectstruct.cpp</a>.</p>
 
 </div>
 </div>
@@ -789,7 +796,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="error_8cpp_source.html#l00038">38</a> of file <a class="el" href="error_8cpp_source.html">error.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="error_8cpp_source.html#l00039">39</a> of file <a class="el" href="error_8cpp_source.html">error.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -828,7 +835,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="error_8cpp_source.html#l00042">42</a> of file <a class="el" href="error_8cpp_source.html">error.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="error_8cpp_source.html#l00043">43</a> of file <a class="el" href="error_8cpp_source.html">error.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -857,7 +864,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="error_8cpp_source.html#l00047">47</a> of file <a class="el" href="error_8cpp_source.html">error.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="error_8cpp_source.html#l00048">48</a> of file <a class="el" href="error_8cpp_source.html">error.cpp</a>.</p>
 
 </div>
 </div>
@@ -1035,7 +1042,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="detectstruct_8cpp_source.html#l00062">62</a> of file <a class="el" href="detectstruct_8cpp_source.html">detectstruct.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="detectstruct_8cpp_source.html#l00080">80</a> of file <a class="el" href="detectstruct_8cpp_source.html">detectstruct.cpp</a>.</p>
 
 </div>
 </div>
@@ -1074,7 +1081,8 @@ Here is the call graph for this function:</div>
 <div class="line">    <span class="stringliteral">&quot;Operation not implemented.&quot;</span>,                       </div>
 <div class="line">    <span class="stringliteral">&quot;Disabled operation.&quot;</span>,                              </div>
 <div class="line">    <span class="stringliteral">&quot;Directory is not empty.&quot;</span>,                          </div>
-<div class="line">    <span class="stringliteral">&quot;Regex syntax is not valid.&quot;</span>                        </div>
+<div class="line">    <span class="stringliteral">&quot;Regex syntax is not valid.&quot;</span>,                       </div>
+<div class="line">    <span class="stringliteral">&quot;Sector size is not valid.&quot;</span>                         </div>
 <div class="line">}</div>
 </div><!-- fragment -->
 <p class="definition">Definition at line <a class="el" href="error_8cpp_source.html#l00012">12</a> of file <a class="el" href="error_8cpp_source.html">error.cpp</a>.</p>
@@ -1088,7 +1096,7 @@ Here is the call graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const uint32_t openfsl::build_date = 20211023</td>
+          <td class="memname">const uint32_t openfsl::build_date = 20211026</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1136,7 +1144,7 @@ Here is the call graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const uint32_t openfsl::version_build = 1150</td>
+          <td class="memname">const uint32_t openfsl::version_build = 1157</td>
         </tr>
       </table>
 </div><div class="memdoc">

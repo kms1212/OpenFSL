@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['lfnentry_665',['LFNEntry',['../struct_l_f_n_entry.html',1,'']]],
-  ['linkedcluster_666',['LinkedCluster',['../classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html',1,'openfsl::FAT32']]]
+  ['iodevice_704',['IODevice',['../classopenfsl_1_1_i_o_device.html',1,'openfsl']]],
+  ['iofunctions_705',['IOFunctions',['../structopenfsl_1_1_block_device_1_1_i_o_functions.html',1,'openfsl::BlockDevice']]]
 ];

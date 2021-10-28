@@ -1,9 +1,0 @@
-<map id="openfsl::detectDiskStructure" name="openfsl::detectDiskStructure">
-<area shape="rect" id="node1" title=" " alt="" coords="5,104,212,130"/>
-<area shape="rect" id="node2" href="$classopenfsl_1_1_sector.html#af9128b9d68ff6b96d70336a6e51d23e4" title="Data buffer getter." alt="" coords="499,42,677,69"/>
-<area shape="rect" id="node3" href="$classopenfsl_1_1_block_device.html#a47f31aa57ca6e82567148f7875a81162" title=" " alt="" coords="276,31,435,72"/>
-<area shape="rect" id="node4" href="$classopenfsl_1_1_m_b_r.html#aa0ae0fbc10901fa313e61a43d1da6a83" title=" " alt="" coords="260,96,451,138"/>
-<area shape="rect" id="node5" href="$classopenfsl_1_1_m_b_r.html#a92009da835b93c83686b36f5e2a30ae8" title=" " alt="" coords="269,162,441,189"/>
-<area shape="rect" id="node7" href="$classopenfsl_1_1_block_device.html#abb336a5c13d81a7587ad19da73097f43" title=" " alt="" coords="276,214,435,255"/>
-<area shape="rect" id="node6" href="$classopenfsl_1_1_container.html#ae32318eaf5dd949eb740f9ed2d05f5d9" title="Data buffer getter." alt="" coords="517,155,659,196"/>
-</map>

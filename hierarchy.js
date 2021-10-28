@@ -24,6 +24,7 @@ var hierarchy =
     [ "openfsl::FSL_File", "classopenfsl_1_1_f_s_l___file.html", [
       [ "openfsl::FAT32::FILE", "classopenfsl_1_1_f_a_t32_1_1_f_i_l_e.html", null ]
     ] ],
+    [ "openfsl::GPT", "classopenfsl_1_1_g_p_t.html", null ],
     [ "openfsl::IODevice", "classopenfsl_1_1_i_o_device.html", [
       [ "openfsl::BlockDevice", "classopenfsl_1_1_block_device.html", [
         [ "openfsl::FileBlockDevice", "classopenfsl_1_1_file_block_device.html", null ]
@@ -39,8 +40,11 @@ var hierarchy =
     [ "MFTResidentAttrHeader", "struct_m_f_t_resident_attr_header.html", null ],
     [ "MFTStandardInformation", "struct_m_f_t_standard_information.html", null ],
     [ "openfsl::fsStructure::NTFSBPB", "structopenfsl_1_1fs_structure_1_1_n_t_f_s_b_p_b.html", null ],
+    [ "openfsl::GPT::PartitionEntry", "structopenfsl_1_1_g_p_t_1_1_partition_entry.html", null ],
     [ "openfsl::MBR::PartitionEntry", "structopenfsl_1_1_m_b_r_1_1_partition_entry.html", null ],
+    [ "openfsl::MBR::PartitionInfo", "structopenfsl_1_1_m_b_r_1_1_partition_info.html", null ],
     [ "openfsl::MBR::PartitionTable", "structopenfsl_1_1_m_b_r_1_1_partition_table.html", null ],
+    [ "openfsl::GPT::TableHeader", "structopenfsl_1_1_g_p_t_1_1_table_header.html", null ],
     [ "openfsl::Time", "structopenfsl_1_1_time.html", null ],
     [ "VBRSector", "struct_v_b_r_sector.html", null ],
     [ "openfsl::FAT32::VolumeInfo", "structopenfsl_1_1_f_a_t32_1_1_volume_info.html", null ],

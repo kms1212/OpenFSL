@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['version_1179',['Version',['../classopenfsl_1_1_n_t_f_s.html#a90fc5270013fd8a0ad96d9d3fb14522b',1,'openfsl::NTFS']]]
+  ['stdinfoflags_1264',['StdInfoFlags',['../ntfs__structures_8h.html#ad03a9b0939cf8df877a6b748fd887741',1,'ntfs_structures.h']]]
 ];

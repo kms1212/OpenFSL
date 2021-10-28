@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['vbrsector_1164',['VBRSector',['../ntfs__structures_8h.html#a181069c15165bd8ba6437c6e4c16c9f2',1,'ntfs_structures.h']]],
-  ['volumeinfo_1165',['VolumeInfo',['../classopenfsl_1_1_f_a_t32.html#a99a598b9f506133275534e1d384dc5e7',1,'openfsl::FAT32']]]
+  ['partitionentry_1244',['PartitionEntry',['../classopenfsl_1_1_g_p_t.html#a8421713970f528b45b965ad43c01388e',1,'openfsl::GPT::PartitionEntry()'],['../classopenfsl_1_1_m_b_r.html#ae316b29c6e90e2fd967930fe23bc0c19',1,'openfsl::MBR::PartitionEntry()']]],
+  ['partitioninfo_1245',['PartitionInfo',['../classopenfsl_1_1_m_b_r.html#afffd252defc7b94c579e1a28c85d641c',1,'openfsl::MBR']]],
+  ['partitiontable_1246',['PartitionTable',['../classopenfsl_1_1_m_b_r.html#a5d06dda2a3acfe891a6f4ef44be4f756',1,'openfsl::MBR']]]
 ];

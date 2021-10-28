@@ -15,6 +15,7 @@ var filesystem_8h =
       [ "HFSPlus", "filesystem_8h.html#a43add8221d9aa3cd7285f47e4e04e72ea568f795f7cf79887e1d10034c76dab29", null ],
       [ "APFS", "filesystem_8h.html#a43add8221d9aa3cd7285f47e4e04e72eac07bdd06813e0ac5fa2555c26bca2cbc", null ],
       [ "ISO9660", "filesystem_8h.html#a43add8221d9aa3cd7285f47e4e04e72eaa4767d59f487d28f9234ab74542a6069", null ],
-      [ "UDF", "filesystem_8h.html#a43add8221d9aa3cd7285f47e4e04e72ea70f4ffb2922543597e5471e5cda23632", null ]
+      [ "UDF", "filesystem_8h.html#a43add8221d9aa3cd7285f47e4e04e72ea70f4ffb2922543597e5471e5cda23632", null ],
+      [ "GPT", "filesystem_8h.html#a43add8221d9aa3cd7285f47e4e04e72ea1703f91c5c4c0ce169e1713fe58318a9", null ]
     ] ]
 ];

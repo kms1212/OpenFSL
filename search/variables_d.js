@@ -1,8 +1,12 @@
 var searchData=
 [
-  ['readpointer_1084',['readPointer',['../classopenfsl_1_1_f_s_l___file.html#aed50fd7dda6287da7200a0783da62406',1,'openfsl::FSL_File']]],
-  ['readsector_1085',['readSector',['../structopenfsl_1_1_block_device_1_1_i_o_functions.html#a4418eb581aa835b54c2f7c0b40905b13',1,'openfsl::BlockDevice::IOFunctions']]],
-  ['reservedsectorcount_1086',['reservedSectorCount',['../structopenfsl_1_1_f_a_t32_1_1_format_options.html#ab94ba40f07e6f958c4c34cd7cad8eb2e',1,'openfsl::FAT32::FormatOptions']]],
-  ['rootdirectorycluster_1087',['rootDirectoryCluster',['../structopenfsl_1_1_f_a_t32_1_1_format_options.html#a9d18666c108db6d18db9c999e6c25c54',1,'openfsl::FAT32::FormatOptions']]],
-  ['rootsymbol_1088',['rootSymbol',['../classopenfsl_1_1_file_system.html#a00c7191c6e05046d42b0ce8d6cfea3bb',1,'openfsl::FileSystem']]]
+  ['partbootable_1153',['partBootable',['../structopenfsl_1_1_m_b_r_1_1_partition_info.html#aec3d2d8369c491000e4e5dbe723b5dcb',1,'openfsl::MBR::PartitionInfo']]],
+  ['partfilesystem_1154',['partFileSystem',['../structopenfsl_1_1_m_b_r_1_1_partition_info.html#ae6471ed0fb555be5b463c37ab6ae1c09',1,'openfsl::MBR::PartitionInfo']]],
+  ['partitionlist_1155',['partitionList',['../classopenfsl_1_1_g_p_t.html#ae51e95820386b576cd6caddbda410f5e',1,'openfsl::GPT::partitionList()'],['../classopenfsl_1_1_m_b_r.html#a79ee8d412d5fa4581d82a92585d81c24',1,'openfsl::MBR::partitionList()']]],
+  ['partlist_1156',['partList',['../structopenfsl_1_1_disk_structure.html#ac02f39125484897fed35c987198a2df4',1,'openfsl::DiskStructure']]],
+  ['partoffset_1157',['partOffset',['../structopenfsl_1_1_m_b_r_1_1_partition_info.html#ab19f8d7dd6b770695bbc9f1aa30f9451',1,'openfsl::MBR::PartitionInfo']]],
+  ['partsize_1158',['partSize',['../structopenfsl_1_1_m_b_r_1_1_partition_info.html#ac86e3f2b090164e599ac150c9c63ffc0',1,'openfsl::MBR::PartitionInfo']]],
+  ['parttable_1159',['partTable',['../structopenfsl_1_1_disk_structure.html#a6f24f5230029bb610c378da45d6010c2',1,'openfsl::DiskStructure']]],
+  ['pathseparator_1160',['pathSeparator',['../classopenfsl_1_1_file_system.html#a60c94779ce86b5a7854d6d24620fa3cb',1,'openfsl::FileSystem']]],
+  ['protmbr_1161',['protMbr',['../classopenfsl_1_1_g_p_t.html#a3ea6d2991ac9100a9aef8665bfc0e13d',1,'openfsl::GPT']]]
 ];
