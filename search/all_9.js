@@ -14,8 +14,7 @@ var searchData=
   ['iodevice_2eh_371',['iodevice.h',['../iodevice_8h.html',1,'']]],
   ['iofunc_372',['ioFunc',['../classopenfsl_1_1_block_device.html#af3329259855a257abca39ef91de9e3f0',1,'openfsl::BlockDevice']]],
   ['iofunctions_373',['IOFunctions',['../structopenfsl_1_1_block_device_1_1_i_o_functions.html',1,'openfsl::BlockDevice::IOFunctions'],['../classopenfsl_1_1_block_device.html#a4856f8db93f99db170a939b6889da9f2',1,'openfsl::BlockDevice::IOFunctions()']]],
-  ['isextendedpartitionexists_374',['isExtendedPartitionExists',['../classopenfsl_1_1_m_b_r.html#a3273c94a0ef0e900f0afd5de0113210b',1,'openfsl::MBR']]],
-  ['isinitialized_375',['isInitialized',['../classopenfsl_1_1_file_system.html#a69c624f59ef294870155d652aa7719d4',1,'openfsl::FileSystem::isInitialized()'],['../classopenfsl_1_1_i_o_device.html#ab2c5fa3be69016758f8544c9e19adc30',1,'openfsl::IODevice::isInitialized()']]],
-  ['iso9660_376',['ISO9660',['../namespaceopenfsl.html#a43add8221d9aa3cd7285f47e4e04e72eaa4767d59f487d28f9234ab74542a6069',1,'openfsl']]],
-  ['isvalidfilename_377',['isValidFileName',['../classopenfsl_1_1_f_a_t32.html#a9ae40bd9e708e6c5a4075a5d9efa3008',1,'openfsl::FAT32']]]
+  ['isinitialized_374',['isInitialized',['../classopenfsl_1_1_file_system.html#a69c624f59ef294870155d652aa7719d4',1,'openfsl::FileSystem::isInitialized()'],['../classopenfsl_1_1_i_o_device.html#ab2c5fa3be69016758f8544c9e19adc30',1,'openfsl::IODevice::isInitialized()']]],
+  ['iso9660_375',['ISO9660',['../namespaceopenfsl.html#a43add8221d9aa3cd7285f47e4e04e72eaa4767d59f487d28f9234ab74542a6069',1,'openfsl']]],
+  ['isvalidfilename_376',['isValidFileName',['../classopenfsl_1_1_f_a_t32.html#a9ae40bd9e708e6c5a4075a5d9efa3008',1,'openfsl::FAT32']]]
 ];

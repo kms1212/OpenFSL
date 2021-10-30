@@ -22,6 +22,5 @@ var classopenfsl_1_1_m_b_r =
     [ "getPartitionInfo", "classopenfsl_1_1_m_b_r.html#a52f0f7f30aa15a6a0714253bd4a119ac", null ],
     [ "initialize", "classopenfsl_1_1_m_b_r.html#a92009da835b93c83686b36f5e2a30ae8", null ],
     [ "bd", "classopenfsl_1_1_m_b_r.html#a49097347090ec395a6839a6462b08222", null ],
-    [ "isExtendedPartitionExists", "classopenfsl_1_1_m_b_r.html#a3273c94a0ef0e900f0afd5de0113210b", null ],
     [ "partitionList", "classopenfsl_1_1_m_b_r.html#a79ee8d412d5fa4581d82a92585d81c24", null ]
 ];
