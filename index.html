@@ -148,9 +148,9 @@ Description</h1>
 <p>Sometimes you may want to modify the file system image. And sometimes you may want to mount and read or write unsupported filesystem. I created this project to do these things without installing and mounting with <a href="https://github.com/libfuse/libfuse">libfuse</a>. <br  />
 </p>
 <p>Cross-compiling is not possible at this time because there are so many OS-specific build tasks. This library provides only file system control, so you have to implement the abstraction layer for the library. However, in this regard, it can have the advantage of being able to integrate into the operating system.</p>
-<p><img src="./doc/images/OpenFSLtoApplicationCodeStructure.png" alt="image1" width="50%" height="50%" class="inline"/></p>
+<p><img src="https://raw.githubusercontent.com/kms1212/OpenFSL/main/doc/images/OpenFSLtoApplicationCodeStructure.png" alt="image1" width="50%" height="50%" class="inline"/></p>
 <p>In this image, the disk device abstraction layer is in user application block. But if I transform this image a little bit...</p>
-<p><img src="./doc/images/OpenFSLtoOSCodeStructure.png" alt="image1" width="35%" height="35%" class="inline"/></p>
+<p><img src="https://raw.githubusercontent.com/kms1212/OpenFSL/main/doc/images/OpenFSLtoOSCodeStructure.png" alt="image1" width="35%" height="35%" class="inline"/></p>
 <p>You can integrate the library to your operating system!</p>
 <h1><a class="anchor" id="autotoc_md6"></a>
 Arch/platforms[^note]</h1>
@@ -162,9 +162,9 @@ Arch/platforms[^note]</h1>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">AMD64(x86-64) </td><td class="markdownTableBodyNone">O </td><td class="markdownTableBodyNone">O </td><td class="markdownTableBodyNone">O </td><td class="markdownTableBodyNone">O  </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">aarch64 </td><td class="markdownTableBodyNone">X </td><td class="markdownTableBodyNone">O </td><td class="markdownTableBodyNone">X </td><td class="markdownTableBodyNone">X  </td></tr>
+<td class="markdownTableBodyNone">aarch64 </td><td class="markdownTableBodyNone">X </td><td class="markdownTableBodyNone">O </td><td class="markdownTableBodyNone">O </td><td class="markdownTableBodyNone">X  </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">armel (ARM 32-bit LE[^le]) </td><td class="markdownTableBodyNone">X </td><td class="markdownTableBodyNone">X </td><td class="markdownTableBodyNone">X </td><td class="markdownTableBodyNone"></td></tr>
+<td class="markdownTableBodyNone">armel (ARM 32-bit LE[^le]) </td><td class="markdownTableBodyNone">X </td><td class="markdownTableBodyNone">O </td><td class="markdownTableBodyNone">O </td><td class="markdownTableBodyNone"></td></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">ppc64el (PowerPC 64-bit LE[^le]) </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">X </td><td class="markdownTableBodyNone">X </td><td class="markdownTableBodyNone"></td></tr>
 <tr class="markdownTableRowEven">
