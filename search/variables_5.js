@@ -25,7 +25,7 @@ var searchData=
   ['fileoperationmutex_1064',['fileOperationMutex',['../classopenfsl_1_1_f_a_t32_1_1_f_i_l_e.html#a78266994570d30e37efcbf0363243271',1,'openfsl::FAT32::FILE']]],
   ['filereserved1_1065',['fileReserved1',['../struct_file_entry.html#a0c7f5a42b672b921671552be8e15f413',1,'FileEntry']]],
   ['filesfnname_1066',['fileSFNName',['../structopenfsl_1_1_f_a_t32_1_1_file_info.html#aa7b1cdd761ebec2156915e0804902c49',1,'openfsl::FAT32::FileInfo']]],
-  ['filesize_1067',['fileSize',['../struct_file_entry.html#a442e65305af5e7fd839183e5a5b4147c',1,'FileEntry::fileSize()'],['../structopenfsl_1_1_f_a_t32_1_1_file_info.html#ab35920e19bf72c29abd694d260179273',1,'openfsl::FAT32::FileInfo::fileSize()']]],
+  ['filesize_1067',['fileSize',['../struct_file_entry.html#a442e65305af5e7fd839183e5a5b4147c',1,'FileEntry::fileSize()'],['../structopenfsl_1_1_f_a_t32_1_1_file_info.html#accbc2ecc1b379d4126fbc14068cd0d19',1,'openfsl::FAT32::FileInfo::fileSize()']]],
   ['filesystem_1068',['fileSystem',['../classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a338a6d686727f99739c48aec78105516',1,'openfsl::FAT32::LinkedCluster::fileSystem()'],['../classopenfsl_1_1_f_a_t32_1_1_f_i_l_e.html#ae0eb4e30eaf28967c6604fe116d8acb4',1,'openfsl::FAT32::FILE::fileSystem()']]],
   ['filesystemsize_1069',['filesystemSize',['../structopenfsl_1_1_f_a_t32_1_1_volume_info.html#af178cd24ac093a67f81743ad5665b153',1,'openfsl::FAT32::VolumeInfo']]],
   ['fnallocatedfilesize_1070',['fnAllocatedFileSize',['../struct_m_f_t_file_name.html#a97a0a1f17c9284757be6781b5c40be85',1,'MFTFileName']]],

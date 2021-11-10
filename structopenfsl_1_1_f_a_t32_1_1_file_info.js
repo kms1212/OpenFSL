@@ -9,5 +9,5 @@ var structopenfsl_1_1_f_a_t32_1_1_file_info =
     [ "fileModTime", "structopenfsl_1_1_f_a_t32_1_1_file_info.html#a5775315ef5080b04cc1fa8235696f88d", null ],
     [ "fileName", "structopenfsl_1_1_f_a_t32_1_1_file_info.html#a8042347f388f6893aa9c6f76eb151818", null ],
     [ "fileSFNName", "structopenfsl_1_1_f_a_t32_1_1_file_info.html#aa7b1cdd761ebec2156915e0804902c49", null ],
-    [ "fileSize", "structopenfsl_1_1_f_a_t32_1_1_file_info.html#ab35920e19bf72c29abd694d260179273", null ]
+    [ "fileSize", "structopenfsl_1_1_f_a_t32_1_1_file_info.html#accbc2ecc1b379d4126fbc14068cd0d19", null ]
 ];
