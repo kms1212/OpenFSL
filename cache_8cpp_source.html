@@ -251,26 +251,27 @@ $(document).ready(function(){initNavTree('cache_8cpp_source.html',''); initResiz
 <div class="line"><a name="l00151"></a><span class="lineno"><a class="line" href="classopenfsl_1_1_f_a_t32.html#a2eaaf5200fefd9390d155853b827369a">  151</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classopenfsl_1_1_f_a_t32.html#a2eaaf5200fefd9390d155853b827369a">openfsl::FAT32::disableCache</a>() {</div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="keywordflow">if</span> (cacheEnabled) {</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        cacheEnabled = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        cacheMaxEntry = 0;</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160; </div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        <span class="comment">// Stop cache manager thread</span></div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        <span class="keywordflow">if</span> (cacheMgrThread.joinable()) {</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;            cacheCvMutex.lock();</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;            cacheCv.notify_all();</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;            cacheCvMutex.unlock();</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160; </div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;            cacheMgrThread.join();</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        }</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160; </div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        <span class="comment">// Unalloc all cache data</span></div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        <span class="keywordflow">for</span> (std::map&lt;std::string, CacheEntry&gt;::iterator i = fsCache.begin();</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;                    i != fsCache.end();)</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;            __deleteCache((i++)-&gt;first);</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        cacheMutex.lock();</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        fsCache.clear();</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        cacheMutex.unlock();</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    }</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;}</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160; </div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        <span class="comment">// Stop cache manager thread</span></div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        <span class="keywordflow">if</span> (cacheMgrThread.joinable()) {</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;            cacheCvMutex.lock();</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;            cacheCv.notify_all();</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;            cacheCvMutex.unlock();</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;            cacheMgrThread.join();</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        }</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160; </div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        <span class="comment">// Unalloc all cache data</span></div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        <span class="keywordflow">for</span> (std::map&lt;std::string, CacheEntry&gt;::iterator i = fsCache.begin();</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;                    i != fsCache.end();)</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;            __deleteCache((i++)-&gt;first);</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        cacheMutex.lock();</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        fsCache.clear();</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        cacheMutex.unlock();</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        </div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        cacheMaxEntry = 0;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    }</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aclassopenfsl_1_1_f_a_t32_html_a938cc3147321a5fe35bb658b04d99cf7"><div class="ttname"><a href="classopenfsl_1_1_f_a_t32.html#a938cc3147321a5fe35bb658b04d99cf7">openfsl::FAT32::enableCache</a></div><div class="ttdeci">error_t enableCache(const size_t cacheMaxEntry_)</div><div class="ttdoc">Enable cache.</div><div class="ttdef"><b>Definition:</b> <a href="cache_8cpp_source.html#l00138">cache.cpp:138</a></div></div>
