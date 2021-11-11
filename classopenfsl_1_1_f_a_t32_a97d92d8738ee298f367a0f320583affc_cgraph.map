@@ -1,5 +1,7 @@
 <map id="openfsl::FAT32::__updateBpb" name="openfsl::FAT32::__updateBpb">
-<area shape="rect" id="node1" title="Update BPB." alt="" coords="5,46,213,73"/>
+<area shape="rect" id="node1" title="Update BPB." alt="" coords="5,101,213,127"/>
 <area shape="rect" id="node2" href="$classopenfsl_1_1_file_system.html#ac66d2dd1349a54c08d816e466042cf5b" title=" " alt="" coords="261,5,489,47"/>
-<area shape="rect" id="node3" href="$classopenfsl_1_1_block_device.html#a6f344509ac727d84dfaa6aafa516cde4" title=" " alt="" coords="296,71,455,112"/>
+<area shape="rect" id="node3" href="$classopenfsl_1_1_sector.html#af9128b9d68ff6b96d70336a6e51d23e4" title="Data buffer getter." alt="" coords="286,71,465,98"/>
+<area shape="rect" id="node4" href="$classopenfsl_1_1_block_device.html#a47f31aa57ca6e82567148f7875a81162" title=" " alt="" coords="296,123,455,164"/>
+<area shape="rect" id="node5" href="$classopenfsl_1_1_block_device.html#a6f344509ac727d84dfaa6aafa516cde4" title=" " alt="" coords="296,188,455,229"/>
 </map>

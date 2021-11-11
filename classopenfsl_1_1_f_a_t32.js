@@ -67,7 +67,7 @@ var classopenfsl_1_1_f_a_t32 =
     [ "getPath", "classopenfsl_1_1_f_a_t32.html#a674e197bc5b7ed86fcca232efbd8cecf", null ],
     [ "getPathSeparator", "classopenfsl_1_1_f_a_t32.html#a9110038781f37a6e7502a65675579569", null ],
     [ "getVolumeInfo", "classopenfsl_1_1_f_a_t32.html#a5e9c9580611a3438155a22002124293d", null ],
-    [ "initialize", "classopenfsl_1_1_f_a_t32.html#a759fb7aba2bc3101ef9534ec728f030a", null ],
+    [ "initialize", "classopenfsl_1_1_f_a_t32.html#aaaf88c45f959295ab9ee5fff21c7ce24", null ],
     [ "isValidFileName", "classopenfsl_1_1_f_a_t32.html#a9ae40bd9e708e6c5a4075a5d9efa3008", null ],
     [ "listDirectory", "classopenfsl_1_1_f_a_t32.html#a28aa163f1eb254cc266b03094746513c", null ],
     [ "makeDirectory", "classopenfsl_1_1_f_a_t32.html#a6f4949bc2b3f1e017dc1ab1cca3d78c1", null ],
@@ -92,6 +92,5 @@ var classopenfsl_1_1_f_a_t32 =
     [ "fatArea", "classopenfsl_1_1_f_a_t32.html#a28f40dbac6d5fe16936bd3aa83d0b547", null ],
     [ "fsCache", "classopenfsl_1_1_f_a_t32.html#a213d0c5ab978474bdfed219fba9ac592", null ],
     [ "fsinfo", "classopenfsl_1_1_f_a_t32.html#a32f1c9952763e5092241a4a35b3c5a5d", null ],
-    [ "fsOperationMutex", "classopenfsl_1_1_f_a_t32.html#a878f4cbc9a910280b21e4e6c9c98a400", null ],
     [ "fsType", "classopenfsl_1_1_f_a_t32.html#a62ef68ec8a83e345c859dd3afb39fefa", null ]
 ];

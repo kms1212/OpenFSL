@@ -110,10 +110,10 @@ Inheritance diagram for openfsl::FileSystem&lt; IOD &gt;:</div>
 <div class="dyncontent">
 <div class="center"><img src="classopenfsl_1_1_file_system__inherit__graph.png" border="0" usemap="#openfsl_1_1_file_system_3_01_i_o_d_01_4_inherit__map" alt="Inheritance graph"/></div>
 <map name="openfsl_1_1_file_system_3_01_i_o_d_01_4_inherit__map" id="openfsl_1_1_file_system_3_01_i_o_d_01_4_inherit__map">
-<area shape="rect" title=" " alt="" coords="141,5,292,288"/>
-<area shape="rect" href="classopenfsl_1_1_file_system.html" title=" " alt="" coords="141,351,292,633"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html" title="FAT32 imeplementation." alt="" coords="5,683,217,1889"/>
-<area shape="rect" href="classopenfsl_1_1_n_t_f_s.html" title="NTFS imeplementation." alt="" coords="242,1196,405,1376"/>
+<area shape="rect" title=" " alt="" coords="139,5,294,303"/>
+<area shape="rect" href="classopenfsl_1_1_file_system.html" title=" " alt="" coords="139,365,294,663"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html" title="FAT32 imeplementation." alt="" coords="5,712,217,1904"/>
+<area shape="rect" href="classopenfsl_1_1_n_t_f_s.html" title="NTFS imeplementation." alt="" coords="242,1218,405,1398"/>
 </map>
 </div>
 <div class="dynheader">
@@ -121,12 +121,13 @@ Collaboration diagram for openfsl::FileSystem&lt; IOD &gt;:</div>
 <div class="dyncontent">
 <div class="center"><img src="classopenfsl_1_1_file_system__coll__graph.png" border="0" usemap="#openfsl_1_1_file_system_3_01_i_o_d_01_4_coll__map" alt="Collaboration graph"/></div>
 <map name="openfsl_1_1_file_system_3_01_i_o_d_01_4_coll__map" id="openfsl_1_1_file_system_3_01_i_o_d_01_4_coll__map">
-<area shape="rect" title=" " alt="" coords="165,175,315,369"/>
+<area shape="rect" title=" " alt="" coords="247,175,398,369"/>
 <area shape="rect" href="classuint64__t.html" title=" " alt="" coords="5,5,80,83"/>
-<area shape="rect" title=" " alt="" coords="133,5,190,83"/>
-<area shape="rect" title=" " alt="" coords="215,5,273,83"/>
-<area shape="rect" href="classbool.html" title=" " alt="" coords="353,5,404,83"/>
-<area shape="rect" title=" " alt="" coords="428,5,660,83"/>
+<area shape="rect" title=" " alt="" coords="131,5,189,83"/>
+<area shape="rect" title=" " alt="" coords="213,5,277,83"/>
+<area shape="rect" title=" " alt="" coords="376,5,435,83"/>
+<area shape="rect" href="classbool.html" title=" " alt="" coords="519,5,569,83"/>
+<area shape="rect" title=" " alt="" coords="593,5,825,83"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -169,6 +170,9 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:afb17583683e7903dc6c22705a35d10fc"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenfsl_1_1_file_system.html#afb17583683e7903dc6c22705a35d10fc">currentPath</a></td></tr>
 <tr class="memdesc:afb17583683e7903dc6c22705a35d10fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current path cursor.  <a href="classopenfsl_1_1_file_system.html#afb17583683e7903dc6c22705a35d10fc">More...</a><br /></td></tr>
 <tr class="separator:afb17583683e7903dc6c22705a35d10fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af11b9e85d55a65b0678665d9037ba9fe"><td class="memItemLeft" align="right" valign="top">std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenfsl_1_1_file_system.html#af11b9e85d55a65b0678665d9037ba9fe">fsOperationMutex</a></td></tr>
+<tr class="memdesc:af11b9e85d55a65b0678665d9037ba9fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mutex for file system operation.  <a href="classopenfsl_1_1_file_system.html#af11b9e85d55a65b0678665d9037ba9fe">More...</a><br /></td></tr>
+<tr class="separator:af11b9e85d55a65b0678665d9037ba9fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;class IOD&gt;<br />
@@ -217,7 +221,7 @@ template&lt;class IOD &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="filesystem_8h_source.html#l00089">89</a> of file <a class="el" href="filesystem_8h_source.html">filesystem.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="filesystem_8h_source.html#l00092">92</a> of file <a class="el" href="filesystem_8h_source.html">filesystem.h</a>.</p>
 
 </div>
 </div>
@@ -243,7 +247,7 @@ template&lt;class IOD &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="filesystem_8h_source.html#l00096">96</a> of file <a class="el" href="filesystem_8h_source.html">filesystem.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="filesystem_8h_source.html#l00099">99</a> of file <a class="el" href="filesystem_8h_source.html">filesystem.h</a>.</p>
 
 </div>
 </div>
@@ -274,7 +278,7 @@ template&lt;class IOD &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="filesystem_8h_source.html#l00072">72</a> of file <a class="el" href="filesystem_8h_source.html">filesystem.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="filesystem_8h_source.html#l00075">75</a> of file <a class="el" href="filesystem_8h_source.html">filesystem.h</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -336,7 +340,7 @@ template&lt;class IOD &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="filesystem_8h_source.html#l00071">71</a> of file <a class="el" href="filesystem_8h_source.html">filesystem.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="filesystem_8h_source.html#l00074">74</a> of file <a class="el" href="filesystem_8h_source.html">filesystem.h</a>.</p>
 
 </div>
 </div>
@@ -365,7 +369,7 @@ template&lt;class IOD &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="filesystem_8h_source.html#l00073">73</a> of file <a class="el" href="filesystem_8h_source.html">filesystem.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="filesystem_8h_source.html#l00076">76</a> of file <a class="el" href="filesystem_8h_source.html">filesystem.h</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -416,7 +420,7 @@ template&lt;class IOD &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="filesystem_8h_source.html#l00098">98</a> of file <a class="el" href="filesystem_8h_source.html">filesystem.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="filesystem_8h_source.html#l00101">101</a> of file <a class="el" href="filesystem_8h_source.html">filesystem.h</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -424,7 +428,7 @@ Here is the caller graph for this function:</div>
 <map name="classopenfsl_1_1_file_system_a422eae7c59512ffea50ae831729da461_icgraph" id="classopenfsl_1_1_file_system_a422eae7c59512ffea50ae831729da461_icgraph">
 <area shape="rect" title=" " alt="" coords="233,23,384,65"/>
 <area shape="rect" href="classopenfsl_1_1_n_t_f_s.html#ab0d2ba1c034e427115fe0809fccb4526" title="NTFS intializer." alt="" coords="8,5,183,32"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a759fb7aba2bc3101ef9534ec728f030a" title="FS_FAT32 intializer." alt="" coords="5,56,185,83"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#aaaf88c45f959295ab9ee5fff21c7ce24" title="FS_FAT32 intializer." alt="" coords="5,56,185,83"/>
 </map>
 </div>
 
@@ -455,7 +459,7 @@ template&lt;class IOD &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="filesystem_8h_source.html#l00070">70</a> of file <a class="el" href="filesystem_8h_source.html">filesystem.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="filesystem_8h_source.html#l00073">73</a> of file <a class="el" href="filesystem_8h_source.html">filesystem.h</a>.</p>
 
 </div>
 </div>
@@ -485,7 +489,7 @@ template&lt;class IOD &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="filesystem_8h_source.html#l00067">67</a> of file <a class="el" href="filesystem_8h_source.html">filesystem.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="filesystem_8h_source.html#l00070">70</a> of file <a class="el" href="filesystem_8h_source.html">filesystem.h</a>.</p>
 
 </div>
 </div>
@@ -544,6 +548,34 @@ template&lt;class IOD &gt; </div>
 
 </div>
 </div>
+<a id="af11b9e85d55a65b0678665d9037ba9fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af11b9e85d55a65b0678665d9037ba9fe">&#9670;&nbsp;</a></span>fsOperationMutex</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class IOD &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::mutex <a class="el" href="classopenfsl_1_1_file_system.html">openfsl::FileSystem</a>&lt; IOD &gt;::fsOperationMutex</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Mutex for file system operation. </p>
+
+<p class="definition">Definition at line <a class="el" href="filesystem_8h_source.html#l00055">55</a> of file <a class="el" href="filesystem_8h_source.html">filesystem.h</a>.</p>
+
+</div>
+</div>
 <a id="a7337351fc757b66a82760b6d16795d07"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7337351fc757b66a82760b6d16795d07">&#9670;&nbsp;</a></span>fsType</h2>
 
@@ -566,7 +598,7 @@ template&lt;class IOD &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="filesystem_8h_source.html#l00055">55</a> of file <a class="el" href="filesystem_8h_source.html">filesystem.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="filesystem_8h_source.html#l00058">58</a> of file <a class="el" href="filesystem_8h_source.html">filesystem.h</a>.</p>
 
 </div>
 </div>

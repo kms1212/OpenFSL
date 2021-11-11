@@ -21,7 +21,7 @@ var searchData=
   ['vbrsignature_647',['vbrSignature',['../struct_v_b_r_sector.html#a85fc7b1bf4946d0237148ce486ee9e40',1,'VBRSector']]],
   ['vbrtotalsectors_648',['vbrTotalSectors',['../struct_v_b_r_sector.html#a3f165186129a2813609e4441225425b6',1,'VBRSector']]],
   ['vbrvolumeserial_649',['vbrVolumeSerial',['../struct_v_b_r_sector.html#a4f7a7deba694a532ba58ecc1a8af5f82',1,'VBRSector']]],
-  ['version_650',['Version',['../classopenfsl_1_1_n_t_f_s.html#a90fc5270013fd8a0ad96d9d3fb14522b',1,'openfsl::NTFS::Version()'],['../classopenfsl_1_1_n_t_f_s.html#a44d4dd09f98cc20b891a7c6a17fe7945',1,'openfsl::NTFS::version()']]],
+  ['version_650',['version',['../classopenfsl_1_1_n_t_f_s.html#a44d4dd09f98cc20b891a7c6a17fe7945',1,'openfsl::NTFS::version()'],['../classopenfsl_1_1_n_t_f_s.html#a90fc5270013fd8a0ad96d9d3fb14522b',1,'openfsl::NTFS::Version()']]],
   ['version_2ecpp_651',['version.cpp',['../version_8cpp.html',1,'']]],
   ['version_2eh_652',['version.h',['../version_8h.html',1,'']]],
   ['volume_5finformation_653',['VOLUME_INFORMATION',['../ntfs__structures_8h.html#a0f35e8a5a5b509089ed135fb9baf4e54a7f522c442cd3af78c69be826ccfeffc7',1,'ntfs_structures.h']]],

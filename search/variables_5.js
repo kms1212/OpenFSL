@@ -52,6 +52,6 @@ var searchData=
   ['fsinfosignature2_1091',['fsinfoSignature2',['../struct_f_s_i_n_f_o_sector.html#ab966126313dbebf4cabf373d0fcbe0a1',1,'FSINFOSector']]],
   ['fsinfosignature3_1092',['fsinfoSignature3',['../struct_f_s_i_n_f_o_sector.html#ab46dc0203bec07e5a8c2ed8e2e8dfa27',1,'FSINFOSector']]],
   ['fslbaoffset_1093',['fsLBAOffset',['../classopenfsl_1_1_file_system.html#a3662a437a90a409b8f7938a697c5dd73',1,'openfsl::FileSystem']]],
-  ['fsoperationmutex_1094',['fsOperationMutex',['../classopenfsl_1_1_f_a_t32.html#a878f4cbc9a910280b21e4e6c9c98a400',1,'openfsl::FAT32']]],
+  ['fsoperationmutex_1094',['fsOperationMutex',['../classopenfsl_1_1_file_system.html#af11b9e85d55a65b0678665d9037ba9fe',1,'openfsl::FileSystem']]],
   ['fstype_1095',['fsType',['../structopenfsl_1_1fs_structure_1_1_n_t_f_s_b_p_b.html#a6e1a777e138a76ffc6ac74997223cbd2',1,'openfsl::fsStructure::NTFSBPB::fsType()'],['../classopenfsl_1_1_file_system.html#a7337351fc757b66a82760b6d16795d07',1,'openfsl::FileSystem::fsType()'],['../classopenfsl_1_1_f_a_t32.html#a62ef68ec8a83e345c859dd3afb39fefa',1,'openfsl::FAT32::fsType()'],['../classopenfsl_1_1_n_t_f_s.html#a7c44259574ed6e12c6dc2dc43d862bac',1,'openfsl::NTFS::fsType()']]]
 ];

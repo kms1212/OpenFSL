@@ -1,5 +1,7 @@
 <map id="openfsl::FAT32::__updateFsInfo" name="openfsl::FAT32::__updateFsInfo">
-<area shape="rect" id="node1" title="Update FSINFO." alt="" coords="5,39,188,80"/>
+<area shape="rect" id="node1" title="Update FSINFO." alt="" coords="5,93,188,135"/>
 <area shape="rect" id="node2" href="$classopenfsl_1_1_file_system.html#ac66d2dd1349a54c08d816e466042cf5b" title=" " alt="" coords="236,5,464,47"/>
-<area shape="rect" id="node3" href="$classopenfsl_1_1_block_device.html#a6f344509ac727d84dfaa6aafa516cde4" title=" " alt="" coords="271,71,429,112"/>
+<area shape="rect" id="node3" href="$classopenfsl_1_1_sector.html#af9128b9d68ff6b96d70336a6e51d23e4" title="Data buffer getter." alt="" coords="261,71,439,98"/>
+<area shape="rect" id="node4" href="$classopenfsl_1_1_block_device.html#a47f31aa57ca6e82567148f7875a81162" title=" " alt="" coords="271,123,429,164"/>
+<area shape="rect" id="node5" href="$classopenfsl_1_1_block_device.html#a6f344509ac727d84dfaa6aafa516cde4" title=" " alt="" coords="271,188,429,229"/>
 </map>

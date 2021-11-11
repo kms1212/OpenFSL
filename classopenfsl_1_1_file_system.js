@@ -10,6 +10,7 @@ var classopenfsl_1_1_file_system =
     [ "setFsLBAOffset", "classopenfsl_1_1_file_system.html#ab375efdcbf9173e52d5c8ad7f0d17061", null ],
     [ "currentPath", "classopenfsl_1_1_file_system.html#afb17583683e7903dc6c22705a35d10fc", null ],
     [ "fsLBAOffset", "classopenfsl_1_1_file_system.html#a3662a437a90a409b8f7938a697c5dd73", null ],
+    [ "fsOperationMutex", "classopenfsl_1_1_file_system.html#af11b9e85d55a65b0678665d9037ba9fe", null ],
     [ "fsType", "classopenfsl_1_1_file_system.html#a7337351fc757b66a82760b6d16795d07", null ],
     [ "initialized", "classopenfsl_1_1_file_system.html#a97597140deea474998d169ba5d237064", null ],
     [ "iod", "classopenfsl_1_1_file_system.html#a86ddae269951f0ab89edb506a269ff9c", null ],
