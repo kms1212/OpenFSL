@@ -98,7 +98,7 @@ $(document).ready(function(){initNavTree('move_8cpp_source.html',''); initResiza
 <div class="title">move.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="move_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* Copyright (c) 2021. kms1212(Min Su Kwon)</span></div>
+<a href="move_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* Copyright (c) 2021. kms1212(Minsu Kwon)</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">This file is part of OpenFSL.</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">OpenFSL and its source code is published over BSD 3-Clause License.</span></div>
@@ -113,90 +113,82 @@ $(document).ready(function(){initNavTree('move_8cpp_source.html',''); initResiza
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keyword">const</span> std::string fromName,</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">const</span> std::string toPath,</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">const</span> std::string toName) {</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    std::string tempPath = <a class="code" href="classopenfsl_1_1_file_system.html#afb17583683e7903dc6c22705a35d10fc">currentPath</a>;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    uint32_t tempCluster = <a class="code" href="classopenfsl_1_1_f_a_t32.html#acb87b04f2e0da8eac4900d183a6c2255">currentCluster</a>;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordflow">if</span> (fromPath != <span class="stringliteral">&quot;&quot;</span>) {  <span class="comment">// Change directory if path is set</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <a class="code" href="error_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a> result = <a class="code" href="classopenfsl_1_1_f_a_t32.html#a7a3ec9435f37a905a9e41358c94a98aa">__chdir</a>(fromPath);</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keywordflow">if</span> (result) {</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            <a class="code" href="classopenfsl_1_1_file_system.html#afb17583683e7903dc6c22705a35d10fc">currentPath</a> = tempPath;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            <a class="code" href="classopenfsl_1_1_f_a_t32.html#acb87b04f2e0da8eac4900d183a6c2255">currentCluster</a> = tempCluster;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            <span class="keywordflow">return</span> result;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        }</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    }</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    std::string sourceDirectoryPath = <a class="code" href="classopenfsl_1_1_file_system.html#afb17583683e7903dc6c22705a35d10fc">currentPath</a>;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    uint32_t sourceDirectoryCluster = <a class="code" href="classopenfsl_1_1_f_a_t32.html#acb87b04f2e0da8eac4900d183a6c2255">currentCluster</a>;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="structopenfsl_1_1_f_a_t32_1_1_file_info.html">FileInfo</a> fileInfo;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    std::string lFromName = fromName;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp; c : lFromName) c = <span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span><span class="keyword">&gt;</span>(toupper(c));</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="error_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a> result = <a class="code" href="classopenfsl_1_1_f_a_t32.html#a3ed1aabf1c80fca2be4ab1463cffa460">__forEachEntry</a>(</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        [&amp;](<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_file_info.html">FileInfo</a> fInfo) {</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        std::string filename = fInfo.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_file_info.html#a8042347f388f6893aa9c6f76eb151818">fileName</a>;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp; c : filename) c = <span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span><span class="keyword">&gt;</span>(toupper(c));</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordflow">if</span> (filename == lFromName) {</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            fileInfo = fInfo;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        }</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        });</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">if</span> (result) {</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <a class="code" href="classopenfsl_1_1_file_system.html#afb17583683e7903dc6c22705a35d10fc">currentPath</a> = tempPath;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <a class="code" href="classopenfsl_1_1_f_a_t32.html#acb87b04f2e0da8eac4900d183a6c2255">currentCluster</a> = tempCluster;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordflow">return</span> result;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    }</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    fileInfo.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_file_info.html#a8042347f388f6893aa9c6f76eb151818">fileName</a> = toName;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <a class="code" href="classopenfsl_1_1_file_system.html#afb17583683e7903dc6c22705a35d10fc">currentPath</a> = tempPath;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <a class="code" href="classopenfsl_1_1_f_a_t32.html#acb87b04f2e0da8eac4900d183a6c2255">currentCluster</a> = tempCluster;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordflow">if</span> (toPath != <span class="stringliteral">&quot;&quot;</span>) {  <span class="comment">// Change directory if path is set</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <a class="code" href="error_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a> result = <a class="code" href="classopenfsl_1_1_f_a_t32.html#a7a3ec9435f37a905a9e41358c94a98aa">__chdir</a>(toPath);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordflow">if</span> (result) {</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <a class="code" href="classopenfsl_1_1_file_system.html#afb17583683e7903dc6c22705a35d10fc">currentPath</a> = tempPath;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            <a class="code" href="classopenfsl_1_1_f_a_t32.html#acb87b04f2e0da8eac4900d183a6c2255">currentCluster</a> = tempCluster;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            <span class="keywordflow">return</span> result;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        }</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    }</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    result = <a class="code" href="classopenfsl_1_1_f_a_t32.html#a4474f7143bbd15c8cd6d30d527bf7a7e">__createEntry</a>(<span class="stringliteral">&quot;&quot;</span>, fileInfo);</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordflow">if</span> (result) {</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <a class="code" href="classopenfsl_1_1_file_system.html#afb17583683e7903dc6c22705a35d10fc">currentPath</a> = tempPath;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <a class="code" href="classopenfsl_1_1_f_a_t32.html#acb87b04f2e0da8eac4900d183a6c2255">currentCluster</a> = tempCluster;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordflow">return</span> result;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    }</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <a class="code" href="classopenfsl_1_1_file_system.html#afb17583683e7903dc6c22705a35d10fc">currentPath</a> = sourceDirectoryPath;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <a class="code" href="classopenfsl_1_1_f_a_t32.html#acb87b04f2e0da8eac4900d183a6c2255">currentCluster</a> = sourceDirectoryCluster;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    result = <a class="code" href="classopenfsl_1_1_f_a_t32.html#a72b276ca60f268ce9f648a39df0d5eca">__removeEntry</a>(<span class="stringliteral">&quot;&quot;</span>, fromName, <a class="code" href="fat32__structures_8h.html#a3c884cdcd29ac3f16f15a65bee74a0acaed36a1ef76a59ee3f15180e0441188ad">FileAttribute::Any</a>);</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordflow">if</span> (result) {</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <a class="code" href="classopenfsl_1_1_file_system.html#afb17583683e7903dc6c22705a35d10fc">currentPath</a> = tempPath;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <a class="code" href="classopenfsl_1_1_f_a_t32.html#acb87b04f2e0da8eac4900d183a6c2255">currentCluster</a> = tempCluster;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keywordflow">return</span> result;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    }</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <a class="code" href="classopenfsl_1_1_file_system.html#afb17583683e7903dc6c22705a35d10fc">currentPath</a> = tempPath;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <a class="code" href="classopenfsl_1_1_f_a_t32.html#acb87b04f2e0da8eac4900d183a6c2255">currentCluster</a> = tempCluster;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;}</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    std::cout &lt;&lt; fromPath &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    std::cout &lt;&lt; fromName &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    std::cout &lt;&lt; toPath &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    std::cout &lt;&lt; toName &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    std::string tempPath = <a class="code" href="classopenfsl_1_1_file_system.html#afb17583683e7903dc6c22705a35d10fc">currentPath</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    uint32_t tempCluster = <a class="code" href="classopenfsl_1_1_f_a_t32.html#acb87b04f2e0da8eac4900d183a6c2255">currentCluster</a>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordflow">if</span> (fromPath != <span class="stringliteral">&quot;&quot;</span>) {  <span class="comment">// Change directory if path is set</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <a class="code" href="error_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a> result = <a class="code" href="classopenfsl_1_1_f_a_t32.html#a7a3ec9435f37a905a9e41358c94a98aa">__chdir</a>(fromPath);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keywordflow">if</span> (result) {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            <a class="code" href="classopenfsl_1_1_file_system.html#afb17583683e7903dc6c22705a35d10fc">currentPath</a> = tempPath;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            <a class="code" href="classopenfsl_1_1_f_a_t32.html#acb87b04f2e0da8eac4900d183a6c2255">currentCluster</a> = tempCluster;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        }</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    }</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    std::string sourceDirectoryPath = <a class="code" href="classopenfsl_1_1_file_system.html#afb17583683e7903dc6c22705a35d10fc">currentPath</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    uint32_t sourceDirectoryCluster = <a class="code" href="classopenfsl_1_1_f_a_t32.html#acb87b04f2e0da8eac4900d183a6c2255">currentCluster</a>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    std::pair&lt;error_t, FileInfo&gt; eresult =</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            <a class="code" href="classopenfsl_1_1_f_a_t32.html#a4cf9286bcf9004e3258ec747bb1c1904">__getEntryInformation</a>(<a class="code" href="classopenfsl_1_1_file_system.html#afb17583683e7903dc6c22705a35d10fc">currentPath</a>, fromName);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordflow">if</span> (eresult.first) {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <a class="code" href="classopenfsl_1_1_file_system.html#afb17583683e7903dc6c22705a35d10fc">currentPath</a> = tempPath;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <a class="code" href="classopenfsl_1_1_f_a_t32.html#acb87b04f2e0da8eac4900d183a6c2255">currentCluster</a> = tempCluster;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keywordflow">return</span> eresult.first;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    }</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="structopenfsl_1_1_f_a_t32_1_1_file_info.html">FileInfo</a> fileInfo = eresult.second;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    fileInfo.<a class="code" href="structopenfsl_1_1_f_a_t32_1_1_file_info.html#a8042347f388f6893aa9c6f76eb151818">fileName</a> = toName;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <a class="code" href="classopenfsl_1_1_file_system.html#afb17583683e7903dc6c22705a35d10fc">currentPath</a> = tempPath;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <a class="code" href="classopenfsl_1_1_f_a_t32.html#acb87b04f2e0da8eac4900d183a6c2255">currentCluster</a> = tempCluster;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">if</span> (toPath != <span class="stringliteral">&quot;&quot;</span>) {  <span class="comment">// Change directory if path is set</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <a class="code" href="error_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a> result = <a class="code" href="classopenfsl_1_1_f_a_t32.html#a7a3ec9435f37a905a9e41358c94a98aa">__chdir</a>(toPath);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordflow">if</span> (result) {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            <a class="code" href="classopenfsl_1_1_file_system.html#afb17583683e7903dc6c22705a35d10fc">currentPath</a> = tempPath;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <a class="code" href="classopenfsl_1_1_f_a_t32.html#acb87b04f2e0da8eac4900d183a6c2255">currentCluster</a> = tempCluster;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <a class="code" href="error_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a> result = <a class="code" href="classopenfsl_1_1_f_a_t32.html#a4474f7143bbd15c8cd6d30d527bf7a7e">__createEntry</a>(<span class="stringliteral">&quot;&quot;</span>, fileInfo);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordflow">if</span> (result) {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <a class="code" href="classopenfsl_1_1_file_system.html#afb17583683e7903dc6c22705a35d10fc">currentPath</a> = tempPath;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <a class="code" href="classopenfsl_1_1_f_a_t32.html#acb87b04f2e0da8eac4900d183a6c2255">currentCluster</a> = tempCluster;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    }</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <a class="code" href="classopenfsl_1_1_file_system.html#afb17583683e7903dc6c22705a35d10fc">currentPath</a> = sourceDirectoryPath;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <a class="code" href="classopenfsl_1_1_f_a_t32.html#acb87b04f2e0da8eac4900d183a6c2255">currentCluster</a> = sourceDirectoryCluster;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    result = <a class="code" href="classopenfsl_1_1_f_a_t32.html#a72b276ca60f268ce9f648a39df0d5eca">__removeEntry</a>(<span class="stringliteral">&quot;&quot;</span>, fromName, <a class="code" href="fat32__structures_8h.html#a3c884cdcd29ac3f16f15a65bee74a0acaed36a1ef76a59ee3f15180e0441188ad">FileAttribute::Any</a>);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordflow">if</span> (result) {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <a class="code" href="classopenfsl_1_1_file_system.html#afb17583683e7903dc6c22705a35d10fc">currentPath</a> = tempPath;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <a class="code" href="classopenfsl_1_1_f_a_t32.html#acb87b04f2e0da8eac4900d183a6c2255">currentCluster</a> = tempCluster;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <a class="code" href="classopenfsl_1_1_file_system.html#afb17583683e7903dc6c22705a35d10fc">currentPath</a> = tempPath;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <a class="code" href="classopenfsl_1_1_f_a_t32.html#acb87b04f2e0da8eac4900d183a6c2255">currentCluster</a> = tempCluster;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="afs__fat32_8h_html"><div class="ttname"><a href="fs__fat32_8h.html">fs_fat32.h</a></div></div>
-<div class="ttc" id="aclassopenfsl_1_1_f_a_t32_html_acb87b04f2e0da8eac4900d183a6c2255"><div class="ttname"><a href="classopenfsl_1_1_f_a_t32.html#acb87b04f2e0da8eac4900d183a6c2255">openfsl::FAT32::currentCluster</a></div><div class="ttdeci">cluster_t currentCluster</div><div class="ttdoc">Current cluster cursor.</div><div class="ttdef"><b>Definition:</b> <a href="fs__fat32_8h_source.html#l00168">fs_fat32.h:168</a></div></div>
+<div class="ttc" id="aclassopenfsl_1_1_f_a_t32_html_acb87b04f2e0da8eac4900d183a6c2255"><div class="ttname"><a href="classopenfsl_1_1_f_a_t32.html#acb87b04f2e0da8eac4900d183a6c2255">openfsl::FAT32::currentCluster</a></div><div class="ttdeci">cluster_t currentCluster</div><div class="ttdoc">Current cluster cursor.</div><div class="ttdef"><b>Definition:</b> <a href="fs__fat32_8h_source.html#l00173">fs_fat32.h:173</a></div></div>
 <div class="ttc" id="aclassopenfsl_1_1_f_a_t32_html_a4474f7143bbd15c8cd6d30d527bf7a7e"><div class="ttname"><a href="classopenfsl_1_1_f_a_t32.html#a4474f7143bbd15c8cd6d30d527bf7a7e">openfsl::FAT32::__createEntry</a></div><div class="ttdeci">error_t __check_result __createEntry(const std::string path, const FileInfo createFileInfo)</div><div class="ttdoc">Create entry.</div><div class="ttdef"><b>Definition:</b> <a href="createentry_8cpp_source.html#l00027">createentry.cpp:27</a></div></div>
-<div class="ttc" id="astructopenfsl_1_1_f_a_t32_1_1_file_info_html"><div class="ttname"><a href="structopenfsl_1_1_f_a_t32_1_1_file_info.html">openfsl::FAT32::FileInfo</a></div><div class="ttdoc">FAT32 file information.</div><div class="ttdef"><b>Definition:</b> <a href="fs__fat32_8h_source.html#l00205">fs_fat32.h:205</a></div></div>
+<div class="ttc" id="astructopenfsl_1_1_f_a_t32_1_1_file_info_html"><div class="ttname"><a href="structopenfsl_1_1_f_a_t32_1_1_file_info.html">openfsl::FAT32::FileInfo</a></div><div class="ttdoc">FAT32 file information.</div><div class="ttdef"><b>Definition:</b> <a href="fs__fat32_8h_source.html#l00212">fs_fat32.h:212</a></div></div>
 <div class="ttc" id="aerror_8h_html_a9ad6b2dc3cbff040775e79656fe8e1a3"><div class="ttname"><a href="error_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a></div><div class="ttdeci">int error_t</div><div class="ttdef"><b>Definition:</b> <a href="error_8h_source.html#l00025">error.h:25</a></div></div>
 <div class="ttc" id="aclassopenfsl_1_1_f_a_t32_html_a72b276ca60f268ce9f648a39df0d5eca"><div class="ttname"><a href="classopenfsl_1_1_f_a_t32.html#a72b276ca60f268ce9f648a39df0d5eca">openfsl::FAT32::__removeEntry</a></div><div class="ttdeci">error_t __check_result __removeEntry(const std::string path, const std::string deletename, const FileAttribute filter)</div><div class="ttdoc">Remove entry.</div><div class="ttdef"><b>Definition:</b> <a href="removeentry_8cpp_source.html#l00012">removeentry.cpp:12</a></div></div>
-<div class="ttc" id="astructopenfsl_1_1_f_a_t32_1_1_file_info_html_a8042347f388f6893aa9c6f76eb151818"><div class="ttname"><a href="structopenfsl_1_1_f_a_t32_1_1_file_info.html#a8042347f388f6893aa9c6f76eb151818">openfsl::FAT32::FileInfo::fileName</a></div><div class="ttdeci">std::string fileName</div><div class="ttdef"><b>Definition:</b> <a href="fs__fat32_8h_source.html#l00206">fs_fat32.h:206</a></div></div>
+<div class="ttc" id="aclassopenfsl_1_1_f_a_t32_html_a4cf9286bcf9004e3258ec747bb1c1904"><div class="ttname"><a href="classopenfsl_1_1_f_a_t32.html#a4cf9286bcf9004e3258ec747bb1c1904">openfsl::FAT32::__getEntryInformation</a></div><div class="ttdeci">std::pair&lt; error_t, FileInfo &gt; __getEntryInformation(const std::string path, const std::string filename)</div><div class="ttdoc">Get file information.</div><div class="ttdef"><b>Definition:</b> <a href="getentryinfo_8cpp_source.html#l00013">getentryinfo.cpp:13</a></div></div>
+<div class="ttc" id="astructopenfsl_1_1_f_a_t32_1_1_file_info_html_a8042347f388f6893aa9c6f76eb151818"><div class="ttname"><a href="structopenfsl_1_1_f_a_t32_1_1_file_info.html#a8042347f388f6893aa9c6f76eb151818">openfsl::FAT32::FileInfo::fileName</a></div><div class="ttdeci">std::string fileName</div><div class="ttdef"><b>Definition:</b> <a href="fs__fat32_8h_source.html#l00213">fs_fat32.h:213</a></div></div>
 <div class="ttc" id="aclassopenfsl_1_1_f_a_t32_html_a12296dd6f92142d705f0762b1bbdc2db"><div class="ttname"><a href="classopenfsl_1_1_f_a_t32.html#a12296dd6f92142d705f0762b1bbdc2db">openfsl::FAT32::__move</a></div><div class="ttdeci">error_t __move(const std::string fromPath, const std::string fromName, const std::string toPath, const std::string toName)</div><div class="ttdef"><b>Definition:</b> <a href="move_8cpp_source.html#l00012">move.cpp:12</a></div></div>
 <div class="ttc" id="afat32__structures_8h_html_a3c884cdcd29ac3f16f15a65bee74a0acaed36a1ef76a59ee3f15180e0441188ad"><div class="ttname"><a href="fat32__structures_8h.html#a3c884cdcd29ac3f16f15a65bee74a0acaed36a1ef76a59ee3f15180e0441188ad">FileAttribute::Any</a></div><div class="ttdeci">@ Any</div></div>
-<div class="ttc" id="aclassopenfsl_1_1_f_a_t32_html_a3ed1aabf1c80fca2be4ab1463cffa460"><div class="ttname"><a href="classopenfsl_1_1_f_a_t32.html#a3ed1aabf1c80fca2be4ab1463cffa460">openfsl::FAT32::__forEachEntry</a></div><div class="ttdeci">error_t __check_result __forEachEntry(std::function&lt; bool(FileInfo)&gt; forEachFunction, const std::string path=&quot;&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="foreachentry_8cpp_source.html#l00012">foreachentry.cpp:12</a></div></div>
 <div class="ttc" id="aclassopenfsl_1_1_f_a_t32_html_a7a3ec9435f37a905a9e41358c94a98aa"><div class="ttname"><a href="classopenfsl_1_1_f_a_t32.html#a7a3ec9435f37a905a9e41358c94a98aa">openfsl::FAT32::__chdir</a></div><div class="ttdeci">error_t __check_result __chdir(const std::string path, std::vector&lt; std::string &gt; *subdir=nullptr)</div><div class="ttdoc">Change directory.</div><div class="ttdef"><b>Definition:</b> <a href="chdir_8cpp_source.html#l00014">chdir.cpp:14</a></div></div>
 <div class="ttc" id="aclassopenfsl_1_1_file_system_html_afb17583683e7903dc6c22705a35d10fc"><div class="ttname"><a href="classopenfsl_1_1_file_system.html#afb17583683e7903dc6c22705a35d10fc">openfsl::FileSystem&lt; BlockDevice &gt;::currentPath</a></div><div class="ttdeci">std::string currentPath</div><div class="ttdoc">Current path cursor.</div><div class="ttdef"><b>Definition:</b> <a href="filesystem_8h_source.html#l00052">filesystem.h:52</a></div></div>
 <!-- start footer part -->

@@ -19,6 +19,7 @@ var hierarchy =
       [ "openfsl::FAT32", "classopenfsl_1_1_f_a_t32.html", null ],
       [ "openfsl::NTFS", "classopenfsl_1_1_n_t_f_s.html", null ]
     ] ],
+    [ "openfsl::FAT32::FilesystemOptions", "structopenfsl_1_1_f_a_t32_1_1_filesystem_options.html", null ],
     [ "openfsl::FAT32::FormatOptions", "structopenfsl_1_1_f_a_t32_1_1_format_options.html", null ],
     [ "FSINFOSector", "struct_f_s_i_n_f_o_sector.html", null ],
     [ "openfsl::FSL_File", "classopenfsl_1_1_f_s_l___file.html", [

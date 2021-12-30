@@ -1,11 +1,6 @@
 var searchData=
 [
-  ['lfnattr_1114',['lfnAttr',['../struct_l_f_n_entry.html#a174e8caf2cf24709b13badc99b13e810',1,'LFNEntry']]],
-  ['lfnchecksum_1115',['lfnCheckSum',['../struct_l_f_n_entry.html#aa2dea9ab876660be03342405f9810374',1,'LFNEntry']]],
-  ['lfnfilename1_1116',['lfnFileName1',['../struct_l_f_n_entry.html#aab3084c3d7dfcbfc05852b8f59f0256c',1,'LFNEntry']]],
-  ['lfnfilename2_1117',['lfnFileName2',['../struct_l_f_n_entry.html#a0bbd6c0e60c8b3940855ce22e0b1c453',1,'LFNEntry']]],
-  ['lfnfilename3_1118',['lfnFileName3',['../struct_l_f_n_entry.html#a52e363caf56a313380f8f1ce64cf9aa4',1,'LFNEntry']]],
-  ['lfnlocationlow_1119',['lfnLocationLow',['../struct_l_f_n_entry.html#a4f442199ece835b21aa54fd39094361a',1,'LFNEntry']]],
-  ['lfnreserved1_1120',['lfnReserved1',['../struct_l_f_n_entry.html#af6b33eafe58d9932a08da5c4d4ad50f5',1,'LFNEntry']]],
-  ['lfnseqnum_1121',['lfnSeqNum',['../struct_l_f_n_entry.html#a824aac63b11073b14081d258d536b634',1,'LFNEntry']]]
+  ['initialized_1123',['initialized',['../classopenfsl_1_1_file_system.html#a97597140deea474998d169ba5d237064',1,'openfsl::FileSystem::initialized()'],['../classopenfsl_1_1_i_o_device.html#a41545f23c0496c02f6e88dfb0612afa9',1,'openfsl::IODevice::initialized()'],['../namespaceopenfsl.html#a1ab01987ba38def9410abee9b43613c8',1,'openfsl::initialized()']]],
+  ['iod_1124',['iod',['../classopenfsl_1_1_file_system.html#a86ddae269951f0ab89edb506a269ff9c',1,'openfsl::FileSystem']]],
+  ['iofunc_1125',['ioFunc',['../classopenfsl_1_1_block_device.html#af3329259855a257abca39ef91de9e3f0',1,'openfsl::BlockDevice']]]
 ];

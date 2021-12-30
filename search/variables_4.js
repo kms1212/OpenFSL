@@ -1,27 +1,6 @@
 var searchData=
 [
-  ['ebpbbsbackupsector_1018',['ebpbBSBackupSector',['../struct_b_p_b_sector.html#aecbd57ede12b169c6d2b296a2a71705e',1,'BPBSector']]],
-  ['ebpbextendedbootsign_1019',['ebpbExtendedBootSign',['../struct_b_p_b_sector.html#a569ae7564e76789ce9e72a884fe578c8',1,'BPBSector']]],
-  ['ebpbflags_1020',['ebpbFlags',['../struct_b_p_b_sector.html#afd019f2c8b19b236da6dbca2b818c61c',1,'BPBSector']]],
-  ['ebpbfsinfosector_1021',['ebpbFSInfoSector',['../struct_b_p_b_sector.html#af105433a409a655f2b2cfa4b2da57ab8',1,'BPBSector']]],
-  ['ebpbfstype_1022',['ebpbFSType',['../struct_b_p_b_sector.html#a662c9dcb7fff2af7160c4c771aa7f6ff',1,'BPBSector']]],
-  ['ebpbfsversion_1023',['ebpbFSVersion',['../struct_b_p_b_sector.html#a8389d305037b3982d5c42defc010ecb1',1,'BPBSector']]],
-  ['ebpbphysicaldrivenum_1024',['ebpbPhysicalDriveNum',['../struct_b_p_b_sector.html#ace9b9a699969fe379f30db0820d184b9',1,'BPBSector']]],
-  ['ebpbreserved2_1025',['ebpbReserved2',['../struct_b_p_b_sector.html#a737c558e2635fc8ed8eebdba20cf399b',1,'BPBSector']]],
-  ['ebpbrootdirectorycluster_1026',['ebpbRootDirectoryCluster',['../struct_b_p_b_sector.html#a97b29ba937c62523bad6c65c8925e4fd',1,'BPBSector']]],
-  ['ebpbsectorsperfat32_1027',['ebpbSectorsPerFAT32',['../struct_b_p_b_sector.html#ae2d883033cfad3a975d69cb9d1945f41',1,'BPBSector']]],
-  ['ebpbvolumelabel_1028',['ebpbVolumeLabel',['../struct_b_p_b_sector.html#a5b6d573fa4d937273596cf288d51a8ff',1,'BPBSector']]],
-  ['ebpbvolumeserial_1029',['ebpbVolumeSerial',['../struct_b_p_b_sector.html#abfa302679d4db925c0c028cc3525c2f4',1,'BPBSector']]],
-  ['entryattributeflags_1030',['entryAttributeFlags',['../structopenfsl_1_1_g_p_t_1_1_partition_entry.html#a107188502531af4d086e6df1a19f3872',1,'openfsl::GPT::PartitionEntry']]],
-  ['entrybootflag_1031',['entryBootFlag',['../structopenfsl_1_1_m_b_r_1_1_partition_entry.html#a88ee92a66abc4233b09f14cab229ff17',1,'openfsl::MBR::PartitionEntry']]],
-  ['entryendingchsaddr_1032',['entryEndingCHSAddr',['../structopenfsl_1_1_m_b_r_1_1_partition_entry.html#a5e5b456e33f7fbca1dbc203449e18e93',1,'openfsl::MBR::PartitionEntry']]],
-  ['entrylbasize_1033',['entryLBASize',['../structopenfsl_1_1_m_b_r_1_1_partition_entry.html#a6b2824d872445308a3ac4b6bbb24ab47',1,'openfsl::MBR::PartitionEntry']]],
-  ['entrypartitionend_1034',['entryPartitionEnd',['../structopenfsl_1_1_g_p_t_1_1_partition_entry.html#a35b9174f1fb8dc21a2daca56dd4a545e',1,'openfsl::GPT::PartitionEntry']]],
-  ['entrypartitionguid_1035',['entryPartitionGuid',['../structopenfsl_1_1_g_p_t_1_1_partition_entry.html#a49c2f8767ee9ba04deb13d3ffcce48d7',1,'openfsl::GPT::PartitionEntry']]],
-  ['entrypartitionname_1036',['entryPartitionName',['../structopenfsl_1_1_g_p_t_1_1_partition_entry.html#ac489065e90ad146da07341c1d3c9c1c8',1,'openfsl::GPT::PartitionEntry']]],
-  ['entrypartitionstart_1037',['entryPartitionStart',['../structopenfsl_1_1_g_p_t_1_1_partition_entry.html#a15332b6547847a5c6ab47eab78c574c5',1,'openfsl::GPT::PartitionEntry']]],
-  ['entrypartitiontype_1038',['entryPartitionType',['../structopenfsl_1_1_m_b_r_1_1_partition_entry.html#a85074d3f8f23c2afd50e0579b8c5929c',1,'openfsl::MBR::PartitionEntry']]],
-  ['entrypartitiontypeguid_1039',['entryPartitionTypeGuid',['../structopenfsl_1_1_g_p_t_1_1_partition_entry.html#ab54a882775a0b582849b4205a81de62e',1,'openfsl::GPT::PartitionEntry']]],
-  ['entrystartingchsaddr_1040',['entryStartingCHSAddr',['../structopenfsl_1_1_m_b_r_1_1_partition_entry.html#aad22cf37a16180e51f0c0499251920ec',1,'openfsl::MBR::PartitionEntry']]],
-  ['entrystartinglbaaddr_1041',['entryStartingLBAAddr',['../structopenfsl_1_1_m_b_r_1_1_partition_entry.html#a9a98bededce6a136e1609689b9546f99',1,'openfsl::MBR::PartitionEntry']]]
+  ['data_1026',['data',['../classopenfsl_1_1_container.html#a3661843464f45ced3ec537ccb08cea4e',1,'openfsl::Container']]],
+  ['diskoperationmutex_1027',['diskOperationMutex',['../classopenfsl_1_1_i_o_device.html#ada2d602303c9e4978f84e83c46e27ef3',1,'openfsl::IODevice']]],
+  ['diskparameter_1028',['diskParameter',['../classopenfsl_1_1_block_device.html#a409d817f9b582febeb09bfb4f42ce318',1,'openfsl::BlockDevice']]]
 ];

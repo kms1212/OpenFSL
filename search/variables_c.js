@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['openmode_1157',['openMode',['../classopenfsl_1_1_f_s_l___file.html#aa58ef17aa2d23fd67968f7baa3e78d3e',1,'openfsl::FSL_File']]]
+  ['nextfreecluster_1168',['nextFreeCluster',['../structopenfsl_1_1_f_a_t32_1_1_volume_info.html#acdc3ecc39402409eaef7dc9c5995419e',1,'openfsl::FAT32::VolumeInfo']]]
 ];
