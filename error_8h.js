@@ -4,6 +4,7 @@ var error_8h =
     [ "OPENFSL_ERROR_BADCLUS", "error_8h.html#af9fd1a6b25f4b82af7078e3a269ccd2a", null ],
     [ "OPENFSL_ERROR_CACCESS", "error_8h.html#a2c8464b24d3c7e1a2f3725c28be98804", null ],
     [ "OPENFSL_ERROR_CACHE", "error_8h.html#ac7ca3f8edc546b6435b9dfb5c99e372c", null ],
+    [ "OPENFSL_ERROR_DIRASFIL", "error_8h.html#a4a887a067e3c3183faca345edc77362e", null ],
     [ "OPENFSL_ERROR_DIRNEMPT", "error_8h.html#a3bd98111ead415806e11187d1e5b0432", null ],
     [ "OPENFSL_ERROR_DISABLED", "error_8h.html#ae5556e905c3d9e1982ef27863b8dfd20", null ],
     [ "OPENFSL_ERROR_DISK", "error_8h.html#a3737296bc24560c54e9716b165487543", null ],

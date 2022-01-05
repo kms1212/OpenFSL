@@ -248,7 +248,7 @@ $(document).ready(function(){initNavTree('createentry_8cpp_source.html',''); ini
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        std::string filename_sfn;</div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span> c : filename16.substr(0, dotpos &gt; 8 ? 8 : dotpos))</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;            filename_sfn</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;                .push_back(c &lt; 0x80 ? <span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span><span class="keyword">&gt;</span>(toupper(c)) : <span class="charliteral">&#39;_&#39;</span>);</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;                .push_back((c &lt; 0x80) &amp;&amp; (c != <span class="charliteral">&#39;.&#39;</span>) ? <span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span><span class="keyword">&gt;</span>(toupper(c)) : <span class="charliteral">&#39;_&#39;</span>);</div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        memcpy(fileEntry.<a class="code" href="struct_file_entry.html#a83dd0a2e309d3a5a5d9a49eff622fdea">fileName</a>, filename_sfn.c_str(), filename_sfn.size());</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160; </div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        <span class="comment">// Append duplicate count string to filename</span></div>
