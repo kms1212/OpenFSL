@@ -9,6 +9,7 @@ var dir_68267d1309a1af8e8297ef4c3efbcdba =
     [ "fsltime.cpp", "fsltime_8cpp.html", null ],
     [ "fslutils.cpp", "fslutils_8cpp.html", "fslutils_8cpp" ],
     [ "gpt.cpp", "gpt_8cpp.html", null ],
+    [ "guid.cpp", "guid_8cpp.html", null ],
     [ "initialize.cpp", "src_2initialize_8cpp.html", null ],
     [ "iodevice.cpp", "iodevice_8cpp.html", null ],
     [ "mbr.cpp", "mbr_8cpp.html", null ],

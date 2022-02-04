@@ -10,6 +10,7 @@ var namespaceopenfsl =
     [ "FileSystem", "classopenfsl_1_1_file_system.html", "classopenfsl_1_1_file_system" ],
     [ "FSL_File", "classopenfsl_1_1_f_s_l___file.html", "classopenfsl_1_1_f_s_l___file" ],
     [ "GPT", "classopenfsl_1_1_g_p_t.html", "classopenfsl_1_1_g_p_t" ],
+    [ "GUID", "classopenfsl_1_1_g_u_i_d.html", "classopenfsl_1_1_g_u_i_d" ],
     [ "IODevice", "classopenfsl_1_1_i_o_device.html", "classopenfsl_1_1_i_o_device" ],
     [ "MBR", "classopenfsl_1_1_m_b_r.html", "classopenfsl_1_1_m_b_r" ],
     [ "NTFS", "classopenfsl_1_1_n_t_f_s.html", "classopenfsl_1_1_n_t_f_s" ],

@@ -1,4 +1,30 @@
 var searchData=
 [
-  ['trunc_1367',['Trunc',['../namespaceopenfsl.html#ab69edb30c6ca3a1228d3d32e61931c72ae062834253c7b0c888979454095d0af2',1,'openfsl']]]
+  ['security_5fdescriptor_1504',['SECURITY_DESCRIPTOR',['../ntfs__structures_8h.html#a0f35e8a5a5b509089ed135fb9baf4e54acf518a034fa1943292223a90deac6aca',1,'ntfs_structures.h']]],
+  ['seekcur_1505',['SeekCur',['../namespaceopenfsl.html#ae9c1a254b8ec138b0ba8969fc6441ed4a08fed505341fb5e134152d2607da3c31',1,'openfsl']]],
+  ['seekend_1506',['SeekEnd',['../namespaceopenfsl.html#ae9c1a254b8ec138b0ba8969fc6441ed4ac81e065ca7d17ec1b162e30daf51e510',1,'openfsl']]],
+  ['seekset_1507',['SeekSet',['../namespaceopenfsl.html#ae9c1a254b8ec138b0ba8969fc6441ed4ae8b6fa49d5969a5db38371ec2affd49d',1,'openfsl']]],
+  ['siarchive_1508',['siArchive',['../ntfs__structures_8h.html#ad03a9b0939cf8df877a6b748fd887741a42a6e1b1b3c942cdbd3b1b574fff4eb3',1,'ntfs_structures.h']]],
+  ['sicompressed_1509',['siCompressed',['../ntfs__structures_8h.html#ad03a9b0939cf8df877a6b748fd887741a755cc34c4d1c4cb7011f8ede8552cbf2',1,'ntfs_structures.h']]],
+  ['sidevice_1510',['siDevice',['../ntfs__structures_8h.html#ad03a9b0939cf8df877a6b748fd887741a8293302fa50be3df6edb9f0e19d47da6',1,'ntfs_structures.h']]],
+  ['siencrypted_1511',['siEncrypted',['../ntfs__structures_8h.html#ad03a9b0939cf8df877a6b748fd887741ae84b80e7209b69c1f47c9e4f3afdb3d5',1,'ntfs_structures.h']]],
+  ['sihidden_1512',['siHidden',['../ntfs__structures_8h.html#ad03a9b0939cf8df877a6b748fd887741a54abbdc0fd1185991e543bc7a2483073',1,'ntfs_structures.h']]],
+  ['sinormal_1513',['siNormal',['../ntfs__structures_8h.html#ad03a9b0939cf8df877a6b748fd887741aa9b3a2b1bcd87d73ebb0c415f10b1a30',1,'ntfs_structures.h']]],
+  ['sinotcontentindexed_1514',['siNotContentIndexed',['../ntfs__structures_8h.html#ad03a9b0939cf8df877a6b748fd887741a253c5fc0058033dc74f294933d903994',1,'ntfs_structures.h']]],
+  ['sioffline_1515',['siOffline',['../ntfs__structures_8h.html#ad03a9b0939cf8df877a6b748fd887741a5eb5a4e16bf5669ad6e533c202f10023',1,'ntfs_structures.h']]],
+  ['sireadonly_1516',['siReadOnly',['../ntfs__structures_8h.html#ad03a9b0939cf8df877a6b748fd887741a82fbe4ce82cebc3e93b22ff1270fb329',1,'ntfs_structures.h']]],
+  ['sireparsepoint_1517',['siReparsePoint',['../ntfs__structures_8h.html#ad03a9b0939cf8df877a6b748fd887741afe53743bdc5eaabec6bd35d67e4a4dd1',1,'ntfs_structures.h']]],
+  ['sisparsefile_1518',['siSparseFile',['../ntfs__structures_8h.html#ad03a9b0939cf8df877a6b748fd887741a479cf6c2f7bc7149eeb196eb4c86532a',1,'ntfs_structures.h']]],
+  ['sisystem_1519',['siSystem',['../ntfs__structures_8h.html#ad03a9b0939cf8df877a6b748fd887741a0c9e4ed050ffe060fa658de31e8e6365',1,'ntfs_structures.h']]],
+  ['sitemporary_1520',['siTemporary',['../ntfs__structures_8h.html#ad03a9b0939cf8df877a6b748fd887741a7215480a994a24512e228f41605c9ba9',1,'ntfs_structures.h']]],
+  ['solarisbackup_1521',['SolarisBackup',['../namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94ae72b4aa8c41bee87cef98d87a82cce48',1,'openfsl::PartitionGuid']]],
+  ['solarisboot_1522',['SolarisBoot',['../namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94a96b104c91bc3ed982d1b11d182071993',1,'openfsl::PartitionGuid']]],
+  ['solarishome_1523',['SolarisHome',['../namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94a0b706a8e47a9d5c24f4764f2f9f357db',1,'openfsl::PartitionGuid']]],
+  ['solarisroot_1524',['SolarisRoot',['../namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94a3b7e6ca870ad4b04ba3ae039f4d5232b',1,'openfsl::PartitionGuid']]],
+  ['solarisswap_1525',['SolarisSwap',['../namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94a986169faacc9565f324eb43c0c12c34d',1,'openfsl::PartitionGuid']]],
+  ['solarisusr_1526',['SolarisUsr',['../namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94aa89b46a66198a65f03b67e3435b6040b',1,'openfsl::PartitionGuid']]],
+  ['solarisvar_1527',['SolarisVar',['../namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94a46c35f256afb20ded2ffe7a0ece4d67f',1,'openfsl::PartitionGuid']]],
+  ['standard_5finformation_1528',['STANDARD_INFORMATION',['../ntfs__structures_8h.html#a0f35e8a5a5b509089ed135fb9baf4e54ae1c4a930c2918eaccd6114fdd3b57d74',1,'ntfs_structures.h']]],
+  ['symbolic_5flink_1529',['SYMBOLIC_LINK',['../ntfs__structures_8h.html#a0f35e8a5a5b509089ed135fb9baf4e54ab184d952382160a26328dfb90613faf7',1,'ntfs_structures.h']]],
+  ['system_1530',['System',['../classopenfsl_1_1_g_p_t.html#aa664dc41bcd6bcab7c055316b7273c57aa45da96d0bf6575970f2d27af22be28a',1,'openfsl::GPT::System()'],['../fat32__structures_8h.html#a3c884cdcd29ac3f16f15a65bee74a0acaa45da96d0bf6575970f2d27af22be28a',1,'System():&#160;fat32_structures.h']]]
 ];

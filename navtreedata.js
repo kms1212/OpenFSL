@@ -45,7 +45,8 @@ var NAVTREE =
         [ "Functions", "namespacemembers_func.html", null ],
         [ "Variables", "namespacemembers_vars.html", null ],
         [ "Typedefs", "namespacemembers_type.html", null ],
-        [ "Enumerations", "namespacemembers_enum.html", null ]
+        [ "Enumerations", "namespacemembers_enum.html", null ],
+        [ "Enumerator", "namespacemembers_eval.html", null ]
       ] ]
     ] ],
     [ "Classes", "annotated.html", [
@@ -79,10 +80,10 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"classopenfsl_1_1_i_o_device.html#af173fab3fef210969a047c5bc5fde8f6",
-"functions_n.html",
-"struct_file_entry.html#a442e65305af5e7fd839183e5a5b4147c",
-"types_8h.html#ac82097377896cd83a32c893edb39f391"
+"classopenfsl_1_1_g_u_i_d.html#a83927306e227ef9d6387d01a5abaf436",
+"functions_b.html",
+"ntfs__structures_8h.html#ad03a9b0939cf8df877a6b748fd887741ae84b80e7209b69c1f47c9e4f3afdb3d5",
+"structopenfsl_1_1_f_a_t32_1_1_volume_info.html#a2ddd7b300f9c4e1cf89974abd1cf2482"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

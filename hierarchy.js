@@ -26,6 +26,7 @@ var hierarchy =
       [ "openfsl::FAT32::FILE", "classopenfsl_1_1_f_a_t32_1_1_f_i_l_e.html", null ]
     ] ],
     [ "openfsl::GPT", "classopenfsl_1_1_g_p_t.html", null ],
+    [ "openfsl::GUID", "classopenfsl_1_1_g_u_i_d.html", null ],
     [ "openfsl::IODevice", "classopenfsl_1_1_i_o_device.html", [
       [ "openfsl::BlockDevice", "classopenfsl_1_1_block_device.html", [
         [ "openfsl::FileBlockDevice", "classopenfsl_1_1_file_block_device.html", null ]

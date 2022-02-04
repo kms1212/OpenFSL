@@ -18,10 +18,9 @@ var dir_5cfc8f798c7a4c570457442210be7344 =
     [ "filesystem.h", "filesystem_8h.html", "filesystem_8h" ],
     [ "fsltime.h", "fsltime_8h.html", "fsltime_8h" ],
     [ "fslutils.h", "fslutils_8h.html", "fslutils_8h" ],
-    [ "gpt.h", "gpt_8h.html", [
-      [ "GPT", "classopenfsl_1_1_g_p_t.html", "classopenfsl_1_1_g_p_t" ],
-      [ "TableHeader", "structopenfsl_1_1_g_p_t_1_1_table_header.html", "structopenfsl_1_1_g_p_t_1_1_table_header" ],
-      [ "PartitionEntry", "structopenfsl_1_1_g_p_t_1_1_partition_entry.html", "structopenfsl_1_1_g_p_t_1_1_partition_entry" ]
+    [ "gpt.h", "gpt_8h.html", "gpt_8h" ],
+    [ "guid.h", "guid_8h.html", [
+      [ "GUID", "classopenfsl_1_1_g_u_i_d.html", "classopenfsl_1_1_g_u_i_d" ]
     ] ],
     [ "initialize.h", "initialize_8h.html", "initialize_8h" ],
     [ "iodevice.h", "iodevice_8h.html", [
@@ -35,6 +34,7 @@ var dir_5cfc8f798c7a4c570457442210be7344 =
       [ "PartitionInfo", "structopenfsl_1_1_m_b_r_1_1_partition_info.html", "structopenfsl_1_1_m_b_r_1_1_partition_info" ]
     ] ],
     [ "openfsl.h", "openfsl_8h.html", null ],
+    [ "options.h", "options_8h.html", null ],
     [ "sector.h", "sector_8h.html", [
       [ "Sector", "classopenfsl_1_1_sector.html", "classopenfsl_1_1_sector" ]
     ] ],

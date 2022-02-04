@@ -1,12 +1,18 @@
 var searchData=
 [
-  ['ea_1291',['EA',['../ntfs__structures_8h.html#a0f35e8a5a5b509089ed135fb9baf4e54a96140e1425e9ae5a3dce3927751527d0',1,'ntfs_structures.h']]],
-  ['ea_5finformation_1292',['EA_INFORMATION',['../ntfs__structures_8h.html#a0f35e8a5a5b509089ed135fb9baf4e54a1f2a456cba2e4960cacd78f11ff23e2f',1,'ntfs_structures.h']]],
-  ['end_1293',['END',['../ntfs__structures_8h.html#a0f35e8a5a5b509089ed135fb9baf4e54ab1a326c06d88bf042f73d70f50197905',1,'ntfs_structures.h']]],
-  ['exfat_1294',['ExFAT',['../namespaceopenfsl.html#a43add8221d9aa3cd7285f47e4e04e72ea0598abbdfe3d375d8f5476da924f0782',1,'openfsl']]],
-  ['ext2_1295',['Ext2',['../namespaceopenfsl.html#a43add8221d9aa3cd7285f47e4e04e72ea236cf69d0059c35c14ee8f611edf0a92',1,'openfsl']]],
-  ['ext3_1296',['Ext3',['../namespaceopenfsl.html#a43add8221d9aa3cd7285f47e4e04e72ea42d4c7c07e0c47d1972690705167ace4',1,'openfsl']]],
-  ['ext4_1297',['Ext4',['../namespaceopenfsl.html#a43add8221d9aa3cd7285f47e4e04e72eabbcd9ab672e711a4d0e8900674c1ab1c',1,'openfsl']]],
-  ['extpart_5fl_1298',['ExtPart_L',['../classopenfsl_1_1_m_b_r.html#a0b96adf72dee2df1ac1012dafd5036f1ac9961b64cad2bd2d51abbf506cf22fe2',1,'openfsl::MBR']]],
-  ['extpart_5fs_1299',['ExtPart_S',['../classopenfsl_1_1_m_b_r.html#a0b96adf72dee2df1ac1012dafd5036f1a12ef190322ea6dca92c53fa9f645734a',1,'openfsl::MBR']]]
+  ['darwinapfs_1396',['DarwinAPFS',['../namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94a86cea9cf30683dc251c24bb5f07236bd',1,'openfsl::PartitionGuid']]],
+  ['darwinapfspreboot_1397',['DarwinAPFSPreboot',['../namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94a4fbef19a88b8f119f298db85eaffe66d',1,'openfsl::PartitionGuid']]],
+  ['darwinapfsrecovery_1398',['DarwinAPFSRecovery',['../namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94a5fd9e68349cede57a3f0e5ae5fa45137',1,'openfsl::PartitionGuid']]],
+  ['darwinapplelabel_1399',['DarwinAppleLabel',['../namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94a60e0525405cc8617f93624cecb56b8c9',1,'openfsl::PartitionGuid']]],
+  ['darwinappletvrecovery_1400',['DarwinAppleTVRecovery',['../namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94a89be6f304430d2bb67249d3366406f78',1,'openfsl::PartitionGuid']]],
+  ['darwinboot_1401',['DarwinBoot',['../namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94ac5c5e70cc48a92010d884b6cc26e38ec',1,'openfsl::PartitionGuid']]],
+  ['darwincorestorage_1402',['DarwinCoreStorage',['../namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94ae6db246a203fb65fdd8e659944253b10',1,'openfsl::PartitionGuid']]],
+  ['darwinhfsplus_1403',['DarwinHFSPlus',['../namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94a0feed04baf8d5bc7316f142209a6b737',1,'openfsl::PartitionGuid']]],
+  ['darwinraid_1404',['DarwinRAID',['../namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94a7d9bc29518a163c138382bf1b27ebc81',1,'openfsl::PartitionGuid']]],
+  ['darwinraidoffline_1405',['DarwinRAIDOffline',['../namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94ae2dfd4a4308f7cb43458eb6573189f4a',1,'openfsl::PartitionGuid']]],
+  ['darwinufs_1406',['DarwinUFS',['../namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94ab343f26f3e6049cbe42f2232d38ca026',1,'openfsl::PartitionGuid']]],
+  ['darwinzfs_1407',['DarwinZFS',['../namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94a8864cccfef811e6489bc4b0ab51b9d86',1,'openfsl::PartitionGuid']]],
+  ['data_1408',['DATA',['../ntfs__structures_8h.html#a0f35e8a5a5b509089ed135fb9baf4e54ae44f9e348e41cb272efa87387728571b',1,'ntfs_structures.h']]],
+  ['directory_1409',['Directory',['../fat32__structures_8h.html#a3c884cdcd29ac3f16f15a65bee74a0acae73cda510e8bb947f7e61089e5581494',1,'fat32_structures.h']]],
+  ['dos_1410',['DOS',['../ntfs__structures_8h.html#ad38be261bc5ffe5387f80a88c19c4aecaa58e0423869da99d6ca169de8a000cc7',1,'ntfs_structures.h']]]
 ];

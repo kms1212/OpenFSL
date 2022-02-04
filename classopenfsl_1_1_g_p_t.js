@@ -12,7 +12,7 @@ var classopenfsl_1_1_g_p_t =
       [ "Hidden", "classopenfsl_1_1_g_p_t.html#aa664dc41bcd6bcab7c055316b7273c57a7acdf85c69cc3c5305456a293524386e", null ],
       [ "ManualMount", "classopenfsl_1_1_g_p_t.html#aa664dc41bcd6bcab7c055316b7273c57af9d7ce3afae8ff8828b55a18bcf81e4c", null ]
     ] ],
-    [ "GPT", "classopenfsl_1_1_g_p_t.html#a58a48297d09e2d018344df8c41a1e561", null ],
+    [ "GPT", "classopenfsl_1_1_g_p_t.html#ae339f8ef9f4cb526c34a779e6e4649a0", null ],
     [ "~GPT", "classopenfsl_1_1_g_p_t.html#a18d6648bcb013436d57378720407142d", null ],
     [ "getPartitionTypes", "classopenfsl_1_1_g_p_t.html#a019b1e1275d89938a09782c87092a93b", null ],
     [ "getVolumeOffset", "classopenfsl_1_1_g_p_t.html#a7dac7e68f1b4fc733123fa48217492d1", null ],

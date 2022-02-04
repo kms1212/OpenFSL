@@ -1,23 +1,8 @@
 var searchData=
 [
-  ['security_5fdescriptor_1347',['SECURITY_DESCRIPTOR',['../ntfs__structures_8h.html#a0f35e8a5a5b509089ed135fb9baf4e54acf518a034fa1943292223a90deac6aca',1,'ntfs_structures.h']]],
-  ['seekcur_1348',['SeekCur',['../namespaceopenfsl.html#ae9c1a254b8ec138b0ba8969fc6441ed4a08fed505341fb5e134152d2607da3c31',1,'openfsl']]],
-  ['seekend_1349',['SeekEnd',['../namespaceopenfsl.html#ae9c1a254b8ec138b0ba8969fc6441ed4ac81e065ca7d17ec1b162e30daf51e510',1,'openfsl']]],
-  ['seekset_1350',['SeekSet',['../namespaceopenfsl.html#ae9c1a254b8ec138b0ba8969fc6441ed4ae8b6fa49d5969a5db38371ec2affd49d',1,'openfsl']]],
-  ['siarchive_1351',['siArchive',['../ntfs__structures_8h.html#ad03a9b0939cf8df877a6b748fd887741a42a6e1b1b3c942cdbd3b1b574fff4eb3',1,'ntfs_structures.h']]],
-  ['sicompressed_1352',['siCompressed',['../ntfs__structures_8h.html#ad03a9b0939cf8df877a6b748fd887741a755cc34c4d1c4cb7011f8ede8552cbf2',1,'ntfs_structures.h']]],
-  ['sidevice_1353',['siDevice',['../ntfs__structures_8h.html#ad03a9b0939cf8df877a6b748fd887741a8293302fa50be3df6edb9f0e19d47da6',1,'ntfs_structures.h']]],
-  ['siencrypted_1354',['siEncrypted',['../ntfs__structures_8h.html#ad03a9b0939cf8df877a6b748fd887741ae84b80e7209b69c1f47c9e4f3afdb3d5',1,'ntfs_structures.h']]],
-  ['sihidden_1355',['siHidden',['../ntfs__structures_8h.html#ad03a9b0939cf8df877a6b748fd887741a54abbdc0fd1185991e543bc7a2483073',1,'ntfs_structures.h']]],
-  ['sinormal_1356',['siNormal',['../ntfs__structures_8h.html#ad03a9b0939cf8df877a6b748fd887741aa9b3a2b1bcd87d73ebb0c415f10b1a30',1,'ntfs_structures.h']]],
-  ['sinotcontentindexed_1357',['siNotContentIndexed',['../ntfs__structures_8h.html#ad03a9b0939cf8df877a6b748fd887741a253c5fc0058033dc74f294933d903994',1,'ntfs_structures.h']]],
-  ['sioffline_1358',['siOffline',['../ntfs__structures_8h.html#ad03a9b0939cf8df877a6b748fd887741a5eb5a4e16bf5669ad6e533c202f10023',1,'ntfs_structures.h']]],
-  ['sireadonly_1359',['siReadOnly',['../ntfs__structures_8h.html#ad03a9b0939cf8df877a6b748fd887741a82fbe4ce82cebc3e93b22ff1270fb329',1,'ntfs_structures.h']]],
-  ['sireparsepoint_1360',['siReparsePoint',['../ntfs__structures_8h.html#ad03a9b0939cf8df877a6b748fd887741afe53743bdc5eaabec6bd35d67e4a4dd1',1,'ntfs_structures.h']]],
-  ['sisparsefile_1361',['siSparseFile',['../ntfs__structures_8h.html#ad03a9b0939cf8df877a6b748fd887741a479cf6c2f7bc7149eeb196eb4c86532a',1,'ntfs_structures.h']]],
-  ['sisystem_1362',['siSystem',['../ntfs__structures_8h.html#ad03a9b0939cf8df877a6b748fd887741a0c9e4ed050ffe060fa658de31e8e6365',1,'ntfs_structures.h']]],
-  ['sitemporary_1363',['siTemporary',['../ntfs__structures_8h.html#ad03a9b0939cf8df877a6b748fd887741a7215480a994a24512e228f41605c9ba9',1,'ntfs_structures.h']]],
-  ['standard_5finformation_1364',['STANDARD_INFORMATION',['../ntfs__structures_8h.html#a0f35e8a5a5b509089ed135fb9baf4e54ae1c4a930c2918eaccd6114fdd3b57d74',1,'ntfs_structures.h']]],
-  ['symbolic_5flink_1365',['SYMBOLIC_LINK',['../ntfs__structures_8h.html#a0f35e8a5a5b509089ed135fb9baf4e54ab184d952382160a26328dfb90613faf7',1,'ntfs_structures.h']]],
-  ['system_1366',['System',['../classopenfsl_1_1_g_p_t.html#aa664dc41bcd6bcab7c055316b7273c57aa45da96d0bf6575970f2d27af22be28a',1,'openfsl::GPT::System()'],['../fat32__structures_8h.html#a3c884cdcd29ac3f16f15a65bee74a0acaa45da96d0bf6575970f2d27af22be28a',1,'System():&#160;fat32_structures.h']]]
+  ['r_1499',['R',['../classopenfsl_1_1_file_block_device.html#a63e5a978f31dbac481a6a2e27b363584ae1e1d3d40573127e9ee0480caf1283d6',1,'openfsl::FileBlockDevice']]],
+  ['read_1500',['Read',['../namespaceopenfsl.html#ab69edb30c6ca3a1228d3d32e61931c72a7a1a5f3e79fdc91edf2f5ead9d66abb4',1,'openfsl']]],
+  ['readonly_1501',['ReadOnly',['../classopenfsl_1_1_g_p_t.html#aa664dc41bcd6bcab7c055316b7273c57a131fb182a881796e7606ed6da27f1197',1,'openfsl::GPT::ReadOnly()'],['../fat32__structures_8h.html#a3c884cdcd29ac3f16f15a65bee74a0aca131fb182a881796e7606ed6da27f1197',1,'ReadOnly():&#160;fat32_structures.h']]],
+  ['reparse_5fpoint_1502',['REPARSE_POINT',['../ntfs__structures_8h.html#a0f35e8a5a5b509089ed135fb9baf4e54a3102e1ef56da08a1f6f199b6f8cb472d',1,'ntfs_structures.h']]],
+  ['rw_1503',['RW',['../classopenfsl_1_1_file_block_device.html#a63e5a978f31dbac481a6a2e27b363584a5c6dc3d436504b7a65191cafe28212ee',1,'openfsl::FileBlockDevice']]]
 ];

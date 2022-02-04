@@ -1,7 +1,14 @@
 var searchData=
 [
-  ['nocreate_1335',['Nocreate',['../namespaceopenfsl.html#ab69edb30c6ca3a1228d3d32e61931c72a7f2332ceb2123f8fd3f7644318eb6b82',1,'openfsl']]],
-  ['none_1336',['None',['../classopenfsl_1_1_m_b_r.html#a0b96adf72dee2df1ac1012dafd5036f1a59dd0a7af04d0831465f6f511bd1224b',1,'openfsl::MBR::None()'],['../classopenfsl_1_1_f_a_t32.html#aea18cd86a828b29f3531e03e11f9a388a6adf97f83acf6453d4a6a4b1070f3754',1,'openfsl::FAT32::None()'],['../namespaceopenfsl.html#aaeee298c14e04bb116e0f85588036dd4a6adf97f83acf6453d4a6a4b1070f3754',1,'openfsl::None()'],['../namespaceopenfsl.html#a43add8221d9aa3cd7285f47e4e04e72ea6adf97f83acf6453d4a6a4b1070f3754',1,'openfsl::None()']]],
-  ['noreplace_1337',['Noreplace',['../namespaceopenfsl.html#ab69edb30c6ca3a1228d3d32e61931c72a89fa43a56d8292bad0d2dfc0897d396c',1,'openfsl']]],
-  ['ntfs_1338',['NTFS',['../classopenfsl_1_1_m_b_r.html#a0b96adf72dee2df1ac1012dafd5036f1ac76c9efaf1d7b1ad1a6409d344fd0ea5',1,'openfsl::MBR::NTFS()'],['../namespaceopenfsl.html#a43add8221d9aa3cd7285f47e4e04e72eabead6bebc11dade4ccad97fa037b72a6',1,'openfsl::NTFS()']]]
+  ['manualmount_1474',['ManualMount',['../classopenfsl_1_1_g_p_t.html#aa664dc41bcd6bcab7c055316b7273c57af9d7ce3afae8ff8828b55a18bcf81e4c',1,'openfsl::GPT']]],
+  ['mbr_1475',['MBR',['../namespaceopenfsl.html#aaeee298c14e04bb116e0f85588036dd4a1f663efaef3975c30c9e08d1da01fd7f',1,'openfsl']]],
+  ['mbrpartitionscheme_1476',['MBRPartitionScheme',['../namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94a63f548cce3b231deb1a99f8a3aa91f38',1,'openfsl::PartitionGuid']]],
+  ['mftdirectory_1477',['mftDirectory',['../ntfs__structures_8h.html#a014eefd3bff976fa6bdbb6e35aa50948a14ad7cff006d46b40af760598b312bdc',1,'ntfs_structures.h']]],
+  ['mftusing_1478',['mftUsing',['../ntfs__structures_8h.html#a014eefd3bff976fa6bdbb6e35aa50948addb6073d721a030c5d6664fdf38f6f1a',1,'ntfs_structures.h']]],
+  ['midnightbsdboot_1479',['MidnightBSDBoot',['../namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94a1f67d9e2d22e463bdf3abfcb39c37faa',1,'openfsl::PartitionGuid']]],
+  ['midnightbsddata_1480',['MidnightBSDData',['../namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94af44ecbf3b87f0f61180375e42d9b039a',1,'openfsl::PartitionGuid']]],
+  ['midnightbsdswap_1481',['MidnightBSDSwap',['../namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94a61db7a3032f191b76b68a247db28aa4f',1,'openfsl::PartitionGuid']]],
+  ['midnightbsdufs_1482',['MidnightBSDUFS',['../namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94a50c76ed6dc9acca73e3fc4c7a8043cf0',1,'openfsl::PartitionGuid']]],
+  ['midnightbsdvinum_1483',['MidnightBSDVinum',['../namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94a339f3d581089317e0354acdb3122d670',1,'openfsl::PartitionGuid']]],
+  ['midnightbsdzfs_1484',['MidnightBSDZFS',['../namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94a6159c819d33571192c7287b7455de272',1,'openfsl::PartitionGuid']]]
 ];
