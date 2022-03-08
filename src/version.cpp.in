@@ -1,0 +1,42 @@
+/* Copyright (c) 2021. kms1212(Minsu Kwon)
+This file is part of OpenFSL.
+
+OpenFSL and its source code is published over BSD 3-Clause License.
+See the BSD-3-Clause for more details.
+<https://raw.githubusercontent.com/kms1212/OpenFSL/main/LICENSE>
+
+*/
+
+#include "openfsl/version.h"
+
+const int openfsl::getBuildType() {
+    return @PROJECT_VERSION_TYPE@;
+}
+
+const uint32_t openfsl::getMajorVersion() {
+    return @PROJECT_VERSION_MAJOR@;
+}
+
+const uint32_t openfsl::getMinorVersion() {
+    return @PROJECT_VERSION_MINOR@;
+}
+
+const uint32_t openfsl::getPatchVersion() {
+    return @PROJECT_VERSION_PATCH@;
+}
+
+const uint32_t openfsl::getBuildVersion() {
+    return @PROJECT_VERSION_BUILD@;
+}
+
+const uint32_t openfsl::getBuildDate() {
+    return @PROJECT_VERSION_DATE@;
+}
+
+const char* openfsl::getVersionString() {
+    return "@PROJECT_VERSION_STRING@";
+}
+
+const char* openfsl::getFullVersionString() {
+    return "@PROJECT_FULL_VERSION_STRING@";
+}

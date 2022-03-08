@@ -1,0 +1,35 @@
+/* Copyright (c) 2021. kms1212(Minsu Kwon)
+This file is part of OpenFSL.
+
+OpenFSL and its source code is published over BSD 3-Clause License.
+See the BSD-3-Clause for more details.
+<https://raw.githubusercontent.com/kms1212/OpenFSL/main/LICENSE>
+
+*/
+
+#ifndef OPENFSL_SYMBOLS_H_
+#define OPENFSL_SYMBOLS_H_
+
+#ifndef __cplusplus
+#error C++ compiler required.
+#endif
+
+#define SHORT_EXIST @HAVE_SHORT@
+#define INT_EXIST @HAVE_INT@
+#define LONG_EXIST @HAVE_LONG@
+#define LONG_LONG_EXIST @HAVE_LONG_LONG@
+#define DOUBLE_EXIST @HAVE_DOUBLE@
+#define SIZE_T_EXIST @HAVE_SIZE_T@
+#define UINT8_T_EXIST @HAVE_UINT8_T@
+#define UINT16_T_EXIST @HAVE_UINT16_T@
+#define UINT32_T_EXIST @HAVE_UINT32_T@
+#define UINT64_T_EXIST @HAVE_UINT64_T@
+#define TIME_T_EXIST @HAVE_TIME_T@
+#define __TIME64_T_EXIST @HAVE___TIME64_T@
+#define STRUCT_TM_EXIST @HAVE_STRUCT_TM@
+#define ERROR_T_EXIST @HAVE_ERROR_T@
+
+#define _LOCALTIME64_S_EXIST @_LOCALTIME64_S_EXIST@
+#define LOCALTIME_R_EXIST @LOCALTIME_R_EXIST@
+
+#endif  // OPENFSL_SYMBOLS_H_

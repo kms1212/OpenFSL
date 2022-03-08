@@ -1,0 +1,260 @@
+name: Deploy Nightly
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+    inputs:
+      dry-run:
+        description: 'Enter "dry-run" to dry run.'
+        required: false
+        default: ''
+
+env:
+  BUILD_TYPE: Release
+
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        libtype: [ SHARED, STATIC ]
+        config:
+          - name: "Ubuntu x86-64 20.04 GCC TGZ"
+            os: ubuntu-20.04
+            packages: nasm cmake zip lcov
+            generator: "Unix Makefiles"
+            platform: x86-64
+            cc: gcc
+            cxx: g++
+            ccflag: ''
+            cxxflag: ''
+            target: all
+            coverage: true
+            pkg: TGZ
+            
+          - name: "Ubuntu x86-64 20.04 GCC DEB"
+            os: ubuntu-20.04
+            packages: nasm cmake zip lcov
+            generator: "Unix Makefiles"
+            platform: x86-64
+            cc: gcc
+            cxx: g++
+            ccflag: ''
+            cxxflag: ''
+            target: all
+            coverage: false
+            pkg: DEB
+            
+          - name: "Windows x86-64 2019 MSVC 2019 ZIP"
+            os: windows-2019
+            packages: nasm cmake 7zip
+            generator: "Visual Studio 16 2019"
+            platform: x64
+            cc: cl
+            cxx: cl
+            ccflag: ''
+            cxxflag: ''
+            target: all_build
+            coverage: false
+            pkg: ZIP
+            
+          - name: "Windows x86-64 2019 MSVC 2019 NSIS64"
+            os: windows-2019
+            packages: nasm cmake 7zip
+            generator: "Visual Studio 16 2019"
+            platform: x64
+            cc: cl
+            cxx: cl
+            ccflag: ''
+            cxxflag: ''
+            target: all_build
+            coverage: false
+            pkg: NSIS64
+            
+          - name: "Windows x86-64 2019 MinGW ZIP"
+            os: windows-2019
+            packages: nasm cmake 7zip
+            generator: "Unix Makefiles"
+            platform: x86-64
+            cc: gcc
+            cxx: g++
+            ccflag: ''
+            cxxflag: ''
+            target: all
+            coverage: false
+            pkg: ZIP
+            
+          - name: "Windows x86-64 2019 MinGW NSIS64"
+            os: windows-2019
+            packages: nasm cmake 7zip
+            generator: "Unix Makefiles"
+            platform: x86-64
+            cc: gcc
+            cxx: g++
+            ccflag: ''
+            cxxflag: ''
+            target: all
+            coverage: false
+            pkg: NSIS64
+            
+          - name: "macOS 11 Clang ZIP"
+            os: macos-11
+            packages: nasm cmake zip
+            generator: "Unix Makefiles"
+            platform: x86-64
+            cc: clang
+            cxx: clang++
+            ccflag: ''
+            cxxflag: ''
+            target: all
+            coverage: false
+            pkg: ZIP
+            
+          - name: "macOS 11 Clang TGZ"
+            os: macos-11
+            packages: nasm cmake zip
+            generator: "Unix Makefiles"
+            platform: x86-64
+            cc: clang
+            cxx: clang++
+            ccflag: ''
+            cxxflag: ''
+            target: all
+            coverage: false
+            pkg: TGZ
+        
+    runs-on: '${{ matrix.config.os }}'
+    name: ${{ matrix.config.name }}-${{ matrix.libtype }}
+    steps:
+    - uses: actions/checkout@v2
+      
+    - name: Install Required Software
+      run: |
+        if [ "$RUNNER_OS" == "Linux" ]; then
+          sudo apt-get update
+          sudo apt-get install ${{ matrix.config.packages }}
+        elif [ "$RUNNER_OS" == "Windows" ]; then
+          rm -f $ChocolateyInstall/bin/cpack.exe
+          choco install ${{ matrix.config.packages }}
+        elif [ "$RUNNER_OS" == "macOS" ]; then
+          brew install ${{ matrix.config.packages }}
+        else
+          echo "$RUNNER_OS not supported"
+          exit 1
+        fi
+      shell: bash
+
+    - name: Download MSVC Redistributable package
+      if: ${{ runner.os == 'Windows' }}
+      run: |
+        Invoke-WebRequest -Uri "https://aka.ms/vs/16/release/vc_redist.x64.exe" -OutFile "${{github.workspace}}/vc_redist.exe"
+      shell: powershell
+      
+    - name: Configure CMake
+      run: |
+        if [ "$RUNNER_OS" == "macOS" ]; then
+          export OPENSSL_ROOT_DIR="/usr/local/opt/openssl@1.1"
+        fi
+        export CC=${{ matrix.config.cc }}
+        export CXX=${{ matrix.config.cxx }}
+        if [ "${{ matrix.config.generator }}" = "Unix Makefiles" ]; then
+          if [ "$RUNNER_OS" == "macOS" ]; then
+            cmake -G "${{ matrix.config.generator }}" \
+                  -S. -Bbuild \
+                  -DCMAKE_C_FLAGS="${{ matrix.config.ccflag }}" \
+                  -DCMAKE_CXX_FLAGS="${{ matrix.config.cxxflag }}" \
+                  -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} \
+                  -DTARGET_ARCHITECTURE=${{ matrix.config.platform }} \
+                  -DBUILD_TESTING=true \
+                  -DLIBRARY_TYPE=${{ matrix.libtype }} \
+                  -DTEST_COVERAGE=false \
+                  -DDOXYGEN_GENERATE=false \
+                  -DNO_BUILD=false \
+                  -DPACKAGE_GENERATE=true \
+                  -DPACKAGE_GENERATOR=${{ matrix.config.pkg }} \
+                  -DPACKAGE_TYPE=NIGHTLY \
+                  -DINCREASE_BUILD_NUMBER=false
+                  -DOPENSSL_ROOT_DIR="/usr/local/Cellar/openssl@1.1/1.1.1m"
+          else
+            cmake -G "${{ matrix.config.generator }}" \
+                  -S. -Bbuild \
+                  -DCMAKE_C_FLAGS="${{ matrix.config.ccflag }}" \
+                  -DCMAKE_CXX_FLAGS="${{ matrix.config.cxxflag }}" \
+                  -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} \
+                  -DTARGET_ARCHITECTURE=${{ matrix.config.platform }} \
+                  -DBUILD_TESTING=true \
+                  -DLIBRARY_TYPE=${{ matrix.libtype }} \
+                  -DTEST_COVERAGE=false \
+                  -DDOXYGEN_GENERATE=false \
+                  -DNO_BUILD=false \
+                  -DPACKAGE_GENERATE=true \
+                  -DPACKAGE_GENERATOR=${{ matrix.config.pkg }} \
+                  -DPACKAGE_TYPE=NIGHTLY \
+                  -DINCREASE_BUILD_NUMBER=false
+          fi
+        else
+          cmake -G "${{ matrix.config.generator }}" -A${{ matrix.config.platform }} \
+                -S. -Bbuild \
+                -DCMAKE_C_FLAGS="${{ matrix.config.ccflag }}" \
+                -DCMAKE_CXX_FLAGS="${{ matrix.config.cxxflag }}" \
+                -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} \
+                -DTARGET_ARCHITECTURE=${{ matrix.config.platform }} \
+                -DBUILD_TESTING=true \
+                -DLIBRARY_TYPE=${{ matrix.libtype }} \
+                -DTEST_COVERAGE=false \
+                -DDOXYGEN_GENERATE=false \
+                -DNO_BUILD=false \
+                -DPACKAGE_GENERATE=true \
+                -DPACKAGE_GENERATOR=${{ matrix.config.pkg }} \
+                -DPACKAGE_TYPE=NIGHTLY \
+                -DINCREASE_BUILD_NUMBER=false \
+                -DPACKAGE_VCREDIST_PATH="${{github.workspace}}/vc_redist.exe"
+        fi
+      shell: bash
+      
+    - name: Build
+      run: |
+        cmake --build build --config ${{env.BUILD_TYPE}} --target ${{ matrix.config.target }}
+      shell: bash
+      
+    - name: Test
+      run: |
+        ctest -C ${{env.BUILD_TYPE}}
+      shell: bash
+      working-directory: ${{github.workspace}}/build
+      
+    - name: Package
+      run: |
+        cpack
+      shell: bash
+      working-directory: ${{github.workspace}}/build
+
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: nightly-release-temp
+        path: build/openfsl-*
+        retention-days: 1
+
+  release:
+    if: ${{ github.event.inputs.dry-run != 'dry-run' }}
+    needs: [build]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Download artifacts
+        uses: actions/download-artifact@v2
+        with:
+          name: nightly-release-temp
+
+      - name: Release
+        uses: "marvinpinto/action-automatic-releases@latest"
+        with:
+          repo_token: "${{ secrets.API_TOKEN_GITHUB }}"
+          automatic_release_tag: "nightly"
+          prerelease: true
+          title: "Nightly build"
+          files: |
+            openfsl-*

@@ -1,0 +1,197 @@
+name: Build
+
+on: [push, pull_request]
+
+env:
+  BUILD_TYPE: Debug
+    
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        config:
+          - name: "Ubuntu x86-64 20.04 GCC"
+            os: ubuntu-20.04
+            packages: nasm cmake zip lcov ninja-build
+            generator: "Ninja"
+            platform: x86-64
+            cc: gcc
+            cxx: g++
+            ccflag: ''
+            cxxflag: ''
+            target: all
+            coverage: true
+            
+          - name: "Ubuntu x86-64 20.04 Clang"
+            os: ubuntu-20.04
+            packages: nasm cmake zip clang-10 ninja-build
+            generator: "Ninja"
+            platform: x86-64
+            cc: clang
+            cxx: clang++
+            ccflag: ''
+            cxxflag: ''
+            target: all
+            coverage: false
+            
+          - name: "Ubuntu x86-64 18.04 GCC"
+            os: ubuntu-18.04
+            packages: nasm cmake zip ninja-build
+            generator: "Ninja"
+            platform: x86-64
+            cc: gcc
+            cxx: g++
+            ccflag: ''
+            cxxflag: ''
+            target: all
+            coverage: false
+            
+          - name: "Ubuntu x86-64 18.04 Clang"
+            os: ubuntu-18.04
+            packages: nasm cmake zip clang-10 ninja-build
+            generator: "Ninja"
+            platform: x86-64
+            cc: clang
+            cxx: clang++
+            ccflag: ''
+            cxxflag: ''
+            target: all
+            coverage: false
+            
+          - name: "Windows x86-64 2022 MSVC 2022"
+            os: windows-2022
+            packages: nasm cmake 7zip openssl
+            generator: "Visual Studio 17 2022"
+            platform: x64
+            cc: cl
+            cxx: cl
+            ccflag: ''
+            cxxflag: ''
+            target: all_build
+            coverage: false
+            
+          - name: "Windows x86-64 2022 MinGW"
+            os: windows-2022
+            packages: nasm cmake 7zip ninja
+            generator: "Ninja"
+            platform: x86-64
+            cc: gcc
+            cxx: g++
+            ccflag: ''
+            cxxflag: ''
+            target: all
+            coverage: false
+            
+          - name: "macOS 11 Clang"
+            os: macos-11
+            packages: nasm cmake zip ninja
+            generator: "Ninja"
+            platform: x86-64
+            cc: clang
+            cxx: clang++
+            ccflag: ''
+            cxxflag: ''
+            target: all
+            coverage: false
+        
+    runs-on: '${{ matrix.config.os }}'
+    name: ${{ matrix.config.name }}
+    steps:
+    - uses: actions/checkout@v2
+      
+    - name: Install Required Software
+      run: |
+        if [ "$RUNNER_OS" == "Linux" ]; then
+          sudo apt-get update
+          sudo apt-get install ${{ matrix.config.packages }}
+        elif [ "$RUNNER_OS" == "Windows" ]; then
+          choco install ${{ matrix.config.packages }}
+        elif [ "$RUNNER_OS" == "macOS" ]; then
+          brew install ${{ matrix.config.packages }}
+        else
+          echo "$RUNNER_OS not supported"
+          exit 1
+        fi
+      shell: bash
+      
+    - name: Configure CMake
+      run: |
+        export CC=${{ matrix.config.cc }}
+        export CXX=${{ matrix.config.cxx }}
+        if [ "${{ matrix.config.generator }}" = "Ninja" ]; then
+          if [ "$RUNNER_OS" == "macOS" ]; then
+            cmake -G "${{ matrix.config.generator }}" \
+                  -S. -Bbuild \
+                  -DCMAKE_C_FLAGS="${{ matrix.config.ccflag }}" \
+                  -DCMAKE_CXX_FLAGS="${{ matrix.config.cxxflag }}" \
+                  -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} \
+                  -DTARGET_ARCHITECTURE=${{ matrix.config.platform }} \
+                  -DBUILD_TESTING=true \
+                  -DTEST_COVERAGE=true \
+                  -DDOXYGEN_GENERATE=false \
+                  -DNO_BUILD=false \
+                  -DPACKAGE_GENERATE=true \
+                  -DOPENSSL_ROOT_DIR="/usr/local/Cellar/openssl@1.1/1.1.1m"
+          else
+            cmake -G "${{ matrix.config.generator }}" \
+                  -S. -Bbuild \
+                  -DCMAKE_C_FLAGS="${{ matrix.config.ccflag }}" \
+                  -DCMAKE_CXX_FLAGS="${{ matrix.config.cxxflag }}" \
+                  -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} \
+                  -DTARGET_ARCHITECTURE=${{ matrix.config.platform }} \
+                  -DBUILD_TESTING=true \
+                  -DTEST_COVERAGE=true \
+                  -DDOXYGEN_GENERATE=false \
+                  -DNO_BUILD=false \
+                  -DPACKAGE_GENERATE=true
+          fi
+        else
+          cmake -G "${{ matrix.config.generator }}" -A${{ matrix.config.platform }} \
+                -S. -Bbuild \
+                -DCMAKE_C_FLAGS="${{ matrix.config.ccflag }}" \
+                -DCMAKE_CXX_FLAGS="${{ matrix.config.cxxflag }}" \
+                -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} \
+                -DTARGET_ARCHITECTURE=${{ matrix.config.platform }} \
+                -DBUILD_TESTING=true \
+                -DTEST_COVERAGE=true \
+                -DDOXYGEN_GENERATE=false \
+                -DNO_BUILD=false \
+                -DPACKAGE_GENERATE=true
+        fi
+      shell: bash
+      
+    - name: Build
+      run: |
+        cmake --build build --config ${{env.BUILD_TYPE}} --target ${{ matrix.config.target }}
+      shell: bash
+      
+    - name: Test
+      run: |
+        ctest -C ${{env.BUILD_TYPE}}
+      shell: bash
+      working-directory: ${{github.workspace}}/build
+
+    - name: Test Coverage
+      run: |
+        pip3 install git+https://github.com/eriwen/lcov-to-cobertura-xml.git
+        ctest -T Coverage
+        lcov --capture --directory . --output-file coverage.info
+        lcov --remove coverage.info '*/tests/*' --output-file coverage.info
+        lcov_cobertura coverage.info
+      if: ${{ matrix.config.coverage == true }}
+      shell: bash
+      working-directory: ${{github.workspace}}/build
+
+    - name: Run codacy-coverage-reporter
+      if: ${{ matrix.config.coverage == true }}
+      uses: codacy/codacy-coverage-reporter-action@v1
+      with:
+          project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
+          coverage-reports: build/coverage.xml
+      
+    - name: Package
+      run: |
+        cmake --build . --config ${{env.BUILD_TYPE}} --target package
+      shell: bash
+      working-directory: ${{github.workspace}}/build
