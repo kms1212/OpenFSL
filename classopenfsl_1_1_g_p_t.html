@@ -96,6 +96,7 @@ $(document).ready(function(){initNavTree('classopenfsl_1_1_g_p_t.html',''); init
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pri-types">Private Types</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
@@ -112,7 +113,7 @@ Collaboration diagram for openfsl::GPT:</div>
 <div class="dyncontent">
 <div class="center"><img src="classopenfsl_1_1_g_p_t__coll__graph.png" border="0" usemap="#openfsl_1_1_g_p_t_coll__map" alt="Collaboration graph"/></div>
 <map name="openfsl_1_1_g_p_t_coll__map" id="openfsl_1_1_g_p_t_coll__map">
-<area shape="rect" title=" " alt="" coords="374,829,533,965"/>
+<area shape="rect" title=" " alt="" coords="375,829,531,965"/>
 <area shape="rect" href="classopenfsl_1_1_block_device.html" title="Disk driver." alt="" coords="371,417,535,583"/>
 <area shape="rect" href="classopenfsl_1_1_m_b_r.html" title=" " alt="" coords="259,645,405,767"/>
 <area shape="rect" href="classopenfsl_1_1_i_o_device.html" title=" " alt="" coords="147,219,285,355"/>
@@ -133,9 +134,16 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structopenfsl_1_1_g_p_t_1_1_partition_entry.html">PartitionEntry</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classopenfsl_1_1_g_p_t.html">GPT</a> Partition Entry.  <a href="structopenfsl_1_1_g_p_t_1_1_partition_entry.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structopenfsl_1_1_g_p_t_1_1_partition_info.html">PartitionInfo</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structopenfsl_1_1_g_p_t_1_1_table_header.html">TableHeader</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classopenfsl_1_1_g_p_t.html">GPT</a> Header.  <a href="structopenfsl_1_1_g_p_t_1_1_table_header.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a98020c5101a4bc1d7f68a669c0a9417d"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structopenfsl_1_1_g_p_t_1_1_partition_info.html">openfsl::GPT::PartitionInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenfsl_1_1_g_p_t.html#a98020c5101a4bc1d7f68a669c0a9417d">PartitionInfo</a></td></tr>
+<tr class="separator:a98020c5101a4bc1d7f68a669c0a9417d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -147,8 +155,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aa96658209115a6c9bf0df02425a2cbe1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7dac7e68f1b4fc733123fa48217492d1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceopenfsl.html#ac82097377896cd83a32c893edb39f391">lba48_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenfsl_1_1_g_p_t.html#a7dac7e68f1b4fc733123fa48217492d1">getVolumeOffset</a> (const uint8_t index)</td></tr>
 <tr class="separator:a7dac7e68f1b4fc733123fa48217492d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a019b1e1275d89938a09782c87092a93b"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="namespaceopenfsl.html#a43add8221d9aa3cd7285f47e4e04e72e">FileSystemType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenfsl_1_1_g_p_t.html#a019b1e1275d89938a09782c87092a93b">getPartitionTypes</a> ()</td></tr>
-<tr class="separator:a019b1e1275d89938a09782c87092a93b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb9dd78c3d56980cd161364e332c24c7"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structopenfsl_1_1_g_p_t_1_1_partition_info.html">PartitionInfo</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenfsl_1_1_g_p_t.html#aeb9dd78c3d56980cd161364e332c24c7">getPartitionInfo</a> ()</td></tr>
+<tr class="separator:aeb9dd78c3d56980cd161364e332c24c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-types"></a>
 Private Types</h2></td></tr>
@@ -227,6 +235,20 @@ Friends</h2></td></tr>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">uint16_t </td><td class="markdownTableBodyNone">entryPartitionName[36] </td><td class="markdownTableBodyNone">0x0038  </td></tr>
 </table>
+
+</div>
+</div>
+<a id="a98020c5101a4bc1d7f68a669c0a9417d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98020c5101a4bc1d7f68a669c0a9417d">&#9670;&nbsp;</a></span>PartitionInfo</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structopenfsl_1_1_g_p_t_1_1_partition_info.html">openfsl::GPT::PartitionInfo</a> <a class="el" href="structopenfsl_1_1_g_p_t_1_1_partition_info.html">openfsl::GPT::PartitionInfo</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -346,7 +368,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="gpt_8cpp_source.html#l00095">95</a> of file <a class="el" href="gpt_8cpp_source.html">gpt.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gpt_8cpp_source.html#l00099">99</a> of file <a class="el" href="gpt_8cpp_source.html">gpt.cpp</a>.</p>
 
 </div>
 </div>
@@ -365,19 +387,19 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="gpt_8cpp_source.html#l00100">100</a> of file <a class="el" href="gpt_8cpp_source.html">gpt.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gpt_8cpp_source.html#l00104">104</a> of file <a class="el" href="gpt_8cpp_source.html">gpt.cpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a019b1e1275d89938a09782c87092a93b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a019b1e1275d89938a09782c87092a93b">&#9670;&nbsp;</a></span>getPartitionTypes()</h2>
+<a id="aeb9dd78c3d56980cd161364e332c24c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb9dd78c3d56980cd161364e332c24c7">&#9670;&nbsp;</a></span>getPartitionInfo()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt; <a class="el" href="namespaceopenfsl.html#a43add8221d9aa3cd7285f47e4e04e72e">openfsl::FileSystemType</a> &gt; openfsl::GPT::getPartitionTypes </td>
+          <td class="memname">std::vector&lt; <a class="el" href="structopenfsl_1_1_g_p_t_1_1_partition_info.html">openfsl::GPT::PartitionInfo</a> &gt; openfsl::GPT::getPartitionInfo </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -385,7 +407,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="gpt_8cpp_source.html#l00115">115</a> of file <a class="el" href="gpt_8cpp_source.html">gpt.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gpt_8cpp_source.html#l00167">167</a> of file <a class="el" href="gpt_8cpp_source.html">gpt.cpp</a>.</p>
 
 </div>
 </div>
@@ -422,7 +444,17 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="gpt_8cpp_source.html#l00104">104</a> of file <a class="el" href="gpt_8cpp_source.html">gpt.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gpt_8cpp_source.html#l00108">108</a> of file <a class="el" href="gpt_8cpp_source.html">gpt.cpp</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classopenfsl_1_1_g_p_t_aa96658209115a6c9bf0df02425a2cbe1_cgraph.png" border="0" usemap="#classopenfsl_1_1_g_p_t_aa96658209115a6c9bf0df02425a2cbe1_cgraph" alt=""/></div>
+<map name="classopenfsl_1_1_g_p_t_aa96658209115a6c9bf0df02425a2cbe1_cgraph" id="classopenfsl_1_1_g_p_t_aa96658209115a6c9bf0df02425a2cbe1_cgraph">
+<area shape="rect" title=" " alt="" coords="5,35,172,61"/>
+<area shape="rect" href="classopenfsl_1_1_sector.html#af9128b9d68ff6b96d70336a6e51d23e4" title="Data buffer getter." alt="" coords="220,5,399,32"/>
+<area shape="rect" href="classopenfsl_1_1_container.html#ae32318eaf5dd949eb740f9ed2d05f5d9" title="Data buffer getter." alt="" coords="239,57,380,98"/>
+</map>
+</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">

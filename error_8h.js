@@ -10,6 +10,7 @@ var error_8h =
     [ "OPENFSL_ERROR_EXIST", "error_8h.html#a8fbf59bf5319547e6f27498d96a440c6", null ],
     [ "OPENFSL_ERROR_FRMATOPT", "error_8h.html#a3ef1954038cba03384832ba309fd55a0", null ],
     [ "OPENFSL_ERROR_INVACC", "error_8h.html#a49df6e2e7e0b9677493236f0470240fe", null ],
+    [ "OPENFSL_ERROR_INVALGPT", "error_8h.html#a5628d470d17f678b7fca42ecf681b2e9", null ],
     [ "OPENFSL_ERROR_INVNAME", "error_8h.html#adb927dca48a08b8a84c184acd97ea4ff", null ],
     [ "OPENFSL_ERROR_LARGELBA", "error_8h.html#a7fbb631b81a9218d2a7b512b2ea742b4", null ],
     [ "OPENFSL_ERROR_LARGELS", "error_8h.html#ae30f6320a40fcf22363281a59a310fae", null ],

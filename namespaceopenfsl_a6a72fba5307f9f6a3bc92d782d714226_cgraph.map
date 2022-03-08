@@ -1,11 +1,11 @@
 <map id="openfsl::detectDiskStructure" name="openfsl::detectDiskStructure">
-<area shape="rect" id="node1" title=" " alt="" coords="5,161,212,188"/>
-<area shape="rect" id="node2" href="$classopenfsl_1_1_sector.html#af9128b9d68ff6b96d70336a6e51d23e4" title="Data buffer getter." alt="" coords="531,19,710,45"/>
-<area shape="rect" id="node3" href="$classopenfsl_1_1_container.html#ae32318eaf5dd949eb740f9ed2d05f5d9" title="Data buffer getter." alt="" coords="550,95,691,137"/>
-<area shape="rect" id="node4" href="$classopenfsl_1_1_block_device.html#a47f31aa57ca6e82567148f7875a81162" title=" " alt="" coords="289,95,447,137"/>
-<area shape="rect" id="node5" href="$classopenfsl_1_1_m_b_r.html#a52f0f7f30aa15a6a0714253bd4a119ac" title=" " alt="" coords="260,212,476,239"/>
-<area shape="rect" id="node7" href="$classopenfsl_1_1_m_b_r.html#a92009da835b93c83686b36f5e2a30ae8" title=" " alt="" coords="282,44,454,71"/>
-<area shape="rect" id="node8" href="$classopenfsl_1_1_g_p_t.html#aa96658209115a6c9bf0df02425a2cbe1" title=" " alt="" coords="285,263,451,289"/>
-<area shape="rect" id="node9" href="$classopenfsl_1_1_block_device.html#abb336a5c13d81a7587ad19da73097f43" title=" " alt="" coords="289,314,447,355"/>
-<area shape="rect" id="node6" href="$namespaceopenfsl.html#a2e842313f02239c1497b018b5f9e4161" title=" " alt="" coords="524,212,717,239"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,139,212,166"/>
+<area shape="rect" id="node2" href="$classopenfsl_1_1_sector.html#af9128b9d68ff6b96d70336a6e51d23e4" title="Data buffer getter." alt="" coords="531,34,710,60"/>
+<area shape="rect" id="node3" href="$classopenfsl_1_1_container.html#ae32318eaf5dd949eb740f9ed2d05f5d9" title="Data buffer getter." alt="" coords="550,85,691,126"/>
+<area shape="rect" id="node4" href="$classopenfsl_1_1_block_device.html#a47f31aa57ca6e82567148f7875a81162" title=" " alt="" coords="289,190,447,232"/>
+<area shape="rect" id="node5" href="$classopenfsl_1_1_m_b_r.html#a52f0f7f30aa15a6a0714253bd4a119ac" title=" " alt="" coords="260,256,476,283"/>
+<area shape="rect" id="node7" href="$classopenfsl_1_1_m_b_r.html#a92009da835b93c83686b36f5e2a30ae8" title=" " alt="" coords="282,88,454,115"/>
+<area shape="rect" id="node8" href="$classopenfsl_1_1_g_p_t.html#aa96658209115a6c9bf0df02425a2cbe1" title=" " alt="" coords="285,38,451,64"/>
+<area shape="rect" id="node9" href="$classopenfsl_1_1_block_device.html#abb336a5c13d81a7587ad19da73097f43" title=" " alt="" coords="289,308,447,349"/>
+<area shape="rect" id="node6" href="$namespaceopenfsl.html#a2e842313f02239c1497b018b5f9e4161" title=" " alt="" coords="524,256,717,283"/>
 </map>

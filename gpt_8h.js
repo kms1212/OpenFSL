@@ -3,6 +3,7 @@ var gpt_8h =
     [ "GPT", "classopenfsl_1_1_g_p_t.html", "classopenfsl_1_1_g_p_t" ],
     [ "TableHeader", "structopenfsl_1_1_g_p_t_1_1_table_header.html", "structopenfsl_1_1_g_p_t_1_1_table_header" ],
     [ "PartitionEntry", "structopenfsl_1_1_g_p_t_1_1_partition_entry.html", "structopenfsl_1_1_g_p_t_1_1_partition_entry" ],
+    [ "PartitionInfo", "structopenfsl_1_1_g_p_t_1_1_partition_info.html", "structopenfsl_1_1_g_p_t_1_1_partition_info" ],
     [ "Unused", "gpt_8h.html#a4619a346b7ad5aad3631fbdad76dbd94a056854e6c23d7c97a17b8b8faf8dba86", null ],
     [ "MBRPartitionScheme", "gpt_8h.html#a4619a346b7ad5aad3631fbdad76dbd94a63f548cce3b231deb1a99f8a3aa91f38", null ],
     [ "EFISystemPartition", "gpt_8h.html#a4619a346b7ad5aad3631fbdad76dbd94afbd01c7865b4edd033dc995c7aa0bfac", null ],
