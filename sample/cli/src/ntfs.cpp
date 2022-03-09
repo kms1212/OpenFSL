@@ -19,6 +19,7 @@ int ntfsshell(openfsl::FileBlockDevice* fbd,
         "\":" + std::to_string(selectIndex) + "(" +
         openfsl::fileSystemTypeToString(diskStructure.partList[selectIndex])
         + ")";
+    error_t result;
 
     openfsl::NTFS ntfs(fbd, "", "\\/", volumeString + ":",
         openfsl::NTFS::Version::v3_1);
@@ -26,15 +27,19 @@ int ntfsshell(openfsl::FileBlockDevice* fbd,
     if (diskStructure.partTable == openfsl::PartitionTableType::MBR) {
         openfsl::MBR mbr(fbd);
 
-        mbr.initialize();
+        result = mbr.initialize();
+        if (result)
+            return result;
 
-        std::vector<openfsl::MBR::PartitionInfo> partitionInfo =
-            mbr.getPartitionInfo();
+        std::vector<openfsl::MBR::PartitionInfo> partitionInfo;
+        result = mbr.getPartitionInfo(&partitionInfo);
+        if (result)
+            return result;
 
         ntfs.setFsLBAOffset(partitionInfo[selectIndex].partOffset);
     }
 
-    error_t result = ntfs.initialize();
+    result = ntfs.initialize();
     if (result) {
         return result;
     }

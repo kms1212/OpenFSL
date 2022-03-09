@@ -19,21 +19,26 @@ int fat32shell(openfsl::FileBlockDevice* fbd,
     openfsl::DiskStructure diskStructure, size_t selectIndex) {
     openfsl::FAT32 fat32(fbd, "", "\\/", "::");
 
+    error_t result;
+
     if (diskStructure.partTable == openfsl::PartitionTableType::MBR) {
         openfsl::MBR mbr(fbd);
 
-        mbr.initialize();
+        result = mbr.initialize();
+        if (result)
+            return result;
 
-        std::vector<openfsl::MBR::PartitionInfo> partitionInfo =
-            mbr.getPartitionInfo();
+        std::vector<openfsl::MBR::PartitionInfo> partitionInfo;
+        result = mbr.getPartitionInfo(&partitionInfo);
+        if (result)
+            return result;
 
         fat32.setFsLBAOffset(partitionInfo[selectIndex].partOffset);
     }
 
-    error_t result = fat32.initialize();
-    if (result) {
+    result = fat32.initialize();
+    if (result)
         return result;
-    }
 
     result = fat32.enableCache(128);
     if (result) {

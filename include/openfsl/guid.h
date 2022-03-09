@@ -38,6 +38,7 @@ class GUID {
      * @brief GUID class contructor
      *
      */
+    GUID();
     GUID(const uint32_t guid1, const uint16_t guid2, const uint16_t guid3, const uint16_t guid4, const uint64_t guid5);
     GUID(const uint8_t* guidByteArray);
     GUID(const char* guidString);
@@ -46,6 +47,12 @@ class GUID {
      * @brief GUID class destructor
      */
     ~GUID();
+
+    void setGUID(const uint32_t guid1, const uint16_t guid2, const uint16_t guid3, const uint16_t guid4, const uint64_t guid5);
+    void setGUID(const uint8_t* guidByteArray);
+    void setGUID(const char* guidString);
+
+    void clear();
     
     void toString(std::string* guidString, const bool msFormat);
     void toByteArray(uint8_t* guidByteArray);
@@ -53,11 +60,18 @@ class GUID {
 
     bool equals(GUID& guid);
 
+    static size_t hash(const GUID& guid);
+
     static GUID generateGuid4();
 
-    inline bool operator== (const GUID& tgt);
-    inline bool operator!= (const GUID& tgt);
+    bool operator== (const GUID& tgt) const;
+    bool operator!= (const GUID& tgt) const;
+};
+
+struct GUIDHash {
+    size_t operator()(const GUID& guid) const;
 };
 }  // namespace openfsl
+
 
 #endif  // OPENFSL_GUID_H_

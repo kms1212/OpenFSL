@@ -8,12 +8,36 @@ See the BSD-3-Clause for more details.
 */
 
 #include <cstring>
+#include <cinttypes>
 #include <stdexcept>
 #include <random>
 
 #include "openfsl/guid.h"
 
+openfsl::GUID::GUID() {
+    clear();
+}
+
 openfsl::GUID::GUID(
+    const uint32_t guid1,
+    const uint16_t guid2,
+    const uint16_t guid3,
+    const uint16_t guid4,
+    const uint64_t guid5) {
+    setGUID(guid1, guid2, guid3, guid4, guid5);
+}
+
+openfsl::GUID::GUID(const uint8_t* guidByteArray) {
+    setGUID(guidByteArray);
+}
+
+openfsl::GUID::GUID(const char* guidString) {
+    setGUID(guidString);
+}
+
+openfsl::GUID::~GUID() { }
+
+void openfsl::GUID::setGUID(
     const uint32_t guid1,
     const uint16_t guid2,
     const uint16_t guid3,
@@ -26,7 +50,7 @@ openfsl::GUID::GUID(
     this->guid5 = guid5;
 }
 
-openfsl::GUID::GUID(
+void openfsl::GUID::setGUID(
     const uint8_t* guidByteArray) {
     this->guid1 = *(reinterpret_cast<const uint32_t*>(guidByteArray));
     this->guid2 = *(reinterpret_cast<const uint16_t*>(guidByteArray + 4));
@@ -45,7 +69,7 @@ openfsl::GUID::GUID(
     }
 }
 
-openfsl::GUID::GUID(const char* guidString) {
+void openfsl::GUID::setGUID(const char* guidString) {
     char stdGuidString[37];
 
     if (guidString[0] == '{') {
@@ -92,16 +116,18 @@ openfsl::GUID::GUID(const char* guidString) {
     guid5 = (uint64_t)strtoull(stdGuidString + 24, NULL, 16);
 }
 
-openfsl::GUID::~GUID() { }
+void openfsl::GUID::clear() {
+    this->guid1 = 0;
+    this->guid2 = 0;
+    this->guid3 = 0;
+    this->guid4 = 0;
+    this->guid5 = 0;
+}
 
 void openfsl::GUID::toString(std::string* guidString, const bool msFormat) {
-    std::string retString = (msFormat ? "{" : "") +
-        std::to_string(guid1) + "-" +
-        std::to_string(guid2) + "-" +
-        std::to_string(guid3) + "-" +
-        std::to_string(guid4) + "-" +
-        std::to_string(guid5) +
-        (msFormat ? "}" : "");
+    char guidCharArray[40] = { 0, };
+    std::sprintf(guidCharArray, "%08X-%04X-%04X-%04X-%012" PRIX64 "", guid1, guid2, guid3, guid4, guid5);
+    *guidString = (msFormat ? "{" : "") + std::string(guidCharArray) + (msFormat ? "}" : "");
 }
 
 void openfsl::GUID::toByteArray(uint8_t* guidByteArray) {
@@ -147,7 +173,7 @@ openfsl::GUID openfsl::GUID::generateGuid4() {
     return openfsl::GUID(rng(), rng(), guid3, guid4, rng64());
 }
 
-inline bool openfsl::GUID::operator== (const openfsl::GUID& tgt) {
+bool openfsl::GUID::operator== (const openfsl::GUID& tgt) const {
     return ((this->guid1 == tgt.guid1) &&
         (this->guid2 == tgt.guid2) &&
         (this->guid3 == tgt.guid3) &&
@@ -155,10 +181,18 @@ inline bool openfsl::GUID::operator== (const openfsl::GUID& tgt) {
         (this->guid5 == tgt.guid5));
 }
 
-inline bool openfsl::GUID::operator!= (const openfsl::GUID& tgt) {
+bool openfsl::GUID::operator!= (const openfsl::GUID& tgt) const {
     return !((this->guid1 == tgt.guid1) &&
         (this->guid2 == tgt.guid2) &&
         (this->guid3 == tgt.guid3) &&
         (this->guid4 == tgt.guid4) && 
         (this->guid5 == tgt.guid5));
+}
+
+size_t openfsl::GUIDHash::operator()(const openfsl::GUID& guid) const {
+    std::string str;
+    openfsl::GUID* tmp = new openfsl::GUID(guid);
+    tmp->toString(&str, false);
+    delete tmp;
+    return std::hash<std::string>()(str);
 }

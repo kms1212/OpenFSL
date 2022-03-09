@@ -100,7 +100,7 @@ class MBR {
 
     error_t __check_result initialize();
 
-    std::vector<PartitionInfo> getPartitionInfo();
+    error_t getPartitionInfo(std::vector<PartitionInfo>* buf);
 };
 }  // namespace openfsl
 

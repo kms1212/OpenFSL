@@ -90,8 +90,10 @@ int main(int argc, char** argv) {
 
     openfsl::FAT32 fat32(&bd, "", "\\/");
 
-    std::vector<openfsl::MBR::PartitionInfo> partitionInfo =
-        mbr.getPartitionInfo();
+    std::vector<openfsl::MBR::PartitionInfo> partitionInfo;
+    result = mbr.getPartitionInfo(&partitionInfo);
+    if (result)
+        return result;
 
     fat32.setFsLBAOffset(partitionInfo[0].partOffset);
 

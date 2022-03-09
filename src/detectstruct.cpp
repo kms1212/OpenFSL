@@ -54,9 +54,13 @@ error_t openfsl::detectDiskStructure(DiskStructure* buf, BlockDevice* bd) {
         if (result)
             return result;
 
-        std::vector<MBR::PartitionInfo> fsList = mbr.getPartitionInfo();
+        std::vector<MBR::PartitionInfo> fsList;
+        result = mbr.getPartitionInfo(&fsList);
+        if (result)
+            return result;
         if (fsList.size() == 1 &&
             fsList[0].partFileSystem == FileSystemType::GPT) {
+            // If partition table is GPT
             buf->partTable = PartitionTableType::GPT;
 
             GPT gpt(bd);
@@ -64,13 +68,16 @@ error_t openfsl::detectDiskStructure(DiskStructure* buf, BlockDevice* bd) {
             if (result)
                 return result;
 
-            // fsList = gpt.getPartitionInfo();
+            std::vector<GPT::PartitionInfo> fsList;
+            result = gpt.getPartitionInfo(&fsList);
+
+            
         } else {
             buf->partTable = PartitionTableType::MBR;
-        }
 
-        for (size_t i = 0; i < fsList.size(); i++) {
-            buf->partList.push_back(fsList[i].partFileSystem);
+            for (size_t i = 0; i < fsList.size(); i++) {
+                buf->partList.push_back(fsList[i].partFileSystem);
+            }
         }
     }
 

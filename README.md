@@ -1,18 +1,25 @@
 # OpenFSL README
 
-![openfsl-logo](https://raw.githubusercontent.com/kms1212/OpenFSL/main/doc/logo/openfsl-dark-320x135.png)
+![openfsl-logo](https://raw.githubusercontent.com/kms1212/OpenFSL/master/doc/logo/openfsl-dark-320x135.png)
 
 ![Platforms](https://img.shields.io/badge/platforms-Windows%20%7C%20Linux%20%7C%20macOS%20%7C%20FreeBSD-blue) [![Build](https://github.com/kms1212/OpenFSL/actions/workflows/Build.yml/badge.svg)](https://github.com/kms1212/OpenFSL/actions/workflows/Build.yml) [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fkms1212%2FOpenFSL.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fkms1212%2FOpenFSL?ref=badge_shield) [![Codacy Badge](https://app.codacy.com/project/badge/Grade/f1e571ec17324d228a85e182f7f649f1)](https://www.codacy.com/gh/kms1212/OpenFSL/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=kms1212/OpenFSL&amp;utm_campaign=Badge_Grade)
 
 ## Progress
 
-File systems:
+#### File systems:
 
 | #   | File System | Status               |
 | --- | ----------- | -------------------- |
 | 1   | FAT32       | Finished             |
 | 2   | NTFS        | In progress          |
 | 3   | ISO9660     | Preparing to develop |
+
+#### Partition tables:
+
+| #   | Partition Table | Status      |
+| --- | --------------- | ----------- |
+| 1   | MBR             | Finished    |
+| 2   | GPT             | In progress |
 
 ## Downloads
 

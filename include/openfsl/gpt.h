@@ -20,6 +20,7 @@ See the BSD-3-Clause for more details.
 #include <vector>
 #include <unordered_map>
 #include <iostream>
+#include <algorithm>
 
 #include "openfsl/detectstruct.h"
 #include "openfsl/filesystem.h"
@@ -36,6 +37,7 @@ namespace PartitionGuid {
         EFISystemPartition,
         BIOSBootPartition,
 
+        WindowsMsReserved,
         WindowsBasicData,
         WindowsLDMMetaData,
         WindowsLDMData,
@@ -112,7 +114,7 @@ namespace PartitionGuid {
 
         OpenBSDData
     };
-    extern std::unordered_map<int, GUID> partitionGuidMap;
+    extern std::unordered_map<GUID, int, GUIDHash> partitionGuidMap;
 };
 
 class GPT {
@@ -124,9 +126,9 @@ class GPT {
         System = 0x0000000000000000,
         Ignore = 0x0000000000000001,
         LegacyBoot = 0x0000000000000002,
-        ReadOnly = 0x1000000000000000,
-        Hidden = 0x4000000000000000,
-        ManualMount = 0x8000000000000000
+        MSBasicDataReadOnly = 0x1000000000000000,
+        MSBasicDataHidden = 0x4000000000000000,
+        MSBasicDataManualMount = 0x8000000000000000
     };
 
     friend inline GPT::AttributeFlags operator|
@@ -205,9 +207,13 @@ class GPT {
     MBR* protMbr;
     std::vector<PartitionEntry> partitionList;
 
+    TableHeader gptHeader;
+    GUID diskGuid;
+
+    lba48_t tableOffset;
  public:
     typedef struct PartitionInfo {
-        bool partBootable;
+        AttributeFlags partAttribute;
         lba48_t partOffset;
         lba48_t partSize;
         FileSystemType partFileSystem;
@@ -221,10 +227,8 @@ class GPT {
 
     error_t __check_result initialize();
 
-    // std::vector<PartitionInfo> getPartitionInfo();
-
     lba48_t getVolumeOffset(const uint8_t index);
-    std::vector<PartitionInfo> getPartitionInfo();
+    error_t getPartitionInfo(std::vector<PartitionInfo>* buf);
 };
 }  // namespace openfsl
 

@@ -112,9 +112,7 @@ int openfsl::MBR::initialize() {
     return 0;
 }
 
-std::vector<openfsl::MBR::PartitionInfo> openfsl::MBR::getPartitionInfo() {
-    std::vector<PartitionInfo> ret;
-
+error_t openfsl::MBR::getPartitionInfo(std::vector<openfsl::MBR::PartitionInfo>* buf) {
     PartitionInfo temp;
 
     for (size_t i = 0; i < partitionList.size(); i++) {
@@ -159,7 +157,7 @@ std::vector<openfsl::MBR::PartitionInfo> openfsl::MBR::getPartitionInfo() {
             temp.partSize = partitionList[i].entryLBASize;
         }
 
-        ret.push_back(temp);
+        buf->push_back(temp);
     }
-    return ret;
+    return OPENFSL_SUCCESS;
 }
