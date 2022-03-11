@@ -107,6 +107,7 @@ jobs:
           sudo apt-get install ${{ matrix.config.packages }}
         elif [ "$RUNNER_OS" == "Windows" ]; then
           choco install ${{ matrix.config.packages }}
+          /c/vcpkg/vcpkg.exe install zlib:x64-windows-static
         elif [ "$RUNNER_OS" == "macOS" ]; then
           brew install ${{ matrix.config.packages }}
         else
@@ -157,7 +158,8 @@ jobs:
                 -DTEST_COVERAGE=true \
                 -DDOXYGEN_GENERATE=false \
                 -DNO_BUILD=false \
-                -DPACKAGE_GENERATE=true
+                -DPACKAGE_GENERATE=true \
+                -DZLIB_ROOT=/c/vcpkg/packages/zlib_x64-windows-static
         fi
       shell: bash
       

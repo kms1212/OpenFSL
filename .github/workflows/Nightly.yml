@@ -137,6 +137,7 @@ jobs:
         elif [ "$RUNNER_OS" == "Windows" ]; then
           rm -f $ChocolateyInstall/bin/cpack.exe
           choco install ${{ matrix.config.packages }}
+          /c/vcpkg/vcpkg.exe install zlib:x64-windows-static
         elif [ "$RUNNER_OS" == "macOS" ]; then
           brew install ${{ matrix.config.packages }}
         else
@@ -209,7 +210,8 @@ jobs:
                 -DPACKAGE_GENERATOR=${{ matrix.config.pkg }} \
                 -DPACKAGE_TYPE=NIGHTLY \
                 -DINCREASE_BUILD_NUMBER=false \
-                -DPACKAGE_VCREDIST_PATH="${{github.workspace}}/vc_redist.exe"
+                -DPACKAGE_VCREDIST_PATH="${{github.workspace}}/vc_redist.exe" \
+                -DZLIB_ROOT=/c/vcpkg/packages/zlib_x64-windows-static
         fi
       shell: bash
       
