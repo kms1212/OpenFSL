@@ -39,8 +39,8 @@ int openfsl::MBR::initialize() {
                 break;
 
             // Exended Partition
-            if ((currentEntry.entryPartitionType == PartitionType::ExtPart_S) ||
-                (currentEntry.entryPartitionType == PartitionType::ExtPart_L)) {
+            if ((currentEntry.entryPartitionType == PartitionType::ExtendedPartitionCHS) ||
+                (currentEntry.entryPartitionType == PartitionType::ExtendedPartitionLBA)) {
                 // If partition table created without LBA Addressing
                 if (currentEntry.entryStartingLBAAddr == 0) {
                 } else {  // If partition table created with LBA Addressing
@@ -117,21 +117,7 @@ error_t openfsl::MBR::getPartitionInfo(std::vector<openfsl::MBR::PartitionInfo>*
 
     for (size_t i = 0; i < partitionList.size(); i++) {
         temp.partBootable = partitionList[i].entryBootFlag == 0x80;
-
-        if (partitionList[i].entryPartitionType == PartitionType::FAT12)
-            temp.partFileSystem = FileSystemType::FAT12;
-        else if (partitionList[i].entryPartitionType ==
-            PartitionType::FAT16_LBA)
-            temp.partFileSystem = FileSystemType::FAT16;
-        else if ((partitionList[i].entryPartitionType ==
-                    PartitionType::FAT32) ||
-                (partitionList[i].entryPartitionType ==
-                    PartitionType::FAT32_LBA))
-            temp.partFileSystem = FileSystemType::FAT32;
-        else if (partitionList[i].entryPartitionType == PartitionType::NTFS)
-            temp.partFileSystem = FileSystemType::NTFS;
-        else if (partitionList[i].entryPartitionType == PartitionType::GPT)
-            temp.partFileSystem = FileSystemType::GPT;
+        temp.partType = partitionList[i].entryPartitionType;
             
         if (partitionList[i].entryStartingLBAAddr == 0) {  // CHS
             CHS chs;

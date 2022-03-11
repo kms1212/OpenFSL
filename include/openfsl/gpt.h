@@ -30,8 +30,11 @@ See the BSD-3-Clause for more details.
 #include "openfsl/guid.h"
 
 namespace openfsl {
-namespace PartitionGuid {
-    enum {
+    extern std::unordered_map<GUID, int, GUIDHash> partitionGuidMap;
+
+class GPT {
+ public:
+    enum PartitionType {
         Unused,
         MBRPartitionScheme,
         EFISystemPartition,
@@ -114,12 +117,6 @@ namespace PartitionGuid {
 
         OpenBSDData
     };
-    extern std::unordered_map<GUID, int, GUIDHash> partitionGuidMap;
-};
-
-class GPT {
- public:
-
 
  private:
     enum class AttributeFlags : uint64_t {
@@ -216,7 +213,7 @@ class GPT {
         AttributeFlags partAttribute;
         lba48_t partOffset;
         lba48_t partSize;
-        FileSystemType partFileSystem;
+        PartitionType partType;
     } PartitionInfo;
 
     explicit GPT(BlockDevice* bd_);

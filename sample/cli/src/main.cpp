@@ -137,9 +137,8 @@ int main(int argc, char** argv) {
             }
 
             for (size_t i = 0; i < diskStructure.partList.size(); i++) {
-                std::cout << "              " << i + 1 << ": ";
-
-                std::cout << fileSystemTypeToString(diskStructure.partList[i])
+                std::cout << "              " << i + 1 << ": "
+                    << fileSystemTypeToString(diskStructure.partList[i])
                     << "\n";
             }
             std::cout << diskStructure.partList.size() + 1 << ": Format\n";

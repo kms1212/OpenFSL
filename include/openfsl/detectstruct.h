@@ -82,6 +82,7 @@ namespace fsStructure {
 }  // namespace fsStructure
 
 error_t __check_result detectDiskStructure(DiskStructure* buf, BlockDevice* dd);
+error_t __check_result detectFileSystem(FileSystemType* buf, BlockDevice* bd, lba48_t bpbSectorAddr = 0);
 
 std::string partitionTableTypeToString(const PartitionTableType type);
 std::string fileSystemTypeToString(const FileSystemType type);

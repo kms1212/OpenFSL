@@ -34,6 +34,19 @@ int fat32shell(openfsl::FileBlockDevice* fbd,
             return result;
 
         fat32.setFsLBAOffset(partitionInfo[selectIndex].partOffset);
+    } else if (diskStructure.partTable == openfsl::PartitionTableType::GPT) {
+        openfsl::GPT gpt(fbd);
+
+        result = gpt.initialize();
+        if (result)
+            return result;
+
+        std::vector<openfsl::GPT::PartitionInfo> partitionInfo;
+        result = gpt.getPartitionInfo(&partitionInfo);
+        if (result)
+            return result;
+
+        fat32.setFsLBAOffset(partitionInfo[selectIndex].partOffset);
     }
 
     result = fat32.initialize();
