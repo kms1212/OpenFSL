@@ -64,7 +64,7 @@ class MBR {
         VMwareVMFS = 0xFB,
         VMwareSwap = 0xFC
     };
-    
+
  private:
     /**
      * @brief MBR Partition Entry
@@ -117,7 +117,7 @@ class MBR {
         lba48_t partOffset;
         lba48_t partSize;
     } PartitionInfo;
-    
+
     explicit MBR(BlockDevice* bd_);
     ~MBR();
 

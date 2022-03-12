@@ -17,7 +17,7 @@ int openfsl::FAT32::LinkedCluster::updateClusterList() {
         clusterList.push_back(cluster);
         cluster = getNextCluster(cluster);
         if (cluster == 0xFFFFFFF7)
-            return OPENFSL_ERROR_BADCLUS;
+            return OPENFSL_ERROR_BAD_CLUSTER;
         if (cluster == 0xFFFFFFF8)
             break;
     }

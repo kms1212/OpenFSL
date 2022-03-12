@@ -26,11 +26,11 @@ namespace openfsl {
  */
 class GUID {
  private:
-   uint32_t guid1;
-   uint16_t guid2;
-   uint16_t guid3;
-   uint16_t guid4;
-   uint64_t guid5;
+    uint32_t guid1;
+    uint16_t guid2;
+    uint16_t guid3;
+    uint16_t guid4;
+    uint64_t guid5;
 
  public:
     /**
@@ -39,26 +39,38 @@ class GUID {
      *
      */
     GUID();
-    GUID(const uint32_t guid1, const uint16_t guid2, const uint16_t guid3, const uint16_t guid4, const uint64_t guid5);
-    GUID(const uint8_t* guidByteArray);
-    GUID(const char* guidString);
+    GUID(const uint32_t guid1,
+        const uint16_t guid2,
+        const uint16_t guid3,
+        const uint16_t guid4,
+        const uint64_t guid5);
+    explicit GUID(const uint8_t* guidByteArray);
+    explicit GUID(const char* guidString);
 
     /**
      * @brief GUID class destructor
      */
     ~GUID();
 
-    void setGUID(const uint32_t guid1, const uint16_t guid2, const uint16_t guid3, const uint16_t guid4, const uint64_t guid5);
+    void setGUID(const uint32_t guid1,
+        const uint16_t guid2,
+        const uint16_t guid3,
+        const uint16_t guid4,
+        const uint64_t guid5);
     void setGUID(const uint8_t* guidByteArray);
     void setGUID(const char* guidString);
 
     void clear();
-    
+
     void toString(std::string* guidString, const bool msFormat);
     void toByteArray(uint8_t* guidByteArray);
-    void toIntRecord(uint32_t* guid1, uint16_t* guid2, uint16_t* guid3, uint16_t* guid4, uint64_t* guid5);
+    void toIntRecord(uint32_t* guid1,
+        uint16_t* guid2,
+        uint16_t* guid3,
+        uint16_t* guid4,
+        uint64_t* guid5);
 
-    bool equals(GUID& guid);
+    bool equals(const GUID& guid);
 
     static size_t hash(const GUID& guid);
 

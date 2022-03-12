@@ -30,7 +30,7 @@ error_t openfsl::FAT32::__forEachEntry(
     size_t entrySize = 0;
 
     if (lcluster.getClusterList()->size() * 16 > 65536)
-        return OPENFSL_ERROR_LARGELS;
+        return OPENFSL_ERROR_TOO_LARGE_ENTRY_LIST;
 
     // Add entries to buffer
     for (size_t i = 0; i < lcluster.getClusterList()->size() * 16; i++) {

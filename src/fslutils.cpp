@@ -46,7 +46,7 @@ openfsl::lba48_t openfsl::convertCHSToLBA(const CHS chs,
 int openfsl::convertLBAToCHS(const lba48_t lba, CHS* chs,
     const uint8_t sectPerTra, const uint8_t headPerCyl) {
     if (lba > 16515135)
-        return OPENFSL_ERROR_LARGELBA;
+        return OPENFSL_ERROR_CANNOT_CONVERT_TO_CHS;
     chs->cyl = lba / (headPerCyl * sectPerTra);
     chs->head = (lba / sectPerTra) % headPerCyl;
     chs->sect = (lba % sectPerTra) + 1;

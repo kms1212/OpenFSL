@@ -27,7 +27,7 @@ int openfsl::MBR::initialize() {
     memcpy(&table, sector_lba0.getData(), sizeof(PartitionTable));
 
     if (table.mbrSignature != 0xAA55)  // Check MBR signature
-        return OPENFSL_ERROR_SIGN;
+        return OPENFSL_ERROR_INVALID_SIGNATURE;
 
     for (int i = 0; i < 256; i++) {
         PartitionEntry currentEntry;
@@ -39,8 +39,10 @@ int openfsl::MBR::initialize() {
                 break;
 
             // Exended Partition
-            if ((currentEntry.entryPartitionType == PartitionType::ExtendedPartitionCHS) ||
-                (currentEntry.entryPartitionType == PartitionType::ExtendedPartitionLBA)) {
+            if ((currentEntry.entryPartitionType ==
+                    PartitionType::ExtendedPartitionCHS) ||
+                (currentEntry.entryPartitionType ==
+                    PartitionType::ExtendedPartitionLBA)) {
                 // If partition table created without LBA Addressing
                 if (currentEntry.entryStartingLBAAddr == 0) {
                 } else {  // If partition table created with LBA Addressing
@@ -112,13 +114,14 @@ int openfsl::MBR::initialize() {
     return 0;
 }
 
-error_t openfsl::MBR::getPartitionInfo(std::vector<openfsl::MBR::PartitionInfo>* buf) {
+error_t openfsl::MBR::getPartitionInfo(
+    std::vector<openfsl::MBR::PartitionInfo>* buf) {
     PartitionInfo temp;
 
     for (size_t i = 0; i < partitionList.size(); i++) {
         temp.partBootable = partitionList[i].entryBootFlag == 0x80;
         temp.partType = partitionList[i].entryPartitionType;
-            
+
         if (partitionList[i].entryStartingLBAAddr == 0) {  // CHS
             CHS chs;
             memcpy(reinterpret_cast<uint8_t*>(&chs),
@@ -129,7 +132,7 @@ error_t openfsl::MBR::getPartitionInfo(std::vector<openfsl::MBR::PartitionInfo>*
         } else {  // LBA
             temp.partOffset = partitionList[i].entryStartingLBAAddr;
         }
-            
+
         if (partitionList[i].entryLBASize == 0) {  // CHS
             CHS chs;
             memcpy(reinterpret_cast<uint8_t*>(&chs),
@@ -137,7 +140,7 @@ error_t openfsl::MBR::getPartitionInfo(std::vector<openfsl::MBR::PartitionInfo>*
             lba48_t endlba = convertCHSToLBA(chs,
                 bd->getDiskParameter().sectorPerTrack,
                 bd->getDiskParameter().headPerCylinder);
-            
+
             temp.partSize = endlba - temp.partOffset;
         } else {  // LBA
             temp.partSize = partitionList[i].entryLBASize;

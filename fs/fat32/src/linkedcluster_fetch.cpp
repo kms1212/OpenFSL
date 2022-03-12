@@ -21,7 +21,7 @@ int openfsl::FAT32::LinkedCluster::fetch(
     error_t result;
 
     if (endCluster > clusterList.size())
-        return OPENFSL_ERROR_CACCESS;
+        return OPENFSL_ERROR_CANNOT_ACCESS_CLUSTER;
 
     // Refetch if cache range is smaller than the given range
     if ((currentCacheClusterIndex > startCluster) ||

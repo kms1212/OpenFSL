@@ -139,7 +139,7 @@ cacheNotFound:
         currentCluster = clusterTemp;
         return __chdir(path, subdir);
     } else {
-        return OPENFSL_ERROR_NOTEXIST;
+        return OPENFSL_ERROR_NO_SUCH_FILE_OR_DIR;
     }
     return 0;
 }

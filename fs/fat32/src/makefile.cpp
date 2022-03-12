@@ -15,7 +15,7 @@ int openfsl::FAT32::__makeFile(
     const std::string path, const std::string filename, const Time* createTime) {
     int valid = getEntryCount(filename, false);
     if (!valid)
-        return OPENFSL_ERROR_INVNAME;
+        return OPENFSL_ERROR_INVALID_FILE_NAME;
 
     FileInfo fileInfo;
 
@@ -24,6 +24,7 @@ int openfsl::FAT32::__makeFile(
     fileInfo.fileName = filename;
     fileInfo.fileAttr = FAT32::FileAttribute::Archive;
     fileInfo.fileLocation = lcluster.getClusterList()->at(0);
+    fileInfo.fileSize = 0;
 
     if (createTime == nullptr) {
         struct tm tmp = fsl_localtime(time(nullptr));

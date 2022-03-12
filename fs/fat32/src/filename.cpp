@@ -14,7 +14,7 @@ See the BSD-3-Clause for more details.
 int openfsl::FAT32::getEntryCount(const std::string filename,
                                    const bool ignoreReservedName) {
     if (filename.length() == 0) return 0;
-    
+
     int requiredEntrySize = 0;
     size_t dotpos = filename.find_last_of('.');
     size_t dotcount = 0;
@@ -27,7 +27,7 @@ int openfsl::FAT32::getEntryCount(const std::string filename,
         goto lfn;
     } else if (filename.size() > 11) {
         lfn:
-        requiredEntrySize = (filename.size() / 13) + 2;
+        requiredEntrySize = (int)(filename.size() / 13) + 2;
     } else if (filename.size() > 255) {
         return 0;
     } else {

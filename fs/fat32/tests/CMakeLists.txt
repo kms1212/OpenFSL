@@ -27,6 +27,15 @@ ZIP_UNPACK_TARGET(zipfile_test_mbr
 	${CMAKE_BINARY_DIR}/ 
 	${CMAKE_BINARY_DIR}/mbr.zip)
 
+if(NOT EXISTS ${CMAKE_BINARY_DIR}/gpt.zip)
+	file(DOWNLOAD 
+		https://github.com/kms1212/OpenFSL-TestFiles/raw/main/gpt.zip
+		${CMAKE_BINARY_DIR}/gpt.zip)
+endif()
+ZIP_UNPACK_TARGET(zipfile_test_gpt
+	${CMAKE_BINARY_DIR}/ 
+	${CMAKE_BINARY_DIR}/gpt.zip)
+
 listsubdir(SUBDIRS ${CMAKE_CURRENT_SOURCE_DIR})
 foreach(SUBDIR ${SUBDIRS})
 	add_subdirectory(${SUBDIR})

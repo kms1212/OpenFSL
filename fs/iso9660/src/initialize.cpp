@@ -13,7 +13,7 @@ extern void __hexdump(const uint8_t* p, size_t offset, size_t len);
 
 error_t openfsl::ISO9660::initialize() {
     if (iod->getDiskParameter().bytesPerSector != 2048) {
-        return OPENFSL_ERROR_SECTSIZE;
+        return OPENFSL_ERROR_INVALID_SECTOR_SIZE;
     }
 
     VolumeDescriptor vd;
@@ -24,7 +24,7 @@ error_t openfsl::ISO9660::initialize() {
     __hexdump(reinterpret_cast<uint8_t*>(&vd), 0, 2048);
 
     if (memcmp(vd.descSignature, "CD001", 5) != 0)
-        return OPENFSL_ERROR_SIGN;
+        return OPENFSL_ERROR_INVALID_SIGNATURE;
 
     return OPENFSL_SUCCESS;
 }

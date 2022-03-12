@@ -9,8 +9,7 @@ See the BSD-3-Clause for more details.
 
 #include "openfsl/fat32/fs_fat32.h"
 
-int openfsl::FAT32::LinkedCluster::flush()
-{
+int openfsl::FAT32::LinkedCluster::flush() {
     // size_t bytespersector =
     //     fileSystem->getDiskDevice()->getDiskParameter().bytesPerSector;
     uint8_t sectorpercluster = fileSystem->getBPB()->bpbSectorPerCluster;

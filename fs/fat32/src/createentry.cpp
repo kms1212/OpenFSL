@@ -29,6 +29,9 @@ error_t openfsl::FAT32::__createEntry(
     std::string tempPath = currentPath;
     cluster_t tempCluster = currentCluster;
 
+    if (createFileInfo.fileSize > std::numeric_limits<uint32_t>::max())
+        return OPENFSL_ERROR_TOO_LARGE_FILE_SIZE;
+
     if (path != "") {  // Change directory if path is set
         int errcode = __chdir(path);
         if (errcode) {
@@ -44,7 +47,7 @@ error_t openfsl::FAT32::__createEntry(
     size_t dotpos = createFileInfo.fileName.find_last_of('.');
 
     if (requiredEntrySize == 0) {
-        return OPENFSL_ERROR_INVNAME;
+        return OPENFSL_ERROR_INVALID_FILE_NAME;
     }
     if (dotpos == std::string::npos) {
         dotpos = createFileInfo.fileName.size();
@@ -83,7 +86,7 @@ recalc:
         if (searchFilename == filename) {
             currentPath = tempPath;
             currentCluster = tempCluster;
-            return OPENFSL_ERROR_EXIST;
+            return OPENFSL_ERROR_FILE_OR_DIR_EXISTS;
         }
     }
 
@@ -128,7 +131,7 @@ recalc:
     fileEntry.fileAttr = createFileInfo.fileAttr;
     fileEntry.fileLocationHigh = (uint16_t)(createFileInfo.fileLocation >> 16);
     fileEntry.fileLocationLow = (uint16_t)createFileInfo.fileLocation;
-    fileEntry.fileSize = createFileInfo.fileSize;
+    fileEntry.fileSize = (uint32_t)createFileInfo.fileSize;
 
     fileEntry.fileCreateDate = __dateToWord(createFileInfo.fileCreateTime);
     fileEntry.fileCreateTime = __timeToWord(createFileInfo.fileCreateTime);
@@ -151,13 +154,14 @@ recalc:
         std::string filename_sfn;
         for (auto c : filename16.substr(0, dotpos > 8 ? 8 : dotpos))
             filename_sfn
-                .push_back((c < 0x80) && (c != '.') ? static_cast<char>(toupper(c)) : '_');
+                .push_back((c < 0x80) && (c != '.') ?
+                    static_cast<char>(toupper(c)) : '_');
         memcpy(fileEntry.fileName, filename_sfn.c_str(), filename_sfn.size());
 
         // Append duplicate count string to filename
         if (dotpos > 8) {
-            std::string sfnDuplicateCountString =
-                    std::string("~") + std::to_string(lfnDuplicateFileCountInSfn + 1);
+            std::string sfnDuplicateCountString = std::string("~") +
+                std::to_string(lfnDuplicateFileCountInSfn + 1);
             memcpy(fileEntry.fileName + 8 - sfnDuplicateCountString.size(),
                    sfnDuplicateCountString.c_str(),
                    sfnDuplicateCountString.size());

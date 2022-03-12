@@ -84,7 +84,7 @@ error_t openfsl::FAT32::format(const lba48_t offset, const lba48_t size,
 
     // Copy volume OEM ID, Label, Volume ID, FS Type
     if (formatOptions.volumeLabel.length() > 11) {
-        return OPENFSL_ERROR_VLABLONG;  // Volume label is too long
+        return OPENFSL_ERROR_TOO_LONG_VOLUME_LABEL;
     }
 
     memcpy(bpb.bpbOEMName, "OPENFSL ", 8);
@@ -100,7 +100,7 @@ error_t openfsl::FAT32::format(const lba48_t offset, const lba48_t size,
 
     // Disk informations
     if (formatOptions.biosDriveNum < 80) {
-        return OPENFSL_ERROR_NOFLOPPY;
+        return OPENFSL_ERROR_FLOPPY_NOT_SUPPORTED;
     }
 
     bpb.bpbMedia = 0xF8;
@@ -121,7 +121,7 @@ error_t openfsl::FAT32::format(const lba48_t offset, const lba48_t size,
 
     if ((formatOptions.backupBSLocation >= formatOptions.reservedSectorCount) ||
         (formatOptions.fsinfoLocation >= formatOptions.reservedSectorCount)) {
-        return OPENFSL_ERROR_FRMATOPT;
+        return OPENFSL_ERROR_INVALID_FORMAT_OPTIONS;
     }
 
     bpb.ebpbBSBackupSector = (uint16_t)formatOptions.backupBSLocation;
@@ -142,7 +142,7 @@ error_t openfsl::FAT32::format(const lba48_t offset, const lba48_t size,
         / formatOptions.sectorsPerCluster);
 
     if (bpb.ebpbRootDirectoryCluster >= clusterCount)
-        return OPENFSL_ERROR_FRMATOPT;
+        return OPENFSL_ERROR_INVALID_FORMAT_OPTIONS;
 
     fsinfo.fsinfoFreeCluster = clusterCount - 1;
     if (bpb.ebpbRootDirectoryCluster == 1)

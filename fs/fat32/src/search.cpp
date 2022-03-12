@@ -7,7 +7,7 @@ See the BSD-3-Clause for more details.
 
 */
 
-#include <regex>
+#include <regex>  // NOLINT
 
 #include "openfsl/fslutils.h"
 
@@ -54,7 +54,8 @@ error_t openfsl::FAT32::__search(
                 buf->push_back(std::make_pair(currentPath, fileInfo));
             }
             if (((fileInfo.fileAttr &
-                openfsl::FAT32::FileAttribute::Directory) != (FileAttribute)0) &&
+                openfsl::FAT32::FileAttribute::Directory) !=
+                (FileAttribute)0) &&
                 recurse &&
                 !((fileInfo.fileName == ".") || (fileInfo.fileName == ".."))) {
                 result = __search(
@@ -69,7 +70,7 @@ error_t openfsl::FAT32::__search(
     } catch (std::regex_error&) {
         currentPath = tempPath;
         currentCluster = tempCluster;
-        return OPENFSL_ERROR_REGEX;
+        return OPENFSL_ERROR_INVALID_REGEX;
     }
 
     currentPath = tempPath;

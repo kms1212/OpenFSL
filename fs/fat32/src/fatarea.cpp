@@ -9,8 +9,7 @@ See the BSD-3-Clause for more details.
 
 #include "openfsl/fat32/fs_fat32.h"
 
-openfsl::lba48_t openfsl::FAT32::__fatAreaIndexToSector(const cluster_t cluster)
-{
+openfsl::lba48_t openfsl::FAT32::__fatAreaIndexToSector(const cluster_t cluster) {
     return (lba48_t)(cluster * sizeof(cluster_t) /
         getIODevice()->getDiskParameter().bytesPerSector +
             bpb.bpbReservedSectors);

@@ -18,7 +18,7 @@ See the BSD-3-Clause for more details.
 
 #include <iostream>
 #include <functional>
-#include <mutex>
+#include <mutex>  // NOLINT
 
 #include "openfsl/error.h"
 #include "openfsl/macros.h"
@@ -46,7 +46,6 @@ class IODevice {
     error_t deinitialize();
 
  public:
-
     /**
      *
      * @brief IODevice constructor

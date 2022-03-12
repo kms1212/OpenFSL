@@ -187,7 +187,7 @@ class FAT32 : public FileSystem<BlockDevice> {
 
     FilesystemOptions fsOptions;
 
-    public:
+ public:
     static constexpr FileSystemType fsType = FileSystemType::FAT32;
 
     static FormatOptions getDefaultFormatOptions(const lba48_t fsSize);
@@ -350,10 +350,10 @@ class FAT32 : public FileSystem<BlockDevice> {
 
 
     // Getter / Setter ////////////////////////////////////////////////////
-    inline const FilesystemOptions getFsOptions() { return fsOptions; };
+    inline const FilesystemOptions getFsOptions() { return fsOptions; }
 
     inline void setFsOptions(const FilesystemOptions fsOptions_)
-        {fsOptions = fsOptions_; };
+        {fsOptions = fsOptions_; }
 
     inline void setPath(const std::string path) { currentPath = path; }
 

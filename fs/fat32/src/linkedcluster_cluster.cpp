@@ -22,7 +22,7 @@ int openfsl::FAT32::LinkedCluster::addCluster(const cluster_t addCount) {
 
     for (size_t i = 0; i < addCount; i++) {
         if (nextFreeCluster == 0) {
-            return OPENFSL_ERROR_ALLOC;
+            return OPENFSL_ERROR_CANNOT_ALLOCATE_CLUSTER;
         }
 
         cluster_t prevLastCluster = clusterList.at(clusterList.size() - 1);

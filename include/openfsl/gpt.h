@@ -30,8 +30,6 @@ See the BSD-3-Clause for more details.
 #include "openfsl/guid.h"
 
 namespace openfsl {
-    extern std::unordered_map<GUID, int, GUIDHash> partitionGuidMap;
-
 class GPT {
  public:
     enum PartitionType {
@@ -99,7 +97,7 @@ class GPT {
         NetBSDRAID,
         NetBSDConcatenated,
         NetBSDEncrypted,
-        
+
         ChromeOSKernel,
         ChromeOSRootfs,
         ChromeOSFirmware,
@@ -208,6 +206,7 @@ class GPT {
     GUID diskGuid;
 
     lba48_t tableOffset;
+
  public:
     typedef struct PartitionInfo {
         AttributeFlags partAttribute;
@@ -227,6 +226,8 @@ class GPT {
     lba48_t getVolumeOffset(const uint8_t index);
     error_t getPartitionInfo(std::vector<PartitionInfo>* buf);
 };
+
+extern std::unordered_map<GUID, openfsl::GPT::PartitionType, GUIDHash> partitionGuidMap;
 }  // namespace openfsl
 
 #endif  // OPENFSL_GPT_H_

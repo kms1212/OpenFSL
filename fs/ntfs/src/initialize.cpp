@@ -22,10 +22,10 @@ error_t openfsl::NTFS::initialize() {
         return result;
 
     if (memcmp(vbr.vbrOEMName, "NTFS    ", 8) != 0)
-        return OPENFSL_ERROR_SIGN;
+        return OPENFSL_ERROR_INVALID_SIGNATURE;
 
     if (vbr.vbrSignature != 0xAA55)  // Check BPB signature
-        return OPENFSL_ERROR_SIGN;
+        return OPENFSL_ERROR_INVALID_SIGNATURE;
 
     currentPath = rootSymbol;
 

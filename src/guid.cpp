@@ -126,8 +126,11 @@ void openfsl::GUID::clear() {
 
 void openfsl::GUID::toString(std::string* guidString, const bool msFormat) {
     char guidCharArray[40] = { 0, };
-    std::sprintf(guidCharArray, "%08X-%04X-%04X-%04X-%012" PRIX64 "", guid1, guid2, guid3, guid4, guid5);
-    *guidString = (msFormat ? "{" : "") + std::string(guidCharArray) + (msFormat ? "}" : "");
+    std::snprintf(guidCharArray, sizeof(guidCharArray),
+        "%08X-%04X-%04X-%04X-%012" PRIX64 "",
+        guid1, guid2, guid3, guid4, guid5);
+    *guidString = (msFormat ? "{" : "") +
+        std::string(guidCharArray) + (msFormat ? "}" : "");
 }
 
 void openfsl::GUID::toByteArray(uint8_t* guidByteArray) {
@@ -137,19 +140,24 @@ void openfsl::GUID::toByteArray(uint8_t* guidByteArray) {
     memcpy(guidByteArray, &guid1, 4);
     memcpy(guidByteArray + 4, &guid2, 2);
     memcpy(guidByteArray + 6, &guid3, 2);
-    
+
     for (int i = 1; i > -1; i--) {
         guidByteArray[i + 8] = (uint8_t)guid4d;
         guid4d = guid4d >> 8;
     }
-    
+
     for (int i = 5; i > -1; i--) {
         guidByteArray[i + 10] = (uint8_t)guid5d;
         guid5d = guid5d >> 8;
     }
 }
 
-void openfsl::GUID::toIntRecord(uint32_t* guid1, uint16_t* guid2, uint16_t* guid3, uint16_t* guid4, uint64_t* guid5) {
+void openfsl::GUID::toIntRecord(
+    uint32_t* guid1,
+    uint16_t* guid2,
+    uint16_t* guid3,
+    uint16_t* guid4,
+    uint64_t* guid5) {
     *guid1 = this->guid1;
     *guid2 = this->guid2;
     *guid3 = this->guid3;
@@ -169,7 +177,7 @@ openfsl::GUID openfsl::GUID::generateGuid4() {
     std::uniform_int_distribution<uint16_t> g4dist(0, 0x3FFF);
     uint16_t guid4 = g4dist(rng);
     guid4 += 0x8000;
-    
+
     return openfsl::GUID(rng(), rng(), guid3, guid4, rng64());
 }
 
@@ -177,7 +185,7 @@ bool openfsl::GUID::operator== (const openfsl::GUID& tgt) const {
     return ((this->guid1 == tgt.guid1) &&
         (this->guid2 == tgt.guid2) &&
         (this->guid3 == tgt.guid3) &&
-        (this->guid4 == tgt.guid4) && 
+        (this->guid4 == tgt.guid4) &&
         (this->guid5 == tgt.guid5));
 }
 
@@ -185,7 +193,7 @@ bool openfsl::GUID::operator!= (const openfsl::GUID& tgt) const {
     return !((this->guid1 == tgt.guid1) &&
         (this->guid2 == tgt.guid2) &&
         (this->guid3 == tgt.guid3) &&
-        (this->guid4 == tgt.guid4) && 
+        (this->guid4 == tgt.guid4) &&
         (this->guid5 == tgt.guid5));
 }
 

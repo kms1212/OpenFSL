@@ -13,7 +13,7 @@ error_t openfsl::FAT32::__removeEntry(
     const std::string path, const std::string deletename,
     const FAT32::FileAttribute filter) {
     if ((deletename == ".") || (deletename == ".."))
-        return OPENFSL_ERROR_NOPERM;
+        return OPENFSL_ERROR_OPERATION_NOT_PERMITTED;
 
     std::string tempPath = currentPath;
     uint32_t tempCluster = currentCluster;

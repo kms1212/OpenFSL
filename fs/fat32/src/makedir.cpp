@@ -20,7 +20,7 @@ error_t openfsl::FAT32::__makeDir(
     const std::string path, const std::string dirname, const Time* createTime) {
     int valid = getEntryCount(dirname, false);
     if (!valid)
-        return OPENFSL_ERROR_INVNAME;
+        return OPENFSL_ERROR_INVALID_FILE_NAME;
 
     std::string tempPath = currentPath;
     uint32_t tempCluster = currentCluster;

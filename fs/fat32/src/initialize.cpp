@@ -27,12 +27,12 @@ error_t openfsl::FAT32::initialize() {
         memcpy(&bpb, structSector.getData(), sizeof(BPBSector));
 
         if (memcmp(bpb.ebpbFSType, "FAT32   ", 8) != 0) {
-            result = OPENFSL_ERROR_SIGN;
+            result = OPENFSL_ERROR_INVALID_SIGNATURE;
             goto funcRet;
         }
 
         if (bpb.bpbVBRSignature != 0xAA55) {  // Check BPB signature
-            result = OPENFSL_ERROR_SIGN;
+            result = OPENFSL_ERROR_INVALID_SIGNATURE;
             goto funcRet;
         }
 
@@ -44,17 +44,17 @@ error_t openfsl::FAT32::initialize() {
         memcpy(&fsinfo, structSector.getData(), sizeof(FSINFOSector));
 
         if (fsinfo.fsinfoSignature1 != 0x41615252) {  // Check FSINFO signature
-            result = OPENFSL_ERROR_SIGN;
+            result = OPENFSL_ERROR_INVALID_SIGNATURE;
             goto funcRet;
         }
 
         if (fsinfo.fsinfoSignature2 != 0x61417272) {
-            result = OPENFSL_ERROR_SIGN;
+            result = OPENFSL_ERROR_INVALID_SIGNATURE;
             goto funcRet;
         }
 
         if (fsinfo.fsinfoSignature3 != 0xAA55) {
-            result = OPENFSL_ERROR_SIGN;
+            result = OPENFSL_ERROR_INVALID_SIGNATURE;
             goto funcRet;
         }
 

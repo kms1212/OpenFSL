@@ -33,8 +33,8 @@ const char *openfsl::__error_str[] = {
     "Disabled operation.",
     "Directory is not empty.",
     "Regex syntax is not valid.",
-    "Sector size is not valid.", 
-    "Invalid GUID Partition Table."
+    "Sector size is not valid.",
+    "File size is too big."
 };
 
 size_t openfsl::geterrorlen(const int errnum) {

@@ -25,11 +25,11 @@ error_t openfsl::FAT32::__insertCache(const std::string key,
     case CacheType::PathClusterCache:
         cache.cacheData = new cluster_t;
         if (sizeof(cluster_t) != dataSize)
-            return OPENFSL_ERROR_CACHE;
+            return OPENFSL_ERROR_INVALID_CACHE;
         memcpy(cache.cacheData, data, dataSize);
         break;
     default:
-        return OPENFSL_ERROR_CACHE;
+        return OPENFSL_ERROR_INVALID_CACHE;
     }
 
     cacheMutex.lock();
@@ -83,7 +83,7 @@ error_t openfsl::FAT32::__deleteCache(const std::string key) {
             delete reinterpret_cast<cluster_t*>(fsCache[key].cacheData);
             break;
         default:
-            return OPENFSL_ERROR_CACHE;
+            return OPENFSL_ERROR_INVALID_CACHE;
         }
 
         fsCache.erase(key);

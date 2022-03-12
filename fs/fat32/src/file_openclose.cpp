@@ -37,10 +37,10 @@ error_t openfsl::FAT32::FILE::open(const std::string path,
         return finfo.first;
 
     if (finfo.second.fileName == "") {
-        return OPENFSL_ERROR_NOTEXIST;
+        return OPENFSL_ERROR_NO_SUCH_FILE_OR_DIR;
     } else if ((finfo.second.fileAttr & FileAttribute::Archive) ==
         (FileAttribute)0) {
-        return OPENFSL_ERROR_INVACC;
+        return OPENFSL_ERROR_INVALID_ACCESS;
     } else {
         currentFileInfo = finfo.second;
         openMode = openMode_;

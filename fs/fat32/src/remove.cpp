@@ -41,7 +41,7 @@ error_t openfsl::FAT32::__remove(
     }
 
     if (deleteLocation == 0) {
-        return OPENFSL_ERROR_NOTEXIST;
+        return OPENFSL_ERROR_NO_SUCH_FILE_OR_DIR;
     }
 
     if ((entryAttribute & FileAttribute::Directory) != (FileAttribute)0) {
@@ -49,7 +49,7 @@ error_t openfsl::FAT32::__remove(
         if (empty.first) {
             return empty.first;
         } else if (empty.second) {
-            return OPENFSL_ERROR_DIRNEMPT;
+            return OPENFSL_ERROR_DIRECTORY_NOT_EMPTY;
         }
     }
 

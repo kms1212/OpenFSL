@@ -17,6 +17,9 @@ size_t openfsl::FAT32::FILE::write(
     if ((openMode & openfsl::FSL_OpenMode::Write) != (openfsl::FSL_OpenMode)0) {
         // size_t startPos = writePointer;
         size_t endPos = writePointer + bs * count;
+        
+        if (endPos > std::numeric_limits<uint32_t>::max())
+            return OPENFSL_ERROR_TOO_LARGE_FILE_SIZE;
 
         size_t bytespersector =
             fileSystem->getIODevice()->getDiskParameter().bytesPerSector;

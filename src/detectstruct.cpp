@@ -34,7 +34,8 @@ error_t openfsl::detectDiskStructure(DiskStructure* buf, BlockDevice* bd) {
         if (result)
             return result;
 
-        // If file system is not detected, it will assume that the disk is partitioned.
+        // If file system is not detected,
+        // it will assume that the disk is partitioned.
         if (fsType == FileSystemType::None) {
             MBR mbr(bd);
             result = mbr.initialize();
@@ -45,8 +46,9 @@ error_t openfsl::detectDiskStructure(DiskStructure* buf, BlockDevice* bd) {
             result = mbr.getPartitionInfo(&partList);
             if (result)
                 return result;
+
             if (partList.size() == 1 &&
-                partList[0].partType == openfsl::MBR::PartitionType::GPTProtective) {
+                partList[0].partType == MBR::PartitionType::GPTProtective) {
                 // If partition table is GPT
                 buf->partTable = PartitionTableType::GPT;
 
@@ -59,11 +61,12 @@ error_t openfsl::detectDiskStructure(DiskStructure* buf, BlockDevice* bd) {
                 result = gpt.getPartitionInfo(&partList);
                 if (result)
                     return result;
-                
+
                 for (size_t i = 0; i < partList.size(); i++) {
                     // Detect file system
                     FileSystemType fsType;
-                    result = detectFileSystem(&fsType, bd, partList[i].partOffset);
+                    result =
+                        detectFileSystem(&fsType, bd, partList[i].partOffset);
                     if (result)
                         return result;
 
@@ -90,7 +93,8 @@ error_t openfsl::detectDiskStructure(DiskStructure* buf, BlockDevice* bd) {
     return 0;
 }
 
-error_t openfsl::detectFileSystem(FileSystemType* buf, BlockDevice* bd, lba48_t bpbSectorAddr) {
+error_t openfsl::detectFileSystem(
+    FileSystemType* buf, BlockDevice* bd, lba48_t bpbSectorAddr) {
     Sector checkSector(1, bd->getDiskParameter().bytesPerSector);
     error_t result = bd->readSector(checkSector.getData(), bpbSectorAddr, 1);
     if (result)
