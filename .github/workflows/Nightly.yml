@@ -46,10 +46,10 @@ jobs:
             coverage: false
             pkg: DEB
             
-          - name: "Windows x86-64 2019 MSVC 2019 ZIP"
-            os: windows-2019
-            packages: nasm cmake 7zip
-            generator: "Visual Studio 16 2019"
+          - name: "Windows x86-64 2022 MSVC 2022 ZIP"
+            os: windows-2022
+            packages: nasm cmake 7zip openssl
+            generator: "Visual Studio 17 2022"
             platform: x64
             cc: cl
             cxx: cl
@@ -59,10 +59,10 @@ jobs:
             coverage: false
             pkg: ZIP
             
-          - name: "Windows x86-64 2019 MSVC 2019 NSIS64"
-            os: windows-2019
-            packages: nasm cmake 7zip
-            generator: "Visual Studio 16 2019"
+          - name: "Windows x86-64 2022 MSVC 2022 NSIS64"
+            os: windows-2022
+            packages: nasm cmake 7zip openssl
+            generator: "Visual Studio 17 2022"
             platform: x64
             cc: cl
             cxx: cl
@@ -72,8 +72,8 @@ jobs:
             coverage: false
             pkg: NSIS64
             
-          - name: "Windows x86-64 2019 MinGW ZIP"
-            os: windows-2019
+          - name: "Windows x86-64 2022 MinGW ZIP"
+            os: windows-2022
             packages: nasm cmake 7zip
             generator: "Unix Makefiles"
             platform: x86-64
@@ -85,8 +85,8 @@ jobs:
             coverage: false
             pkg: ZIP
             
-          - name: "Windows x86-64 2019 MinGW NSIS64"
-            os: windows-2019
+          - name: "Windows x86-64 2022 MinGW NSIS64"
+            os: windows-2022
             packages: nasm cmake 7zip
             generator: "Unix Makefiles"
             platform: x86-64
@@ -175,7 +175,7 @@ jobs:
                   -DPACKAGE_GENERATE=true \
                   -DPACKAGE_GENERATOR=${{ matrix.config.pkg }} \
                   -DPACKAGE_TYPE=NIGHTLY \
-                  -DINCREASE_BUILD_NUMBER=false
+                  -DINCREASE_BUILD_NUMBER=false \
                   -DOPENSSL_ROOT_DIR="/usr/local/Cellar/openssl@1.1/1.1.1m"
           else
             cmake -G "${{ matrix.config.generator }}" \
