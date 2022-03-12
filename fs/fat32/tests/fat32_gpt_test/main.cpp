@@ -95,7 +95,7 @@ int main(int argc, char** argv) {
     if (result)
         return result;
 
-    fat32.setFsLBAOffset(partitionInfo[0].partOffset);
+    fat32.setFsLBAOffset(partitionInfo[1].partOffset);
 
     result = fat32.initialize();
     if (result) {
@@ -104,36 +104,6 @@ int main(int argc, char** argv) {
     }
 
     fat32.enableCache(512);
-
-    std::vector<openfsl::FAT32::FileInfo> buf;
-    fat32.listDirectory(&buf);
-
-    for (size_t i = 0; i < buf.size(); i++) {
-        std::cout << i << ": " << buf[i].fileName << std::endl;
-    }
-
-    /////////////////////////////////////////////
-    // CHDIR TEST
-    /////////////////////////////////////////////
-    std::cout << "===========================\n";
-    std::cout << " CHDIR TEST\n";
-    std::cout << "===========================\n";
-
-    std::vector<std::string> chdirChecklist;  // Checklist
-    chdirChecklist.push_back("::/.");
-    chdirChecklist.push_back("::/..");
-    chdirChecklist.push_back("::/directory1");
-    chdirChecklist.push_back("directory2");
-    chdirChecklist.push_back("::");
-    chdirChecklist.push_back("directory1/directory2");
-    chdirChecklist.push_back("../..");
-    chdirChecklist.push_back("directory1/directory2/directory3");
-
-    for (size_t i = 0; i < chdirChecklist.size(); i++) {
-        fat32.changeDirectory(chdirChecklist.at(i));
-        std::cout << "chdir(\"" << chdirChecklist.at(i) << "\") -> "
-             << fat32.getPath() << "\n";
-    }
 
     std::cout << "Total read count: " << readCount << std::endl;
     std::cout << "Total write count: " << writeCount << std::endl;
