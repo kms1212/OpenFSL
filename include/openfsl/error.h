@@ -75,6 +75,10 @@ typedef int error_t;
 #define OPENFSL_ERROR_INVALID_SECTOR_SIZE     23
 // File size is too big
 #define OPENFSL_ERROR_TOO_LARGE_FILE_SIZE     24
+// Selected is not a directory
+#define OPENFSL_ERROR_NOT_A_DIRECTORY         25
+// Selected is not a file
+#define OPENFSL_ERROR_NOT_A_FILE              26
 
 namespace openfsl {
 extern const __maybe_unused char *__error_str[];

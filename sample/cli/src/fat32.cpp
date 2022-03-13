@@ -337,13 +337,11 @@ int fat32shell(openfsl::FileBlockDevice* fbd,
             if (result)
                 std::cerr << "Error: " << openfsl::geterrorstr(result) << "\n";
         } else if (cmd[0] == "rmdir") {
-            int result = fat32.remove(cmd[1],
-                openfsl::FAT32::FileAttribute::Directory);
+            int result = fat32.removeDirectory(cmd[1]);
             if (result)
                 std::cerr << "Error: " << openfsl::geterrorstr(result) << "\n";
         } else if (cmd[0] == "rm") {
-            int result = fat32.remove(cmd[1],
-                openfsl::FAT32::FileAttribute::Archive);
+            int result = fat32.removeFile(cmd[1]);
             if (result)
                 std::cerr << "Error: " << openfsl::geterrorstr(result) << "\n";
         } else if (cmd[0] == "mkfile") {

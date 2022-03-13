@@ -34,7 +34,9 @@ const char *openfsl::__error_str[] = {
     "Directory is not empty.",
     "Regex syntax is not valid.",
     "Sector size is not valid.",
-    "File size is too big."
+    "File size is too big.",
+    "Selected is not a direcotry",
+    "Selected is not a file"
 };
 
 size_t openfsl::geterrorlen(const int errnum) {

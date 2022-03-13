@@ -510,15 +510,24 @@ class FAT32 : public FileSystem<BlockDevice> {
             const Time* createTime = nullptr);
 
     /**
-     * @brief Remove directory or file
-     * @details Removes directory or file.
+     * @brief Remove directory
+     * @details Removes directory.
      * @param path: working directory
-     * @param name: directory or file name to create
+     * @param name: directory name to remove
      * @return Error code
      */
-    error_t __check_result __remove(
-            const std::string path, const std::string name,
-            const FileAttribute attribute);
+    error_t __check_result __removeDir(
+            const std::string path, const std::string name);
+
+    /**
+     * @brief Remove file
+     * @details Removes file.
+     * @param path: working directory
+     * @param name: file name to remove
+     * @return Error code
+     */
+    error_t __check_result __removeFile(
+            const std::string path, const std::string name);
 
     error_t __move(const std::string fromPath, const std::string fromName,
         const std::string toPath, const std::string toName);
@@ -683,7 +692,8 @@ class FAT32 : public FileSystem<BlockDevice> {
     error_t makeDirectory(const std::string path);
     error_t makeFile(const std::string path);
 
-    error_t remove(const std::string path, FileAttribute attribute);
+    error_t removeDirectory(const std::string path);
+    error_t removeFile(const std::string path);
 
     error_t move(const std::string from, const std::string to);
 

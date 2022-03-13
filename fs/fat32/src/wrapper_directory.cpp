@@ -46,8 +46,7 @@ error_t openfsl::FAT32::makeDirectory(const std::string dirname) {
     return result;
 }
 
-error_t openfsl::FAT32::remove(
-    const std::string dirname, const FileAttribute attribute) {
+error_t openfsl::FAT32::removeDirectory(const std::string dirname) {
     // Separate path and directory name
     std::pair<std::string, std::string> filepath = __separateFileName(dirname);
     std::string fileDirectory = filepath.first;
@@ -55,7 +54,7 @@ error_t openfsl::FAT32::remove(
 
     fsOperationMutex.lock();
 
-    error_t result = __remove(fileDirectory, fileName, attribute);
+    error_t result = __removeDir(fileDirectory, fileName);
 
     fsOperationMutex.unlock();
 

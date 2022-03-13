@@ -375,8 +375,7 @@ int main(int argc, char** argv) {
     fileChecklist.push_back("::/SFNMKDIR.2");
 
     for (std::string dirname : rmDirChecklist) {
-        result += fat32.remove(dirname,
-                openfsl::FAT32::FileAttribute::Directory);
+        result += fat32.removeDirectory(dirname);
 
         if (!fat32.changeDirectory(dirname))
             result++;

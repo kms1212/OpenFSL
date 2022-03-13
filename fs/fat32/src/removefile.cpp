@@ -14,16 +14,15 @@ See the BSD-3-Clause for more details.
 
 #include "openfsl/fat32/fs_fat32.h"
 
-error_t openfsl::FAT32::__remove(
-    const std::string path, const std::string name,
-    const FileAttribute attribute) {
+error_t openfsl::FAT32::__removeFile(
+    const std::string path, const std::string name) {
     std::string lname = name;
     std::vector<FAT32::FileInfo> buf;
 
     uint32_t deleteLocation = 0;
     FileAttribute entryAttribute;
 
-    error_t result = __listDir(&buf, path, attribute);
+    error_t result = __listDir(&buf, path);
     if (result)
         return result;
 
@@ -44,13 +43,8 @@ error_t openfsl::FAT32::__remove(
         return OPENFSL_ERROR_NO_SUCH_FILE_OR_DIR;
     }
 
-    if ((entryAttribute & FileAttribute::Directory) != (FileAttribute)0) {
-        std::pair<error_t, bool> empty = __checkEmpty(path, name);
-        if (empty.first) {
-            return empty.first;
-        } else if (empty.second) {
-            return OPENFSL_ERROR_DIRECTORY_NOT_EMPTY;
-        }
+    if ((entryAttribute & FileAttribute::Archive) == (FileAttribute)0) {
+        return OPENFSL_ERROR_NOT_A_FILE;
     }
 
     LinkedCluster lcluster(this, deleteLocation);

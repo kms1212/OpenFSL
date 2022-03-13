@@ -55,3 +55,18 @@ error_t openfsl::FAT32::search(
 
     return result;
 }
+
+error_t openfsl::FAT32::removeFile(const std::string dirname) {
+    // Separate path and directory name
+    std::pair<std::string, std::string> filepath = __separateFileName(dirname);
+    std::string fileDirectory = filepath.first;
+    std::string fileName = filepath.second;
+
+    fsOperationMutex.lock();
+
+    error_t result = __removeFile(fileDirectory, fileName);
+
+    fsOperationMutex.unlock();
+
+    return result;
+}

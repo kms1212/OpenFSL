@@ -15,9 +15,12 @@ std::pair<error_t, bool>
     bool result = true;
 
     error_t errcode = __forEachEntry([&](FileInfo fileInfo) {
-        result = false;
-        return true;
-        });
+        if ((fileInfo.fileName != ".") && (fileInfo.fileName != "..")) {
+            result = false;
+            return true;
+        }
+        return false;
+        }, path + pathSeparator.at(0) + dirname);
 
     return std::make_pair(errcode, result);
 }
