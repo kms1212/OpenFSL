@@ -318,7 +318,7 @@ int main(int argc, char** argv) {
 
         size_t errorCount = 0;
 
-        for (int i = 0; i < 15; i++) {
+        for (int i = 0; i < 7; i++) {
             md.writeByte(origData, i * 16 + 4, 16);
             md.readByte(readData, i * 16 + 4, 16);
 
