@@ -20,6 +20,8 @@ See the BSD-3-Clause for more details.
 #include "openfsl/iodevice.h"
 #include "openfsl/blockdevice.h"
 #include "openfsl/fileblockdevice.h"
+#include "openfsl/chardevice.h"
+#include "openfsl/memdevice.h"
 
 #include "openfsl/bootcode.h"
 

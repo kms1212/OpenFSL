@@ -305,6 +305,35 @@ int main(int argc, char** argv) {
 
         std::cout << "Pass\n";
         return 0;
+    } else if (testName  == "MEMDEVICE") {
+        openfsl::MemDevice md;
+
+        uint8_t origData[] = 
+            { 0x00, 0x11, 0x22, 0x33, 0x44, 0x55, 0x66, 0x77,
+              0x88, 0x99, 0xAA, 0xBB, 0xCC, 0xDD, 0xEE, 0xFF };
+
+        uint8_t readData[16];
+
+        md.initialize(16, 8);
+
+        size_t errorCount = 0;
+
+        for (int i = 0; i < 15; i++) {
+            md.writeByte(origData, i * 16 + 4, 16);
+            md.readByte(readData, i * 16 + 4, 16);
+
+            if (memcmp(origData, readData, 16) != 0) {
+                errorCount++;
+            }
+        }
+
+        if (errorCount) {
+            std::cout << "Fail\n";
+            return errorCount;
+        }
+
+        std::cout << "Pass\n";
+        return 0;
     }
 
     /*

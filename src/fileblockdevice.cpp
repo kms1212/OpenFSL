@@ -22,8 +22,6 @@ openfsl::FileBlockDevice::~FileBlockDevice() {
 
 error_t openfsl::FileBlockDevice::initialize
     (const std::string filename, const OpenMode openMode) {
-    IODevice::initialize();
-
     this->filename = filename;
 
     std::ios_base::openmode fileflag = std::ios::in | std::ios::binary;
@@ -33,6 +31,8 @@ error_t openfsl::FileBlockDevice::initialize
 
     if (file.fail())
         return OPENFSL_ERROR_DISK;
+        
+    IODevice::initialize();
 
     return 0;
 }

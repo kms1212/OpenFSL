@@ -26,7 +26,7 @@ const uint32_t openfsl::getPatchVersion() {
 }
 
 const uint32_t openfsl::getBuildVersion() {
-    return 1326;
+    return 1330;
 }
 
 const uint32_t openfsl::getBuildDate() {

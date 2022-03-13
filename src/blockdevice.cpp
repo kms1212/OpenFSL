@@ -12,7 +12,6 @@ See the BSD-3-Clause for more details.
 openfsl::BlockDevice::BlockDevice() {}
 
 error_t openfsl::BlockDevice::initialize(IOFunctions func) {
-    IODevice::initialize();
     ioFunc = func;
 
     if (!ioFunc.writeSector) {
@@ -21,6 +20,8 @@ error_t openfsl::BlockDevice::initialize(IOFunctions func) {
     if (!ioFunc.readSector) {
         return 1;
     }
+    
+    IODevice::initialize();
 
     return 0;
 }
