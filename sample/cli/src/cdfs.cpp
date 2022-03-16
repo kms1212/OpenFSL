@@ -13,11 +13,8 @@ See the BSD-3-Clause for more details.
 
 #include "header.h"
 
-int cdfsshell(openfsl::FileBlockDevice* fbd) {
-    std::string volumeString = "file:\"" + fbd->getFilename() +
-        "\"(ISO9660):";
-
-    openfsl::ISO9660 cdfs(fbd, "", "\\/", volumeString + ":");
+int cdfsshell(openfsl::BlockDevice* bd) {
+    openfsl::ISO9660 cdfs(bd, "", "\\/", "::");
 
     error_t result = cdfs.initialize();
     if (result) {

@@ -35,6 +35,8 @@ openfsl::FAT32::FormatOptions
     tmp2 = (uint16_t)currentTime.tm_year + 1900;
     ret.volumeSerial += tmp1 + tmp2;
 
+    std::cout << std::hex << ret.volumeSerial << std::dec << std::endl;
+
     ret.biosDriveNum = 0x80;
 
     if (fsSize < 532480)
@@ -94,7 +96,7 @@ error_t openfsl::FAT32::format(const lba48_t offset, const lba48_t size,
         formatOptions.volumeLabel.c_str(),
         formatOptions.volumeLabel.length());
 
-    bpb.ebpbVolumeSerial = (uint16_t)formatOptions.volumeSerial;
+    bpb.ebpbVolumeSerial = formatOptions.volumeSerial;
 
     memcpy(bpb.ebpbFSType, "FAT32   ", 8);
 

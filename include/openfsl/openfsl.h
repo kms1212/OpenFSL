@@ -21,7 +21,8 @@ See the BSD-3-Clause for more details.
 #include "openfsl/blockdevice.h"
 #include "openfsl/fileblockdevice.h"
 #include "openfsl/chardevice.h"
-#include "openfsl/memdevice.h"
+#include "openfsl/memchardevice.h"
+#include "openfsl/memblockdevice.h"
 
 #include "openfsl/bootcode.h"
 

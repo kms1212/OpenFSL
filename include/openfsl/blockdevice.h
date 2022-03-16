@@ -92,7 +92,7 @@ class BlockDevice : public IODevice {
      * @brief BlockDevice destructor
      *
      */
-    ~BlockDevice();
+    virtual ~BlockDevice();
 
     /**
      *

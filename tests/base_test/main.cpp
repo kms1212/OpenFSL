@@ -47,7 +47,7 @@ int main(int argc, char** argv) {
         // CLASS CONTAINER TEST
         /////////////////////////////////////////////
 
-        std::cout << "Testing class Container............ ";
+        std::cout << "Testing class Container.................... ";
         openfsl::Container containertest(10);  // Container class with size 10
         (reinterpret_cast<char*>(containertest.getData()))[5] = 'A';
         containertest.getDataCast<uint32_t>()[0] = 0x1A2B3C4D;
@@ -57,13 +57,13 @@ int main(int argc, char** argv) {
                     std::cout << "Pass\n";
                     return 0;
                 } else {
-                    std::cout << "Fail... In getDataCast<>()\n";
+                    std::cout << "Fail... On getDataCast<>()\n";
                 }
             } else {
-                std::cout << "Fail........ In operator[]\n";
+                std::cout << "Fail... On operator[]\n";
             }
         } else {
-            std::cout << "Fail....... In getSize()\n";
+            std::cout << "Fail... On getSize()\n";
         }
         return 1;
     } else if (testName == "CONTAINER_SECTOR") {
@@ -71,7 +71,7 @@ int main(int argc, char** argv) {
         // CLASS SECTOR TEST
         /////////////////////////////////////////////
 
-        std::cout << "Testing class Sector............... ";
+        std::cout << "Testing class Sector....................... ";
 
         // Sector class with 2 sectors long
         openfsl::Sector sectortest(2, 512);
@@ -87,7 +87,7 @@ int main(int argc, char** argv) {
         // STRTOK TEST
         /////////////////////////////////////////////
 
-        std::cout << "Testing utility strtok............. ";
+        std::cout << "Testing utility strtok..................... ";
 
         std::vector<std::string> tokens;
         openfsl::fsl_strtokenize("std::string/to/tokenize", &tokens, "/");
@@ -119,7 +119,7 @@ int main(int argc, char** argv) {
         // CHS CONVERT TEST
         /////////////////////////////////////////////
 
-        std::cout << "Testing utility strtok............. ";
+        std::cout << "Testing utility strtok..................... ";
 
         openfsl::CHS chs;
         chs.cyl = 5;
@@ -142,56 +142,12 @@ int main(int argc, char** argv) {
         }
 
         return 0;
-    } else if (testName == "BLOCKDEVICE_READ") {
+    } else if (testName == "BLOCKDEVICE") {
         /////////////////////////////////////////////
-        // BLOCKDEVICE READ TEST
-        /////////////////////////////////////////////
-
-        std::cout << "Testing disk device read........... ";
-
-        disk.open(imageFileName,
-            std::ios::in | std::ios::out | std::ios::binary);
-
-        openfsl::BlockDevice bd;
-
-        openfsl::BlockDevice::IOFunctions ioFunc;
-        ioFunc.readSector = readDisk;
-        ioFunc.writeSector = writeDisk;
-
-        bd.setDiskParameter(getParameterFromFile(imageFileName + ".info"));
-        if (bd.initialize(ioFunc)) {
-            std::cout << "Fail... on initialization\n";
-            disk.close();
-            return 1;
-        }
-
-        for (uint8_t i = 0; i < 4; i++) {
-            openfsl::Sector sector(1, bd.getDiskParameter().bytesPerSector);
-
-            if (bd.readSector(sector.getDataCast<uint8_t>(), i, 1)) {
-                std::cout << "Fail... on sector "
-                    << static_cast<int>(i) << "\n";
-                disk.close();
-                return 1;
-            }
-
-            if (sector.getDataCast<uint8_t>()[3] != i + 1) {
-                std::cout << "Fail... on sector "
-                    << static_cast<int>(i) << "\n";
-                disk.close();
-                return 1;
-            }
-        }
-
-        std::cout << "Pass\n";
-        disk.close();
-        return 0;
-    } else if (testName == "BLOCKDEVICE_WRITE") {
-        /////////////////////////////////////////////
-        // BLOCKDEVICE WRITE TEST
+        // BLOCKDEVICE TEST
         /////////////////////////////////////////////
 
-        std::cout << "Testing disk device write........... ";
+        std::cout << "Testing disk device........................ ";
 
         disk.open(imageFileName,
             std::ios::in | std::ios::out | std::ios::binary);
@@ -234,45 +190,12 @@ int main(int argc, char** argv) {
         std::cout << "Pass\n";
         disk.close();
         return 0;
-    } else if (testName == "FILEBLOCKDEVICE_READ") {
+    } else if (testName == "FILEBLOCKDEVICE") {
         /////////////////////////////////////////////
-        // FILEBLOCKDEVICE READ TEST
-        /////////////////////////////////////////////
-
-        std::cout << "Testing disk device read........... ";
-
-        openfsl::FileBlockDevice fbd;
-
-        if (fbd.initialize(imageFileName,
-            openfsl::FileBlockDevice::OpenMode::RW)) {
-            std::cout << "Fail... on initialization\n";
-            return 1;
-        }
-
-        for (uint8_t i = 0; i < 4; i++) {
-            openfsl::Sector sector(1, fbd.getDiskParameter().bytesPerSector);
-
-            if (fbd.readSector(sector.getDataCast<uint8_t>(), i, 1)) {
-                std::cout << "Fail... on sector "
-                    << static_cast<int>(i) << "\n";
-                return 1;
-            }
-
-            if (sector.getDataCast<uint8_t>()[3] != i + 1) {
-                std::cout << "Fail... on sector "
-                    << static_cast<int>(i) << "\n";
-                return 1;
-            }
-        }
-
-        std::cout << "Pass\n";
-        return 0;
-    } else if (testName == "FILEBLOCKDEVICE_WRITE") {
-        /////////////////////////////////////////////
-        // FILEBLOCKDEVICE WRITE TEST
+        // FILEBLOCKDEVICE TEST
         /////////////////////////////////////////////
 
-        std::cout << "Testing disk device write........... ";
+        std::cout << "Testing openfsl::FileBlockDevice........... ";
 
         openfsl::FileBlockDevice fbd;
 
@@ -305,8 +228,14 @@ int main(int argc, char** argv) {
 
         std::cout << "Pass\n";
         return 0;
-    } else if (testName  == "MEMDEVICE") {
-        openfsl::MemDevice md;
+    } else if (testName  == "MEMCHARDEVICE") {
+        /////////////////////////////////////////////
+        // MEMCHARDEVICE TEST
+        /////////////////////////////////////////////
+
+        std::cout << "Testing openfsl::MemCharDevice............. ";
+
+        openfsl::MemCharDevice mcd;
 
         uint8_t origData[] = 
             { 0x00, 0x11, 0x22, 0x33, 0x44, 0x55, 0x66, 0x77,
@@ -314,17 +243,18 @@ int main(int argc, char** argv) {
 
         uint8_t readData[16];
 
-        md.initialize(16, 8);
+        mcd.initialize(16, 8);
 
         size_t errorCount = 0;
 
         for (int i = 0; i < 7; i++) {
-            md.writeByte(origData, i * 16 + 4, 16);
-            md.readByte(readData, i * 16 + 4, 16);
+            error_t result = mcd.writeByte(origData, i * 16 + 4, 16);
+            result += mcd.readByte(readData, i * 16 + 4, 16);
 
-            if (memcmp(origData, readData, 16) != 0) {
+            if (memcmp(origData, readData, 16) != 0)
                 errorCount++;
-            }
+            if (result)
+                errorCount++;
         }
 
         if (errorCount) {
@@ -334,7 +264,47 @@ int main(int argc, char** argv) {
 
         std::cout << "Pass\n";
         return 0;
-    }
+    } else if (testName == "MEMBLOCKDEVICE") {
+        /////////////////////////////////////////////
+        // MEMBLOCKDEVICE TEST
+        /////////////////////////////////////////////
+
+        std::cout << "Testing openfsl::MemBlockDevice............ ";
+
+        openfsl::MemBlockDevice mbd;
+
+        openfsl::BlockDevice::DiskParameter parameter;
+        mbd.setDiskParameter(parameter);
+
+        if (mbd.initialize(1024)) {
+            std::cout << "Fail... on initialization\n";
+        }
+
+        for (uint8_t i = 0; i < 4; i++) {
+            openfsl::Sector sector(1, mbd.getDiskParameter().bytesPerSector);
+
+            if (mbd.readSector(sector.getDataCast<uint8_t>(), i, 1)) {
+                std::cout << "Fail... on sector "
+                    << static_cast<int>(i) << "\n";
+                return 1;
+            }
+            ((sector.getDataCast<uint32_t>())[4]) = 0x12345678;
+            if (mbd.writeSector(sector.getDataCast<uint8_t>(), i, 1)) {
+                std::cout << "Fail... on sector "
+                    << static_cast<int>(i) << "\n";
+                return 1;
+            }
+
+            if ((sector.getDataCast<uint32_t>())[4] != 0x12345678) {
+                std::cout << "Fail... on sector "
+                    << static_cast<int>(i) << "\n";
+                break;
+            }
+        }
+
+        std::cout << "Pass\n";
+        return 0;
+    } 
 
     /*
     /////////////////////////////////////////////

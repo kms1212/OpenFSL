@@ -82,7 +82,7 @@ class CharDevice : public IODevice {
      * @brief CharDevice destructor
      *
      */
-    ~CharDevice();
+    virtual ~CharDevice();
 
     /**
      *

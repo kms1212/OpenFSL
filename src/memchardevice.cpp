@@ -7,21 +7,21 @@ See the BSD-3-Clause for more details.
 
 */
 
-#include "openfsl/memdevice.h"
+#include "openfsl/memchardevice.h"
 
-openfsl::MemDevice::MemDevice() {}
+openfsl::MemCharDevice::MemCharDevice() {}
 
-openfsl::MemDevice::~MemDevice() {
+openfsl::MemCharDevice::~MemCharDevice() {
     if (initialized)
         deinitialize();
 }
 
-error_t openfsl::MemDevice::initialize(size_t maxMemoryBlockCount, size_t memoryBlockSize) {
+error_t openfsl::MemCharDevice::initialize(const size_t maxMemoryBlockCount, const size_t memoryBlockSize) {
     this->maxMemoryBlockCount = maxMemoryBlockCount;
     this->memoryBlockSize = memoryBlockSize;
 
     memoryAllocationTable = new uint8_t*[maxMemoryBlockCount];
-    for (int i = 0; i < maxMemoryBlockCount; i++) {
+    for (size_t i = 0; i < maxMemoryBlockCount; i++) {
         memoryAllocationTable[i] = nullptr;
     }
 
@@ -30,23 +30,26 @@ error_t openfsl::MemDevice::initialize(size_t maxMemoryBlockCount, size_t memory
     return 0;
 }
 
-error_t openfsl::MemDevice::deinitialize() {
-    for (int i = 0; i < maxMemoryBlockCount; i++) {
+error_t openfsl::MemCharDevice::deinitialize() {
+    for (size_t i = 0; i < maxMemoryBlockCount; i++) {
         if (memoryAllocationTable[i] != nullptr) {
             delete[] memoryAllocationTable[i];
         }
     }
     delete[] memoryAllocationTable;
 
+    IODevice::deinitialize();
+
     return 0;
 }
 
-error_t openfsl::MemDevice::readByte
+error_t openfsl::MemCharDevice::readByte
     (void* dest, const size_t offset, const size_t size) {
     size_t firstBlock = (size_t)(offset / memoryBlockSize);
     size_t lastBlock = (size_t)((offset + size) / memoryBlockSize);
 
     size_t bytesRead = 0;
+    diskOperationMutex.lock();
     for (size_t i = firstBlock; i <= lastBlock; i++) {
         size_t blockReadOffset = !(i - firstBlock) ? offset % memoryBlockSize : 0;
         size_t blockReadSize = std::min(size - bytesRead, memoryBlockSize - blockReadOffset);
@@ -59,16 +62,18 @@ error_t openfsl::MemDevice::readByte
 
         bytesRead += blockReadSize;
     }
+    diskOperationMutex.unlock();
 
     return 0;
 }
 
-error_t openfsl::MemDevice::writeByte
+error_t openfsl::MemCharDevice::writeByte
     (const void* src, const size_t offset, const size_t size) {
     size_t firstBlock = (size_t)(offset / memoryBlockSize);
     size_t lastBlock = (size_t)((offset + size) / memoryBlockSize);
 
     size_t bytesWritten = 0;
+    diskOperationMutex.lock();
     for (size_t i = firstBlock; i <= lastBlock; i++) {
         if (memoryAllocationTable[i] == nullptr) {
             memoryAllocationTable[i] = new uint8_t[memoryBlockSize];
@@ -81,6 +86,7 @@ error_t openfsl::MemDevice::writeByte
 
         bytesWritten += blockWriteSize;
     }
+    diskOperationMutex.unlock();
 
     return 0;
 }

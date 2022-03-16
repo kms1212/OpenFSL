@@ -47,6 +47,7 @@ int main(int argc, char** argv) {
     settings["MeasureElapsedTime"] = false;
 
     bool isCdrom = false;
+    error_t result;
 
     size_t imagedotpos = imageFileName.find_last_of('.');
     if (imagedotpos != std::string::npos) {
@@ -57,56 +58,91 @@ int main(int argc, char** argv) {
         isCdrom = imageFileExt == "ISO";
     }
 
-    openfsl::FileBlockDevice fbd;
+    openfsl::BlockDevice* bd;
 
-    if (isCdrom) {
+    if (imageFileName == "RAMDISK") {
+        bd = new openfsl::MemBlockDevice;
+
         openfsl::BlockDevice::DiskParameter parameter;
-        parameter.bytesPerSector = 2048;
-        fbd.setDiskParameter(parameter);
+        bd->setDiskParameter(parameter);
+
+        size_t sectorSize;
+
+        std::cout << "Sector count? ";
+        std::cin >> sectorSize;
+
+        ((openfsl::MemBlockDevice*)bd)->initialize(sectorSize);
+
+        std::cout << "Formatting to FAT32...";
+        openfsl::FAT32 fat32(bd);
+
+        openfsl::lba48_t fsSize;
+        bool f_f;
+
+        std::cout << "Enter file system size: ";
+        std::cin >> fsSize;
+        std::cout << "Fast format?: ";
+        std::cin >> f_f;
+
+        openfsl::FAT32::FormatOptions options =
+            fat32.getDefaultFormatOptions(fsSize);
+
+        result = fat32.format(0, fsSize, options, f_f);
+        if (result)
+            std::cerr << "Error: " << openfsl::geterrorstr(result) << "\n";
     } else {
-        std::cout << "Reading image file parameter...\n";
-        std::fstream diskInfo;
-        diskInfo.open(std::string(imageFileName) + std::string(".info"),
-            std::ios::in);
-        if (!diskInfo.fail()) {
-            std::string line;
+        bd = new openfsl::FileBlockDevice;
+
+        if (isCdrom) {
             openfsl::BlockDevice::DiskParameter parameter;
-
-            while (getline(diskInfo, line)) {
-                std::cout << line << "\n";
-
-                std::vector<std::string> value;
-
-                split(line, &value, ' ');
-                if (value[0] == "SectorPerTrack") {
-                    parameter.sectorPerTrack = stoi(value[1]);
-                } else if (value[0] == "HeadPerCylinder") {
-                    parameter.headPerCylinder = stoi(value[1]);
-                } else if (value[0] == "BytesPerSector") {
-                    parameter.bytesPerSector = stoi(value[1]);
-                }
-            }
-
-            fbd.setDiskParameter(parameter);
-
-            diskInfo.close();
+            parameter.bytesPerSector = 2048;
+            bd->setDiskParameter(parameter);
         } else {
-            std::cout << "Fail to read disk parameter file. ";
-            std::cout << "Default values are will be used.\n";
+            std::cout << "Reading image file parameter...\n";
+            std::fstream diskInfo;
+            diskInfo.open(std::string(imageFileName) + std::string(".info"),
+                std::ios::in);
+            if (!diskInfo.fail()) {
+                std::string line;
+                openfsl::BlockDevice::DiskParameter parameter;
+
+                while (getline(diskInfo, line)) {
+                    std::cout << line << "\n";
+
+                    std::vector<std::string> value;
+
+                    split(line, &value, ' ');
+                    if (value[0] == "SectorPerTrack") {
+                        parameter.sectorPerTrack = stoi(value[1]);
+                    } else if (value[0] == "HeadPerCylinder") {
+                        parameter.headPerCylinder = stoi(value[1]);
+                    } else if (value[0] == "BytesPerSector") {
+                        parameter.bytesPerSector = stoi(value[1]);
+                    }
+                }
+
+                bd->setDiskParameter(parameter);
+
+                diskInfo.close();
+            } else {
+                std::cout << "Fail to read disk parameter file. ";
+                std::cout << "Default values are will be used.\n";
+            }
+        }
+
+        result = ((openfsl::FileBlockDevice*)bd)->initialize(std::string(imageFileName),
+            openfsl::FileBlockDevice::OpenMode::RW);
+        if (result) {
+            std::cout << openfsl::geterrorstr(result) << "\n";
+            return 0;
         }
     }
-
-    error_t result = fbd.initialize(std::string(imageFileName),
-        openfsl::FileBlockDevice::OpenMode::RW);
-    if (result) {
-        std::cout << openfsl::geterrorstr(result) << "\n";
-        return 0;
-    }
+    
 
     if (isCdrom) {
 #ifdef ISO9660_BUILD
-        if (cdfsshell(&fbd)) {
-            fbd.deinitialize();
+        if (cdfsshell(bd)) {
+            deleteBlockDevice(bd);
             return EXIT_FAILURE;
         }
         goto exitProgram;
@@ -115,7 +151,7 @@ int main(int argc, char** argv) {
     } else {
         openfsl::DiskStructure diskStructure;
 
-        result = detectDiskStructure(&diskStructure, &fbd);
+        result = detectDiskStructure(&diskStructure, bd);
         if (result) {
             std::cout << openfsl::geterrorstr(result) << "\n";
             return 0;
@@ -166,8 +202,8 @@ int main(int argc, char** argv) {
 #ifdef FAT32_BUILD
             if (diskStructure.partList[selectIndex] ==
                 openfsl::FileSystemType::FAT32) {
-                if (fat32shell(&fbd, diskStructure, selectIndex)) {
-                    fbd.deinitialize();
+                if (fat32shell(bd, diskStructure, selectIndex)) {
+                    deleteBlockDevice(bd);
                     return EXIT_FAILURE;
                 }
                 goto exitProgram;
@@ -176,8 +212,8 @@ int main(int argc, char** argv) {
 #ifdef NTFS_BUILD
             if (diskStructure.partList[selectIndex] ==
                 openfsl::FileSystemType::NTFS) {
-                if (ntfsshell(&fbd, diskStructure, selectIndex)) {
-                    fbd.deinitialize();
+                if (ntfsshell(bd, diskStructure, selectIndex)) {
+                    deleteBlockDevice(bd);
                     return EXIT_FAILURE;
                 }
                 goto exitProgram;
@@ -186,7 +222,7 @@ int main(int argc, char** argv) {
             std::cerr << "File system is not supported.\n";
         } else {  // fat32 format
 #ifdef FAT32_BUILD
-            openfsl::FAT32 fat32(&fbd);
+            openfsl::FAT32 fat32(bd);
 
             openfsl::lba48_t fsSize;
             bool f_f;
@@ -207,6 +243,6 @@ int main(int argc, char** argv) {
     }
 
 exitProgram:
-    fbd.deinitialize();
+    deleteBlockDevice(bd);
     return 0;
 }

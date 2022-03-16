@@ -76,3 +76,11 @@ size_t split(const std::string& txt, std::vector<std::string>* strs, char ch) {
 
     return strs->size();
 }
+
+void deleteBlockDevice(openfsl::BlockDevice* bd) {
+    if (dynamic_cast<openfsl::FileBlockDevice*>(bd) != nullptr) {
+        delete (openfsl::FileBlockDevice*)bd;
+    } else if (dynamic_cast<openfsl::MemBlockDevice*>(bd) != nullptr) {
+        delete (openfsl::MemBlockDevice*)bd;
+    }
+}

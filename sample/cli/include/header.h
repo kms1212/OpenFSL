@@ -30,18 +30,20 @@ See the BSD-3-Clause for more details.
 size_t split(const std::string &txt, std::vector<std::string>* strs, char ch);
 void hexdump(const uint8_t* p, size_t offset, size_t len);
 
+void deleteBlockDevice(openfsl::BlockDevice* bd);
+
 extern std::map<std::string, bool> settings;
 
 #ifdef FAT32_BUILD
-int fat32shell(openfsl::FileBlockDevice* fbd,
+int fat32shell(openfsl::BlockDevice* bd,
     openfsl::DiskStructure diskStructure, size_t selectIndex);
 #endif
 #ifdef NTFS_BUILD
-int ntfsshell(openfsl::FileBlockDevice* fbd,
+int ntfsshell(openfsl::BlockDevice* bd,
     openfsl::DiskStructure diskStructure, size_t selectIndex);
 #endif
 #ifdef ISO9660_BUILD
-int cdfsshell(openfsl::FileBlockDevice* fbd);
+int cdfsshell(openfsl::BlockDevice* bd);
 #endif
 
 #endif  // SAMPLE_HEADER_H_

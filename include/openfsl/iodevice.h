@@ -58,7 +58,7 @@ class IODevice {
      * @brief IODevice destructor
      *
      */
-    ~IODevice();
+    virtual ~IODevice();
 
     inline bool isInitialized() { return initialized; }
 };

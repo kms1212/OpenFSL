@@ -7,8 +7,8 @@ See the BSD-3-Clause for more details.
 
 */
 
-#ifndef OPENFSL_MEMDEVICE_H_
-#define OPENFSL_MEMDEVICE_H_
+#ifndef OPENFSL_MEMCHARDEVICE_H_
+#define OPENFSL_MEMCHARDEVICE_H_
 
 #ifndef __cplusplus
 #error C++ compiler required.
@@ -35,7 +35,7 @@ namespace openfsl {
  * @todo Write function wrapper
  *
  */
-class MemDevice : public CharDevice {
+class MemCharDevice : public CharDevice {
  private:
     size_t maxMemoryBlockCount;
     size_t memoryBlockSize;
@@ -48,21 +48,21 @@ class MemDevice : public CharDevice {
      * @brief CharDevice constructor
      *
      */
-    MemDevice();
+    MemCharDevice();
 
     /**
      *
      * @brief CharDevice destructor
      *
      */
-    ~MemDevice();
+    ~MemCharDevice();
 
     /**
      * 
      * @brief CharDevice initializer
      * 
      */
-    error_t initialize(size_t maxMemoryBlockCount, size_t memoryBlockSize);
+    error_t initialize(const size_t maxMemoryBlockCount, const size_t memoryBlockSize);
 
     /**
      *
@@ -78,4 +78,4 @@ class MemDevice : public CharDevice {
 };
 }  // namespace openfsl
 
-#endif  // OPENFSL_MEMDEVICE_H_
+#endif  // OPENFSL_MEMCHARDEVICE_H_

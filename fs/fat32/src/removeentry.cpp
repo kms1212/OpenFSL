@@ -27,7 +27,6 @@ error_t openfsl::FAT32::__removeEntry(
     // Check if file exists
     std::vector<FileInfo> fileList;
     std::string searchFilename = deletename;
-    bool fileFound = false;
     FileInfo entryInfo;
 
     std::pair<error_t, FileInfo> eresult =

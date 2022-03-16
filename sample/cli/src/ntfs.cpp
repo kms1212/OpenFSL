@@ -13,19 +13,14 @@ See the BSD-3-Clause for more details.
 
 #include "header.h"
 
-int ntfsshell(openfsl::FileBlockDevice* fbd,
+int ntfsshell(openfsl::BlockDevice* bd,
     openfsl::DiskStructure diskStructure, size_t selectIndex) {
-    std::string volumeString = "file:\"" + fbd->getFilename() +
-        "\":" + std::to_string(selectIndex) + "(" +
-        openfsl::fileSystemTypeToString(diskStructure.partList[selectIndex])
-        + ")";
     error_t result;
-
-    openfsl::NTFS ntfs(fbd, "", "\\/", volumeString + ":",
+    openfsl::NTFS ntfs(bd, "", "\\/", "::",
         openfsl::NTFS::Version::v3_1);
 
     if (diskStructure.partTable == openfsl::PartitionTableType::MBR) {
-        openfsl::MBR mbr(fbd);
+        openfsl::MBR mbr(bd);
 
         result = mbr.initialize();
         if (result)

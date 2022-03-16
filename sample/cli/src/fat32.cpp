@@ -15,14 +15,14 @@ See the BSD-3-Clause for more details.
 
 #include "header.h"
 
-int fat32shell(openfsl::FileBlockDevice* fbd,
+int fat32shell(openfsl::BlockDevice* bd,
     openfsl::DiskStructure diskStructure, size_t selectIndex) {
-    openfsl::FAT32 fat32(fbd, "", "\\/", "::");
+    openfsl::FAT32 fat32(bd, "", "\\/", "::");
 
     error_t result;
 
     if (diskStructure.partTable == openfsl::PartitionTableType::MBR) {
-        openfsl::MBR mbr(fbd);
+        openfsl::MBR mbr(bd);
 
         result = mbr.initialize();
         if (result)
@@ -35,7 +35,7 @@ int fat32shell(openfsl::FileBlockDevice* fbd,
 
         fat32.setFsLBAOffset(partitionInfo[selectIndex].partOffset);
     } else if (diskStructure.partTable == openfsl::PartitionTableType::GPT) {
-        openfsl::GPT gpt(fbd);
+        openfsl::GPT gpt(bd);
 
         result = gpt.initialize();
         if (result)
@@ -58,8 +58,7 @@ int fat32shell(openfsl::FileBlockDevice* fbd,
         return result;
     }
 
-    std::cout << "file:\"" + fbd->getFilename() +
-        "\":" + std::to_string(selectIndex) + "(" +
+    std::cout << "::" + std::to_string(selectIndex) + "(" +
         openfsl::fileSystemTypeToString(diskStructure.partList[selectIndex])
         + "), VolumeName: " + fat32.getVolumeInfo().volumeLabel + "\n";
 
