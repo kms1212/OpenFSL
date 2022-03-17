@@ -42,6 +42,7 @@ error_t openfsl::FAT32::__createEntry(
     }
 
     // Validate file name and get required entry count
+    size_t requiredEntrySize =
             getEntryCount(createFileInfo.fileName, true);
     size_t dotpos = createFileInfo.fileName.find_last_of('.');
 
