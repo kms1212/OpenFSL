@@ -22,7 +22,6 @@
 /* @license-end */
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -117,7 +116,7 @@ $(document).ready(function(){initNavTree('linkedcluster__internal_8cpp_source.ht
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <a class="code" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#afe87cb56b5ce5a7fef3ecb25acac8e20">clusterList</a>.push_back(cluster);</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        cluster = <a class="code" href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#ad05834b7f84560d96c449347c6cfd4f7">getNextCluster</a>(cluster);</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keywordflow">if</span> (cluster == 0xFFFFFFF7)</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="error_8h.html#af9fd1a6b25f4b82af7078e3a269ccd2a">OPENFSL_ERROR_BADCLUS</a>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="error_8h.html#a0e3f35c69539aba83ab6d4e20a6ff1f8">OPENFSL_ERROR_BAD_CLUSTER</a>;</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keywordflow">if</span> (cluster == 0xFFFFFFF8)</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    }</div>
@@ -142,7 +141,7 @@ $(document).ready(function(){initNavTree('linkedcluster__internal_8cpp_source.ht
 </div><!-- doc-content -->
 <div class="ttc" id="afs__fat32_8h_html"><div class="ttname"><a href="fs__fat32_8h.html">fs_fat32.h</a></div></div>
 <div class="ttc" id="aclassopenfsl_1_1_f_a_t32_html_abc3a9899a34a113a605666126791a40d"><div class="ttname"><a href="classopenfsl_1_1_f_a_t32.html#abc3a9899a34a113a605666126791a40d">openfsl::FAT32::cluster_t</a></div><div class="ttdeci">uint32_t cluster_t</div><div class="ttdef"><b>Definition:</b> <a href="fs__fat32_8h_source.html#l00044">fs_fat32.h:44</a></div></div>
-<div class="ttc" id="aerror_8h_html_af9fd1a6b25f4b82af7078e3a269ccd2a"><div class="ttname"><a href="error_8h.html#af9fd1a6b25f4b82af7078e3a269ccd2a">OPENFSL_ERROR_BADCLUS</a></div><div class="ttdeci">#define OPENFSL_ERROR_BADCLUS</div><div class="ttdef"><b>Definition:</b> <a href="error_8h_source.html#l00045">error.h:45</a></div></div>
+<div class="ttc" id="aerror_8h_html_a0e3f35c69539aba83ab6d4e20a6ff1f8"><div class="ttname"><a href="error_8h.html#a0e3f35c69539aba83ab6d4e20a6ff1f8">OPENFSL_ERROR_BAD_CLUSTER</a></div><div class="ttdeci">#define OPENFSL_ERROR_BAD_CLUSTER</div><div class="ttdef"><b>Definition:</b> <a href="error_8h_source.html#l00045">error.h:45</a></div></div>
 <div class="ttc" id="aclassopenfsl_1_1_f_a_t32_1_1_linked_cluster_html_a2b967692b67583b3ac9ef80350eec46e"><div class="ttname"><a href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a2b967692b67583b3ac9ef80350eec46e">openfsl::FAT32::LinkedCluster::updateClusterList</a></div><div class="ttdeci">int updateClusterList()</div><div class="ttdef"><b>Definition:</b> <a href="linkedcluster__internal_8cpp_source.html#l00012">linkedcluster_internal.cpp:12</a></div></div>
 <div class="ttc" id="aclassopenfsl_1_1_f_a_t32_1_1_linked_cluster_html_ad05834b7f84560d96c449347c6cfd4f7"><div class="ttname"><a href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#ad05834b7f84560d96c449347c6cfd4f7">openfsl::FAT32::LinkedCluster::getNextCluster</a></div><div class="ttdeci">cluster_t getNextCluster(const cluster_t cluster)</div><div class="ttdef"><b>Definition:</b> <a href="linkedcluster__internal_8cpp_source.html#l00029">linkedcluster_internal.cpp:29</a></div></div>
 <div class="ttc" id="aclassopenfsl_1_1_f_a_t32_1_1_linked_cluster_html_afe87cb56b5ce5a7fef3ecb25acac8e20"><div class="ttname"><a href="classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#afe87cb56b5ce5a7fef3ecb25acac8e20">openfsl::FAT32::LinkedCluster::clusterList</a></div><div class="ttdeci">std::vector&lt; cluster_t &gt; clusterList</div><div class="ttdoc">List of cluster chain members.</div><div class="ttdef"><b>Definition:</b> <a href="fs__fat32_8h_source.html#l00087">fs_fat32.h:87</a></div></div>

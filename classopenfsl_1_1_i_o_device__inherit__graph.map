@@ -1,5 +1,8 @@
 <map id="openfsl::IODevice" name="openfsl::IODevice">
-<area shape="rect" id="node1" title=" " alt="" coords="12,5,181,156"/>
-<area shape="rect" id="node2" href="$classopenfsl_1_1_block_device.html" title="Disk driver." alt="" coords="15,204,179,384"/>
+<area shape="rect" id="node1" title=" " alt="" coords="315,5,484,156"/>
+<area shape="rect" id="node2" href="$classopenfsl_1_1_block_device.html" title="Disk driver." alt="" coords="227,204,391,384"/>
+<area shape="rect" id="node5" href="$classopenfsl_1_1_char_device.html" title="Disk driver." alt="" coords="431,226,584,362"/>
 <area shape="rect" id="node3" href="$classopenfsl_1_1_file_block_device.html" title=" " alt="" coords="5,432,188,641"/>
+<area shape="rect" id="node4" href="$classopenfsl_1_1_mem_block_device.html" title=" " alt="" coords="213,454,405,619"/>
+<area shape="rect" id="node6" href="$classopenfsl_1_1_mem_char_device.html" title="Disk driver." alt="" coords="429,447,617,627"/>
 </map>

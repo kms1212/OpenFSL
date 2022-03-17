@@ -22,7 +22,6 @@
 /* @license-end */
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -133,28 +132,30 @@ $(document).ready(function(){initNavTree('error_8cpp_source.html',''); initResiz
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="stringliteral">&quot;Disabled operation.&quot;</span>,</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="stringliteral">&quot;Directory is not empty.&quot;</span>,</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="stringliteral">&quot;Regex syntax is not valid.&quot;</span>,</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="stringliteral">&quot;Sector size is not valid.&quot;</span>, </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="stringliteral">&quot;Invalid GUID Partition Table.&quot;</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;};</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="namespaceopenfsl.html#a1a73ffefa6ed95caf89943d6278114b2">   40</a></span>&#160;<span class="keywordtype">size_t</span> <a class="code" href="namespaceopenfsl.html#a1a73ffefa6ed95caf89943d6278114b2">openfsl::geterrorlen</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> errnum) {</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordflow">return</span> std::strlen(<a class="code" href="namespaceopenfsl.html#ad93b844fd4b92c6c0a417cc0895f317f">__error_str</a>[errnum]) + 1;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="namespaceopenfsl.html#a89ff8c581cdd44588ec7f651431e75c3">   44</a></span>&#160;<span class="keywordtype">char</span>* <a class="code" href="namespaceopenfsl.html#a89ff8c581cdd44588ec7f651431e75c3">openfsl::geterrorstr</a>(<span class="keywordtype">char</span>* errstr, <span class="keyword">const</span> <span class="keywordtype">int</span> errnum) {</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    std::memcpy(errstr, <a class="code" href="namespaceopenfsl.html#ad93b844fd4b92c6c0a417cc0895f317f">__error_str</a>[errnum], <a class="code" href="namespaceopenfsl.html#a1a73ffefa6ed95caf89943d6278114b2">geterrorlen</a>(errnum));</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordflow">return</span> errstr;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
-<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="namespaceopenfsl.html#a458f9a9d691fca7cb65b433805faa936">   49</a></span>&#160;std::string <a class="code" href="namespaceopenfsl.html#a89ff8c581cdd44588ec7f651431e75c3">openfsl::geterrorstr</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> errnum) {</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">return</span> std::string(<a class="code" href="namespaceopenfsl.html#ad93b844fd4b92c6c0a417cc0895f317f">__error_str</a>[errnum]);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="stringliteral">&quot;Sector size is not valid.&quot;</span>,</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="stringliteral">&quot;File size is too big.&quot;</span>,</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="stringliteral">&quot;Selected is not a direcotry&quot;</span>,</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="stringliteral">&quot;Selected is not a file&quot;</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;};</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="namespaceopenfsl.html#a1a73ffefa6ed95caf89943d6278114b2">   42</a></span>&#160;<span class="keywordtype">size_t</span> <a class="code" href="namespaceopenfsl.html#a1a73ffefa6ed95caf89943d6278114b2">openfsl::geterrorlen</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> errnum) {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordflow">return</span> std::strlen(<a class="code" href="namespaceopenfsl.html#ad93b844fd4b92c6c0a417cc0895f317f">__error_str</a>[errnum]) + 1;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="namespaceopenfsl.html#a89ff8c581cdd44588ec7f651431e75c3">   46</a></span>&#160;<span class="keywordtype">char</span>* <a class="code" href="namespaceopenfsl.html#a89ff8c581cdd44588ec7f651431e75c3">openfsl::geterrorstr</a>(<span class="keywordtype">char</span>* errstr, <span class="keyword">const</span> <span class="keywordtype">int</span> errnum) {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    std::memcpy(errstr, <a class="code" href="namespaceopenfsl.html#ad93b844fd4b92c6c0a417cc0895f317f">__error_str</a>[errnum], <a class="code" href="namespaceopenfsl.html#a1a73ffefa6ed95caf89943d6278114b2">geterrorlen</a>(errnum));</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordflow">return</span> errstr;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;}</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="namespaceopenfsl.html#a458f9a9d691fca7cb65b433805faa936">   51</a></span>&#160;std::string <a class="code" href="namespaceopenfsl.html#a89ff8c581cdd44588ec7f651431e75c3">openfsl::geterrorstr</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> errnum) {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">return</span> std::string(<a class="code" href="namespaceopenfsl.html#ad93b844fd4b92c6c0a417cc0895f317f">__error_str</a>[errnum]);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="anamespaceopenfsl_html_ad93b844fd4b92c6c0a417cc0895f317f"><div class="ttname"><a href="namespaceopenfsl.html#ad93b844fd4b92c6c0a417cc0895f317f">openfsl::__error_str</a></div><div class="ttdeci">const __maybe_unused char * __error_str[]</div><div class="ttdef"><b>Definition:</b> <a href="error_8cpp_source.html#l00012">error.cpp:12</a></div></div>
 <div class="ttc" id="aerror_8h_html"><div class="ttname"><a href="error_8h.html">error.h</a></div></div>
-<div class="ttc" id="anamespaceopenfsl_html_a1a73ffefa6ed95caf89943d6278114b2"><div class="ttname"><a href="namespaceopenfsl.html#a1a73ffefa6ed95caf89943d6278114b2">openfsl::geterrorlen</a></div><div class="ttdeci">size_t geterrorlen(const error_t errnum)</div><div class="ttdef"><b>Definition:</b> <a href="error_8cpp_source.html#l00040">error.cpp:40</a></div></div>
-<div class="ttc" id="anamespaceopenfsl_html_a89ff8c581cdd44588ec7f651431e75c3"><div class="ttname"><a href="namespaceopenfsl.html#a89ff8c581cdd44588ec7f651431e75c3">openfsl::geterrorstr</a></div><div class="ttdeci">char * geterrorstr(char *errstr, const error_t errnum)</div><div class="ttdef"><b>Definition:</b> <a href="error_8cpp_source.html#l00044">error.cpp:44</a></div></div>
+<div class="ttc" id="anamespaceopenfsl_html_a1a73ffefa6ed95caf89943d6278114b2"><div class="ttname"><a href="namespaceopenfsl.html#a1a73ffefa6ed95caf89943d6278114b2">openfsl::geterrorlen</a></div><div class="ttdeci">size_t geterrorlen(const error_t errnum)</div><div class="ttdef"><b>Definition:</b> <a href="error_8cpp_source.html#l00042">error.cpp:42</a></div></div>
+<div class="ttc" id="anamespaceopenfsl_html_a89ff8c581cdd44588ec7f651431e75c3"><div class="ttname"><a href="namespaceopenfsl.html#a89ff8c581cdd44588ec7f651431e75c3">openfsl::geterrorstr</a></div><div class="ttdeci">char * geterrorstr(char *errstr, const error_t errnum)</div><div class="ttdef"><b>Definition:</b> <a href="error_8cpp_source.html#l00046">error.cpp:46</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

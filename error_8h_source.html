@@ -22,7 +22,6 @@
 /* @license-end */
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -126,65 +125,69 @@ $(document).ready(function(){initNavTree('error_8h_source.html',''); initResizab
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">// Disk error</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="error_8h.html#a301c819148a27e7e57a093da26677ba9">   29</a></span>&#160;<span class="preprocessor">#define OPENFSL_SUCCESS         0</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="error_8h.html#a301c819148a27e7e57a093da26677ba9">   29</a></span>&#160;<span class="preprocessor">#define OPENFSL_SUCCESS                       0</span></div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">// Disk error</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="error_8h.html#a3737296bc24560c54e9716b165487543">   31</a></span>&#160;<span class="preprocessor">#define OPENFSL_ERROR_DISK      1</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">// No method is assigned error</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="error_8h.html#a2320802b78acc635f6d1d83e849eea4f">   33</a></span>&#160;<span class="preprocessor">#define OPENFSL_ERROR_NOMETHOD  2</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="error_8h.html#a3737296bc24560c54e9716b165487543">   31</a></span>&#160;<span class="preprocessor">#define OPENFSL_ERROR_DISK                    1</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">// Method not assigned error</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="error_8h.html#aa0ddc89bddb07f3e53f4112c567bdee4">   33</a></span>&#160;<span class="preprocessor">#define OPENFSL_ERROR_METHOD_NOT_ASSIGNED     2</span></div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">// Invalid signature error</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="error_8h.html#a71c6bb4e32dd6ae212abd2a7b15ef216">   35</a></span>&#160;<span class="preprocessor">#define OPENFSL_ERROR_SIGN      3</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="error_8h.html#a9055fd71f15f26ff2c29f172a76ecce8">   35</a></span>&#160;<span class="preprocessor">#define OPENFSL_ERROR_INVALID_SIGNATURE       3</span></div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">// File or directory not exist error</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="error_8h.html#a50418bfba956f26454c53fc95859ca43">   37</a></span>&#160;<span class="preprocessor">#define OPENFSL_ERROR_NOTEXIST  4</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">// File or directory already exists error</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="error_8h.html#a8fbf59bf5319547e6f27498d96a440c6">   39</a></span>&#160;<span class="preprocessor">#define OPENFSL_ERROR_EXIST     5</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="error_8h.html#a83c5c9dab5ead167446bb7d929e236be">   37</a></span>&#160;<span class="preprocessor">#define OPENFSL_ERROR_NO_SUCH_FILE_OR_DIR     4</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">// File or directory exists error</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="error_8h.html#a09b30f81272ef64c72419c1f56e42906">   39</a></span>&#160;<span class="preprocessor">#define OPENFSL_ERROR_FILE_OR_DIR_EXISTS      5</span></div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">// File name is invalid error</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="error_8h.html#adb927dca48a08b8a84c184acd97ea4ff">   41</a></span>&#160;<span class="preprocessor">#define OPENFSL_ERROR_INVNAME   6</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="error_8h.html#ad65e36b60b5f1fbaa62929b0236ab9a7">   41</a></span>&#160;<span class="preprocessor">#define OPENFSL_ERROR_INVALID_FILE_NAME       6</span></div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">// Too large entry list error</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="error_8h.html#ae30f6320a40fcf22363281a59a310fae">   43</a></span>&#160;<span class="preprocessor">#define OPENFSL_ERROR_LARGELS   7</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="error_8h.html#ad8d792289e90759ffb1eff6a4db6f2d1">   43</a></span>&#160;<span class="preprocessor">#define OPENFSL_ERROR_TOO_LARGE_ENTRY_LIST    7</span></div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">// Bad cluster error</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="error_8h.html#af9fd1a6b25f4b82af7078e3a269ccd2a">   45</a></span>&#160;<span class="preprocessor">#define OPENFSL_ERROR_BADCLUS   8</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="error_8h.html#a0e3f35c69539aba83ab6d4e20a6ff1f8">   45</a></span>&#160;<span class="preprocessor">#define OPENFSL_ERROR_BAD_CLUSTER             8</span></div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">// No permission error</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="error_8h.html#a80c66b60815c860418b911b9e1ad9b6d">   47</a></span>&#160;<span class="preprocessor">#define OPENFSL_ERROR_NOPERM    9</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="error_8h.html#ad9c6da3ce33db5d472fc847d2909eec4">   47</a></span>&#160;<span class="preprocessor">#define OPENFSL_ERROR_OPERATION_NOT_PERMITTED 9</span></div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">// Cluster allocation error</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="error_8h.html#acc0b37dbf2da20ea083b1533e91628a6">   49</a></span>&#160;<span class="preprocessor">#define OPENFSL_ERROR_ALLOC     10</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="error_8h.html#a0ab37aa3f5c8b87ef32c2527530b86ea">   49</a></span>&#160;<span class="preprocessor">#define OPENFSL_ERROR_CANNOT_ALLOCATE_CLUSTER 10</span></div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment">// Cluster access error</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="error_8h.html#a2c8464b24d3c7e1a2f3725c28be98804">   51</a></span>&#160;<span class="preprocessor">#define OPENFSL_ERROR_CACCESS   11</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="error_8h.html#acb92e6dc27ea9a6a968f18fc2a0289c0">   51</a></span>&#160;<span class="preprocessor">#define OPENFSL_ERROR_CANNOT_ACCESS_CLUSTER   11</span></div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">// Invalid access</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="error_8h.html#a49df6e2e7e0b9677493236f0470240fe">   53</a></span>&#160;<span class="preprocessor">#define OPENFSL_ERROR_INVACC    12</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="error_8h.html#a7c4119b74c26b4380ae5e2d9aae9f4a2">   53</a></span>&#160;<span class="preprocessor">#define OPENFSL_ERROR_INVALID_ACCESS          12</span></div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">// Too large LBA to convert to CHS</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="error_8h.html#a7fbb631b81a9218d2a7b512b2ea742b4">   55</a></span>&#160;<span class="preprocessor">#define OPENFSL_ERROR_LARGELBA  13</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="error_8h.html#a14929180e087e71d26667c8ca7716ca3">   55</a></span>&#160;<span class="preprocessor">#define OPENFSL_ERROR_CANNOT_CONVERT_TO_CHS   13</span></div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment">// Volume label too long</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="error_8h.html#a8b7ce3ea8216fc157434b9ec96c1f79d">   57</a></span>&#160;<span class="preprocessor">#define OPENFSL_ERROR_VLABLONG  14</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="error_8h.html#a48f9701b19b4660ceff041cc7b58203f">   57</a></span>&#160;<span class="preprocessor">#define OPENFSL_ERROR_TOO_LONG_VOLUME_LABEL   14</span></div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment">// Floppy not supported</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="error_8h.html#aade0302730616f7e41078344c19bd49c">   59</a></span>&#160;<span class="preprocessor">#define OPENFSL_ERROR_NOFLOPPY  15</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="error_8h.html#aec267ef0ad61b6629d2b6bf97157a985">   59</a></span>&#160;<span class="preprocessor">#define OPENFSL_ERROR_FLOPPY_NOT_SUPPORTED    15</span></div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment">// Invalid format options</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="error_8h.html#a3ef1954038cba03384832ba309fd55a0">   61</a></span>&#160;<span class="preprocessor">#define OPENFSL_ERROR_FRMATOPT  16</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="error_8h.html#a810084fee81417d8a5cb4b163b9303a1">   61</a></span>&#160;<span class="preprocessor">#define OPENFSL_ERROR_INVALID_FORMAT_OPTIONS  16</span></div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment">// Volume size is too big</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="error_8h.html#ae535d99b2aed73de8e800fd2543a47d3">   63</a></span>&#160;<span class="preprocessor">#define OPENFSL_ERROR_SZTOOBIG  17</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="error_8h.html#a17701854803f1f3655a912659f9118d3">   63</a></span>&#160;<span class="preprocessor">#define OPENFSL_ERROR_TOO_LARGE_VOLUME_SIZE   17</span></div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment">// Invalid cache</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="error_8h.html#ac7ca3f8edc546b6435b9dfb5c99e372c">   65</a></span>&#160;<span class="preprocessor">#define OPENFSL_ERROR_CACHE     18</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="error_8h.html#a68a0265646a665f642ce51aec6b268ed">   65</a></span>&#160;<span class="preprocessor">#define OPENFSL_ERROR_INVALID_CACHE           18</span></div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment">// Not implemented</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="error_8h.html#adb3b3aef4d5832a4d8a525525d6b1235">   67</a></span>&#160;<span class="preprocessor">#define OPENFSL_ERROR_NOTIMPL   19</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="error_8h.html#a58e5dcd90cf0361e31e933a9b742cab1">   67</a></span>&#160;<span class="preprocessor">#define OPENFSL_ERROR_NOT_IMPLEMENTED         19</span></div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment">// Operation disabled</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="error_8h.html#ae5556e905c3d9e1982ef27863b8dfd20">   69</a></span>&#160;<span class="preprocessor">#define OPENFSL_ERROR_DISABLED  20</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="error_8h.html#a48be09958ae7e660a8251514d1f1dfe9">   69</a></span>&#160;<span class="preprocessor">#define OPENFSL_ERROR_OPERATION_DISABLED      20</span></div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment">// Directory is not empty</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="error_8h.html#a3bd98111ead415806e11187d1e5b0432">   71</a></span>&#160;<span class="preprocessor">#define OPENFSL_ERROR_DIRNEMPT  21</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="error_8h.html#a8c9cd6dcf4a64829a5dd91dd4d4a8ee7">   71</a></span>&#160;<span class="preprocessor">#define OPENFSL_ERROR_DIRECTORY_NOT_EMPTY     21</span></div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment">// Regex syntax is not valid</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="error_8h.html#a6617ad1dffe95ae9c569b53797f805a9">   73</a></span>&#160;<span class="preprocessor">#define OPENFSL_ERROR_REGEX     22</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="error_8h.html#aa0b7c245883eb28117d312da9b684f46">   73</a></span>&#160;<span class="preprocessor">#define OPENFSL_ERROR_INVALID_REGEX           22</span></div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment">// Invalid sector size</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="error_8h.html#aba99948988ddad5d2d907b8430821d1b">   75</a></span>&#160;<span class="preprocessor">#define OPENFSL_ERROR_SECTSIZE  23</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment">// Invalid GPT</span></div>
-<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="error_8h.html#a5628d470d17f678b7fca42ecf681b2e9">   77</a></span>&#160;<span class="preprocessor">#define OPENFSL_ERROR_INVALGPT  24</span></div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceopenfsl.html">openfsl</a> {</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="keyword">extern</span> <span class="keyword">const</span> <a class="code" href="macros_8h.html#ab42a43b6291cf51c6c3c85301160c078">__maybe_unused</a> <span class="keywordtype">char</span> *<a class="code" href="namespaceopenfsl.html#ad93b844fd4b92c6c0a417cc0895f317f">__error_str</a>[];</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="keywordtype">size_t</span> <a class="code" href="namespaceopenfsl.html#a1a73ffefa6ed95caf89943d6278114b2">geterrorlen</a>(<span class="keyword">const</span> <a class="code" href="error_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a> errnum);</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="keywordtype">char</span>* <a class="code" href="namespaceopenfsl.html#a89ff8c581cdd44588ec7f651431e75c3">geterrorstr</a>(<span class="keywordtype">char</span>* errstr, <span class="keyword">const</span> <a class="code" href="error_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a> errnum);</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;std::string <a class="code" href="namespaceopenfsl.html#a89ff8c581cdd44588ec7f651431e75c3">geterrorstr</a>(<span class="keyword">const</span> <a class="code" href="error_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a> errnum);</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;}  <span class="comment">// namespace openfsl</span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="preprocessor">#endif  // OPENFSL_ERROR_H_</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="error_8h.html#abd2de1b78b5b11268d19c186cbc5217f">   75</a></span>&#160;<span class="preprocessor">#define OPENFSL_ERROR_INVALID_SECTOR_SIZE     23</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment">// File size is too big</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="error_8h.html#a2e31c619db01173e45053dcbe3c27951">   77</a></span>&#160;<span class="preprocessor">#define OPENFSL_ERROR_TOO_LARGE_FILE_SIZE     24</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="comment">// Selected is not a directory</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="error_8h.html#ac51e03ca915ae6171b3c8df5e20b6a06">   79</a></span>&#160;<span class="preprocessor">#define OPENFSL_ERROR_NOT_A_DIRECTORY         25</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment">// Selected is not a file</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="error_8h.html#ab629a2abe174124be0968bde319cb33d">   81</a></span>&#160;<span class="preprocessor">#define OPENFSL_ERROR_NOT_A_FILE              26</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceopenfsl.html">openfsl</a> {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="keyword">extern</span> <span class="keyword">const</span> <a class="code" href="macros_8h.html#ab42a43b6291cf51c6c3c85301160c078">__maybe_unused</a> <span class="keywordtype">char</span> *<a class="code" href="namespaceopenfsl.html#ad93b844fd4b92c6c0a417cc0895f317f">__error_str</a>[];</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="keywordtype">size_t</span> <a class="code" href="namespaceopenfsl.html#a1a73ffefa6ed95caf89943d6278114b2">geterrorlen</a>(<span class="keyword">const</span> <a class="code" href="error_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a> errnum);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="keywordtype">char</span>* <a class="code" href="namespaceopenfsl.html#a89ff8c581cdd44588ec7f651431e75c3">geterrorstr</a>(<span class="keywordtype">char</span>* errstr, <span class="keyword">const</span> <a class="code" href="error_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a> errnum);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;std::string <a class="code" href="namespaceopenfsl.html#a89ff8c581cdd44588ec7f651431e75c3">geterrorstr</a>(<span class="keyword">const</span> <a class="code" href="error_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a> errnum);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;}  <span class="comment">// namespace openfsl</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="preprocessor">#endif  // OPENFSL_ERROR_H_</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="amacros_8h_html"><div class="ttname"><a href="macros_8h.html">macros.h</a></div></div>
@@ -192,9 +195,9 @@ $(document).ready(function(){initNavTree('error_8h_source.html',''); initResizab
 <div class="ttc" id="aerror_8h_html_a9ad6b2dc3cbff040775e79656fe8e1a3"><div class="ttname"><a href="error_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a></div><div class="ttdeci">int error_t</div><div class="ttdef"><b>Definition:</b> <a href="error_8h_source.html#l00025">error.h:25</a></div></div>
 <div class="ttc" id="anamespaceopenfsl_html_ad93b844fd4b92c6c0a417cc0895f317f"><div class="ttname"><a href="namespaceopenfsl.html#ad93b844fd4b92c6c0a417cc0895f317f">openfsl::__error_str</a></div><div class="ttdeci">const __maybe_unused char * __error_str[]</div><div class="ttdef"><b>Definition:</b> <a href="error_8cpp_source.html#l00012">error.cpp:12</a></div></div>
 <div class="ttc" id="asymbols_8h_html"><div class="ttname"><a href="symbols_8h.html">symbols.h</a></div></div>
-<div class="ttc" id="anamespaceopenfsl_html_a1a73ffefa6ed95caf89943d6278114b2"><div class="ttname"><a href="namespaceopenfsl.html#a1a73ffefa6ed95caf89943d6278114b2">openfsl::geterrorlen</a></div><div class="ttdeci">size_t geterrorlen(const error_t errnum)</div><div class="ttdef"><b>Definition:</b> <a href="error_8cpp_source.html#l00040">error.cpp:40</a></div></div>
+<div class="ttc" id="anamespaceopenfsl_html_a1a73ffefa6ed95caf89943d6278114b2"><div class="ttname"><a href="namespaceopenfsl.html#a1a73ffefa6ed95caf89943d6278114b2">openfsl::geterrorlen</a></div><div class="ttdeci">size_t geterrorlen(const error_t errnum)</div><div class="ttdef"><b>Definition:</b> <a href="error_8cpp_source.html#l00042">error.cpp:42</a></div></div>
 <div class="ttc" id="amacros_8h_html_ab42a43b6291cf51c6c3c85301160c078"><div class="ttname"><a href="macros_8h.html#ab42a43b6291cf51c6c3c85301160c078">__maybe_unused</a></div><div class="ttdeci">#define __maybe_unused</div><div class="ttdef"><b>Definition:</b> <a href="macros_8h_source.html#l00088">macros.h:88</a></div></div>
-<div class="ttc" id="anamespaceopenfsl_html_a89ff8c581cdd44588ec7f651431e75c3"><div class="ttname"><a href="namespaceopenfsl.html#a89ff8c581cdd44588ec7f651431e75c3">openfsl::geterrorstr</a></div><div class="ttdeci">char * geterrorstr(char *errstr, const error_t errnum)</div><div class="ttdef"><b>Definition:</b> <a href="error_8cpp_source.html#l00044">error.cpp:44</a></div></div>
+<div class="ttc" id="anamespaceopenfsl_html_a89ff8c581cdd44588ec7f651431e75c3"><div class="ttname"><a href="namespaceopenfsl.html#a89ff8c581cdd44588ec7f651431e75c3">openfsl::geterrorstr</a></div><div class="ttdeci">char * geterrorstr(char *errstr, const error_t errnum)</div><div class="ttdef"><b>Definition:</b> <a href="error_8cpp_source.html#l00046">error.cpp:46</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

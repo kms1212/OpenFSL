@@ -1,12 +1,14 @@
 var searchData=
 [
-  ['win32_1544',['Win32',['../ntfs__structures_8h.html#ad38be261bc5ffe5387f80a88c19c4aecaa99913111481b4f0bcb70e08e3e99405',1,'ntfs_structures.h']]],
-  ['win32_5fdos_1545',['Win32_DOS',['../ntfs__structures_8h.html#ad38be261bc5ffe5387f80a88c19c4aeca8592acc3405ad78987234ebe1c2c0a95',1,'ntfs_structures.h']]],
-  ['windowsbasicdata_1546',['WindowsBasicData',['../namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94ae3483e91ad57b3372763ef10d9e68740',1,'openfsl::PartitionGuid']]],
-  ['windowsldmdata_1547',['WindowsLDMData',['../namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94a55c9c9315fe1abd9c9ab1d15b5603b19',1,'openfsl::PartitionGuid']]],
-  ['windowsldmmetadata_1548',['WindowsLDMMetaData',['../namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94accb95cb69bfdb7f4c26e6ba218563812',1,'openfsl::PartitionGuid']]],
-  ['windowsrecovery_1549',['WindowsRecovery',['../namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94a004fb77fa4a8edffdb333aacfad4c32f',1,'openfsl::PartitionGuid']]],
-  ['windowsstoragereplica_1550',['WindowsStorageReplica',['../namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94aebfdc2b6fda444f474d997888ee77bdd',1,'openfsl::PartitionGuid']]],
-  ['windowsstoragespaces_1551',['WindowsStorageSpaces',['../namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94a0ec37caa75b3a5f6c453e8fef6c7bb26',1,'openfsl::PartitionGuid']]],
-  ['write_1552',['Write',['../namespaceopenfsl.html#ab69edb30c6ca3a1228d3d32e61931c72a1129c0e4d43f2d121652a7302712cff6',1,'openfsl']]]
+  ['win32_1657',['Win32',['../ntfs__structures_8h.html#ad38be261bc5ffe5387f80a88c19c4aecaa99913111481b4f0bcb70e08e3e99405',1,'ntfs_structures.h']]],
+  ['win32_5fdos_1658',['Win32_DOS',['../ntfs__structures_8h.html#ad38be261bc5ffe5387f80a88c19c4aeca8592acc3405ad78987234ebe1c2c0a95',1,'ntfs_structures.h']]],
+  ['windowsbasicdata_1659',['WindowsBasicData',['../classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4aa6844566ffe33fd85248a43c1e3a05f72',1,'openfsl::GPT']]],
+  ['windowsldmdata_1660',['WindowsLDMData',['../classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4aa7764929171b66bbf8fe42cd6cb1267ab',1,'openfsl::GPT']]],
+  ['windowsldmmetadata_1661',['WindowsLDMMetaData',['../classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4aa5234f5d276cd5140edf01ece544ec4a3',1,'openfsl::GPT']]],
+  ['windowsmsreserved_1662',['WindowsMsReserved',['../classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4aab692c6291f41eb64304936364876109a',1,'openfsl::GPT']]],
+  ['windowsrecovery_1663',['WindowsRecovery',['../classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4aa4b665113f36c76c1d364152f968f7882',1,'openfsl::GPT']]],
+  ['windowsrentfs_1664',['WindowsRENTFS',['../classopenfsl_1_1_m_b_r.html#a0b96adf72dee2df1ac1012dafd5036f1acabfb2f98528ecb6eae8b73ebc3687d8',1,'openfsl::MBR']]],
+  ['windowsstoragereplica_1665',['WindowsStorageReplica',['../classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4aab9e2e4b6f0144a022cff16f32d301e30',1,'openfsl::GPT']]],
+  ['windowsstoragespaces_1666',['WindowsStorageSpaces',['../classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4aacdc8ea41f11141f654f3b3439df0b1ef',1,'openfsl::GPT']]],
+  ['write_1667',['Write',['../namespaceopenfsl.html#ab69edb30c6ca3a1228d3d32e61931c72a1129c0e4d43f2d121652a7302712cff6',1,'openfsl']]]
 ];

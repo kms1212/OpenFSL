@@ -22,7 +22,6 @@
 /* @license-end */
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -97,7 +96,6 @@ $(document).ready(function(){initNavTree('gpt_8h.html',''); initResizable(); });
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
-<a href="#enum-members">Enumerations</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">gpt.h File Reference</div>  </div>
@@ -108,6 +106,7 @@ $(document).ready(function(){initNavTree('gpt_8h.html',''); initResizable(); });
 <code>#include &lt;vector&gt;</code><br />
 <code>#include &lt;unordered_map&gt;</code><br />
 <code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;algorithm&gt;</code><br />
 <code>#include &quot;<a class="el" href="detectstruct_8h_source.html">openfsl/detectstruct.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="filesystem_8h_source.html">openfsl/filesystem.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="fslutils_8h_source.html">openfsl/fslutils.h</a>&quot;</code><br />
@@ -119,31 +118,32 @@ Include dependency graph for gpt.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="gpt_8h__incl.png" border="0" usemap="#include_2openfsl_2gpt_8h" alt=""/></div>
 <map name="include_2openfsl_2gpt_8h" id="include_2openfsl_2gpt_8h">
-<area shape="rect" title=" " alt="" coords="1005,5,1163,32"/>
-<area shape="rect" title=" " alt="" coords="880,603,947,629"/>
-<area shape="rect" title=" " alt="" coords="5,528,72,555"/>
-<area shape="rect" title=" " alt="" coords="1294,453,1357,480"/>
-<area shape="rect" title=" " alt="" coords="825,80,949,107"/>
-<area shape="rect" title=" " alt="" coords="147,453,227,480"/>
-<area shape="rect" href="detectstruct_8h.html" title=" " alt="" coords="705,155,869,181"/>
-<area shape="rect" href="filesystem_8h.html" title=" " alt="" coords="896,229,1051,256"/>
-<area shape="rect" href="error_8h.html" title=" " alt="" coords="1051,453,1167,480"/>
-<area shape="rect" href="fslutils_8h.html" title=" " alt="" coords="1379,379,1509,405"/>
-<area shape="rect" href="mbr_8h.html" title=" " alt="" coords="1029,80,1139,107"/>
-<area shape="rect" href="guid_8h.html" title=" " alt="" coords="1483,453,1597,480"/>
-<area shape="rect" title=" " alt="" coords="1277,528,1336,555"/>
-<area shape="rect" title=" " alt="" coords="645,229,720,256"/>
-<area shape="rect" href="blockdevice_8h.html" title=" " alt="" coords="633,304,797,331"/>
-<area shape="rect" href="types_8h.html" title=" " alt="" coords="653,453,776,480"/>
-<area shape="rect" title=" " alt="" coords="302,453,389,480"/>
-<area shape="rect" href="macros_8h.html" title=" " alt="" coords="549,528,683,555"/>
-<area shape="rect" href="iodevice_8h.html" title=" " alt="" coords="437,379,579,405"/>
-<area shape="rect" href="sector_8h.html" title=" " alt="" coords="851,453,976,480"/>
-<area shape="rect" href="symbols_8h.html" title=" " alt="" coords="1112,528,1253,555"/>
-<area shape="rect" title=" " alt="" coords="464,453,528,480"/>
-<area shape="rect" href="container_8h.html" title=" " alt="" coords="891,528,1037,555"/>
-<area shape="rect" title=" " alt="" coords="979,603,1050,629"/>
-<area shape="rect" title=" " alt="" coords="1672,453,1731,480"/>
+<area shape="rect" title=" " alt="" coords="1169,5,1327,32"/>
+<area shape="rect" title=" " alt="" coords="841,603,908,629"/>
+<area shape="rect" title=" " alt="" coords="99,528,165,555"/>
+<area shape="rect" title=" " alt="" coords="1526,453,1589,480"/>
+<area shape="rect" title=" " alt="" coords="966,80,1090,107"/>
+<area shape="rect" title=" " alt="" coords="195,453,275,480"/>
+<area shape="rect" title=" " alt="" coords="1165,80,1251,107"/>
+<area shape="rect" href="detectstruct_8h.html" title=" " alt="" coords="1217,155,1381,181"/>
+<area shape="rect" href="filesystem_8h.html" title=" " alt="" coords="784,229,939,256"/>
+<area shape="rect" href="error_8h.html" title=" " alt="" coords="998,453,1114,480"/>
+<area shape="rect" href="fslutils_8h.html" title=" " alt="" coords="1201,379,1332,405"/>
+<area shape="rect" href="mbr_8h.html" title=" " alt="" coords="831,80,942,107"/>
+<area shape="rect" href="guid_8h.html" title=" " alt="" coords="1613,453,1728,480"/>
+<area shape="rect" title=" " alt="" coords="1357,528,1416,555"/>
+<area shape="rect" title=" " alt="" coords="1243,229,1317,256"/>
+<area shape="rect" href="blockdevice_8h.html" title=" " alt="" coords="702,304,866,331"/>
+<area shape="rect" href="types_8h.html" title=" " alt="" coords="349,453,472,480"/>
+<area shape="rect" title=" " alt="" coords="686,453,773,480"/>
+<area shape="rect" href="macros_8h.html" title=" " alt="" coords="694,528,829,555"/>
+<area shape="rect" href="iodevice_8h.html" title=" " alt="" coords="577,379,719,405"/>
+<area shape="rect" href="sector_8h.html" title=" " alt="" coords="848,453,973,480"/>
+<area shape="rect" href="symbols_8h.html" title=" " alt="" coords="1075,528,1216,555"/>
+<area shape="rect" title=" " alt="" coords="547,453,611,480"/>
+<area shape="rect" href="container_8h.html" title=" " alt="" coords="904,528,1051,555"/>
+<area shape="rect" title=" " alt="" coords="1335,603,1406,629"/>
+<area shape="rect" title=" " alt="" coords="1291,453,1349,480"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -177,106 +177,11 @@ Classes</h2></td></tr>
 Namespaces</h2></td></tr>
 <tr class="memitem:namespaceopenfsl"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenfsl.html">openfsl</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespaceopenfsl_1_1_partition_guid"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenfsl_1_1_partition_guid.html">openfsl::PartitionGuid</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
-Enumerations</h2></td></tr>
-<tr class="memitem:a4619a346b7ad5aad3631fbdad76dbd94"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
-&#160;&#160;<a class="el" href="namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94a056854e6c23d7c97a17b8b8faf8dba86">openfsl::PartitionGuid::Unused</a>, 
-<a class="el" href="namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94a63f548cce3b231deb1a99f8a3aa91f38">openfsl::PartitionGuid::MBRPartitionScheme</a>, 
-<a class="el" href="namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94afbd01c7865b4edd033dc995c7aa0bfac">openfsl::PartitionGuid::EFISystemPartition</a>, 
-<a class="el" href="namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94acd94f3e6a49e8cd0ff45321fbf5f40c6">openfsl::PartitionGuid::BIOSBootPartition</a>, 
-<br />
-&#160;&#160;<a class="el" href="namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94ae3483e91ad57b3372763ef10d9e68740">openfsl::PartitionGuid::WindowsBasicData</a>, 
-<a class="el" href="namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94accb95cb69bfdb7f4c26e6ba218563812">openfsl::PartitionGuid::WindowsLDMMetaData</a>, 
-<a class="el" href="namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94a55c9c9315fe1abd9c9ab1d15b5603b19">openfsl::PartitionGuid::WindowsLDMData</a>, 
-<a class="el" href="namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94a004fb77fa4a8edffdb333aacfad4c32f">openfsl::PartitionGuid::WindowsRecovery</a>, 
-<br />
-&#160;&#160;<a class="el" href="namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94a0ec37caa75b3a5f6c453e8fef6c7bb26">openfsl::PartitionGuid::WindowsStorageSpaces</a>, 
-<a class="el" href="namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94aebfdc2b6fda444f474d997888ee77bdd">openfsl::PartitionGuid::WindowsStorageReplica</a>, 
-<a class="el" href="namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94ad22a3be611dc35db1834622511847b50">openfsl::PartitionGuid::HPUXData</a>, 
-<a class="el" href="namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94abcb6ae2fa39ba37281fe36173445c01a">openfsl::PartitionGuid::HPUXService</a>, 
-<br />
-&#160;&#160;<a class="el" href="namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94a81bd7e84575c8a590757ca45be8af292">openfsl::PartitionGuid::LinuxFilsystemData</a>, 
-<a class="el" href="namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94ae1e5c3180843a52305b1f36a173c4483">openfsl::PartitionGuid::LinuxRAID</a>, 
-<a class="el" href="namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94ae6a1457216002c8bc341091623893690">openfsl::PartitionGuid::LinuxRootx86</a>, 
-<a class="el" href="namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94a4cb5220ba6d7bd38fdb3c71f79fe97af">openfsl::PartitionGuid::LinuxRootx8664</a>, 
-<br />
-&#160;&#160;<a class="el" href="namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94ae18cd6a653c61997be0069ae3f4cb0b0">openfsl::PartitionGuid::LinuxRootARM32</a>, 
-<a class="el" href="namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94a0bbfc6ae0d5e2deda7d8d0e7fa33c757">openfsl::PartitionGuid::LinuxRootARM64</a>, 
-<a class="el" href="namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94a1111bbbdb4e8b7dc9b0fd2a492487530">openfsl::PartitionGuid::LinuxBoot</a>, 
-<a class="el" href="namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94a08e099b0be48b9378b776490fdb8a903">openfsl::PartitionGuid::LinuxSwap</a>, 
-<br />
-&#160;&#160;<a class="el" href="namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94afd02737ea9a0c644397e8b5685843bf8">openfsl::PartitionGuid::LinuxLVM</a>, 
-<a class="el" href="namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94a6cf174687d5c2300e402b2ab72cfeea9">openfsl::PartitionGuid::LinuxHome</a>, 
-<a class="el" href="namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94ab96aa6bd613dfbb59af56046e5f2754f">openfsl::PartitionGuid::LinuxServerData</a>, 
-<a class="el" href="namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94aa5ec503112e0869361181372b32fee33">openfsl::PartitionGuid::LinuxLUKS</a>, 
-<br />
-&#160;&#160;<a class="el" href="namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94ae9168e51986358cd005237e706a939c2">openfsl::PartitionGuid::FreeBSDBoot</a>, 
-<a class="el" href="namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94a1cf849e83ad86105359e2e5a69519831">openfsl::PartitionGuid::FreeBSDDiskLabel</a>, 
-<a class="el" href="namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94a78a3b39004ea5a2dc503e19bd1c851b0">openfsl::PartitionGuid::FreeBSDSwap</a>, 
-<a class="el" href="namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94aa16fd733a4bb24eea2812bacc60b036b">openfsl::PartitionGuid::FreeBSDUFS</a>, 
-<br />
-&#160;&#160;<a class="el" href="namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94a94735f95f6ea83eadcd30985ecfa58fa">openfsl::PartitionGuid::FreeBSDVinum</a>, 
-<a class="el" href="namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94a97d7f3d39d437d45dfec3a5eab3f1e85">openfsl::PartitionGuid::FreeBSDZFS</a>, 
-<a class="el" href="namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94a3f0f2de546156a453471e0758fed10a3">openfsl::PartitionGuid::FreeBSDNandfs</a>, 
-<a class="el" href="namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94a0feed04baf8d5bc7316f142209a6b737">openfsl::PartitionGuid::DarwinHFSPlus</a>, 
-<br />
-&#160;&#160;<a class="el" href="namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94a86cea9cf30683dc251c24bb5f07236bd">openfsl::PartitionGuid::DarwinAPFS</a>, 
-<a class="el" href="namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94ab343f26f3e6049cbe42f2232d38ca026">openfsl::PartitionGuid::DarwinUFS</a>, 
-<a class="el" href="namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94a8864cccfef811e6489bc4b0ab51b9d86">openfsl::PartitionGuid::DarwinZFS</a>, 
-<a class="el" href="namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94a7d9bc29518a163c138382bf1b27ebc81">openfsl::PartitionGuid::DarwinRAID</a>, 
-<br />
-&#160;&#160;<a class="el" href="namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94ae2dfd4a4308f7cb43458eb6573189f4a">openfsl::PartitionGuid::DarwinRAIDOffline</a>, 
-<a class="el" href="namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94ac5c5e70cc48a92010d884b6cc26e38ec">openfsl::PartitionGuid::DarwinBoot</a>, 
-<a class="el" href="namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94a60e0525405cc8617f93624cecb56b8c9">openfsl::PartitionGuid::DarwinAppleLabel</a>, 
-<a class="el" href="namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94a89be6f304430d2bb67249d3366406f78">openfsl::PartitionGuid::DarwinAppleTVRecovery</a>, 
-<br />
-&#160;&#160;<a class="el" href="namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94ae6db246a203fb65fdd8e659944253b10">openfsl::PartitionGuid::DarwinCoreStorage</a>, 
-<a class="el" href="namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94a4fbef19a88b8f119f298db85eaffe66d">openfsl::PartitionGuid::DarwinAPFSPreboot</a>, 
-<a class="el" href="namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94a5fd9e68349cede57a3f0e5ae5fa45137">openfsl::PartitionGuid::DarwinAPFSRecovery</a>, 
-<a class="el" href="namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94a96b104c91bc3ed982d1b11d182071993">openfsl::PartitionGuid::SolarisBoot</a>, 
-<br />
-&#160;&#160;<a class="el" href="namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94a3b7e6ca870ad4b04ba3ae039f4d5232b">openfsl::PartitionGuid::SolarisRoot</a>, 
-<a class="el" href="namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94a986169faacc9565f324eb43c0c12c34d">openfsl::PartitionGuid::SolarisSwap</a>, 
-<a class="el" href="namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94ae72b4aa8c41bee87cef98d87a82cce48">openfsl::PartitionGuid::SolarisBackup</a>, 
-<a class="el" href="namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94aa89b46a66198a65f03b67e3435b6040b">openfsl::PartitionGuid::SolarisUsr</a>, 
-<br />
-&#160;&#160;<a class="el" href="namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94a46c35f256afb20ded2ffe7a0ece4d67f">openfsl::PartitionGuid::SolarisVar</a>, 
-<a class="el" href="namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94a0b706a8e47a9d5c24f4764f2f9f357db">openfsl::PartitionGuid::SolarisHome</a>, 
-<a class="el" href="namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94a558b12d72f6626cdd3ddbac2ff68d766">openfsl::PartitionGuid::NetBSDSwap</a>, 
-<a class="el" href="namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94a5e283da35717619a8cac91dd5e88b038">openfsl::PartitionGuid::NetBSDFFS</a>, 
-<br />
-&#160;&#160;<a class="el" href="namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94aa97d758c909cd9037da65775fd04eb27">openfsl::PartitionGuid::NetBSDLFS</a>, 
-<a class="el" href="namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94a65db933fb399e7c43ac59163f16e8ff7">openfsl::PartitionGuid::NetBSDRAID</a>, 
-<a class="el" href="namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94acafef54050996f569ce009b82089dcaf">openfsl::PartitionGuid::NetBSDConcatenated</a>, 
-<a class="el" href="namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94abe6ed6f762b71e25de852d0403b0f613">openfsl::PartitionGuid::NetBSDEncrypted</a>, 
-<br />
-&#160;&#160;<a class="el" href="namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94afcad4e0f075d0e08224a83a005740cb2">openfsl::PartitionGuid::ChromeOSKernel</a>, 
-<a class="el" href="namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94a70d249396a6bbfbc87d745beb2b0500d">openfsl::PartitionGuid::ChromeOSRootfs</a>, 
-<a class="el" href="namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94a9dfa75b4935035fb676716dbeb8f6fcb">openfsl::PartitionGuid::ChromeOSFirmware</a>, 
-<a class="el" href="namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94a977377970eadd8bfa22757a35839a4b4">openfsl::PartitionGuid::ChromeOSMiniOS</a>, 
-<br />
-&#160;&#160;<a class="el" href="namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94a10353f1172f73f8dcbaee183f8ab47ed">openfsl::PartitionGuid::ChromeOSHibernate</a>, 
-<a class="el" href="namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94a32c09ecf49f173ca435adb7d6a6e4ee4">openfsl::PartitionGuid::HaikuBFS</a>, 
-<a class="el" href="namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94a1f67d9e2d22e463bdf3abfcb39c37faa">openfsl::PartitionGuid::MidnightBSDBoot</a>, 
-<a class="el" href="namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94af44ecbf3b87f0f61180375e42d9b039a">openfsl::PartitionGuid::MidnightBSDData</a>, 
-<br />
-&#160;&#160;<a class="el" href="namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94a61db7a3032f191b76b68a247db28aa4f">openfsl::PartitionGuid::MidnightBSDSwap</a>, 
-<a class="el" href="namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94a50c76ed6dc9acca73e3fc4c7a8043cf0">openfsl::PartitionGuid::MidnightBSDUFS</a>, 
-<a class="el" href="namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94a339f3d581089317e0354acdb3122d670">openfsl::PartitionGuid::MidnightBSDVinum</a>, 
-<a class="el" href="namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94a6159c819d33571192c7287b7455de272">openfsl::PartitionGuid::MidnightBSDZFS</a>, 
-<br />
-&#160;&#160;<a class="el" href="namespaceopenfsl_1_1_partition_guid.html#a4619a346b7ad5aad3631fbdad76dbd94a4961d18e8445bfca364f1c18b2b7d7da">openfsl::PartitionGuid::OpenBSDData</a>
-<br />
- }</td></tr>
-<tr class="separator:a4619a346b7ad5aad3631fbdad76dbd94"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a7788cba77e58343a39b4bdbc5234d471"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; int, GUID &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenfsl_1_1_partition_guid.html#a7788cba77e58343a39b4bdbc5234d471">openfsl::PartitionGuid::partitionGuidMap</a></td></tr>
-<tr class="separator:a7788cba77e58343a39b4bdbc5234d471"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a570beca576196dcbc17eb905ae7c1723"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; GUID, <a class="el" href="classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4a">openfsl::GPT::PartitionType</a>, GUIDHash &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenfsl.html#a570beca576196dcbc17eb905ae7c1723">openfsl::partitionGuidMap</a></td></tr>
+<tr class="separator:a570beca576196dcbc17eb905ae7c1723"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->

@@ -22,7 +22,6 @@
 /* @license-end */
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -94,48 +93,96 @@ $(document).ready(function(){initNavTree('gpt_8cpp.html',''); initResizable(); }
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">gpt.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="gpt_8h_source.html">openfsl/gpt.h</a>&quot;</code><br />
 <code>#include &lt;zlib.h&gt;</code><br />
+<code>#include &lt;iomanip&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for gpt.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="gpt_8cpp__incl.png" border="0" usemap="#src_2gpt_8cpp" alt=""/></div>
 <map name="src_2gpt_8cpp" id="src_2gpt_8cpp">
-<area shape="rect" title=" " alt="" coords="1091,5,1184,32"/>
-<area shape="rect" href="gpt_8h.html" title=" " alt="" coords="1031,80,1137,107"/>
-<area shape="rect" title=" " alt="" coords="1162,80,1219,107"/>
-<area shape="rect" title=" " alt="" coords="880,677,947,704"/>
-<area shape="rect" title=" " alt="" coords="5,603,72,629"/>
-<area shape="rect" title=" " alt="" coords="1294,528,1357,555"/>
-<area shape="rect" title=" " alt="" coords="825,155,949,181"/>
-<area shape="rect" title=" " alt="" coords="147,528,227,555"/>
-<area shape="rect" href="detectstruct_8h.html" title=" " alt="" coords="705,229,869,256"/>
-<area shape="rect" href="filesystem_8h.html" title=" " alt="" coords="896,304,1051,331"/>
-<area shape="rect" href="error_8h.html" title=" " alt="" coords="1051,528,1167,555"/>
-<area shape="rect" href="fslutils_8h.html" title=" " alt="" coords="1379,453,1509,480"/>
-<area shape="rect" href="mbr_8h.html" title=" " alt="" coords="1029,155,1139,181"/>
-<area shape="rect" href="guid_8h.html" title=" " alt="" coords="1483,528,1597,555"/>
-<area shape="rect" title=" " alt="" coords="1277,603,1336,629"/>
-<area shape="rect" title=" " alt="" coords="645,304,720,331"/>
-<area shape="rect" href="blockdevice_8h.html" title=" " alt="" coords="633,379,797,405"/>
-<area shape="rect" href="types_8h.html" title=" " alt="" coords="653,528,776,555"/>
-<area shape="rect" title=" " alt="" coords="302,528,389,555"/>
-<area shape="rect" href="macros_8h.html" title=" " alt="" coords="549,603,683,629"/>
-<area shape="rect" href="iodevice_8h.html" title=" " alt="" coords="437,453,579,480"/>
-<area shape="rect" href="sector_8h.html" title=" " alt="" coords="851,528,976,555"/>
-<area shape="rect" href="symbols_8h.html" title=" " alt="" coords="1112,603,1253,629"/>
-<area shape="rect" title=" " alt="" coords="464,528,528,555"/>
-<area shape="rect" href="container_8h.html" title=" " alt="" coords="891,603,1037,629"/>
-<area shape="rect" title=" " alt="" coords="979,677,1050,704"/>
-<area shape="rect" title=" " alt="" coords="1672,528,1731,555"/>
+<area shape="rect" title=" " alt="" coords="1291,5,1384,32"/>
+<area shape="rect" href="gpt_8h.html" title=" " alt="" coords="1177,80,1284,107"/>
+<area shape="rect" title=" " alt="" coords="1309,80,1366,107"/>
+<area shape="rect" title=" " alt="" coords="1391,80,1465,107"/>
+<area shape="rect" title=" " alt="" coords="841,677,908,704"/>
+<area shape="rect" title=" " alt="" coords="99,603,165,629"/>
+<area shape="rect" title=" " alt="" coords="1526,528,1589,555"/>
+<area shape="rect" title=" " alt="" coords="949,155,1073,181"/>
+<area shape="rect" title=" " alt="" coords="195,528,275,555"/>
+<area shape="rect" title=" " alt="" coords="1148,155,1233,181"/>
+<area shape="rect" href="detectstruct_8h.html" title=" " alt="" coords="1199,229,1363,256"/>
+<area shape="rect" href="filesystem_8h.html" title=" " alt="" coords="767,304,921,331"/>
+<area shape="rect" href="error_8h.html" title=" " alt="" coords="998,528,1114,555"/>
+<area shape="rect" href="fslutils_8h.html" title=" " alt="" coords="1201,453,1332,480"/>
+<area shape="rect" href="mbr_8h.html" title=" " alt="" coords="814,155,925,181"/>
+<area shape="rect" href="guid_8h.html" title=" " alt="" coords="1613,528,1728,555"/>
+<area shape="rect" title=" " alt="" coords="1357,603,1416,629"/>
+<area shape="rect" title=" " alt="" coords="1243,304,1317,331"/>
+<area shape="rect" href="blockdevice_8h.html" title=" " alt="" coords="702,379,866,405"/>
+<area shape="rect" href="types_8h.html" title=" " alt="" coords="349,528,472,555"/>
+<area shape="rect" title=" " alt="" coords="686,528,773,555"/>
+<area shape="rect" href="macros_8h.html" title=" " alt="" coords="694,603,829,629"/>
+<area shape="rect" href="iodevice_8h.html" title=" " alt="" coords="577,453,719,480"/>
+<area shape="rect" href="sector_8h.html" title=" " alt="" coords="848,528,973,555"/>
+<area shape="rect" href="symbols_8h.html" title=" " alt="" coords="1075,603,1216,629"/>
+<area shape="rect" title=" " alt="" coords="547,528,611,555"/>
+<area shape="rect" href="container_8h.html" title=" " alt="" coords="904,603,1051,629"/>
+<area shape="rect" title=" " alt="" coords="1335,677,1406,704"/>
+<area shape="rect" title=" " alt="" coords="1291,528,1349,555"/>
 </map>
 </div>
 </div>
 <p><a href="gpt_8cpp_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:acaecdaabacb07822bc7e3ca867269414"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gpt_8cpp.html#acaecdaabacb07822bc7e3ca867269414">__hexdump</a> (const uint8_t *p, size_t offset, size_t len)</td></tr>
+<tr class="separator:acaecdaabacb07822bc7e3ca867269414"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="acaecdaabacb07822bc7e3ca867269414"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acaecdaabacb07822bc7e3ca867269414">&#9670;&nbsp;</a></span>__hexdump()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void __hexdump </td>
+          <td>(</td>
+          <td class="paramtype">const uint8_t *&#160;</td>
+          <td class="paramname"><em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="fslutils_8cpp_source.html#l00056">56</a> of file <a class="el" href="fslutils_8cpp_source.html">fslutils.cpp</a>.</p>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

@@ -6,6 +6,10 @@ var dir_5cfc8f798c7a4c570457442210be7344 =
       [ "DiskParameter", "structopenfsl_1_1_block_device_1_1_disk_parameter.html", "structopenfsl_1_1_block_device_1_1_disk_parameter" ]
     ] ],
     [ "bootcode.h", "bootcode_8h.html", "bootcode_8h" ],
+    [ "chardevice.h", "chardevice_8h.html", [
+      [ "CharDevice", "classopenfsl_1_1_char_device.html", "classopenfsl_1_1_char_device" ],
+      [ "IOFunctions", "structopenfsl_1_1_char_device_1_1_i_o_functions.html", "structopenfsl_1_1_char_device_1_1_i_o_functions" ]
+    ] ],
     [ "container.h", "container_8h.html", [
       [ "Container", "classopenfsl_1_1_container.html", "classopenfsl_1_1_container" ]
     ] ],
@@ -20,7 +24,8 @@ var dir_5cfc8f798c7a4c570457442210be7344 =
     [ "fslutils.h", "fslutils_8h.html", "fslutils_8h" ],
     [ "gpt.h", "gpt_8h.html", "gpt_8h" ],
     [ "guid.h", "guid_8h.html", [
-      [ "GUID", "classopenfsl_1_1_g_u_i_d.html", "classopenfsl_1_1_g_u_i_d" ]
+      [ "GUID", "classopenfsl_1_1_g_u_i_d.html", "classopenfsl_1_1_g_u_i_d" ],
+      [ "GUIDHash", "structopenfsl_1_1_g_u_i_d_hash.html", "structopenfsl_1_1_g_u_i_d_hash" ]
     ] ],
     [ "initialize.h", "initialize_8h.html", "initialize_8h" ],
     [ "iodevice.h", "iodevice_8h.html", [
@@ -32,6 +37,12 @@ var dir_5cfc8f798c7a4c570457442210be7344 =
       [ "PartitionEntry", "structopenfsl_1_1_m_b_r_1_1_partition_entry.html", "structopenfsl_1_1_m_b_r_1_1_partition_entry" ],
       [ "PartitionTable", "structopenfsl_1_1_m_b_r_1_1_partition_table.html", "structopenfsl_1_1_m_b_r_1_1_partition_table" ],
       [ "PartitionInfo", "structopenfsl_1_1_m_b_r_1_1_partition_info.html", "structopenfsl_1_1_m_b_r_1_1_partition_info" ]
+    ] ],
+    [ "memblockdevice.h", "memblockdevice_8h.html", [
+      [ "MemBlockDevice", "classopenfsl_1_1_mem_block_device.html", "classopenfsl_1_1_mem_block_device" ]
+    ] ],
+    [ "memchardevice.h", "memchardevice_8h.html", [
+      [ "MemCharDevice", "classopenfsl_1_1_mem_char_device.html", "classopenfsl_1_1_mem_char_device" ]
     ] ],
     [ "openfsl.h", "openfsl_8h.html", null ],
     [ "options.h", "options_8h.html", null ],

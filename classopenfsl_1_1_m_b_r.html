@@ -22,7 +22,6 @@
 /* @license-end */
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -139,6 +138,52 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
+<tr class="memitem:a0b96adf72dee2df1ac1012dafd5036f1"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenfsl_1_1_m_b_r.html#a0b96adf72dee2df1ac1012dafd5036f1">PartitionType</a> : uint8_t { <br />
+&#160;&#160;<a class="el" href="classopenfsl_1_1_m_b_r.html#a0b96adf72dee2df1ac1012dafd5036f1a59dd0a7af04d0831465f6f511bd1224b">None</a> = 0x00, 
+<a class="el" href="classopenfsl_1_1_m_b_r.html#a0b96adf72dee2df1ac1012dafd5036f1a1c183348280c862d91d4b36721ff9ed7">FAT12PrimaryFirst32MB</a> = 0x01, 
+<a class="el" href="classopenfsl_1_1_m_b_r.html#a0b96adf72dee2df1ac1012dafd5036f1aba060e2a142249e8f207659a115ba6d9">FAT16LessThan32MB</a> = 0x04, 
+<a class="el" href="classopenfsl_1_1_m_b_r.html#a0b96adf72dee2df1ac1012dafd5036f1adca95f5ce79290d7d717944d60d7950e">ExtendedPartitionCHS</a> = 0x05, 
+<br />
+&#160;&#160;<a class="el" href="classopenfsl_1_1_m_b_r.html#a0b96adf72dee2df1ac1012dafd5036f1a51f0e6496d37129437d76394a51b2252">FAT16MoreThan32MBFirst8GB</a> = 0x06, 
+<a class="el" href="classopenfsl_1_1_m_b_r.html#a0b96adf72dee2df1ac1012dafd5036f1a7302fbddd6ec44f64829ff13f3139bec">IFS</a> = 0x07, 
+<a class="el" href="classopenfsl_1_1_m_b_r.html#a0b96adf72dee2df1ac1012dafd5036f1ac76c9efaf1d7b1ad1a6409d344fd0ea5">NTFS</a> = 0x07, 
+<a class="el" href="classopenfsl_1_1_m_b_r.html#a0b96adf72dee2df1ac1012dafd5036f1a48221dac7ed337ec9f5885a122f7c544">HPFS</a> = 0x07, 
+<br />
+&#160;&#160;<a class="el" href="classopenfsl_1_1_m_b_r.html#a0b96adf72dee2df1ac1012dafd5036f1aaac739664d8ae5b6f3a2de7344018e16">ExFAT</a> = 0x07, 
+<a class="el" href="classopenfsl_1_1_m_b_r.html#a0b96adf72dee2df1ac1012dafd5036f1a1f5ba1489f6054ae576f84234dc4de81">FAT32CHS</a> = 0x0B, 
+<a class="el" href="classopenfsl_1_1_m_b_r.html#a0b96adf72dee2df1ac1012dafd5036f1a11eaa55c499c33ce1400cef015761300">FAT32LBA</a> = 0x0C, 
+<a class="el" href="classopenfsl_1_1_m_b_r.html#a0b96adf72dee2df1ac1012dafd5036f1a94ffb6f6a95329611f0c8050f83160af">FAT16BLBA</a> = 0x0E, 
+<br />
+&#160;&#160;<a class="el" href="classopenfsl_1_1_m_b_r.html#a0b96adf72dee2df1ac1012dafd5036f1acc0ebb008f8d637e2c1eabf716604779">ExtendedPartitionLBA</a> = 0x0F, 
+<a class="el" href="classopenfsl_1_1_m_b_r.html#a0b96adf72dee2df1ac1012dafd5036f1acabfb2f98528ecb6eae8b73ebc3687d8">WindowsRENTFS</a> = 0x27, 
+<a class="el" href="classopenfsl_1_1_m_b_r.html#a0b96adf72dee2df1ac1012dafd5036f1a9f47c436d6d82258316bc27caf0a0181">LinuxLegacy</a> = 0x41, 
+<a class="el" href="classopenfsl_1_1_m_b_r.html#a0b96adf72dee2df1ac1012dafd5036f1a368b65565133dd8cafb6f1917cb045c4">PPCReferencePlatformBoot</a> = 0x41, 
+<br />
+&#160;&#160;<a class="el" href="classopenfsl_1_1_m_b_r.html#a0b96adf72dee2df1ac1012dafd5036f1a677b06a069b0d5eec42b8b1725b9e51e">LinuxSwapLegacy</a> = 0x41, 
+<a class="el" href="classopenfsl_1_1_m_b_r.html#a0b96adf72dee2df1ac1012dafd5036f1a382ada58a90dad5eebe0527e28e7b9f5">LinuxSwap</a> = 0x82, 
+<a class="el" href="classopenfsl_1_1_m_b_r.html#a0b96adf72dee2df1ac1012dafd5036f1a9c109586f0c27ab2df2d8f0739469eac">LinuxNativeFileSystem</a> = 0x83, 
+<a class="el" href="classopenfsl_1_1_m_b_r.html#a0b96adf72dee2df1ac1012dafd5036f1ab95459a0cf6c082e868bf603bd056daf">LinuxExtended</a> = 0x85, 
+<br />
+&#160;&#160;<a class="el" href="classopenfsl_1_1_m_b_r.html#a0b96adf72dee2df1ac1012dafd5036f1ac78d8699040106b90dfd5d113db57b29">LinuxHidden</a> = 0x93, 
+<a class="el" href="classopenfsl_1_1_m_b_r.html#a0b96adf72dee2df1ac1012dafd5036f1ada6f573cfae0f0abbfe21c16948c31ef">ISO9660</a> = 0x96, 
+<a class="el" href="classopenfsl_1_1_m_b_r.html#a0b96adf72dee2df1ac1012dafd5036f1ab71db582896a119b6cd03c6de5dff40b">FreeBSDSlice</a> = 0xA5, 
+<a class="el" href="classopenfsl_1_1_m_b_r.html#a0b96adf72dee2df1ac1012dafd5036f1aa0a873627613fc4d418a963bc09c9598">OpenBSDSlice</a> = 0xA6, 
+<br />
+&#160;&#160;<a class="el" href="classopenfsl_1_1_m_b_r.html#a0b96adf72dee2df1ac1012dafd5036f1a1b7fef9de6c16fb1555ac8fc8a66b56e">DarwinUFS</a> = 0xA8, 
+<a class="el" href="classopenfsl_1_1_m_b_r.html#a0b96adf72dee2df1ac1012dafd5036f1afdd42e549e7333db7e7636102df51f1d">NetBSDSlice</a> = 0xA9, 
+<a class="el" href="classopenfsl_1_1_m_b_r.html#a0b96adf72dee2df1ac1012dafd5036f1aa8394c0439c2a20e3de0a1d666bda87e">DarwinBoot</a> = 0xAB, 
+<a class="el" href="classopenfsl_1_1_m_b_r.html#a0b96adf72dee2df1ac1012dafd5036f1ab7776630f63fcbd5333d03518cab3d87">DarwinRAID</a> = 0xAC, 
+<br />
+&#160;&#160;<a class="el" href="classopenfsl_1_1_m_b_r.html#a0b96adf72dee2df1ac1012dafd5036f1a1d1b080e238c9322576b05aa1473a5b8">HFSPlus</a> = 0xAF, 
+<a class="el" href="classopenfsl_1_1_m_b_r.html#a0b96adf72dee2df1ac1012dafd5036f1ae90412f4bf7609e7e9be03d8d941c959">LUKS</a> = 0xE8, 
+<a class="el" href="classopenfsl_1_1_m_b_r.html#a0b96adf72dee2df1ac1012dafd5036f1ae3ff826fa376a306f5cda0fab3f69455">GPTProtective</a> = 0xEE, 
+<a class="el" href="classopenfsl_1_1_m_b_r.html#a0b96adf72dee2df1ac1012dafd5036f1ab5de0d6fb5b5567b0874ace15349ccd4">EFISystem</a> = 0xEF, 
+<br />
+&#160;&#160;<a class="el" href="classopenfsl_1_1_m_b_r.html#a0b96adf72dee2df1ac1012dafd5036f1a80bc481acea7e70160a90472d1847b52">VMwareVMFS</a> = 0xFB, 
+<a class="el" href="classopenfsl_1_1_m_b_r.html#a0b96adf72dee2df1ac1012dafd5036f1acab24ffe66b156c80ad28e03b33e8aa5">VMwareSwap</a> = 0xFC
+<br />
+ }</td></tr>
+<tr class="separator:a0b96adf72dee2df1ac1012dafd5036f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afffd252defc7b94c579e1a28c85d641c"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structopenfsl_1_1_m_b_r_1_1_partition_info.html">openfsl::MBR::PartitionInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenfsl_1_1_m_b_r.html#afffd252defc7b94c579e1a28c85d641c">PartitionInfo</a></td></tr>
 <tr class="separator:afffd252defc7b94c579e1a28c85d641c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -150,26 +195,11 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a6660059c177628711aec584964fe1ebb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a92009da835b93c83686b36f5e2a30ae8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="error_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a> <a class="el" href="macros_8h.html#a73fa52cd4bbaa839980b3008201d09c0">__check_result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenfsl_1_1_m_b_r.html#a92009da835b93c83686b36f5e2a30ae8">initialize</a> ()</td></tr>
 <tr class="separator:a92009da835b93c83686b36f5e2a30ae8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a52f0f7f30aa15a6a0714253bd4a119ac"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structopenfsl_1_1_m_b_r_1_1_partition_info.html">PartitionInfo</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenfsl_1_1_m_b_r.html#a52f0f7f30aa15a6a0714253bd4a119ac">getPartitionInfo</a> ()</td></tr>
-<tr class="separator:a52f0f7f30aa15a6a0714253bd4a119ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add77b8f591f3cc01ca0f7c945327d8aa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="error_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenfsl_1_1_m_b_r.html#add77b8f591f3cc01ca0f7c945327d8aa">getPartitionInfo</a> (std::vector&lt; <a class="el" href="structopenfsl_1_1_m_b_r_1_1_partition_info.html">PartitionInfo</a> &gt; *buf)</td></tr>
+<tr class="separator:add77b8f591f3cc01ca0f7c945327d8aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-types"></a>
 Private Types</h2></td></tr>
-<tr class="memitem:a0b96adf72dee2df1ac1012dafd5036f1"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenfsl_1_1_m_b_r.html#a0b96adf72dee2df1ac1012dafd5036f1">PartitionType</a> : uint8_t { <br />
-&#160;&#160;<a class="el" href="classopenfsl_1_1_m_b_r.html#a0b96adf72dee2df1ac1012dafd5036f1a59dd0a7af04d0831465f6f511bd1224b">None</a> = 0x00, 
-<a class="el" href="classopenfsl_1_1_m_b_r.html#a0b96adf72dee2df1ac1012dafd5036f1af47440b63b1777103d0b403b0fe65f72">FAT12</a> = 0x01, 
-<a class="el" href="classopenfsl_1_1_m_b_r.html#a0b96adf72dee2df1ac1012dafd5036f1a12ef190322ea6dca92c53fa9f645734a">ExtPart_S</a> = 0x05, 
-<a class="el" href="classopenfsl_1_1_m_b_r.html#a0b96adf72dee2df1ac1012dafd5036f1ac76c9efaf1d7b1ad1a6409d344fd0ea5">NTFS</a> = 0x07, 
-<br />
-&#160;&#160;<a class="el" href="classopenfsl_1_1_m_b_r.html#a0b96adf72dee2df1ac1012dafd5036f1a5c7ad447963f2c754184a48bff7208d8">FAT32</a> = 0x0B, 
-<a class="el" href="classopenfsl_1_1_m_b_r.html#a0b96adf72dee2df1ac1012dafd5036f1a37541e357ba28540906bc907d2cce172">FAT32_LBA</a> = 0x0C, 
-<a class="el" href="classopenfsl_1_1_m_b_r.html#a0b96adf72dee2df1ac1012dafd5036f1aeac4cc318521661babf914951a3bb23c">FAT16_LBA</a> = 0x0E, 
-<a class="el" href="classopenfsl_1_1_m_b_r.html#a0b96adf72dee2df1ac1012dafd5036f1ac9961b64cad2bd2d51abbf506cf22fe2">ExtPart_L</a> = 0x0F, 
-<br />
-&#160;&#160;<a class="el" href="classopenfsl_1_1_m_b_r.html#a0b96adf72dee2df1ac1012dafd5036f1af45e30bf246978d3d90de65cce6352a7">GPT</a> = 0xEE
-<br />
- }</td></tr>
-<tr class="separator:a0b96adf72dee2df1ac1012dafd5036f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae316b29c6e90e2fd967930fe23bc0c19"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structopenfsl_1_1_m_b_r_1_1_partition_entry.html">openfsl::MBR::PartitionEntry</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenfsl_1_1_m_b_r.html#ae316b29c6e90e2fd967930fe23bc0c19">PartitionEntry</a></td></tr>
 <tr class="memdesc:ae316b29c6e90e2fd967930fe23bc0c19"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classopenfsl_1_1_m_b_r.html">MBR</a> Partition Entry.  <a href="classopenfsl_1_1_m_b_r.html#ae316b29c6e90e2fd967930fe23bc0c19">More...</a><br /></td></tr>
 <tr class="separator:ae316b29c6e90e2fd967930fe23bc0c19"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -282,30 +312,47 @@ Private Attributes</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">enum <a class="el" href="classopenfsl_1_1_m_b_r.html#a0b96adf72dee2df1ac1012dafd5036f1">openfsl::MBR::PartitionType</a> : uint8_t</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a0b96adf72dee2df1ac1012dafd5036f1a59dd0a7af04d0831465f6f511bd1224b"></a>None&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a0b96adf72dee2df1ac1012dafd5036f1af47440b63b1777103d0b403b0fe65f72"></a>FAT12&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a0b96adf72dee2df1ac1012dafd5036f1a12ef190322ea6dca92c53fa9f645734a"></a>ExtPart_S&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0b96adf72dee2df1ac1012dafd5036f1a1c183348280c862d91d4b36721ff9ed7"></a>FAT12PrimaryFirst32MB&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0b96adf72dee2df1ac1012dafd5036f1aba060e2a142249e8f207659a115ba6d9"></a>FAT16LessThan32MB&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0b96adf72dee2df1ac1012dafd5036f1adca95f5ce79290d7d717944d60d7950e"></a>ExtendedPartitionCHS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0b96adf72dee2df1ac1012dafd5036f1a51f0e6496d37129437d76394a51b2252"></a>FAT16MoreThan32MBFirst8GB&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0b96adf72dee2df1ac1012dafd5036f1a7302fbddd6ec44f64829ff13f3139bec"></a>IFS&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a0b96adf72dee2df1ac1012dafd5036f1ac76c9efaf1d7b1ad1a6409d344fd0ea5"></a>NTFS&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a0b96adf72dee2df1ac1012dafd5036f1a5c7ad447963f2c754184a48bff7208d8"></a>FAT32&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a0b96adf72dee2df1ac1012dafd5036f1a37541e357ba28540906bc907d2cce172"></a>FAT32_LBA&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a0b96adf72dee2df1ac1012dafd5036f1aeac4cc318521661babf914951a3bb23c"></a>FAT16_LBA&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a0b96adf72dee2df1ac1012dafd5036f1ac9961b64cad2bd2d51abbf506cf22fe2"></a>ExtPart_L&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a0b96adf72dee2df1ac1012dafd5036f1af45e30bf246978d3d90de65cce6352a7"></a>GPT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0b96adf72dee2df1ac1012dafd5036f1a48221dac7ed337ec9f5885a122f7c544"></a>HPFS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0b96adf72dee2df1ac1012dafd5036f1aaac739664d8ae5b6f3a2de7344018e16"></a>ExFAT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0b96adf72dee2df1ac1012dafd5036f1a1f5ba1489f6054ae576f84234dc4de81"></a>FAT32CHS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0b96adf72dee2df1ac1012dafd5036f1a11eaa55c499c33ce1400cef015761300"></a>FAT32LBA&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0b96adf72dee2df1ac1012dafd5036f1a94ffb6f6a95329611f0c8050f83160af"></a>FAT16BLBA&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0b96adf72dee2df1ac1012dafd5036f1acc0ebb008f8d637e2c1eabf716604779"></a>ExtendedPartitionLBA&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0b96adf72dee2df1ac1012dafd5036f1acabfb2f98528ecb6eae8b73ebc3687d8"></a>WindowsRENTFS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0b96adf72dee2df1ac1012dafd5036f1a9f47c436d6d82258316bc27caf0a0181"></a>LinuxLegacy&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0b96adf72dee2df1ac1012dafd5036f1a368b65565133dd8cafb6f1917cb045c4"></a>PPCReferencePlatformBoot&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0b96adf72dee2df1ac1012dafd5036f1a677b06a069b0d5eec42b8b1725b9e51e"></a>LinuxSwapLegacy&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0b96adf72dee2df1ac1012dafd5036f1a382ada58a90dad5eebe0527e28e7b9f5"></a>LinuxSwap&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0b96adf72dee2df1ac1012dafd5036f1a9c109586f0c27ab2df2d8f0739469eac"></a>LinuxNativeFileSystem&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0b96adf72dee2df1ac1012dafd5036f1ab95459a0cf6c082e868bf603bd056daf"></a>LinuxExtended&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0b96adf72dee2df1ac1012dafd5036f1ac78d8699040106b90dfd5d113db57b29"></a>LinuxHidden&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0b96adf72dee2df1ac1012dafd5036f1ada6f573cfae0f0abbfe21c16948c31ef"></a>ISO9660&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0b96adf72dee2df1ac1012dafd5036f1ab71db582896a119b6cd03c6de5dff40b"></a>FreeBSDSlice&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0b96adf72dee2df1ac1012dafd5036f1aa0a873627613fc4d418a963bc09c9598"></a>OpenBSDSlice&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0b96adf72dee2df1ac1012dafd5036f1a1b7fef9de6c16fb1555ac8fc8a66b56e"></a>DarwinUFS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0b96adf72dee2df1ac1012dafd5036f1afdd42e549e7333db7e7636102df51f1d"></a>NetBSDSlice&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0b96adf72dee2df1ac1012dafd5036f1aa8394c0439c2a20e3de0a1d666bda87e"></a>DarwinBoot&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0b96adf72dee2df1ac1012dafd5036f1ab7776630f63fcbd5333d03518cab3d87"></a>DarwinRAID&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0b96adf72dee2df1ac1012dafd5036f1a1d1b080e238c9322576b05aa1473a5b8"></a>HFSPlus&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0b96adf72dee2df1ac1012dafd5036f1ae90412f4bf7609e7e9be03d8d941c959"></a>LUKS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0b96adf72dee2df1ac1012dafd5036f1ae3ff826fa376a306f5cda0fab3f69455"></a>GPTProtective&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0b96adf72dee2df1ac1012dafd5036f1ab5de0d6fb5b5567b0874ace15349ccd4"></a>EFISystem&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0b96adf72dee2df1ac1012dafd5036f1a80bc481acea7e70160a90472d1847b52"></a>VMwareVMFS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0b96adf72dee2df1ac1012dafd5036f1acab24ffe66b156c80ad28e03b33e8aa5"></a>VMwareSwap&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 <p class="definition">Definition at line <a class="el" href="mbr_8h_source.html#l00031">31</a> of file <a class="el" href="mbr_8h_source.html">mbr.h</a>.</p>
@@ -361,27 +408,28 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a52f0f7f30aa15a6a0714253bd4a119ac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a52f0f7f30aa15a6a0714253bd4a119ac">&#9670;&nbsp;</a></span>getPartitionInfo()</h2>
+<a id="add77b8f591f3cc01ca0f7c945327d8aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add77b8f591f3cc01ca0f7c945327d8aa">&#9670;&nbsp;</a></span>getPartitionInfo()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt; <a class="el" href="structopenfsl_1_1_m_b_r_1_1_partition_info.html">openfsl::MBR::PartitionInfo</a> &gt; openfsl::MBR::getPartitionInfo </td>
+          <td class="memname"><a class="el" href="error_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a> openfsl::MBR::getPartitionInfo </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="structopenfsl_1_1_m_b_r_1_1_partition_info.html">PartitionInfo</a> &gt; *&#160;</td>
+          <td class="paramname"><em>buf</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mbr_8cpp_source.html#l00115">115</a> of file <a class="el" href="mbr_8cpp_source.html">mbr.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mbr_8cpp_source.html#l00117">117</a> of file <a class="el" href="mbr_8cpp_source.html">mbr.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classopenfsl_1_1_m_b_r_a52f0f7f30aa15a6a0714253bd4a119ac_cgraph.png" border="0" usemap="#classopenfsl_1_1_m_b_r_a52f0f7f30aa15a6a0714253bd4a119ac_cgraph" alt=""/></div>
-<map name="classopenfsl_1_1_m_b_r_a52f0f7f30aa15a6a0714253bd4a119ac_cgraph" id="classopenfsl_1_1_m_b_r_a52f0f7f30aa15a6a0714253bd4a119ac_cgraph">
+<div class="center"><img src="classopenfsl_1_1_m_b_r_add77b8f591f3cc01ca0f7c945327d8aa_cgraph.png" border="0" usemap="#classopenfsl_1_1_m_b_r_add77b8f591f3cc01ca0f7c945327d8aa_cgraph" alt=""/></div>
+<map name="classopenfsl_1_1_m_b_r_add77b8f591f3cc01ca0f7c945327d8aa_cgraph" id="classopenfsl_1_1_m_b_r_add77b8f591f3cc01ca0f7c945327d8aa_cgraph">
 <area shape="rect" title=" " alt="" coords="5,5,221,32"/>
 <area shape="rect" href="namespaceopenfsl.html#a2e842313f02239c1497b018b5f9e4161" title=" " alt="" coords="269,5,463,32"/>
 </map>
@@ -389,8 +437,8 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classopenfsl_1_1_m_b_r_a52f0f7f30aa15a6a0714253bd4a119ac_icgraph.png" border="0" usemap="#classopenfsl_1_1_m_b_r_a52f0f7f30aa15a6a0714253bd4a119ac_icgraph" alt=""/></div>
-<map name="classopenfsl_1_1_m_b_r_a52f0f7f30aa15a6a0714253bd4a119ac_icgraph" id="classopenfsl_1_1_m_b_r_a52f0f7f30aa15a6a0714253bd4a119ac_icgraph">
+<div class="center"><img src="classopenfsl_1_1_m_b_r_add77b8f591f3cc01ca0f7c945327d8aa_icgraph.png" border="0" usemap="#classopenfsl_1_1_m_b_r_add77b8f591f3cc01ca0f7c945327d8aa_icgraph" alt=""/></div>
+<map name="classopenfsl_1_1_m_b_r_add77b8f591f3cc01ca0f7c945327d8aa_icgraph" id="classopenfsl_1_1_m_b_r_add77b8f591f3cc01ca0f7c945327d8aa_icgraph">
 <area shape="rect" title=" " alt="" coords="260,5,476,32"/>
 <area shape="rect" href="namespaceopenfsl.html#a6a72fba5307f9f6a3bc92d782d714226" title=" " alt="" coords="5,5,212,32"/>
 </map>
@@ -457,7 +505,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mbr_8h_source.html#l00084">84</a> of file <a class="el" href="mbr_8h_source.html">mbr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mbr_8h_source.html#l00110">110</a> of file <a class="el" href="mbr_8h_source.html">mbr.h</a>.</p>
 
 </div>
 </div>
@@ -481,7 +529,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mbr_8h_source.html#l00085">85</a> of file <a class="el" href="mbr_8h_source.html">mbr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mbr_8h_source.html#l00111">111</a> of file <a class="el" href="mbr_8h_source.html">mbr.h</a>.</p>
 
 </div>
 </div>

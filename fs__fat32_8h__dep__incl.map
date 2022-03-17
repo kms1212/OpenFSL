@@ -1,5 +1,5 @@
 <map id="fs/fat32/include/openfsl/fat32/fs_fat32.h" name="fs/fat32/include/openfsl/fat32/fs_fat32.h">
-<area shape="rect" id="node1" title=" " alt="" coords="4768,5,4943,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="4872,5,5047,47"/>
 <area shape="rect" id="node2" href="$bpb_8cpp.html" title=" " alt="" coords="5,102,156,129"/>
 <area shape="rect" id="node3" href="$cache_8cpp.html" title=" " alt="" coords="180,102,344,129"/>
 <area shape="rect" id="node4" href="$fat32_2src_2charcoding_8cpp.html" title=" " alt="" coords="369,102,566,129"/>
@@ -37,13 +37,14 @@
 <area shape="rect" id="node36" href="$nextcluster_8cpp.html" title=" " alt="" coords="7100,102,7299,129"/>
 <area shape="rect" id="node37" href="$operator_8cpp.html" title=" " alt="" coords="7323,102,7503,129"/>
 <area shape="rect" id="node38" href="$path_8cpp.html" title=" " alt="" coords="7527,102,7682,129"/>
-<area shape="rect" id="node39" href="$remove_8cpp.html" title=" " alt="" coords="7706,102,7882,129"/>
-<area shape="rect" id="node40" href="$removeentry_8cpp.html" title=" " alt="" coords="7906,102,8114,129"/>
-<area shape="rect" id="node41" href="$search_8cpp.html" title=" " alt="" coords="8139,102,8308,129"/>
-<area shape="rect" id="node42" href="$setentryinfo_8cpp.html" title=" " alt="" coords="8333,102,8538,129"/>
-<area shape="rect" id="node43" href="$time_8cpp.html" title=" " alt="" coords="8563,102,8719,129"/>
-<area shape="rect" id="node44" href="$wrapper__directory_8cpp.html" title=" " alt="" coords="8743,95,8895,136"/>
-<area shape="rect" id="node45" href="$wrapper__entry_8cpp.html" title=" " alt="" coords="8919,95,9071,136"/>
-<area shape="rect" id="node46" href="$wrapper__file_8cpp.html" title=" " alt="" coords="9095,95,9247,136"/>
-<area shape="rect" id="node47" href="$wrapper__volume_8cpp.html" title=" " alt="" coords="9271,95,9423,136"/>
+<area shape="rect" id="node39" href="$removedir_8cpp.html" title=" " alt="" coords="7706,102,7898,129"/>
+<area shape="rect" id="node40" href="$removeentry_8cpp.html" title=" " alt="" coords="7922,102,8130,129"/>
+<area shape="rect" id="node41" href="$removefile_8cpp.html" title=" " alt="" coords="8155,102,8351,129"/>
+<area shape="rect" id="node42" href="$search_8cpp.html" title=" " alt="" coords="8375,102,8544,129"/>
+<area shape="rect" id="node43" href="$setentryinfo_8cpp.html" title=" " alt="" coords="8569,102,8774,129"/>
+<area shape="rect" id="node44" href="$time_8cpp.html" title=" " alt="" coords="8799,102,8955,129"/>
+<area shape="rect" id="node45" href="$wrapper__directory_8cpp.html" title=" " alt="" coords="8979,95,9131,136"/>
+<area shape="rect" id="node46" href="$wrapper__entry_8cpp.html" title=" " alt="" coords="9155,95,9307,136"/>
+<area shape="rect" id="node47" href="$wrapper__file_8cpp.html" title=" " alt="" coords="9331,95,9483,136"/>
+<area shape="rect" id="node48" href="$wrapper__volume_8cpp.html" title=" " alt="" coords="9507,95,9659,136"/>
 </map>

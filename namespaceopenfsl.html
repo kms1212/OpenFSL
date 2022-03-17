@@ -22,7 +22,6 @@
 /* @license-end */
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -110,13 +109,14 @@ $(document).ready(function(){initNavTree('namespaceopenfsl.html',''); initResiza
 Namespaces</h2></td></tr>
 <tr class="memitem:namespaceopenfsl_1_1fs_structure"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenfsl_1_1fs_structure.html">fsStructure</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespaceopenfsl_1_1_partition_guid"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenfsl_1_1_partition_guid.html">PartitionGuid</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenfsl_1_1_block_device.html">BlockDevice</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disk driver.  <a href="classopenfsl_1_1_block_device.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenfsl_1_1_char_device.html">CharDevice</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disk driver.  <a href="classopenfsl_1_1_char_device.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structopenfsl_1_1_c_h_s.html">CHS</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -140,9 +140,16 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenfsl_1_1_g_u_i_d.html">GUID</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classopenfsl_1_1_sector.html" title="Sector buffer.">Sector</a> buffer.  <a href="classopenfsl_1_1_g_u_i_d.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structopenfsl_1_1_g_u_i_d_hash.html">GUIDHash</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenfsl_1_1_i_o_device.html">IODevice</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenfsl_1_1_m_b_r.html">MBR</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenfsl_1_1_mem_block_device.html">MemBlockDevice</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenfsl_1_1_mem_char_device.html">MemCharDevice</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disk driver.  <a href="classopenfsl_1_1_mem_char_device.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenfsl_1_1_n_t_f_s.html">NTFS</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classopenfsl_1_1_n_t_f_s.html" title="NTFS imeplementation.">NTFS</a> imeplementation.  <a href="classopenfsl_1_1_n_t_f_s.html#details">More...</a><br /></td></tr>
@@ -217,6 +224,8 @@ Enumerations</h2></td></tr>
 Functions</h2></td></tr>
 <tr class="memitem:a6a72fba5307f9f6a3bc92d782d714226"><td class="memItemLeft" align="right" valign="top"><a class="el" href="error_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a> <a class="el" href="macros_8h.html#a73fa52cd4bbaa839980b3008201d09c0">__check_result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenfsl.html#a6a72fba5307f9f6a3bc92d782d714226">detectDiskStructure</a> (<a class="el" href="structopenfsl_1_1_disk_structure.html">DiskStructure</a> *buf, <a class="el" href="classopenfsl_1_1_block_device.html">BlockDevice</a> *dd)</td></tr>
 <tr class="separator:a6a72fba5307f9f6a3bc92d782d714226"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e230af6aae2cbecb0e18be1af8689f2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="error_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a> <a class="el" href="macros_8h.html#a73fa52cd4bbaa839980b3008201d09c0">__check_result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenfsl.html#a9e230af6aae2cbecb0e18be1af8689f2">detectFileSystem</a> (<a class="el" href="namespaceopenfsl.html#a43add8221d9aa3cd7285f47e4e04e72e">FileSystemType</a> *buf, <a class="el" href="classopenfsl_1_1_block_device.html">BlockDevice</a> *bd, <a class="el" href="namespaceopenfsl.html#ac82097377896cd83a32c893edb39f391">lba48_t</a> bpbSectorAddr=0)</td></tr>
+<tr class="separator:a9e230af6aae2cbecb0e18be1af8689f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a504a1b9126c87c62a51837b9388abf86"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenfsl.html#a504a1b9126c87c62a51837b9388abf86">partitionTableTypeToString</a> (const <a class="el" href="namespaceopenfsl.html#aaeee298c14e04bb116e0f85588036dd4">PartitionTableType</a> type)</td></tr>
 <tr class="separator:a504a1b9126c87c62a51837b9388abf86"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af0c653bca3fe7d5fe083c0225e7f25ea"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenfsl.html#af0c653bca3fe7d5fe083c0225e7f25ea">fileSystemTypeToString</a> (const <a class="el" href="namespaceopenfsl.html#a43add8221d9aa3cd7285f47e4e04e72e">FileSystemType</a> type)</td></tr>
@@ -270,6 +279,8 @@ Functions</h2></td></tr>
 Variables</h2></td></tr>
 <tr class="memitem:ad93b844fd4b92c6c0a417cc0895f317f"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="macros_8h.html#ab42a43b6291cf51c6c3c85301160c078">__maybe_unused</a> char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenfsl.html#ad93b844fd4b92c6c0a417cc0895f317f">__error_str</a> []</td></tr>
 <tr class="separator:ad93b844fd4b92c6c0a417cc0895f317f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a570beca576196dcbc17eb905ae7c1723"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; <a class="el" href="classopenfsl_1_1_g_u_i_d.html">GUID</a>, <a class="el" href="classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4a">openfsl::GPT::PartitionType</a>, <a class="el" href="structopenfsl_1_1_g_u_i_d_hash.html">GUIDHash</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenfsl.html#a570beca576196dcbc17eb905ae7c1723">partitionGuidMap</a></td></tr>
+<tr class="separator:a570beca576196dcbc17eb905ae7c1723"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ab01987ba38def9410abee9b43613c8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenfsl.html#a1ab01987ba38def9410abee9b43613c8">initialized</a> = false</td></tr>
 <tr class="separator:a1ab01987ba38def9410abee9b43613c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -546,7 +557,7 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="namespaceopenfsl_a2e842313f02239c1497b018b5f9e4161_icgraph.png" border="0" usemap="#namespaceopenfsl_a2e842313f02239c1497b018b5f9e4161_icgraph" alt=""/></div>
 <map name="namespaceopenfsl_a2e842313f02239c1497b018b5f9e4161_icgraph" id="namespaceopenfsl_a2e842313f02239c1497b018b5f9e4161_icgraph">
 <area shape="rect" title=" " alt="" coords="524,5,717,32"/>
-<area shape="rect" href="classopenfsl_1_1_m_b_r.html#a52f0f7f30aa15a6a0714253bd4a119ac" title=" " alt="" coords="260,5,476,32"/>
+<area shape="rect" href="classopenfsl_1_1_m_b_r.html#add77b8f591f3cc01ca0f7c945327d8aa" title=" " alt="" coords="260,5,476,32"/>
 <area shape="rect" href="namespaceopenfsl.html#a6a72fba5307f9f6a3bc92d782d714226" title=" " alt="" coords="5,5,212,32"/>
 </map>
 </div>
@@ -659,15 +670,74 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespaceopenfsl_a6a72fba5307f9f6a3bc92d782d714226_cgraph.png" border="0" usemap="#namespaceopenfsl_a6a72fba5307f9f6a3bc92d782d714226_cgraph" alt=""/></div>
 <map name="namespaceopenfsl_a6a72fba5307f9f6a3bc92d782d714226_cgraph" id="namespaceopenfsl_a6a72fba5307f9f6a3bc92d782d714226_cgraph">
-<area shape="rect" title=" " alt="" coords="5,139,212,166"/>
-<area shape="rect" href="classopenfsl_1_1_sector.html#af9128b9d68ff6b96d70336a6e51d23e4" title="Data buffer getter." alt="" coords="531,34,710,60"/>
-<area shape="rect" href="classopenfsl_1_1_container.html#ae32318eaf5dd949eb740f9ed2d05f5d9" title="Data buffer getter." alt="" coords="550,85,691,126"/>
-<area shape="rect" href="classopenfsl_1_1_block_device.html#a47f31aa57ca6e82567148f7875a81162" title=" " alt="" coords="289,190,447,232"/>
-<area shape="rect" href="classopenfsl_1_1_m_b_r.html#a52f0f7f30aa15a6a0714253bd4a119ac" title=" " alt="" coords="260,256,476,283"/>
-<area shape="rect" href="classopenfsl_1_1_m_b_r.html#a92009da835b93c83686b36f5e2a30ae8" title=" " alt="" coords="282,88,454,115"/>
-<area shape="rect" href="classopenfsl_1_1_g_p_t.html#aa96658209115a6c9bf0df02425a2cbe1" title=" " alt="" coords="285,38,451,64"/>
-<area shape="rect" href="classopenfsl_1_1_block_device.html#abb336a5c13d81a7587ad19da73097f43" title=" " alt="" coords="289,308,447,349"/>
-<area shape="rect" href="namespaceopenfsl.html#a2e842313f02239c1497b018b5f9e4161" title=" " alt="" coords="524,256,717,283"/>
+<area shape="rect" title=" " alt="" coords="5,208,212,235"/>
+<area shape="rect" href="namespaceopenfsl.html#a9e230af6aae2cbecb0e18be1af8689f2" title=" " alt="" coords="273,259,463,285"/>
+<area shape="rect" href="classopenfsl_1_1_sector.html#af9128b9d68ff6b96d70336a6e51d23e4" title="Data buffer getter." alt="" coords="531,107,710,133"/>
+<area shape="rect" href="classopenfsl_1_1_container.html#ae32318eaf5dd949eb740f9ed2d05f5d9" title="Data buffer getter." alt="" coords="550,193,691,234"/>
+<area shape="rect" href="classopenfsl_1_1_block_device.html#a47f31aa57ca6e82567148f7875a81162" title=" " alt="" coords="541,261,700,302"/>
+<area shape="rect" href="classopenfsl_1_1_block_device.html#abb336a5c13d81a7587ad19da73097f43" title=" " alt="" coords="541,333,700,374"/>
+<area shape="rect" href="classopenfsl_1_1_m_b_r.html#add77b8f591f3cc01ca0f7c945327d8aa" title=" " alt="" coords="260,411,476,437"/>
+<area shape="rect" href="classopenfsl_1_1_g_p_t.html#ad248035bc008858e7d4c3b80110b453f" title=" " alt="" coords="263,157,473,184"/>
+<area shape="rect" href="classopenfsl_1_1_m_b_r.html#a92009da835b93c83686b36f5e2a30ae8" title=" " alt="" coords="282,107,454,133"/>
+<area shape="rect" href="classopenfsl_1_1_g_p_t.html#aa96658209115a6c9bf0df02425a2cbe1" title=" " alt="" coords="285,5,451,32"/>
+<area shape="rect" href="namespaceopenfsl.html#a2e842313f02239c1497b018b5f9e4161" title=" " alt="" coords="524,411,717,437"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9e230af6aae2cbecb0e18be1af8689f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e230af6aae2cbecb0e18be1af8689f2">&#9670;&nbsp;</a></span>detectFileSystem()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="error_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a> openfsl::detectFileSystem </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespaceopenfsl.html#a43add8221d9aa3cd7285f47e4e04e72e">FileSystemType</a> *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classopenfsl_1_1_block_device.html">BlockDevice</a> *&#160;</td>
+          <td class="paramname"><em>bd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceopenfsl.html#ac82097377896cd83a32c893edb39f391">lba48_t</a>&#160;</td>
+          <td class="paramname"><em>bpbSectorAddr</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="detectstruct_8cpp_source.html#l00096">96</a> of file <a class="el" href="detectstruct_8cpp_source.html">detectstruct.cpp</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespaceopenfsl_a9e230af6aae2cbecb0e18be1af8689f2_cgraph.png" border="0" usemap="#namespaceopenfsl_a9e230af6aae2cbecb0e18be1af8689f2_cgraph" alt=""/></div>
+<map name="namespaceopenfsl_a9e230af6aae2cbecb0e18be1af8689f2_cgraph" id="namespaceopenfsl_a9e230af6aae2cbecb0e18be1af8689f2_cgraph">
+<area shape="rect" title=" " alt="" coords="5,97,196,124"/>
+<area shape="rect" href="classopenfsl_1_1_sector.html#af9128b9d68ff6b96d70336a6e51d23e4" title="Data buffer getter." alt="" coords="244,5,423,32"/>
+<area shape="rect" href="classopenfsl_1_1_container.html#ae32318eaf5dd949eb740f9ed2d05f5d9" title="Data buffer getter." alt="" coords="263,57,404,98"/>
+<area shape="rect" href="classopenfsl_1_1_block_device.html#a47f31aa57ca6e82567148f7875a81162" title=" " alt="" coords="254,122,413,163"/>
+<area shape="rect" href="classopenfsl_1_1_block_device.html#abb336a5c13d81a7587ad19da73097f43" title=" " alt="" coords="254,187,413,229"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespaceopenfsl_a9e230af6aae2cbecb0e18be1af8689f2_icgraph.png" border="0" usemap="#namespaceopenfsl_a9e230af6aae2cbecb0e18be1af8689f2_icgraph" alt=""/></div>
+<map name="namespaceopenfsl_a9e230af6aae2cbecb0e18be1af8689f2_icgraph" id="namespaceopenfsl_a9e230af6aae2cbecb0e18be1af8689f2_icgraph">
+<area shape="rect" title=" " alt="" coords="260,5,451,32"/>
+<area shape="rect" href="namespaceopenfsl.html#a6a72fba5307f9f6a3bc92d782d714226" title=" " alt="" coords="5,5,212,32"/>
 </map>
 </div>
 
@@ -689,7 +759,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="detectstruct_8cpp_source.html#l00093">93</a> of file <a class="el" href="detectstruct_8cpp_source.html">detectstruct.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="detectstruct_8cpp_source.html#l00150">150</a> of file <a class="el" href="detectstruct_8cpp_source.html">detectstruct.cpp</a>.</p>
 
 </div>
 </div>
@@ -766,24 +836,25 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespaceopenfsl_af5d84bfd77cfffcf6eca548c58646865_icgraph.png" border="0" usemap="#namespaceopenfsl_af5d84bfd77cfffcf6eca548c58646865_icgraph" alt=""/></div>
 <map name="namespaceopenfsl_af5d84bfd77cfffcf6eca548c58646865_icgraph" id="namespaceopenfsl_af5d84bfd77cfffcf6eca548c58646865_icgraph">
-<area shape="rect" title="String tokenizer." alt="" coords="1496,335,1669,361"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a7a3ec9435f37a905a9e41358c94a98aa" title="Change directory." alt="" coords="1043,305,1213,332"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a97fcec9162808ca5ab0ea5af049c46b1" title=" " alt="" coords="1261,357,1448,398"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a4474f7143bbd15c8cd6d30d527bf7a7e" title="Create entry." alt="" coords="790,239,969,281"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ad57d2efce5f6bb3f3266b52ec7262f05" title="Create directory." alt="" coords="510,120,703,147"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a12296dd6f92142d705f0762b1bbdc2db" title=" " alt="" coords="14,327,189,353"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a8c4fd9c81051e976e0557610b3ccee27" title=" " alt="" coords="5,163,197,205"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a3ed1aabf1c80fca2be4ab1463cffa460" title=" " alt="" coords="786,509,973,550"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a4cf9286bcf9004e3258ec747bb1c1904" title="Get file information." alt="" coords="510,471,703,513"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a72b276ca60f268ce9f648a39df0d5eca" title="Remove entry." alt="" coords="253,374,441,415"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a386551073ba0b323749b29ced68d132c" title=" " alt="" coords="789,87,970,113"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ae0e5f57f13f4f41934a7ee310dc4ef4c" title=" " alt="" coords="764,137,995,164"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a03bfaefead11ea43b31614841cfb12ff" title="Create file." alt="" coords="508,323,705,349"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a322bde9dfda6dbb287fc39cc8828d801" title=" " alt="" coords="256,323,439,349"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a3da2b2b19faebfbb10cffe698a648f96" title=" " alt="" coords="497,583,716,609"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#aac72f94554b8a89f49861a9d7d23a32a" title="Remove directory or file." alt="" coords="7,608,195,635"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#aa2b1e8901b1ca578d10df3a5ef44d080" title=" " alt="" coords="245,557,449,584"/>
-<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_f_i_l_e.html#a1f2af6cb988dae83ea50a97a7c1dc477" title=" " alt="" coords="272,491,423,533"/>
+<area shape="rect" title="String tokenizer." alt="" coords="1515,466,1688,493"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a7a3ec9435f37a905a9e41358c94a98aa" title="Change directory." alt="" coords="1061,355,1232,382"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a97fcec9162808ca5ab0ea5af049c46b1" title=" " alt="" coords="1280,488,1467,529"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a4474f7143bbd15c8cd6d30d527bf7a7e" title="Create entry." alt="" coords="809,163,987,204"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ad57d2efce5f6bb3f3266b52ec7262f05" title="Create directory." alt="" coords="529,77,722,103"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a12296dd6f92142d705f0762b1bbdc2db" title=" " alt="" coords="23,254,198,281"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a8c4fd9c81051e976e0557610b3ccee27" title=" " alt="" coords="15,120,207,161"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a3ed1aabf1c80fca2be4ab1463cffa460" title=" " alt="" coords="805,432,991,473"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a4cf9286bcf9004e3258ec747bb1c1904" title="Get file information." alt="" coords="529,352,722,393"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a72b276ca60f268ce9f648a39df0d5eca" title="Remove entry." alt="" coords="272,447,460,488"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a386551073ba0b323749b29ced68d132c" title=" " alt="" coords="807,330,989,357"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#ae0e5f57f13f4f41934a7ee310dc4ef4c" title=" " alt="" coords="783,381,1013,407"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a03bfaefead11ea43b31614841cfb12ff" title="Create file." alt="" coords="527,563,724,590"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a322bde9dfda6dbb287fc39cc8828d801" title=" " alt="" coords="275,563,457,590"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a3da2b2b19faebfbb10cffe698a648f96" title=" " alt="" coords="516,513,735,539"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a71d45f8478ee137ba3b941b29fd91160" title="Remove directory." alt="" coords="7,513,214,539"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#aa2b1e8901b1ca578d10df3a5ef44d080" title=" " alt="" coords="264,330,468,357"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32_1_1_f_i_l_e.html#a1f2af6cb988dae83ea50a97a7c1dc477" title=" " alt="" coords="291,381,441,423"/>
+<area shape="rect" href="classopenfsl_1_1_f_a_t32.html#a704074d988046bcd12b862af19b88275" title="Remove file." alt="" coords="5,614,216,641"/>
 </map>
 </div>
 
@@ -862,7 +933,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="error_8cpp_source.html#l00040">40</a> of file <a class="el" href="error_8cpp_source.html">error.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="error_8cpp_source.html#l00042">42</a> of file <a class="el" href="error_8cpp_source.html">error.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -901,7 +972,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="error_8cpp_source.html#l00044">44</a> of file <a class="el" href="error_8cpp_source.html">error.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="error_8cpp_source.html#l00046">46</a> of file <a class="el" href="error_8cpp_source.html">error.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -930,7 +1001,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="error_8cpp_source.html#l00049">49</a> of file <a class="el" href="error_8cpp_source.html">error.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="error_8cpp_source.html#l00051">51</a> of file <a class="el" href="error_8cpp_source.html">error.cpp</a>.</p>
 
 </div>
 </div>
@@ -1203,7 +1274,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="detectstruct_8cpp_source.html#l00080">80</a> of file <a class="el" href="detectstruct_8cpp_source.html">detectstruct.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="detectstruct_8cpp_source.html#l00137">137</a> of file <a class="el" href="detectstruct_8cpp_source.html">detectstruct.cpp</a>.</p>
 
 </div>
 </div>
@@ -1243,8 +1314,10 @@ Here is the call graph for this function:</div>
 <div class="line">    <span class="stringliteral">&quot;Disabled operation.&quot;</span>,</div>
 <div class="line">    <span class="stringliteral">&quot;Directory is not empty.&quot;</span>,</div>
 <div class="line">    <span class="stringliteral">&quot;Regex syntax is not valid.&quot;</span>,</div>
-<div class="line">    <span class="stringliteral">&quot;Sector size is not valid.&quot;</span>, </div>
-<div class="line">    <span class="stringliteral">&quot;Invalid GUID Partition Table.&quot;</span></div>
+<div class="line">    <span class="stringliteral">&quot;Sector size is not valid.&quot;</span>,</div>
+<div class="line">    <span class="stringliteral">&quot;File size is too big.&quot;</span>,</div>
+<div class="line">    <span class="stringliteral">&quot;Selected is not a direcotry&quot;</span>,</div>
+<div class="line">    <span class="stringliteral">&quot;Selected is not a file&quot;</span></div>
 <div class="line">}</div>
 </div><!-- fragment -->
 <p class="definition">Definition at line <a class="el" href="error_8cpp_source.html#l00012">12</a> of file <a class="el" href="error_8cpp_source.html">error.cpp</a>.</p>
@@ -1264,6 +1337,22 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="src_2initialize_8cpp_source.html#l00012">12</a> of file <a class="el" href="src_2initialize_8cpp_source.html">initialize.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a570beca576196dcbc17eb905ae7c1723"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a570beca576196dcbc17eb905ae7c1723">&#9670;&nbsp;</a></span>partitionGuidMap</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unordered_map&lt; <a class="el" href="classopenfsl_1_1_g_u_i_d.html">openfsl::GUID</a>, <a class="el" href="classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4a">openfsl::GPT::PartitionType</a>, <a class="el" href="structopenfsl_1_1_g_u_i_d_hash.html">openfsl::GUIDHash</a> &gt; openfsl::partitionGuidMap</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="gpt_8cpp_source.html#l00021">21</a> of file <a class="el" href="gpt_8cpp_source.html">gpt.cpp</a>.</p>
 
 </div>
 </div>

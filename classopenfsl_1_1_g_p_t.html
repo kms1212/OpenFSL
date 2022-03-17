@@ -22,7 +22,6 @@
 /* @license-end */
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -113,19 +112,25 @@ Collaboration diagram for openfsl::GPT:</div>
 <div class="dyncontent">
 <div class="center"><img src="classopenfsl_1_1_g_p_t__coll__graph.png" border="0" usemap="#openfsl_1_1_g_p_t_coll__map" alt="Collaboration graph"/></div>
 <map name="openfsl_1_1_g_p_t_coll__map" id="openfsl_1_1_g_p_t_coll__map">
-<area shape="rect" title=" " alt="" coords="375,829,531,965"/>
-<area shape="rect" href="classopenfsl_1_1_block_device.html" title="Disk driver." alt="" coords="371,417,535,583"/>
-<area shape="rect" href="classopenfsl_1_1_m_b_r.html" title=" " alt="" coords="259,645,405,767"/>
-<area shape="rect" href="classopenfsl_1_1_i_o_device.html" title=" " alt="" coords="147,219,285,355"/>
-<area shape="rect" title=" " alt="" coords="5,27,69,105"/>
-<area shape="rect" href="classbool.html" title=" " alt="" coords="191,27,241,105"/>
-<area shape="rect" href="structopenfsl_1_1_block_device_1_1_i_o_functions.html" title="IO functions." alt="" coords="374,241,533,333"/>
-<area shape="rect" title=" " alt="" coords="265,5,436,127"/>
-<area shape="rect" title=" " alt="" coords="461,5,649,127"/>
-<area shape="rect" href="structopenfsl_1_1_block_device_1_1_disk_parameter.html" title="Disk Parameter." alt="" coords="590,241,749,333"/>
-<area shape="rect" title=" " alt="" coords="673,27,733,105"/>
-<area shape="rect" title=" " alt="" coords="503,660,663,752"/>
-<area shape="rect" title=" " alt="" coords="183,454,347,546"/>
+<area shape="rect" title=" " alt="" coords="789,1093,945,1229"/>
+<area shape="rect" href="classuint64__t.html" title=" " alt="" coords="568,461,643,539"/>
+<area shape="rect" href="structopenfsl_1_1_g_p_t_1_1_table_header.html" title="GPT Header." alt="" coords="167,836,359,913"/>
+<area shape="rect" href="classopenfsl_1_1_g_u_i_d.html" title="Sector buffer." alt="" coords="711,719,854,1031"/>
+<area shape="rect" href="classopenfsl_1_1_block_device.html" title="Disk driver." alt="" coords="997,417,1161,583"/>
+<area shape="rect" href="classopenfsl_1_1_m_b_r.html" title=" " alt="" coords="879,814,1025,935"/>
+<area shape="rect" href="classopenfsl_1_1_i_o_device.html" title=" " alt="" coords="795,219,933,355"/>
+<area shape="rect" title=" " alt="" coords="832,27,896,105"/>
+<area shape="rect" href="classbool.html" title=" " alt="" coords="728,27,779,105"/>
+<area shape="rect" href="structopenfsl_1_1_block_device_1_1_i_o_functions.html" title="IO functions." alt="" coords="999,241,1158,333"/>
+<area shape="rect" title=" " alt="" coords="1147,5,1317,127"/>
+<area shape="rect" title=" " alt="" coords="934,5,1122,127"/>
+<area shape="rect" href="structopenfsl_1_1_block_device_1_1_disk_parameter.html" title="Disk Parameter." alt="" coords="1255,241,1414,333"/>
+<area shape="rect" title=" " alt="" coords="1342,27,1402,105"/>
+<area shape="rect" title=" " alt="" coords="300,461,375,539"/>
+<area shape="rect" title=" " alt="" coords="5,461,72,539"/>
+<area shape="rect" title=" " alt="" coords="1123,829,1283,921"/>
+<area shape="rect" title=" " alt="" coords="809,454,973,546"/>
+<area shape="rect" title=" " alt="" coords="709,461,784,539"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -142,6 +147,97 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
+<tr class="memitem:af18752e41e4ea9323392cf254f80ff4a"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4a">PartitionType</a> { <br />
+&#160;&#160;<a class="el" href="classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4aaf1ac123845cc14d24c498e55a65aeca3">Unused</a>, 
+<a class="el" href="classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4aa81fe2169fad63d86bbd35c7f7995dcee">MBRPartitionScheme</a>, 
+<a class="el" href="classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4aa5f9a65d2fb46c00fc86f897b44529d41">EFISystemPartition</a>, 
+<a class="el" href="classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4aa5be3c4acf7f73c28fe08698e222818e0">BIOSBootPartition</a>, 
+<br />
+&#160;&#160;<a class="el" href="classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4aab692c6291f41eb64304936364876109a">WindowsMsReserved</a>, 
+<a class="el" href="classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4aa6844566ffe33fd85248a43c1e3a05f72">WindowsBasicData</a>, 
+<a class="el" href="classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4aa5234f5d276cd5140edf01ece544ec4a3">WindowsLDMMetaData</a>, 
+<a class="el" href="classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4aa7764929171b66bbf8fe42cd6cb1267ab">WindowsLDMData</a>, 
+<br />
+&#160;&#160;<a class="el" href="classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4aa4b665113f36c76c1d364152f968f7882">WindowsRecovery</a>, 
+<a class="el" href="classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4aacdc8ea41f11141f654f3b3439df0b1ef">WindowsStorageSpaces</a>, 
+<a class="el" href="classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4aab9e2e4b6f0144a022cff16f32d301e30">WindowsStorageReplica</a>, 
+<a class="el" href="classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4aa1fff57865a7e1e369709272951915ec0">HPUXData</a>, 
+<br />
+&#160;&#160;<a class="el" href="classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4aae0c8fa7b1f80c3efe6c3d4787ca4b318">HPUXService</a>, 
+<a class="el" href="classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4aa4c8b8f1a2025c8e7ddf3971c7d64fe7b">LinuxFilsystemData</a>, 
+<a class="el" href="classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4aa41f2c32271e61ac7fbd17a23c7d87d84">LinuxRAID</a>, 
+<a class="el" href="classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4aa99aba4093dee1de0afff84421d318b28">LinuxRootx86</a>, 
+<br />
+&#160;&#160;<a class="el" href="classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4aabe9a9d443136f1d406a4ebc42108dd0f">LinuxRootx8664</a>, 
+<a class="el" href="classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4aabaed79f1083861120456dbe30a7fbf72">LinuxRootARM32</a>, 
+<a class="el" href="classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4aab704f79fb468f7822f4eb51df6fa04a9">LinuxRootARM64</a>, 
+<a class="el" href="classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4aad2e92d795b0d9482807aa015a016d1d4">LinuxBoot</a>, 
+<br />
+&#160;&#160;<a class="el" href="classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4aa3cfd2f23297d531e278f97199bdff231">LinuxSwap</a>, 
+<a class="el" href="classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4aae1ebd7f121dc3c4761c3fb42bb9fba21">LinuxLVM</a>, 
+<a class="el" href="classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4aa8876d9e1b37009048aa82c9cc97a2d6a">LinuxHome</a>, 
+<a class="el" href="classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4aadb454d992da1228c7473623d682f4e5e">LinuxServerData</a>, 
+<br />
+&#160;&#160;<a class="el" href="classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4aa033bf40e25c59a0c84e39489b3e6c6fc">LinuxLUKS</a>, 
+<a class="el" href="classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4aa1f829fdf08e62bfec2ba75f41c8d0299">FreeBSDBoot</a>, 
+<a class="el" href="classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4aa639c4a04f35c65ee62a81f2327d8e996">FreeBSDDiskLabel</a>, 
+<a class="el" href="classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4aa349f6fb9bc0dee789990dbd2c8dfcee0">FreeBSDSwap</a>, 
+<br />
+&#160;&#160;<a class="el" href="classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4aa7414bde491d47eb8de86d1b8c50d4046">FreeBSDUFS</a>, 
+<a class="el" href="classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4aa3ead0ba39402d68448585b9f9379e380">FreeBSDVinum</a>, 
+<a class="el" href="classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4aabe26431367747784395cbb8984d3960e">FreeBSDZFS</a>, 
+<a class="el" href="classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4aa9150523a832ca8e7fee0f3f5226cd1b4">FreeBSDNandfs</a>, 
+<br />
+&#160;&#160;<a class="el" href="classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4aa2c7f26dd28e8cac9bb5fdc4d9bddacc0">DarwinHFSPlus</a>, 
+<a class="el" href="classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4aad111715a3a58a47d89f23ea2e611944f">DarwinAPFS</a>, 
+<a class="el" href="classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4aa883ccfc77ab7810f2d7bfe66e55a25ba">DarwinUFS</a>, 
+<a class="el" href="classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4aad7e577f325e05b30d148a28edccbe5be">DarwinZFS</a>, 
+<br />
+&#160;&#160;<a class="el" href="classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4aa7eddb59d09951488d783969e7f29b134">DarwinRAID</a>, 
+<a class="el" href="classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4aadbd767b95bac908fb2cb82a0a2dce0a9">DarwinRAIDOffline</a>, 
+<a class="el" href="classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4aa19956fba9d68109182999963725424fd">DarwinBoot</a>, 
+<a class="el" href="classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4aa9a624c3004ccfcc781044d947c1a8c7a">DarwinAppleLabel</a>, 
+<br />
+&#160;&#160;<a class="el" href="classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4aadb904acd6240ae905cd0ef28433d1075">DarwinAppleTVRecovery</a>, 
+<a class="el" href="classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4aaf86548673a45e67f03a09b4b2ec94e47">DarwinCoreStorage</a>, 
+<a class="el" href="classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4aa346924daa6a32069d23bfb3258708407">DarwinAPFSPreboot</a>, 
+<a class="el" href="classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4aaf1e47db50d24223511438c96665fcaaf">DarwinAPFSRecovery</a>, 
+<br />
+&#160;&#160;<a class="el" href="classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4aa58f42628bb7983c808d4b6e02405690e">SolarisBoot</a>, 
+<a class="el" href="classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4aa7d56466d5b7056230a3deac20b2d475b">SolarisRoot</a>, 
+<a class="el" href="classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4aa01febc6f20826808a4f14795f7f18784">SolarisSwap</a>, 
+<a class="el" href="classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4aafa5d4b72fb8977e1b07a10b7cf78ac5d">SolarisBackup</a>, 
+<br />
+&#160;&#160;<a class="el" href="classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4aa44bc2676bdfa274d25cc57f3c71135d5">SolarisUsr</a>, 
+<a class="el" href="classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4aa947e6753ecc030fcd8dcacb21905ad9d">SolarisVar</a>, 
+<a class="el" href="classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4aa9435f9c3a84b70a266357c7fdf91ef3a">SolarisHome</a>, 
+<a class="el" href="classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4aac9f1d6cba3f72769652fe10cb32da19d">NetBSDSwap</a>, 
+<br />
+&#160;&#160;<a class="el" href="classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4aa169e4babe34a95e760ea4bb70f85cdce">NetBSDFFS</a>, 
+<a class="el" href="classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4aa36245419e639e61f7bd8df9a4a522ad9">NetBSDLFS</a>, 
+<a class="el" href="classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4aa3843783239598fac454e7932801c0ae6">NetBSDRAID</a>, 
+<a class="el" href="classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4aae23ef8cc9935945f5322a985c255e50b">NetBSDConcatenated</a>, 
+<br />
+&#160;&#160;<a class="el" href="classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4aad2a00807b1396d18cbec2ecd01cf4f96">NetBSDEncrypted</a>, 
+<a class="el" href="classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4aa9b25e56598679d238b1294cd3875e6f0">ChromeOSKernel</a>, 
+<a class="el" href="classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4aadae1fe05918e3bd4361ff82017f09d97">ChromeOSRootfs</a>, 
+<a class="el" href="classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4aaa56e290ef237d9901d05164dc1776a9a">ChromeOSFirmware</a>, 
+<br />
+&#160;&#160;<a class="el" href="classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4aa2bed9a6ff6d532381b4d4bf99982ab74">ChromeOSMiniOS</a>, 
+<a class="el" href="classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4aa37076c2d6d2fab79526f5364db3ae444">ChromeOSHibernate</a>, 
+<a class="el" href="classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4aa6d9ae81604bd454c52e2d8a4b35421ca">HaikuBFS</a>, 
+<a class="el" href="classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4aac4d632d52ab2cba2683ca0ddde15f06a">MidnightBSDBoot</a>, 
+<br />
+&#160;&#160;<a class="el" href="classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4aa334fbe686c3acd2968016f4db1c98eed">MidnightBSDData</a>, 
+<a class="el" href="classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4aa93eef6e4a526f7c20a518c7da79b525f">MidnightBSDSwap</a>, 
+<a class="el" href="classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4aa9b037a61aa0cb80969ac1b2500e867c1">MidnightBSDUFS</a>, 
+<a class="el" href="classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4aa3b31f848c144d290364ed499b409dc22">MidnightBSDVinum</a>, 
+<br />
+&#160;&#160;<a class="el" href="classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4aaf22b7fb45353ebba460d6afd2507f68f">MidnightBSDZFS</a>, 
+<a class="el" href="classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4aa5b3b748c9fb8fea8557c6656e1efda15">OpenBSDData</a>
+<br />
+ }</td></tr>
+<tr class="separator:af18752e41e4ea9323392cf254f80ff4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a98020c5101a4bc1d7f68a669c0a9417d"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structopenfsl_1_1_g_p_t_1_1_partition_info.html">openfsl::GPT::PartitionInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenfsl_1_1_g_p_t.html#a98020c5101a4bc1d7f68a669c0a9417d">PartitionInfo</a></td></tr>
 <tr class="separator:a98020c5101a4bc1d7f68a669c0a9417d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -155,8 +251,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aa96658209115a6c9bf0df02425a2cbe1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7dac7e68f1b4fc733123fa48217492d1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceopenfsl.html#ac82097377896cd83a32c893edb39f391">lba48_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenfsl_1_1_g_p_t.html#a7dac7e68f1b4fc733123fa48217492d1">getVolumeOffset</a> (const uint8_t index)</td></tr>
 <tr class="separator:a7dac7e68f1b4fc733123fa48217492d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeb9dd78c3d56980cd161364e332c24c7"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structopenfsl_1_1_g_p_t_1_1_partition_info.html">PartitionInfo</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenfsl_1_1_g_p_t.html#aeb9dd78c3d56980cd161364e332c24c7">getPartitionInfo</a> ()</td></tr>
-<tr class="separator:aeb9dd78c3d56980cd161364e332c24c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad248035bc008858e7d4c3b80110b453f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="error_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenfsl_1_1_g_p_t.html#ad248035bc008858e7d4c3b80110b453f">getPartitionInfo</a> (std::vector&lt; <a class="el" href="structopenfsl_1_1_g_p_t_1_1_partition_info.html">PartitionInfo</a> &gt; *buf)</td></tr>
+<tr class="separator:ad248035bc008858e7d4c3b80110b453f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-types"></a>
 Private Types</h2></td></tr>
@@ -164,10 +260,10 @@ Private Types</h2></td></tr>
 &#160;&#160;<a class="el" href="classopenfsl_1_1_g_p_t.html#aa664dc41bcd6bcab7c055316b7273c57aa45da96d0bf6575970f2d27af22be28a">AttributeFlags::System</a> = 0x0000000000000000, 
 <a class="el" href="classopenfsl_1_1_g_p_t.html#aa664dc41bcd6bcab7c055316b7273c57afd038fc7f319e48f3115d92bf5bdbef9">AttributeFlags::Ignore</a> = 0x0000000000000001, 
 <a class="el" href="classopenfsl_1_1_g_p_t.html#aa664dc41bcd6bcab7c055316b7273c57a7a4792572114989940eb92ba52ec3e80">AttributeFlags::LegacyBoot</a> = 0x0000000000000002, 
-<a class="el" href="classopenfsl_1_1_g_p_t.html#aa664dc41bcd6bcab7c055316b7273c57a131fb182a881796e7606ed6da27f1197">AttributeFlags::ReadOnly</a> = 0x1000000000000000, 
+<a class="el" href="classopenfsl_1_1_g_p_t.html#aa664dc41bcd6bcab7c055316b7273c57a0e51ccab00d26b41c9ee331d240c1521">AttributeFlags::MSBasicDataReadOnly</a> = 0x1000000000000000, 
 <br />
-&#160;&#160;<a class="el" href="classopenfsl_1_1_g_p_t.html#aa664dc41bcd6bcab7c055316b7273c57a7acdf85c69cc3c5305456a293524386e">AttributeFlags::Hidden</a> = 0x4000000000000000, 
-<a class="el" href="classopenfsl_1_1_g_p_t.html#aa664dc41bcd6bcab7c055316b7273c57af9d7ce3afae8ff8828b55a18bcf81e4c">AttributeFlags::ManualMount</a> = 0x8000000000000000
+&#160;&#160;<a class="el" href="classopenfsl_1_1_g_p_t.html#aa664dc41bcd6bcab7c055316b7273c57a30ee8ea1b7edf05b39f9ccbacf5f9c02">AttributeFlags::MSBasicDataHidden</a> = 0x4000000000000000, 
+<a class="el" href="classopenfsl_1_1_g_p_t.html#aa664dc41bcd6bcab7c055316b7273c57ae4286993763839a6c7693e36a5b4efef">AttributeFlags::MSBasicDataManualMount</a> = 0x8000000000000000
 <br />
  }</td></tr>
 <tr class="separator:aa664dc41bcd6bcab7c055316b7273c57"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -186,6 +282,12 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a3ea6d2991ac9100a9aef8665bfc0e13d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae51e95820386b576cd6caddbda410f5e"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structopenfsl_1_1_g_p_t_1_1_partition_entry.html">PartitionEntry</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenfsl_1_1_g_p_t.html#ae51e95820386b576cd6caddbda410f5e">partitionList</a></td></tr>
 <tr class="separator:ae51e95820386b576cd6caddbda410f5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad862d5e8f43048abafbd5b9858dd518d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structopenfsl_1_1_g_p_t_1_1_table_header.html">TableHeader</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenfsl_1_1_g_p_t.html#ad862d5e8f43048abafbd5b9858dd518d">gptHeader</a></td></tr>
+<tr class="separator:ad862d5e8f43048abafbd5b9858dd518d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c952ce0d50d228e5d8a71664bca5c96"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classopenfsl_1_1_g_u_i_d.html">GUID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenfsl_1_1_g_p_t.html#a0c952ce0d50d228e5d8a71664bca5c96">diskGuid</a></td></tr>
+<tr class="separator:a0c952ce0d50d228e5d8a71664bca5c96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5c8ab0676dfeb5e97cd4eb191f8b262"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceopenfsl.html#ac82097377896cd83a32c893edb39f391">lba48_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenfsl_1_1_g_p_t.html#aa5c8ab0676dfeb5e97cd4eb191f8b262">tableOffset</a></td></tr>
+<tr class="separator:aa5c8ab0676dfeb5e97cd4eb191f8b262"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
@@ -196,7 +298,7 @@ Friends</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="gpt_8h_source.html#l00118">118</a> of file <a class="el" href="gpt_8h_source.html">gpt.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gpt_8h_source.html#l00033">33</a> of file <a class="el" href="gpt_8h_source.html">gpt.h</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a8421713970f528b45b965ad43c01388e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8421713970f528b45b965ad43c01388e">&#9670;&nbsp;</a></span>PartitionEntry</h2>
@@ -334,12 +436,100 @@ Friends</h2></td></tr>
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="aa664dc41bcd6bcab7c055316b7273c57aa45da96d0bf6575970f2d27af22be28a"></a>System&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="aa664dc41bcd6bcab7c055316b7273c57afd038fc7f319e48f3115d92bf5bdbef9"></a>Ignore&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="aa664dc41bcd6bcab7c055316b7273c57a7a4792572114989940eb92ba52ec3e80"></a>LegacyBoot&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="aa664dc41bcd6bcab7c055316b7273c57a131fb182a881796e7606ed6da27f1197"></a>ReadOnly&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="aa664dc41bcd6bcab7c055316b7273c57a7acdf85c69cc3c5305456a293524386e"></a>Hidden&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="aa664dc41bcd6bcab7c055316b7273c57af9d7ce3afae8ff8828b55a18bcf81e4c"></a>ManualMount&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa664dc41bcd6bcab7c055316b7273c57a0e51ccab00d26b41c9ee331d240c1521"></a>MSBasicDataReadOnly&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa664dc41bcd6bcab7c055316b7273c57a30ee8ea1b7edf05b39f9ccbacf5f9c02"></a>MSBasicDataHidden&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa664dc41bcd6bcab7c055316b7273c57ae4286993763839a6c7693e36a5b4efef"></a>MSBasicDataManualMount&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="gpt_8h_source.html#l00123">123</a> of file <a class="el" href="gpt_8h_source.html">gpt.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gpt_8h_source.html#l00120">120</a> of file <a class="el" href="gpt_8h_source.html">gpt.h</a>.</p>
+
+</div>
+</div>
+<a id="af18752e41e4ea9323392cf254f80ff4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af18752e41e4ea9323392cf254f80ff4a">&#9670;&nbsp;</a></span>PartitionType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4a">openfsl::GPT::PartitionType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="af18752e41e4ea9323392cf254f80ff4aaf1ac123845cc14d24c498e55a65aeca3"></a>Unused&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af18752e41e4ea9323392cf254f80ff4aa81fe2169fad63d86bbd35c7f7995dcee"></a>MBRPartitionScheme&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af18752e41e4ea9323392cf254f80ff4aa5f9a65d2fb46c00fc86f897b44529d41"></a>EFISystemPartition&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af18752e41e4ea9323392cf254f80ff4aa5be3c4acf7f73c28fe08698e222818e0"></a>BIOSBootPartition&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af18752e41e4ea9323392cf254f80ff4aab692c6291f41eb64304936364876109a"></a>WindowsMsReserved&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af18752e41e4ea9323392cf254f80ff4aa6844566ffe33fd85248a43c1e3a05f72"></a>WindowsBasicData&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af18752e41e4ea9323392cf254f80ff4aa5234f5d276cd5140edf01ece544ec4a3"></a>WindowsLDMMetaData&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af18752e41e4ea9323392cf254f80ff4aa7764929171b66bbf8fe42cd6cb1267ab"></a>WindowsLDMData&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af18752e41e4ea9323392cf254f80ff4aa4b665113f36c76c1d364152f968f7882"></a>WindowsRecovery&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af18752e41e4ea9323392cf254f80ff4aacdc8ea41f11141f654f3b3439df0b1ef"></a>WindowsStorageSpaces&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af18752e41e4ea9323392cf254f80ff4aab9e2e4b6f0144a022cff16f32d301e30"></a>WindowsStorageReplica&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af18752e41e4ea9323392cf254f80ff4aa1fff57865a7e1e369709272951915ec0"></a>HPUXData&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af18752e41e4ea9323392cf254f80ff4aae0c8fa7b1f80c3efe6c3d4787ca4b318"></a>HPUXService&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af18752e41e4ea9323392cf254f80ff4aa4c8b8f1a2025c8e7ddf3971c7d64fe7b"></a>LinuxFilsystemData&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af18752e41e4ea9323392cf254f80ff4aa41f2c32271e61ac7fbd17a23c7d87d84"></a>LinuxRAID&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af18752e41e4ea9323392cf254f80ff4aa99aba4093dee1de0afff84421d318b28"></a>LinuxRootx86&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af18752e41e4ea9323392cf254f80ff4aabe9a9d443136f1d406a4ebc42108dd0f"></a>LinuxRootx8664&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af18752e41e4ea9323392cf254f80ff4aabaed79f1083861120456dbe30a7fbf72"></a>LinuxRootARM32&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af18752e41e4ea9323392cf254f80ff4aab704f79fb468f7822f4eb51df6fa04a9"></a>LinuxRootARM64&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af18752e41e4ea9323392cf254f80ff4aad2e92d795b0d9482807aa015a016d1d4"></a>LinuxBoot&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af18752e41e4ea9323392cf254f80ff4aa3cfd2f23297d531e278f97199bdff231"></a>LinuxSwap&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af18752e41e4ea9323392cf254f80ff4aae1ebd7f121dc3c4761c3fb42bb9fba21"></a>LinuxLVM&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af18752e41e4ea9323392cf254f80ff4aa8876d9e1b37009048aa82c9cc97a2d6a"></a>LinuxHome&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af18752e41e4ea9323392cf254f80ff4aadb454d992da1228c7473623d682f4e5e"></a>LinuxServerData&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af18752e41e4ea9323392cf254f80ff4aa033bf40e25c59a0c84e39489b3e6c6fc"></a>LinuxLUKS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af18752e41e4ea9323392cf254f80ff4aa1f829fdf08e62bfec2ba75f41c8d0299"></a>FreeBSDBoot&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af18752e41e4ea9323392cf254f80ff4aa639c4a04f35c65ee62a81f2327d8e996"></a>FreeBSDDiskLabel&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af18752e41e4ea9323392cf254f80ff4aa349f6fb9bc0dee789990dbd2c8dfcee0"></a>FreeBSDSwap&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af18752e41e4ea9323392cf254f80ff4aa7414bde491d47eb8de86d1b8c50d4046"></a>FreeBSDUFS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af18752e41e4ea9323392cf254f80ff4aa3ead0ba39402d68448585b9f9379e380"></a>FreeBSDVinum&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af18752e41e4ea9323392cf254f80ff4aabe26431367747784395cbb8984d3960e"></a>FreeBSDZFS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af18752e41e4ea9323392cf254f80ff4aa9150523a832ca8e7fee0f3f5226cd1b4"></a>FreeBSDNandfs&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af18752e41e4ea9323392cf254f80ff4aa2c7f26dd28e8cac9bb5fdc4d9bddacc0"></a>DarwinHFSPlus&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af18752e41e4ea9323392cf254f80ff4aad111715a3a58a47d89f23ea2e611944f"></a>DarwinAPFS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af18752e41e4ea9323392cf254f80ff4aa883ccfc77ab7810f2d7bfe66e55a25ba"></a>DarwinUFS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af18752e41e4ea9323392cf254f80ff4aad7e577f325e05b30d148a28edccbe5be"></a>DarwinZFS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af18752e41e4ea9323392cf254f80ff4aa7eddb59d09951488d783969e7f29b134"></a>DarwinRAID&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af18752e41e4ea9323392cf254f80ff4aadbd767b95bac908fb2cb82a0a2dce0a9"></a>DarwinRAIDOffline&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af18752e41e4ea9323392cf254f80ff4aa19956fba9d68109182999963725424fd"></a>DarwinBoot&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af18752e41e4ea9323392cf254f80ff4aa9a624c3004ccfcc781044d947c1a8c7a"></a>DarwinAppleLabel&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af18752e41e4ea9323392cf254f80ff4aadb904acd6240ae905cd0ef28433d1075"></a>DarwinAppleTVRecovery&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af18752e41e4ea9323392cf254f80ff4aaf86548673a45e67f03a09b4b2ec94e47"></a>DarwinCoreStorage&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af18752e41e4ea9323392cf254f80ff4aa346924daa6a32069d23bfb3258708407"></a>DarwinAPFSPreboot&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af18752e41e4ea9323392cf254f80ff4aaf1e47db50d24223511438c96665fcaaf"></a>DarwinAPFSRecovery&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af18752e41e4ea9323392cf254f80ff4aa58f42628bb7983c808d4b6e02405690e"></a>SolarisBoot&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af18752e41e4ea9323392cf254f80ff4aa7d56466d5b7056230a3deac20b2d475b"></a>SolarisRoot&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af18752e41e4ea9323392cf254f80ff4aa01febc6f20826808a4f14795f7f18784"></a>SolarisSwap&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af18752e41e4ea9323392cf254f80ff4aafa5d4b72fb8977e1b07a10b7cf78ac5d"></a>SolarisBackup&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af18752e41e4ea9323392cf254f80ff4aa44bc2676bdfa274d25cc57f3c71135d5"></a>SolarisUsr&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af18752e41e4ea9323392cf254f80ff4aa947e6753ecc030fcd8dcacb21905ad9d"></a>SolarisVar&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af18752e41e4ea9323392cf254f80ff4aa9435f9c3a84b70a266357c7fdf91ef3a"></a>SolarisHome&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af18752e41e4ea9323392cf254f80ff4aac9f1d6cba3f72769652fe10cb32da19d"></a>NetBSDSwap&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af18752e41e4ea9323392cf254f80ff4aa169e4babe34a95e760ea4bb70f85cdce"></a>NetBSDFFS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af18752e41e4ea9323392cf254f80ff4aa36245419e639e61f7bd8df9a4a522ad9"></a>NetBSDLFS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af18752e41e4ea9323392cf254f80ff4aa3843783239598fac454e7932801c0ae6"></a>NetBSDRAID&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af18752e41e4ea9323392cf254f80ff4aae23ef8cc9935945f5322a985c255e50b"></a>NetBSDConcatenated&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af18752e41e4ea9323392cf254f80ff4aad2a00807b1396d18cbec2ecd01cf4f96"></a>NetBSDEncrypted&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af18752e41e4ea9323392cf254f80ff4aa9b25e56598679d238b1294cd3875e6f0"></a>ChromeOSKernel&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af18752e41e4ea9323392cf254f80ff4aadae1fe05918e3bd4361ff82017f09d97"></a>ChromeOSRootfs&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af18752e41e4ea9323392cf254f80ff4aaa56e290ef237d9901d05164dc1776a9a"></a>ChromeOSFirmware&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af18752e41e4ea9323392cf254f80ff4aa2bed9a6ff6d532381b4d4bf99982ab74"></a>ChromeOSMiniOS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af18752e41e4ea9323392cf254f80ff4aa37076c2d6d2fab79526f5364db3ae444"></a>ChromeOSHibernate&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af18752e41e4ea9323392cf254f80ff4aa6d9ae81604bd454c52e2d8a4b35421ca"></a>HaikuBFS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af18752e41e4ea9323392cf254f80ff4aac4d632d52ab2cba2683ca0ddde15f06a"></a>MidnightBSDBoot&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af18752e41e4ea9323392cf254f80ff4aa334fbe686c3acd2968016f4db1c98eed"></a>MidnightBSDData&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af18752e41e4ea9323392cf254f80ff4aa93eef6e4a526f7c20a518c7da79b525f"></a>MidnightBSDSwap&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af18752e41e4ea9323392cf254f80ff4aa9b037a61aa0cb80969ac1b2500e867c1"></a>MidnightBSDUFS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af18752e41e4ea9323392cf254f80ff4aa3b31f848c144d290364ed499b409dc22"></a>MidnightBSDVinum&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af18752e41e4ea9323392cf254f80ff4aaf22b7fb45353ebba460d6afd2507f68f"></a>MidnightBSDZFS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af18752e41e4ea9323392cf254f80ff4aa5b3b748c9fb8fea8557c6656e1efda15"></a>OpenBSDData&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">Definition at line <a class="el" href="gpt_8h_source.html#l00035">35</a> of file <a class="el" href="gpt_8h_source.html">gpt.h</a>.</p>
 
 </div>
 </div>
@@ -368,7 +558,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="gpt_8cpp_source.html#l00099">99</a> of file <a class="el" href="gpt_8cpp_source.html">gpt.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gpt_8cpp_source.html#l00105">105</a> of file <a class="el" href="gpt_8cpp_source.html">gpt.cpp</a>.</p>
 
 </div>
 </div>
@@ -387,27 +577,47 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="gpt_8cpp_source.html#l00104">104</a> of file <a class="el" href="gpt_8cpp_source.html">gpt.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gpt_8cpp_source.html#l00110">110</a> of file <a class="el" href="gpt_8cpp_source.html">gpt.cpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="aeb9dd78c3d56980cd161364e332c24c7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeb9dd78c3d56980cd161364e332c24c7">&#9670;&nbsp;</a></span>getPartitionInfo()</h2>
+<a id="ad248035bc008858e7d4c3b80110b453f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad248035bc008858e7d4c3b80110b453f">&#9670;&nbsp;</a></span>getPartitionInfo()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt; <a class="el" href="structopenfsl_1_1_g_p_t_1_1_partition_info.html">openfsl::GPT::PartitionInfo</a> &gt; openfsl::GPT::getPartitionInfo </td>
+          <td class="memname"><a class="el" href="error_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a> openfsl::GPT::getPartitionInfo </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="structopenfsl_1_1_g_p_t_1_1_partition_info.html">PartitionInfo</a> &gt; *&#160;</td>
+          <td class="paramname"><em>buf</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="gpt_8cpp_source.html#l00167">167</a> of file <a class="el" href="gpt_8cpp_source.html">gpt.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gpt_8cpp_source.html#l00157">157</a> of file <a class="el" href="gpt_8cpp_source.html">gpt.cpp</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classopenfsl_1_1_g_p_t_ad248035bc008858e7d4c3b80110b453f_cgraph.png" border="0" usemap="#classopenfsl_1_1_g_p_t_ad248035bc008858e7d4c3b80110b453f_cgraph" alt=""/></div>
+<map name="classopenfsl_1_1_g_p_t_ad248035bc008858e7d4c3b80110b453f_cgraph" id="classopenfsl_1_1_g_p_t_ad248035bc008858e7d4c3b80110b453f_cgraph">
+<area shape="rect" title=" " alt="" coords="5,35,216,61"/>
+<area shape="rect" href="classopenfsl_1_1_sector.html#af9128b9d68ff6b96d70336a6e51d23e4" title="Data buffer getter." alt="" coords="264,5,443,32"/>
+<area shape="rect" href="classopenfsl_1_1_container.html#ae32318eaf5dd949eb740f9ed2d05f5d9" title="Data buffer getter." alt="" coords="283,57,424,98"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classopenfsl_1_1_g_p_t_ad248035bc008858e7d4c3b80110b453f_icgraph.png" border="0" usemap="#classopenfsl_1_1_g_p_t_ad248035bc008858e7d4c3b80110b453f_icgraph" alt=""/></div>
+<map name="classopenfsl_1_1_g_p_t_ad248035bc008858e7d4c3b80110b453f_icgraph" id="classopenfsl_1_1_g_p_t_ad248035bc008858e7d4c3b80110b453f_icgraph">
+<area shape="rect" title=" " alt="" coords="260,5,471,32"/>
+<area shape="rect" href="namespaceopenfsl.html#a6a72fba5307f9f6a3bc92d782d714226" title=" " alt="" coords="5,5,212,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -444,15 +654,14 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="gpt_8cpp_source.html#l00108">108</a> of file <a class="el" href="gpt_8cpp_source.html">gpt.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gpt_8cpp_source.html#l00114">114</a> of file <a class="el" href="gpt_8cpp_source.html">gpt.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classopenfsl_1_1_g_p_t_aa96658209115a6c9bf0df02425a2cbe1_cgraph.png" border="0" usemap="#classopenfsl_1_1_g_p_t_aa96658209115a6c9bf0df02425a2cbe1_cgraph" alt=""/></div>
 <map name="classopenfsl_1_1_g_p_t_aa96658209115a6c9bf0df02425a2cbe1_cgraph" id="classopenfsl_1_1_g_p_t_aa96658209115a6c9bf0df02425a2cbe1_cgraph">
-<area shape="rect" title=" " alt="" coords="5,35,172,61"/>
+<area shape="rect" title=" " alt="" coords="5,5,172,32"/>
 <area shape="rect" href="classopenfsl_1_1_sector.html#af9128b9d68ff6b96d70336a6e51d23e4" title="Data buffer getter." alt="" coords="220,5,399,32"/>
-<area shape="rect" href="classopenfsl_1_1_container.html#ae32318eaf5dd949eb740f9ed2d05f5d9" title="Data buffer getter." alt="" coords="239,57,380,98"/>
 </map>
 </div>
 <div class="dynheader">
@@ -502,7 +711,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="gpt_8h_source.html#l00137">137</a> of file <a class="el" href="gpt_8h_source.html">gpt.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gpt_8h_source.html#l00134">134</a> of file <a class="el" href="gpt_8h_source.html">gpt.h</a>.</p>
 
 </div>
 </div>
@@ -540,7 +749,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="gpt_8h_source.html#l00133">133</a> of file <a class="el" href="gpt_8h_source.html">gpt.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gpt_8h_source.html#l00130">130</a> of file <a class="el" href="gpt_8h_source.html">gpt.h</a>.</p>
 
 </div>
 </div>
@@ -565,7 +774,55 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="gpt_8h_source.html#l00204">204</a> of file <a class="el" href="gpt_8h_source.html">gpt.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gpt_8h_source.html#l00201">201</a> of file <a class="el" href="gpt_8h_source.html">gpt.h</a>.</p>
+
+</div>
+</div>
+<a id="a0c952ce0d50d228e5d8a71664bca5c96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c952ce0d50d228e5d8a71664bca5c96">&#9670;&nbsp;</a></span>diskGuid</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classopenfsl_1_1_g_u_i_d.html">GUID</a> openfsl::GPT::diskGuid</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="gpt_8h_source.html#l00206">206</a> of file <a class="el" href="gpt_8h_source.html">gpt.h</a>.</p>
+
+</div>
+</div>
+<a id="ad862d5e8f43048abafbd5b9858dd518d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad862d5e8f43048abafbd5b9858dd518d">&#9670;&nbsp;</a></span>gptHeader</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structopenfsl_1_1_g_p_t_1_1_table_header.html">TableHeader</a> openfsl::GPT::gptHeader</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="gpt_8h_source.html#l00205">205</a> of file <a class="el" href="gpt_8h_source.html">gpt.h</a>.</p>
 
 </div>
 </div>
@@ -589,7 +846,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="gpt_8h_source.html#l00206">206</a> of file <a class="el" href="gpt_8h_source.html">gpt.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gpt_8h_source.html#l00203">203</a> of file <a class="el" href="gpt_8h_source.html">gpt.h</a>.</p>
 
 </div>
 </div>
@@ -613,7 +870,31 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="gpt_8h_source.html#l00205">205</a> of file <a class="el" href="gpt_8h_source.html">gpt.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gpt_8h_source.html#l00202">202</a> of file <a class="el" href="gpt_8h_source.html">gpt.h</a>.</p>
+
+</div>
+</div>
+<a id="aa5c8ab0676dfeb5e97cd4eb191f8b262"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5c8ab0676dfeb5e97cd4eb191f8b262">&#9670;&nbsp;</a></span>tableOffset</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceopenfsl.html#ac82097377896cd83a32c893edb39f391">lba48_t</a> openfsl::GPT::tableOffset</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="gpt_8h_source.html#l00208">208</a> of file <a class="el" href="gpt_8h_source.html">gpt.h</a>.</p>
 
 </div>
 </div>

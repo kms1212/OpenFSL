@@ -25,16 +25,16 @@ var NAVTREE =
   [ "OpenFSL", "index.html", [
     [ "OpenFSL README", "index.html", [
       [ "Progress", "index.html#autotoc_md1", null ],
-      [ "Downloads", "index.html#autotoc_md2", [
-        [ "Shared Library", "index.html#autotoc_md3", null ],
-        [ "Static Library", "index.html#autotoc_md4", null ]
+      [ "Downloads", "index.html#autotoc_md4", [
+        [ "Shared Library", "index.html#autotoc_md5", null ],
+        [ "Static Library", "index.html#autotoc_md6", null ]
       ] ],
-      [ "Description", "index.html#autotoc_md5", null ],
-      [ "Arch/platforms[^note]", "index.html#autotoc_md6", null ],
-      [ "Other", "index.html#autotoc_md7", [
-        [ "Documents", "index.html#autotoc_md8", null ],
-        [ "Discord", "index.html#autotoc_md9", null ],
-        [ "License", "index.html#autotoc_md10", null ]
+      [ "Description", "index.html#autotoc_md7", null ],
+      [ "Arch/platforms[^note]", "index.html#autotoc_md8", null ],
+      [ "Other", "index.html#autotoc_md9", [
+        [ "Documents", "index.html#autotoc_md10", null ],
+        [ "Discord", "index.html#autotoc_md11", null ],
+        [ "License", "index.html#autotoc_md12", null ]
       ] ]
     ] ],
     [ "Todo List", "todo.html", null ],
@@ -45,8 +45,7 @@ var NAVTREE =
         [ "Functions", "namespacemembers_func.html", null ],
         [ "Variables", "namespacemembers_vars.html", null ],
         [ "Typedefs", "namespacemembers_type.html", null ],
-        [ "Enumerations", "namespacemembers_enum.html", null ],
-        [ "Enumerator", "namespacemembers_eval.html", null ]
+        [ "Enumerations", "namespacemembers_enum.html", null ]
       ] ]
     ] ],
     [ "Classes", "annotated.html", [
@@ -80,10 +79,10 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"classopenfsl_1_1_g_u_i_d.html#a537e8e23f9ba5f72901aeca950be01c8",
-"fslutils_8h.html#a78bbeba7546b7a5be59e5f835e64e767",
-"ntfs__structures_8h.html#ad03a9b0939cf8df877a6b748fd887741a5eb5a4e16bf5669ad6e533c202f10023",
-"structopenfsl_1_1_f_a_t32_1_1_format_options.html#a9d18666c108db6d18db9c999e6c25c54"
+"classopenfsl_1_1_g_p_t.html#aa664dc41bcd6bcab7c055316b7273c57aa45da96d0bf6575970f2d27af22be28a",
+"error_8h.html#a1a73ffefa6ed95caf89943d6278114b2",
+"listdir_8cpp.html",
+"struct_m_f_t_resident_attr_header.html#a2213e321ec08d16a200cc18b542d0c61"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
