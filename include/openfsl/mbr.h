@@ -24,6 +24,7 @@ See the BSD-3-Clause for more details.
 #include "openfsl/filesystem.h"
 #include "openfsl/fslutils.h"
 #include "openfsl/error.h"
+#include "openfsl/endian.h"
 
 namespace openfsl {
 class MBR {

@@ -36,6 +36,7 @@ See the BSD-3-Clause for more details.
 #include "openfsl/file.h"
 #include "openfsl/filesystem.h"
 
+#include "openfsl/endian.h"
 #include "openfsl/fsltime.h"
 #include "openfsl/fslutils.h"
 

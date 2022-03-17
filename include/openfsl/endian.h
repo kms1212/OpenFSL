@@ -7,8 +7,8 @@ See the BSD-3-Clause for more details.
 
 */
 
-#ifndef OPENFSL_INITIALIZE_H_
-#define OPENFSL_INITIALIZE_H_
+#ifndef OPENFSL_ENDIAN_H_
+#define OPENFSL_ENDIAN_H_
 
 #ifndef __cplusplus
 #error C++ compiler required.
@@ -17,10 +17,25 @@ See the BSD-3-Clause for more details.
 #include "openfsl/types.h"
 #include "openfsl/error.h"
 #include "openfsl/symbols.h"
-#include "openfsl/endian.h"
 
 namespace openfsl {
 
+extern bool isLittleEndian;
+
+template<typename T> T leToSystem(T leValue);
+template<typename T> T beToSystem(T beValue);
+
+template<typename T> T systemToLe(T value);
+template<typename T> T systemToBe(T value);
+
+template<typename T> T flipEndian(T value);
+
 }  // namespace openfsl
 
-#endif  // OPENFSL_INITIALIZE_H_
+#define OPENFSL_ENDIAN_H_TEMPLATE_
+
+#include "openfsl/endian.hpp"
+
+#undef OPENFSL_ENDIAN_H_TEMPLATE_
+
+#endif  // OPENFSL_ENDIAN_H_

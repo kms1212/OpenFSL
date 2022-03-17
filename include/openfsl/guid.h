@@ -17,6 +17,8 @@ See the BSD-3-Clause for more details.
 #include <cstdint>
 #include <string>
 
+#include "openfsl/endian.h"
+
 namespace openfsl {
 /**
  *

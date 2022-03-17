@@ -52,21 +52,11 @@ void openfsl::GUID::setGUID(
 
 void openfsl::GUID::setGUID(
     const uint8_t* guidByteArray) {
-    this->guid1 = *(reinterpret_cast<const uint32_t*>(guidByteArray));
-    this->guid2 = *(reinterpret_cast<const uint16_t*>(guidByteArray + 4));
-    this->guid3 = *(reinterpret_cast<const uint16_t*>(guidByteArray + 6));
-    this->guid4 = 0;
-    this->guid5 = 0;
-
-    for (int i = 0; i < 2; i++) {
-        guid4 = guid4 << 8;
-        guid4 += guidByteArray[i + 8];
-    }
-
-    for (int i = 0; i < 6; i++) {
-        guid5 = guid5 << 8;
-        guid5 += guidByteArray[i + 10];
-    }
+    this->guid1 = leToSystem<uint32_t>(*(reinterpret_cast<const uint32_t*>(guidByteArray)));
+    this->guid2 = leToSystem<uint16_t>(*(reinterpret_cast<const uint16_t*>(guidByteArray + 4)));
+    this->guid3 = leToSystem<uint16_t>(*(reinterpret_cast<const uint16_t*>(guidByteArray + 6)));
+    this->guid4 = beToSystem<uint16_t>(*(reinterpret_cast<const uint16_t*>(guidByteArray + 8)));
+    this->guid5 = beToSystem<uint64_t>(*(reinterpret_cast<const uint64_t*>(guidByteArray + 10)));
 }
 
 void openfsl::GUID::setGUID(const char* guidString) {
@@ -134,22 +124,17 @@ void openfsl::GUID::toString(std::string* guidString, const bool msFormat) {
 }
 
 void openfsl::GUID::toByteArray(uint8_t* guidByteArray) {
-    uint16_t guid4d = guid4;
-    uint64_t guid5d = guid5;
+    uint32_t guid1d = systemToLe<uint32_t>(guid1);
+    uint16_t guid2d = systemToLe<uint16_t>(guid2);
+    uint16_t guid3d = systemToLe<uint16_t>(guid3);
+    uint16_t guid4d = systemToBe<uint16_t>(guid4);
+    uint64_t guid5d = systemToBe<uint64_t>(guid5);
 
-    memcpy(guidByteArray, &guid1, 4);
-    memcpy(guidByteArray + 4, &guid2, 2);
-    memcpy(guidByteArray + 6, &guid3, 2);
-
-    for (int i = 1; i > -1; i--) {
-        guidByteArray[i + 8] = (uint8_t)guid4d;
-        guid4d = guid4d >> 8;
-    }
-
-    for (int i = 5; i > -1; i--) {
-        guidByteArray[i + 10] = (uint8_t)guid5d;
-        guid5d = guid5d >> 8;
-    }
+    memcpy(guidByteArray, &guid1d, 4);
+    memcpy(guidByteArray + 4, &guid2d, 2);
+    memcpy(guidByteArray + 6, &guid3d, 2);
+    memcpy(guidByteArray + 8, &guid4d, 2);
+    memcpy(guidByteArray + 10, &guid5d, 2);
 }
 
 void openfsl::GUID::toIntRecord(

@@ -26,7 +26,7 @@ int openfsl::MBR::initialize() {
     PartitionTable table;
     memcpy(&table, sector_lba0.getData(), sizeof(PartitionTable));
 
-    if (table.mbrSignature != 0xAA55)  // Check MBR signature
+    if (leToSystem<uint16_t>(table.mbrSignature) != 0xAA55)  // Check MBR signature
         return OPENFSL_ERROR_INVALID_SIGNATURE;
 
     for (int i = 0; i < 256; i++) {
@@ -34,6 +34,10 @@ int openfsl::MBR::initialize() {
 
         if (i < 4) {
             currentEntry = table.mbrPartitionEntry[i];
+            currentEntry.entryStartingLBAAddr =
+                leToSystem<uint32_t>(currentEntry.entryStartingLBAAddr);
+            currentEntry.entryLBASize =
+                leToSystem<uint32_t>(currentEntry.entryLBASize);
 
             if (currentEntry.entryPartitionType == 0)
                 break;
@@ -88,9 +92,12 @@ int openfsl::MBR::initialize() {
             if (errorcode)
                 return errorcode;
 
-            PartitionEntry currentEntry =
-                sector_lba0.getDataCast<PartitionTable>()->
+            currentEntry = sector_lba0.getDataCast<PartitionTable>()->
                     mbrPartitionEntry[0];
+            currentEntry.entryStartingLBAAddr =
+                leToSystem<uint32_t>(currentEntry.entryStartingLBAAddr);
+            currentEntry.entryLBASize =
+                leToSystem<uint32_t>(currentEntry.entryLBASize);
 
             currentEntry.entryStartingLBAAddr += (uint32_t)base_addr;
             partitionList.push_back(currentEntry);

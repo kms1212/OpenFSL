@@ -30,6 +30,7 @@ See the BSD-3-Clause for more details.
 #include "openfsl/filesystem.h"
 #include "openfsl/file.h"
 #include "openfsl/fsltime.h"
+#include "openfsl/endian.h"
 
 #define FS_FAT32_H_INTERNAL_
 

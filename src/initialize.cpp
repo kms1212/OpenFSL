@@ -9,13 +9,25 @@ See the BSD-3-Clause for more details.
 
 #include "openfsl/initialize.h"
 
-bool openfsl::initialized = false;
+#include <iostream>
 
-error_t openfsl::initialize() {
-    initialized = true;
+namespace openfsl {
+namespace {
+    struct Initializer {
+        Initializer();
+        ~Initializer();
+    };
+    Initializer initializer;
+}
+}
 
+openfsl::Initializer::Initializer() {
     // Check endianness
-    // ...
+    uint16_t ecOrig = 1;
+    uint8_t* ecArr = (uint8_t*)&ecOrig;
+    openfsl::isLittleEndian = ecArr[0] == 1;
+}
 
-    return 0;
+openfsl::Initializer::~Initializer() {
+    
 }

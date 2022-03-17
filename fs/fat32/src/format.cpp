@@ -96,7 +96,7 @@ error_t openfsl::FAT32::format(const lba48_t offset, const lba48_t size,
         formatOptions.volumeLabel.c_str(),
         formatOptions.volumeLabel.length());
 
-    bpb.ebpbVolumeSerial = formatOptions.volumeSerial;
+    bpb.ebpbVolumeSerial = (uint32_t)formatOptions.volumeSerial;
 
     memcpy(bpb.ebpbFSType, "FAT32   ", 8);
 

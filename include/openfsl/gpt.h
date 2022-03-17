@@ -28,6 +28,7 @@ See the BSD-3-Clause for more details.
 #include "openfsl/error.h"
 #include "openfsl/mbr.h"
 #include "openfsl/guid.h"
+#include "openfsl/endian.h"
 
 namespace openfsl {
 class GPT {
