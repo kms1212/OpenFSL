@@ -111,25 +111,24 @@ $(document).ready(function(){initNavTree('iodevice_8cpp_source.html',''); initRe
 <div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="classopenfsl_1_1_i_o_device.html#ad617523eb1ecf66d7593aa19a3eee752">   12</a></span>&#160;<a class="code" href="classopenfsl_1_1_i_o_device.html#ad617523eb1ecf66d7593aa19a3eee752">openfsl::IODevice::IODevice</a>() {}</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
 <div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classopenfsl_1_1_i_o_device.html#af173fab3fef210969a047c5bc5fde8f6">   14</a></span>&#160;<a class="code" href="error_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a> <a class="code" href="classopenfsl_1_1_i_o_device.html#af173fab3fef210969a047c5bc5fde8f6">openfsl::IODevice::initialize</a>() {</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="namespaceopenfsl.html#a1ab01987ba38def9410abee9b43613c8">initialized</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    initialized = <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
 <div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classopenfsl_1_1_i_o_device.html#ae032b765ab0ad3d8cd6ef88cb098ae8c">   20</a></span>&#160;<a class="code" href="error_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a> <a class="code" href="classopenfsl_1_1_i_o_device.html#ae032b765ab0ad3d8cd6ef88cb098ae8c">openfsl::IODevice::deinitialize</a>() {</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="namespaceopenfsl.html#a1ab01987ba38def9410abee9b43613c8">initialized</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    initialized = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
 <div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classopenfsl_1_1_i_o_device.html#abfbc2abea3147b9b87e25256f459d666">   26</a></span>&#160;<a class="code" href="classopenfsl_1_1_i_o_device.html#abfbc2abea3147b9b87e25256f459d666">openfsl::IODevice::~IODevice</a>() {</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="namespaceopenfsl.html#a1ab01987ba38def9410abee9b43613c8">initialized</a>)</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">if</span> (initialized)</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        deinitialize();</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aclassopenfsl_1_1_i_o_device_html_abfbc2abea3147b9b87e25256f459d666"><div class="ttname"><a href="classopenfsl_1_1_i_o_device.html#abfbc2abea3147b9b87e25256f459d666">openfsl::IODevice::~IODevice</a></div><div class="ttdeci">virtual ~IODevice()</div><div class="ttdoc">IODevice destructor.</div><div class="ttdef"><b>Definition:</b> <a href="iodevice_8cpp_source.html#l00026">iodevice.cpp:26</a></div></div>
-<div class="ttc" id="anamespaceopenfsl_html_a1ab01987ba38def9410abee9b43613c8"><div class="ttname"><a href="namespaceopenfsl.html#a1ab01987ba38def9410abee9b43613c8">openfsl::initialized</a></div><div class="ttdeci">bool initialized</div><div class="ttdef"><b>Definition:</b> <a href="src_2initialize_8cpp_source.html#l00012">initialize.cpp:12</a></div></div>
 <div class="ttc" id="aerror_8h_html_a9ad6b2dc3cbff040775e79656fe8e1a3"><div class="ttname"><a href="error_8h.html#a9ad6b2dc3cbff040775e79656fe8e1a3">error_t</a></div><div class="ttdeci">int error_t</div><div class="ttdef"><b>Definition:</b> <a href="error_8h_source.html#l00025">error.h:25</a></div></div>
 <div class="ttc" id="aclassopenfsl_1_1_i_o_device_html_ae032b765ab0ad3d8cd6ef88cb098ae8c"><div class="ttname"><a href="classopenfsl_1_1_i_o_device.html#ae032b765ab0ad3d8cd6ef88cb098ae8c">openfsl::IODevice::deinitialize</a></div><div class="ttdeci">error_t deinitialize()</div><div class="ttdoc">IODevice deinitializer.</div><div class="ttdef"><b>Definition:</b> <a href="iodevice_8cpp_source.html#l00020">iodevice.cpp:20</a></div></div>
 <div class="ttc" id="aclassopenfsl_1_1_i_o_device_html_af173fab3fef210969a047c5bc5fde8f6"><div class="ttname"><a href="classopenfsl_1_1_i_o_device.html#af173fab3fef210969a047c5bc5fde8f6">openfsl::IODevice::initialize</a></div><div class="ttdeci">error_t initialize()</div><div class="ttdoc">IODevice initializer.</div><div class="ttdef"><b>Definition:</b> <a href="iodevice_8cpp_source.html#l00014">iodevice.cpp:14</a></div></div>

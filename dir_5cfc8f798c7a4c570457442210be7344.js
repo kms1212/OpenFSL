@@ -14,6 +14,8 @@ var dir_5cfc8f798c7a4c570457442210be7344 =
       [ "Container", "classopenfsl_1_1_container.html", "classopenfsl_1_1_container" ]
     ] ],
     [ "detectstruct.h", "detectstruct_8h.html", "detectstruct_8h" ],
+    [ "endian.h", "endian_8h.html", "endian_8h" ],
+    [ "endian.hpp", "endian_8hpp.html", null ],
     [ "error.h", "error_8h.html", "error_8h" ],
     [ "file.h", "file_8h.html", "file_8h" ],
     [ "fileblockdevice.h", "fileblockdevice_8h.html", [
@@ -27,7 +29,7 @@ var dir_5cfc8f798c7a4c570457442210be7344 =
       [ "GUID", "classopenfsl_1_1_g_u_i_d.html", "classopenfsl_1_1_g_u_i_d" ],
       [ "GUIDHash", "structopenfsl_1_1_g_u_i_d_hash.html", "structopenfsl_1_1_g_u_i_d_hash" ]
     ] ],
-    [ "initialize.h", "initialize_8h.html", "initialize_8h" ],
+    [ "initialize.h", "initialize_8h.html", null ],
     [ "iodevice.h", "iodevice_8h.html", [
       [ "IODevice", "classopenfsl_1_1_i_o_device.html", "classopenfsl_1_1_i_o_device" ]
     ] ],
