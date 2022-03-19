@@ -161,6 +161,7 @@ int main(int argc, char** argv) {
         bd.setDiskParameter(getParameterFromFile(imageFileName + ".info"));
         if (bd.initialize(ioFunc)) {
             std::cout << "Fail... on initialization\n";
+            return 1;
         }
 
         for (uint8_t i = 0; i < 4; i++) {
@@ -183,7 +184,7 @@ int main(int argc, char** argv) {
             if ((sector.getDataCast<uint32_t>())[4] != 0x12345678) {
                 std::cout << "Fail... on sector "
                     << static_cast<int>(i) << "\n";
-                break;
+                return 1;
             }
         }
 
@@ -202,6 +203,7 @@ int main(int argc, char** argv) {
         if (fbd.initialize(imageFileName,
             openfsl::FileBlockDevice::OpenMode::RW)) {
             std::cout << "Fail... on initialization\n";
+            return 1;
         }
 
         for (uint8_t i = 0; i < 4; i++) {
@@ -222,7 +224,7 @@ int main(int argc, char** argv) {
             if ((sector.getDataCast<uint32_t>())[4] != 0x12345678) {
                 std::cout << "Fail... on sector "
                     << static_cast<int>(i) << "\n";
-                break;
+                return 1;
             }
         }
 
@@ -278,6 +280,7 @@ int main(int argc, char** argv) {
 
         if (mbd.initialize(1024)) {
             std::cout << "Fail... on initialization\n";
+            return 1;
         }
 
         for (uint8_t i = 0; i < 4; i++) {
@@ -298,8 +301,35 @@ int main(int argc, char** argv) {
             if ((sector.getDataCast<uint32_t>())[4] != 0x12345678) {
                 std::cout << "Fail... on sector "
                     << static_cast<int>(i) << "\n";
-                break;
+                return 1;
             }
+        }
+
+        std::cout << "Pass\n";
+        return 0;
+    } else if (testName == "ENDIAN") {
+        /////////////////////////////////////////////
+        // ENDIAN TEST
+        /////////////////////////////////////////////
+
+        std::cout << "Testing endian-related functions........... ";
+
+        uint8_t arr[] = { 0x01, 0x23, 0x45, 0x67 };
+
+        uint32_t testval = openfsl::beToSystem<uint32_t>(*((uint32_t*)arr));
+        if (testval != 0x01234567) {
+            std::cout << "Fail... on beToSystem<>() " << std::hex << testval << std::dec << "\n";
+        testval = openfsl::leToSystem<uint32_t>(*((uint32_t*)arr));
+            std::cout << "Fail... on beToSystem<>() " << std::hex << testval << std::dec << "\n";
+            if (openfsl::isLittleEndian)
+                std::cout << "ff\n";
+            return 1;
+        }
+
+        testval = openfsl::leToSystem<uint32_t>(*((uint32_t*)arr));
+        if (testval != 0x67452301) {
+            std::cout << "Fail... on leToSystem<>()\n";
+            return 1;
         }
 
         std::cout << "Pass\n";

@@ -21,6 +21,7 @@ See the BSD-3-Clause for more details.
 namespace openfsl {
 
 extern bool isLittleEndian;
+extern bool isEndianChecked;
 
 template<typename T> T leToSystem(T leValue);
 template<typename T> T beToSystem(T beValue);
@@ -29,6 +30,8 @@ template<typename T> T systemToLe(T value);
 template<typename T> T systemToBe(T value);
 
 template<typename T> T flipEndian(T value);
+
+void checkEndian();
 
 }  // namespace openfsl
 

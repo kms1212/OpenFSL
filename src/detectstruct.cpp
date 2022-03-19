@@ -27,7 +27,7 @@ error_t openfsl::detectDiskStructure(DiskStructure* buf, BlockDevice* bd) {
         checkSector.getDataCast<fsStructure::COMMAA55h>();
 
     // Check 0xAA55 Signature
-    if (tailSigChk->tailSig == 0xAA55) {
+    if (leToSystem<uint16_t>(tailSigChk->tailSig) == 0xAA55) {
         // Detect file system
         FileSystemType fsType;
         result = detectFileSystem(&fsType, bd, 0);
@@ -88,6 +88,8 @@ error_t openfsl::detectDiskStructure(DiskStructure* buf, BlockDevice* bd) {
         } else {
             buf->partList.push_back(fsType);
         }
+    } else {
+        return OPENFSL_ERROR_INVALID_SIGNATURE;
     }
 
     return 0;
@@ -103,7 +105,7 @@ error_t openfsl::detectFileSystem(
     fsStructure::COMMAA55h* tailSigChk =
         checkSector.getDataCast<fsStructure::COMMAA55h>();
 
-    if (tailSigChk->tailSig == 0xAA55) {
+    if (leToSystem<uint16_t>(tailSigChk->tailSig) == 0xAA55) {
         fsStructure::FAT1216BPB* fat1216Chk =
             checkSector.getDataCast<fsStructure::FAT1216BPB>();
         if (memcmp(fat1216Chk->fatFsType, "FAT12   ", 8) == 0) {

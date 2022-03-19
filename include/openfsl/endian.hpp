@@ -21,6 +21,9 @@ See the BSD-3-Clause for more details.
 template<typename T> T openfsl::leToSystem(T leValue) {
     T ret;
 
+    if (!isEndianChecked)
+        checkEndian();
+
     // Flip byte order if system is big endian.
     if (!isLittleEndian)
         ret = flipEndian<T>(leValue);
@@ -32,6 +35,9 @@ template<typename T> T openfsl::leToSystem(T leValue) {
 
 template<typename T> T openfsl::beToSystem(T beValue) {
     T ret;
+
+    if (!isEndianChecked)
+        checkEndian();
 
     // Flip byte order if system is big endian.
     if (isLittleEndian)

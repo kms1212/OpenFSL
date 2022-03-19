@@ -15,7 +15,7 @@ copy_lib(${PROJECT_NAME}
          "${CMAKE_BINARY_DIR}/output/openfsl/\*"
          "openfsl")
 configure_test(${PROJECT_NAME} 
-                 "CONTAINER_CONTAINER;CONTAINER_SECTOR;UTIL_STRTOK;UTIL_CHS;BLOCKDEVICE;FILEBLOCKDEVICE;MEMCHARDEVICE;MEMBLOCKDEVICE"
+                 "CONTAINER_CONTAINER;CONTAINER_SECTOR;UTIL_STRTOK;UTIL_CHS;BLOCKDEVICE;FILEBLOCKDEVICE;MEMCHARDEVICE;MEMBLOCKDEVICE;ENDIAN"
                  "${CMAKE_BINARY_DIR}/output/openfsl/\*" 
                  "${CMAKE_BINARY_DIR}/base_test.img" 
                  "openfsl" 
