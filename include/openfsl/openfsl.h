@@ -15,7 +15,6 @@ See the BSD-3-Clause for more details.
 #endif
 
 #include "openfsl/version.h"
-#include "openfsl/initialize.h"
 
 #include "openfsl/iodevice.h"
 #include "openfsl/blockdevice.h"
