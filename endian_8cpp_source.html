@@ -109,9 +109,20 @@ $(document).ready(function(){initNavTree('endian_8cpp_source.html',''); initResi
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="endian_8h.html">openfsl/endian.h</a>&quot;</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
 <div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="namespaceopenfsl.html#a96eee4dd8215e0371383a43dda8a1e85">   12</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="namespaceopenfsl.html#a96eee4dd8215e0371383a43dda8a1e85">openfsl::isLittleEndian</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="namespaceopenfsl.html#a79db1fe7f22e52b36f801bc55eb312d1">   13</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="namespaceopenfsl.html#a79db1fe7f22e52b36f801bc55eb312d1">openfsl::isEndianChecked</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="namespaceopenfsl.html#abe6ec8025c47f6e6242d25891fb20207">   15</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespaceopenfsl.html#abe6ec8025c47f6e6242d25891fb20207">openfsl::checkEndian</a>() {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    uint16_t ecOrig = 1;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    uint8_t* ecArr = (uint8_t*)&amp;ecOrig;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="namespaceopenfsl.html#a96eee4dd8215e0371383a43dda8a1e85">isLittleEndian</a> = ecArr[0] == 1;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="namespaceopenfsl.html#a79db1fe7f22e52b36f801bc55eb312d1">isEndianChecked</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="anamespaceopenfsl_html_a79db1fe7f22e52b36f801bc55eb312d1"><div class="ttname"><a href="namespaceopenfsl.html#a79db1fe7f22e52b36f801bc55eb312d1">openfsl::isEndianChecked</a></div><div class="ttdeci">bool isEndianChecked</div><div class="ttdef"><b>Definition:</b> <a href="endian_8cpp_source.html#l00013">endian.cpp:13</a></div></div>
 <div class="ttc" id="anamespaceopenfsl_html_a96eee4dd8215e0371383a43dda8a1e85"><div class="ttname"><a href="namespaceopenfsl.html#a96eee4dd8215e0371383a43dda8a1e85">openfsl::isLittleEndian</a></div><div class="ttdeci">bool isLittleEndian</div><div class="ttdef"><b>Definition:</b> <a href="endian_8cpp_source.html#l00012">endian.cpp:12</a></div></div>
+<div class="ttc" id="anamespaceopenfsl_html_abe6ec8025c47f6e6242d25891fb20207"><div class="ttname"><a href="namespaceopenfsl.html#abe6ec8025c47f6e6242d25891fb20207">openfsl::checkEndian</a></div><div class="ttdeci">void checkEndian()</div><div class="ttdef"><b>Definition:</b> <a href="endian_8cpp_source.html#l00015">endian.cpp:15</a></div></div>
 <div class="ttc" id="aendian_8h_html"><div class="ttname"><a href="endian_8h.html">endian.h</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

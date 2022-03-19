@@ -21,7 +21,7 @@ var dir_0f9b470631b5c3ef5c1c327f859cd102 =
     [ "format.cpp", "format_8cpp.html", "format_8cpp" ],
     [ "fsinfo.cpp", "fsinfo_8cpp.html", null ],
     [ "getentryinfo.cpp", "getentryinfo_8cpp.html", null ],
-    [ "initialize.cpp", "fs_2fat32_2src_2initialize_8cpp.html", null ],
+    [ "initialize.cpp", "fat32_2src_2initialize_8cpp.html", null ],
     [ "linkedcluster_classgeneral.cpp", "linkedcluster__classgeneral_8cpp.html", null ],
     [ "linkedcluster_cluster.cpp", "linkedcluster__cluster_8cpp.html", null ],
     [ "linkedcluster_fetch.cpp", "linkedcluster__fetch_8cpp.html", null ],

@@ -29,7 +29,6 @@ var dir_5cfc8f798c7a4c570457442210be7344 =
       [ "GUID", "classopenfsl_1_1_g_u_i_d.html", "classopenfsl_1_1_g_u_i_d" ],
       [ "GUIDHash", "structopenfsl_1_1_g_u_i_d_hash.html", "structopenfsl_1_1_g_u_i_d_hash" ]
     ] ],
-    [ "initialize.h", "initialize_8h.html", null ],
     [ "iodevice.h", "iodevice_8h.html", [
       [ "IODevice", "classopenfsl_1_1_i_o_device.html", "classopenfsl_1_1_i_o_device" ]
     ] ],
