@@ -317,6 +317,7 @@ int main(int argc, char** argv) {
         uint8_t arr[] = { 0x01, 0x23, 0x45, 0x67 };
 
         uint32_t testval = openfsl::beToSystem<uint32_t>(*((uint32_t*)arr));
+        std::cout << std::hex << *((uint32_t*)arr) << " >> " << testval << std::endl;
         if (testval != 0x01234567) {
             std::cout << "Fail... on beToSystem<>() " << std::hex << testval << std::dec << "\n";
         testval = openfsl::leToSystem<uint32_t>(*((uint32_t*)arr));
@@ -327,6 +328,7 @@ int main(int argc, char** argv) {
         }
 
         testval = openfsl::leToSystem<uint32_t>(*((uint32_t*)arr));
+        std::cout << std::hex << *((uint32_t*)arr) << " >> " << testval << std::endl;
         if (testval != 0x67452301) {
             std::cout << "Fail... on leToSystem<>()\n";
             return 1;

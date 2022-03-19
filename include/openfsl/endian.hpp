@@ -18,14 +18,14 @@ See the BSD-3-Clause for more details.
 #error endian.hpp has to be included by endian.h.
 #endif
 
-template<typename T> T openfsl::leToSystem(T leValue) {
+template<typename T> T openfsl::leToSystem(T leValue) { // 0x78563412
     T ret;
 
     if (!isEndianChecked)
         checkEndian();
 
     // Flip byte order if system is big endian.
-    if (!isLittleEndian)
+    if (!isLittleEndian) // big endian: 0x12345678
         ret = flipEndian<T>(leValue);
     else
         ret = leValue;
@@ -60,9 +60,8 @@ template<typename T> T openfsl::flipEndian(T value) {
     T ret;
 
     // Flip byte order.
-    for (int i = sizeof(T) - 1; i > -1; i--) {
-        ((uint8_t*)&ret)[i] = (uint8_t)value;
-        value = value >> 8;
+    for (size_t i = 0; i < sizeof(T); i++) {
+        ((uint8_t*)&ret)[i] = ((uint8_t*)&value)[sizeof(T) - i - 1];
     }
 
     return ret;
