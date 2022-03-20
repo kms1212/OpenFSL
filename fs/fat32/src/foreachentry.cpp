@@ -128,24 +128,28 @@ error_t openfsl::FAT32::__forEachEntry(
                 fileInfo.fileAttr = fileEntry->fileAttr;
 
                 __wordToDate(&fileInfo.fileCreateTime,
-                    fileEntry->fileCreateDate);
+                    leToSystem<uint16_t>(fileEntry->fileCreateDate));
                 __wordToTime(&fileInfo.fileCreateTime,
-                    fileEntry->fileCreateTime);
+                    leToSystem<uint16_t>(fileEntry->fileCreateTime));
                 fileInfo.fileCreateTime.time_sec +=
                     fileEntry->fileCreateTenth / 10;
                 fileInfo.fileCreateTime.time_millis =
                     (fileEntry->fileCreateTenth % 10) * 100;
 
-                __wordToDate(&fileInfo.fileModTime, fileEntry->fileModDate);
-                __wordToTime(&fileInfo.fileModTime, fileEntry->fileModTime);
+                __wordToDate(&fileInfo.fileModTime,
+                    leToSystem<uint16_t>(fileEntry->fileModDate));
+                __wordToTime(&fileInfo.fileModTime,
+                    leToSystem<uint16_t>(fileEntry->fileModTime));
 
                 __wordToDate(&fileInfo.fileAccessTime,
-                    fileEntry->fileAccessDate);
+                    leToSystem<uint16_t>(fileEntry->fileAccessDate));
 
-                fileInfo.fileSize = fileEntry->fileSize;
+                fileInfo.fileSize = leToSystem<uint32_t>(fileEntry->fileSize);
                 fileInfo.fileLocation =
-                    static_cast<cluster_t>((fileEntry->fileLocationHigh << 16) +
-                        fileEntry->fileLocationLow);
+                    static_cast<cluster_t>(
+                        (leToSystem<uint16_t>(
+                            fileEntry->fileLocationHigh) << 16) +
+                        leToSystem<uint16_t>(fileEntry->fileLocationLow));
                 fileInfo.fileEntryIndex = i;
                 fileInfo.fileEntrySize = entrySize;
 

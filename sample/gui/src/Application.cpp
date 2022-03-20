@@ -10,6 +10,8 @@ See the BSD-3-Clause for more details.
 #include "Application.h"
 
 wxBEGIN_EVENT_TABLE(MainFrame, wxFrame)
+    EVT_LIST_ITEM_SELECTED(ID_FILELIST, MainFrame::OnFileListClick)
+
     EVT_MENU(ID_OPENIMGFILE, MainFrame::OnOpenImgFile)
     EVT_MENU(wxID_EXIT, MainFrame::OnExit)
     EVT_MENU(wxID_ABOUT, MainFrame::OnAbout)
@@ -37,6 +39,14 @@ MainFrame::MainFrame(const wxString& title, const wxPoint& pos, const wxSize& si
  
 void MainFrame::OnExit(wxCommandEvent& event)
 {
+    if (fsCommand != nullptr) {
+        if (dynamic_cast<FAT32Command*>(fsCommand) != nullptr) {
+            delete (FAT32Command*)fsCommand;
+        } else {
+            std::cout << "Error\n";
+        }
+    }
+
     Close(true);
 }
  
@@ -50,6 +60,60 @@ void MainFrame::OnOpenImgFile(wxCommandEvent& event)
 {
     if (openFileDialog->ShowModal() != wxID_CANCEL) {
         InitializeFilesystem(openFileDialog->GetPath());
+    }
+}
+ 
+void MainFrame::OnFileListClick(wxListEvent& event)
+{
+    wxListItem litem;
+    litem.m_itemId = event.m_itemIndex;
+    litem.m_col = 3;
+    litem.m_mask = wxLIST_MASK_TEXT;
+    listCtrl->GetItem(litem);
+
+    if (litem.m_text == wxT("File")) {
+        return;
+    } else {
+        litem.m_itemId = event.m_itemIndex;
+        litem.m_col = 0;
+        litem.m_mask = wxLIST_MASK_TEXT;
+        listCtrl->GetItem(litem);
+
+        std::string navigatePath;
+        fsCommand->GetCurrentDirectory(&navigatePath);
+
+        std::string pathSeparator;
+        fsCommand->GetPathSeparator(&pathSeparator);
+
+        navigatePath += pathSeparator.at(0) + litem.m_text;
+        fsCommand->NavigateDirectory(navigatePath);
+
+        std::string currentPath;
+        fsCommand->GetCurrentDirectory(&currentPath);
+        SetStatusText(currentPath);
+
+        std::vector<FileInfo> childList;
+        fsCommand->ListDirectoryChild(&childList);
+
+        listCtrl->DeleteAllItems();
+        int i = 0;
+        for (FileInfo file : childList) {
+            listCtrl->InsertItem(i, wxString(file.fileName));
+            listCtrl->SetItem(i, 1, wxString(
+                std::to_string(static_cast<int>(file.fileCreateTime.time_month)) + "-" + 
+                std::to_string(static_cast<int>(file.fileCreateTime.time_day)) + "-" + 
+                std::to_string(static_cast<int>(file.fileCreateTime.time_year)) + " " + 
+                std::to_string(static_cast<int>(file.fileCreateTime.time_hour)) + ":" + 
+                std::to_string(static_cast<int>(file.fileCreateTime.time_min)) + ":" + 
+                std::to_string(static_cast<int>(file.fileCreateTime.time_sec))));
+            listCtrl->SetItem(i, 2, wxString(std::to_string(file.fileSize)));
+            if (file.fileType == FileType::File) {
+                listCtrl->SetItem(i, 3, wxT("File"));
+            } else {
+                listCtrl->SetItem(i, 3, wxT("Directory"));
+            }
+            i++;
+        }
     }
 }
 
@@ -135,7 +199,12 @@ void MainFrame::InitializeFilesystem(wxString path) {
         if (diskStructure.partList[dialog.GetSelection()] ==
             openfsl::FileSystemType::FAT32) {
             if (fsCommand != nullptr) {
-                delete fsCommand;
+                if (dynamic_cast<FAT32Command*>(fsCommand) != nullptr) {
+                    delete (FAT32Command*)fsCommand;
+                } else {
+                    std::cout << "Error\n";
+                    exit(result);
+                }
             }
 #ifdef FAT32_BUILD
             fsCommand = new FAT32Command(&fbd);
@@ -149,6 +218,7 @@ void MainFrame::InitializeFilesystem(wxString path) {
             std::vector<FileInfo> childList;
             fsCommand->ListDirectoryChild(&childList);
 
+            listCtrl->DeleteAllItems();
             int i = 0;
             for (FileInfo file : childList) {
                 listCtrl->InsertItem(i, wxString(file.fileName));

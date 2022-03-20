@@ -19,16 +19,17 @@ protected:
     openfsl::FileBlockDevice* fbd;
 
 public:
-    FSCommand(openfsl::FileBlockDevice* fbd) {
-        this->fbd = fbd;
-    }
+    FSCommand(openfsl::FileBlockDevice* fbd);
+
+    virtual ~FSCommand();
 
     virtual error_t Initialize(const openfsl::DiskStructure diskStructure, const size_t selectIndex) = 0;
     virtual error_t GetVolumeInfo() = 0;
     virtual error_t SetVolumeName() = 0;
+    virtual error_t GetPathSeparator(std::string* separator) = 0;
     virtual error_t ListDirectoryChild(std::vector<FileInfo>* outList, const std::string path = "") = 0;
     virtual error_t GetCurrentDirectory(std::string* outPath) = 0;
-    virtual error_t NavigateDirectory() = 0;
+    virtual error_t NavigateDirectory(const std::string dest) = 0;
     virtual error_t CreateDirectory() = 0;
     virtual error_t RemoveDirectory() = 0;
     virtual error_t OpenFile() = 0;

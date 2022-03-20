@@ -28,7 +28,7 @@ void MainFrame::InitializeComponents() {
 
     wxSplitterWindow* mainSplitter = new wxSplitterWindow(this, -1, wxPoint(-1,-1), wxSize(-1,-1), wxSP_LIVE_UPDATE);
     dataViewCtrl = new wxDataViewCtrl(mainSplitter, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxDV_NO_HEADER);
-    listCtrl = new wxListCtrl(mainSplitter, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxLC_REPORT);
+    listCtrl = new wxListCtrl(mainSplitter, ID_FILELIST, wxDefaultPosition, wxDefaultSize, wxLC_REPORT);
     
     mainSplitter->SplitVertically(dataViewCtrl, listCtrl);
     mainSplitter->SetMinimumPaneSize(230);

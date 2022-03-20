@@ -29,9 +29,10 @@ public:
     error_t Initialize(openfsl::DiskStructure diskStructure, size_t selectIndex);
     error_t GetVolumeInfo();
     error_t SetVolumeName();
+    error_t GetPathSeparator(std::string* separator);
     error_t ListDirectoryChild(std::vector<FileInfo>* outList, const std::string path = "");
     error_t GetCurrentDirectory(std::string* outPath);
-    error_t NavigateDirectory();
+    error_t NavigateDirectory(const std::string dest);
     error_t CreateDirectory();
     error_t RemoveDirectory();
     error_t OpenFile();

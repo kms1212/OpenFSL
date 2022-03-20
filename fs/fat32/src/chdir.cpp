@@ -16,7 +16,7 @@ error_t openfsl::FAT32::__chdir(
     if (subdir == nullptr) {  // If first call of recursion
         if (pathSeparator.find(path.at(0)) != std::string::npos) {
             currentPath = rootSymbol;
-            currentCluster = bpb.ebpbRootDirectoryCluster;
+            currentCluster = leToSystem<cluster_t>(bpb.ebpbRootDirectoryCluster);
         }
 
         std::vector<std::string> subdir_tmp;
@@ -68,7 +68,7 @@ cacheNotFound:
     if (subdir->front() == rootSymbol) {
         subdir->erase(subdir->begin());
         currentPath = rootSymbol;
-        currentCluster = bpb.ebpbRootDirectoryCluster;
+        currentCluster = leToSystem<cluster_t>(bpb.ebpbRootDirectoryCluster);
         return __chdir(path, subdir);  // Recurse function to next subdir
     }
 
@@ -76,7 +76,8 @@ cacheNotFound:
     for (auto & c : path_tmp) c = static_cast<char>(toupper(c));
 
     if (path_tmp == "." ||
-        (currentCluster == bpb.ebpbRootDirectoryCluster && path_tmp == "..")) {
+        ((currentCluster == leToSystem<cluster_t>(bpb.ebpbRootDirectoryCluster))
+        && (path_tmp == ".."))) {
         subdir->erase(subdir->begin());
         return __chdir(path, subdir);
     }
@@ -85,7 +86,7 @@ cacheNotFound:
     std::string pathTemp = currentPath;
     cluster_t clusterTemp = currentCluster;
 
-    int errcode = __forEachEntry(
+    error_t errcode = __forEachEntry(
         [=, &subdir, &fileFound, &pathTemp, &clusterTemp](FileInfo fileInfo) {
         if ((fileInfo.fileAttr & FileAttribute::Directory) !=
             (FileAttribute)0) {
@@ -108,7 +109,7 @@ cacheNotFound:
                 // Set current cluster to subdir
                 clusterTemp = fileInfo.fileLocation;
                 if (clusterTemp == 0)
-                    clusterTemp = bpb.ebpbRootDirectoryCluster;
+                    clusterTemp = leToSystem<cluster_t>(bpb.ebpbRootDirectoryCluster);
 
                 fileFound = true;
                 return true;

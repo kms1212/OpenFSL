@@ -17,11 +17,12 @@ See the BSD-3-Clause for more details.
 
 #include <openfsl/openfsl.h>
 
-#include "header.h"
+#include "utils.h"
 #include "FAT32Command.h"
 
 enum {
-    ID_OPENIMGFILE = 1
+    ID_OPENIMGFILE = 1,
+    ID_FILELIST = 2
 };
  
 class Application : public wxApp
@@ -43,6 +44,8 @@ private:
     FSCommand* fsCommand = nullptr;
 
     void InitializeComponents();
+
+    void OnFileListClick(wxListEvent& event);
 
     void OnOpenImgFile(wxCommandEvent& event);
     void OnExit(wxCommandEvent& event);

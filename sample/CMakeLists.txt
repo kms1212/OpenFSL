@@ -25,7 +25,7 @@ if(BUILD_SAMPLE)
         include_directories(${PROJECT_NAME} "${CMAKE_CURRENT_SOURCE_DIR}/gui/include")
 
         # wxWidgets library for gui
-        find_package(wxWidgets REQUIRED gl core base)
+        find_package(wxWidgets REQUIRED gl core base adv)
         include(${wxWidgets_USE_FILE})
         include_directories(${wxWidgets_INCLUDE_DIRS})
         target_link_libraries(${PROJECT_NAME} ${wxWidgets_LIBRARIES})

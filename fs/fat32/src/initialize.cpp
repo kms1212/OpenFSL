@@ -31,40 +31,41 @@ error_t openfsl::FAT32::initialize() {
             goto funcRet;
         }
 
-        if (bpb.bpbVBRSignature != 0xAA55) {  // Check BPB signature
+        if (leToSystem<uint16_t>(bpb.bpbVBRSignature) != 0xAA55) {  // Check BPB signature
             result = OPENFSL_ERROR_INVALID_SIGNATURE;
             goto funcRet;
         }
 
         result = iod->readSector(structSector.getData(),
-            getActualLBA(bpb.ebpbFSInfoSector), 1);  // Read FSINFO sector
+            getActualLBA(leToSystem<uint16_t>(bpb.ebpbFSInfoSector)), 1);  // Read FSINFO sector
         if (result)
             goto funcRet;
 
         memcpy(&fsinfo, structSector.getData(), sizeof(FSINFOSector));
 
-        if (fsinfo.fsinfoSignature1 != 0x41615252) {  // Check FSINFO signature
+        if (leToSystem<uint32_t>(fsinfo.fsinfoSignature1) != 0x41615252) {  // Check FSINFO signature
             result = OPENFSL_ERROR_INVALID_SIGNATURE;
             goto funcRet;
         }
 
-        if (fsinfo.fsinfoSignature2 != 0x61417272) {
+        if (leToSystem<uint32_t>(fsinfo.fsinfoSignature2) != 0x61417272) {
             result = OPENFSL_ERROR_INVALID_SIGNATURE;
             goto funcRet;
         }
 
-        if (fsinfo.fsinfoSignature3 != 0xAA55) {
+        if (leToSystem<uint16_t>(fsinfo.fsinfoSignature3) != 0xAA55) {
             result = OPENFSL_ERROR_INVALID_SIGNATURE;
             goto funcRet;
         }
 
         currentPath = rootSymbol;
-        currentCluster = bpb.ebpbRootDirectoryCluster;
+        currentCluster = leToSystem<cluster_t>(bpb.ebpbRootDirectoryCluster);
 
-        fatArea = new Sector(bpb.ebpbSectorsPerFAT32,
+        fatArea = new Sector(leToSystem<uint32_t>(bpb.ebpbSectorsPerFAT32),
             iod->getDiskParameter().bytesPerSector);
         result = iod->readSector(fatArea->getDataCast<uint8_t>(),
-            getActualLBA(bpb.bpbReservedSectors), bpb.ebpbSectorsPerFAT32);
+            getActualLBA(leToSystem<uint16_t>(bpb.bpbReservedSectors)),
+            leToSystem<uint32_t>(bpb.ebpbSectorsPerFAT32));
         if (result)
             goto funcRet;
     }

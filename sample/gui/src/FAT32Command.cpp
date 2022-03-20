@@ -22,7 +22,26 @@ error_t FAT32Command::Initialize(openfsl::DiskStructure diskStructure, size_t se
             wxMessageBox(openfsl::geterrorstr(result), "Error");
             return result;
         }
-        std::vector<openfsl::MBR::PartitionInfo> partitionInfo = mbr.getPartitionInfo();
+        std::vector<openfsl::MBR::PartitionInfo> partitionInfo;
+        result = mbr.getPartitionInfo(&partitionInfo);
+        if (result) {
+            wxMessageBox(openfsl::geterrorstr(result), "Error");
+            return result;
+        }
+        fat32->setFsLBAOffset(partitionInfo[selectIndex].partOffset);
+    } else if (diskStructure.partTable == openfsl::PartitionTableType::GPT) {
+        openfsl::GPT gpt(fbd);
+        result = gpt.initialize();
+        if (result) {
+            wxMessageBox(openfsl::geterrorstr(result), "Error");
+            return result;
+        }
+        std::vector<openfsl::GPT::PartitionInfo> partitionInfo;
+        result = gpt.getPartitionInfo(&partitionInfo);
+        if (result) {
+            wxMessageBox(openfsl::geterrorstr(result), "Error");
+            return result;
+        }
         fat32->setFsLBAOffset(partitionInfo[selectIndex].partOffset);
     }
 
@@ -72,6 +91,11 @@ error_t FAT32Command::SetVolumeName() {
     return OPENFSL_SUCCESS;
 }
 
+error_t FAT32Command::GetPathSeparator(std::string* separator) {
+    *separator = fat32->getPathSeparator();
+    return 0;
+}
+
 error_t FAT32Command::CreateDirectory() {
     wxMessageBox("FAT32 option is not enabled.", "Error");
     return OPENFSL_SUCCESS;
@@ -87,8 +111,12 @@ error_t FAT32Command::GetCurrentDirectory(std::string* outPath) {
     return OPENFSL_SUCCESS;
 }
 
-error_t FAT32Command::NavigateDirectory() {
-    wxMessageBox("FAT32 option is not enabled.", "Error");
+error_t FAT32Command::NavigateDirectory(const std::string dest) {
+    error_t result = fat32->changeDirectory(dest);
+    if (result) {
+        wxMessageBox(openfsl::geterrorstr(result), "Error");
+        return result;
+    }
     return OPENFSL_SUCCESS;
 }
 
