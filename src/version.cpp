@@ -26,11 +26,11 @@ const uint32_t openfsl::getPatchVersion() {
 }
 
 const uint32_t openfsl::getBuildVersion() {
-    return 1344;
+    return 1347;
 }
 
 const uint32_t openfsl::getBuildDate() {
-    return 20220319;
+    return 20220320;
 }
 
 const char* openfsl::getVersionString() {

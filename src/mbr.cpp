@@ -29,92 +29,56 @@ int openfsl::MBR::initialize() {
     if (leToSystem<uint16_t>(table.mbrSignature) != 0xAA55)  // Check MBR signature
         return OPENFSL_ERROR_INVALID_SIGNATURE;
 
+    int currentEntryIndex = 0;
     for (int i = 0; i < 256; i++) {
         PartitionEntry currentEntry;
+        
+        currentEntry = table.mbrPartitionEntry[currentEntryIndex];
+        currentEntryIndex++;
+        if (currentEntry.entryPartitionType == 0)
+            break;
 
-        if (i < 4) {
-            currentEntry = table.mbrPartitionEntry[i];
-            currentEntry.entryStartingLBAAddr =
-                leToSystem<uint32_t>(currentEntry.entryStartingLBAAddr);
-            currentEntry.entryLBASize =
-                leToSystem<uint32_t>(currentEntry.entryLBASize);
+        currentEntry.entryStartingLBAAddr =
+            leToSystem<uint32_t>(currentEntry.entryStartingLBAAddr);
+        currentEntry.entryLBASize =
+            leToSystem<uint32_t>(currentEntry.entryLBASize);
 
-            if (currentEntry.entryPartitionType == 0)
-                break;
+        // Exended Partition Entry
+        if ((currentEntry.entryPartitionType ==
+                PartitionType::ExtendedPartitionCHS) ||
+            (currentEntry.entryPartitionType ==
+                PartitionType::ExtendedPartitionLBA)) {
+            // If partition table created without LBA Addressing
+            if (currentEntry.entryStartingLBAAddr == 0) {
+            } else {  // If partition table created with LBA Addressing
+                base_addr = currentEntry.entryStartingLBAAddr;
 
-            // Exended Partition
-            if ((currentEntry.entryPartitionType ==
-                    PartitionType::ExtendedPartitionCHS) ||
-                (currentEntry.entryPartitionType ==
-                    PartitionType::ExtendedPartitionLBA)) {
-                // If partition table created without LBA Addressing
-                if (currentEntry.entryStartingLBAAddr == 0) {
-                } else {  // If partition table created with LBA Addressing
-                    base_addr = currentEntry.entryStartingLBAAddr;
+                // Read extended partition table
+                errorcode =
+                    bd->readSector(sector_lba0.getData(), base_addr, 1);
+                memcpy(&table, sector_lba0.getData(), sizeof(PartitionTable));
+                if (errorcode)
+                    return errorcode;
 
-                    // Read extended partition table
-                    errorcode =
-                        bd->readSector(sector_lba0.getData(), base_addr, 1);
-                    if (errorcode)
-                        return errorcode;
+                currentEntryIndex = 0;
+                currentEntry =
+                    sector_lba0.getDataCast<PartitionTable>()->
+                        mbrPartitionEntry[currentEntryIndex];
+                currentEntryIndex++;
 
-                    currentEntry =
-                        sector_lba0.getDataCast<PartitionTable>()->
-                            mbrPartitionEntry[0];
+                if (currentEntry.entryPartitionType == 0)
+                    break;
 
-                    if (currentEntry.entryPartitionType == 0)
-                        break;
+                currentEntry.entryStartingLBAAddr =
+                    leToSystem<uint32_t>(currentEntry.entryStartingLBAAddr);
+                currentEntry.entryLBASize =
+                    leToSystem<uint32_t>(currentEntry.entryLBASize);
 
-                    currentEntry.entryStartingLBAAddr += (uint32_t)base_addr;
-                    partitionList.push_back(currentEntry);
-
-                    if (sector_lba0.getDataCast<PartitionTable>()->
-                        mbrPartitionEntry[1].entryPartitionType == 0) {
-                        break;
-                    } else {
-                        // If partition table created without LBA Addressing
-                        if (sector_lba0.getDataCast<PartitionTable>()->
-                            mbrPartitionEntry[1].entryStartingLBAAddr == 0) {
-                            // add lba-converted chs address to base_addr
-                        } else {  // With LBA Addressing
-                            base_addr +=
-                                sector_lba0.getDataCast<PartitionTable>()->
-                                    mbrPartitionEntry[1].entryStartingLBAAddr;
-                        }
-                    }
-                }
-            } else {  // Primary partition
+                currentEntry.entryStartingLBAAddr += (uint32_t)base_addr;
                 partitionList.push_back(currentEntry);
             }
-        } else {
-            // Read extended partition table
-            errorcode = bd->readSector(sector_lba0.getData(), base_addr, 1);
-            if (errorcode)
-                return errorcode;
-
-            currentEntry = sector_lba0.getDataCast<PartitionTable>()->
-                    mbrPartitionEntry[0];
-            currentEntry.entryStartingLBAAddr =
-                leToSystem<uint32_t>(currentEntry.entryStartingLBAAddr);
-            currentEntry.entryLBASize =
-                leToSystem<uint32_t>(currentEntry.entryLBASize);
-
-            currentEntry.entryStartingLBAAddr += (uint32_t)base_addr;
+        } else {  // Primary partition
             partitionList.push_back(currentEntry);
-
-            if (sector_lba0.getDataCast<PartitionTable>()->
-                mbrPartitionEntry[1].entryPartitionType == 0) {
-                break;
-            } else {
-                // If partition table created without LBA Addressing
-                if (sector_lba0.getDataCast<PartitionTable>()->
-                    mbrPartitionEntry[1].entryStartingLBAAddr == 0) {
-                    // add lba-converted chs address to base_addr
-                } else {  // With LBA Addressing
-                    base_addr += sector_lba0.getDataCast<PartitionTable>()->
-                        mbrPartitionEntry[1].entryStartingLBAAddr;
-                }
-            }
         }
     }
 
