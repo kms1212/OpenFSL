@@ -243,11 +243,11 @@ var NAVTREEINDEX1 =
 "dir_d44c64559bbebec7f509842c48db8b23.html":[4,0,1],
 "dir_df7bbba867fd9ebd6751e83d35a98a92.html":[4,0,0,0,0,0],
 "endian_8cpp.html":[4,0,2,4],
+"endian_8cpp.html#a4c2201496d7e0f0604ec584153ded3b5":[4,0,2,4,0],
+"endian_8cpp.html#a4e739986646d0d5b005075953dfed776":[4,0,2,4,1],
 "endian_8cpp_source.html":[4,0,2,4],
 "endian_8h.html":[4,0,1,0,5],
 "endian_8h.html#a144f27faa347673c19f7143816f5a060":[4,0,1,0,5,0],
 "endian_8h.html#a228f5da4d218f95ce026b8f4c595299b":[4,0,1,0,5,1],
-"endian_8h.html#a455d1c885a6f41b32513334daa6d2d24":[4,0,1,0,5,3],
-"endian_8h.html#a79db1fe7f22e52b36f801bc55eb312d1":[4,0,1,0,5,7],
-"endian_8h.html#a87d8921d50e53fe9c7bed66dcb564b1c":[4,0,1,0,5,4]
+"endian_8h.html#a455d1c885a6f41b32513334daa6d2d24":[4,0,1,0,5,3]
 };

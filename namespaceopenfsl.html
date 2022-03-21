@@ -230,6 +230,10 @@ Functions</h2></td></tr>
 <tr class="separator:a504a1b9126c87c62a51837b9388abf86"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af0c653bca3fe7d5fe083c0225e7f25ea"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenfsl.html#af0c653bca3fe7d5fe083c0225e7f25ea">fileSystemTypeToString</a> (const <a class="el" href="namespaceopenfsl.html#a43add8221d9aa3cd7285f47e4e04e72e">FileSystemType</a> type)</td></tr>
 <tr class="separator:af0c653bca3fe7d5fe083c0225e7f25ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b00b5b826f2bb563b31fc39878d089a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenfsl.html#a5b00b5b826f2bb563b31fc39878d089a">isLittleEndian</a> ()</td></tr>
+<tr class="separator:a5b00b5b826f2bb563b31fc39878d089a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab01ea40fed5044aee31cba37e0912ba6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenfsl.html#ab01ea40fed5044aee31cba37e0912ba6">isEndianChecked</a> ()</td></tr>
+<tr class="separator:ab01ea40fed5044aee31cba37e0912ba6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a87d8921d50e53fe9c7bed66dcb564b1c"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a87d8921d50e53fe9c7bed66dcb564b1c"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenfsl.html#a87d8921d50e53fe9c7bed66dcb564b1c">leToSystem</a> (T leValue)</td></tr>
 <tr class="separator:a87d8921d50e53fe9c7bed66dcb564b1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -291,10 +295,6 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a96eee4dd8215e0371383a43dda8a1e85"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenfsl.html#a96eee4dd8215e0371383a43dda8a1e85">isLittleEndian</a> = false</td></tr>
-<tr class="separator:a96eee4dd8215e0371383a43dda8a1e85"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a79db1fe7f22e52b36f801bc55eb312d1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenfsl.html#a79db1fe7f22e52b36f801bc55eb312d1">isEndianChecked</a> = false</td></tr>
-<tr class="separator:a79db1fe7f22e52b36f801bc55eb312d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad93b844fd4b92c6c0a417cc0895f317f"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="macros_8h.html#ab42a43b6291cf51c6c3c85301160c078">__maybe_unused</a> char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenfsl.html#ad93b844fd4b92c6c0a417cc0895f317f">__error_str</a> []</td></tr>
 <tr class="separator:ad93b844fd4b92c6c0a417cc0895f317f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a570beca576196dcbc17eb905ae7c1723"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; <a class="el" href="classopenfsl_1_1_g_u_i_d.html">GUID</a>, <a class="el" href="classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4a">openfsl::GPT::PartitionType</a>, <a class="el" href="structopenfsl_1_1_g_u_i_d_hash.html">GUIDHash</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenfsl.html#a570beca576196dcbc17eb905ae7c1723">partitionGuidMap</a></td></tr>
@@ -558,8 +558,10 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespaceopenfsl_a228f5da4d218f95ce026b8f4c595299b_cgraph.png" border="0" usemap="#namespaceopenfsl_a228f5da4d218f95ce026b8f4c595299b_cgraph" alt=""/></div>
 <map name="namespaceopenfsl_a228f5da4d218f95ce026b8f4c595299b_cgraph" id="namespaceopenfsl_a228f5da4d218f95ce026b8f4c595299b_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,163,32"/>
-<area shape="rect" href="namespaceopenfsl.html#abe6ec8025c47f6e6242d25891fb20207" title=" " alt="" coords="211,5,371,32"/>
+<area shape="rect" title=" " alt="" coords="5,56,163,83"/>
+<area shape="rect" href="namespaceopenfsl.html#abe6ec8025c47f6e6242d25891fb20207" title=" " alt="" coords="225,5,385,32"/>
+<area shape="rect" href="namespaceopenfsl.html#ab01ea40fed5044aee31cba37e0912ba6" title=" " alt="" coords="211,56,399,83"/>
+<area shape="rect" href="namespaceopenfsl.html#a5b00b5b826f2bb563b31fc39878d089a" title=" " alt="" coords="221,107,388,133"/>
 </map>
 </div>
 
@@ -580,7 +582,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="endian_8cpp_source.html#l00015">15</a> of file <a class="el" href="endian_8cpp_source.html">endian.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="endian_8cpp_source.html#l00024">24</a> of file <a class="el" href="endian_8cpp_source.html">endian.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1198,6 +1200,64 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
+<a id="ab01ea40fed5044aee31cba37e0912ba6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab01ea40fed5044aee31cba37e0912ba6">&#9670;&nbsp;</a></span>isEndianChecked()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classbool.html">bool</a> openfsl::isEndianChecked </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="endian_8cpp_source.html#l00019">19</a> of file <a class="el" href="endian_8cpp_source.html">endian.cpp</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespaceopenfsl_ab01ea40fed5044aee31cba37e0912ba6_icgraph.png" border="0" usemap="#namespaceopenfsl_ab01ea40fed5044aee31cba37e0912ba6_icgraph" alt=""/></div>
+<map name="namespaceopenfsl_ab01ea40fed5044aee31cba37e0912ba6_icgraph" id="namespaceopenfsl_ab01ea40fed5044aee31cba37e0912ba6_icgraph">
+<area shape="rect" title=" " alt="" coords="211,31,399,57"/>
+<area shape="rect" href="namespaceopenfsl.html#a228f5da4d218f95ce026b8f4c595299b" title=" " alt="" coords="5,5,163,32"/>
+<area shape="rect" href="namespaceopenfsl.html#a87d8921d50e53fe9c7bed66dcb564b1c" title=" " alt="" coords="7,56,161,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5b00b5b826f2bb563b31fc39878d089a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b00b5b826f2bb563b31fc39878d089a">&#9670;&nbsp;</a></span>isLittleEndian()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classbool.html">bool</a> openfsl::isLittleEndian </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="endian_8cpp_source.html#l00015">15</a> of file <a class="el" href="endian_8cpp_source.html">endian.cpp</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespaceopenfsl_a5b00b5b826f2bb563b31fc39878d089a_icgraph.png" border="0" usemap="#namespaceopenfsl_a5b00b5b826f2bb563b31fc39878d089a_icgraph" alt=""/></div>
+<map name="namespaceopenfsl_a5b00b5b826f2bb563b31fc39878d089a_icgraph" id="namespaceopenfsl_a5b00b5b826f2bb563b31fc39878d089a_icgraph">
+<area shape="rect" title=" " alt="" coords="211,31,377,57"/>
+<area shape="rect" href="namespaceopenfsl.html#a228f5da4d218f95ce026b8f4c595299b" title=" " alt="" coords="5,5,163,32"/>
+<area shape="rect" href="namespaceopenfsl.html#a87d8921d50e53fe9c7bed66dcb564b1c" title=" " alt="" coords="7,56,161,83"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="a87d8921d50e53fe9c7bed66dcb564b1c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a87d8921d50e53fe9c7bed66dcb564b1c">&#9670;&nbsp;</a></span>leToSystem()</h2>
 
@@ -1222,8 +1282,10 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespaceopenfsl_a87d8921d50e53fe9c7bed66dcb564b1c_cgraph.png" border="0" usemap="#namespaceopenfsl_a87d8921d50e53fe9c7bed66dcb564b1c_cgraph" alt=""/></div>
 <map name="namespaceopenfsl_a87d8921d50e53fe9c7bed66dcb564b1c_cgraph" id="namespaceopenfsl_a87d8921d50e53fe9c7bed66dcb564b1c_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,159,32"/>
-<area shape="rect" href="namespaceopenfsl.html#abe6ec8025c47f6e6242d25891fb20207" title=" " alt="" coords="207,5,367,32"/>
+<area shape="rect" title=" " alt="" coords="5,56,159,83"/>
+<area shape="rect" href="namespaceopenfsl.html#abe6ec8025c47f6e6242d25891fb20207" title=" " alt="" coords="221,5,381,32"/>
+<area shape="rect" href="namespaceopenfsl.html#ab01ea40fed5044aee31cba37e0912ba6" title=" " alt="" coords="207,56,395,83"/>
+<area shape="rect" href="namespaceopenfsl.html#a5b00b5b826f2bb563b31fc39878d089a" title=" " alt="" coords="217,107,384,133"/>
 </map>
 </div>
 
@@ -1472,38 +1534,6 @@ template&lt;typename T &gt; </div>
 <div class="line">}</div>
 </div><!-- fragment -->
 <p class="definition">Definition at line <a class="el" href="error_8cpp_source.html#l00012">12</a> of file <a class="el" href="error_8cpp_source.html">error.cpp</a>.</p>
-
-</div>
-</div>
-<a id="a79db1fe7f22e52b36f801bc55eb312d1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a79db1fe7f22e52b36f801bc55eb312d1">&#9670;&nbsp;</a></span>isEndianChecked</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classbool.html">bool</a> openfsl::isEndianChecked = false</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="endian_8cpp_source.html#l00013">13</a> of file <a class="el" href="endian_8cpp_source.html">endian.cpp</a>.</p>
-
-</div>
-</div>
-<a id="a96eee4dd8215e0371383a43dda8a1e85"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a96eee4dd8215e0371383a43dda8a1e85">&#9670;&nbsp;</a></span>isLittleEndian</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classbool.html">bool</a> openfsl::isLittleEndian = false</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="endian_8cpp_source.html#l00012">12</a> of file <a class="el" href="endian_8cpp_source.html">endian.cpp</a>.</p>
 
 </div>
 </div>

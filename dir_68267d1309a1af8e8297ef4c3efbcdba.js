@@ -4,7 +4,7 @@ var dir_68267d1309a1af8e8297ef4c3efbcdba =
     [ "chardevice.cpp", "chardevice_8cpp.html", null ],
     [ "container.cpp", "container_8cpp.html", null ],
     [ "detectstruct.cpp", "detectstruct_8cpp.html", null ],
-    [ "endian.cpp", "endian_8cpp.html", null ],
+    [ "endian.cpp", "endian_8cpp.html", "endian_8cpp" ],
     [ "error.cpp", "error_8cpp.html", null ],
     [ "file.cpp", "file_8cpp.html", null ],
     [ "fileblockdevice.cpp", "fileblockdevice_8cpp.html", null ],
