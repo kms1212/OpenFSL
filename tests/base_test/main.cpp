@@ -322,7 +322,7 @@ int main(int argc, char** argv) {
             std::cout << "Fail... on beToSystem<>() " << std::hex << testval << std::dec << "\n";
         testval = openfsl::leToSystem<uint32_t>(*((uint32_t*)arr));
             std::cout << "Fail... on beToSystem<>() " << std::hex << testval << std::dec << "\n";
-            if (openfsl::isLittleEndian)
+            if (openfsl::isLittleEndian())
                 std::cout << "ff\n";
             return 1;
         }

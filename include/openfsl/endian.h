@@ -20,8 +20,8 @@ See the BSD-3-Clause for more details.
 
 namespace openfsl {
 
-extern bool isLittleEndian;
-extern bool isEndianChecked;
+bool isLittleEndian();
+bool isEndianChecked();
 
 template<typename T> T leToSystem(T leValue);
 template<typename T> T beToSystem(T beValue);

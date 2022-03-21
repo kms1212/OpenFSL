@@ -9,13 +9,22 @@ See the BSD-3-Clause for more details.
 
 #include "openfsl/endian.h"
 
-bool openfsl::isLittleEndian = false;
-bool openfsl::isEndianChecked = false;
+static bool isLittleEndianData = false;
+static bool isEndianCheckedData = false;
+
+bool openfsl::isLittleEndian() {
+    return isLittleEndianData;
+}
+
+bool openfsl::isEndianChecked() {
+    return isEndianCheckedData;
+}
+
 
 void openfsl::checkEndian() {
     uint16_t ecOrig = 1;
     uint8_t* ecArr = (uint8_t*)&ecOrig;
-    isLittleEndian = ecArr[0] == 1;
+    isLittleEndianData = ecArr[0] == 1;
 
-    isEndianChecked = true;
+    isEndianCheckedData = true;
 }
