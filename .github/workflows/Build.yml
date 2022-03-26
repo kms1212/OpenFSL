@@ -133,7 +133,7 @@ jobs:
                   -DTEST_COVERAGE=true \
                   -DDOXYGEN_GENERATE=false \
                   -DNO_BUILD=false \
-                  -DPACKAGE_GENERATE=true \
+                  -DPACKAGE_GENERATE=true
           else
             cmake -G "${{ matrix.config.generator }}" \
                   -S. -Bbuild \
