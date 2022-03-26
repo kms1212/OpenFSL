@@ -14,6 +14,8 @@ See the BSD-3-Clause for more details.
 #error C++ compiler required.
 #endif
 
+#include <cstdint>
+
 #include "openfsl/types.h"
 #include "openfsl/error.h"
 #include "openfsl/symbols.h"

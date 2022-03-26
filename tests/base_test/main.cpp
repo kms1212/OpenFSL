@@ -239,7 +239,7 @@ int main(int argc, char** argv) {
 
         openfsl::MemCharDevice mcd;
 
-        uint8_t origData[] = 
+        uint8_t origData[] =
             { 0x00, 0x11, 0x22, 0x33, 0x44, 0x55, 0x66, 0x77,
               0x88, 0x99, 0xAA, 0xBB, 0xCC, 0xDD, 0xEE, 0xFF };
 
@@ -247,7 +247,7 @@ int main(int argc, char** argv) {
 
         mcd.initialize(16, 8);
 
-        size_t errorCount = 0;
+        int errorCount = 0;
 
         for (int i = 0; i < 7; i++) {
             error_t result = mcd.writeByte(origData, i * 16 + 4, 16);
@@ -319,11 +319,7 @@ int main(int argc, char** argv) {
         uint32_t testval = openfsl::beToSystem<uint32_t>(*((uint32_t*)arr));
         std::cout << std::hex << *((uint32_t*)arr) << " >> " << testval << std::endl;
         if (testval != 0x01234567) {
-            std::cout << "Fail... on beToSystem<>() " << std::hex << testval << std::dec << "\n";
-        testval = openfsl::leToSystem<uint32_t>(*((uint32_t*)arr));
-            std::cout << "Fail... on beToSystem<>() " << std::hex << testval << std::dec << "\n";
-            if (openfsl::isLittleEndian())
-                std::cout << "ff\n";
+            std::cout << "Fail... on beToSystem<>()\n";
             return 1;
         }
 

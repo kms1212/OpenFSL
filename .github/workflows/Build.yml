@@ -121,7 +121,7 @@ jobs:
         export CC=${{ matrix.config.cc }}
         export CXX=${{ matrix.config.cxx }}
         if [ "${{ matrix.config.generator }}" = "Ninja" ]; then
-          if [ "$RUNNER_OS" == "macOS" ]; then
+          if [ "$RUNNER_OS" = "macOS" ]; then
             cmake -G "${{ matrix.config.generator }}" \
                   -S. -Bbuild \
                   -DCMAKE_C_FLAGS="${{ matrix.config.ccflag }}" \
@@ -170,7 +170,7 @@ jobs:
       
     - name: Test
       run: |
-        ctest -C ${{env.BUILD_TYPE}}
+        ctest -C ${{env.BUILD_TYPE}} --repeat until-pass:5
       shell: bash
       working-directory: ${{github.workspace}}/build
 

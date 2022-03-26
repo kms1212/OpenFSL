@@ -61,16 +61,6 @@ error_t FAT32Command::Initialize(openfsl::DiskStructure diskStructure, size_t se
     return OPENFSL_SUCCESS;
 }
 
-error_t FAT32Command::OpenFile() {
-    wxMessageBox("FAT32 option is not enabled.", "Error");
-    return OPENFSL_SUCCESS;
-}
-
-error_t FAT32Command::CloseFile() {
-    wxMessageBox("FAT32 option is not enabled.", "Error");
-    return OPENFSL_SUCCESS;
-}
-
 error_t FAT32Command::CreateFile() {
     wxMessageBox("FAT32 option is not enabled.", "Error");
     return OPENFSL_SUCCESS;
@@ -157,6 +147,10 @@ error_t FAT32Command::ListDirectoryChild(std::vector<FileInfo>* outList, const s
 error_t FAT32Command::Search() {
     wxMessageBox("FAT32 option is not enabled.", "Error");
     return OPENFSL_SUCCESS;
+}
+
+openfsl::FAT32* FAT32Command::getFileSystem() {
+    return fat32;
 }
 
 void FAT32Command::Deinitialize() {

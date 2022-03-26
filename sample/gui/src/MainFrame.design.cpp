@@ -7,7 +7,7 @@ See the BSD-3-Clause for more details.
 
 */
 
-#include "Application.h"
+#include "MainFrame.h"
 
 void MainFrame::InitializeComponents() {
     wxMenu *menuFile = new wxMenu;        

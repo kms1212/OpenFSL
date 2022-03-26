@@ -7,18 +7,8 @@ See the BSD-3-Clause for more details.
 
 */
 
-#ifndef SAMPLE_APPLICATION_H_
-#define SAMPLE_APPLICATION_H_
+#include "FileCommand.h"
 
-#include <wx/wx.h>
+FileCommand::FileCommand(FSCommand* fs, std::string path, openfsl::FSL_OpenMode mode) {}
 
-#include "MainFrame.h"
-#include "EditorFrame.h"
- 
-class Application : public wxApp
-{
-public:
-    virtual bool OnInit();
-};
-
-#endif  // SAMPLE_APPLICATION_H_
+FileCommand::~FileCommand() {}

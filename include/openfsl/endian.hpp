@@ -18,6 +18,10 @@ See the BSD-3-Clause for more details.
 #error endian.hpp has to be included by endian.h.
 #endif
 
+#ifdef _MSC_VER
+#include <cstdlib>
+#endif
+
 template<typename T> T openfsl::leToSystem(T leValue) {
     T ret;
 
@@ -60,9 +64,44 @@ template<typename T> T openfsl::flipEndian(T value) {
     T ret;
 
     // Flip byte order.
+#if defined(__GNUC__) || defined(_MSC_VER)
+    switch (sizeof(T)) {
+#if defined(__GNUC__)
+     case 2:
+        ret = __builtin_bswap16(value);
+        break;
+     case 4:
+        ret = __builtin_bswap32(value);
+        break;
+     case 8:
+        ret = __builtin_bswap64(value);
+        break;
+#if defined(__uint128_t)
+     case 16:
+        ret = __builtin_bswap128();
+        break;
+#endif
+#elif defined(_MSC_VER)
+     case sizeof(short):
+        ret = static_cast<T>(_byteswap_ushort(static_cast<unsigned short>(value)));
+        break;
+     case sizeof(long):
+        ret = static_cast<T>(_byteswap_ulong(static_cast<unsigned short>(value)));
+        break;
+     case sizeof(__int64):
+        ret = static_cast<T>(_byteswap_uint64(static_cast<__int64>(value)));
+        break;
+#endif
+     default:
+        for (size_t i = 0; i < sizeof(T); i++) {
+            ((uint8_t*)&ret)[i] = ((uint8_t*)&value)[sizeof(T) - i - 1];
+        }
+    }
+#else
     for (size_t i = 0; i < sizeof(T); i++) {
         ((uint8_t*)&ret)[i] = ((uint8_t*)&value)[sizeof(T) - i - 1];
     }
+#endif
 
     return ret;
 }

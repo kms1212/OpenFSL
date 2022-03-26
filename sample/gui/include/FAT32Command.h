@@ -35,12 +35,13 @@ public:
     error_t NavigateDirectory(const std::string dest);
     error_t CreateDirectory();
     error_t RemoveDirectory();
-    error_t OpenFile();
-    error_t CloseFile();
     error_t CreateFile();
     error_t RemoveFile();
     error_t GetFileInformation();
     error_t Search();
+
+    openfsl::FAT32* getFileSystem();
+
     void Deinitialize();
 };
 

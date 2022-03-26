@@ -7,18 +7,13 @@ See the BSD-3-Clause for more details.
 
 */
 
-#ifndef SAMPLE_APPLICATION_H_
-#define SAMPLE_APPLICATION_H_
+#ifndef SAMPLE_IDS_H_
+#define SAMPLE_IDS_H_
 
-#include <wx/wx.h>
-
-#include "MainFrame.h"
-#include "EditorFrame.h"
- 
-class Application : public wxApp
-{
-public:
-    virtual bool OnInit();
+enum {
+    ID_OPENIMGFILE = 1,
+    ID_FILELIST = 2,
+    ID_EDITORTEXTBOX = 3
 };
 
-#endif  // SAMPLE_APPLICATION_H_
+#endif  // SAMPLE_IDS_H_

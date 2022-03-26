@@ -32,8 +32,6 @@ public:
     virtual error_t NavigateDirectory(const std::string dest) = 0;
     virtual error_t CreateDirectory() = 0;
     virtual error_t RemoveDirectory() = 0;
-    virtual error_t OpenFile() = 0;
-    virtual error_t CloseFile() = 0;
     virtual error_t CreateFile() = 0;
     virtual error_t RemoveFile() = 0;
     virtual error_t GetFileInformation() = 0;
