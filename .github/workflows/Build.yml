@@ -85,7 +85,7 @@ jobs:
             
           - name: "macOS 11 Clang"
             os: macos-11
-            packages: nasm cmake zip ninja
+            packages: nasm cmake zip ninja openssl
             generator: "Ninja"
             platform: x86-64
             cc: clang

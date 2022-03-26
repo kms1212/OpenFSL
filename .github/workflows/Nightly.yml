@@ -100,7 +100,7 @@ jobs:
             
           - name: "macOS 11 Clang ZIP"
             os: macos-11
-            packages: nasm cmake zip
+            packages: nasm cmake zip openssl
             generator: "Unix Makefiles"
             platform: x86-64
             cc: clang
@@ -113,7 +113,7 @@ jobs:
             
           - name: "macOS 11 Clang TGZ"
             os: macos-11
-            packages: nasm cmake zip
+            packages: nasm cmake zip openssl
             generator: "Unix Makefiles"
             platform: x86-64
             cc: clang
