@@ -20,6 +20,8 @@ See the BSD-3-Clause for more details.
 
 #ifdef _MSC_VER
 #include <cstdlib>
+
+#pragma warning(disable: 4244)
 #endif
 
 template<typename T> T openfsl::leToSystem(T leValue) {
@@ -82,14 +84,14 @@ template<typename T> T openfsl::flipEndian(T value) {
         break;
 #endif
 #elif defined(_MSC_VER)
-     case sizeof(short):
-        ret = static_cast<T>(_byteswap_ushort(static_cast<unsigned short>(value)));
+     case sizeof(unsigned short):
+        ret = _byteswap_ushort(value);
         break;
-     case sizeof(long):
-        ret = static_cast<T>(_byteswap_ulong(static_cast<unsigned short>(value)));
+     case sizeof(unsigned long):
+        ret = _byteswap_ulong(value);
         break;
-     case sizeof(__int64):
-        ret = static_cast<T>(_byteswap_uint64(static_cast<__int64>(value)));
+     case sizeof(unsigned long long):
+        ret = _byteswap_uint64(value);
         break;
 #endif
      default:
@@ -105,5 +107,9 @@ template<typename T> T openfsl::flipEndian(T value) {
 
     return ret;
 }
+
+#ifdef _MSC_VER
+#pragma warning(default: 4244)
+#endif
 
 #endif  // OPENFSL_ENDIAN_HPP_
