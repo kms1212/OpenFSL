@@ -122,7 +122,7 @@ jobs:
         export CXX=${{ matrix.config.cxx }}
         if [ "${{ matrix.config.generator }}" = "Ninja" ]; then
           if [ "$RUNNER_OS" = "macOS" ]; then
-            export OPENSSL_ROOT_DIR="/usr/local/Cellar/openssl@1.1/1.1.1m"
+            export OPENSSL_ROOT_DIR=/usr/local/Cellar/openssl@1.1/1.1.1m
             cmake -G "${{ matrix.config.generator }}" \
                   -S. -Bbuild \
                   -DCMAKE_C_FLAGS="${{ matrix.config.ccflag }}" \
