@@ -122,7 +122,6 @@ jobs:
         export CXX=${{ matrix.config.cxx }}
         if [ "${{ matrix.config.generator }}" = "Ninja" ]; then
           if [ "$RUNNER_OS" = "macOS" ]; then
-            export OPENSSL_ROOT_DIR=/usr/local/Cellar/openssl@1.1/1.1.1m
             cmake -G "${{ matrix.config.generator }}" \
                   -S. -Bbuild \
                   -DCMAKE_C_FLAGS="${{ matrix.config.ccflag }}" \
@@ -133,7 +132,9 @@ jobs:
                   -DTEST_COVERAGE=true \
                   -DDOXYGEN_GENERATE=false \
                   -DNO_BUILD=false \
-                  -DPACKAGE_GENERATE=true
+                  -DPACKAGE_GENERATE=true \
+                  -DOPENSSL_ROOT_DIR="/usr/local/Cellar/openssl@1.1/1.1.1m" \
+                  -DOPENSSL_LIBRARIES="/usr/local/Cellar/openssl@1.1/1.1.1m/lib"
           else
             cmake -G "${{ matrix.config.generator }}" \
                   -S. -Bbuild \
