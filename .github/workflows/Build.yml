@@ -239,7 +239,7 @@ jobs:
         retention-days: 1
 
   release:
-    if: ${{ github.event.inputs.dry-run != 'dry-run' }}
+    if: ${{ github.event_name == "schedule" }}
     needs: [build]
     runs-on: ubuntu-latest
     steps:
