@@ -2,7 +2,7 @@
 This file is part of OpenFSL.
 
 OpenFSL and its source code is published over BSD 3-Clause License.
-See the BSD-3-Clause for more details.
+Check the full BSD-3-Clause license for more details.
 <https://raw.githubusercontent.com/kms1212/OpenFSL/main/LICENSE>
 
 */
@@ -298,6 +298,7 @@ int fat32shell(openfsl::BlockDevice* bd,
                         std::cout << buf << "\n";
                         std::cout << "File get pointer: " << file.tellg() << "\n";
                         std::cout << "File put pointer: " << file.tellp() << "\n";
+                        delete[] buf;
                     } else {
                         std::cout << "File is empty.\n";
                     }

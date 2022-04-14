@@ -2,7 +2,7 @@
 This file is part of OpenFSL.
 
 OpenFSL and its source code is published over BSD 3-Clause License.
-See the BSD-3-Clause for more details.
+Check the full BSD-3-Clause license for more details.
 <https://raw.githubusercontent.com/kms1212/OpenFSL/main/LICENSE>
 
 */
@@ -12,9 +12,9 @@ See the BSD-3-Clause for more details.
 #include "EditorFrame.h"
 
 wxBEGIN_EVENT_TABLE(MainFrame, wxFrame)
-    EVT_LIST_ITEM_SELECTED(ID_FILELIST, MainFrame::OnFileListClick)
+    EVT_LIST_ITEM_SELECTED(ID_MAIN_FILELIST, MainFrame::OnFileListClick)
 
-    EVT_MENU(ID_OPENIMGFILE, MainFrame::OnOpenImgFile)
+    EVT_MENU(ID_MAIN_OPENIMGFILE, MainFrame::OnOpenImgFile)
     EVT_MENU(wxID_EXIT, MainFrame::OnExit)
     EVT_MENU(wxID_ABOUT, MainFrame::OnAbout)
 wxEND_EVENT_TABLE()
@@ -40,6 +40,8 @@ void MainFrame::OnExit(wxCommandEvent& event)
         }
     }
 
+    DeinitializeComponents();
+
     Close(true);
 }
  
@@ -55,6 +57,35 @@ void MainFrame::OnOpenImgFile(wxCommandEvent& event)
         InitializeFilesystem(openFileDialog->GetPath());
     }
 }
+
+void MainFrame::RefreshDirectoryList() {
+    std::string currentPath;
+    fsCommand->GetCurrentDirectory(&currentPath);
+    SetStatusText(currentPath);
+
+    std::vector<FileInfo> childList;
+    fsCommand->ListDirectoryChild(&childList);
+
+    listCtrl->DeleteAllItems();
+    int i = 0;
+    for (FileInfo file : childList) {
+        listCtrl->InsertItem(i, wxString(file.fileName));
+        listCtrl->SetItem(i, 1, wxString(
+            std::to_string(static_cast<int>(file.fileCreateTime.time_month)) + "-" + 
+            std::to_string(static_cast<int>(file.fileCreateTime.time_day)) + "-" + 
+            std::to_string(static_cast<int>(file.fileCreateTime.time_year)) + " " + 
+            std::to_string(static_cast<int>(file.fileCreateTime.time_hour)) + ":" + 
+            std::to_string(static_cast<int>(file.fileCreateTime.time_min)) + ":" + 
+            std::to_string(static_cast<int>(file.fileCreateTime.time_sec))));
+        listCtrl->SetItem(i, 2, wxString(std::to_string(file.fileSize)));
+        if (file.fileType == FileType::File) {
+            listCtrl->SetItem(i, 3, wxT("File"));
+        } else {
+            listCtrl->SetItem(i, 3, wxT("Directory"));
+        }
+        i++;
+    }
+}
  
 void MainFrame::OnFileListClick(wxListEvent& event)
 {
@@ -65,7 +96,20 @@ void MainFrame::OnFileListClick(wxListEvent& event)
     listCtrl->GetItem(litem);
 
     if (litem.m_text == wxT("File")) {
-        EditorFrame* editorWindow = new EditorFrame("Editor frame", wxPoint(50, 50), wxSize(720, 480));
+        litem.m_itemId = event.m_itemIndex;
+        litem.m_col = 0;
+        litem.m_mask = wxLIST_MASK_TEXT;
+        listCtrl->GetItem(litem);
+
+        std::string openfilename;
+        fsCommand->GetCurrentDirectory(&openfilename);
+
+        std::string pathSeparator;
+        fsCommand->GetPathSeparator(&pathSeparator);
+        
+        openfilename += pathSeparator.at(0) + litem.m_text;
+
+        EditorFrame* editorWindow = new EditorFrame(wxPoint(50, 50), wxSize(720, 480), fsCommand, openfilename);
         editorWindow->Show(true);
     } else {
         litem.m_itemId = event.m_itemIndex;
@@ -82,32 +126,7 @@ void MainFrame::OnFileListClick(wxListEvent& event)
         navigatePath += pathSeparator.at(0) + litem.m_text;
         fsCommand->NavigateDirectory(navigatePath);
 
-        std::string currentPath;
-        fsCommand->GetCurrentDirectory(&currentPath);
-        SetStatusText(currentPath);
-
-        std::vector<FileInfo> childList;
-        fsCommand->ListDirectoryChild(&childList);
-
-        listCtrl->DeleteAllItems();
-        int i = 0;
-        for (FileInfo file : childList) {
-            listCtrl->InsertItem(i, wxString(file.fileName));
-            listCtrl->SetItem(i, 1, wxString(
-                std::to_string(static_cast<int>(file.fileCreateTime.time_month)) + "-" + 
-                std::to_string(static_cast<int>(file.fileCreateTime.time_day)) + "-" + 
-                std::to_string(static_cast<int>(file.fileCreateTime.time_year)) + " " + 
-                std::to_string(static_cast<int>(file.fileCreateTime.time_hour)) + ":" + 
-                std::to_string(static_cast<int>(file.fileCreateTime.time_min)) + ":" + 
-                std::to_string(static_cast<int>(file.fileCreateTime.time_sec))));
-            listCtrl->SetItem(i, 2, wxString(std::to_string(file.fileSize)));
-            if (file.fileType == FileType::File) {
-                listCtrl->SetItem(i, 3, wxT("File"));
-            } else {
-                listCtrl->SetItem(i, 3, wxT("Directory"));
-            }
-            i++;
-        }
+        RefreshDirectoryList();
     }
 }
 
@@ -205,32 +224,7 @@ void MainFrame::InitializeFilesystem(wxString path) {
 
             fsCommand->Initialize(diskStructure, dialog.GetSelection());
 
-            std::string currentPath;
-            fsCommand->GetCurrentDirectory(&currentPath);
-            SetStatusText(currentPath);
-
-            std::vector<FileInfo> childList;
-            fsCommand->ListDirectoryChild(&childList);
-
-            listCtrl->DeleteAllItems();
-            int i = 0;
-            for (FileInfo file : childList) {
-                listCtrl->InsertItem(i, wxString(file.fileName));
-                listCtrl->SetItem(i, 1, wxString(
-                    std::to_string(static_cast<int>(file.fileCreateTime.time_month)) + "-" + 
-                    std::to_string(static_cast<int>(file.fileCreateTime.time_day)) + "-" + 
-                    std::to_string(static_cast<int>(file.fileCreateTime.time_year)) + " " + 
-                    std::to_string(static_cast<int>(file.fileCreateTime.time_hour)) + ":" + 
-                    std::to_string(static_cast<int>(file.fileCreateTime.time_min)) + ":" + 
-                    std::to_string(static_cast<int>(file.fileCreateTime.time_sec))));
-                listCtrl->SetItem(i, 2, wxString(std::to_string(file.fileSize)));
-                if (file.fileType == FileType::File) {
-                    listCtrl->SetItem(i, 3, wxT("File"));
-                } else {
-                    listCtrl->SetItem(i, 3, wxT("Directory"));
-                }
-                i++;
-            }
+            RefreshDirectoryList();
 
 #else
             wxMessageBox("FAT32 option is not enabled.", "Error");

@@ -2,7 +2,7 @@
 This file is part of OpenFSL.
 
 OpenFSL and its source code is published over BSD 3-Clause License.
-See the BSD-3-Clause for more details.
+Check the full BSD-3-Clause license for more details.
 <https://raw.githubusercontent.com/kms1212/OpenFSL/main/LICENSE>
 
 */
@@ -25,11 +25,11 @@ See the BSD-3-Clause for more details.
 #define UINT32_T_EXIST TRUE
 #define UINT64_T_EXIST TRUE
 #define TIME_T_EXIST TRUE
-#define __TIME64_T_EXIST TRUE
+#define __TIME64_T_EXIST FALSE
 #define STRUCT_TM_EXIST TRUE
 #define ERROR_T_EXIST FALSE
 
-#define _LOCALTIME64_S_EXIST 1
-#define LOCALTIME_R_EXIST 0
+#define _LOCALTIME64_S_EXIST 0
+#define LOCALTIME_R_EXIST 1
 
 #endif  // OPENFSL_SYMBOLS_H_

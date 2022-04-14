@@ -156,13 +156,11 @@ jobs:
       
     - name: Configure CMake
       run: |
-        if [ "$RUNNER_OS" == "macOS" ]; then
-          export OPENSSL_ROOT_DIR="/usr/local/opt/openssl@1.1"
-        fi
         export CC=${{ matrix.config.cc }}
         export CXX=${{ matrix.config.cxx }}
         if [ "${{ matrix.config.generator }}" = "Unix Makefiles" ]; then
           if [ "$RUNNER_OS" == "macOS" ]; then
+            export OPENSSL_ROOT_DIR="/usr/local/opt/openssl@1.1"
             cmake -G "${{ matrix.config.generator }}" \
                   -S. -Bbuild \
                   -DCMAKE_C_FLAGS="${{ matrix.config.ccflag }}" \

@@ -2,7 +2,7 @@
 This file is part of OpenFSL.
 
 OpenFSL and its source code is published over BSD 3-Clause License.
-See the BSD-3-Clause for more details.
+Check the full BSD-3-Clause license for more details.
 <https://raw.githubusercontent.com/kms1212/OpenFSL/main/LICENSE>
 
 */
@@ -10,31 +10,31 @@ See the BSD-3-Clause for more details.
 #include "MainFrame.h"
 
 void MainFrame::InitializeComponents() {
-    wxMenu *menuFile = new wxMenu;        
-    menuFile->Append(ID_OPENIMGFILE, "&Open image file\tCtrl-O",
+    wxMenu menuFile;       
+    menuFile.Append(ID_MAIN_OPENIMGFILE, "&Open image file\tCtrl-O",
             "Select image file to open.");
 
-    menuFile->AppendSeparator();
-    menuFile->Append(wxID_EXIT);
+    menuFile.AppendSeparator();
+    menuFile.Append(wxID_EXIT);
  
-    wxMenu *menuHelp = new wxMenu;
-    menuHelp->Append(wxID_ABOUT);
+    wxMenu menuHelp;
+    menuHelp.Append(wxID_ABOUT);
  
-    wxMenuBar *menuBar = new wxMenuBar;
-    menuBar->Append(menuFile, "&File");
-    menuBar->Append(menuHelp, "&Help");
+    menuBar = new wxMenuBar;
+    menuBar->Append(&menuFile, "&File");
+    menuBar->Append(&menuHelp, "&Help");
  
     SetMenuBar(menuBar);
 
-    wxSplitterWindow* mainSplitter = new wxSplitterWindow(this, -1, wxPoint(-1,-1), wxSize(-1,-1), wxSP_LIVE_UPDATE);
+    mainSplitter = new wxSplitterWindow(this, -1, wxPoint(-1,-1), wxSize(-1,-1), wxSP_LIVE_UPDATE);
     dataViewCtrl = new wxDataViewCtrl(mainSplitter, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxDV_NO_HEADER);
-    listCtrl = new wxListCtrl(mainSplitter, ID_FILELIST, wxDefaultPosition, wxDefaultSize, wxLC_REPORT);
+    listCtrl = new wxListCtrl(mainSplitter, ID_MAIN_FILELIST, wxDefaultPosition, wxDefaultSize, wxLC_REPORT);
     
     mainSplitter->SplitVertically(dataViewCtrl, listCtrl);
     mainSplitter->SetMinimumPaneSize(230);
 
-    wxDataViewTextRenderer* renderer0 = new wxDataViewTextRenderer(wxT("Name"));
-    wxDataViewColumn* column0 = new wxDataViewColumn(wxT("Name"), renderer0, 0, 100, wxALIGN_CENTER, wxDATAVIEW_COL_RESIZABLE);
+    renderer0 = new wxDataViewTextRenderer(wxT("Name"));
+    column0 = new wxDataViewColumn(wxT("Name"), renderer0, 0, 100, wxALIGN_CENTER, wxDATAVIEW_COL_RESIZABLE);
     dataViewCtrl->AppendColumn(column0);
     dataViewCtrl->SetExpanderColumn(column0);
 
@@ -49,4 +49,12 @@ void MainFrame::InitializeComponents() {
  
     CreateStatusBar();
     SetStatusText("Welcome to wxWidgets!");
+}
+
+void MainFrame::DeinitializeComponents() {
+    delete dataViewCtrl;
+    delete listCtrl;
+    delete openFileDialog;
+    delete menuBar;
+    delete mainSplitter;
 }

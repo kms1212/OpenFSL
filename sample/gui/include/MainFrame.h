@@ -2,7 +2,7 @@
 This file is part of OpenFSL.
 
 OpenFSL and its source code is published over BSD 3-Clause License.
-See the BSD-3-Clause for more details.
+Check the full BSD-3-Clause license for more details.
 <https://raw.githubusercontent.com/kms1212/OpenFSL/main/LICENSE>
 
 */
@@ -28,12 +28,18 @@ public:
  
 private:
     wxDataViewCtrl* dataViewCtrl;
+    wxDataViewTextRenderer* renderer0;
+    wxDataViewColumn* column0;
     wxListCtrl* listCtrl;
     wxFileDialog* openFileDialog;
+    wxMenuBar *menuBar;
+    wxSplitterWindow* mainSplitter;
+
     openfsl::FileBlockDevice fbd;
     FSCommand* fsCommand = nullptr;
 
     void InitializeComponents();
+    void DeinitializeComponents();
 
     void OnFileListClick(wxListEvent& event);
 
@@ -42,6 +48,8 @@ private:
     void OnAbout(wxCommandEvent& event);
 
     void InitializeFilesystem(wxString imagePath);
+
+    void RefreshDirectoryList();
  
     wxDECLARE_EVENT_TABLE();
 }; 

@@ -2,7 +2,7 @@
 This file is part of OpenFSL.
 
 OpenFSL and its source code is published over BSD 3-Clause License.
-See the BSD-3-Clause for more details.
+Check the full BSD-3-Clause license for more details.
 <https://raw.githubusercontent.com/kms1212/OpenFSL/main/LICENSE>
 
 */
@@ -26,11 +26,11 @@ const uint32_t openfsl::getPatchVersion() {
 }
 
 const uint32_t openfsl::getBuildVersion() {
-    return 1367;
+    return 1386;
 }
 
 const uint32_t openfsl::getBuildDate() {
-    return 20220326;
+    return 20220414;
 }
 
 const char* openfsl::getVersionString() {
@@ -38,5 +38,5 @@ const char* openfsl::getVersionString() {
 }
 
 const char* openfsl::getFullVersionString() {
-    return "OpenFSL 0.0.0 (MSVC 19.31.31104.0 AMD64) Running On Windows";
+    return "OpenFSL 0.0.0 (AppleClang 13.1.6.13160021 arm64) Running On Darwin";
 }

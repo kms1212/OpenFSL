@@ -2,7 +2,7 @@
 This file is part of OpenFSL.
 
 OpenFSL and its source code is published over BSD 3-Clause License.
-See the BSD-3-Clause for more details.
+Check the full BSD-3-Clause license for more details.
 <https://raw.githubusercontent.com/kms1212/OpenFSL/main/LICENSE>
 
 */
@@ -19,20 +19,27 @@ See the BSD-3-Clause for more details.
 #include <openfsl/openfsl.h>
 
 #include "utils.h"
-#include "FAT32Command.h"
+#include "FileCommand.h"
 #include "ids.h"
  
 class EditorFrame : public wxFrame
 {
 public:
-    EditorFrame(const wxString& title, const wxPoint& pos, const wxSize& size);
+    EditorFrame(const wxPoint& pos, const wxSize& size, FSCommand* fsCommand, const std::string path);
  
 private:
     FSCommand* fsCommand = nullptr;
+    FileCommand* fileCommand = nullptr;
     wxTextCtrl* editorTextBox;
+    wxMenuBar* menuBar;
+    wxMenu* menuFile;
+    wxMenu* menuHelp;
+    
 
     void InitializeComponents();
+    void DeinitializeComponents();
 
+    void OnSave(wxCommandEvent& event);
     void OnExit(wxCommandEvent& event);
  
     wxDECLARE_EVENT_TABLE();
