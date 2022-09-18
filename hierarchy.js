@@ -7,12 +7,13 @@ var hierarchy =
     [ "openfsl::Container", "classopenfsl_1_1_container.html", [
       [ "openfsl::Sector", "classopenfsl_1_1_sector.html", null ]
     ] ],
+    [ "Date", "struct_date.html", null ],
     [ "openfsl::BlockDevice::DiskParameter", "structopenfsl_1_1_block_device_1_1_disk_parameter.html", null ],
     [ "openfsl::DiskStructure", "structopenfsl_1_1_disk_structure.html", null ],
     [ "openfsl::fsStructure::FAT1216BPB", "structopenfsl_1_1fs_structure_1_1_f_a_t1216_b_p_b.html", null ],
     [ "openfsl::fsStructure::FAT32BPB", "structopenfsl_1_1fs_structure_1_1_f_a_t32_b_p_b.html", null ],
     [ "FileEntry", "struct_file_entry.html", null ],
-    [ "openfsl::FAT32::FileInfo", "structopenfsl_1_1_f_a_t32_1_1_file_info.html", null ],
+    [ "FileInfo", "struct_file_info.html", null ],
     [ "FileRefAddr", "struct_file_ref_addr.html", null ],
     [ "openfsl::FileSystem< IOD >", "classopenfsl_1_1_file_system.html", null ],
     [ "openfsl::FileSystem< BlockDevice >", "classopenfsl_1_1_file_system.html", [
@@ -55,6 +56,7 @@ var hierarchy =
     [ "openfsl::MBR::PartitionTable", "structopenfsl_1_1_m_b_r_1_1_partition_table.html", null ],
     [ "openfsl::GPT::TableHeader", "structopenfsl_1_1_g_p_t_1_1_table_header.html", null ],
     [ "openfsl::Time", "structopenfsl_1_1_time.html", null ],
+    [ "Time", "struct_time.html", null ],
     [ "VBRSector", "struct_v_b_r_sector.html", null ],
     [ "openfsl::FAT32::VolumeInfo", "structopenfsl_1_1_f_a_t32_1_1_volume_info.html", null ],
     [ "bool", "classbool.html", null ],

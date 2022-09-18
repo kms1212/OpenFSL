@@ -1,13 +1,19 @@
 var fat32__structures_8h =
 [
+    [ "FileInfo", "struct_file_info.html", "struct_file_info" ],
+    [ "Time", "struct_time.html", "struct_time" ],
+    [ "Date", "struct_date.html", "struct_date" ],
     [ "BPBSector", "struct_b_p_b_sector.html", "struct_b_p_b_sector" ],
     [ "FSINFOSector", "struct_f_s_i_n_f_o_sector.html", "struct_f_s_i_n_f_o_sector" ],
     [ "FileEntry", "struct_file_entry.html", "struct_file_entry" ],
     [ "LFNEntry", "struct_l_f_n_entry.html", "struct_l_f_n_entry" ],
     [ "BPBSector", "fat32__structures_8h.html#a77d13f396a1952db134445f053f0d5f2", null ],
+    [ "Date", "fat32__structures_8h.html#a8b9ee38bb5e4c1674ffc937bb1b783fd", null ],
     [ "FileEntry", "fat32__structures_8h.html#ae4c05db8fccde7329c8bcc7d6bd13af5", null ],
+    [ "FileInfo", "fat32__structures_8h.html#a9387981b4b4bfb955de95c8aeaa00132", null ],
     [ "FSINFOSector", "fat32__structures_8h.html#ab468a4a0ab1bad4ecf974a5db34bec3d", null ],
     [ "LFNEntry", "fat32__structures_8h.html#a4b1fabb6048c0f75eb7e6847da91cbf4", null ],
+    [ "Time", "fat32__structures_8h.html#a5eb01cbf6c27b503f39613676def571a", null ],
     [ "FileAttribute", "fat32__structures_8h.html#a3c884cdcd29ac3f16f15a65bee74a0ac", [
       [ "ReadOnly", "fat32__structures_8h.html#a3c884cdcd29ac3f16f15a65bee74a0aca131fb182a881796e7606ed6da27f1197", null ],
       [ "Hidden", "fat32__structures_8h.html#a3c884cdcd29ac3f16f15a65bee74a0aca7acdf85c69cc3c5305456a293524386e", null ],

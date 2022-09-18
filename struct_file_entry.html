@@ -108,11 +108,13 @@ Collaboration diagram for FileEntry:</div>
 <div class="dyncontent">
 <div class="center"><img src="struct_file_entry__coll__graph.png" border="0" usemap="#_file_entry_coll__map" alt="Collaboration graph"/></div>
 <map name="_file_entry_coll__map" id="_file_entry_coll__map">
-<area shape="rect" title="FAT32 directory entry struct." alt="" coords="198,233,277,311"/>
-<area shape="rect" title=" " alt="" coords="5,5,80,83"/>
-<area shape="rect" title=" " alt="" coords="152,5,227,83"/>
-<area shape="rect" title=" " alt="" coords="251,5,317,83"/>
-<area shape="rect" title=" " alt="" coords="373,5,475,83"/>
+<area shape="rect" title="FAT32 directory entry struct." alt="" coords="288,359,366,436"/>
+<area shape="rect" title=" " alt="" coords="128,5,203,83"/>
+<area shape="rect" href="struct_time.html" title="FAT32 time." alt="" coords="145,175,200,252"/>
+<area shape="rect" href="struct_date.html" title="FAT32 date." alt="" coords="231,175,284,252"/>
+<area shape="rect" title=" " alt="" coords="359,175,434,252"/>
+<area shape="rect" title=" " alt="" coords="458,175,524,252"/>
+<area shape="rect" title=" " alt="" coords="578,175,681,252"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -128,18 +130,18 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a0c7f5a42b672b921671552be8e15f413"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a04de06824d81779b6a599f153fbd0879"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_file_entry.html#a04de06824d81779b6a599f153fbd0879">fileCreateTenth</a></td></tr>
 <tr class="separator:a04de06824d81779b6a599f153fbd0879"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8c07be8eb8ba866a8edb5eec8e26675b"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_file_entry.html#a8c07be8eb8ba866a8edb5eec8e26675b">fileCreateTime</a></td></tr>
-<tr class="separator:a8c07be8eb8ba866a8edb5eec8e26675b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa19c6263c2791201ef465718570bdee2"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_file_entry.html#aa19c6263c2791201ef465718570bdee2">fileCreateDate</a></td></tr>
-<tr class="separator:aa19c6263c2791201ef465718570bdee2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a58522df70c89b85874e1a622e4bb1149"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_file_entry.html#a58522df70c89b85874e1a622e4bb1149">fileAccessDate</a></td></tr>
-<tr class="separator:a58522df70c89b85874e1a622e4bb1149"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adadf0544f4815af5927c23148a740aa4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_time.html">Time</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_file_entry.html#adadf0544f4815af5927c23148a740aa4">fileCreateTime</a></td></tr>
+<tr class="separator:adadf0544f4815af5927c23148a740aa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae431ed4be718e6ada8d7e2117bd043a6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_date.html">Date</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_file_entry.html#ae431ed4be718e6ada8d7e2117bd043a6">fileCreateDate</a></td></tr>
+<tr class="separator:ae431ed4be718e6ada8d7e2117bd043a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9c92ef77d8a0a00313c802b83eb3f55"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_date.html">Date</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_file_entry.html#ab9c92ef77d8a0a00313c802b83eb3f55">fileAccessDate</a></td></tr>
+<tr class="separator:ab9c92ef77d8a0a00313c802b83eb3f55"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8179030f14658af3e1fb82a76fa0ae50"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_file_entry.html#a8179030f14658af3e1fb82a76fa0ae50">fileLocationHigh</a></td></tr>
 <tr class="separator:a8179030f14658af3e1fb82a76fa0ae50"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a67c54fbb7b08f574d926e0cefc11f0d4"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_file_entry.html#a67c54fbb7b08f574d926e0cefc11f0d4">fileModTime</a></td></tr>
-<tr class="separator:a67c54fbb7b08f574d926e0cefc11f0d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9e1cb5b26a04d9b844321b1e7ffc064a"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_file_entry.html#a9e1cb5b26a04d9b844321b1e7ffc064a">fileModDate</a></td></tr>
-<tr class="separator:a9e1cb5b26a04d9b844321b1e7ffc064a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af33ef9a1de97a2b73276f83eab0c5893"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_time.html">Time</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_file_entry.html#af33ef9a1de97a2b73276f83eab0c5893">fileModTime</a></td></tr>
+<tr class="separator:af33ef9a1de97a2b73276f83eab0c5893"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34814651ac77f291aa8142a95e7b2461"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_date.html">Date</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_file_entry.html#a34814651ac77f291aa8142a95e7b2461">fileModDate</a></td></tr>
+<tr class="separator:a34814651ac77f291aa8142a95e7b2461"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad36ae9449ac9c616e43302c2d7fdaea"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_file_entry.html#aad36ae9449ac9c616e43302c2d7fdaea">fileLocationLow</a></td></tr>
 <tr class="separator:aad36ae9449ac9c616e43302c2d7fdaea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a442e65305af5e7fd839183e5a5b4147c"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_file_entry.html#a442e65305af5e7fd839183e5a5b4147c">fileSize</a></td></tr>
@@ -161,38 +163,38 @@ Public Attributes</h2></td></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">uint8_t </td><td class="markdownTableBodyNone">fileCreateTenth </td><td class="markdownTableBodyNone">0x0D  </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">uint16_t </td><td class="markdownTableBodyNone">fileCreateTime </td><td class="markdownTableBodyNone">0x0E  </td></tr>
+<td class="markdownTableBodyNone"><a class="el" href="struct_time.html" title="FAT32 time.">Time</a> </td><td class="markdownTableBodyNone">fileCreateTime </td><td class="markdownTableBodyNone">0x0E  </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">uint16_t </td><td class="markdownTableBodyNone">fileCreateDate </td><td class="markdownTableBodyNone">0x10  </td></tr>
+<td class="markdownTableBodyNone"><a class="el" href="struct_date.html" title="FAT32 date.">Date</a> </td><td class="markdownTableBodyNone">fileCreateDate </td><td class="markdownTableBodyNone">0x10  </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">uint16_t </td><td class="markdownTableBodyNone">fileAccessDate </td><td class="markdownTableBodyNone">0x12  </td></tr>
+<td class="markdownTableBodyNone"><a class="el" href="struct_date.html" title="FAT32 date.">Date</a> </td><td class="markdownTableBodyNone">fileAccessDate </td><td class="markdownTableBodyNone">0x12  </td></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">uint16_t </td><td class="markdownTableBodyNone">fileLocationHigh </td><td class="markdownTableBodyNone">0x14  </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">uint16_t </td><td class="markdownTableBodyNone">fileModTime </td><td class="markdownTableBodyNone">0x16  </td></tr>
+<td class="markdownTableBodyNone"><a class="el" href="struct_time.html" title="FAT32 time.">Time</a> </td><td class="markdownTableBodyNone">fileModTime </td><td class="markdownTableBodyNone">0x16  </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">uint16_t </td><td class="markdownTableBodyNone">fileModDate </td><td class="markdownTableBodyNone">0x18  </td></tr>
+<td class="markdownTableBodyNone"><a class="el" href="struct_date.html" title="FAT32 date.">Date</a> </td><td class="markdownTableBodyNone">fileModDate </td><td class="markdownTableBodyNone">0x18  </td></tr>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">uint16_t </td><td class="markdownTableBodyNone">fileLocationLow </td><td class="markdownTableBodyNone">0x1A  </td></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">uint32_t </td><td class="markdownTableBodyNone">fileSize </td><td class="markdownTableBodyNone">0x1C  </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="fat32__structures_8h_source.html#l00160">160</a> of file <a class="el" href="fat32__structures_8h_source.html">fat32_structures.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fat32__structures_8h_source.html#l00210">210</a> of file <a class="el" href="fat32__structures_8h_source.html">fat32_structures.h</a>.</p>
 </div><h2 class="groupheader">Member Data Documentation</h2>
-<a id="a58522df70c89b85874e1a622e4bb1149"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a58522df70c89b85874e1a622e4bb1149">&#9670;&nbsp;</a></span>fileAccessDate</h2>
+<a id="ab9c92ef77d8a0a00313c802b83eb3f55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9c92ef77d8a0a00313c802b83eb3f55">&#9670;&nbsp;</a></span>fileAccessDate</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint16_t FileEntry::fileAccessDate</td>
+          <td class="memname"><a class="el" href="struct_date.html">Date</a> FileEntry::fileAccessDate</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fat32__structures_8h_source.html#l00168">168</a> of file <a class="el" href="fat32__structures_8h_source.html">fat32_structures.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fat32__structures_8h_source.html#l00218">218</a> of file <a class="el" href="fat32__structures_8h_source.html">fat32_structures.h</a>.</p>
 
 </div>
 </div>
@@ -208,23 +210,23 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fat32__structures_8h_source.html#l00163">163</a> of file <a class="el" href="fat32__structures_8h_source.html">fat32_structures.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fat32__structures_8h_source.html#l00213">213</a> of file <a class="el" href="fat32__structures_8h_source.html">fat32_structures.h</a>.</p>
 
 </div>
 </div>
-<a id="aa19c6263c2791201ef465718570bdee2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa19c6263c2791201ef465718570bdee2">&#9670;&nbsp;</a></span>fileCreateDate</h2>
+<a id="ae431ed4be718e6ada8d7e2117bd043a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae431ed4be718e6ada8d7e2117bd043a6">&#9670;&nbsp;</a></span>fileCreateDate</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint16_t FileEntry::fileCreateDate</td>
+          <td class="memname"><a class="el" href="struct_date.html">Date</a> FileEntry::fileCreateDate</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fat32__structures_8h_source.html#l00167">167</a> of file <a class="el" href="fat32__structures_8h_source.html">fat32_structures.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fat32__structures_8h_source.html#l00217">217</a> of file <a class="el" href="fat32__structures_8h_source.html">fat32_structures.h</a>.</p>
 
 </div>
 </div>
@@ -240,23 +242,23 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fat32__structures_8h_source.html#l00165">165</a> of file <a class="el" href="fat32__structures_8h_source.html">fat32_structures.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fat32__structures_8h_source.html#l00215">215</a> of file <a class="el" href="fat32__structures_8h_source.html">fat32_structures.h</a>.</p>
 
 </div>
 </div>
-<a id="a8c07be8eb8ba866a8edb5eec8e26675b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8c07be8eb8ba866a8edb5eec8e26675b">&#9670;&nbsp;</a></span>fileCreateTime</h2>
+<a id="adadf0544f4815af5927c23148a740aa4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adadf0544f4815af5927c23148a740aa4">&#9670;&nbsp;</a></span>fileCreateTime</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint16_t FileEntry::fileCreateTime</td>
+          <td class="memname"><a class="el" href="struct_time.html">Time</a> FileEntry::fileCreateTime</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fat32__structures_8h_source.html#l00166">166</a> of file <a class="el" href="fat32__structures_8h_source.html">fat32_structures.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fat32__structures_8h_source.html#l00216">216</a> of file <a class="el" href="fat32__structures_8h_source.html">fat32_structures.h</a>.</p>
 
 </div>
 </div>
@@ -272,7 +274,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fat32__structures_8h_source.html#l00162">162</a> of file <a class="el" href="fat32__structures_8h_source.html">fat32_structures.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fat32__structures_8h_source.html#l00212">212</a> of file <a class="el" href="fat32__structures_8h_source.html">fat32_structures.h</a>.</p>
 
 </div>
 </div>
@@ -288,7 +290,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fat32__structures_8h_source.html#l00169">169</a> of file <a class="el" href="fat32__structures_8h_source.html">fat32_structures.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fat32__structures_8h_source.html#l00219">219</a> of file <a class="el" href="fat32__structures_8h_source.html">fat32_structures.h</a>.</p>
 
 </div>
 </div>
@@ -304,39 +306,39 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fat32__structures_8h_source.html#l00172">172</a> of file <a class="el" href="fat32__structures_8h_source.html">fat32_structures.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fat32__structures_8h_source.html#l00222">222</a> of file <a class="el" href="fat32__structures_8h_source.html">fat32_structures.h</a>.</p>
 
 </div>
 </div>
-<a id="a9e1cb5b26a04d9b844321b1e7ffc064a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9e1cb5b26a04d9b844321b1e7ffc064a">&#9670;&nbsp;</a></span>fileModDate</h2>
+<a id="a34814651ac77f291aa8142a95e7b2461"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34814651ac77f291aa8142a95e7b2461">&#9670;&nbsp;</a></span>fileModDate</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint16_t FileEntry::fileModDate</td>
+          <td class="memname"><a class="el" href="struct_date.html">Date</a> FileEntry::fileModDate</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fat32__structures_8h_source.html#l00171">171</a> of file <a class="el" href="fat32__structures_8h_source.html">fat32_structures.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fat32__structures_8h_source.html#l00221">221</a> of file <a class="el" href="fat32__structures_8h_source.html">fat32_structures.h</a>.</p>
 
 </div>
 </div>
-<a id="a67c54fbb7b08f574d926e0cefc11f0d4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a67c54fbb7b08f574d926e0cefc11f0d4">&#9670;&nbsp;</a></span>fileModTime</h2>
+<a id="af33ef9a1de97a2b73276f83eab0c5893"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af33ef9a1de97a2b73276f83eab0c5893">&#9670;&nbsp;</a></span>fileModTime</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint16_t FileEntry::fileModTime</td>
+          <td class="memname"><a class="el" href="struct_time.html">Time</a> FileEntry::fileModTime</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fat32__structures_8h_source.html#l00170">170</a> of file <a class="el" href="fat32__structures_8h_source.html">fat32_structures.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fat32__structures_8h_source.html#l00220">220</a> of file <a class="el" href="fat32__structures_8h_source.html">fat32_structures.h</a>.</p>
 
 </div>
 </div>
@@ -352,7 +354,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fat32__structures_8h_source.html#l00161">161</a> of file <a class="el" href="fat32__structures_8h_source.html">fat32_structures.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fat32__structures_8h_source.html#l00211">211</a> of file <a class="el" href="fat32__structures_8h_source.html">fat32_structures.h</a>.</p>
 
 </div>
 </div>
@@ -368,7 +370,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fat32__structures_8h_source.html#l00164">164</a> of file <a class="el" href="fat32__structures_8h_source.html">fat32_structures.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fat32__structures_8h_source.html#l00214">214</a> of file <a class="el" href="fat32__structures_8h_source.html">fat32_structures.h</a>.</p>
 
 </div>
 </div>
@@ -384,7 +386,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fat32__structures_8h_source.html#l00173">173</a> of file <a class="el" href="fat32__structures_8h_source.html">fat32_structures.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fat32__structures_8h_source.html#l00223">223</a> of file <a class="el" href="fat32__structures_8h_source.html">fat32_structures.h</a>.</p>
 
 </div>
 </div>
