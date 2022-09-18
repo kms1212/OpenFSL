@@ -194,36 +194,6 @@ class FAT32 : public FileSystem<BlockDevice> {
     static FormatOptions getDefaultFormatOptions(const lba48_t fsSize);
 
     /**
-     * @brief FAT32 file information
-     * @author kms1212
-     * @details
-     * Type          | Name           | Description
-     * --------------|----------------|----------------
-     * std::string   | fileName       | Filename
-     * std::string   | fileSFNName    | Filename in SFN. (No check in entry creation)
-     * FileAttribute | fileAttr       | File attribute
-     * Time          | fileCreateTime | File create time
-     * Time          | fileAccessTime | File access time
-     * Time          | fileModTime    | File moderation time
-     * cluster_t     | fileLocation   | File location as cluster index (No check in entry creation)
-     * cluster_t     | fileSize       | File size (No check in entry creation)
-     * size_t        | fileEntryIndex | SFN entry index (No check in entry creation)
-     * size_t        | fileEntrySize  | LFN entry count + 1(SFN entry count) (No check in entry creation)
-     */
-    typedef struct FileInfo {
-        std::string    fileName = "";
-        std::string    fileSFNName = "";
-        Time           fileCreateTime;
-        Time           fileAccessTime;
-        Time           fileModTime;
-        cluster_t      fileLocation = 0;
-        size_t         fileSize = 0;
-        size_t         fileEntryIndex = 0;
-        size_t         fileEntrySize = 0;
-        FileAttribute  fileAttr = (FileAttribute)0;
-    } FileInfo;
-
-    /**
      * @brief FAT32 file
      * @details Implements fat32 file controls
      */
@@ -497,7 +467,7 @@ class FAT32 : public FileSystem<BlockDevice> {
      */
     error_t __check_result
         __makeDir(const std::string path, const std::string dirname,
-            const Time* createTime = nullptr);
+            const openfsl::Time* createTime = nullptr);
 
     /**
      * @brief Create file
@@ -508,7 +478,7 @@ class FAT32 : public FileSystem<BlockDevice> {
      */
     error_t __check_result
         __makeFile(const std::string path, const std::string dirname,
-            const Time* createTime = nullptr);
+            const openfsl::Time* createTime = nullptr);
 
     /**
      * @brief Remove directory
@@ -578,10 +548,12 @@ class FAT32 : public FileSystem<BlockDevice> {
 
 
     // Time controls //////////////////////////////////////////////////////
-    uint16_t __dateToWord(const Time date);
-    uint16_t __timeToWord(const Time date);
-    Time* __wordToDate(Time* d, const uint16_t date);
-    Time* __wordToTime(Time* t, const uint16_t date);
+    openfsl::Time toFslTime(const openfsl::FAT32::Time fatTime);
+    openfsl::Time toFslTime(const openfsl::FAT32::Date fatDate);
+    openfsl::Time toFslTime(const openfsl::FAT32::Time fatTime, const openfsl::FAT32::Date fatDate);
+
+    openfsl::FAT32::Time toFatTime(const openfsl::Time fslTime);
+    openfsl::FAT32::Date toFatDate(const openfsl::Time fslTime);
     ///////////////////////////////////////////////////////////////////////
 
 

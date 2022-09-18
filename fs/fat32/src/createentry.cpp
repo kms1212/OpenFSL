@@ -133,13 +133,13 @@ recalc:
     fileEntry.fileLocationLow = (uint16_t)createFileInfo.fileLocation;
     fileEntry.fileSize = (uint32_t)createFileInfo.fileSize;
 
-    fileEntry.fileCreateDate = __dateToWord(createFileInfo.fileCreateTime);
-    fileEntry.fileCreateTime = __timeToWord(createFileInfo.fileCreateTime);
+    fileEntry.fileCreateDate = toFatDate(createFileInfo.fileCreateTime);
+    fileEntry.fileCreateTime = toFatTime(createFileInfo.fileCreateTime);
 
-    fileEntry.fileAccessDate = __dateToWord(createFileInfo.fileAccessTime);
+    fileEntry.fileAccessDate = toFatDate(createFileInfo.fileAccessTime);
 
-    fileEntry.fileModDate = __dateToWord(createFileInfo.fileModTime);
-    fileEntry.fileModTime = __timeToWord(createFileInfo.fileModTime);
+    fileEntry.fileModDate = toFatDate(createFileInfo.fileModTime);
+    fileEntry.fileModTime = toFatTime(createFileInfo.fileModTime);
 
     if (requiredEntrySize > 1) {  // If file name is LFN
         // Initialize SFN entry to whitespace

@@ -38,7 +38,57 @@ Check the full BSD-3-Clause license for more details.
         (FAT32::FileAttribute a, FAT32::FileAttribute b)
     { return (FAT32::FileAttribute)((uint8_t)a & (uint8_t)b); }
 
+    /**
+     * @brief FAT32 file information
+     * @author kms1212
+     * @details
+     * Type          | Name           | Description
+     * --------------|----------------|----------------
+     * std::string   | fileName       | Filename
+     * std::string   | fileSFNName    | Filename in SFN. (No check in entry creation)
+     * FileAttribute | fileAttr       | File attribute
+     * openfsl::Time | fileCreateTime | File create time
+     * openfsl::Time | fileAccessTime | File access time
+     * openfsl::Time | fileModTime    | File moderation time
+     * cluster_t     | fileLocation   | File location as cluster index (No check in entry creation)
+     * cluster_t     | fileSize       | File size (No check in entry creation)
+     * size_t        | fileEntryIndex | SFN entry index (No check in entry creation)
+     * size_t        | fileEntrySize  | LFN entry count + 1(SFN entry count) (No check in entry creation)
+     */
+    typedef struct FileInfo {
+        std::string    fileName = "";
+        std::string    fileSFNName = "";
+        openfsl::Time  fileCreateTime;
+        openfsl::Time  fileAccessTime;
+        openfsl::Time  fileModTime;
+        cluster_t      fileLocation = 0;
+        size_t         fileSize = 0;
+        size_t         fileEntryIndex = 0;
+        size_t         fileEntrySize = 0;
+        FileAttribute  fileAttr = (FileAttribute)0;
+    } FileInfo;
+
  private:
+    /**
+     * @brief FAT32 time
+     * @details FAT32 time struct
+     */
+    typedef struct Time {
+        uint16_t second: 5;
+        uint16_t minute: 6;
+        uint16_t hour: 5;
+    } Time;
+
+    /**
+     * @brief FAT32 date
+     * @details FAT32 date struct
+     */
+    typedef struct Date {
+        uint16_t day: 5;
+        uint16_t month: 4;
+        uint16_t year: 7;
+    } Date;
+
     /**
      * @brief FAT32 BIOS Parameter Block
      * @details
@@ -146,12 +196,12 @@ Check the full BSD-3-Clause license for more details.
      * FileAttribute| fileAttr                | 0x0B
      * uint8_t      | fileReserved1           | 0x0C
      * uint8_t      | fileCreateTenth         | 0x0D
-     * uint16_t     | fileCreateTime          | 0x0E
-     * uint16_t     | fileCreateDate          | 0x10
-     * uint16_t     | fileAccessDate          | 0x12
+     * Time         | fileCreateTime          | 0x0E
+     * Date         | fileCreateDate          | 0x10
+     * Date         | fileAccessDate          | 0x12
      * uint16_t     | fileLocationHigh        | 0x14
-     * uint16_t     | fileModTime             | 0x16
-     * uint16_t     | fileModDate             | 0x18
+     * Time         | fileModTime             | 0x16
+     * Date         | fileModDate             | 0x18
      * uint16_t     | fileLocationLow         | 0x1A
      * uint32_t     | fileSize                | 0x1C
      *
@@ -163,12 +213,12 @@ Check the full BSD-3-Clause license for more details.
         FileAttribute  fileAttr;
         uint8_t        fileReserved1;
         uint8_t        fileCreateTenth;
-        uint16_t       fileCreateTime;
-        uint16_t       fileCreateDate;
-        uint16_t       fileAccessDate;
+        Time           fileCreateTime;
+        Date           fileCreateDate;
+        Date           fileAccessDate;
         uint16_t       fileLocationHigh;
-        uint16_t       fileModTime;
-        uint16_t       fileModDate;
+        Time           fileModTime;
+        Date           fileModDate;
         uint16_t       fileLocationLow;
         uint32_t       fileSize;
     } FileEntry;

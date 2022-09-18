@@ -33,8 +33,10 @@ openfsl::FAT32::LinkedCluster::LinkedCluster(
             i < fileSystem->getBPB()->bpbSectorPerCluster; i++) {
             result = fileSystem->getIODevice()->writeSector(blankSector,
                 fileSystem->getActualLBA(clusterToLBA(startCluster) + i), 1);
-            if (result)
+            if (result) {
+                delete[] blankSector;
                 throw result;
+            }
         }
         delete[] blankSector;
 

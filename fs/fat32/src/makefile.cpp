@@ -12,7 +12,8 @@ Check the full BSD-3-Clause license for more details.
 #include "openfsl/fat32/fs_fat32.h"
 
 int openfsl::FAT32::__makeFile(
-    const std::string path, const std::string filename, const Time* createTime) {
+    const std::string path, const std::string filename,
+    const openfsl::Time* createTime) {
     int valid = getEntryCount(filename, false);
     if (!valid)
         return OPENFSL_ERROR_INVALID_FILE_NAME;

@@ -9,36 +9,53 @@ Check the full BSD-3-Clause license for more details.
 
 #include "openfsl/fat32/fs_fat32.h"
 
-uint16_t openfsl::FAT32::__dateToWord(const Time date) {
-    uint16_t ret;
-    ret = (date.time_day & 0x001F);
-    ret += (date.time_month & 0x000F) << 5;
-    ret += ((date.time_year - 1980) & 0x07F) << 9;
-
-    return ret;
+openfsl::Time openfsl::FAT32::toFslTime(const openfsl::FAT32::Time fatTime) {
+    openfsl::Time fslTime;
+    fslTime.time_sec = fatTime.second * 2;
+    fslTime.time_min = fatTime.minute;
+    fslTime.time_hour = fatTime.hour;
+    fslTime.time_day = 0;
+    fslTime.time_month = 0;
+    fslTime.time_year = 0;
+    return fslTime;
 }
 
-uint16_t openfsl::FAT32::__timeToWord(const Time time) {
-    uint16_t ret;
-    ret = ((time.time_sec / 2) & 0x1F);
-    ret += (time.time_min & 0x3F) << 5;
-    ret += (time.time_hour & 0x1F) << 11;
-
-    return ret;
+openfsl::Time openfsl::FAT32::toFslTime(const openfsl::FAT32::Date fatDate) {
+    openfsl::Time fslTime;
+    fslTime.time_sec = 0;
+    fslTime.time_min = 0;
+    fslTime.time_hour = 0;
+    fslTime.time_day = fatDate.day;
+    fslTime.time_month = fatDate.month;
+    fslTime.time_year = fatDate.year + 1980;
+    return fslTime;
 }
 
-openfsl::Time* openfsl::FAT32::__wordToDate(Time* d, const uint16_t date) {
-    d->time_day = (date & 0x001F);
-    d->time_month = (date & 0x01E0) >> 5;
-    d->time_year = ((date & 0xFE00) >> 9) + 1980;
+openfsl::Time openfsl::FAT32::toFslTime(const openfsl::FAT32::Time fatTime, const openfsl::FAT32::Date fatDate) {
+    openfsl::Time fslTime;
+    openfsl::Time tmp;
+    fslTime = toFslTime(fatTime);
+    tmp = toFslTime(fatDate);
 
-    return d;
+    fslTime.time_day = tmp.time_day;
+    fslTime.time_month = tmp.time_month;
+    fslTime.time_year = tmp.time_year;
+
+    return fslTime;
 }
 
-openfsl::Time* openfsl::FAT32::__wordToTime(Time* t, const uint16_t time) {
-    t->time_sec = (time & 0x001F) * 2;
-    t->time_min = (time & 0x07E0) >> 5;
-    t->time_hour = (time & 0xF800) >> 11;
+openfsl::FAT32::Time openfsl::FAT32::toFatTime(const openfsl::Time fslTime) {
+    openfsl::FAT32::Time fatTime;
+    fatTime.second = fslTime.time_sec / 2;
+    fatTime.minute = fslTime.time_min;
+    fatTime.hour = fslTime.time_hour;
+    return fatTime;
+}
 
-    return t;
+openfsl::FAT32::Date openfsl::FAT32::toFatDate(const openfsl::Time fslTime) {
+    openfsl::FAT32::Date fatDate;
+    fatDate.day = fslTime.time_day;
+    fatDate.month = fslTime.time_month;
+    fatDate.year = fslTime.time_year - 1980;
+    return fatDate;
 }

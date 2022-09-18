@@ -26,11 +26,11 @@ const uint32_t openfsl::getPatchVersion() {
 }
 
 const uint32_t openfsl::getBuildVersion() {
-    return 1386;
+    return 1425;
 }
 
 const uint32_t openfsl::getBuildDate() {
-    return 20220414;
+    return 20220918;
 }
 
 const char* openfsl::getVersionString() {
@@ -38,5 +38,5 @@ const char* openfsl::getVersionString() {
 }
 
 const char* openfsl::getFullVersionString() {
-    return "OpenFSL 0.0.0 (AppleClang 13.1.6.13160021 arm64) Running On Darwin";
+    return "OpenFSL 0.0.0 (AppleClang 14.0.0.14000029 arm64) Running On Darwin";
 }

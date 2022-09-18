@@ -40,6 +40,7 @@ error_t openfsl::FAT32::__forEachEntry(
         if (result) {
             currentPath = tempPath;
             currentCluster = tempCluster;
+            delete fileEntry;
             return result;
         }
 
@@ -47,6 +48,7 @@ error_t openfsl::FAT32::__forEachEntry(
         if (fileEntry->fileName[0] == 0x00) {
             currentPath = tempPath;
             currentCluster = tempCluster;
+            delete fileEntry;
             return 0;
         } else if ((fileEntry->fileName[0] != 0xE5)) {
             // If file is not deleted
@@ -70,6 +72,8 @@ error_t openfsl::FAT32::__forEachEntry(
                     std::u16string nametmpstr(nametmpseq);
 
                     filenamebuf << __ucs2ToU8(nametmpseq);
+
+                    delete[] nametmpseq;
                 }
 
                 for (copySize = 0; copySize < 6; copySize++)
@@ -83,6 +87,8 @@ error_t openfsl::FAT32::__forEachEntry(
                     std::u16string nametmpstr(nametmpseq);
 
                     filenamebuf << __ucs2ToU8(nametmpseq);
+
+                    delete[] nametmpseq;
                 }
 
                 for (copySize = 0; copySize < 2; copySize++)
@@ -96,6 +102,8 @@ error_t openfsl::FAT32::__forEachEntry(
                     std::u16string nametmpstr(nametmpseq);
 
                     filenamebuf << __ucs2ToU8(nametmpseq);
+
+                    delete[] nametmpseq;
                 }
 
                 lfnBuf.insert(0, filenamebuf.str());
@@ -127,22 +135,13 @@ error_t openfsl::FAT32::__forEachEntry(
                 fileInfo.fileSFNName = filename;
                 fileInfo.fileAttr = fileEntry->fileAttr;
 
-                __wordToDate(&fileInfo.fileCreateTime,
-                    leToSystem<uint16_t>(fileEntry->fileCreateDate));
-                __wordToTime(&fileInfo.fileCreateTime,
-                    leToSystem<uint16_t>(fileEntry->fileCreateTime));
-                fileInfo.fileCreateTime.time_sec +=
-                    fileEntry->fileCreateTenth / 10;
-                fileInfo.fileCreateTime.time_millis =
-                    (fileEntry->fileCreateTenth % 10) * 100;
+                fileInfo.fileCreateTime = toFslTime(
+                    fileEntry->fileCreateTime, fileEntry->fileCreateDate);
 
-                __wordToDate(&fileInfo.fileModTime,
-                    leToSystem<uint16_t>(fileEntry->fileModDate));
-                __wordToTime(&fileInfo.fileModTime,
-                    leToSystem<uint16_t>(fileEntry->fileModTime));
+                fileInfo.fileModTime = toFslTime(
+                    fileEntry->fileModTime, fileEntry->fileModDate);
 
-                __wordToDate(&fileInfo.fileAccessTime,
-                    leToSystem<uint16_t>(fileEntry->fileAccessDate));
+                fileInfo.fileAccessTime = toFslTime(fileEntry->fileAccessDate);
 
                 fileInfo.fileSize = leToSystem<uint32_t>(fileEntry->fileSize);
                 fileInfo.fileLocation =
@@ -165,5 +164,6 @@ error_t openfsl::FAT32::__forEachEntry(
     currentPath = tempPath;
     currentCluster = tempCluster;
 
+    delete fileEntry;
     return 0;
 }
