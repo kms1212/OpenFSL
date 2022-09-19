@@ -66,6 +66,7 @@ You can integrate the library into your operating system!
 | ppc64el (PowerPC 64-bit LE[^le]) |         | X             | X       |       |
 | ppc64 (PowerPC 64-bit BE[^be])   |         |               | X       |       |
 | s390x                            |         | X             |         |       |
+O: Supported, X: Not supported/tested, blank: Unable to build/OS not available
 
 [^note]: 'O' means supporting, 'X' means not tested and not supported, blank means unable to build.
 [^le]: Little-Endian system.
