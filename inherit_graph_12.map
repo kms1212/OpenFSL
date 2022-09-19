@@ -1,3 +1,4 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$structopenfsl_1_1_block_device_1_1_disk_parameter.html" title="Disk Parameter." alt="" coords="5,5,164,47"/>
+<area shape="rect" id="node1" href="$classopenfsl_1_1_container.html" title="Data container." alt="" coords="5,5,147,32"/>
+<area shape="rect" id="node2" href="$classopenfsl_1_1_sector.html" title="Sector buffer." alt="" coords="195,5,313,32"/>
 </map>

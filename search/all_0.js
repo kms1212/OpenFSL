@@ -20,6 +20,6 @@ var searchData=
   ['_5fblob_5fvbrboot_5fbin_5fdata_17',['_blob_vbrboot_bin_data',['../bootcode_8h.html#aec475c6e6a11758cdb5ee76f9a468ad9',1,'bootcode.h']]],
   ['_5fblob_5fvbrboot_5fbin_5flen_18',['_blob_vbrboot_bin_len',['../bootcode_8h.html#a4be133b5407bd8991afb560eea88296f',1,'bootcode.h']]],
   ['_5flocaltime64_5fs_5fexist_19',['_LOCALTIME64_S_EXIST',['../symbols_8h.html#a3361a8be4bd9a91de9378e81697b242f',1,'symbols.h']]],
-  ['_5fnochk1_20',['_nochk1',['../struct_c_o_m_m_a_a55h.html#af738f7c58e9284457d076fbdbb3854da',1,'COMMAA55h::_nochk1()'],['../struct_f_a_t1216_b_p_b.html#a7712f3a6fd8f9618b5c75e030d11fb9b',1,'FAT1216BPB::_nochk1()'],['../struct_f_a_t32_b_p_b.html#a6ca78f7c9a6e37463da95a6e39c6055a',1,'FAT32BPB::_nochk1()'],['../struct_n_t_f_s_b_p_b.html#acbbeb8e06f153092c78140822f7662db',1,'NTFSBPB::_nochk1()']]],
-  ['_5fnochk2_21',['_nochk2',['../struct_f_a_t1216_b_p_b.html#aead6f2d9a4c52043ee1c82e685489d66',1,'FAT1216BPB::_nochk2()'],['../struct_f_a_t32_b_p_b.html#a6d65c7cb1c6ecac9d0d40a177b90c84c',1,'FAT32BPB::_nochk2()'],['../struct_n_t_f_s_b_p_b.html#a9521a8146f41d016db6e6c197cdaf14a',1,'NTFSBPB::_nochk2()']]]
+  ['_5fnochk1_20',['_nochk1',['../detectstruct_8h.html#ae6ac0643c9ee9b01dc2921273453f247',1,'detectstruct.h']]],
+  ['_5fnochk2_21',['_nochk2',['../detectstruct_8h.html#a14e2278427d9f58c772229e95d79d9c5',1,'detectstruct.h']]]
 ];

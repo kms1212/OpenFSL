@@ -1,14 +1,11 @@
 var hierarchy =
 [
     [ "openfsl::CHS", "structopenfsl_1_1_c_h_s.html", null ],
-    [ "COMMAA55h", "struct_c_o_m_m_a_a55h.html", null ],
     [ "openfsl::Container", "classopenfsl_1_1_container.html", [
       [ "openfsl::Sector", "classopenfsl_1_1_sector.html", null ]
     ] ],
     [ "openfsl::BlockDevice::DiskParameter", "structopenfsl_1_1_block_device_1_1_disk_parameter.html", null ],
     [ "openfsl::DiskStructure", "structopenfsl_1_1_disk_structure.html", null ],
-    [ "FAT1216BPB", "struct_f_a_t1216_b_p_b.html", null ],
-    [ "FAT32BPB", "struct_f_a_t32_b_p_b.html", null ],
     [ "FileInfo", "struct_file_info.html", null ],
     [ "FileRefAddr", "struct_file_ref_addr.html", null ],
     [ "openfsl::FileSystem< IOD >", "classopenfsl_1_1_file_system.html", null ],
@@ -33,15 +30,14 @@ var hierarchy =
         [ "openfsl::MemCharDevice", "classopenfsl_1_1_mem_char_device.html", null ]
       ] ]
     ] ],
-    [ "openfsl::CharDevice::IOFunctions", "structopenfsl_1_1_char_device_1_1_i_o_functions.html", null ],
     [ "openfsl::BlockDevice::IOFunctions", "structopenfsl_1_1_block_device_1_1_i_o_functions.html", null ],
+    [ "openfsl::CharDevice::IOFunctions", "structopenfsl_1_1_char_device_1_1_i_o_functions.html", null ],
     [ "openfsl::MBR", "classopenfsl_1_1_m_b_r.html", null ],
     [ "MFTEntryHeader", "struct_m_f_t_entry_header.html", null ],
     [ "MFTFileName", "struct_m_f_t_file_name.html", null ],
     [ "MFTNonResidentAttrHeader", "struct_m_f_t_non_resident_attr_header.html", null ],
     [ "MFTResidentAttrHeader", "struct_m_f_t_resident_attr_header.html", null ],
     [ "MFTStandardInformation", "struct_m_f_t_standard_information.html", null ],
-    [ "NTFSBPB", "struct_n_t_f_s_b_p_b.html", null ],
     [ "openfsl::GPT::PartitionInfo", "structopenfsl_1_1_g_p_t_1_1_partition_info.html", null ],
     [ "openfsl::MBR::PartitionInfo", "structopenfsl_1_1_m_b_r_1_1_partition_info.html", null ],
     [ "openfsl::Time", "structopenfsl_1_1_time.html", null ],

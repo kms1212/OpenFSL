@@ -9,5 +9,10 @@ var detectstruct_8h =
     [ "detectDiskStructure", "detectstruct_8h.html#a6a72fba5307f9f6a3bc92d782d714226", null ],
     [ "detectFileSystem", "detectstruct_8h.html#a9e230af6aae2cbecb0e18be1af8689f2", null ],
     [ "fileSystemTypeToString", "detectstruct_8h.html#af0c653bca3fe7d5fe083c0225e7f25ea", null ],
-    [ "partitionTableTypeToString", "detectstruct_8h.html#a504a1b9126c87c62a51837b9388abf86", null ]
+    [ "partitionTableTypeToString", "detectstruct_8h.html#a504a1b9126c87c62a51837b9388abf86", null ],
+    [ "_nochk1", "detectstruct_8h.html#ae6ac0643c9ee9b01dc2921273453f247", null ],
+    [ "_nochk2", "detectstruct_8h.html#a14e2278427d9f58c772229e95d79d9c5", null ],
+    [ "fatFsType", "detectstruct_8h.html#a542036e344db17e538c8f78dc5112d79", null ],
+    [ "fsType", "detectstruct_8h.html#acfac77a63ba0949073697c40e1b3d359", null ],
+    [ "tailSig", "detectstruct_8h.html#af6c2bfe7e341bdb38b354f138a28df4a", null ]
 ];
