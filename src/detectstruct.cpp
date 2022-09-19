@@ -12,6 +12,49 @@ Check the full BSD-3-Clause license for more details.
 
 #include "openfsl/detectstruct.h"
 
+/**
+ * @brief Common signature for FAT(12/16/32), exFAT, NTFS, MBR, etc..
+ */
+#pragma pack(push, 1)
+typedef struct COMMAA55h {
+    uint8_t        _nochk1[510];
+    uint16_t        tailSig;
+} COMMAA55h;
+#pragma pack(pop)
+
+/**
+ * @brief FAT12, 16 BPB for determining partition type
+ */
+#pragma pack(push, 1)
+typedef struct FAT1216BPB {
+    uint8_t        _nochk1[54];
+    uint8_t        fatFsType[8];
+    uint8_t        _nochk2[450];
+} FAT1216BPB;
+#pragma pack(pop)
+
+/**
+ * @brief FAT32 BPB for determining partition type
+ */
+#pragma pack(push, 1)
+typedef struct FAT32BPB {
+    uint8_t        _nochk1[82];
+    uint8_t        fatFsType[8];
+    uint8_t        _nochk2[422];
+} FAT32BPB;
+#pragma pack(pop)
+
+/**
+ * @brief NTFS BPB for determining partition type
+ */
+#pragma pack(push, 1)
+typedef struct NTFSBPB {
+    uint8_t        _nochk1[3];
+    uint8_t        fsType[8];
+    uint8_t        _nochk2[501];
+} NTFSBPB;
+#pragma pack(pop)
+
 error_t openfsl::detectDiskStructure(DiskStructure* buf, BlockDevice* bd) {
     // Read first sector of disk
     Sector checkSector(1, bd->getDiskParameter().bytesPerSector);
@@ -23,8 +66,8 @@ error_t openfsl::detectDiskStructure(DiskStructure* buf, BlockDevice* bd) {
     buf->partTable = PartitionTableType::None;
     buf->partList.clear();
 
-    fsStructure::COMMAA55h* tailSigChk =
-        checkSector.getDataCast<fsStructure::COMMAA55h>();
+    COMMAA55h* tailSigChk =
+        checkSector.getDataCast<COMMAA55h>();
 
     // Check 0xAA55 Signature
     if (leToSystem<uint16_t>(tailSigChk->tailSig) == 0xAA55) {
@@ -102,12 +145,12 @@ error_t openfsl::detectFileSystem(
     if (result)
         return result;
 
-    fsStructure::COMMAA55h* tailSigChk =
-        checkSector.getDataCast<fsStructure::COMMAA55h>();
+    COMMAA55h* tailSigChk =
+        checkSector.getDataCast<COMMAA55h>();
 
     if (leToSystem<uint16_t>(tailSigChk->tailSig) == 0xAA55) {
-        fsStructure::FAT1216BPB* fat1216Chk =
-            checkSector.getDataCast<fsStructure::FAT1216BPB>();
+        FAT1216BPB* fat1216Chk =
+            checkSector.getDataCast<FAT1216BPB>();
         if (memcmp(fat1216Chk->fatFsType, "FAT12   ", 8) == 0) {
             *buf = FileSystemType::FAT12;
             return 0;
@@ -116,15 +159,15 @@ error_t openfsl::detectFileSystem(
             return 0;
         }
 
-        fsStructure::FAT32BPB* fat32Chk =
-            checkSector.getDataCast<fsStructure::FAT32BPB>();
+        FAT32BPB* fat32Chk =
+            checkSector.getDataCast<FAT32BPB>();
         if (memcmp(fat32Chk->fatFsType, "FAT32   ", 8) == 0) {
             *buf = FileSystemType::FAT32;
             return 0;
         }
 
-        fsStructure::NTFSBPB* ntfsChk =
-            checkSector.getDataCast<fsStructure::NTFSBPB>();
+        NTFSBPB* ntfsChk =
+            checkSector.getDataCast<NTFSBPB>();
         if (memcmp(ntfsChk->fsType, "NTFS    ", 8) == 0) {
             *buf = FileSystemType::NTFS;
             return 0;

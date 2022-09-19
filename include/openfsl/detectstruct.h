@@ -36,51 +36,6 @@ typedef struct {
     std::vector<FileSystemType> partList;
 } DiskStructure;
 
-namespace fsStructure {
-    /**
-     * @brief Common signature for FAT(12/16/32), exFAT, NTFS, MBR, etc..
-     */
-#pragma pack(push, 1)
-    typedef struct COMMAA55h {
-        uint8_t        _nochk1[510];
-        uint16_t        tailSig;
-    } COMMAA55h;
-#pragma pack(pop)
-
-    /**
-     * @brief FAT12, 16 BPB for determining partition type
-     */
-#pragma pack(push, 1)
-    typedef struct FAT1216BPB {
-        uint8_t        _nochk1[54];
-        uint8_t        fatFsType[8];
-        uint8_t        _nochk2[450];
-    } FAT1216BPB;
-#pragma pack(pop)
-
-    /**
-     * @brief FAT32 BPB for determining partition type
-     */
-#pragma pack(push, 1)
-    typedef struct FAT32BPB {
-        uint8_t        _nochk1[82];
-        uint8_t        fatFsType[8];
-        uint8_t        _nochk2[422];
-    } FAT32BPB;
-#pragma pack(pop)
-
-    /**
-     * @brief NTFS BPB for determining partition type
-     */
-#pragma pack(push, 1)
-    typedef struct NTFSBPB {
-        uint8_t        _nochk1[3];
-        uint8_t        fsType[8];
-        uint8_t        _nochk2[501];
-    } NTFSBPB;
-#pragma pack(pop)
-}  // namespace fsStructure
-
 error_t __check_result detectDiskStructure(DiskStructure* buf, BlockDevice* dd);
 error_t __check_result detectFileSystem(
     FileSystemType* buf, BlockDevice* bd, lba48_t bpbSectorAddr = 0);
