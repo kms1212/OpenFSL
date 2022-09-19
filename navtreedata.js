@@ -30,7 +30,7 @@ var NAVTREE =
         [ "Static Library", "index.html#autotoc_md6", null ]
       ] ],
       [ "Description", "index.html#autotoc_md7", null ],
-      [ "Arch/platforms[^note]", "index.html#autotoc_md8", null ],
+      [ "Arch/platforms", "index.html#autotoc_md8", null ],
       [ "Other", "index.html#autotoc_md9", [
         [ "Documents", "index.html#autotoc_md10", null ],
         [ "Discord", "index.html#autotoc_md11", null ],
