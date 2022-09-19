@@ -55,7 +55,7 @@ In this image, the disk device abstraction layer is in the user application bloc
 
 You can integrate the library into your operating system!
 
-## Arch/platforms[^note]
+## Arch/platforms
 
 | Platform                         | Windows | Linux(Ubuntu) | FreeBSD | macOS |
 | -------------------------------- | ------- | ------------- | ------- | ----- |
@@ -68,7 +68,6 @@ You can integrate the library into your operating system!
 | s390x                            |         | X             |         |       |
 O: Supported, X: Not supported/tested, blank: Unable to build/OS not available
 
-[^note]: 'O' means supporting, 'X' means not tested and not supported, blank means unable to build.
 [^le]: Little-Endian system.
 [^be]: Big-Endian system
 
