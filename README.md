@@ -47,11 +47,11 @@ Sometimes you may want to modify the file system image. And sometimes you may wa
 
 Cross-compiling is not possible at this time because there are so many OS-specific build tasks. This library provides only file system control, so you have to implement the abstraction layer for the library. However, in this regard, it can have the advantage of being able to integrate into the operating system. 
 
-<img src="https://raw.githubusercontent.com/kms1212/OpenFSL/main/doc/images/OpenFSLtoApplicationCodeStructure.png" alt="image1" width="50%" height="50%"/>
+<img src="https://raw.githubusercontent.com/kms1212/OpenFSL/master/doc/images/OpenFSLtoApplicationCodeStructure.png" alt="image1" width="50%" height="50%"/>
 
 In this image, the disk device abstraction layer is in the user application block. But if I transform this image a little bit...
 
-<img src="https://raw.githubusercontent.com/kms1212/OpenFSL/main/doc/images/OpenFSLtoOSCodeStructure.png" alt="image1" width="35%" height="35%"/>
+<img src="https://raw.githubusercontent.com/kms1212/OpenFSL/master/doc/images/OpenFSLtoOSCodeStructure.png" alt="image1" width="35%" height="35%"/>
 
 You can integrate the library into your operating system!
 
