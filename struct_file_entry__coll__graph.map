@@ -1,9 +1,0 @@
-<map id="FileEntry" name="FileEntry">
-<area shape="rect" id="node1" title="FAT32 directory entry struct." alt="" coords="288,359,366,436"/>
-<area shape="rect" id="node2" title=" " alt="" coords="128,5,203,83"/>
-<area shape="rect" id="node5" href="$struct_time.html" title="FAT32 time." alt="" coords="145,175,200,252"/>
-<area shape="rect" id="node6" href="$struct_date.html" title="FAT32 date." alt="" coords="231,175,284,252"/>
-<area shape="rect" id="node3" title=" " alt="" coords="359,175,434,252"/>
-<area shape="rect" id="node4" title=" " alt="" coords="458,175,524,252"/>
-<area shape="rect" id="node7" title=" " alt="" coords="578,175,681,252"/>
-</map>

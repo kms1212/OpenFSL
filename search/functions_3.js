@@ -1,15 +1,7 @@
 var searchData=
 [
-  ['calculatelinklength_1031',['calculateLinkLength',['../classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#af41732ef74d44996f0f29c88f3308e0d',1,'openfsl::FAT32::LinkedCluster']]],
-  ['changedirectory_1032',['changeDirectory',['../classopenfsl_1_1_f_a_t32.html#ae0e5f57f13f4f41934a7ee310dc4ef4c',1,'openfsl::FAT32']]],
-  ['chardevice_1033',['CharDevice',['../classopenfsl_1_1_char_device.html#aeb3d2c21ae6e0bddeb5df64f16ad08ef',1,'openfsl::CharDevice']]],
-  ['checkendian_1034',['checkEndian',['../namespaceopenfsl.html#abe6ec8025c47f6e6242d25891fb20207',1,'openfsl']]],
-  ['clear_1035',['clear',['../classopenfsl_1_1_g_u_i_d.html#adea42af0080c17b4611001eff10c7461',1,'openfsl::GUID']]],
-  ['close_1036',['close',['../classopenfsl_1_1_f_a_t32_1_1_f_i_l_e.html#a77a87778abcba37a3094eddfc18753be',1,'openfsl::FAT32::FILE']]],
-  ['clustertolba_1037',['clusterToLBA',['../classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a68c4914e5a1eeb33c44b0e31e9a5b4ff',1,'openfsl::FAT32::LinkedCluster']]],
-  ['container_1038',['Container',['../classopenfsl_1_1_container.html#a35efb89014ec03f07726803a12774374',1,'openfsl::Container']]],
-  ['convertchstolba_1039',['convertCHSToLBA',['../namespaceopenfsl.html#a2e842313f02239c1497b018b5f9e4161',1,'openfsl']]],
-  ['convertlbatochs_1040',['convertLBAToCHS',['../namespaceopenfsl.html#a78bbeba7546b7a5be59e5f835e64e767',1,'openfsl']]],
-  ['converttoabsolutepath_1041',['convertToAbsolutePath',['../classopenfsl_1_1_f_a_t32.html#a97fcec9162808ca5ab0ea5af049c46b1',1,'openfsl::FAT32']]],
-  ['converttofsltime_1042',['convertToFSLTime',['../namespaceopenfsl.html#a2c9f28e2ca425950c3cdf70d71847049',1,'openfsl']]]
+  ['deinitialize_809',['deinitialize',['../classopenfsl_1_1_file_block_device.html#a370a5c80751152d150e1743322c82107',1,'openfsl::FileBlockDevice::deinitialize()'],['../classopenfsl_1_1_i_o_device.html#ae032b765ab0ad3d8cd6ef88cb098ae8c',1,'openfsl::IODevice::deinitialize()'],['../classopenfsl_1_1_mem_block_device.html#a274e02455798da8a0749cd835132f0e0',1,'openfsl::MemBlockDevice::deinitialize()'],['../classopenfsl_1_1_mem_char_device.html#a0c88e219455e8edcaa2a3fb4a574e0a4',1,'openfsl::MemCharDevice::deinitialize()']]],
+  ['detectdiskstructure_810',['detectDiskStructure',['../namespaceopenfsl.html#a6a72fba5307f9f6a3bc92d782d714226',1,'openfsl']]],
+  ['detectfilesystem_811',['detectFileSystem',['../namespaceopenfsl.html#a9e230af6aae2cbecb0e18be1af8689f2',1,'openfsl']]],
+  ['disablecache_812',['disableCache',['../classopenfsl_1_1_f_a_t32.html#a2eaaf5200fefd9390d155853b827369a',1,'openfsl::FAT32']]]
 ];

@@ -1,12 +1,6 @@
 var fat32__structures_8h =
 [
     [ "FileInfo", "struct_file_info.html", "struct_file_info" ],
-    [ "Time", "struct_time.html", "struct_time" ],
-    [ "Date", "struct_date.html", "struct_date" ],
-    [ "BPBSector", "struct_b_p_b_sector.html", "struct_b_p_b_sector" ],
-    [ "FSINFOSector", "struct_f_s_i_n_f_o_sector.html", "struct_f_s_i_n_f_o_sector" ],
-    [ "FileEntry", "struct_file_entry.html", "struct_file_entry" ],
-    [ "LFNEntry", "struct_l_f_n_entry.html", "struct_l_f_n_entry" ],
     [ "BPBSector", "fat32__structures_8h.html#a77d13f396a1952db134445f053f0d5f2", null ],
     [ "Date", "fat32__structures_8h.html#a8b9ee38bb5e4c1674ffc937bb1b783fd", null ],
     [ "FileEntry", "fat32__structures_8h.html#ae4c05db8fccde7329c8bcc7d6bd13af5", null ],

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['cachetype_1497',['CacheType',['../classopenfsl_1_1_f_a_t32.html#aea18cd86a828b29f3531e03e11f9a388',1,'openfsl::FAT32']]]
+  ['mftentryattribute_1114',['MFTEntryAttribute',['../ntfs__structures_8h.html#a0f35e8a5a5b509089ed135fb9baf4e54',1,'ntfs_structures.h']]],
+  ['mftflags_1115',['MFTFlags',['../ntfs__structures_8h.html#a014eefd3bff976fa6bdbb6e35aa50948',1,'ntfs_structures.h']]]
 ];

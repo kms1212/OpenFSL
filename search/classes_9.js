@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['partitionentry_890',['PartitionEntry',['../structopenfsl_1_1_g_p_t_1_1_partition_entry.html',1,'openfsl::GPT::PartitionEntry'],['../structopenfsl_1_1_m_b_r_1_1_partition_entry.html',1,'openfsl::MBR::PartitionEntry']]],
-  ['partitioninfo_891',['PartitionInfo',['../structopenfsl_1_1_m_b_r_1_1_partition_info.html',1,'openfsl::MBR::PartitionInfo'],['../structopenfsl_1_1_g_p_t_1_1_partition_info.html',1,'openfsl::GPT::PartitionInfo']]],
-  ['partitiontable_892',['PartitionTable',['../structopenfsl_1_1_m_b_r_1_1_partition_table.html',1,'openfsl::MBR']]]
+  ['sector_693',['Sector',['../classopenfsl_1_1_sector.html',1,'openfsl']]]
 ];

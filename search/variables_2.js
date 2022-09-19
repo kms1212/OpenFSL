@@ -1,25 +1,6 @@
 var searchData=
 [
-  ['backupbslocation_1192',['backupBSLocation',['../structopenfsl_1_1_f_a_t32_1_1_format_options.html#aeec1769ab5be6c96a41a1398d1793518',1,'openfsl::FAT32::FormatOptions']]],
-  ['bd_1193',['bd',['../classopenfsl_1_1_g_p_t.html#a5bc7e4f873fd9b20c6fdc39676758d15',1,'openfsl::GPT::bd()'],['../classopenfsl_1_1_m_b_r.html#a49097347090ec395a6839a6462b08222',1,'openfsl::MBR::bd()']]],
-  ['biosdrivenum_1194',['biosDriveNum',['../structopenfsl_1_1_f_a_t32_1_1_format_options.html#a62507aeb929cfc7ec26a035a5db5d49b',1,'openfsl::FAT32::FormatOptions']]],
-  ['blockcount_1195',['blockCount',['../classopenfsl_1_1_mem_block_device.html#af916c3834eb37081c0969ba03fb6ee58',1,'openfsl::MemBlockDevice']]],
-  ['bpb_1196',['bpb',['../classopenfsl_1_1_f_a_t32.html#abae81affe454675558878882026019ab',1,'openfsl::FAT32']]],
-  ['bpbbootcode_1197',['bpbBootCode',['../struct_b_p_b_sector.html#ae3444b8175e099c271716c49803e4aad',1,'BPBSector']]],
-  ['bpbbytespersector_1198',['bpbBytesPerSector',['../struct_b_p_b_sector.html#ab58b1e9fd6e92ec6117f3883c589abbb',1,'BPBSector']]],
-  ['bpbdiskheads_1199',['bpbDiskHeads',['../struct_b_p_b_sector.html#a1cfe0b6976739f509f5b236928503cde',1,'BPBSector']]],
-  ['bpbfatcount_1200',['bpbFATCount',['../struct_b_p_b_sector.html#ab1060ed5f988a294f0899b5fea045f01',1,'BPBSector']]],
-  ['bpbhiddensectors_1201',['bpbHiddenSectors',['../struct_b_p_b_sector.html#aefffa249130880ae3c5ccd2c9c0eb3cf',1,'BPBSector']]],
-  ['bpbjumpcode_1202',['bpbJumpCode',['../struct_b_p_b_sector.html#af0b4b58ef4bca0726eef7e1a8a5010ef',1,'BPBSector']]],
-  ['bpbmedia_1203',['bpbMedia',['../struct_b_p_b_sector.html#a940e0b2f76711b1689fc558fc1b455ae',1,'BPBSector']]],
-  ['bpboemname_1204',['bpbOEMName',['../struct_b_p_b_sector.html#af880e861745832f0709c3c859df39573',1,'BPBSector']]],
-  ['bpbreservedsectors_1205',['bpbReservedSectors',['../struct_b_p_b_sector.html#ae5077d47ac6aa31e165b9dd16208cc1c',1,'BPBSector']]],
-  ['bpbrootentries_1206',['bpbRootEntries',['../struct_b_p_b_sector.html#a0ec119012536ebe2d0c313cae1b5908a',1,'BPBSector']]],
-  ['bpbsectorpercluster_1207',['bpbSectorPerCluster',['../struct_b_p_b_sector.html#a7272988adc61e71656a9aadd6c64680a',1,'BPBSector']]],
-  ['bpbsectorsperfat16_1208',['bpbSectorsPerFAT16',['../struct_b_p_b_sector.html#a6c6dc8d0ed3efc61b7ad8e52d741356a',1,'BPBSector']]],
-  ['bpbsectorspertrack_1209',['bpbSectorsPerTrack',['../struct_b_p_b_sector.html#a3ad6e78b822d86279c0cf74dc5aca341',1,'BPBSector']]],
-  ['bpbtotalsector32_1210',['bpbTotalSector32',['../struct_b_p_b_sector.html#aaa4ebd8f27255d1d34d102e6c4b7d0a9',1,'BPBSector']]],
-  ['bpbtotalsectors_1211',['bpbTotalSectors',['../struct_b_p_b_sector.html#aa3a44ce2b51cce638f7842af82a13a0a',1,'BPBSector']]],
-  ['bpbvbrsignature_1212',['bpbVBRSignature',['../struct_b_p_b_sector.html#a7c0aa89a83a01eabe6590602c40e07f4',1,'BPBSector']]],
-  ['bytespersector_1213',['bytesPerSector',['../structopenfsl_1_1_block_device_1_1_disk_parameter.html#a38643a6bf2f371129f5f65ac3ef409f5',1,'openfsl::BlockDevice::DiskParameter::bytesPerSector()'],['../structopenfsl_1_1_f_a_t32_1_1_volume_info.html#a519fea021733b3a908544d4eeac8b4d8',1,'openfsl::FAT32::VolumeInfo::bytesPerSector()'],['../classopenfsl_1_1_sector.html#a4cba476960a3beea3728e68c9db5cadc',1,'openfsl::Sector::bytespersector()']]]
+  ['backupbslocation_947',['backupBSLocation',['../structopenfsl_1_1_f_a_t32_1_1_format_options.html#aeec1769ab5be6c96a41a1398d1793518',1,'openfsl::FAT32::FormatOptions']]],
+  ['biosdrivenum_948',['biosDriveNum',['../structopenfsl_1_1_f_a_t32_1_1_format_options.html#a62507aeb929cfc7ec26a035a5db5d49b',1,'openfsl::FAT32::FormatOptions']]],
+  ['bytespersector_949',['bytesPerSector',['../structopenfsl_1_1_block_device_1_1_disk_parameter.html#a38643a6bf2f371129f5f65ac3ef409f5',1,'openfsl::BlockDevice::DiskParameter::bytesPerSector()'],['../structopenfsl_1_1_f_a_t32_1_1_volume_info.html#a519fea021733b3a908544d4eeac8b4d8',1,'openfsl::FAT32::VolumeInfo::bytesPerSector()']]]
 ];

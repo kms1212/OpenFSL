@@ -1,4 +1,4 @@
 var namespaces_dup =
 [
-    [ "openfsl", "namespaceopenfsl.html", "namespaceopenfsl" ]
+    [ "openfsl", "namespaceopenfsl.html", null ]
 ];

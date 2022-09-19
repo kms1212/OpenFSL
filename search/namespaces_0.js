@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['fsstructure_898',['fsStructure',['../namespaceopenfsl_1_1fs_structure.html',1,'openfsl']]],
-  ['openfsl_899',['openfsl',['../namespaceopenfsl.html',1,'']]]
+  ['openfsl_697',['openfsl',['../namespaceopenfsl.html',1,'']]]
 ];

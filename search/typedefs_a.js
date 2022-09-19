@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['tableheader_1492',['TableHeader',['../classopenfsl_1_1_g_p_t.html#acf613c2579fe79d4f9ba74e002ad0591',1,'openfsl::GPT']]],
-  ['time_1493',['Time',['../namespaceopenfsl.html#a4bbc5deab07347e75134a72720b15506',1,'openfsl::Time()'],['../fat32__structures_8h.html#a5eb01cbf6c27b503f39613676def571a',1,'Time():&#160;fat32_structures.h']]]
+  ['vbrsector_1106',['VBRSector',['../ntfs__structures_8h.html#a181069c15165bd8ba6437c6e4c16c9f2',1,'ntfs_structures.h']]],
+  ['volumeinfo_1107',['VolumeInfo',['../classopenfsl_1_1_f_a_t32.html#a99a598b9f506133275534e1d384dc5e7',1,'openfsl::FAT32']]]
 ];

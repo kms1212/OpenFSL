@@ -1,19 +1,7 @@
 var classopenfsl_1_1_g_p_t =
 [
-    [ "PartitionEntry", "structopenfsl_1_1_g_p_t_1_1_partition_entry.html", "structopenfsl_1_1_g_p_t_1_1_partition_entry" ],
     [ "PartitionInfo", "structopenfsl_1_1_g_p_t_1_1_partition_info.html", "structopenfsl_1_1_g_p_t_1_1_partition_info" ],
-    [ "TableHeader", "structopenfsl_1_1_g_p_t_1_1_table_header.html", "structopenfsl_1_1_g_p_t_1_1_table_header" ],
-    [ "PartitionEntry", "classopenfsl_1_1_g_p_t.html#a8421713970f528b45b965ad43c01388e", null ],
     [ "PartitionInfo", "classopenfsl_1_1_g_p_t.html#a98020c5101a4bc1d7f68a669c0a9417d", null ],
-    [ "TableHeader", "classopenfsl_1_1_g_p_t.html#acf613c2579fe79d4f9ba74e002ad0591", null ],
-    [ "AttributeFlags", "classopenfsl_1_1_g_p_t.html#aa664dc41bcd6bcab7c055316b7273c57", [
-      [ "System", "classopenfsl_1_1_g_p_t.html#aa664dc41bcd6bcab7c055316b7273c57aa45da96d0bf6575970f2d27af22be28a", null ],
-      [ "Ignore", "classopenfsl_1_1_g_p_t.html#aa664dc41bcd6bcab7c055316b7273c57afd038fc7f319e48f3115d92bf5bdbef9", null ],
-      [ "LegacyBoot", "classopenfsl_1_1_g_p_t.html#aa664dc41bcd6bcab7c055316b7273c57a7a4792572114989940eb92ba52ec3e80", null ],
-      [ "MSBasicDataReadOnly", "classopenfsl_1_1_g_p_t.html#aa664dc41bcd6bcab7c055316b7273c57a0e51ccab00d26b41c9ee331d240c1521", null ],
-      [ "MSBasicDataHidden", "classopenfsl_1_1_g_p_t.html#aa664dc41bcd6bcab7c055316b7273c57a30ee8ea1b7edf05b39f9ccbacf5f9c02", null ],
-      [ "MSBasicDataManualMount", "classopenfsl_1_1_g_p_t.html#aa664dc41bcd6bcab7c055316b7273c57ae4286993763839a6c7693e36a5b4efef", null ]
-    ] ],
     [ "PartitionType", "classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4a", [
       [ "Unused", "classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4aaf1ac123845cc14d24c498e55a65aeca3", null ],
       [ "MBRPartitionScheme", "classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4aa81fe2169fad63d86bbd35c7f7995dcee", null ],
@@ -92,11 +80,5 @@ var classopenfsl_1_1_g_p_t =
     [ "getVolumeOffset", "classopenfsl_1_1_g_p_t.html#a7dac7e68f1b4fc733123fa48217492d1", null ],
     [ "initialize", "classopenfsl_1_1_g_p_t.html#aa96658209115a6c9bf0df02425a2cbe1", null ],
     [ "operator&", "classopenfsl_1_1_g_p_t.html#afbc2bbd7348759098257fdc03d560958", null ],
-    [ "operator|", "classopenfsl_1_1_g_p_t.html#add194ed080e69f1e5387297f7e448d93", null ],
-    [ "bd", "classopenfsl_1_1_g_p_t.html#a5bc7e4f873fd9b20c6fdc39676758d15", null ],
-    [ "diskGuid", "classopenfsl_1_1_g_p_t.html#a0c952ce0d50d228e5d8a71664bca5c96", null ],
-    [ "gptHeader", "classopenfsl_1_1_g_p_t.html#ad862d5e8f43048abafbd5b9858dd518d", null ],
-    [ "partitionList", "classopenfsl_1_1_g_p_t.html#ae51e95820386b576cd6caddbda410f5e", null ],
-    [ "protMbr", "classopenfsl_1_1_g_p_t.html#a3ea6d2991ac9100a9aef8665bfc0e13d", null ],
-    [ "tableOffset", "classopenfsl_1_1_g_p_t.html#aa5c8ab0676dfeb5e97cd4eb191f8b262", null ]
+    [ "operator|", "classopenfsl_1_1_g_p_t.html#add194ed080e69f1e5387297f7e448d93", null ]
 ];

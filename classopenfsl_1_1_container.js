@@ -9,6 +9,5 @@ var classopenfsl_1_1_container =
     [ "getSize", "classopenfsl_1_1_container.html#a3f8b1be526794b1ba38b835b191c955f", null ],
     [ "operator[]", "classopenfsl_1_1_container.html#a78446a075844062d6581d58b76c40669", null ],
     [ "operator[]", "classopenfsl_1_1_container.html#a980c234cabc9e3f789dcaed7236a4eec", null ],
-    [ "data", "classopenfsl_1_1_container.html#a3661843464f45ced3ec537ccb08cea4e", null ],
-    [ "size", "classopenfsl_1_1_container.html#ac9ffa96d994e062b368c83f498a3f49c", null ]
+    [ "data", "classopenfsl_1_1_container.html#a3661843464f45ced3ec537ccb08cea4e", null ]
 ];

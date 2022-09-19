@@ -1,8 +1,4 @@
 var searchData=
 [
-  ['initialized_1340',['initialized',['../classopenfsl_1_1_file_system.html#a97597140deea474998d169ba5d237064',1,'openfsl::FileSystem::initialized()'],['../classopenfsl_1_1_i_o_device.html#a41545f23c0496c02f6e88dfb0612afa9',1,'openfsl::IODevice::initialized()']]],
-  ['iod_1341',['iod',['../classopenfsl_1_1_file_system.html#a86ddae269951f0ab89edb506a269ff9c',1,'openfsl::FileSystem']]],
-  ['iofunc_1342',['ioFunc',['../classopenfsl_1_1_block_device.html#af3329259855a257abca39ef91de9e3f0',1,'openfsl::BlockDevice::ioFunc()'],['../classopenfsl_1_1_char_device.html#a79e34303e55d0ccd27629bc302c0f25e',1,'openfsl::CharDevice::ioFunc()']]],
-  ['isendiancheckeddata_1343',['isEndianCheckedData',['../endian_8cpp.html#a4c2201496d7e0f0604ec584153ded3b5',1,'endian.cpp']]],
-  ['islittleendiandata_1344',['isLittleEndianData',['../endian_8cpp.html#a4e739986646d0d5b005075953dfed776',1,'endian.cpp']]]
+  ['nextfreecluster_1023',['nextFreeCluster',['../structopenfsl_1_1_f_a_t32_1_1_volume_info.html#acdc3ecc39402409eaef7dc9c5995419e',1,'openfsl::FAT32::VolumeInfo']]]
 ];

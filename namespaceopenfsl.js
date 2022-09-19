@@ -1,6 +1,7 @@
 var namespaceopenfsl =
 [
-    [ "fsStructure", "namespaceopenfsl_1_1fs_structure.html", "namespaceopenfsl_1_1fs_structure" ],
+    [ "File systems:", "index.html#autotoc_md2", null ],
+    [ "Partition tables:", "index.html#autotoc_md3", null ],
     [ "BlockDevice", "classopenfsl_1_1_block_device.html", "classopenfsl_1_1_block_device" ],
     [ "CharDevice", "classopenfsl_1_1_char_device.html", "classopenfsl_1_1_char_device" ],
     [ "CHS", "structopenfsl_1_1_c_h_s.html", "structopenfsl_1_1_c_h_s" ],

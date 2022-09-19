@@ -1,5 +1,0 @@
-<map id="openfsl::FAT32::__fatAreaIndexToSector" name="openfsl::FAT32::__fatAreaIndexToSector">
-<area shape="rect" id="node1" title="Convert FAT area index to LBA." alt="" coords="5,39,192,80"/>
-<area shape="rect" id="node2" href="$classopenfsl_1_1_block_device.html#a47f31aa57ca6e82567148f7875a81162" title=" " alt="" coords="271,5,430,47"/>
-<area shape="rect" id="node3" href="$classopenfsl_1_1_file_system.html#a665ece3593447d10c8d56d1605f05784" title=" " alt="" coords="240,71,461,112"/>
-</map>

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['mftentryattribute_1504',['MFTEntryAttribute',['../ntfs__structures_8h.html#a0f35e8a5a5b509089ed135fb9baf4e54',1,'ntfs_structures.h']]],
-  ['mftflags_1505',['MFTFlags',['../ntfs__structures_8h.html#a014eefd3bff976fa6bdbb6e35aa50948',1,'ntfs_structures.h']]]
+  ['partitiontabletype_1117',['PartitionTableType',['../namespaceopenfsl.html#aaeee298c14e04bb116e0f85588036dd4',1,'openfsl']]],
+  ['partitiontype_1118',['PartitionType',['../classopenfsl_1_1_g_p_t.html#af18752e41e4ea9323392cf254f80ff4a',1,'openfsl::GPT::PartitionType()'],['../classopenfsl_1_1_m_b_r.html#a0b96adf72dee2df1ac1012dafd5036f1',1,'openfsl::MBR::PartitionType()']]]
 ];

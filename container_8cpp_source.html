@@ -109,10 +109,10 @@ $(document).ready(function(){initNavTree('container_8cpp_source.html',''); initR
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="container_8h.html">openfsl/container.h</a>&quot;</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
 <div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="classopenfsl_1_1_container.html#a35efb89014ec03f07726803a12774374">   12</a></span>&#160;<a class="code" href="classopenfsl_1_1_container.html#a35efb89014ec03f07726803a12774374">openfsl::Container::Container</a>(<span class="keyword">const</span> <span class="keywordtype">size_t</span> size_) {</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="classopenfsl_1_1_container.html#ac9ffa96d994e062b368c83f498a3f49c">size</a> = size_;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    size = size_;</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="comment">// Allocate memory</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="classopenfsl_1_1_container.html#a3661843464f45ced3ec537ccb08cea4e">data</a> = <span class="keyword">new</span> uint8_t[<a class="code" href="classopenfsl_1_1_container.html#ac9ffa96d994e062b368c83f498a3f49c">size</a>];</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="classopenfsl_1_1_container.html#a3661843464f45ced3ec537ccb08cea4e">data</a> = <span class="keyword">new</span> uint8_t[size];</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;}</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
 <div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classopenfsl_1_1_container.html#a3f8b1be526794b1ba38b835b191c955f">   19</a></span>&#160;<span class="keywordtype">size_t</span> <a class="code" href="classopenfsl_1_1_container.html#a3f8b1be526794b1ba38b835b191c955f">openfsl::Container::getSize</a>() {</div>
@@ -147,7 +147,6 @@ $(document).ready(function(){initNavTree('container_8cpp_source.html',''); initR
 <div class="ttc" id="acontainer_8h_html"><div class="ttname"><a href="container_8h.html">container.h</a></div></div>
 <div class="ttc" id="aclassopenfsl_1_1_container_html_a3e4ccdcb96404da5054fa6b371a74da5"><div class="ttname"><a href="classopenfsl_1_1_container.html#a3e4ccdcb96404da5054fa6b371a74da5">openfsl::Container::getData</a></div><div class="ttdeci">void * getData()</div><div class="ttdoc">Data buffer getter.</div><div class="ttdef"><b>Definition:</b> <a href="container_8cpp_source.html#l00023">container.cpp:23</a></div></div>
 <div class="ttc" id="aclassopenfsl_1_1_container_html_a3f8b1be526794b1ba38b835b191c955f"><div class="ttname"><a href="classopenfsl_1_1_container.html#a3f8b1be526794b1ba38b835b191c955f">openfsl::Container::getSize</a></div><div class="ttdeci">size_t getSize()</div><div class="ttdef"><b>Definition:</b> <a href="container_8cpp_source.html#l00019">container.cpp:19</a></div></div>
-<div class="ttc" id="aclassopenfsl_1_1_container_html_ac9ffa96d994e062b368c83f498a3f49c"><div class="ttname"><a href="classopenfsl_1_1_container.html#ac9ffa96d994e062b368c83f498a3f49c">openfsl::Container::size</a></div><div class="ttdeci">size_t size</div><div class="ttdef"><b>Definition:</b> <a href="container_8h_source.html#l00029">container.h:29</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

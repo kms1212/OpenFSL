@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['openmode_1506',['OpenMode',['../classopenfsl_1_1_file_block_device.html#a63e5a978f31dbac481a6a2e27b363584',1,'openfsl::FileBlockDevice']]]
+  ['stdinfoflags_1119',['StdInfoFlags',['../ntfs__structures_8h.html#ad03a9b0939cf8df877a6b748fd887741',1,'ntfs_structures.h']]]
 ];

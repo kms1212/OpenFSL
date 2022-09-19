@@ -35,8 +35,6 @@ var dir_5cfc8f798c7a4c570457442210be7344 =
     [ "macros.h", "macros_8h.html", "macros_8h" ],
     [ "mbr.h", "mbr_8h.html", [
       [ "MBR", "classopenfsl_1_1_m_b_r.html", "classopenfsl_1_1_m_b_r" ],
-      [ "PartitionEntry", "structopenfsl_1_1_m_b_r_1_1_partition_entry.html", "structopenfsl_1_1_m_b_r_1_1_partition_entry" ],
-      [ "PartitionTable", "structopenfsl_1_1_m_b_r_1_1_partition_table.html", "structopenfsl_1_1_m_b_r_1_1_partition_table" ],
       [ "PartitionInfo", "structopenfsl_1_1_m_b_r_1_1_partition_info.html", "structopenfsl_1_1_m_b_r_1_1_partition_info" ]
     ] ],
     [ "memblockdevice.h", "memblockdevice_8h.html", [

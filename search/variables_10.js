@@ -1,24 +1,6 @@
 var searchData=
 [
-  ['second_1411',['second',['../struct_time.html#aacf4bde1e4d307a776b2ebd31225db01',1,'Time']]],
-  ['sect_1412',['sect',['../structopenfsl_1_1_c_h_s.html#a3eed5a454069d89dacd2ebf1065f0b73',1,'openfsl::CHS']]],
-  ['sector_5fcount_1413',['sector_count',['../classopenfsl_1_1_sector.html#a955edfeb88afa17dfad4a988803bde4c',1,'openfsl::Sector']]],
-  ['sectorpercluster_1414',['sectorPerCluster',['../structopenfsl_1_1_f_a_t32_1_1_volume_info.html#a2ad4a7dcd2da7fbe8f96ba69da84625b',1,'openfsl::FAT32::VolumeInfo']]],
-  ['sectorpertrack_1415',['sectorPerTrack',['../structopenfsl_1_1_block_device_1_1_disk_parameter.html#adc0e5a1ed1ea2a5942f67fad4824483f',1,'openfsl::BlockDevice::DiskParameter']]],
-  ['sectorspercluster_1416',['sectorsPerCluster',['../structopenfsl_1_1_f_a_t32_1_1_format_options.html#a186a9311941238b1e5f35b3a299ccea5',1,'openfsl::FAT32::FormatOptions']]],
-  ['sequencenumber_1417',['sequenceNumber',['../struct_file_ref_addr.html#a9e471595dada79a472f06b46f2d377a1',1,'FileRefAddr']]],
-  ['siclassid_1418',['siClassID',['../struct_m_f_t_standard_information.html#a18fbae545a1fe311304d621657a536bf',1,'MFTStandardInformation']]],
-  ['sidateaccessed_1419',['siDateAccessed',['../struct_m_f_t_standard_information.html#a259287a1852a944a9e6df6ffd13b3fdc',1,'MFTStandardInformation']]],
-  ['sidatecreated_1420',['siDateCreated',['../struct_m_f_t_standard_information.html#a7ce82fca4d828e4bf7eb45052c077fc1',1,'MFTStandardInformation']]],
-  ['sidatemftrecordmodified_1421',['siDateMFTRecordModified',['../struct_m_f_t_standard_information.html#aa8c28d43f951bcc89632736f36e5293e',1,'MFTStandardInformation']]],
-  ['sidatemodified_1422',['siDateModified',['../struct_m_f_t_standard_information.html#a1d6db1923184dc202e82334099446469',1,'MFTStandardInformation']]],
-  ['siflags_1423',['siFlags',['../struct_m_f_t_standard_information.html#ad4bf4c01a7d3535c829d95f9f8dbb16a',1,'MFTStandardInformation']]],
-  ['simaxversions_1424',['siMaxVersions',['../struct_m_f_t_standard_information.html#abaf978ea6a0eddf59f243c110d5e3b78',1,'MFTStandardInformation']]],
-  ['siownerid_1425',['siOwnerID',['../struct_m_f_t_standard_information.html#a2e0bf95ab071c0ffdec2b418b787e57d',1,'MFTStandardInformation']]],
-  ['siquotacharged_1426',['siQuotaCharged',['../struct_m_f_t_standard_information.html#a178e384c54d6a3ae0f69dfff7e204bc5',1,'MFTStandardInformation']]],
-  ['sisecurityid_1427',['siSecurityID',['../struct_m_f_t_standard_information.html#a5ca5b962bac000631a3156bb7b3e07ae',1,'MFTStandardInformation']]],
-  ['siusn_1428',['siUsn',['../struct_m_f_t_standard_information.html#af7d4b19b1f1406d6e929bbeb3883f5bf',1,'MFTStandardInformation']]],
-  ['siversionnumber_1429',['siVersionNumber',['../struct_m_f_t_standard_information.html#a00f906c0f3793d10960e3bb18c174601',1,'MFTStandardInformation']]],
-  ['size_1430',['size',['../classopenfsl_1_1_container.html#ac9ffa96d994e062b368c83f498a3f49c',1,'openfsl::Container']]],
-  ['startcluster_1431',['startCluster',['../classopenfsl_1_1_f_a_t32_1_1_linked_cluster.html#a82974dc72759d5933fc82184196f8731',1,'openfsl::FAT32::LinkedCluster']]]
+  ['writebyte_1081',['writeByte',['../structopenfsl_1_1_char_device_1_1_i_o_functions.html#a2078f7fdb086a763241bf7238355f869',1,'openfsl::CharDevice::IOFunctions']]],
+  ['writepointer_1082',['writePointer',['../classopenfsl_1_1_f_s_l___file.html#a967bb106c7d424c7abd2ac8892e84e91',1,'openfsl::FSL_File']]],
+  ['writesector_1083',['writeSector',['../structopenfsl_1_1_block_device_1_1_i_o_functions.html#a1f51618d32710b46e551459473d45c1e',1,'openfsl::BlockDevice::IOFunctions']]]
 ];
