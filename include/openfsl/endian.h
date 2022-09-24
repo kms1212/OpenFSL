@@ -16,7 +16,6 @@ Check the full BSD-3-Clause license for more details.
 
 #include <cstdint>
 
-#include "openfsl/types.h"
 #include "openfsl/error.h"
 #include "openfsl/symbols.h"
 

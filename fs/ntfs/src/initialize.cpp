@@ -7,9 +7,10 @@ Check the full BSD-3-Clause license for more details.
 
 */
 
-#include "openfsl/ntfs/fs_ntfs.h"
+#include "openfsl/charset.h"
+#include "openfsl/utils.h"
 
-extern void __hexdump(const uint8_t* p, size_t offset, size_t len);
+#include "openfsl/ntfs/fs_ntfs.h"
 
 error_t openfsl::NTFS::initialize() {
     error_t result = FileSystem::initialize();
@@ -95,7 +96,7 @@ error_t openfsl::NTFS::initialize() {
                             std::memcpy(fileNameBuffer, &attrdata->fnNameStart, attrdata->fnNameLength * sizeof(char16_t));
 
                             std::cout << "================== $FILE_NAME ===================\n";
-                            std::cout << "File Name: " << __ucs2ToU8(std::u16string(fileNameBuffer)) << "\n";
+                            std::cout << "File Name: " << ucs2ToU8(std::u16string(fileNameBuffer)) << "\n";
                             std::cout << "File Size: " << attrdata->fnFileSize << "\n";
                             std::cout << "=================================================\n\n";
 
@@ -109,7 +110,9 @@ error_t openfsl::NTFS::initialize() {
                                     attrheader->mftContentOffset);
 
                             std::cout << "================= $DATA resident ================\n";
+#ifdef DEBUG
                             __hexdump(attrdata, attrheader->mftContentOffset, attrheader->mftContentLength);
+#endif
                             std::cout << "=================================================\n\n"; 
                             break;
                         }

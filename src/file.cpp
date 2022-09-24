@@ -9,6 +9,6 @@ Check the full BSD-3-Clause license for more details.
 
 #include "openfsl/file.h"
 
-openfsl::FSL_File::FSL_File() {}
+openfsl::File::File() {}
 
-openfsl::FSL_File::~FSL_File() {}
+openfsl::File::~File() {}

@@ -182,7 +182,7 @@ bool openfsl::GUID::operator!= (const openfsl::GUID& tgt) const {
         (this->guid5 == tgt.guid5));
 }
 
-size_t openfsl::GUIDHash::operator()(const openfsl::GUID& guid) const {
+size_t std::hash<openfsl::GUID>::operator()(const openfsl::GUID& guid) const {
     std::string str;
     openfsl::GUID* tmp = new openfsl::GUID(guid);
     tmp->toString(&str, false);

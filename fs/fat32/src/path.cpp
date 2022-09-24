@@ -7,12 +7,12 @@ Check the full BSD-3-Clause license for more details.
 
 */
 
-#include "openfsl/fslutils.h"
+#include "openfsl/utils.h"
 
-#include "openfsl/fat32/fs_fat32.h"
+#include "openfsl/fat32/fat32.h"
 
 std::pair<std::string, std::string>
-    openfsl::FAT32::__separateFileName(const std::string filepath) {
+    openfsl::fat32::FAT32::__separateFileName(const std::string filepath) {
     size_t lastPathSeparator = filepath.find_last_of(pathSeparator);
     std::string fileName;
     std::string fileDirectory;
@@ -28,7 +28,7 @@ std::pair<std::string, std::string>
     return std::make_pair(fileDirectory, fileName);
 }
 
-std::string openfsl::FAT32::convertToAbsolutePath(
+std::string openfsl::fat32::FAT32::convertToAbsolutePath(
     const std::string relativePath) {
     std::vector<std::string> v_absolutedir;
     std::vector<std::string> v_relativedir;

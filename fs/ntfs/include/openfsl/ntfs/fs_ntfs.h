@@ -86,23 +86,6 @@ class NTFS : public FileSystem<BlockDevice> {
     ///////////////////////////////////////////////////////////////////////
 
  private:
-    // Class utilities ////////////////////////////////////////////////////
-    /**
-     * @brief UCS-2 string to UTF-8 string
-     * @details Converts UCS-2 u16string to UTF-8 string.
-     * @param src: source string
-     * @return std::string: converted string
-     */
-    std::string __ucs2ToU8(const std::u16string src);
-
-    /**
-     * @brief UTF-8 string to UCS-2 string
-     * @details Converts UTF-8 string to UCS-2 u16string.
-     * @param src: source string
-     * @return std::u16string: converted string
-     */
-    std::u16string __u8ToUCS2(const std::string src);
-    ///////////////////////////////////////////////////////////////////////
     
 
     // Cluster Run Tools //////////////////////////////////////////////////

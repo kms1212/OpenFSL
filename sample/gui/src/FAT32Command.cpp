@@ -12,7 +12,7 @@ Check the full BSD-3-Clause license for more details.
 #include "FAT32Command.h"
 
 error_t FAT32Command::Initialize(openfsl::DiskStructure diskStructure, size_t selectIndex) {
-    fat32 = new openfsl::FAT32(fbd, "", "/", "::");
+    fat32 = new openfsl::fat32::FAT32(fbd, "", "/", "::");
     error_t result;
     
     if (diskStructure.partTable == openfsl::PartitionTableType::MBR) {
@@ -116,7 +116,7 @@ error_t FAT32Command::GetFileInformation() {
 }
 
 error_t FAT32Command::ListDirectoryChild(std::vector<FileInfo>* outList, const std::string path) {
-    std::vector<openfsl::FAT32::FileInfo> buf;
+    std::vector<openfsl::fat32::FAT32::FileInfo> buf;
     outList->clear();
 
     error_t result = fat32->listDirectory(&buf, path);
@@ -125,16 +125,16 @@ error_t FAT32Command::ListDirectoryChild(std::vector<FileInfo>* outList, const s
         return result;
     }
 
-    for (openfsl::FAT32::FileInfo file : buf) {
+    for (openfsl::fat32::FAT32::FileInfo file : buf) {
         FileInfo outFile;
         outFile.fileName = file.fileName;
         outFile.fileCreateTime = file.fileCreateTime;
         outFile.fileAccessTime = file.fileAccessTime;
         outFile.fileModTime = file.fileModTime;
         outFile.fileSize = file.fileSize;
-        if ((file.fileAttr & openfsl::FAT32::FileAttribute::Archive) != (openfsl::FAT32::FileAttribute)0) {
+        if ((file.fileAttr & openfsl::fat32::FAT32::FileAttribute::Archive) != (openfsl::fat32::FAT32::FileAttribute)0) {
             outFile.fileType = FileType::File;
-        } else if ((file.fileAttr & openfsl::FAT32::FileAttribute::Directory) != (openfsl::FAT32::FileAttribute)0) {
+        } else if ((file.fileAttr & openfsl::fat32::FAT32::FileAttribute::Directory) != (openfsl::fat32::FAT32::FileAttribute)0) {
             outFile.fileType = FileType::Directory;
         }
 
@@ -149,7 +149,7 @@ error_t FAT32Command::Search() {
     return OPENFSL_SUCCESS;
 }
 
-openfsl::FAT32* FAT32Command::getFileSystem() {
+openfsl::fat32::FAT32* FAT32Command::getFileSystem() {
     return fat32;
 }
 

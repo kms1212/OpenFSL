@@ -7,12 +7,12 @@ Check the full BSD-3-Clause license for more details.
 
 */
 
-#include "openfsl/fslutils.h"
+#include "openfsl/utils.h"
 
-#include "openfsl/fat32/fs_fat32.h"
+#include "openfsl/fat32/fat32.h"
 
-error_t openfsl::FAT32::__chdir(
-    const std::string path, std::vector<std::string>* subdir) {
+error_t openfsl::fat32::FAT32::__chdir(const std::string path,
+                                       std::vector<std::string>* subdir) {
     if (subdir == nullptr) {  // If first call of recursion
         if (pathSeparator.find(path.at(0)) != std::string::npos) {
             currentPath = rootSymbol;

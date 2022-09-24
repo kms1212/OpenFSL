@@ -19,17 +19,17 @@ Check the full BSD-3-Clause license for more details.
 class FAT32FileCommand : public FileCommand {
  private:
     FAT32Command* fs;
-    openfsl::FAT32::FILE* file;
+    openfsl::fat32::File* file;
 
  public:
-    FAT32FileCommand(FAT32Command* fs, const std::string path, openfsl::FSL_OpenMode mode);
+    FAT32FileCommand(FAT32Command* fs, const std::string path, openfsl::OpenMode mode);
 
     ~FAT32FileCommand();
 
     error_t read(void* buf, const size_t bs, const size_t count);
     error_t write(const void* buffer, const size_t bs, const size_t count);
-    error_t seekp(const size_t location, const openfsl::FSL_SeekMode whence);
-    error_t seekg(const size_t location, const openfsl::FSL_SeekMode whence);
+    error_t seekp(const size_t location, const openfsl::SeekMode whence);
+    error_t seekg(const size_t location, const openfsl::SeekMode whence);
     size_t tellp();
     size_t tellg();
     error_t flush();

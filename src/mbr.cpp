@@ -97,9 +97,10 @@ error_t openfsl::MBR::getPartitionInfo(
             CHS chs;
             memcpy(reinterpret_cast<uint8_t*>(&chs),
                 &partitionList[i].entryStartingCHSAddr, 3);
-            temp.partOffset = convertCHSToLBA(chs,
-                bd->getDiskParameter().sectorPerTrack,
-                bd->getDiskParameter().headPerCylinder);
+            temp.partOffset = Result<lba48_t>::tryResult(
+                convertCHSToLBA(chs,
+                    bd->getDiskParameter().sectorPerTrack,
+                    bd->getDiskParameter().headPerCylinder));
         } else {  // LBA
             temp.partOffset = partitionList[i].entryStartingLBAAddr;
         }
@@ -108,9 +109,10 @@ error_t openfsl::MBR::getPartitionInfo(
             CHS chs;
             memcpy(reinterpret_cast<uint8_t*>(&chs),
                 &partitionList[i].entryStartingCHSAddr, 3);
-            lba48_t endlba = convertCHSToLBA(chs,
-                bd->getDiskParameter().sectorPerTrack,
-                bd->getDiskParameter().headPerCylinder);
+            lba48_t endlba = Result<lba48_t>::tryResult(
+                convertCHSToLBA(chs,
+                    bd->getDiskParameter().sectorPerTrack,
+                    bd->getDiskParameter().headPerCylinder));
 
             temp.partSize = endlba - temp.partOffset;
         } else {  // LBA

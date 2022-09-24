@@ -7,9 +7,9 @@ Check the full BSD-3-Clause license for more details.
 
 */
 
-#include "openfsl/iso9660/fs_iso9660.h"
+#include "openfsl/utils.h"
 
-extern void __hexdump(const uint8_t* p, size_t offset, size_t len);
+#include "openfsl/iso9660/fs_iso9660.h"
 
 error_t openfsl::ISO9660::initialize() {
     if (iod->getDiskParameter().bytesPerSector != 2048) {
@@ -21,7 +21,9 @@ error_t openfsl::ISO9660::initialize() {
     if (result)
         return result;
 
+#ifdef DEBUG
     __hexdump(reinterpret_cast<uint8_t*>(&vd), 0, 2048);
+#endif
 
     if (memcmp(vd.descSignature, "CD001", 5) != 0)
         return OPENFSL_ERROR_INVALID_SIGNATURE;

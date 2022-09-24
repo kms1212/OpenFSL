@@ -22,7 +22,6 @@ Check the full BSD-3-Clause license for more details.
 
 #include "openfsl/error.h"
 #include "openfsl/macros.h"
-#include "openfsl/types.h"
 #include "openfsl/sector.h"
 
 namespace openfsl {

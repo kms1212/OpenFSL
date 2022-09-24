@@ -7,15 +7,13 @@ Check the full BSD-3-Clause license for more details.
 
 */
 
-#include "openfsl/fslutils.h"
+#include "openfsl/utils.h"
 #include "openfsl/bootcode.h"
 
-#include "openfsl/fat32/fs_fat32.h"
+#include "openfsl/fat32/fat32.h"
 
-extern void __hexdump(const uint8_t* p, size_t offset, size_t len);
-
-openfsl::FAT32::FormatOptions
-    openfsl::FAT32::getDefaultFormatOptions(const lba48_t fsSize) {
+openfsl::fat32::FormatOptions
+    openfsl::fat32::getDefaultFormatOptions(const lba48_t fsSize) {
     FormatOptions ret;
     ret.volumeLabel = "NO NAME";
 
@@ -61,8 +59,10 @@ openfsl::FAT32::FormatOptions
     return ret;
 }
 
-error_t openfsl::FAT32::format(const lba48_t offset, const lba48_t size,
-    const FAT32::FormatOptions formatOptions, const bool fastFormat) {
+error_t openfsl::fat32::FAT32::format(const lba48_t offset,
+                                      const lba48_t size,
+                                      const FormatOptions formatOptions,
+                                      const bool fastFormat) {
     BPBSector bpb;
     FSINFOSector fsinfo;
 
@@ -151,9 +151,6 @@ error_t openfsl::FAT32::format(const lba48_t offset, const lba48_t size,
         fsinfo.fsinfoNextFree = 2;
     else
         fsinfo.fsinfoNextFree = 0;
-
-    __hexdump(reinterpret_cast<uint8_t*>(&bpb), 0, 512);
-    __hexdump(reinterpret_cast<uint8_t*>(&fsinfo), 0, 512);
 
     error_t result;
 

@@ -7,11 +7,11 @@ Check the full BSD-3-Clause license for more details.
 
 */
 
-#include "openfsl/fat32/fs_fat32.h"
+#include "openfsl/fat32/fat32.h"
 
 std::pair<error_t, bool>
-    openfsl::FAT32::__checkEmpty(
-            const std::string path, const std::string dirname) {
+    openfsl::fat32::FAT32::__checkEmpty(const std::string path,
+                                        const std::string dirname) {
     bool result = true;
 
     error_t errcode = __forEachEntry([&](FileInfo fileInfo) {

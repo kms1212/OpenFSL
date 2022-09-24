@@ -125,7 +125,8 @@ int main(int argc, char** argv) {
         chs.cyl = 5;
         chs.head = 6;
         chs.sect = 4;
-        openfsl::lba48_t lba = openfsl::convertCHSToLBA(chs, 63, 16);
+        openfsl::lba48_t lba = openfsl::Result<openfsl::lba48_t>::
+            tryResult(openfsl::convertCHSToLBA(chs, 63, 16));
         if (lba == 5421) {
             std::cout << "Pass\n";
         } else {
@@ -133,7 +134,8 @@ int main(int argc, char** argv) {
             return 1;
         }
 
-        convertLBAToCHS(lba, &chs, 63, 16);
+        chs = openfsl::Result<openfsl::CHS>::
+            tryResult(openfsl::convertLBAToCHS(lba, 63, 16));
         if ((chs.cyl == 5) && (chs.head == 6) && (chs.sect == 4)) {
             std::cout << "Pass\n";
         } else {

@@ -17,8 +17,9 @@ extern "C" {
 
 extern void __hexdump(const uint8_t* p, size_t offset, size_t len);
 
-std::unordered_map<openfsl::GUID, openfsl::GPT::PartitionType, openfsl::GUIDHash>
+std::unordered_map<openfsl::GUID, openfsl::GPT::PartitionType>
     openfsl::partitionGuidMap = {
+    // GUID                                                             PartitionType
     {openfsl::GUID(0, 0, 0, 0, 0),                                      openfsl::GPT::PartitionType::Unused},                // NOLINT
     {openfsl::GUID(0x024DEE41, 0x33E7, 0x11D3, 0x9D69, 0x0008C781F39F), openfsl::GPT::PartitionType::MBRPartitionScheme},    // NOLINT
     {openfsl::GUID(0xC12A7328, 0xF81F, 0x11D2, 0xBA4B, 0x00A0C93EC93B), openfsl::GPT::PartitionType::EFISystemPartition},    // NOLINT
@@ -180,7 +181,7 @@ error_t openfsl::GPT::getPartitionInfo(
         if (partitionTypeGuid == GUID()) {
             break;
         }
-        std::unordered_map<openfsl::GUID, PartitionType, openfsl::GUIDHash>::iterator it =
+        std::unordered_map<openfsl::GUID, PartitionType>::iterator it =
             partitionGuidMap.find(partitionTypeGuid);
 
         PartitionInfo pinfo;

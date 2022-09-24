@@ -21,10 +21,10 @@ Check the full BSD-3-Clause license for more details.
 #include <codecvt>
 #include <bitset>
 
-#include "openfsl/fslutils.h"
+#include "openfsl/utils.h"
 #include "openfsl/fileblockdevice.h"
 #include "openfsl/sector.h"
-#include "openfsl/fat32/fs_fat32.h"
+#include "openfsl/fat32/fat32.h"
 
 int readCount = 0;
 int writeCount = 0;
@@ -79,7 +79,7 @@ int main(int argc, char** argv) {
 
     bd.initialize(imageFileName, openfsl::FileBlockDevice::OpenMode::RW);
 
-    openfsl::FAT32 fat32(&bd, "", "\\/");
+    openfsl::fat32::FAT32 fat32(&bd, "", "\\/");
 
     error_t result = fat32.initialize();
     if (result) {
@@ -165,7 +165,7 @@ int main(int argc, char** argv) {
         int result_temp;
         fat32.changeDirectory(listDirChecklistDir.at(j));
 
-        std::vector<openfsl::FAT32::FileInfo> buf;
+        std::vector<openfsl::fat32::FileInfo> buf;
         fat32.listDirectory(&buf);
 
         result_temp = buf.size() != listDirChecklist.at(j).size();
@@ -214,7 +214,7 @@ int main(int argc, char** argv) {
     finfoChecklist.push_back("::/lfnfilename4.txt");
 
     for (size_t i = 0; i < finfoChecklist.size(); i++) {
-        std::pair<error_t, openfsl::FAT32::FileInfo> fileInfo =
+        std::pair<error_t, openfsl::fat32::FileInfo> fileInfo =
             fat32.getEntryInfo(finfoChecklist.at(i));
 
         if (fileInfo.first) {
@@ -281,17 +281,17 @@ int main(int argc, char** argv) {
 
     for (size_t i = 0; i < fileChecklist.size(); i++) {
         std::cout << "Filename: " << finfoChecklist.at(i) << "\n";
-        openfsl::FAT32::FILE file(&fat32);
-        if (file.open(fileChecklist.at(i), openfsl::FSL_OpenMode::Read)) {
+        openfsl::fat32::File file(&fat32);
+        if (file.open(fileChecklist.at(i), openfsl::OpenMode::Read)) {
             result++;
             continue;
         }
 
         std::cout << "openFile(\"" << finfoChecklist.at(i) << "\")\n";
 
-        file.seekg(0, openfsl::FSL_SeekMode::SeekEnd);
+        file.seekg(0, openfsl::SeekMode::SeekEnd);
         size_t fileSize = file.tellg();
-        file.seekg(0, openfsl::FSL_SeekMode::SeekSet);
+        file.seekg(0, openfsl::SeekMode::SeekSet);
 
         char* buf = new char[fileSize + 1]();
         memset(buf, 0, fileSize + 1);
@@ -311,7 +311,7 @@ int main(int argc, char** argv) {
 
         // Try to read file with seek
         memset(buf, 0, fileSize + 1);
-        file.seekg(14, openfsl::FSL_SeekMode::SeekSet);
+        file.seekg(14, openfsl::SeekMode::SeekSet);
         file.read(reinterpret_cast<uint8_t*>(buf), 1, fileSize - 14);
 
         buf_s = std::string(buf);
@@ -326,7 +326,7 @@ int main(int argc, char** argv) {
 
         // Try to read more than the size of file.
         memset(buf, 0, fileSize + 1);
-        file.seekg(14, openfsl::FSL_SeekMode::SeekSet);
+        file.seekg(14, openfsl::SeekMode::SeekSet);
         size_t ret = file.read(reinterpret_cast<uint8_t*>(buf), 1, fileSize);
 
         if (ret != fileSize - 14)

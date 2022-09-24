@@ -20,14 +20,14 @@ protected:
     FSCommand* fs;
 
 public:
-    FileCommand(FSCommand* fs, const std::string path, openfsl::FSL_OpenMode mode);
+    FileCommand(FSCommand* fs, const std::string path, openfsl::OpenMode mode);
 
     virtual ~FileCommand();
 
     virtual error_t read(void* buf, const size_t bs, const size_t count) = 0;
     virtual error_t write(const void* buffer, const size_t bs, const size_t count) = 0;
-    virtual error_t seekp(const size_t location, const openfsl::FSL_SeekMode whence) = 0;
-    virtual error_t seekg(const size_t location, const openfsl::FSL_SeekMode whence) = 0;
+    virtual error_t seekp(const size_t location, const openfsl::SeekMode whence) = 0;
+    virtual error_t seekg(const size_t location, const openfsl::SeekMode whence) = 0;
     virtual size_t tellp() = 0;
     virtual size_t tellg() = 0;
     virtual error_t flush() = 0;

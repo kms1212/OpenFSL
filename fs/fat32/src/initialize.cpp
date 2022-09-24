@@ -7,9 +7,9 @@ Check the full BSD-3-Clause license for more details.
 
 */
 
-#include "openfsl/fat32/fs_fat32.h"
+#include "openfsl/fat32/fat32.h"
 
-error_t openfsl::FAT32::initialize() {
+error_t openfsl::fat32::FAT32::initialize() {
     error_t result = 0;
 
     fsOperationMutex.lock();

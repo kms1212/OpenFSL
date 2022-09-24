@@ -7,9 +7,9 @@ Check the full BSD-3-Clause license for more details.
 
 */
 
-#include "openfsl/fat32/fs_fat32.h"
+#include "openfsl/fat32/fat32.h"
 
-uint8_t openfsl::FAT32::__chksumSFN(const uint8_t* src) {
+uint8_t openfsl::fat32::FAT32::__chksumSFN(const uint8_t* src) {
     uint8_t ret = 0;
 
     for (int i = 11; i > 0; i--) {

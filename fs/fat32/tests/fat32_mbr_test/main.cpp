@@ -20,12 +20,12 @@ Check the full BSD-3-Clause license for more details.
 #include <codecvt>
 #include <bitset>
 
-#include "openfsl/fslutils.h"
+#include "openfsl/utils.h"
 #include "openfsl/fileblockdevice.h"
 #include "openfsl/sector.h"
 #include "openfsl/mbr.h"
 #include "openfsl/filesystem.h"
-#include "openfsl/fat32/fs_fat32.h"
+#include "openfsl/fat32/fat32.h"
 
 int readCount = 0;
 int writeCount = 0;
@@ -88,7 +88,7 @@ int main(int argc, char** argv) {
         return result;
     }
 
-    openfsl::FAT32 fat32(&bd, "", "\\/");
+    openfsl::fat32::FAT32 fat32(&bd, "", "\\/");
 
     std::vector<openfsl::MBR::PartitionInfo> partitionInfo;
     result = mbr.getPartitionInfo(&partitionInfo);
@@ -105,7 +105,7 @@ int main(int argc, char** argv) {
 
     fat32.enableCache(512);
 
-    std::vector<openfsl::FAT32::FileInfo> buf;
+    std::vector<openfsl::fat32::FileInfo> buf;
     fat32.listDirectory(&buf);
 
     for (size_t i = 0; i < buf.size(); i++) {

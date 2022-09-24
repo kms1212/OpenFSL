@@ -189,11 +189,6 @@ if(NOT NO_BUILD)
                             -DSYSTEM_NAME=${CMAKE_SYSTEM_NAME}
                             -P "${CMAKE_SOURCE_DIR}/cmakeScript/ConfigureVersion.cmake")
     include(${CMAKE_BINARY_DIR}/Version.cmake)
-                   
-    #########################
-    # BUILD UTILITIES
-    #########################
-    add_subdirectory(buildutils)
     
     #########################
     # BUILD BOOT CODES
@@ -225,20 +220,18 @@ if(NOT NO_BUILD)
     # CONVERT BINARY TO C
     #########################
     add_custom_command(
-                      OUTPUT "${CMAKE_SOURCE_DIR}/include/openfsl/bootcode.h"
+                      OUTPUT "${CMAKE_SOURCE_DIR}/src/bootcode.c"
                       COMMAND "${Python3_EXECUTABLE}"
-                              "${CMAKE_SOURCE_DIR}/buildutils/bintoc/bintoc.py"
+                              "${CMAKE_SOURCE_DIR}/buildutils/bintoc.py"
                               "--header=${CMAKE_SOURCE_DIR}/etc/licenseheader.txt"
-                              "--incfile"
-                              "--incguard=OPENFSL_BOOTCODE_H_"
-                              "${CMAKE_SOURCE_DIR}/include/openfsl/bootcode.h"
+                              "${CMAKE_SOURCE_DIR}/src/bootcode.c"
                               "${CMAKE_BINARY_DIR}/boot/x86/mbrboot.bin"
                               "${CMAKE_BINARY_DIR}/boot/x86/vbrboot.bin"
                       DEPENDS "${CMAKE_BINARY_DIR}/boot/x86/mbrboot.bin"
                               "${CMAKE_BINARY_DIR}/boot/x86/vbrboot.bin"
                       COMMENT "Converting boot record binary to C source")
                       
-    add_custom_target(bootcode DEPENDS "${CMAKE_SOURCE_DIR}/include/openfsl/bootcode.h")
+    add_custom_target(bootcode DEPENDS "${CMAKE_SOURCE_DIR}/src/bootcode.c")
 
     #########################
     # BASE LIBRARY DEPENDENCIES
@@ -285,7 +278,7 @@ if(NOT NO_BUILD)
     #########################
     # BUILD BASE LIBRARY
     #########################
-    file(GLOB LIBRARY_SOURCES "${CMAKE_SOURCE_DIR}/src/*")
+    file(GLOB LIBRARY_SOURCES "${CMAKE_SOURCE_DIR}/src/*" "${CMAKE_SOURCE_DIR}/src/bootcode.c")
     add_library(${PROJECT_TARGET} 
                 ${LIBRARY_TYPE} ${LIBRARY_SOURCES})
     target_include_directories(${PROJECT_TARGET} PUBLIC 

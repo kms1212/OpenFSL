@@ -32,7 +32,7 @@ namespace openfsl {
  * Noreplace | Fail if file exists. (WRITE enabled)
  * Binary    | Binary mode
  */
-enum class FSL_OpenMode : uint16_t {
+enum class OpenMode : uint16_t {
     Read = 0x0001,
     Write = 0x0002,
     Append = 0x0006,  // 0x4 + 0x2
@@ -42,11 +42,11 @@ enum class FSL_OpenMode : uint16_t {
     Binary = 0x0040
 };
 
-inline FSL_OpenMode operator| (FSL_OpenMode a, FSL_OpenMode b)
-{ return (FSL_OpenMode)((uint16_t)a | (uint16_t)b); }
+inline OpenMode operator| (OpenMode a, OpenMode b)
+{ return (OpenMode)((uint16_t)a | (uint16_t)b); }
 
-inline FSL_OpenMode operator& (FSL_OpenMode a, FSL_OpenMode b)
-{ return (FSL_OpenMode)((uint16_t)a & (uint16_t)b); }
+inline OpenMode operator& (OpenMode a, OpenMode b)
+{ return (OpenMode)((uint16_t)a & (uint16_t)b); }
 
 /**
  * @brief File seek
@@ -58,7 +58,7 @@ inline FSL_OpenMode operator& (FSL_OpenMode a, FSL_OpenMode b)
  * SeekCur | Seek from cursor
  * SeekEnd | Seek from end of file
  */
-enum class FSL_SeekMode{
+enum class SeekMode{
     SeekSet,
     SeekCur,
     SeekEnd
@@ -70,21 +70,21 @@ enum class FSL_SeekMode{
  * @details Filesystem call wrapper for file control.
  * @author kms1212
  */
-class FSL_File {
+class File {
  protected:
-    FSL_OpenMode openMode;
+    OpenMode openMode;
 
     size_t readPointer = 0;
     size_t writePointer = 0;
 
  public:
-    FSL_File();
-    virtual ~FSL_File() = 0;
+    File();
+    virtual ~File() = 0;
 
     virtual int seekp(
-        const size_t offset, const FSL_SeekMode whence) = 0;
+        const size_t offset, const SeekMode whence) = 0;
     virtual int seekg(
-        const size_t offset, const FSL_SeekMode whence) = 0;
+        const size_t offset, const SeekMode whence) = 0;
     virtual size_t tellp() = 0;
     virtual size_t tellg() = 0;
     virtual size_t read(

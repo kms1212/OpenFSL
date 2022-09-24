@@ -22,7 +22,7 @@ Check the full BSD-3-Clause license for more details.
 
 #include "openfsl/detectstruct.h"
 #include "openfsl/filesystem.h"
-#include "openfsl/fslutils.h"
+#include "openfsl/utils.h"
 #include "openfsl/error.h"
 #include "openfsl/endian.h"
 

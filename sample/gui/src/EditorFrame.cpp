@@ -22,16 +22,16 @@ EditorFrame::EditorFrame(const wxPoint& pos, const wxSize& size, FSCommand* fsCo
     this->fsCommand = fsCommand;
 
     if (dynamic_cast<FAT32Command*>(fsCommand) != nullptr) {
-        this->fileCommand = new FAT32FileCommand(dynamic_cast<FAT32Command*>(fsCommand), path, openfsl::FSL_OpenMode::Read | openfsl::FSL_OpenMode::Write);
+        this->fileCommand = new FAT32FileCommand(dynamic_cast<FAT32Command*>(fsCommand), path, openfsl::OpenMode::Read | openfsl::OpenMode::Write);
     } else {
         std::cout << "Error\n";
     }
 
     InitializeComponents();
 
-    error_t result = this->fileCommand->seekg(0, openfsl::FSL_SeekMode::SeekEnd);
+    error_t result = this->fileCommand->seekg(0, openfsl::SeekMode::SeekEnd);
     size_t fileSize = this->fileCommand->tellg();
-    result = this->fileCommand->seekg(0, openfsl::FSL_SeekMode::SeekSet);
+    result = this->fileCommand->seekg(0, openfsl::SeekMode::SeekSet);
 
     char* buf = new char[fileSize + 1]();
     this->fileCommand->read(buf, fileSize, 1);

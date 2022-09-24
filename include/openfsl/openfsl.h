@@ -37,11 +37,13 @@ Check the full BSD-3-Clause license for more details.
 
 #include "openfsl/endian.h"
 #include "openfsl/fsltime.h"
-#include "openfsl/fslutils.h"
+#include "openfsl/utils.h"
 
 #include "openfsl/macros.h"
 #include "openfsl/symbols.h"
 #include "openfsl/types.h"
+#include "openfsl/result.h"
 #include "openfsl/error.h"
+#include "openfsl/nullable.h"
 
 #endif  // OPENFSL_OPENFSL_H_

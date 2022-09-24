@@ -16,6 +16,9 @@ Check the full BSD-3-Clause license for more details.
 
 #include <cstdint>
 
+#include "openfsl/result.h"
+#include "openfsl/error.h"
+
 namespace openfsl {
 #pragma pack(push, 1)
 typedef struct CHS {
@@ -27,6 +30,12 @@ typedef struct CHS {
 #pragma pack(pop)
 
 typedef uint64_t lba48_t;
+
+Result<lba48_t> convertCHSToLBA(
+    const CHS chs, const size_t sectPerTra, const size_t headPerCyl);
+
+Result<CHS> convertLBAToCHS(const lba48_t lba, const uint8_t sectPerTra,
+    const uint8_t headPerCyl);
 }  // namespace openfsl
 
 #endif  // OPENFSL_TYPES_H_

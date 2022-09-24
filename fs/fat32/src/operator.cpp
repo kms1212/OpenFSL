@@ -7,4 +7,4 @@ Check the full BSD-3-Clause license for more details.
 
 */
 
-#include "openfsl/fat32/fs_fat32.h"
+#include "openfsl/fat32/fat32.h"

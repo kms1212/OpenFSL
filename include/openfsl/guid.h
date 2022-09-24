@@ -81,11 +81,14 @@ class GUID {
     bool operator== (const GUID& tgt) const;
     bool operator!= (const GUID& tgt) const;
 };
-
-struct GUIDHash {
-    size_t operator()(const GUID& guid) const;
-};
 }  // namespace openfsl
+
+namespace std {
+template <>
+struct hash<openfsl::GUID> {
+    size_t operator()(const openfsl::GUID& guid) const;
+};
+}  // namespace std
 
 
 #endif  // OPENFSL_GUID_H_

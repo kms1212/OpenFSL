@@ -9,9 +9,9 @@ Check the full BSD-3-Clause license for more details.
 
 #include "FAT32FileCommand.h"
 
-FAT32FileCommand::FAT32FileCommand(FAT32Command* fs, const std::string path, openfsl::FSL_OpenMode mode) : FileCommand(fs, path, mode) {
+FAT32FileCommand::FAT32FileCommand(FAT32Command* fs, const std::string path, openfsl::OpenMode mode) : FileCommand(fs, path, mode) {
     this->fs = fs;
-    file = new openfsl::FAT32::FILE(fs->getFileSystem());
+    file = new openfsl::fat32::File(fs->getFileSystem());
     file->open(path, mode);
 }
 
@@ -28,11 +28,11 @@ error_t FAT32FileCommand::write(const void* buf, const size_t bs, const size_t c
     return file->write(buf, bs, count);
 }
 
-error_t FAT32FileCommand::seekp(const size_t location, const openfsl::FSL_SeekMode whence) {
+error_t FAT32FileCommand::seekp(const size_t location, const openfsl::SeekMode whence) {
     return file->seekp(location, whence);
 }
 
-error_t FAT32FileCommand::seekg(const size_t location, const openfsl::FSL_SeekMode whence) {
+error_t FAT32FileCommand::seekg(const size_t location, const openfsl::SeekMode whence) {
     return file->seekg(location, whence);
 }
 

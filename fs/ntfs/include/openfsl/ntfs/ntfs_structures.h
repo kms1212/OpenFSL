@@ -14,6 +14,7 @@ Check the full BSD-3-Clause license for more details.
 #error This file has to be included by fs_ntfs.h.
 #endif  // FS_NTFS_H_INTERNAL_
 
+ private:
     /**
      * @brief NTFS VBR
      * @details

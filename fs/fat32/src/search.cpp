@@ -9,11 +9,11 @@ Check the full BSD-3-Clause license for more details.
 
 #include <regex>  // NOLINT
 
-#include "openfsl/fslutils.h"
+#include "openfsl/utils.h"
 
-#include "openfsl/fat32/fs_fat32.h"
+#include "openfsl/fat32/fat32.h"
 
-error_t openfsl::FAT32::__search(
+error_t openfsl::fat32::FAT32::__search(
     std::vector<std::pair<std::string, FileInfo>>* buf,
     const std::string path, const std::string regex,
     const FileAttribute attr, const bool recurse,
@@ -54,7 +54,7 @@ error_t openfsl::FAT32::__search(
                 buf->push_back(std::make_pair(currentPath, fileInfo));
             }
             if (((fileInfo.fileAttr &
-                openfsl::FAT32::FileAttribute::Directory) !=
+                openfsl::fat32::FileAttribute::Directory) !=
                 (FileAttribute)0) &&
                 recurse &&
                 !((fileInfo.fileName == ".") || (fileInfo.fileName == ".."))) {
@@ -79,13 +79,13 @@ error_t openfsl::FAT32::__search(
     return 0;
 }
 
-error_t openfsl::FAT32::__search(std::vector<FileInfo>* buf,
+error_t openfsl::fat32::FAT32::__search(std::vector<FileInfo>* buf,
     const std::string path, const std::string regex,
     const FileAttribute attr) {
     return 0;
 }
 
-error_t openfsl::FAT32::__search(std::vector<FileInfo>* buf,
+error_t openfsl::fat32::FAT32::__search(std::vector<FileInfo>* buf,
     const cluster_t cluster, const std::string regex,
     const FileAttribute attr) {
     return 0;

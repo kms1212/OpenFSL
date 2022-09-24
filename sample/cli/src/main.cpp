@@ -10,7 +10,7 @@ Check the full BSD-3-Clause license for more details.
 #include "header.h"
 
 #ifdef FAT32_BUILD
-#include <openfsl/fat32/fs_fat32.h>
+#include <openfsl/fat32/fat32.h>
 #endif
 
 int main(int argc, char** argv) {
@@ -74,7 +74,7 @@ int main(int argc, char** argv) {
         ((openfsl::MemBlockDevice*)bd)->initialize(sectorSize);
 
         std::cout << "Formatting to FAT32...";
-        openfsl::FAT32 fat32(bd);
+        openfsl::fat32::FAT32 fat32(bd);
 
         openfsl::lba48_t fsSize;
         bool f_f;
@@ -84,8 +84,8 @@ int main(int argc, char** argv) {
         std::cout << "Fast format?: ";
         std::cin >> f_f;
 
-        openfsl::FAT32::FormatOptions options =
-            fat32.getDefaultFormatOptions(fsSize);
+        openfsl::fat32::FormatOptions options =
+            openfsl::fat32::getDefaultFormatOptions(fsSize);
 
         result = fat32.format(0, fsSize, options, f_f);
         if (result)
@@ -222,7 +222,7 @@ int main(int argc, char** argv) {
             std::cerr << "File system is not supported.\n";
         } else {  // fat32 format
 #ifdef FAT32_BUILD
-            openfsl::FAT32 fat32(bd);
+            openfsl::fat32::FAT32 fat32(bd);
 
             openfsl::lba48_t fsSize;
             bool f_f;
@@ -232,8 +232,8 @@ int main(int argc, char** argv) {
             std::cout << "Fast format?: ";
             std::cin >> f_f;
 
-            openfsl::FAT32::FormatOptions options =
-                fat32.getDefaultFormatOptions(fsSize);
+            openfsl::fat32::FormatOptions options =
+                openfsl::fat32::getDefaultFormatOptions(fsSize);
 
             result = fat32.format(0, fsSize, options, f_f);
             if (result)

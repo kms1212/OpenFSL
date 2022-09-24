@@ -24,7 +24,7 @@ Check the full BSD-3-Clause license for more details.
 
 #include "openfsl/detectstruct.h"
 #include "openfsl/filesystem.h"
-#include "openfsl/fslutils.h"
+#include "openfsl/utils.h"
 #include "openfsl/error.h"
 #include "openfsl/mbr.h"
 #include "openfsl/guid.h"
@@ -228,7 +228,7 @@ class GPT {
     error_t getPartitionInfo(std::vector<PartitionInfo>* buf);
 };
 
-extern std::unordered_map<GUID, openfsl::GPT::PartitionType, GUIDHash> partitionGuidMap;
+extern std::unordered_map<GUID, openfsl::GPT::PartitionType> partitionGuidMap;
 }  // namespace openfsl
 
 #endif  // OPENFSL_GPT_H_

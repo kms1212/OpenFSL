@@ -7,9 +7,9 @@ Check the full BSD-3-Clause license for more details.
 
 */
 
-#include "openfsl/fat32/fs_fat32.h"
+#include "openfsl/fat32/fat32.h"
 
-error_t openfsl::FAT32::__listDir(std::vector<FAT32::FileInfo>* buf,
+error_t openfsl::fat32::FAT32::__listDir(std::vector<FileInfo>* buf,
     const std::string path, const FileAttribute searchAttr) {
     std::string tempPath = currentPath;
     uint32_t tempCluster = currentCluster;
@@ -33,7 +33,7 @@ error_t openfsl::FAT32::__listDir(std::vector<FAT32::FileInfo>* buf,
     return result;
 }
 
-error_t openfsl::FAT32::__listDir(std::vector<FAT32::FileInfo>* buf,
+error_t openfsl::fat32::FAT32::__listDir(std::vector<FileInfo>* buf,
     const uint32_t cluster, const FileAttribute searchAttr) {
     std::string tempPath = currentPath;
     uint32_t tempCluster = currentCluster;
@@ -48,7 +48,7 @@ error_t openfsl::FAT32::__listDir(std::vector<FAT32::FileInfo>* buf,
     return result;
 }
 
-int openfsl::FAT32::__listDir(std::vector<FAT32::FileInfo>* buf,
+int openfsl::fat32::FAT32::__listDir(std::vector<FileInfo>* buf,
     const FileAttribute searchAttr) {
     buf->clear();
 

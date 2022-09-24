@@ -9,7 +9,7 @@ Check the full BSD-3-Clause license for more details.
 
 #ifdef FAT32_BUILD
 
-#include <openfsl/fat32/fs_fat32.h>
+#include <openfsl/fat32/fat32.h>
 
 #include <chrono>
 
@@ -17,7 +17,7 @@ Check the full BSD-3-Clause license for more details.
 
 int fat32shell(openfsl::BlockDevice* bd,
     openfsl::DiskStructure diskStructure, size_t selectIndex) {
-    openfsl::FAT32 fat32(bd, "", "\\/", "::");
+    openfsl::fat32::FAT32 fat32(bd, "", "\\/", "::");
 
     error_t result;
 
@@ -126,7 +126,7 @@ int fat32shell(openfsl::BlockDevice* bd,
                 }
             }
         } else if (cmd[0] == "dir") {
-            std::vector<openfsl::FAT32::FileInfo> buf;
+            std::vector<openfsl::fat32::FileInfo> buf;
 
             int result;
             if (cmd.size() == 2)
@@ -189,8 +189,8 @@ int fat32shell(openfsl::BlockDevice* bd,
                     << static_cast<int>(buf[i].fileModTime.time_sec) << " | ";
 
                 if ((buf[i].fileAttr &
-                    openfsl::FAT32::FileAttribute::Directory) !=
-                    (openfsl::FAT32::FileAttribute)0)
+                    openfsl::fat32::FileAttribute::Directory) !=
+                    (openfsl::fat32::FileAttribute)0)
                     std::cout << "<DIR>\n";
                 else
                     std::cout << static_cast<int>(buf[i].fileSize) << "\n";
@@ -215,7 +215,7 @@ int fat32shell(openfsl::BlockDevice* bd,
                 std::cerr << "Error: " << openfsl::geterrorstr(result) << "\n";
             }
         } else if (cmd[0] == "info") {
-            std::pair<error_t, openfsl::FAT32::FileInfo> fileInfo =
+            std::pair<error_t, openfsl::fat32::FileInfo> fileInfo =
                 fat32.getEntryInfo(cmd[1]);
 
             if (fileInfo.first) {
@@ -266,8 +266,8 @@ int fat32shell(openfsl::BlockDevice* bd,
                     (fileInfo.second.fileModTime.time_sec) << "\n";
 
                 if ((fileInfo.second.fileAttr &
-                    openfsl::FAT32::FileAttribute::Directory) !=
-                    (openfsl::FAT32::FileAttribute)0)
+                    openfsl::fat32::FileAttribute::Directory) !=
+                    (openfsl::fat32::FileAttribute)0)
                     std::cout << "File type is directory.\n";
                 else
                     std::cout << "File size"
@@ -275,18 +275,18 @@ int fat32shell(openfsl::BlockDevice* bd,
             }
         } else if (cmd[0] == "read") {
             if (cmd.size() == 2) {
-                openfsl::FAT32::FILE file(&fat32);
+                openfsl::fat32::File file(&fat32);
 
                 error_t result = file.open(cmd[1],
-                    openfsl::FSL_OpenMode::Read);
+                    openfsl::OpenMode::Read);
 
                 if (result) {
                     std::cerr << "Error opening file: "
                               << openfsl::geterrorstr(result) << "\n";
                 } else {  // Hexdump file
-                    file.seekg(0, openfsl::FSL_SeekMode::SeekEnd);
+                    file.seekg(0, openfsl::SeekMode::SeekEnd);
                     size_t fileSize = file.tellg();
-                    file.seekg(0, openfsl::FSL_SeekMode::SeekSet);
+                    file.seekg(0, openfsl::SeekMode::SeekSet);
 
                     if (fileSize > 0) {
                         char* buf = new char[fileSize + 1]();
@@ -308,17 +308,17 @@ int fat32shell(openfsl::BlockDevice* bd,
             }
         } else if (cmd[0] == "write") {
             if (cmd.size() == 3) {
-                openfsl::FAT32::FILE file(&fat32);
+                openfsl::fat32::File file(&fat32);
 
                 error_t result = file.open(cmd[1],
-                    openfsl::FSL_OpenMode::Read |
-                    openfsl::FSL_OpenMode::Write);
+                    openfsl::OpenMode::Read |
+                    openfsl::OpenMode::Write);
 
                 if (result) {
                     std::cerr << "Error opening file: "
                               << openfsl::geterrorstr(result) << "\n";
                 } else {  // Hexdump file
-                    file.seekp(0, openfsl::FSL_SeekMode::SeekSet);
+                    file.seekp(0, openfsl::SeekMode::SeekSet);
 
                     file.write(
                         reinterpret_cast<const uint8_t*>(cmd[2].c_str()),
@@ -353,19 +353,19 @@ int fat32shell(openfsl::BlockDevice* bd,
             if (result)
                 std::cerr << "Error: " << openfsl::geterrorstr(result) << "\n";
         } else if (cmd[0] == "search") {
-            std::vector<std::pair<std::string, openfsl::FAT32::FileInfo>> finfo;
+            std::vector<std::pair<std::string, openfsl::fat32::FileInfo>> finfo;
             int result = fat32.search(&finfo, cmd[1], cmd[2],
-                openfsl::FAT32::FileAttribute::Any, true);
+                openfsl::fat32::FileAttribute::Any, true);
             if (result)
                 std::cerr << "Error: " << openfsl::geterrorstr(result) << "\n";
 
-            for (std::pair<std::string, openfsl::FAT32::FileInfo> fi : finfo) {
+            for (std::pair<std::string, openfsl::fat32::FileInfo> fi : finfo) {
                 std::cout << fi.first << fat32.getPathSeparator().at(0)
                     << fi.second.fileName << "\n";
             }
         } else if (cmd[0] == "defaultformatoptions") {
-            openfsl::FAT32::FormatOptions fo =
-                openfsl::FAT32::getDefaultFormatOptions(104857600);
+            openfsl::fat32::FormatOptions fo =
+                openfsl::fat32::getDefaultFormatOptions(104857600);
             std::cout << "volumeLabel: " << fo.volumeLabel << "\n";
             std::cout << std::hex
                 << "volumeSerial: "
@@ -390,7 +390,7 @@ int fat32shell(openfsl::BlockDevice* bd,
             if (result)
                 std::cerr << "Error: " << openfsl::geterrorstr(result) << "\n";
         } else if (cmd[0] == "getvolinfo") {
-            openfsl::FAT32::VolumeInfo info = fat32.getVolumeInfo();
+            openfsl::fat32::VolumeInfo info = fat32.getVolumeInfo();
             std::cout << "Volume Label: " << info.volumeLabel << "\n";
             std::cout << "Volume Serial: " << info.volumeSerial << "\n";
             std::cout << "Free Cluster Count: " << info.freeCluster << "\n";

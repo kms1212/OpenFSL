@@ -21,10 +21,10 @@ Check the full BSD-3-Clause license for more details.
 #include <codecvt>
 #include <bitset>
 
-#include "openfsl/fslutils.h"
+#include "openfsl/utils.h"
 #include "openfsl/fileblockdevice.h"
 #include "openfsl/sector.h"
-#include "openfsl/fat32/fs_fat32.h"
+#include "openfsl/fat32/fat32.h"
 
 int readCount = 0;
 int writeCount = 0;
@@ -79,7 +79,7 @@ int main(int argc, char** argv) {
 
     bd.initialize(imageFileName, openfsl::FileBlockDevice::OpenMode::RW);
 
-    openfsl::FAT32 fat32(&bd, "", "\\/");
+    openfsl::fat32::FAT32 fat32(&bd, "", "\\/");
 
     error_t result = fat32.initialize();
     if (result) {

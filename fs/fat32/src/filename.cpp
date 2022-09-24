@@ -9,9 +9,9 @@ Check the full BSD-3-Clause license for more details.
 
 #include <regex>
 
-#include "openfsl/fat32/fs_fat32.h"
+#include "openfsl/fat32/fat32.h"
 
-int openfsl::FAT32::getEntryCount(const std::string filename,
+int openfsl::fat32::FAT32::getEntryCount(const std::string filename,
                                    const bool ignoreReservedName) {
     if (filename.length() == 0) return 0;
 
@@ -83,6 +83,6 @@ int openfsl::FAT32::getEntryCount(const std::string filename,
             return 0;
         }
     }
-    
+
     return requiredEntrySize;
 }

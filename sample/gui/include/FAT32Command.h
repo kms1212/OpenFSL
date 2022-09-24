@@ -20,7 +20,7 @@ Check the full BSD-3-Clause license for more details.
 
 class FAT32Command : public FSCommand {
 private:
-    openfsl::FAT32* fat32;
+    openfsl::fat32::FAT32* fat32;
 
 public:
     FAT32Command(openfsl::FileBlockDevice* fbd) : FSCommand(fbd) {}
@@ -40,7 +40,7 @@ public:
     error_t GetFileInformation();
     error_t Search();
 
-    openfsl::FAT32* getFileSystem();
+    openfsl::fat32::FAT32* getFileSystem();
 
     void Deinitialize();
 };

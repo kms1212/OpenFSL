@@ -16,7 +16,7 @@ set(BUILD_${FILESYSTEM_NAME} true CACHE BOOL "Build ${FILESYSTEM_NAME} filesyste
 if(BUILD_${FILESYSTEM_NAME})
     string(TOLOWER ${PROJECT_NAME} PROJECT_TARGET)
     
-    file(GLOB LIBRARY_SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/src/*)
+    file(GLOB_RECURSE LIBRARY_SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/src/*)
     add_library(${PROJECT_TARGET} ${LIBRARY_TYPE} ${LIBRARY_SOURCES})
     target_link_libraries(${PROJECT_TARGET} openfsl)
     target_include_directories(${PROJECT_TARGET} PUBLIC 

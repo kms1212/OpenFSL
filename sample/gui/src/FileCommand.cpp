@@ -9,6 +9,6 @@ Check the full BSD-3-Clause license for more details.
 
 #include "FileCommand.h"
 
-FileCommand::FileCommand(FSCommand* fs, const std::string path, openfsl::FSL_OpenMode mode) {}
+FileCommand::FileCommand(FSCommand* fs, const std::string path, openfsl::OpenMode mode) {}
 
 FileCommand::~FileCommand() {}
