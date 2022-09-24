@@ -16,6 +16,8 @@ Check the full BSD-3-Clause license for more details.
 
 #include <cstdint>
 
+#include <stdexcept>
+
 namespace openfsl {
 
 template <typename T> class Nullable {
