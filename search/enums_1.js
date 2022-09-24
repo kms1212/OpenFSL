@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['mftentryattribute_1102',['MFTEntryAttribute',['../ntfs__structures_8h.html#a0f35e8a5a5b509089ed135fb9baf4e54',1,'ntfs_structures.h']]],
-  ['mftflags_1103',['MFTFlags',['../ntfs__structures_8h.html#a014eefd3bff976fa6bdbb6e35aa50948',1,'ntfs_structures.h']]]
+  ['fileattribute_1128',['FileAttribute',['../d3/dfb/namespaceopenfsl_1_1fat32.html#af02801dfa77a5de314cd187bf43c07ac',1,'openfsl::fat32']]],
+  ['filesystemtype_1129',['FileSystemType',['../dc/d1d/namespaceopenfsl.html#a43add8221d9aa3cd7285f47e4e04e72e',1,'openfsl']]]
 ];

@@ -37,7 +37,7 @@ var NAVTREE =
         [ "License", "index.html#autotoc_md12", null ]
       ] ]
     ] ],
-    [ "Todo List", "todo.html", null ],
+    [ "Todo List", "dd/da0/todo.html", null ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
@@ -69,7 +69,6 @@ var NAVTREE =
         [ "Functions", "globals_func.html", null ],
         [ "Variables", "globals_vars.html", null ],
         [ "Typedefs", "globals_type.html", null ],
-        [ "Enumerations", "globals_enum.html", null ],
         [ "Macros", "globals_defs.html", null ]
       ] ]
     ] ]
@@ -79,9 +78,10 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"classopenfsl_1_1_i_o_device.html",
-"filesystem_8h.html#a43add8221d9aa3cd7285f47e4e04e72ea568f795f7cf79887e1d10034c76dab29",
-"removeentry_8cpp_source.html"
+"d5/dae/charset_8h.html#ad5f8afe0c6c447cbfceaa13cb844cf9b",
+"da/d25/fsltime_8cpp.html",
+"dc/ddd/structopenfsl_1_1fat32_1_1_b_p_b_sector.html#a55f518182c567e52a44d03fe4d7d79e4",
+"functions.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

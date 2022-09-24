@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['allowsfnsearch_938',['AllowSFNSearch',['../structopenfsl_1_1_f_a_t32_1_1_filesystem_options.html#a69ba0362fe7776336fe6bdc7b55f68f4',1,'openfsl::FAT32::FilesystemOptions']]]
+  ['allowsfnsearch_975',['AllowSFNSearch',['../d9/d86/structopenfsl_1_1fat32_1_1_filesystem_options.html#a2ac0ec5ac816de779e4417e498fd078b',1,'openfsl::fat32::FilesystemOptions']]]
 ];

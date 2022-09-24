@@ -1,0 +1,8 @@
+<map id="openfsl::NTFS::initialize" name="openfsl::NTFS::initialize">
+<area shape="rect" id="node1" title="NTFS intializer." alt="" coords="5,130,180,157"/>
+<area shape="rect" id="node2" href="$d4/d49/classopenfsl_1_1_file_system.html#ac66d2dd1349a54c08d816e466042cf5b" title=" " alt="" coords="228,5,456,47"/>
+<area shape="rect" id="node3" href="$d7/d23/classopenfsl_1_1_sector.html#af9128b9d68ff6b96d70336a6e51d23e4" title="Data buffer getter." alt="" coords="253,71,431,98"/>
+<area shape="rect" id="node4" href="$d4/df8/classopenfsl_1_1_block_device.html#a47f31aa57ca6e82567148f7875a81162" title=" " alt="" coords="263,123,421,164"/>
+<area shape="rect" id="node5" href="$d4/d49/classopenfsl_1_1_file_system.html#a422eae7c59512ffea50ae831729da461" title=" " alt="" coords="267,188,417,229"/>
+<area shape="rect" id="node6" href="$d4/df8/classopenfsl_1_1_block_device.html#abb336a5c13d81a7587ad19da73097f43" title=" " alt="" coords="263,253,421,295"/>
+</map>

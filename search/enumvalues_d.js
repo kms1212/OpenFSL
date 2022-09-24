@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['posix_1239',['POSIX',['../ntfs__structures_8h.html#ad38be261bc5ffe5387f80a88c19c4aeca0028405011724c5677faba466637b1e5',1,'ntfs_structures.h']]],
-  ['ppcreferenceplatformboot_1240',['PPCReferencePlatformBoot',['../classopenfsl_1_1_m_b_r.html#a0b96adf72dee2df1ac1012dafd5036f1a368b65565133dd8cafb6f1917cb045c4',1,'openfsl::MBR']]]
+  ['pathclustercache_1236',['PathClusterCache',['../d3/dfb/namespaceopenfsl_1_1fat32.html#ae3cdc8527b50600d3bc2181c9b91644ba57bcd622e269c9a2ea906f496146d731',1,'openfsl::fat32']]],
+  ['ppcreferenceplatformboot_1237',['PPCReferencePlatformBoot',['../de/dd8/classopenfsl_1_1_m_b_r.html#a0b96adf72dee2df1ac1012dafd5036f1a368b65565133dd8cafb6f1917cb045c4',1,'openfsl::MBR']]]
 ];

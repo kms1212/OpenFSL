@@ -1,0 +1,22 @@
+<map id="openfsl::Container::getDataCast" name="openfsl::Container::getDataCast">
+<area shape="rect" id="node1" title="Data buffer getter." alt="" coords="741,344,883,385"/>
+<area shape="rect" id="node2" href="$da/dff/classopenfsl_1_1fat32_1_1_f_a_t32.html#a6d8292a88e2521a18f80d5d8e6b472ed" title="Get Next Free Cluster." alt="" coords="503,92,673,133"/>
+<area shape="rect" id="node6" href="$d2/dff/classopenfsl_1_1fat32_1_1_cluster_chain.html#a66439d27bfc697b923bc003770e909ec" title=" " alt="" coords="230,201,433,243"/>
+<area shape="rect" id="node8" href="$d2/dff/classopenfsl_1_1fat32_1_1_cluster_chain.html#a754572f17aa9750227b36207e0dada4d" title=" " alt="" coords="230,136,433,177"/>
+<area shape="rect" id="node9" href="$dc/d1d/namespaceopenfsl.html#a6a72fba5307f9f6a3bc92d782d714226" title=" " alt="" coords="228,413,435,439"/>
+<area shape="rect" id="node10" href="$dc/d1d/namespaceopenfsl.html#a9e230af6aae2cbecb0e18be1af8689f2" title=" " alt="" coords="493,478,683,505"/>
+<area shape="rect" id="node11" href="$da/dff/classopenfsl_1_1fat32_1_1_f_a_t32.html#a55cba84baa7c6509f34c5fba755e1d0a" title=" " alt="" coords="509,529,667,571"/>
+<area shape="rect" id="node12" href="$d9/dba/classopenfsl_1_1_g_p_t.html#ad248035bc008858e7d4c3b80110b453f" title=" " alt="" coords="483,326,693,353"/>
+<area shape="rect" id="node13" href="$da/dff/classopenfsl_1_1fat32_1_1_f_a_t32.html#a081f964327761689b65de24137c33aa0" title="FS_FAT32 intializer." alt="" coords="509,595,667,636"/>
+<area shape="rect" id="node14" href="$de/dd8/classopenfsl_1_1_m_b_r.html#a92009da835b93c83686b36f5e2a30ae8" title=" " alt="" coords="502,377,674,403"/>
+<area shape="rect" id="node15" href="$d2/dff/classopenfsl_1_1fat32_1_1_cluster_chain.html#a4b41f4468271a01d946c849be45e8dfc" title=" " alt="" coords="487,260,689,301"/>
+<area shape="rect" id="node3" href="$da/dff/classopenfsl_1_1fat32_1_1_f_a_t32.html#aa25cca2135d40df431d7f6016b3bf8e8" title="Create directory." alt="" coords="252,71,411,112"/>
+<area shape="rect" id="node4" href="$da/dff/classopenfsl_1_1fat32_1_1_f_a_t32.html#a52cd8647dbfdec66afe87526e5b9cb27" title="Create file." alt="" coords="252,5,411,47"/>
+<area shape="rect" id="node5" href="$da/dff/classopenfsl_1_1fat32_1_1_f_a_t32.html#a5cde804a84ae188d96eded8ae3e54687" title=" " alt="" coords="13,5,172,47"/>
+<area shape="rect" id="node7" href="$d7/d44/classopenfsl_1_1fat32_1_1_file.html#a17ead1a9bd6011212b522205fe629c8a" title="Write file." alt="" coords="21,201,164,243"/>
+<area shape="rect" id="node16" href="$da/dff/classopenfsl_1_1fat32_1_1_f_a_t32.html#a44ffcfefbb80eeb7a54a402663a96bf1" title="Remove entry." alt="" coords="252,332,411,373"/>
+<area shape="rect" id="node17" href="$da/dff/classopenfsl_1_1fat32_1_1_f_a_t32.html#a77377cc9debb67da18fddc9d0a9c7f04" title=" " alt="" coords="13,267,172,308"/>
+<area shape="rect" id="node18" href="$da/dff/classopenfsl_1_1fat32_1_1_f_a_t32.html#a55626251a1e0cff1a15c545352c3b2f8" title="Remove directory." alt="" coords="13,332,172,373"/>
+<area shape="rect" id="node19" href="$da/dff/classopenfsl_1_1fat32_1_1_f_a_t32.html#ab6cbc5e04d1d9a2f078dcf4bef0b70ad" title="Remove file." alt="" coords="13,397,172,439"/>
+<area shape="rect" id="node20" href="$da/dff/classopenfsl_1_1fat32_1_1_f_a_t32.html#a4e7f525feb84354acbe3d2c9ea7bcc6d" title=" " alt="" coords="5,463,180,504"/>
+</map>

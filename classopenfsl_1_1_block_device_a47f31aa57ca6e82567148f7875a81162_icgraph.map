@@ -1,8 +1,0 @@
-<map id="openfsl::BlockDevice::getDiskParameter" name="openfsl::BlockDevice::getDiskParameter">
-<area shape="rect" id="node1" title=" " alt="" coords="499,79,657,120"/>
-<area shape="rect" id="node2" href="$namespaceopenfsl.html#a6a72fba5307f9f6a3bc92d782d714226" title=" " alt="" coords="5,10,212,37"/>
-<area shape="rect" id="node3" href="$namespaceopenfsl.html#a9e230af6aae2cbecb0e18be1af8689f2" title=" " alt="" coords="260,36,451,62"/>
-<area shape="rect" id="node4" href="$classopenfsl_1_1_n_t_f_s.html#ab0d2ba1c034e427115fe0809fccb4526" title="NTFS intializer." alt="" coords="268,86,443,113"/>
-<area shape="rect" id="node5" href="$classopenfsl_1_1_f_a_t32.html#aaaf88c45f959295ab9ee5fff21c7ce24" title="FS_FAT32 intializer." alt="" coords="265,137,445,164"/>
-<area shape="rect" id="node6" href="$classopenfsl_1_1_f_a_t32_1_1_f_i_l_e.html#aae800cf33c9931ec924676567121f0b3" title="Write file." alt="" coords="280,188,431,230"/>
-</map>

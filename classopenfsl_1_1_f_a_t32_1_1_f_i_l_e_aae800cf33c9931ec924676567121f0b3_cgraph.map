@@ -1,9 +1,0 @@
-<map id="openfsl::FAT32::FILE::write" name="openfsl::FAT32::FILE::write">
-<area shape="rect" id="node1" title="Write file." alt="" coords="5,129,156,170"/>
-<area shape="rect" id="node2" href="$namespaceopenfsl.html#a2c9f28e2ca425950c3cdf70d71847049" title=" " alt="" coords="208,5,403,32"/>
-<area shape="rect" id="node3" href="$namespaceopenfsl.html#a4a4e8692613060f54fd0b4f035db8df3" title=" " alt="" coords="224,56,387,83"/>
-<area shape="rect" id="node4" href="$classopenfsl_1_1_f_a_t32.html#a68ad9ea509479c36026980f35c3648f0" title=" " alt="" coords="220,107,391,133"/>
-<area shape="rect" id="node5" href="$classopenfsl_1_1_block_device.html#a47f31aa57ca6e82567148f7875a81162" title=" " alt="" coords="226,158,385,199"/>
-<area shape="rect" id="node6" href="$classopenfsl_1_1_file_system.html#a665ece3593447d10c8d56d1605f05784" title=" " alt="" coords="230,223,381,265"/>
-<area shape="rect" id="node7" href="$classopenfsl_1_1_f_a_t32.html#a08d703f813c75b40c67114b496566cf3" title=" " alt="" coords="204,289,407,316"/>
-</map>

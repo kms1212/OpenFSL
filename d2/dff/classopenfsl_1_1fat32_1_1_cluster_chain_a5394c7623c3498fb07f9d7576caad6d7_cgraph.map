@@ -1,0 +1,9 @@
+<map id="openfsl::fat32::ClusterChain::fetch" name="openfsl::fat32::ClusterChain::fetch">
+<area shape="rect" id="node1" title=" " alt="" coords="5,159,208,200"/>
+<area shape="rect" id="node2" href="$d4/d49/classopenfsl_1_1_file_system.html#ac66d2dd1349a54c08d816e466042cf5b" title=" " alt="" coords="270,5,421,47"/>
+<area shape="rect" id="node3" href="$da/dff/classopenfsl_1_1fat32_1_1_f_a_t32.html#ad632ce424c786e15d8e5a5b3078b6830" title=" " alt="" coords="266,71,425,112"/>
+<area shape="rect" id="node4" href="$d7/d23/classopenfsl_1_1_sector.html#af9128b9d68ff6b96d70336a6e51d23e4" title="Data buffer getter." alt="" coords="256,137,435,163"/>
+<area shape="rect" id="node5" href="$d4/df8/classopenfsl_1_1_block_device.html#a47f31aa57ca6e82567148f7875a81162" title=" " alt="" coords="266,188,425,229"/>
+<area shape="rect" id="node6" href="$d4/d49/classopenfsl_1_1_file_system.html#a665ece3593447d10c8d56d1605f05784" title=" " alt="" coords="270,253,421,295"/>
+<area shape="rect" id="node7" href="$d4/df8/classopenfsl_1_1_block_device.html#abb336a5c13d81a7587ad19da73097f43" title=" " alt="" coords="266,319,425,360"/>
+</map>

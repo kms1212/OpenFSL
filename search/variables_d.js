@@ -1,20 +1,12 @@
 var searchData=
 [
-  ['sect_1032',['sect',['../structopenfsl_1_1_c_h_s.html#a3eed5a454069d89dacd2ebf1065f0b73',1,'openfsl::CHS']]],
-  ['sectorpercluster_1033',['sectorPerCluster',['../structopenfsl_1_1_f_a_t32_1_1_volume_info.html#a2ad4a7dcd2da7fbe8f96ba69da84625b',1,'openfsl::FAT32::VolumeInfo']]],
-  ['sectorpertrack_1034',['sectorPerTrack',['../structopenfsl_1_1_block_device_1_1_disk_parameter.html#adc0e5a1ed1ea2a5942f67fad4824483f',1,'openfsl::BlockDevice::DiskParameter']]],
-  ['sectorspercluster_1035',['sectorsPerCluster',['../structopenfsl_1_1_f_a_t32_1_1_format_options.html#a186a9311941238b1e5f35b3a299ccea5',1,'openfsl::FAT32::FormatOptions']]],
-  ['sequencenumber_1036',['sequenceNumber',['../struct_file_ref_addr.html#a9e471595dada79a472f06b46f2d377a1',1,'FileRefAddr']]],
-  ['siclassid_1037',['siClassID',['../struct_m_f_t_standard_information.html#a18fbae545a1fe311304d621657a536bf',1,'MFTStandardInformation']]],
-  ['sidateaccessed_1038',['siDateAccessed',['../struct_m_f_t_standard_information.html#a259287a1852a944a9e6df6ffd13b3fdc',1,'MFTStandardInformation']]],
-  ['sidatecreated_1039',['siDateCreated',['../struct_m_f_t_standard_information.html#a7ce82fca4d828e4bf7eb45052c077fc1',1,'MFTStandardInformation']]],
-  ['sidatemftrecordmodified_1040',['siDateMFTRecordModified',['../struct_m_f_t_standard_information.html#aa8c28d43f951bcc89632736f36e5293e',1,'MFTStandardInformation']]],
-  ['sidatemodified_1041',['siDateModified',['../struct_m_f_t_standard_information.html#a1d6db1923184dc202e82334099446469',1,'MFTStandardInformation']]],
-  ['siflags_1042',['siFlags',['../struct_m_f_t_standard_information.html#ad4bf4c01a7d3535c829d95f9f8dbb16a',1,'MFTStandardInformation']]],
-  ['simaxversions_1043',['siMaxVersions',['../struct_m_f_t_standard_information.html#abaf978ea6a0eddf59f243c110d5e3b78',1,'MFTStandardInformation']]],
-  ['siownerid_1044',['siOwnerID',['../struct_m_f_t_standard_information.html#a2e0bf95ab071c0ffdec2b418b787e57d',1,'MFTStandardInformation']]],
-  ['siquotacharged_1045',['siQuotaCharged',['../struct_m_f_t_standard_information.html#a178e384c54d6a3ae0f69dfff7e204bc5',1,'MFTStandardInformation']]],
-  ['sisecurityid_1046',['siSecurityID',['../struct_m_f_t_standard_information.html#a5ca5b962bac000631a3156bb7b3e07ae',1,'MFTStandardInformation']]],
-  ['siusn_1047',['siUsn',['../struct_m_f_t_standard_information.html#af7d4b19b1f1406d6e929bbeb3883f5bf',1,'MFTStandardInformation']]],
-  ['siversionnumber_1048',['siVersionNumber',['../struct_m_f_t_standard_information.html#a00f906c0f3793d10960e3bb18c174601',1,'MFTStandardInformation']]]
+  ['partattribute_1072',['partAttribute',['../dc/d76/structopenfsl_1_1_g_p_t_1_1_partition_info.html#addc606a7c2cde8f87ad5f505ed91f5dc',1,'openfsl::GPT::PartitionInfo']]],
+  ['partbootable_1073',['partBootable',['../df/d75/structopenfsl_1_1_m_b_r_1_1_partition_info.html#aec3d2d8369c491000e4e5dbe723b5dcb',1,'openfsl::MBR::PartitionInfo']]],
+  ['partitionguidmap_1074',['partitionGuidMap',['../dc/d1d/namespaceopenfsl.html#aa6771df32bfb6616a0804889499e84e6',1,'openfsl']]],
+  ['partlist_1075',['partList',['../d5/d21/structopenfsl_1_1_disk_structure.html#ac02f39125484897fed35c987198a2df4',1,'openfsl::DiskStructure']]],
+  ['partoffset_1076',['partOffset',['../dc/d76/structopenfsl_1_1_g_p_t_1_1_partition_info.html#a3ed35db4d4c17ebdba0e8d1dd869edfd',1,'openfsl::GPT::PartitionInfo::partOffset()'],['../df/d75/structopenfsl_1_1_m_b_r_1_1_partition_info.html#ab19f8d7dd6b770695bbc9f1aa30f9451',1,'openfsl::MBR::PartitionInfo::partOffset()']]],
+  ['partsize_1077',['partSize',['../dc/d76/structopenfsl_1_1_g_p_t_1_1_partition_info.html#a99b19d2aeb4d470d871c7391da52c938',1,'openfsl::GPT::PartitionInfo::partSize()'],['../df/d75/structopenfsl_1_1_m_b_r_1_1_partition_info.html#ac86e3f2b090164e599ac150c9c63ffc0',1,'openfsl::MBR::PartitionInfo::partSize()']]],
+  ['parttable_1078',['partTable',['../d5/d21/structopenfsl_1_1_disk_structure.html#a6f24f5230029bb610c378da45d6010c2',1,'openfsl::DiskStructure']]],
+  ['parttype_1079',['partType',['../dc/d76/structopenfsl_1_1_g_p_t_1_1_partition_info.html#aad1e2a706b5866e1f1b5948b9580d211',1,'openfsl::GPT::PartitionInfo::partType()'],['../df/d75/structopenfsl_1_1_m_b_r_1_1_partition_info.html#a775c7db073e3b3cae037a0dc2bc5166c',1,'openfsl::MBR::PartitionInfo::partType()']]],
+  ['pathseparator_1080',['pathSeparator',['../d4/d49/classopenfsl_1_1_file_system.html#a60c94779ce86b5a7854d6d24620fa3cb',1,'openfsl::FileSystem']]]
 ];

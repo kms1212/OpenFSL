@@ -1,0 +1,9 @@
+<map id="openfsl::fat32::FAT32::__getNextFreeCluster" name="openfsl::fat32::FAT32::__getNextFreeCluster">
+<area shape="rect" id="node1" title="Get Next Free Cluster." alt="" coords="463,104,633,145"/>
+<area shape="rect" id="node2" href="$da/dff/classopenfsl_1_1fat32_1_1_f_a_t32.html#aa25cca2135d40df431d7f6016b3bf8e8" title="Create directory." alt="" coords="234,5,393,47"/>
+<area shape="rect" id="node3" href="$da/dff/classopenfsl_1_1fat32_1_1_f_a_t32.html#a52cd8647dbfdec66afe87526e5b9cb27" title="Create file." alt="" coords="234,71,393,112"/>
+<area shape="rect" id="node5" href="$d2/dff/classopenfsl_1_1fat32_1_1_cluster_chain.html#a66439d27bfc697b923bc003770e909ec" title=" " alt="" coords="212,136,415,177"/>
+<area shape="rect" id="node7" href="$d2/dff/classopenfsl_1_1fat32_1_1_cluster_chain.html#a754572f17aa9750227b36207e0dada4d" title=" " alt="" coords="212,201,415,243"/>
+<area shape="rect" id="node4" href="$da/dff/classopenfsl_1_1fat32_1_1_f_a_t32.html#a5cde804a84ae188d96eded8ae3e54687" title=" " alt="" coords="5,71,164,112"/>
+<area shape="rect" id="node6" href="$d7/d44/classopenfsl_1_1fat32_1_1_file.html#a17ead1a9bd6011212b522205fe629c8a" title="Write file." alt="" coords="13,136,156,177"/>
+</map>

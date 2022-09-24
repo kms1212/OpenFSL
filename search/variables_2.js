@@ -1,6 +1,22 @@
 var searchData=
 [
-  ['backupbslocation_939',['backupBSLocation',['../structopenfsl_1_1_f_a_t32_1_1_format_options.html#aeec1769ab5be6c96a41a1398d1793518',1,'openfsl::FAT32::FormatOptions']]],
-  ['biosdrivenum_940',['biosDriveNum',['../structopenfsl_1_1_f_a_t32_1_1_format_options.html#a62507aeb929cfc7ec26a035a5db5d49b',1,'openfsl::FAT32::FormatOptions']]],
-  ['bytespersector_941',['bytesPerSector',['../structopenfsl_1_1_block_device_1_1_disk_parameter.html#a38643a6bf2f371129f5f65ac3ef409f5',1,'openfsl::BlockDevice::DiskParameter::bytesPerSector()'],['../structopenfsl_1_1_f_a_t32_1_1_volume_info.html#a519fea021733b3a908544d4eeac8b4d8',1,'openfsl::FAT32::VolumeInfo::bytesPerSector()']]]
+  ['backupbslocation_976',['backupBSLocation',['../d4/d77/structopenfsl_1_1fat32_1_1_format_options.html#aefe1282fe6ee690615d9f3308a0a656b',1,'openfsl::fat32::FormatOptions']]],
+  ['biosdrivenum_977',['biosDriveNum',['../d4/d77/structopenfsl_1_1fat32_1_1_format_options.html#a97b00b64c1e168570fe679f2760af0f2',1,'openfsl::fat32::FormatOptions']]],
+  ['bpbbootcode_978',['bpbBootCode',['../dc/ddd/structopenfsl_1_1fat32_1_1_b_p_b_sector.html#a5f70829e32ba7253161bb3202c3554ea',1,'openfsl::fat32::BPBSector']]],
+  ['bpbbytespersector_979',['bpbBytesPerSector',['../dc/ddd/structopenfsl_1_1fat32_1_1_b_p_b_sector.html#ab4931cd42b1b4b4df7aa6bfff8804e40',1,'openfsl::fat32::BPBSector']]],
+  ['bpbdiskheads_980',['bpbDiskHeads',['../dc/ddd/structopenfsl_1_1fat32_1_1_b_p_b_sector.html#a59898b2cf80e0142af36fd383f5cedeb',1,'openfsl::fat32::BPBSector']]],
+  ['bpbfatcount_981',['bpbFATCount',['../dc/ddd/structopenfsl_1_1fat32_1_1_b_p_b_sector.html#a7c877d92151f4724fc5d5db0e30c7eb4',1,'openfsl::fat32::BPBSector']]],
+  ['bpbhiddensectors_982',['bpbHiddenSectors',['../dc/ddd/structopenfsl_1_1fat32_1_1_b_p_b_sector.html#abcb1db72d74e1dc3a7f3f553a3d65f36',1,'openfsl::fat32::BPBSector']]],
+  ['bpbjumpcode_983',['bpbJumpCode',['../dc/ddd/structopenfsl_1_1fat32_1_1_b_p_b_sector.html#a72cd5d89763b0fe978204cabd01393a2',1,'openfsl::fat32::BPBSector']]],
+  ['bpbmedia_984',['bpbMedia',['../dc/ddd/structopenfsl_1_1fat32_1_1_b_p_b_sector.html#ae23dbbe0a23e328b46bdfa1e91981e8e',1,'openfsl::fat32::BPBSector']]],
+  ['bpboemname_985',['bpbOEMName',['../dc/ddd/structopenfsl_1_1fat32_1_1_b_p_b_sector.html#aa291d60b9b3ccd5f4e6d15fbd9ddc6d3',1,'openfsl::fat32::BPBSector']]],
+  ['bpbreservedsectors_986',['bpbReservedSectors',['../dc/ddd/structopenfsl_1_1fat32_1_1_b_p_b_sector.html#a3ad1ac92d62f9e1832cc26869ab5a37d',1,'openfsl::fat32::BPBSector']]],
+  ['bpbrootentries_987',['bpbRootEntries',['../dc/ddd/structopenfsl_1_1fat32_1_1_b_p_b_sector.html#a8007894becba67e78d0cf480b74eadb8',1,'openfsl::fat32::BPBSector']]],
+  ['bpbsectorpercluster_988',['bpbSectorPerCluster',['../dc/ddd/structopenfsl_1_1fat32_1_1_b_p_b_sector.html#a53f786cd1405c37ccbc00b51d78a4f9a',1,'openfsl::fat32::BPBSector']]],
+  ['bpbsectorsperfat16_989',['bpbSectorsPerFAT16',['../dc/ddd/structopenfsl_1_1fat32_1_1_b_p_b_sector.html#ae6a40b70610ad8aef0390546e46197b8',1,'openfsl::fat32::BPBSector']]],
+  ['bpbsectorspertrack_990',['bpbSectorsPerTrack',['../dc/ddd/structopenfsl_1_1fat32_1_1_b_p_b_sector.html#a4e3720dc2b721f3ff1b4d68e6c550091',1,'openfsl::fat32::BPBSector']]],
+  ['bpbtotalsector32_991',['bpbTotalSector32',['../dc/ddd/structopenfsl_1_1fat32_1_1_b_p_b_sector.html#a0b18f5db10b97476fe467d31c8c4de80',1,'openfsl::fat32::BPBSector']]],
+  ['bpbtotalsectors_992',['bpbTotalSectors',['../dc/ddd/structopenfsl_1_1fat32_1_1_b_p_b_sector.html#a912eb4b419ef5a4b71844ff5b82321ea',1,'openfsl::fat32::BPBSector']]],
+  ['bpbvbrsignature_993',['bpbVBRSignature',['../dc/ddd/structopenfsl_1_1fat32_1_1_b_p_b_sector.html#a17a024cfc02db92ca6c6cd122d723d98',1,'openfsl::fat32::BPBSector']]],
+  ['bytespersector_994',['bytesPerSector',['../de/dc5/structopenfsl_1_1_block_device_1_1_disk_parameter.html#a38643a6bf2f371129f5f65ac3ef409f5',1,'openfsl::BlockDevice::DiskParameter::bytesPerSector()'],['../d8/dea/structopenfsl_1_1fat32_1_1_volume_info.html#a9e0727b3855f16f3ea867de21caf9ed8',1,'openfsl::fat32::VolumeInfo::bytesPerSector()']]]
 ];

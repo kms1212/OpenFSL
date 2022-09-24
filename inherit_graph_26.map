@@ -1,3 +1,8 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$structopenfsl_1_1_m_b_r_1_1_partition_info.html" title=" " alt="" coords="5,5,200,32"/>
+<area shape="rect" id="node1" href="$d1/d81/classopenfsl_1_1_i_o_device.html" title=" " alt="" coords="5,81,143,108"/>
+<area shape="rect" id="node2" href="$d4/df8/classopenfsl_1_1_block_device.html" title="Disk driver." alt="" coords="191,56,349,83"/>
+<area shape="rect" id="node5" href="$d1/d55/classopenfsl_1_1_char_device.html" title="Disk driver." alt="" coords="193,107,347,133"/>
+<area shape="rect" id="node3" href="$d6/d3c/classopenfsl_1_1_file_block_device.html" title=" " alt="" coords="402,5,585,32"/>
+<area shape="rect" id="node4" href="$d8/ddd/classopenfsl_1_1_mem_block_device.html" title=" " alt="" coords="397,56,589,83"/>
+<area shape="rect" id="node6" href="$d9/df7/classopenfsl_1_1_mem_char_device.html" title="Disk driver." alt="" coords="400,107,587,133"/>
 </map>

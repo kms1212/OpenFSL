@@ -1,0 +1,15 @@
+<map id="openfsl::fat32::FAT32::makeFile" name="openfsl::fat32::FAT32::makeFile">
+<area shape="rect" id="node1" title=" " alt="" coords="5,264,164,305"/>
+<area shape="rect" id="node2" href="$da/dff/classopenfsl_1_1fat32_1_1_f_a_t32.html#a52cd8647dbfdec66afe87526e5b9cb27" title="Create file." alt="" coords="214,231,373,272"/>
+<area shape="rect" id="node13" href="$da/dff/classopenfsl_1_1fat32_1_1_f_a_t32.html#ae9bd7016f67484c1aa42d61477303438" title="Separate file name." alt="" coords="212,296,375,337"/>
+<area shape="rect" id="node3" href="$da/dff/classopenfsl_1_1fat32_1_1_f_a_t32.html#a63e1bd54a69c55e17dd9eff1160e3089" title="Create entry." alt="" coords="445,5,603,47"/>
+<area shape="rect" id="node4" href="$da/dff/classopenfsl_1_1fat32_1_1_f_a_t32.html#a6d8292a88e2521a18f80d5d8e6b472ed" title="Get Next Free Cluster." alt="" coords="439,71,609,112"/>
+<area shape="rect" id="node6" href="$da/dff/classopenfsl_1_1fat32_1_1_f_a_t32.html#a8c97b9b54c42e512debd34c8a8686ee4" title="Insert cache." alt="" coords="445,136,603,177"/>
+<area shape="rect" id="node7" href="$da/dff/classopenfsl_1_1fat32_1_1_f_a_t32.html#a665fbe376aaca545421c289ae650c567" title=" " alt="" coords="435,201,613,243"/>
+<area shape="rect" id="node9" href="$dc/d1d/namespaceopenfsl.html#a2c9f28e2ca425950c3cdf70d71847049" title=" " alt="" coords="427,267,621,294"/>
+<area shape="rect" id="node10" href="$dc/d1d/namespaceopenfsl.html#a4a4e8692613060f54fd0b4f035db8df3" title=" " alt="" coords="443,318,605,345"/>
+<area shape="rect" id="node11" href="$d2/dff/classopenfsl_1_1fat32_1_1_cluster_chain.html#a4936c8e08ff4bba2bcbcee7c201e6c74" title=" " alt="" coords="423,369,625,411"/>
+<area shape="rect" id="node12" href="$da/dff/classopenfsl_1_1fat32_1_1_f_a_t32.html#adecf27a3d740da52b5b5e7dc84d6c6ea" title="Get entry count from given path." alt="" coords="445,435,603,476"/>
+<area shape="rect" id="node5" href="$dc/d5a/classopenfsl_1_1_container.html#ae32318eaf5dd949eb740f9ed2d05f5d9" title="Data buffer getter." alt="" coords="689,71,831,112"/>
+<area shape="rect" id="node8" href="$dc/d1d/namespaceopenfsl.html#af5d84bfd77cfffcf6eca548c58646865" title="String tokenizer." alt="" coords="673,209,847,235"/>
+</map>

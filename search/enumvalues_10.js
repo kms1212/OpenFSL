@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['trunc_1273',['Trunc',['../namespaceopenfsl.html#ab69edb30c6ca3a1228d3d32e61931c72ae062834253c7b0c888979454095d0af2',1,'openfsl']]]
+  ['trunc_1253',['Trunc',['../dc/d1d/namespaceopenfsl.html#ad11115c3f61817f834b36dc05bbbe55eae062834253c7b0c888979454095d0af2',1,'openfsl']]]
 ];
